@@ -36,11 +36,11 @@ in {
       };
 
       startup = [
-        {
-          command = "exec ${pkgs.twmnd} &";
-          always = true;
-          notification = false;
-        }
+        #{
+        #  command = "exec ${pkgs.twmnd} &";
+        #  always = true;
+        #  notification = false;
+        #}
         {
           command = "exec ${pkgs.redshift} -O 1900";
           always = true;
