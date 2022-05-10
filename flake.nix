@@ -1,4 +1,3 @@
-
 {
   description = "An example NixOS configuration";
 
