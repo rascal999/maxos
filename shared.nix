@@ -136,7 +136,7 @@
      grim
      gsettings-desktop-schemas
      hexedit
-     home-manager
+     #home-manager
      hping
      htop
      i3
