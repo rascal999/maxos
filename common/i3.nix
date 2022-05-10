@@ -35,6 +35,24 @@ in {
         "${mod}+Shift+m" = "move workspace to output DP-5";
       };
 
+      startup = [
+        {
+          command = "exec ${pkgs.twmnd} &";
+          always = true;
+          notification = false;
+        }
+        {
+          command = "exec ${pkgs.redshift} -O 1900";
+          always = true;
+          notification = false;
+        }
+        #{
+        #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
+        #  always = true;
+        #  notification = false;
+        #}
+      ];
+
       #bars = [
       #  {
       #    position = "bottom";
