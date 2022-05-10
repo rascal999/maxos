@@ -227,7 +227,7 @@
      vlc
      vue
      w3m
-     wafw00f
+     #wafw00f
      #wapiti
      waybar
      wayvnc
