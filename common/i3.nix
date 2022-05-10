@@ -15,29 +15,37 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
         "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox -P \"Default User\"";
+        "${mod}+Shift+c" = "kill";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Default User\" -P \"Burp\"";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
 
         "${mod}+b" = "exec /home/user/burp.sh";
         "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium";
+        "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
+        "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
+        "${mod}+s" = "exec ${pkgs.scrot}/bin/gimp";
+        "${mod}+t" = "exec ${pkgs.urxvt}/bin/urxvt";
+        "${mod}+v" = "exec ${pkgs.vlc}/bin/vlc";
+        "${mod}+x" = "exec ${pkgs.xlock}/bin/xlock -mode clock";
+
         "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 
         # Focus
-        "${mod}+j" = "focus left";
-        "${mod}+k" = "focus down";
-        "${mod}+l" = "focus up";
-        "${mod}+semicolon" = "focus right";
+        "${mod}+Left" = "focus left";
+        "${mod}+Down" = "focus down";
+        "${mod}+Up" = "focus up";
+        "${mod}+Right" = "focus right";
 
         # Move
-        "${mod}+Shift+j" = "move left";
-        "${mod}+Shift+k" = "move down";
-        "${mod}+Shift+l" = "move up";
-        "${mod}+Shift+semicolon" = "move right";
+        "${mod}+Shift+Left" = "move left";
+        "${mod}+Shift+Down" = "move down";
+        "${mod}+Shift+Up" = "move up";
+        "${mod}+Shift+Right" = "move right";
 
         # My multi monitor setup
-        "${mod}+m" = "move workspace to output DP-2";
-        "${mod}+Shift+m" = "move workspace to output DP-5";
+        #"${mod}+m" = "move workspace to output DP-2";
+        #"${mod}+Shift+m" = "move workspace to output DP-5";
       };
 
       startup = [
