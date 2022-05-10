@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hosts/${config.networking.hostName}/hardware-configuration.nix
+      #./hardware-configuration.nix
       #./hostname.nix
       #./pkgs/vim.nix
     ];
