@@ -30,6 +30,7 @@
   # replicates the default behaviour.
   networking.useDHCP = lib.mkDefault false;
   networking.interfaces.enp0s3.useDHCP = lib.mkDefault true;
+  networking.hostName = "test"; # Define your hostname.
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   virtualisation.virtualbox.guest.enable = true;
