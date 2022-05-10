@@ -354,10 +354,10 @@
   services.xserver.displayManager.autoLogin.enable = true;
   services.xserver.displayManager.autoLogin.user = "user";
   ## fonts
-  #fonts.fonts = with pkgs; [
-    #nerdfonts
-    #meslo-lgs-nf
-  #];
+  fonts.fonts = with pkgs; [
+    nerdfonts
+    meslo-lgs-nf
+  ];
 
   ## hosts file
   networking.extraHosts =
