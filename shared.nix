@@ -339,7 +339,7 @@
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user" ];
   # opensnitch
-  services.opensnitch.enable = false;
+  #services.opensnitch.enable = false;
   # X11 / i3
   services.xserver.windowManager.i3.enable = true;
   services.xserver.enable = true;
