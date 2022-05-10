@@ -9,9 +9,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs:
-    /* ignore:: */ let ignoreme = ({config,lib,...}: with lib; { system.nixos.revision = mkForce null; system.nixos.versionSuffix = mkForce "pre-git"; }); in
-  {
+  /*outputs = inputs:*/
+    /* ignore:: let ignoreme = ({config,lib,...}: with lib; { system.nixos.revision = mkForce null; system.nixos.versionSuffix = mkForce "pre-git"; }); in */
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
 
       test = inputs.nixpkgs.lib.nixosSystem {
