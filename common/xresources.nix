@@ -7,4 +7,4 @@
     "*foreground" = "#66FF66";
     "*cursorColor" = "#66ff66";
   };
-};
+}
