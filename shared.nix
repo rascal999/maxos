@@ -239,7 +239,7 @@
      wayvnc
      wget
      whois
-     wireguard
+     wireguard-tools
      wireshark-qt
      woeusb
      wpscan
