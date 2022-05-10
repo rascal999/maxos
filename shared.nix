@@ -255,7 +255,7 @@
      zsh-completions
      zsh-powerlevel10k
      zsh-syntax-highlighting
-     zsh-z
+     #zsh-z
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
