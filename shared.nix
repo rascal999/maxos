@@ -62,16 +62,16 @@
   hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.user = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
-     password = "nixos";
-  };
+  #users.users.user = {
+  #   isNormalUser = true;
+  #   extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
+  #   password = "nixos";
+  #};
 
-  home-manager.users.user = { pkgs, ... }: {
-    home.packages = [ pkgs.atool pkgs.httpie ];
-    programs.bash.enable = true;
-  };
+  #home-manager.users.user = { pkgs, ... }: {
+  #  home.packages = [ pkgs.atool pkgs.httpie ];
+  #  programs.bash.enable = true;
+  #};
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
