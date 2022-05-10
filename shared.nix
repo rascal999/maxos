@@ -81,7 +81,7 @@
      azure-cli
      brightnessctl
      brillo
-     btop
+     #btop
      burpsuite
      calibre
      chromium
