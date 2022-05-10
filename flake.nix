@@ -24,7 +24,6 @@
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
-          ./common/i3.nix
         ];
         #specialArgs = { inherit inputs; };
       };
