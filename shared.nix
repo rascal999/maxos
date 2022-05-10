@@ -169,7 +169,7 @@
      nmap
      notify-desktop
      ntfs3g
-     nvidia-docker
+     #nvidia-docker
      obsidian
      openconnect
      #opensnitch
