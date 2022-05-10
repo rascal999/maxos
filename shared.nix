@@ -5,12 +5,12 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      #./hardware-configuration.nix
-      #./hostname.nix
-      #./pkgs/vim.nix
-    ];
+  #imports =
+  #  [ # Include the results of the hardware scan.
+  #    ./hardware-configuration.nix
+  #    ./hostname.nix
+  #    ./pkgs/vim.nix
+  #  ];
 
   boot.kernelParams = [ "intel_pstate=active" ];
   # Use the GRUB 2 boot loader.
@@ -66,6 +66,11 @@
      isNormalUser = true;
      extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
      password = "nixos";
+  };
+
+  home-manager.users.user = { pkgs, ... }: {
+    home.packages = [ pkgs.atool pkgs.httpie ];
+    programs.bash.enable = true;
   };
 
   # List packages installed in system profile. To search, run:
