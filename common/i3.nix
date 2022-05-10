@@ -14,13 +14,13 @@ in {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
-        "${mod}+space" = "exec ${pkgs.firefox} -P \"Default User\"";
-        "${mod}+Shift+Return" = "exec ${pkgs.firefox} -P \"Default User\" -P \"Burp\"";
-        "${mod}+Shift+v" = "exec ${pkgs.virtualbox}";
+        "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox -P \"Default User\"";
+        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Default User\" -P \"Burp\"";
+        "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
 
         "${mod}+b" = "exec /home/user/burp.sh";
-        "${mod}+o" = "exec ${pkgs.obsidian}";
-        "${mod}+c" = "exec ${pkgs.chromium}";
+        "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
+        "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium";
         "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 
         # Focus
