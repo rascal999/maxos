@@ -334,7 +334,7 @@
   virtualisation.docker.enable = true;
   virtualisation.docker.enableOnBoot = true;
   virtualisation.docker.liveRestore = false;
-  systemd.enableUnifiedCgroupHierarchy = false;
+  #systemd.enableUnifiedCgroupHierarchy = false;
   ## VirtualBox
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user" ];
