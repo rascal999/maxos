@@ -319,10 +319,10 @@
   ## Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
   ## syncthing
-  services.syncthing.enable = true;
-  services.syncthing.user = "user";
-  services.syncthing.dataDir = "/home/user/syncthing";
-  services.syncthing.configDir = "/home/user/.config/syncthing";
+  #services.syncthing.enable = true;
+  #services.syncthing.user = "user";
+  #services.syncthing.dataDir = "/home/user/syncthing";
+  #services.syncthing.configDir = "/home/user/.config/syncthing";
   ## Mailspring
   #services.gnome.gnome-keyring.enable = true;
   ## For Obsidian
