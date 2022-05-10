@@ -62,7 +62,7 @@
   hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.user = {
+  users.users.test = {
      isNormalUser = true;
      extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
      password = "nixos";
