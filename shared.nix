@@ -10,7 +10,7 @@
       #./hardware-configuration.nix
       #./hostname.nix
       #./pkgs/vim.nix
-      home-manager/nixos
+      <home-manager/nixos>
     ];
 
   boot.kernelParams = [ "intel_pstate=active" ];
