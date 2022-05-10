@@ -5,12 +5,13 @@
 { config, pkgs, lib, ... }:
 
 {
-  #imports =
-  #  [ # Include the results of the hardware scan.
-  #    ./hardware-configuration.nix
-  #    ./hostname.nix
-  #    ./pkgs/vim.nix
-  #  ];
+  imports =
+    [ # Include the results of the hardware scan.
+      #./hardware-configuration.nix
+      #./hostname.nix
+      #./pkgs/vim.nix
+      home-manager/nixos
+    ];
 
   boot.kernelParams = [ "intel_pstate=active" ];
   # Use the GRUB 2 boot loader.
