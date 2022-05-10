@@ -65,6 +65,7 @@
   users.users.user = {
      isNormalUser = true;
      extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
+     password = "nixos";
   };
 
   # List packages installed in system profile. To search, run:
