@@ -121,7 +121,7 @@
      #gitleaks
      git-crypt
      glances
-     gnome.gnome-keyring
+     #gnome.gnome-keyring
      gnupg
      go
      gobuster
