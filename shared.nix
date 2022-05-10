@@ -172,8 +172,8 @@
      nvidia-docker
      obsidian
      openconnect
-     opensnitch
-     opensnitch-ui
+     #opensnitch
+     #opensnitch-ui
      openssh
      openssl
      openttd
