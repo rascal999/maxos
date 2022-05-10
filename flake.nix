@@ -24,6 +24,7 @@
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }
+          ./common
         ];
         #specialArgs = { inherit inputs; };
       };
