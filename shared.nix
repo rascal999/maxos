@@ -102,7 +102,7 @@
      dunst
      electrum
      enum4linux
-     evolution
+     #evolution
      fcrackzip
      feh
      ffmpeg
