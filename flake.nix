@@ -16,7 +16,7 @@
         system = "x86_64-linux";
         modules = [
           ./shared.nix
-          hosts/test.nix
+          hosts/test/test.nix
         ];
         specialArgs = { inherit inputs; };
       };
