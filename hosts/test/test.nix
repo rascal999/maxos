@@ -12,7 +12,9 @@
       #./pkgs/vim.nix
     ];
 
+  boot.kernelPackages = if (config.networking.hostName == "nixos-rig" || config.networking.hostName == "nixos-rog") then pkgs.linuxPackages else pkgs.linuxPackages_latest;
   boot.kernelParams = [ "intel_pstate=active" ];
+  boot.initrd.kernelModules = lib.mkIf (config.networking.hostName == "nixos-rog") [ "amdgpu" ];
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
@@ -334,12 +336,23 @@
   virtualisation.docker.enable = true;
   virtualisation.docker.enableOnBoot = true;
   virtualisation.docker.liveRestore = false;
+  virtualisation.docker.enableNvidia = lib.mkIf (config.networking.hostName == "nixos-rig") true;
+  hardware.opengl.driSupport32Bit = lib.mkIf (config.networking.hostName == "nixos-rig") true;
   systemd.enableUnifiedCgroupHierarchy = false;
   ## VirtualBox
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user" ];
   # opensnitch
   services.opensnitch.enable = false;
+  # nvidia
+  services.xserver.videoDrivers = lib.mkIf (config.networking.hostName == "nixos-rig") [ "nvidia" ];
+  #hardware.nvidia.modesetting.enable = lib.mkIf (config.networking.hostName == "nixos-rog") true;
+  #hardware.nvidia.prime = lib.mkIf (config.networking.hostName == "nixos-rog") {
+  #  sync.enable = true;
+  #  nvidiaBusId = "PCI:1:0:0";
+  #  amdgpuBusId = "PCI:4:0:0";
+  #};
+  #hardware.nvidia.package = lib.mkIf (config.networking.hostName == "nixos-rig" || config.networking.hostName == "nixos-rog") config.boot.kernelPackages.nvidiaPackages.beta;
   # X11 / i3
   services.xserver.windowManager.i3.enable = true;
   services.xserver.enable = true;
