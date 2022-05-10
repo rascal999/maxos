@@ -118,7 +118,7 @@
      genymotion
      gimp
      git
-     gitleaks
+     #gitleaks
      git-crypt
      glances
      gnome.gnome-keyring
