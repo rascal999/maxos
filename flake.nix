@@ -3,16 +3,15 @@
   description = "An example NixOS configuration";
 
   inputs = {
-    nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
-    nur = { url = "github:nix-community/NUR"; };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nur.url = "github:nix-community/NUR";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-
-      test = inputs.nixpkgs.lib.nixosSystem {
+      test = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./shared.nix
@@ -27,7 +26,7 @@
             # arguments to home.nix
           }
         ];
-        specialArgs = { inherit inputs; };
+        #specialArgs = { inherit inputs; };
       };
     };
   };
