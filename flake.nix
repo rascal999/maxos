@@ -9,8 +9,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  /*outputs = inputs:*/
-    /* ignore:: let ignoreme = ({config,lib,...}: with lib; { system.nixos.revision = mkForce null; system.nixos.versionSuffix = mkForce "pre-git"; }); in */
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
 
@@ -36,8 +34,6 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-
-          /* ignore */ ignoreme # ignore this; don't include it; it is a small helper for this example
         ];
         specialArgs = { inherit inputs; };
       };
