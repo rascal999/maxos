@@ -12,7 +12,16 @@
   {
     nixosConfigurations = {
 
-      mysystem = inputs.nixpkgs.lib.nixosSystem {
+      test = inputs.nixpkgs.lib.nixSosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./shared.nix
+          hosts/test.nix
+        ];
+        specialArgs = { inherit inputs; };
+      };
+
+      mysystem = inputs.nixpkgs.lib.nixSosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
