@@ -27,7 +27,7 @@ in {
         "${mod}+s" = "exec ${pkgs.scrot}/bin/gimp";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt";
         "${mod}+v" = "exec ${pkgs.vlc}/bin/vlc";
-        "${mod}+x" = "exec ${pkgs.xlock}/bin/xlock -mode clock";
+        "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
 
         "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 
