@@ -73,7 +73,7 @@
      acpi
      apktool
      android-studio
-     android-tools
+     #android-tools
      appimage-run
      asciinema
      atom
