@@ -350,7 +350,7 @@
   ## fonts
   fonts.fonts = with pkgs; [
     nerdfonts
-    meslo-lgs-nf
+    #meslo-lgs-nf
   ];
 
   ## hosts file
