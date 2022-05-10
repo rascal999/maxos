@@ -13,6 +13,7 @@ in {
       keybindings = lib.mkOptionDefault {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
+        "${mod}+c" = "exec /run/current-system/sw/bin/chromium";
         "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+x" = "exec sh -c '${pkgs.maim}/bin/maim -s | xclip -selection clipboard -t image/png'";
         "${mod}+Shift+x" = "exec sh -c '${pkgs.i3lock}/bin/i3lock -c 222222 & sleep 5 && xset dpms force of'";
