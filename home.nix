@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  inputs = [
+  imports = [
     common/i3.nix
   ];
 
