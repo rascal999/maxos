@@ -95,7 +95,7 @@
      dbeaver
      dex2jar
      dhcpcd
-     dig
+     #dig
      dmenu
      docker
      docker-compose
