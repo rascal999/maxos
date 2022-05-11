@@ -68,6 +68,8 @@ sudo mount /dev/mapper/root /mnt
 sudo mkdir /mnt/boot
 sudo mount ${DISK}${BOOT_PARTITION} /mnt/boot
 
+./setup.sh $DESIRED_HOSTNAME
+
 # NixOS config
 #sudo nixos-generate-config --root /mnt
 #sudo cp /mnt/etc/nixos/configuration.nix /mnt/etc/nixos/configuration.nix.backup
