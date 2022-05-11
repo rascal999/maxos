@@ -16,7 +16,7 @@ echo
 
 # Confirm hostname
 echo -n "Hostname? "
-read HOSTNAME
+read DESIRED_HOSTNAME
 confirm_hostname
 
 # Just in case
