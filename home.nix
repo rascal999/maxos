@@ -23,4 +23,18 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Zsh
+  programs.zsh = {
+    initExtra = builtins.readFile ./configs/zshrc.zsh;
+    enable = true;
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
+    };
+    history = {
+      size = 100000;
+      path = "${config.xdg.dataHome}/zsh/history";
+    };
+  };
 }
