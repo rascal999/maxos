@@ -26,15 +26,30 @@
 
   # Zsh
   programs.zsh = {
-    initExtra = builtins.readFile ./configs/zshrc.zsh;
+    dirHashes = {
+        dl = "$HOME/Downloads";
+    }
+
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
     enable = true;
-    shellAliases = {
-      ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
-    };
+
     history = {
       size = 100000;
       path = "${config.xdg.dataHome}/zsh/history";
+    };
+
+    initExtra = builtins.readFile ./configs/zshrc.zsh;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" "docker" "kubectl" ];
+      theme = "robbyrussell";
+    }
+
+    shellAliases = {
+      ll = "ls -l";
+      update = "sudo nixos-rebuild switch";
     };
   };
 }
