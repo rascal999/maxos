@@ -28,7 +28,7 @@
   programs.zsh = {
     dirHashes = {
         dl = "$HOME/Downloads";
-    }
+    };
 
     enable = true;
     enableAutosuggestions = true;
