@@ -63,10 +63,10 @@
       a-nixi = "nix-store -q --references /var/run/current-system/sw | cut -d'-' -f2-";
       a-pingg = "grc ping 8.8.8.8 -c 1";
       a-pip = "curl ifconfig.me";
-      a-sitecopy = 'wget -k -K -E -r -l 10 -p -N -F -nH ';
+      a-sitecopy = "wget -k -K -E -r -l 10 -p -N -F -nH ";
       a-st = "wget http://ipv4.download.thinkbroadband.com/1GB.zip -O /dev/null";
-      a-ytmp3 = 'youtube-dl --extract-audio --audio-format mp3 ';
-      ff = 'firefox ';
+      a-ytmp3 = "youtube-dl --extract-audio --audio-format mp3 ";
+      ff = "firefox ";
       ls = "grc ls";
     };
   };
