@@ -63,9 +63,10 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.test = {
-     isNormalUser = true;
-     extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
-     password = "nixos";
+    isNormalUser = true;
+    extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
+    password = "nixos";
+    shell = pkgs.zsh;
   };
 
   #home-manager.users.user = { pkgs, ... }: {
@@ -279,17 +280,8 @@
   # List services that you want to enable:
   # Enable zsh
   programs.zsh.enable = true;
-  programs.zsh.autosuggestions.enable = true;
-  programs.zsh.syntaxHighlighting.enable = true;
 
-  # Enable Oh-my-zsh
-  programs.zsh.ohMyZsh = {
-    enable = true;
-    plugins = [ "git" "sudo" "docker" "kubectl" ];
-    #theme = "robbyrussell";
-  };
-
-  programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+  #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
   # Laptop light
   programs.light.enable = true;
