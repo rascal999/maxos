@@ -2,11 +2,11 @@
 
 function confirm_hostname() {
     while true; do
-        read -p "Does this look right? [Yn] " yn
+        read -p "Are you sure? [yN] " yn
         case $yn in
             [Yy]* ) break;;
             [Nn]* ) exit 1;;
-            * ) break;;
+            * ) exit 1;;
         esac
     done
 }
@@ -15,7 +15,8 @@ echo "### NixOS bootstrap script"
 echo
 
 # Confirm hostname
-cat hostname.nix | grep hostName
+echo -n "Hostname? "
+read HOSTNAME
 confirm_hostname
 
 # Just in case
@@ -68,11 +69,11 @@ sudo mkdir /mnt/boot
 sudo mount ${DISK}${BOOT_PARTITION} /mnt/boot
 
 # NixOS config
-sudo nixos-generate-config --root /mnt
-sudo cp /mnt/etc/nixos/configuration.nix /mnt/etc/nixos/configuration.nix.backup
-sudo cp hostname.nix /mnt/etc/nixos/hostname.nix
-sudo cp configuration.nix /mnt/etc/nixos/configuration.nix
+#sudo nixos-generate-config --root /mnt
+#sudo cp /mnt/etc/nixos/configuration.nix /mnt/etc/nixos/configuration.nix.backup
+#sudo cp hostname.nix /mnt/etc/nixos/hostname.nix
+#sudo cp configuration.nix /mnt/etc/nixos/configuration.nix
 
 # NixOS install
-sleep 10
-sudo nixos-install
+#sleep 10
+#sudo nixos-install
