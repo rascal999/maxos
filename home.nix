@@ -32,7 +32,8 @@
 
     enable = true;
     enableAutosuggestions = true;
-    syntaxHighlighting.enable = true;
+    enableCompletion = true;
+    enableSyntaxHighlighting = true;
 
     history = {
       size = 100000;
