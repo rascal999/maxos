@@ -30,9 +30,9 @@
         dl = "$HOME/Downloads";
     }
 
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
     enable = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
 
     history = {
       size = 100000;
