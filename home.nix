@@ -46,7 +46,7 @@
       enable = true;
       plugins = [ "git" "sudo" "docker" "kubectl" ];
       theme = "robbyrussell";
-    }
+    };
 
     shellAliases = {
       ll = "ls -l";
