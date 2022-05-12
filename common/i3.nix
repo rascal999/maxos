@@ -19,9 +19,9 @@ in {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
-        "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox -P \"Default User\"";
+        "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+c" = "kill";
-        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Default User\" -P \"Burp\"";
+        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
 
         "${mod}+b" = "exec /home/user/burp.sh";
