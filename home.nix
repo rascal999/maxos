@@ -24,6 +24,21 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # Firefox
+  programs.firefox = {
+    enable = true;
+    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      ublock-origin
+      darkreader
+      bypass-paywalls-clean
+    ];
+    profiles.default = {
+      id = 0;
+      name = "Default";
+      isDefault = true;
+    };
+  };
+
   # tmux
   programs.tmux = {
     enable = true;
