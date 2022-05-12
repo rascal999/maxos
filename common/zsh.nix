@@ -16,12 +16,30 @@
     };
 
     initExtra = builtins.readFile ../configs/zshrc.zsh;
+    initExtraBeforeCompInit = ''
+      if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+        source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+      fi
+    '';
 
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" "sudo" "docker" "kubectl" ];
-      theme = "robbyrussell";
-    };
+    plugins = with pkgs; [
+      #{
+      #  file = "powerlevel10k.zsh-theme";
+      #  name = "powerlevel10k";
+      #  src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
+      #}
+      {
+        file = "p10k.zsh";
+        name = "powerlevel10k-config";
+        src = ./p10k.zsh;
+      }
+    ];
+
+    #oh-my-zsh = {
+    #  enable = true;
+    #  plugins = [ "git" "sudo" "docker" "kubectl" ];
+    #  theme = "robbyrussell";
+    #};
 
     shellAliases = {
       ll = "ls -l";
