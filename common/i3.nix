@@ -48,6 +48,10 @@ in {
         #"${mod}+Shift+m" = "move workspace to output DP-5";
       };
 
+      window = {
+        hideEdgeBorders = "both";
+      };
+
       startup = [
         #{
         #  command = "exec ${pkgs.twmnd} &";
