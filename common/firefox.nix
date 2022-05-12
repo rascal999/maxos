@@ -16,7 +16,12 @@
       name = "Default";
       isDefault = true;
       settings = { 
+        "browser.toolbars.bookmarks.visibility" = "always";
+        "browser.search.openintab" = true;
+        "browser.theme.toolbar-theme" = 0;
+        "browser.theme.content-theme" = 0;
         "devtools.theme" = "dark";
+        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
       };
     };
   };
