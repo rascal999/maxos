@@ -23,7 +23,8 @@
         modules = [
           ./common/nur.nix
           ./shared.nix
-          ./hosts/blade/blade.nix
+          ./hosts/blade/blade-configuration.nix
+          ./hosts/blade/blade-hw.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -43,7 +44,7 @@
         modules = [
           ./common/nur.nix
           ./shared.nix
-          ./hosts/vm-rog-test/vm-rog-test.nix
+          ./hosts/vm-rog-test/vm-rog-test-hw.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
