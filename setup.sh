@@ -7,4 +7,4 @@ fi
 
 #nixos-generate-config --root /mnt
 #rm /mnt/etc/nixos/configuration.nix
-nixos-install --flake .#$1 --root /mnt
+nixos-install --flake .#$1 --root /mnt --impure
