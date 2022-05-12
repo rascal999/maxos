@@ -21,7 +21,7 @@
         system = "x86_64-linux";
 
         modules = [
-          ./nur.nix
+          ./common/nur.nix
           ./shared.nix
           ./hosts/vm-rog-test/vm-rog-test.nix
           home-manager.nixosModules.home-manager {
