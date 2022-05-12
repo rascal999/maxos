@@ -15,7 +15,9 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
-    initExtra = builtins.readFile ../configs/zshrc.zsh;
+    initExtra = builtins.readFile ../configs/zshrc.zsh + ''
+      source ${./p10k.zsh}
+    '';;
 
     plugins = with pkgs; [
       {
@@ -23,11 +25,11 @@
         name = "powerlevel10k";
         src = "${zsh-powerlevel10k}/share/zsh-powerlevel10k";
       }
-      {
-        file = "p10k.zsh";
-        name = "powerlevel10k-config";
-        src = ./p10k.zsh;
-      }
+      #{
+      #  file = "p10k.zsh";
+      #  name = "powerlevel10k-config";
+      #  src = ./p10k.zsh;
+      #}
     ];
 
     shellAliases = {
