@@ -15,7 +15,7 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
-    initExtra = builtins.readFile ./configs/zshrc.zsh;
+    initExtra = builtins.readFile ../configs/zshrc.zsh;
 
     oh-my-zsh = {
       enable = true;
