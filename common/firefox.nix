@@ -17,7 +17,7 @@
       isDefault = true;
       settings = { 
         "devtools.theme" = "dark";
-      }
+      };
     };
   };
 }
