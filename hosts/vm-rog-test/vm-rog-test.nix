@@ -12,25 +12,25 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c2c91fd7-3160-4c2c-ba57-919058a55ffe";
+    { device = "/dev/disk/by-uuid/f4034b4b-8ccb-46f1-9b3a-e29243430948";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/653865d9-96d8-4ca4-b354-9b70447597ca";
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/7e0c31a6-5973-438e-b082-1cdc9624d7fb";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/FA47-4963";
+    { device = "/dev/disk/by-uuid/27D0-314F";
       fsType = "vfat";
     };
 
   swapDevices = [ ];
 
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = lib.mkDefault false;
-  networking.interfaces.enp0s3.useDHCP = lib.mkDefault true;
-  networking.hostName = "vm-rog-test"; # Define your hostname.
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s3.useDHCP = lib.mkDefault true;
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   virtualisation.virtualbox.guest.enable = true;

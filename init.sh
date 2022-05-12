@@ -15,6 +15,7 @@ echo "### NixOS bootstrap script"
 echo
 
 # Confirm hostname
+ls hosts/
 echo -n "Hostname? "
 read DESIRED_HOSTNAME
 confirm_hostname
