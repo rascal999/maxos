@@ -5,6 +5,11 @@ let
 in {
   xsession.windowManager.i3 = {
     enable = true;
+
+    extraConfig = ''
+      default_border pixel 1
+    '';
+
     config = {
       modifier = mod;
 
