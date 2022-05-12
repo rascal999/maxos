@@ -28,9 +28,13 @@
   programs.firefox = {
     enable = true;
     extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      ublock-origin
-      darkreader
+      bitwarden
       bypass-paywalls-clean
+      darkreader
+      foxyproxy-standard
+      single-file
+      ublock-origin
+      user-agent-string-switcher
     ];
     profiles.default = {
       id = 0;
