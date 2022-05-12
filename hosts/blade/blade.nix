@@ -4,22 +4,24 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports = [ ];
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
+    ];
 
-  boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "sd_mod" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/8187bf3a-0e18-47d7-960a-77766bfdee05";
+    { device = "/dev/disk/by-uuid/b5b4e966-e960-4357-9aab-1a35148a3e33";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/79b0bd24-5741-40a2-a1c3-cced985db44f";
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/6cea4a23-dd24-43f9-80fd-73dbc29b8079";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/4A78-B2B0";
+    { device = "/dev/disk/by-uuid/5FD3-C52C";
       fsType = "vfat";
     };
 
@@ -30,8 +32,9 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s3.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp2s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  virtualisation.virtualbox.guest.enable = true;
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
