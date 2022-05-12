@@ -17,7 +17,7 @@
 
     initExtra = builtins.readFile ../configs/zshrc.zsh + ''
       source ${./p10k.zsh}
-    '';;
+    '';
 
     plugins = with pkgs; [
       {
