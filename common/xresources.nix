@@ -14,8 +14,8 @@
     "*color1" = "#D81860";
     "*color9" = "#F00060";
     # green
-    "*color2" = "#60FF60"
-    "*color10" = "#70FF70"
+    "*color2" = "#60FF60";
+    "*color10" = "#70FF70";
     # yellow
     "*color3" = "#f9fd75";
     "*color11" = "#f9fd80";
