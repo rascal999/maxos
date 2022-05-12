@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... } = 
+{ config, lib, pkgs, ... }:
 
 {
   xresources.properties = {
@@ -31,6 +31,5 @@
     # white
     "*color7" = "#f3ebe2";
     "*color15" = "#eeeeee";
-
   };
 }
