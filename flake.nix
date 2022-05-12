@@ -20,13 +20,8 @@
       vm-rog-test = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        nixpkgs = {
-          overlays = [
-            inputs.nur.overlay
-          ];
-        };
-
         modules = [
+          ./nur.nix
           ./shared.nix
           ./hosts/vm-rog-test/vm-rog-test.nix
           home-manager.nixosModules.home-manager {
