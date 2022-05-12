@@ -10,7 +10,7 @@
 
   outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      rog-test = nixpkgs.lib.nixosSystem {
+      vm-rog-test = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./shared.nix
