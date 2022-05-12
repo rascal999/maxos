@@ -30,12 +30,6 @@
       }
     ];
 
-    #oh-my-zsh = {
-    #  enable = true;
-    #  plugins = [ "git" "sudo" "docker" "kubectl" ];
-    #  theme = "robbyrussell";
-    #};
-
     shellAliases = {
       ll = "ls -l";
       update = "sudo nixos-rebuild switch";
