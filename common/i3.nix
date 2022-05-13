@@ -88,7 +88,7 @@ in {
             "inactive_workspace" = "#333333 #333333 #888888";
             "urgent_workspace" = "#2f343a #900000 #ffffff";
           };
-        };
+        }
       ];
     };
   };
