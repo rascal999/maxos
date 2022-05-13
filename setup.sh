@@ -8,10 +8,14 @@ fi
 nixos-generate-config --root /mnt
 rm /mnt/etc/nixos/configuration.nix
 
+# Git repo?
 if [[ -d ".git" ]]; then
   mkdir hosts/$1
-  cp /mnt/etc/nixos/hardware.nix hosts/$1/${1}.nix
+  cp /mnt/etc/nixos/hardware-configuration.nix hosts/$1/${1}.nix
+
   nix-env -i git
+  git config --global user.email "${1}@dev.net"
+  git config --global user.name "Aidan"
   git add .
   git commit -m "Host $1"
   git push
