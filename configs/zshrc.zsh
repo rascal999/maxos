@@ -13,7 +13,7 @@ if [ -n "${DISPLAY+x}" ]; then
 fi
 
 bindkey "^[[1;5D" forward-word
-bindkey "^[[1;5C" backword-word
+bindkey "^[[1;5C" backward-word
 
 ###
 ### Dunst
