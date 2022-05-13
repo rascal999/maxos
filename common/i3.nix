@@ -13,7 +13,7 @@ in {
     config = {
       modifier = mod;
 
-      defaultWorkspace = 1;
+      defaultWorkspace = "workspace number 1";
 
       fonts = ["DejaVu Sans Mono, FontAwesome 6"];
 
