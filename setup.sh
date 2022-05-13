@@ -11,7 +11,7 @@ rm /mnt/etc/nixos/configuration.nix
 # Git repo?
 if [[ -d ".git" ]]; then
   mkdir hosts/$1
-  cp /mnt/etc/nixos/hardware-configuration.nix hosts/$1/${1}.nix
+  cp /mnt/etc/nixos/hardware-configuration.nix hosts/$1/${1}-hw.nix
 
   nix-env -i git
   git config --global user.email "${1}@dev.net"
