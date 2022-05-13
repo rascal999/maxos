@@ -77,11 +77,6 @@ in {
           always = true;
           workspace = "1";
         }
-        {
-          command = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
-          always = true;
-          workspace = "1";
-        }
         #{
         #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
         #  always = true;
