@@ -14,6 +14,17 @@ function confirm_hostname() {
 echo "### NixOS bootstrap script"
 echo
 
+# SSH key prompt for GitHub
+echo -n "SSH key for GitHub (may leave blank) "
+
+read SSH_KEY
+
+if [[ "$SSH_KEY" != "" ]]; then
+  mkdir $HOME/.ssh
+  echo $SSH_KEY > $HOME/.ssh/id_rsa
+  chmod 400 $HOME/.ssh/id_rsa
+fi
+
 # Confirm hostname
 ls hosts/
 echo -n "Hostname? "
@@ -70,13 +81,3 @@ sudo mkdir /mnt/boot
 sudo mount ${DISK}${BOOT_PARTITION} /mnt/boot
 
 ./setup.sh $DESIRED_HOSTNAME
-
-# NixOS config
-#sudo nixos-generate-config --root /mnt
-#sudo cp /mnt/etc/nixos/configuration.nix /mnt/etc/nixos/configuration.nix.backup
-#sudo cp hostname.nix /mnt/etc/nixos/hostname.nix
-#sudo cp configuration.nix /mnt/etc/nixos/configuration.nix
-
-# NixOS install
-#sleep 10
-#sudo nixos-install
