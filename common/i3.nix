@@ -13,6 +13,8 @@ in {
     config = {
       modifier = mod;
 
+      defaultWorkspace = 1;
+
       fonts = ["DejaVu Sans Mono, FontAwesome 6"];
 
       keybindings = lib.mkOptionDefault {
@@ -57,6 +59,8 @@ in {
         hideEdgeBorders = "both";
       };
 
+      workspaceAutoBackAndForth = true;
+
       startup = [
         {
           command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
@@ -67,6 +71,16 @@ in {
           command = "exec ${pkgs.xorg.setxkbmap}/bin/setxkbmap dvorak";
           always = true;
           notification = false;
+        }
+        {
+          command = "exec ${pkgs.firefox}/bin/firefox";
+          always = true;
+          workspace = "1";
+        }
+        {
+          command = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
+          always = true;
+          workspace = "1";
         }
         #{
         #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
