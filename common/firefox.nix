@@ -19,8 +19,9 @@
         "browser.toolbars.bookmarks.visibility" = "always";
         "browser.search.openintab" = true;
         "signon.rememberSignons" = false;
+        "devtools.theme" = "dark";
+        "ui.systemUsesDarkTheme" = 1;
       };
     };
-    themeVariant = "dark";
   };
 }
