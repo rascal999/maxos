@@ -21,6 +21,4 @@ if [[ -d ".git" ]]; then
   git push
 fi
 
-exit 1
-
 nixos-install --flake .#$1 --root /mnt --impure
