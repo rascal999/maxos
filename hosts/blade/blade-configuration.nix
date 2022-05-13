@@ -10,6 +10,7 @@ let
   '';
 in
 {
+  networking.hostName = "blade";
   hardware.nvidia.modesetting.enable = true;
   hardware.opengl.enable = true;
 
