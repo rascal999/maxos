@@ -7,8 +7,10 @@ fi
 
 #[[ -s "$HOME/.grc.zsh" ]] && source $HOME/.grc.zsh
 
-xmodmap -e "keycode 81=Prior KP_9"
-xmodmap -e "keycode 89=Next KP_3"
+if [ -n "${DISPLAY+x}" ]; then
+  xmodmap -e "keycode 81=Prior KP_9"
+  xmodmap -e "keycode 89=Next KP_3"
+fi
 
 ###
 ### Dunst
