@@ -14,8 +14,8 @@ function confirm_hostname() {
 echo "### NixOS bootstrap script"
 echo
 
-# SSH key prompt for GitHub
-echo -n "SSH key for GitHub (may leave blank) "
+# SSH key file prompt for GitHub
+echo -n "SSH key file for GitHub (may leave blank) "
 
 read SSH_KEY
 
