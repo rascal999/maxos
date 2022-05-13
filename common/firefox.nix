@@ -7,9 +7,12 @@
       bypass-paywalls-clean
       darkreader
       foxyproxy-standard
+      multi-account-containers
       single-file
+      temporary-containers
       ublock-origin
       user-agent-string-switcher
+      vimium
     ];
     profiles.default = {
       id = 0;
@@ -18,6 +21,7 @@
       settings = { 
         "app.update.auto" = false;
 
+        "browser.aboutConfig.showWarning" = false;
         "browser.crashReports.unsubmittedCheck.enabled" = false;
         "browser.newtabpage.activity-stream.enabled" = false;
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
