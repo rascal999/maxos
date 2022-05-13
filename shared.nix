@@ -286,7 +286,7 @@
 
   # Firefox policy for extensions
   environment.etc = {
-    "firefox/policies/policies.json".source = "/etc/nixos/policies.json";
+    "/etc/firefox/policies/policies.json".source = "./common/firefox-policies.json";
   };
 
   # Laptop light
