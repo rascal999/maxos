@@ -59,12 +59,12 @@ in {
 
       startup = [
         {
-          command = "exec ${pkgs.redshift} -O 1900";
+          command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
           always = true;
           notification = false;
         }
         {
-          command = "exec ${pkgs.xorg.setxkbmap} dvorak";
+          command = "exec ${pkgs.xorg.setxkbmap}/bin/setxkbmap dvorak";
           always = true;
           notification = false;
         }
