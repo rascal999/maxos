@@ -83,10 +83,10 @@ in {
           colors = {
             "separator" = "#666666";
             "statusline" = "#dddddd";
-            "focused_workspace" = "#0088CC #0088CC #ffffff";
-            "active_workspace" = "#333333 #333333 #ffffff";
-            "inactive_workspace" = "#333333 #333333 #888888";
-            "urgent_workspace" = "#2f343a #900000 #ffffff";
+            "focusedWorkspace" = "#0088CC #0088CC #ffffff";
+            "activeWorkspace" = "#333333 #333333 #ffffff";
+            "inactiveWorkspace" = "#333333 #333333 #888888";
+            "urgentWorkspace" = "#2f343a #900000 #ffffff";
           };
         }
       ];
