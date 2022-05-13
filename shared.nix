@@ -289,7 +289,7 @@
     {
       target = "firefox/policies/policies.json";
       source = "./common/firefox-policies.json";
-    };
+    }
   ];
 
   # Laptop light
