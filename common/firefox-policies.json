@@ -13,11 +13,27 @@
         "installation_mode": "normal_installed"
       },
       "foxyproxy@eric.h.jung": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/3946159/bypass_paywalls_clean-2.6.8.0-an+fx.xpi",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/addon-323-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "https-everywhere@eff.org": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/https-everywhere/latest.xpi",
+      "@testpilot-containers": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/multi-account-containers/addon-4757633-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{531906d3-e22f-4a6c-a102-8057b88a1a63}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/single-file/addon-14142901-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "uBlock0@raymondhill.net": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/addon-11423598-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{a6c4a591-f1b2-4f03-b3ff-767e5bedf4e7}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/addon-13129494-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "vimium-c@gdh1995.cn": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/addon-14732745-latest.xpi",
         "installation_mode": "normal_installed"
       }
     }
