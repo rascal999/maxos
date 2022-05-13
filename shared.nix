@@ -322,8 +322,8 @@
       minSpeed = "1.5";
     };
 
-    layout = "gb";
-    xkbVariant = "dvorak";
+    layout = "dvorak, gb";
+    xkbVariant = "";
   };
 
   ## Bluetooth
