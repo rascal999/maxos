@@ -32,7 +32,7 @@
         "device.sensors.enabled" = false;
 
         "devtools.chrome.enabled" = true;
-        "devtools.debugger.remote-enabled" = true;
+        "devtools.debugger.remote-enabled" = false;
         "devtools.inspector.showUserAgentStyles" = true;
         "devtools.theme" = "dark";
 
