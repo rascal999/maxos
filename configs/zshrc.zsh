@@ -12,6 +12,9 @@ if [ -n "${DISPLAY+x}" ]; then
   xmodmap -e "keycode 89=Next KP_3"
 fi
 
+bindkey "^[[1;5D" forward-word
+bindkey "^[[1;5C" backword-word
+
 ###
 ### Dunst
 ###
