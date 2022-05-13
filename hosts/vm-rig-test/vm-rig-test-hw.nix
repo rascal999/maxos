@@ -8,18 +8,18 @@
 
   boot.initrd.availableKernelModules = [ "ata_piix" "ohci_pci" "sd_mod" "sr_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/be4dddfa-aee8-48b6-86e4-1fa797cc636e";
+    { device = "/dev/disk/by-uuid/307c1f1d-1a15-41ae-8ed6-d5846beb9cac";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/d98f9e1d-247e-4b7b-be0b-929756d19638";
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/4178d705-e1f9-4698-af70-b4d8ef09971c";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/E434-74FE";
+    { device = "/dev/disk/by-uuid/C9EC-A879";
       fsType = "vfat";
     };
 
