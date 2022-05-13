@@ -1,0 +1,74 @@
+theme = "solarized-dark"
+icons = "awesome"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage} {time}"
+allow_missing = true
+hide_missing = true
+
+[[block]]
+block = "networkmanager"
+on_click = "alacritty -e nmtui"
+interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
+interface_name_include = []
+
+[[block]]
+block = "custom"
+command = "curl ifconfig.me"
+interval = 300
+
+[[block]]
+block = "custom"
+command = "uname -r | sed 's/-arch1.*//g'"
+interval = 600
+
+#[[block]]
+#block = "custom"
+#command = "curl \"https://wttr.in/Bournemouth?format=3&m\""
+#interval = 600
+#on_click = "firefox -P default http://wttr.in/Bournemouth"
+
+#[[block]]
+#block = "custom"
+#command = "echo -n 'BTC:GBP ' && curl http://api.coindesk.com/v1/bpi/currentprice/GBP.json | jq -r '.bpi[\"GBP\"][\"rate\"]' | cut -f1 -d'.'"
+#interval = 600
+
+#[[block]]
+#block = "custom"
+#command = "echo -n 'ETH:GBP ' && curl https://cryptomate.co.uk/api/ETH/GBP | jq -r '.ETH[\"price\"]' | cut -f1 -d'.'"
+#interval = 600
+
+[[block]]
+block = "custom"
+command = "echo -n 'Procs: ' && ps aux | grep -vE \"echo -n 'Processes: '|grep -vE|ps aux|%MEM\" | wc -l"
+interval = 15
+
+[[block]]
+block = "load"
+interval = 1
+format = "{1m} {5m} {15m}"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{mem_total_used_percents}"
+format_swap = "{swap_used_percents}"
+
+[[block]]
+block = "disk_space"
+path = "/"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+
+[[block]]
+block = "time"
+interval = 60
+format = "%m/%d %R"
