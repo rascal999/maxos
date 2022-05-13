@@ -63,11 +63,11 @@ in {
           always = true;
           notification = false;
         }
-        #{
-        #  command = "exec ${pkgs.twmnd} &";
-        #  always = true;
-        #  notification = false;
-        #}
+        {
+          command = "exec ${pkgs.xorg.setxkbmap} dvorak";
+          always = true;
+          notification = false;
+        }
         #{
         #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
         #  always = true;

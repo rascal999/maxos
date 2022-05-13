@@ -321,9 +321,6 @@
       palmDetect = true;
       minSpeed = "1.5";
     };
-
-    layout = "dvorak, gb";
-    xkbVariant = "";
   };
 
   ## Bluetooth
