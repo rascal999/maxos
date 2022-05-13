@@ -40,6 +40,8 @@
         "devtools.inspector.showUserAgentStyles" = true;
         "devtools.theme" = "dark";
 
+        "extensions.autoDisableScopes" = "0";
+
         # Disable pocket
         "extensions.pocket.enable" = false;
 
@@ -49,6 +51,9 @@
 
         "experiments.enabled" = false;
         "experiments.supported" = false;
+
+        # Because I'm blind
+        "layout.css.devPixelsPerPx" = "1.3";
 
         "privacy.donottrackheader.enabled" = true;
         "privacy.trackingprotection.cryptomining.enabled" = true;
