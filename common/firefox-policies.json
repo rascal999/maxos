@@ -4,8 +4,14 @@
     "DisplayMenuBar": true,
     "DisableFirefoxAccounts": true,
     "ExtensionSettings": {
+      // Bitwarden
       "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/file/3940986/bitwarden_free_password_manager-1.58.0-an+fx.xpi",
+        "installation_mode": "normal_installed"
+      },
+      // Bypass Paywalls Clean
+      "{d133e097-46d9-4ecc-9903-fa6a722a6e0e}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/file/3946159/bypass_paywalls_clean-2.6.8.0-an+fx.xpi",
         "installation_mode": "normal_installed"
       },
       "https-everywhere@eff.org": {
