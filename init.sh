@@ -14,17 +14,6 @@ function confirm_hostname() {
 echo "### NixOS bootstrap script"
 echo
 
-# SSH key file prompt for GitHub
-echo -n "SSH key file for GitHub (may leave blank) "
-
-read SSH_KEY
-
-if [[ "$SSH_KEY" != "" ]]; then
-  mkdir $HOME/.ssh
-  echo $SSH_KEY > $HOME/.ssh/id_rsa
-  chmod 400 $HOME/.ssh/id_rsa
-fi
-
 # Confirm hostname
 ls hosts/
 echo -n "Hostname? "
