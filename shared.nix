@@ -292,59 +292,85 @@
   ###
   # Custom
   ###
+
   # Flakes
   nix.package = pkgs.nixUnstable;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
   # For WireGuard
   networking.firewall.checkReversePath = false;
-  # Touchpad
-  services.xserver.synaptics.enable = true;
-  services.xserver.synaptics.vertTwoFingerScroll = true;
-  services.xserver.synaptics.palmDetect = true;
-  services.xserver.synaptics.minSpeed = "1.5";
+
+  # X11 / i3
+  services.xserver = {
+    enable = true;
+    windowManager.i3.enable = true;
+
+    displayManager = {
+      defaultSession = "none+i3";
+      lightdm.enable = true;
+      autoLogin.enable = true;
+      autoLogin.user = "user";
+    };
+      
+    # Touchpad
+    synaptics = {
+      enable = true;
+      vertTwoFingerScroll = true;
+      palmDetect = true;
+      minSpeed = "1.5";
+    };
+
+    layout = "dvorak";
+  };
+
   ## Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
   ## Timesync
   services.timesyncd.enable = true;
+
   # k3s and other services
   networking.firewall.allowedTCPPorts = [ 22 80 443 8080 8081 8082 8083 8084 8085 6443 ];
+
   # k3s
   services.k3s.enable = false;
   services.k3s.role = "server";
+
   ## Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
+
   ## syncthing
   #services.syncthing.enable = true;
   #services.syncthing.user = "user";
   #services.syncthing.dataDir = "/home/user/syncthing";
   #services.syncthing.configDir = "/home/user/.config/syncthing";
+
   ## Mailspring
   #services.gnome.gnome-keyring.enable = true;
+
   ## For Obsidian
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "electron-13.6.9"
   ];
+
   ## docker
-  virtualisation.docker.enable = true;
-  virtualisation.docker.enableOnBoot = true;
-  virtualisation.docker.liveRestore = false;
-  #systemd.enableUnifiedCgroupHierarchy = false;
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+    liveRestore = false;
+  }
+
   ## VirtualBox
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user" ];
+
   # opensnitch
   #services.opensnitch.enable = false;
-  # X11 / i3
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.enable = true;
-  services.xserver.displayManager.defaultSession = "none+i3";
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "user";
+
   ## fonts
   fonts.fonts = with pkgs; [
     nerdfonts
