@@ -83,10 +83,26 @@ in {
           colors = {
             "separator" = "#666666";
             "statusline" = "#dddddd";
-            "focusedWorkspace" = "#0088CC #0088CC #ffffff";
-            "activeWorkspace" = "#333333 #333333 #ffffff";
-            "inactiveWorkspace" = "#333333 #333333 #888888";
-            "urgentWorkspace" = "#2f343a #900000 #ffffff";
+            "focusedWorkspace" = {
+              "background" = "#0088CC";
+              "border" = "#0088CC";
+              "text" = "#ffffff";
+            };
+            "activeWorkspace" = {
+              "background" = "#333333";
+              "border" = "#333333";
+              "text" = "#ffffff";
+            };
+            "inactiveWorkspace" = {
+              "background" = "#333333";
+              "border" = "#333333";
+              "text" = "#888888";
+            };
+            "urgentWorkspace" = {
+              "background" = "#2f343a";
+              "border" = "#900000";
+              "text" = "#ffffff";
+            };
           };
         }
       ];
