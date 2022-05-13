@@ -2,18 +2,18 @@
   # Firefox
   programs.firefox = {
     enable = true;
-    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      bitwarden
-      bypass-paywalls-clean
-      darkreader
-      foxyproxy-standard
-      multi-account-containers
-      single-file
-      temporary-containers
-      ublock-origin
-      user-agent-string-switcher
-      vimium
-    ];
+    #extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+    #  bitwarden
+    #  bypass-paywalls-clean
+    #  darkreader
+    #  foxyproxy-standard
+    #  multi-account-containers
+    #  single-file
+    #  temporary-containers
+    #  ublock-origin
+    #  user-agent-string-switcher
+    #  vimium
+    #];
     profiles.default = {
       id = 0;
       name = "Default";
