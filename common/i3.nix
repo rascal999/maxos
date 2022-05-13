@@ -58,16 +58,16 @@ in {
       };
 
       startup = [
-        #{
-        #  command = "exec ${pkgs.twmnd} &";
-        #  always = true;
-        #  notification = false;
-        #}
         {
           command = "exec ${pkgs.redshift} -O 1900";
           always = true;
           notification = false;
         }
+        #{
+        #  command = "exec ${pkgs.twmnd} &";
+        #  always = true;
+        #  notification = false;
+        #}
         #{
         #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
         #  always = true;
@@ -75,12 +75,21 @@ in {
         #}
       ];
 
-      #bars = [
-      #  {
-      #    position = "bottom";
-      #    statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
-      #  }
-      #];
+      bars = [
+        {
+          font = "pango:DejaVu Sans Mono, FontAwesome 12";
+          position = "bottom";
+          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
+          colors = {
+            "separator" = "#666666";
+            "statusline" = "#dddddd";
+            "focused_workspace" = "#0088CC #0088CC #ffffff";
+            "active_workspace" = "#333333 #333333 #ffffff";
+            "inactive_workspace" = "#333333 #333333 #888888";
+            "urgent_workspace" = "#2f343a #900000 #ffffff";
+          };
+        };
+      ];
     };
   };
 }
