@@ -285,12 +285,10 @@
   #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
 
   # Firefox policy for extensions
-  environment.etc = [
-    {
-      target = "firefox/policies/policies.json";
-      source = "./common/firefox-policies.json";
-    }
-  ];
+  environment.etc = {
+    target = "firefox/policies/policies.json";
+    source = "./common/firefox-policies.json";
+  };
 
   # Laptop light
   programs.light.enable = true;
