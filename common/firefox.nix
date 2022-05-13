@@ -21,5 +21,6 @@
         "signon.rememberSignons" = false;
       };
     };
+    themeVariant = "dark";
   };
 }
