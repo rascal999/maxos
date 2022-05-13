@@ -272,6 +272,7 @@
       enable = true;
       enableSSHSupport = true;
   };
+
   # Steam
   #programs.steam.enable = true;
   # Sway
@@ -282,6 +283,11 @@
   programs.zsh.enable = true;
 
   #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+
+  # Firefox policy for extensions
+  environment.etc = {
+    "./common/firefox-policies.json".source = "/etc/nixos/policies.json";
+  };
 
   # Laptop light
   programs.light.enable = true;
