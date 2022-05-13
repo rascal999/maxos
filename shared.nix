@@ -362,7 +362,7 @@
     enable = true;
     enableOnBoot = true;
     liveRestore = false;
-  }
+  };
 
   ## VirtualBox
   virtualisation.virtualbox.host.enable = true;
