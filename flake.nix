@@ -65,7 +65,7 @@
         modules = [
           ./common/nur.nix
           ./shared.nix
-          ./hosts/vm-rog-test/vm-rig-test-configuration.nix
+          ./hosts/vm-rig-test/vm-rig-test-configuration.nix
           ./hosts/vm-rig-test/vm-rig-test-hw.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
