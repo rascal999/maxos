@@ -87,6 +87,7 @@
       };
 
       userChrome = import ./css/userChrome.css;
+      userContent = import ./css/userContent.css;
     };
   };
 }

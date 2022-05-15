@@ -35,6 +35,10 @@
       "vimium-c@gdh1995.cn": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/addon-14732745-latest.xpi",
         "installation_mode": "normal_installed"
+      },
+      "sidebarTabs@asamuzak.jp": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sidebartabs/addon-4777581-latest.xpi",
+        "installation_mode": "normal_installed"
       }
     },
     "Bookmarks": [
