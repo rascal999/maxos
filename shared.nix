@@ -5,13 +5,6 @@
 { config, pkgs, lib, ... }:
 
 {
-  #imports =
-  #  [ # Include the results of the hardware scan.
-  #    ./hardware-configuration.nix
-  #    ./hostname.nix
-  #    ./pkgs/vim.nix
-  #  ];
-
   boot.kernelParams = [ "intel_pstate=active" ];
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
@@ -31,9 +24,6 @@
       halt
     }
   '';
-
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -61,14 +51,8 @@
   users.users.user = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
-    password = "nixos";
     shell = pkgs.zsh;
   };
-
-  #home-manager.users.user = { pkgs, ... }: {
-  #  home.packages = [ pkgs.atool pkgs.httpie ];
-  #  programs.bash.enable = true;
-  #};
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -278,8 +262,6 @@
   # Enable zsh
   programs.zsh.enable = true;
 
-  #programs.zsh.promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-
   # Firefox policy for extensions
   environment.etc."firefox/policies/policies.json".source = ./common/firefox/firefox-policies.json;
 
@@ -288,10 +270,9 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+  services.openssh.permitRootLogin = "yes";
 
-  ###
-  # Custom
-  ###
+  security.sudo.wheelNeedsPassword = false;
 
   # Flakes
   nix.package = pkgs.nixUnstable;
@@ -345,9 +326,6 @@
   #services.syncthing.user = "user";
   #services.syncthing.dataDir = "/home/user/syncthing";
   #services.syncthing.configDir = "/home/user/.config/syncthing";
-
-  ## Mailspring
-  #services.gnome.gnome-keyring.enable = true;
 
   ## For Obsidian
   nixpkgs.config.allowUnfree = true;
