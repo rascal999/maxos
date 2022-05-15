@@ -23,8 +23,9 @@ in {
 
         "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+c" = "kill";
-        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
+        "${mod}+Shift+p" = "restart";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
+        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
 
         "${mod}+b" = "exec /home/user/burp.sh";
         "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
