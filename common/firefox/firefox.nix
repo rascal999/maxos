@@ -69,6 +69,8 @@
 
         "signon.rememberSignons" = false;
 
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
         "toolkit.telemetry.archive.enabled" = false;
         "toolkit.telemetry.bhrPing.enabled" = false;
         "toolkit.telemetry.enabled" = false;
