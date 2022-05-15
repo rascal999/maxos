@@ -84,7 +84,7 @@
         "ui.systemUsesDarkTheme" = 1;
       };
 
-      userChrome = "./css/userChrome.css";
+      userChrome = import ./css/userChrome.css;
     };
   };
 }
