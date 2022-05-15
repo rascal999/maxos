@@ -55,9 +55,6 @@
     hashedPassword = "!";
   };
 
-  # User state adheres to configuration
-  users.mutableUsers = false;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
