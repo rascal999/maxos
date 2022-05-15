@@ -66,7 +66,7 @@ in {
       startup = [
         {
           command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
-          always = true;
+          #always = true;
           notification = false;
         }
         {
@@ -76,7 +76,7 @@ in {
         }
         {
           command = "exec ${pkgs.firefox}/bin/firefox";
-          always = true;
+          #always = true;
           workspace = "1";
         }
         #{
