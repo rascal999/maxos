@@ -4,6 +4,10 @@
   xresources.properties = {
     "urxvt.scrollBar" = "false";
     "urxvt.font" = "xft:MesloLGS Nerd Font Mono:pixelsize=22";
+    "urxvt.perl-ext-common" = "default,matcher";
+    "urxvt.url-launcher" = "/run/current-system/sw/bin/xdg-open";
+    "urxvt.matcher.button" = "1";
+
     "*background" = "#101010";
     "*foreground" = "#66FF66";
     "*cursorColor" = "#66ff66";
