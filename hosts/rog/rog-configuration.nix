@@ -16,7 +16,7 @@ in
 
   environment.systemPackages = [ nvidia-offload ];
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" "amdgpu" ];
   hardware.nvidia.prime = {
     offload.enable = true;
 
