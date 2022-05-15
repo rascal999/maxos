@@ -47,13 +47,16 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account
   users.users.user = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     hashedPassword = "!";
   };
+
+  # User state adheres to configuration
+  users.mutableUsers = false;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
