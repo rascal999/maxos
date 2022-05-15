@@ -38,6 +38,27 @@
         #specialArgs = { inherit inputs; };
       };
 
+      rog = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          ./common/nur.nix
+          ./shared.nix
+          ./hosts/rog/rog-configuration.nix
+          ./hosts/rog/rog-hw.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.user = import ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+        ];
+
+        #specialArgs = { inherit inputs; };
+      };
+
       vm-rog-test = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
