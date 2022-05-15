@@ -90,7 +90,7 @@ in {
         {
           fonts = [ "DejaVu Sans Mono" "FontAwesome 12" ];
           position = "bottom";
-          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
+          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${../../common/i3status-rust.toml}";
           colors = {
             "separator" = "#666666";
             "statusline" = "#dddddd";
