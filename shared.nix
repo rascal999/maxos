@@ -52,6 +52,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
+    hashedPassword = "!";
   };
 
   # List packages installed in system profile. To search, run:
