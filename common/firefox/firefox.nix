@@ -84,11 +84,7 @@
         "ui.systemUsesDarkTheme" = 1;
       };
 
-      userChrome = ''
-        /* Make my URL bar and Search bar bigger and bolder. Now dammit. */
-        #urlbar, #searchbar .searchbar-textbox{
-        font-family: Arial !important; font-size: 22pt }
-      '';
+      userChrome = "./css/userChrome.css";
     };
   };
 }
