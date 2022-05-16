@@ -81,21 +81,8 @@ in {
           notification = false;
         }
         {
-          command = "exec ${pkgs.firefox}/bin/firefox";
-          #always = true;
-          workspace = "1";
+          command = "exec ${../../../scripts/monitors.sh} ${./rig-workspace-1.json} ${./rig-workspace-2.json} ${./rig-workspace-7.json}";
         }
-        {
-          command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --auto --right-of HDMI-0";
-        }
-        {
-          command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output USB-C-0 --auto --left-of HDMI-0";
-        }
-        #{
-        #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
-        #  always = true;
-        #  notification = false;
-        #}
       ];
 
       bars = [
