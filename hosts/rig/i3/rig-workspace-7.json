@@ -14,12 +14,9 @@
     "percent": 1,
     "swallows": [
        {
-          "class": "^Slack$",
-          "instance": "^slack$"
-       // "machine": "^nixos\\-rig$",
-       // "window_role": "^browser\\-window$"
+        "class": "^Slack$",
+        "instance": "^slack$"
        }
     ],
     "type": "con"
 }
-

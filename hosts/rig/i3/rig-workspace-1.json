@@ -14,12 +14,9 @@
     "percent": 1,
     "swallows": [
        {
-          "class": "^obsidian$",
-          "instance": "^obsidian$"
-       // "machine": "^nixos\\-rig$",
-       // "window_role": "^browser\\-window$"
+         "class": "^obsidian$",
+         "instance": "^obsidian$"
        }
     ],
     "type": "con"
 }
-
