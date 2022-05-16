@@ -8,15 +8,12 @@ in {
 
     extraConfig = ''
       default_border pixel 1
-      exec --no-startup-id i3-msg "workspace 1, move workspace to output HDMI-0"
-      exec --no-startup-id i3-msg "workspace 2, move workspace to output USB-C-0"
-      exec --no-startup-id i3-msg "workspace 7, move workspace to output DP-4"
     '';
 
     config = {
       modifier = mod;
 
-      defaultWorkspace = "workspace number 1";
+      defaultWorkspace = "workspace number 2";
 
       fonts = ["DejaVu Sans Mono, FontAwesome 6"];
 
