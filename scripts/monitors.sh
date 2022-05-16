@@ -16,10 +16,10 @@ if [[ `hostname` == "rig" ]]; then
 
     for WORKSPACE_FILE in "$@" ; do
       WORKSPACE_NUM=`echo $workspace | grep -Eo "[0-9]"`
-      i3-msg "workspace $WORKSPACE_NUME; append_layout $WORKSPACE_FILE"
+      i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     done
 
-    sleep 3 
+    sleep 3
 
     /run/current-system/sw/bin/obsidian &
     /run/current-system/sw/bin/firefox -P "Default" &
