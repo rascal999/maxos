@@ -4,7 +4,7 @@
     "DisplayMenuBar": true,
     "DisableFirefoxAccounts": true,
     "ExtensionSettings": {
-      "{addon@darkreader.org}": {
+      "addon@darkreader.org": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/addon-13299734-latest.xpi",
         "installation_mode": "normal_installed"
       },
