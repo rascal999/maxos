@@ -14,8 +14,8 @@
     "percent": 1,
     "swallows": [
        {
-       "class": "^firefox$",
-       "instance": "^Navigator$"
+          "class": "^firefox$",
+          "instance": "^Navigator$"
        }
     ],
     "type": "con"

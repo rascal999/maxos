@@ -14,8 +14,8 @@
     "percent": 1,
     "swallows": [
        {
-        "class": "^Slack$",
-        "instance": "^slack$"
+          "class": "^Slack$",
+          "instance": "^slack$"
        }
     ],
     "type": "con"
