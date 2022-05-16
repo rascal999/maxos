@@ -72,6 +72,7 @@
      #btop
      burpsuite
      calibre
+     cht-sh
      chroma
      chromium
      cifs-utils
