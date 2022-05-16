@@ -54,10 +54,6 @@ in {
         "${mod}+Shift+Down" = "move down";
         "${mod}+Shift+Up" = "move up";
         "${mod}+Shift+Right" = "move right";
-
-        # My multi monitor setup
-        #"${mod}+m" = "move workspace to output DP-2";
-        #"${mod}+Shift+m" = "move workspace to output DP-5";
       };
 
       window = {
@@ -69,7 +65,6 @@ in {
       startup = [
         {
           command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
-          #always = true;
           notification = false;
         }
         {

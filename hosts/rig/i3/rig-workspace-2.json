@@ -4,46 +4,19 @@
     "current_border_width": 1,
     "floating": "auto_off",
     "geometry": {
-       "height": 1415,
-       "width": 1145,
+       "height": 1414,
+       "width": 1719,
        "x": 0,
        "y": 0
     },
     "marks": [],
     "name": "Mozilla Firefox",
-    "percent": 0.5,
+    "percent": 1,
     "swallows": [
        {
-          "class": "^Firefox$",
-          "instance": "^Navigator$"
-       // "machine": "^nixos\\-rig$",
-       // "window_role": "^browser$"
+       "class": "^firefox$",
+       "instance": "^Navigator$"
        }
     ],
     "type": "con"
 }
-
-{
-    "border": "pixel",
-    "current_border_width": 1,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 1415,
-       "width": 1146,
-       "x": 4853,
-       "y": 0
-    },
-    "marks": [],
-    "name": "Mozilla Firefox",
-    "percent": 0.5,
-    "swallows": [
-       {
-          "class": "^Firefox$",
-          "instance": "^Navigator$"
-       // "machine": "^nixos\\-rig$",
-       // "window_role": "^browser$"
-       }
-    ],
-    "type": "con"
-}
-
