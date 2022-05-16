@@ -16,7 +16,7 @@
 
   home.sessionVariables = {
     ZSH_COLORIZE_STYLE = "vim";
-  }
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
