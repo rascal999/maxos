@@ -72,6 +72,7 @@
      #btop
      burpsuite
      calibre
+     chroma
      chromium
      cifs-utils
      clamav
