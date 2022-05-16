@@ -15,8 +15,8 @@ if [[ `hostname` == "rig" ]]; then
     i3-msg "workspace 7, move workspace to output DP-4"
 
     for WORKSPACE_FILE in "$@" ; do
-      WORKSPACE_NUM=`echo $workspace | grep -Eo "[0-9]"`
-      i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
+      WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -o "[0-9]"`
+      echo i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     done
 
     sleep 3
