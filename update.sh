@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-sudo nixos-rebuild --flake .#$HOST --impure switch
+nixos-rebuild --use-remote-sudo --flake .#$HOST --impure switch
