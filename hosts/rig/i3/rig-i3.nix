@@ -89,7 +89,7 @@ in {
           command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output DP-4 --auto --right-of HDMI-0";
         }
         {
-          command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output USB-C-0 --auto --right-of HDMI-0";
+          command = "exec ${pkgs.xorg.xrandr}/bin/xrandr --output USB-C-0 --auto --left-of HDMI-0";
         }
         #{
         #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
