@@ -16,7 +16,7 @@ if [[ `hostname` == "rig" ]]; then
 
     for WORKSPACE_FILE in "$@" ; do
       WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -o "[0-9]"`
-      echo i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
+      i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     done
 
     sleep 3
