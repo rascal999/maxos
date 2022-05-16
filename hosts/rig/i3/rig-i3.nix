@@ -11,9 +11,6 @@ in {
       exec --no-startup-id i3-msg "workspace 1, move workspace to output HDMI-0"
       exec --no-startup-id i3-msg "workspace 2, move workspace to output USB-C-0"
       exec --no-startup-id i3-msg "workspace 7, move workspace to output DP-4"
-      exec --no-startup-id i3-msg "workspace 1, append_layout ${./rig-workspace-1.json}"
-      exec --no-startup-id i3-msg "workspace 2, append_layout ${./rig-workspace-2.json}"
-      exec --no-startup-id i3-msg "workspace 7, append_layout ${./rig-workspace-7.json}"
     '';
 
     config = {
