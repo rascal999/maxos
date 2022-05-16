@@ -3,6 +3,9 @@
     "NewTabPage": false,
     "DisplayMenuBar": true,
     "DisableFirefoxAccounts": true,
+    "Homepage": {
+      "StartPage": "previous-session"
+    },
     "ExtensionSettings": {
       "addon@darkreader.org": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/addon-13299734-latest.xpi",
