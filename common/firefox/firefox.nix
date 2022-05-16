@@ -29,7 +29,6 @@
         "browser.ping-centre.telemetry" = false;
         "browser.search.openintab" = true;
         "browser.send_pings" = false;
-        "browser.showQuitWarning" = true;
         "browser.toolbars.bookmarks.visibility" = "always";
 
         "datareporting.policy.dataSubmissionEnabled" = false;
