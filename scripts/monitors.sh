@@ -22,7 +22,7 @@ if [[ `hostname` == "rig" ]]; then
     sleep 3 
 
     /run/current-system/sw/bin/obsidian &
-    /run/current-system/sw/bin/firefox -P "Default User" &
+    /run/current-system/sw/bin/firefox -P "Default" &
     /run/current-system/sw/bin/slack &
 fi
 
