@@ -21,8 +21,8 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "zsh-autosuggestions" "zsh-syntax-highlighting" ]
-    }
+      plugins = [ "zsh-autosuggestions" "zsh-syntax-highlighting" ];
+    };
 
     plugins = with pkgs; [
       {
