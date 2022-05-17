@@ -190,6 +190,7 @@
      ruby
      rxvt-unicode
      screen
+     screenfetch
      scrot
      sddm
      signal-desktop
