@@ -16,6 +16,7 @@
 
   home.sessionVariables = {
     ZSH_COLORIZE_STYLE = "vim";
+    EDITOR = "vim";
   };
 
   services.syncthing = {
