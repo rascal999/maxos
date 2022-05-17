@@ -32,6 +32,7 @@ in {
         "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
+        "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
         "${mod}+s" = "exec ${pkgs.scrot}/bin/scrot";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
