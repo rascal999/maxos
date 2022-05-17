@@ -182,6 +182,7 @@
      qemu
      qemu-utils
      radare2
+     ranger
      rdesktop
      redshift
      remmina
