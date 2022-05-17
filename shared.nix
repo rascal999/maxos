@@ -156,6 +156,7 @@
      navi
      nethogs
      networkmanager
+     neocomp
      ngrep
      ngrok
      nixos-generators
