@@ -8,7 +8,7 @@ if [[ `hostname` == "rig" ]]; then
     # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --left-of HDMI-0
 
-    sleep 3
+    sleep 4
 
     i3-msg "workspace 1, move workspace to output HDMI-0"
     i3-msg "workspace 2, move workspace to output USB-C-0"
@@ -19,18 +19,18 @@ if [[ `hostname` == "rig" ]]; then
       i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     done
 
-    sleep 3
+    sleep 4
 
-    /run/current-system/sw/bin/firefox -P "Default" &
-    sleep 1
-    /run/current-system/sw/bin/obsidian &
-    sleep 1
     /run/current-system/sw/bin/slack &
+    sleep 2
+    /run/current-system/sw/bin/obsidian &
+    sleep 2
+    /run/current-system/sw/bin/firefox -P "Default" &
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
-    sleep 3 
+    sleep 4
     /run/current-system/sw/bin/xrandr --output HDMI-1 --off
-    sleep 3 
+    sleep 4
     /run/current-system/sw/bin/xrandr --output HDMI-1 --auto --right-of eDP-1
 fi

@@ -16,6 +16,11 @@
 
   home.sessionVariables = {
     ZSH_COLORIZE_STYLE = "vim";
+    EDITOR = "vim";
+  };
+
+  services.syncthing = {
+    enable = true;
   };
 
   # This value determines the Home Manager release that your

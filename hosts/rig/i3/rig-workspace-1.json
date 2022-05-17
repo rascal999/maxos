@@ -3,6 +3,7 @@
     "border": "none",
     "current_border_width": 1,
     "floating": "auto_off",
+    "layout": "splitv",
     "geometry": {
        "height": 1418,
        "width": 1151,

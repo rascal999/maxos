@@ -25,6 +25,7 @@ in {
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
+        "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
 
         "${mod}+b" = "exec /home/user/burp.sh";
@@ -71,6 +72,9 @@ in {
         }
         {
           command = "exec ${../../../scripts/monitors.sh} ${./rig-workspace-1.json} ${./rig-workspace-2.json} ${./rig-workspace-7.json}";
+        }
+        {
+          command = "exec /run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40";
         }
       ];
 

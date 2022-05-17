@@ -182,6 +182,7 @@
      qemu
      qemu-utils
      radare2
+     ranger
      rdesktop
      redshift
      remmina
@@ -189,6 +190,7 @@
      ruby
      rxvt-unicode
      screen
+     screenfetch
      scrot
      sddm
      signal-desktop

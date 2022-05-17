@@ -25,6 +25,7 @@ in {
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
+        "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
 
         "${mod}+b" = "exec /home/user/burp.sh";
@@ -51,10 +52,6 @@ in {
         "${mod}+Shift+Down" = "move down";
         "${mod}+Shift+Up" = "move up";
         "${mod}+Shift+Right" = "move right";
-
-        # My multi monitor setup
-        #"${mod}+m" = "move workspace to output DP-2";
-        #"${mod}+Shift+m" = "move workspace to output DP-5";
       };
 
       window = {
@@ -79,11 +76,6 @@ in {
           #always = true;
           workspace = "1";
         }
-        #{
-        #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
-        #  always = true;
-        #  notification = false;
-        #}
       ];
 
       bars = [
