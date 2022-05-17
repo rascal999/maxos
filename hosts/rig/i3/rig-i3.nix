@@ -73,7 +73,7 @@ in {
           command = "exec ${../../../scripts/monitors.sh} ${./rig-workspace-1.json} ${./rig-workspace-2.json} ${./rig-workspace-7.json}";
         }
         {
-          command = "exec ${pkgs.nvidia-settings}/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40"
+          command = "exec ${pkgs.nvidia-settings}/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40";
         }
       ];
 
