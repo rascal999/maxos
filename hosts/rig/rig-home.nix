@@ -20,7 +20,6 @@
 
   services.syncthing = {
     enable = true;
-    openDefaultPorts = true;
   };
 
   # This value determines the Home Manager release that your
