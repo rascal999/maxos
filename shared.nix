@@ -47,6 +47,8 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  hardware.enableAllFirmware = true;
+
   # Define a user account
   users.users.user = {
     isNormalUser = true;
