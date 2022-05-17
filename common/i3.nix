@@ -52,10 +52,6 @@ in {
         "${mod}+Shift+Down" = "move down";
         "${mod}+Shift+Up" = "move up";
         "${mod}+Shift+Right" = "move right";
-
-        # My multi monitor setup
-        #"${mod}+m" = "move workspace to output DP-2";
-        #"${mod}+Shift+m" = "move workspace to output DP-5";
       };
 
       window = {
@@ -80,11 +76,6 @@ in {
           #always = true;
           workspace = "1";
         }
-        #{
-        #  command = "${pkgs.feh}/bin/feh --bg-scale ~/background.png";
-        #  always = true;
-        #  notification = false;
-        #}
       ];
 
       bars = [
