@@ -25,6 +25,7 @@ in {
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
+        "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
 
         "${mod}+b" = "exec /home/user/burp.sh";
