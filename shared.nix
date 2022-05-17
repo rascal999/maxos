@@ -234,6 +234,7 @@
      wpscan
      x11docker
      x11vnc
+     xcalib
      xlockmore
      #xmind
      xorg.xbacklight
