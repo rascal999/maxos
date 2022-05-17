@@ -20,7 +20,6 @@
 
   services.syncthing = {
     enable = true;
-    dataDir = "/home/user/syncthing";
     openDefaultPorts = true;
   };
 
