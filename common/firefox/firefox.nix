@@ -91,7 +91,7 @@
     };
 
     profiles.burp = {
-      id = 0;
+      id = 1;
       name = "Burp";
       isDefault = false;
       settings = { 
