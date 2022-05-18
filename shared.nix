@@ -372,9 +372,9 @@
   ## QEMU
   virtualisation.libvirtd = {
     enable = true;
-    qemuOvmf = true;
-    qemuSwtpm = true;
-    qemuOvmfPackage = pkgs.OVMFFull;
+    qemu.ovmf = true;
+    qemu.swtpm = true;
+    qemu.ovmf.package = pkgs.OVMFFull;
   };
 
   # opensnitch
