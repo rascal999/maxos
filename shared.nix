@@ -352,25 +352,26 @@
     liveRestore = false;
   };
 
-  ## VirtualBox
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
-  virtualisation.virtualbox.host.enableHardening = false;
-  users.extraGroups.vboxusers.members = [ "user" ];
-
-  # QEMU
-  virtualisation = {
-    libvirtd = {
-      enable = true;
-      qemuOvmf = true;
-      qemuSwtpm = true;
-      qemuOvmfPackage = pkgs.OVMFFull;
-    };
+  # Virtualisation
+  users.users.user = {
+    extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" "vboxusers" ];
   };
 
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
-  users.users.user = {
-    extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
+
+  ## VirtualBox
+  virtualisation.virtualbox.host = {
+    enable = true;
+    enableExtensionPack = true;
+    enableHardening = false;
+  };
+
+  ## QEMU
+  virtualisation.libvirtd = {
+    enable = true;
+    qemuOvmf = true;
+    qemuSwtpm = true;
+    qemuOvmfPackage = pkgs.OVMFFull;
   };
 
   # opensnitch
