@@ -369,7 +369,6 @@
   };
 
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
-  environment.systemPackages = with pkgs; [ virt-manager win-virtio ];
   users.users.user = {
     extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
   };
