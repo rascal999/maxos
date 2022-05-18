@@ -53,7 +53,14 @@
   # Define a user account
   users.users.user = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" "video" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "libvirtd"
+      "kvm"
+      "qemu-libvirtd"
+      "vboxusers" "wheel"
+      "docker"
+      "video"
+    ]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
     hashedPassword = "!";
   };
@@ -353,10 +360,6 @@
   };
 
   # Virtualisation
-  users.users.user = {
-    extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" "vboxusers" ];
-  };
-
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
   ## VirtualBox
