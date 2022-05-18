@@ -356,6 +356,22 @@
   virtualisation.virtualbox.host.enableHardening = false;
   users.extraGroups.vboxusers.members = [ "user" ];
 
+  # QEMU
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemuOvmf = true;
+      qemuSwtpm = true;
+      qemuOvmfPackage = pkgs.OVMFFull;
+    };
+  };
+
+  environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
+  environment.systemPackages = with pkgs; [ virt-manager win-virtio ];
+  users.users.user = {
+    extraGroups = [ "libvirtd" "kvm" "qemu-libvirtd" ];
+  };
+
   # opensnitch
   #services.opensnitch.enable = false;
 
