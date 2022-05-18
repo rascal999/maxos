@@ -219,6 +219,7 @@
      unrar
      unzip
      velero
+     virt-manager
      vim
      vlc
      vue
@@ -229,6 +230,7 @@
      wayvnc
      wget
      whois
+     win-virtio
      wireguard-tools
      wireshark-qt
      woeusb
