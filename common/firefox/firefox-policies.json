@@ -11,6 +11,10 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/addon-13299734-latest.xpi",
         "installation_mode": "normal_installed"
       },
+      "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/translate-web-pages/addon-15610759-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/addon-12533945-latest.xpi",
         "installation_mode": "normal_installed"
