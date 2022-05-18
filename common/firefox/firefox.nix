@@ -162,7 +162,7 @@
         "ui.systemUsesDarkTheme" = 1;
       };
 
-      userChrome = import ./css/userChrome.css;
+      userChrome = import ./css/userChromeBurp.css;
       userContent = import ./css/userContent.css;
     };
   };
