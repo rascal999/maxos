@@ -75,6 +75,7 @@
      appimage-run
      asciinema
      atom
+     autokey
      awscli
      azure-cli
      brightnessctl
