@@ -5,6 +5,7 @@
 { config, pkgs, lib, ... }:
 
 {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [ "intel_pstate=active" ];
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
