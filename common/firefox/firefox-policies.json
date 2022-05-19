@@ -3,6 +3,8 @@
     "NewTabPage": false,
     "DisplayMenuBar": "default-off",
     "DisableFirefoxAccounts": true,
+    "DisableProfileImport": true,
+    "NoDefaultBookmarks": true,
     "Homepage": {
       "StartPage": "previous-session"
     },
