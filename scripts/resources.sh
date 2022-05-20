@@ -377,6 +377,7 @@ git_update https://github.com/rvaiya/warpd.git $HOME/git/misc/warpd
 git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
 git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
 git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
+git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
 
 ###
 ### Exploits
