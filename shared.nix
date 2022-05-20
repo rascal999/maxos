@@ -108,6 +108,7 @@
      fcrackzip
      feh
      ffmpeg
+     ffuf
      file
      filezilla
      firecracker
