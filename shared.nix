@@ -209,6 +209,7 @@
      sddm
      signal-desktop
      slack
+     socat
      sqlite-web
      sqlmap
      sshfs
