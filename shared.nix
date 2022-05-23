@@ -4,14 +4,7 @@
 
 { config, pkgs, lib, ... }:
 
-with pkgs;
-let
-  my-python-packages = python-packages: with python-packages; [
-    #objection
-    requests
-  ]; 
-  python-with-my-packages = python3.withPackages my-python-packages;
-in {
+{
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [ "intel_pstate=active" ];
   # Use the GRUB 2 boot loader.
@@ -199,7 +192,7 @@ in {
      peco
      protonmail-bridge
      pwgen
-     python-with-my-packages
+     python310
      qemu
      qemu-utils
      radare2
