@@ -854,7 +854,7 @@ d-nbtscan() {
 }
 
 d-dnschef() {
-    docker run -it --rm -w /data -v $(pwd):/data --net=host booyaabes/kali-linux-full dnschef
+    docker run -it --rm -w /data -v $(pwd):/data --net=host booyaabes/kali-linux-full dnschef "$@"
 }
 
 d-hping3() {
