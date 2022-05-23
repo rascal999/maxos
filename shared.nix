@@ -9,35 +9,6 @@ let
   my-python-packages = python-packages: with python-packages; [
     pip
     setuptools
-    wcwidth
-    tabulate
-    ptyprocess
-    zipp
-    Werkzeug
-    urllib3
-    sqlparse
-    six
-    semver
-    pygments
-    prompt_toolkit
-    pexpect
-    MarkupSafe
-    itsdangerous
-    idna
-    frida
-    colorama
-    click
-    charset-normalizer
-    certifi
-    requests
-    Jinja2
-    importlib-metadata
-    frida-tools
-    delegator.py
-    configobj
-    flask
-    cli-helpers
-    litecli
   ]; 
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
@@ -228,7 +199,8 @@ in {
      peco
      protonmail-bridge
      pwgen
-     python-with-my-packages
+     #python-with-my-packages
+     python310
      qemu
      qemu-utils
      radare2
