@@ -335,6 +335,7 @@
 
   # k3s and other services
   networking.firewall.allowedTCPPorts = [ 22 80 443 5900 8080 8081 8082 8083 8084 8085 6443 ];
+  networking.firewall.allowedUDPPorts = [ 53 ];
 
   # k3s
   services.k3s.enable = false;
