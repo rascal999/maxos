@@ -949,6 +949,11 @@ d-apkleaks() {
     docker run -it --rm -v $(pwd):/${dirname} apkleaks -f /${dirname}/$1
 }
 
+d-mobsf() {
+    docker run --rm -p 8010:8000 opensecurity/mobile-security-framework-mobsf
+    firefox http://localhost:8010 &; disown
+}
+
 ###
 ### Educational docker images
 ###
