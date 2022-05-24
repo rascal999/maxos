@@ -946,7 +946,7 @@ d-apkleaks() {
     fi
 
     dirname=${PWD##*/}
-    docker run -it --rm -v $(pwd):/${dirname} dwisiswant0/apkleaks:latest -f /${dirname}/$1
+    docker run -it --rm -v $(pwd):/${dirname} apkleaks -f /${dirname}/$1
 }
 
 ###

@@ -105,7 +105,7 @@ docker pull cmnatic/rustscan                             # The Modern Port Scann
 docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
 #docker pull xerosecurity/sn1per                         # Discover the attack surface and prioritize risks
 docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
-docker pull dwisiswant0/apkleaks:latest                  # Scanning APK file for URIs, endpoints & secrets
+#docker pull dwisiswant0/apkleaks                         # Scanning APK file for URIs, endpoints & secrets
 
 ###
 ### https://github.com/cybersecsi/RAUDI
@@ -301,7 +301,12 @@ git_update https://gitlab.com/invuls/pentest-projects/pcf.git $HOME/git/pentest-
 git_update https://github.com/Nightbringer21/fridump.git $HOME/git/pentest-tools/fridump
 git_update https://github.com/caddyserver/caddy.git $HOME/git/pentest-tools/caddy
 git_update https://github.com/mzet-/linux-exploit-suggester.git $HOME/git/pentest-tools/linux-exploit-suggester
+git_update https://github.com/va1da5/docker-objection-for-android.git $HOME/git/misc/objection
 #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
+
+# apkleaks
+git_update https://github.com/dwisiswant0/apkleaks.git $HOME/git/pentest-tools/apkleaks
+docker build . -t apkleaks
 
 # angularjs-csti-scanner
 git_update https://github.com/tijme/angularjs-csti-scanner.git $HOME/git/pentest-tools/angularjs-csti-scanner.git
@@ -391,7 +396,6 @@ git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
 git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
 git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
 git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
-git_update https://github.com/va1da5/docker-objection-for-android.git $HOME/git/misc/objection
 
 ###
 ### Exploits
