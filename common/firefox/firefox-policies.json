@@ -213,11 +213,60 @@
         "Folder": "Nix"
       },
       {
+        "Title": "awesome-pentest-cheat-sheets",
+        "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Cheatsheets"
+      },
+      {
+        "Title": "Cheatsheet-God",
+        "URL": "file:///home/user/git/pentest-education/Cheatsheet-God/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Cheatsheets"
+      },
+      {
         "Title": "Hack The Box",
         "Favicon": "https://www.hackthebox.com/images/landingv3/favicon.png",
         "URL": "https://www.hackthebox.com/",
         "Placement": "toolbar",
         "Folder": "Pentesting"
+      },
+      {
+        "Title": "Halborn Public Reports",
+        "URL": "file:///home/user/git/pentest-education/HalbornPublicReports/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Reports"
+      },
+      {
+        "Title": "h4cker cheat sheets",
+        "URL": "file:///home/user/git/pentest-education/h4cker/cheat_sheets/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Cheatsheets"
+      },
+      {
+        "Title": "OWASP Cheat Sheet Series",
+        "Favicon": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/assets/WebSite_Favicon.png",
+        "URL": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/Glossary.html",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Cheatsheets"
+      },
+      {
+        "Title": "OWASP MSTG",
+        "URL": "file:///home/user/git/pentest-education/owasp-mstg/OWASP_MSTG-SNAPSHOT.pdf",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Framework"
+      },
+      {
+        "Title": "PENTESTING BIBLE",
+        "URL": "file:///home/user/git/pentest-education/PENTESTING-BIBLE/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Cheatsheets"
+      },
+      {
+        "Title": "Public Pentesting Reports",
+        "URL": "file:///home/user/git/pentest-education/public-pentesting-reports/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting/Reports"
       },
       {
         "Title": "Web Security Academy (PortSwigger)",

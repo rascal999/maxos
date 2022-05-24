@@ -222,7 +222,12 @@ git_update https://github.com/toniblyx/my-arsenal-of-aws-security-tools.git $HOM
 git_update https://github.com/jassics/awesome-aws-security.git $HOME/git/pentest-education/awesome-aws-security
 git_update https://github.com/mytechnotalent/Reverse-Engineering.git $HOME/git/pentest-education/Reverse-Engineering
 git_update https://github.com/sundowndev/hacker-roadmap.git $HOME/git/pentest-education/hacker-roadmap
+
 git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-education/owasp-mstg
+cd $HOME/git/pentest-education/owasp-mstg
+bash tools/docker/pandoc_makedocs.sh
+cd -
+
 git_update https://github.com/The-Art-of-Hacking/h4cker.git $HOME/git/pentest-education/h4cker
 git_update https://github.com/vitalysim/Awesome-Hacking-Resources.git $HOME/git/pentest-education/Awesome-Hacking-Resources
 git_update https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques.git $HOME/git/pentest-education/RedTeam-Tactics-and-Techniques
@@ -254,7 +259,13 @@ git_update https://github.com/docker/labs.git $HOME/git/pentest-education/docker
 git_update https://github.com/imthenachoman/How-To-Secure-A-Linux-Server.git $HOME/git/pentest-education/How-To-Secure-A-Linux-Server
 git_update https://github.com/Hacker0x01/hacker101.git $HOME/git/pentest-education/hacker101
 git_update https://github.com/shieldfy/API-Security-Checklist.git $HOME/git/pentest-education/API-Security-Checklist
+
 git_update https://github.com/OWASP/CheatSheetSeries.git $HOME/git/pentest-education/CheatSheetSeries
+rm -rf $HOME/git/pentest-education/CheatSheetSeriesZip
+mkdir $HOME/git/pentest-education/CheatSheetSeriesZip
+wget https://cheatsheetseries.owasp.org/bundle.zip -O $HOME/git/pentest-education/CheatSheetSeriesZip/bundle.zip
+unzip $HOME/git/pentest-education/CheatSheetSeriesZip/bundle.zip -d $HOME/git/pentest-education/CheatSheetSeriesZip
+
 git_update https://github.com/swisskyrepo/PayloadsAllTheThings.git $HOME/git/pentest-education/PayloadsAllTheThings
 git_update https://github.com/enaqx/awesome-pentest.git $HOME/git/pentest-education/awesome-pentest
 git_update https://github.com/bayandin/awesome-awesomeness.git $HOME/git/pentest-education/awesome-awesomeness
