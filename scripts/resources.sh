@@ -105,6 +105,7 @@ docker pull cmnatic/rustscan                             # The Modern Port Scann
 docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
 #docker pull xerosecurity/sn1per                         # Discover the attack surface and prioritize risks
 docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
+docker pull dwisiswant0/apkleaks:latest                  # Scanning APK file for URIs, endpoints & secrets
 
 ###
 ### https://github.com/cybersecsi/RAUDI

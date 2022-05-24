@@ -939,6 +939,16 @@ d-whatweb() {
     docker run --rm guidelacour/whatweb ./whatweb $@
 }
 
+d-apkleaks() {
+    if [[ "$#" -ne "1" ]]; then
+        echo "d-apkleaks <APK>"
+        return 1
+    fi
+
+    dirname=${PWD##*/}
+    docker run -it --rm -v $(pwd):/${dirname} dwisiswant0/apkleaks:latest -f /${dirname}/$1
+}
+
 ###
 ### Educational docker images
 ###
