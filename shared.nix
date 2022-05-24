@@ -126,6 +126,7 @@ in {
      fzf
      gcc
      genymotion
+     ghidra-bin
      gimp
      git
      #gitleaks
