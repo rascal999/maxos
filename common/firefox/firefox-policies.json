@@ -245,7 +245,6 @@
       },
       {
         "Title": "OWASP Cheat Sheet Series",
-        "Favicon": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/assets/WebSite_Favicon.png",
         "URL": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/Glossary.html",
         "Placement": "toolbar",
         "Folder": "Pentesting/Cheatsheets"
