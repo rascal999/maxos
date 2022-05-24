@@ -216,13 +216,13 @@
         "Title": "awesome-pentest-cheat-sheets",
         "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Cheatsheets"
+        "Folder": "Pentesting"
       },
       {
         "Title": "Cheatsheet-God",
         "URL": "file:///home/user/git/pentest-education/Cheatsheet-God/",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Cheatsheets"
+        "Folder": "Pentesting"
       },
       {
         "Title": "Hack The Box",
@@ -235,42 +235,35 @@
         "Title": "Halborn Public Reports",
         "URL": "file:///home/user/git/pentest-education/HalbornPublicReports/",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Reports"
+        "Folder": "Pentesting"
       },
       {
         "Title": "h4cker cheat sheets",
         "URL": "file:///home/user/git/pentest-education/h4cker/cheat_sheets/",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Cheatsheets"
+        "Folder": "Pentesting"
       },
       {
         "Title": "OWASP Cheat Sheet Series",
         "URL": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/Glossary.html",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Cheatsheets"
+        "Folder": "Pentesting"
       },
       {
         "Title": "OWASP MSTG",
         "URL": "file:///home/user/git/pentest-education/owasp-mstg/OWASP_MSTG-SNAPSHOT.pdf",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Framework"
+        "Folder": "Pentesting"
       },
       {
         "Title": "PENTESTING BIBLE",
         "URL": "file:///home/user/git/pentest-education/PENTESTING-BIBLE/",
         "Placement": "toolbar",
-        "Folder": "Pentesting/Cheatsheets"
+        "Folder": "Pentesting"
       },
       {
         "Title": "Public Pentesting Reports",
         "URL": "file:///home/user/git/pentest-education/public-pentesting-reports/",
-        "Placement": "toolbar",
-        "Folder": "Pentesting/Reports"
-      },
-      {
-        "Title": "Web Security Academy (PortSwigger)",
-        "Favicon": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
-        "URL": "https://portswigger.net/web-security",
         "Placement": "toolbar",
         "Folder": "Pentesting"
       },
@@ -285,6 +278,13 @@
         "Title": "VulnHub",
         "Favicon": "https://www.vulnhub.com/static/img/touch-icon-ipad-retina.png",
         "URL": "https://www.vulnhub.com/",
+        "Placement": "toolbar",
+        "Folder": "Pentesting"
+      },
+      {
+        "Title": "Web Security Academy (PortSwigger)",
+        "Favicon": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
+        "URL": "https://portswigger.net/web-security",
         "Placement": "toolbar",
         "Folder": "Pentesting"
       },
