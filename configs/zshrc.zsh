@@ -950,7 +950,7 @@ d-apkleaks() {
 }
 
 d-mobsf() {
-    docker run --rm -p 8010:8000 opensecurity/mobile-security-framework-mobsf
+    docker run --rm -d -p 8010:8000 opensecurity/mobile-security-framework-mobsf
     firefox http://localhost:8010 &; disown
 }
 
