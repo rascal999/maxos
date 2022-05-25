@@ -103,7 +103,7 @@ docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tu
 docker pull dperson/torproxy                             # Tor and Privoxy docker container
 docker pull cmnatic/rustscan                             # The Modern Port Scanner
 docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
-#docker pull xerosecurity/sn1per                         # Discover the attack surface and prioritize risks
+#docker pull xerosecurity/sn1per                          # Discover the attack surface and prioritize risks
 docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
 #docker pull dwisiswant0/apkleaks                         # Scanning APK file for URIs, endpoints & secrets
 
@@ -146,11 +146,8 @@ docker pull secsi/whatweb
 mkdir $HOME/.hetty
 
 ###
-### Education
+### AWS Resources
 ###
-
-# PDFs
-## AWS
 mkdir -p $HOME/pdfs/education/aws
 wget -c https://d1.awsstatic.com/whitepapers/aws-overview.pdf \
     -O $HOME/pdfs/education/aws/aws-overview.pdf
@@ -225,11 +222,6 @@ git_update https://github.com/jassics/awesome-aws-security.git $HOME/git/pentest
 git_update https://github.com/mytechnotalent/Reverse-Engineering.git $HOME/git/pentest-education/Reverse-Engineering
 git_update https://github.com/sundowndev/hacker-roadmap.git $HOME/git/pentest-education/hacker-roadmap
 
-git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-education/owasp-mstg
-cd $HOME/git/pentest-education/owasp-mstg
-bash tools/docker/pandoc_makedocs.sh
-cd -
-
 git_update https://github.com/The-Art-of-Hacking/h4cker.git $HOME/git/pentest-education/h4cker
 git_update https://github.com/vitalysim/Awesome-Hacking-Resources.git $HOME/git/pentest-education/Awesome-Hacking-Resources
 git_update https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques.git $HOME/git/pentest-education/RedTeam-Tactics-and-Techniques
@@ -274,6 +266,15 @@ git_update https://github.com/bayandin/awesome-awesomeness.git $HOME/git/pentest
 git_update https://github.com/trimstray/the-book-of-secret-knowledge.git $HOME/git/pentest-education/the-book-of-secret-knowledge
 git_update https://github.com/Hack-with-Github/Awesome-Hacking.git $HOME/git/pentest-education/Awesome-Hacking
 git_update https://github.com/juliocesarfort/public-pentesting-reports.git $HOME/git/pentest-education/public-pentesting-reports
+
+###
+### Pentest Frameworks
+###
+git_update https://github.com/OWASP/wstg $HOME/git/pentest-frameworks/wstg
+git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-education/owasp-mstg
+cd $HOME/git/pentest-education/owasp-mstg
+bash tools/docker/pandoc_makedocs.sh
+cd -
 
 ###
 ### Pentest Tools
