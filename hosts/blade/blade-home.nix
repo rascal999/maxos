@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./blade-i3.nix
+    ./i3/blade-i3.nix
     ../../common/firefox/firefox.nix
     ../../common/tmux.nix
     ../../common/xresources.nix
@@ -17,6 +17,14 @@
   home.sessionVariables = {
     ZSH_COLORIZE_STYLE = "vim";
     EDITOR = "vim";
+  };
+
+  services.syncthing = {
+    enable = true;
+  };
+
+  home.file = {
+    ".mime.types".source = ../../common/firefox/mime.types;
   };
 
   # This value determines the Home Manager release that your

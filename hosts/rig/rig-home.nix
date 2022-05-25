@@ -2,11 +2,11 @@
 
 {
   imports = [
-    common/i3.nix
-    common/firefox/firefox.nix
-    common/tmux.nix
-    common/xresources.nix
-    common/zsh.nix
+    ./i3/rig-i3.nix
+    ../../common/firefox/firefox.nix
+    ../../common/tmux.nix
+    ../../common/xresources.nix
+    ../../common/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
