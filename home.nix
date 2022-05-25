@@ -23,8 +23,8 @@
     enable = true;
   };
 
-  home.file = {
-    ".mime.types".text = ''
+  ome.file = {
+    ".mime.types".tex = ''
       type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
     ''
   };
