@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./i3/blade-i3.nix
+    ./blade-i3.nix
     ../../common/firefox/firefox.nix
     ../../common/tmux.nix
     ../../common/xresources.nix
