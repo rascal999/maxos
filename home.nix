@@ -24,7 +24,9 @@
   };
 
   home.file = {
-    ".mime.types".source = ./common/firefox/mime.types;
+    ".mime.types".text = ''
+      type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
+    ''
   };
 
   # This value determines the Home Manager release that your
