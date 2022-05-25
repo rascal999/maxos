@@ -23,10 +23,8 @@
     enable = true;
   };
 
-  ome.file = {
-    ".mime.types".tex = ''
-      type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
-    ''
+  home.file = {
+    ".mime.types".source = ./common/firefox/mime.types;
   };
 
   # This value determines the Home Manager release that your

@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ./i3/rig-i3.nix
-    ../../common/firefox/firefox.nix
-    ../../common/tmux.nix
-    ../../common/xresources.nix
-    ../../common/zsh.nix
+    common/i3.nix
+    common/firefox/firefox.nix
+    common/tmux.nix
+    common/xresources.nix
+    common/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -21,6 +21,10 @@
 
   services.syncthing = {
     enable = true;
+  };
+
+  home.file = {
+    ".mime.types".source = ./common/firefox/mime.types;
   };
 
   # This value determines the Home Manager release that your
