@@ -961,7 +961,7 @@ d-ffuf() {
     fi
 
     TIMESTAMP=`date +"%Y%m%d_%H%M%S"`
-    DOMAIN=`echo $2 | gawk -F "//" '{ print $NF }'`
+    DOMAIN=`echo $2 | gawk -F "/" '{ print $3 }'`
 
     WORK_DIR=$HOME/tool-output/ffuf/${TIMESTAMP}_${DOMAIN}
     mkdir -p $WORK_DIR 2>/dev/null
