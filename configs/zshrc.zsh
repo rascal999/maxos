@@ -965,7 +965,7 @@ d-ffuf() {
 
     WORK_DIR=$HOME/tool-output/ffuf/${TIMESTAMP}_${DOMAIN}
     mkdir -p $WORK_DIR 2>/dev/null
-    ffuf -recursion -recursion-depth 2 -ac -s -sf -of all -w $1 -u $2 -od $WORK_DIR
+    ffuf -recursion -recursion-depth 2 -ac -sf -of all -w $1 -u $2 -od $WORK_DIR
 
     echo "ffuf finished, results in $WORK_DIR"
 }
