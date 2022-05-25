@@ -413,7 +413,7 @@ git_update https://github.com/google/fuzzing.git $HOME/git/wordlists/fuzzing
 git_update https://github.com/six2dez/OneListForAll.git $HOME/git/wordlists/OneListForAll
 git_update https://github.com/v0re/dirb.git $HOME/git/wordlists/dirb
 wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -o $HOME/git/wordlists/content_discovery_all.txt
-git_update https://github.com/danielmiessler/SecLists.git $HOME/wordlists/SecLists
+git_update https://github.com/danielmiessler/SecLists.git $HOME/git/wordlists/SecLists
 
 # ISOs / VMs
 #mkdir $HOME/VMs
