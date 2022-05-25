@@ -144,6 +144,12 @@
         "Folder": "Cloud"
       },
       {
+        "Title": "AWS PDFs",
+        "URL": "file:///home/user/pdfs/education/aws",
+        "Placement": "toolbar",
+        "Folder": "Cloud"
+      },
+      {
         "Title": "YouTube",
         "URL": "https://www.youtube.com/",
         "Placement": "toolbar",

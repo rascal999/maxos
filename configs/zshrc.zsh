@@ -954,6 +954,22 @@ d-mobsf() {
     firefox http://localhost:8010 &; disown
 }
 
+d-ffuf() {
+    if [[ "$#" -ne "2" ]]; then
+        echo "d-ffuf <wordlist> <url>"
+        return 1
+    fi
+
+    TIMESTAMP=`date +"%Y%m%d_%H%M%S"`
+    DOMAIN=`echo $1 | gawk -F "//" '{ print $NF }'`
+
+    WORK_DIR=$HOME/tool-output/ffuf/${TIMESTAMP}_${DOMAIN}
+    mkdir -p $WORK_DIR 2>/dev/null
+    fuff -recursion -recursion-depth 2 -ac -s -sf -of all -w $1 -u $2 -od $WORK_DIR
+
+    echo "ffuf finished, results in $WORK_DIR"
+}
+
 ###
 ### Educational docker images
 ###
