@@ -271,10 +271,9 @@ git_update https://github.com/juliocesarfort/public-pentesting-reports.git $HOME
 ### Pentest Frameworks
 ###
 git_update https://github.com/OWASP/wstg $HOME/git/pentest-frameworks/wstg
-git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-education/owasp-mstg
-cd $HOME/git/pentest-education/owasp-mstg
+git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-frameworks/owasp-mstg
+cd $HOME/git/pentest-frameworks/owasp-mstg
 bash tools/docker/pandoc_makedocs.sh
-cd -
 
 ###
 ### Pentest Tools
