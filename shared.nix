@@ -137,6 +137,7 @@ in {
      go
      gobuster
      googler
+     gpa
      grc
      grim
      gsettings-desktop-schemas
