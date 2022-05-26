@@ -806,7 +806,7 @@ d-nginxconfig() {
       return 1
     fi
 
-    docker run --rm -p 1080:1080 -v nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
+    docker run --rm -p 1080:1080 -v "$(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro" -d nginx
 }
 
 d-nginxhere() {
