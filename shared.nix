@@ -86,6 +86,7 @@ in {
      autokey
      awscli
      azure-cli
+     binwalk
      brightnessctl
      brillo
      #btop
