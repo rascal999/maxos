@@ -801,12 +801,12 @@ d-smbservehere() {
 }
 
 d-nginxconfig() {
-    if [[ ! -f "./nginx.conf" ]]; then
-      echo "ERROR: ./nginx.conf not found"
+    if [[ ! -f "./default.conf" ]]; then
+      echo "ERROR: ./default.conf not found"
       return 1
     fi
 
-    docker run --rm -p 1080:1080 -v "$(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro" nginx
+    docker run --rm -p 1080:1080 -v "$(pwd)/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx
 }
 
 d-nginxhere() {
