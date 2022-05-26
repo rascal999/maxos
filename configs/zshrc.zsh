@@ -800,6 +800,15 @@ d-smbservehere() {
     docker run --rm -it -p 445:445 -v "$(pwd):/tmp/serve" rflathers/impacket smbserver.py -smb2support $sharename /tmp/serve
 }
 
+d-nginxconfig() {
+    if [[ ! -f "./nginx.conf" ]]; then
+      echo "ERROR: ./nginx.conf not found"
+      exit 1
+    fi
+
+    docker run --rm -p 1080:1080 -v nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
+}
+
 d-nginxhere() {
     screen -S nginxhere -adm docker run --rm -it -p 1080:80 -p 443:443 -v "$(pwd):/srv/data" rflathers/nginxserve
     firefox http://127.0.0.1 &; disown
