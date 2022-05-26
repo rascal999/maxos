@@ -803,7 +803,7 @@ d-smbservehere() {
 d-nginxconfig() {
     if [[ ! -f "./nginx.conf" ]]; then
       echo "ERROR: ./nginx.conf not found"
-      exit 1
+      return 1
     fi
 
     docker run --rm -p 1080:1080 -v nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
