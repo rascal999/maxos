@@ -2,6 +2,8 @@
   # tmux
   programs.tmux = {
     enable = true;
+    historyLimit = 100000;
+
     extraConfig = ''
       bind "Enter" send-keys "ls -alh" \; send-keys "Enter"
       bind "Space" send-keys "ls -alhtr" \; send-keys "Enter"
