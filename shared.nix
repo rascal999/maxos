@@ -143,7 +143,7 @@ in {
      grim
      gsettings-desktop-schemas
      hexedit
-     #home-manager
+     hey
      hping
      htop
      i3
