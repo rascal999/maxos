@@ -1,5 +1,9 @@
 # NixOS config and dotfiles
 
+![NixOS desktop](/resources/screenshots/20220527_nixos.png)
+
+Glorious!
+
 ## Install
 
 Use unstable ISO (https://www.google.com/search?q=nixos+iso+unstable) for flake support.
