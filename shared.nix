@@ -153,6 +153,7 @@ in {
      inkscape
      ipcalc
      iwd
+     jadx
      jdk
      jd-gui
      john
