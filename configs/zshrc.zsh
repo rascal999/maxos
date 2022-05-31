@@ -119,7 +119,8 @@ a-localhostrun-filebrowser() {
     echo "####################"
     echo "# Password is $PASSWORD_CLEAR"
     echo "####################"
-    echo
+    echo -n "$PASSWORD_CLEAR" | qrencode -t UTF8
+
     PASSWORD=`docker run --rm --name localhostrun-filebrowser filebrowser/filebrowser hash $PASSWORD_CLEAR`
 
     docker run --rm --name localhostrun-filebrowser -d -p 1080:80 -v $(pwd):/srv filebrowser/filebrowser \
