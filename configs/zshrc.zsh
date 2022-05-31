@@ -96,6 +96,12 @@ a-localhostrun() {
 }
 
 a-localhostrun-nginx() {
+    # Security measure
+    if [[ "`pwd`" == "$HOME" ]]; then
+      echo "ERROR: Not running in $HOME .."
+      return 1
+    fi
+
     docker run --rm --name localhostrun-nginx -d -p 1080:80 -p 8443:443 -v "$(pwd):/srv/data" rflathers/nginxserve
     ssh -R 80:localhost:1080 nokey@localhost.run
     echo "Stopping nginx docker instance.."
@@ -103,6 +109,12 @@ a-localhostrun-nginx() {
 }
 
 a-localhostrun-filebrowser() {
+    # Security measure
+    if [[ "`pwd`" == "$HOME" ]]; then
+      echo "ERROR: Not running in $HOME .."
+      return 1
+    fi
+
     docker run --rm --name localhostrun-filebrowser -d -p 1080:80 -v $(pwd):/srv filebrowser/filebrowser
     ssh -R 80:localhost:1080 nokey@localhost.run
     echo "Stopping filebrowser docker instance.."
