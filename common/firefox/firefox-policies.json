@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "jid1-ZSMfwe4lCAw9oQ@jetpack": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/url-to-qrcode/addon-11218076-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{943b8007-a895-44af-a672-4f4ea548c95f}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/markdown-viewer-webext/addon-13724583-latest.xpi",
         "installation_mode": "normal_installed"
