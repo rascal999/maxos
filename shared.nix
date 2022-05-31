@@ -170,6 +170,7 @@ in {
      lshw
      lynis
      mako
+     mcrypt
      mosh
      mplayer
      mpv
