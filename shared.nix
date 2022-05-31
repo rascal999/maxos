@@ -207,7 +207,7 @@ in {
      python310
      qemu
      qemu-utils
-     qrcode
+     qrcp
      radare2
      ranger
      rdesktop
