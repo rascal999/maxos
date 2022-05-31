@@ -208,6 +208,7 @@ in {
      qemu
      qemu-utils
      qrcp
+     qrencode
      radare2
      ranger
      rdesktop
