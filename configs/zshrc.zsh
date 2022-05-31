@@ -115,7 +115,16 @@ a-localhostrun-filebrowser() {
       return 1
     fi
 
-    docker run --rm --name localhostrun-filebrowser -d -p 1080:80 -v $(pwd):/srv filebrowser/filebrowser
+    PASSWORD_CLEAR=`pwgen 10`
+    echo "####################"
+    echo "# Password is $PASSWORD_CLEAR"
+    echo "####################"
+    echo
+    PASSWORD=`docker run --rm --name localhostrun-filebrowser filebrowser/filebrowser hash $PASSWORD_CLEAR`
+
+    docker run --rm --name localhostrun-filebrowser -d -e "PASSWORD=$PASSWORD" \
+      -p 1080:80 -v $(pwd):/srv filebrowser/filebrowser
+
     ssh -R 80:localhost:1080 nokey@localhost.run
     echo "Stopping filebrowser docker instance.."
     docker stop localhostrun-filebrowser
