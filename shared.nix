@@ -386,6 +386,8 @@ in {
     notebookDir = "~/jupyter";
   };
 
+  users.users.jupyter.group = "jupyter";
+
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
