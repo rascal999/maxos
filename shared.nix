@@ -420,7 +420,8 @@ in {
 
   ## Copy template scripts
   system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
-    cp /home/user/git/nixos/resources/jupyter/*.ipynb /var/lib/jupyter
+    mkdir -p /var/lib/jupyter/pentest
+    cp /home/user/git/nixos/resources/jupyter/pentest/*.ipynb /var/lib/jupyter/pentest
   '';
 
   # Virtualisation
