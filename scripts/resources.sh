@@ -210,6 +210,7 @@ git_update https://github.com/jwasham/coding-interview-university.git $HOME/git/
 git_update https://github.com/awesome-selfhosted/awesome-selfhosted.git $HOME/git/education/awesome-selfhosted
 git_update https://github.com/veggiemonk/awesome-docker.git $HOME/git/education/awesome-docker
 git_update https://github.com/DopplerHQ/awesome-interview-questions.git $HOME/git/education/awesome-interview-questions
+git_update https://github.com/faif/python-patterns.git $HOME/git/education/python-patterns
 
 ###
 ### Pentest Education
