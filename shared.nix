@@ -398,7 +398,7 @@ in {
   systemd.services.jupyter = {
     path = [
       pkgs.bash
-      "/run/current-system/sw/wtf"
+      "/run/current-system/sw"
     ];
   };
 
