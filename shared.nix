@@ -395,6 +395,13 @@ in {
     ];
   };
 
+  systemd.services.jupyter = {
+    path = [
+      pkgs.bash
+      "/run/current-system/sw/bin"
+    ];
+  };
+
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
