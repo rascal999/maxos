@@ -380,6 +380,12 @@ in {
     liveRestore = false;
   };
 
+  # Jupyter
+  services.jupyter = {
+    enable = true;
+    notebookDir = "~/jupyter"
+  }
+
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
