@@ -395,7 +395,7 @@ in {
     enable = true;
     qemu.ovmf.enable = true;
     qemu.swtpm.enable = true;
-    qemu.ovmf.packages = pkgs.OVMFFull;
+    qemu.ovmf.packages = [ pkgs.OVMFFull ];
   };
 
   # opensnitch
