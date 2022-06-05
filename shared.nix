@@ -383,7 +383,7 @@ in {
   # Jupyter
   services.jupyter = {
     enable = true;
-    notebookDir = "~/jupyter"
+    notebookDir = "~/jupyter";
   }
 
   # Virtualisation
