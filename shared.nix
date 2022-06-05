@@ -384,11 +384,11 @@ in {
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
   ## VirtualBox
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableExtensionPack = true;
-    enableHardening = false;
-  };
+  #virtualisation.virtualbox.host = {
+  #  enable = true;
+  #  enableExtensionPack = true;
+  #  enableHardening = false;
+  #};
 
   ## QEMU
   virtualisation.libvirtd = {
