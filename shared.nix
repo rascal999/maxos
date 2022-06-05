@@ -403,6 +403,11 @@ in {
     ];
   };
 
+  # Copy template scripts
+  system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
+    cp /home/user/git/nixos/resources/jupyter/*.ipynb /var/lib/jupyter
+  '';
+
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
