@@ -423,6 +423,7 @@ in {
     mkdir -p /var/lib/jupyter/pentest/base
     rm /var/lib/jupyter/pentest/base/*.ipynb
     cp /home/user/git/nixos/resources/jupyter/pentest/*.ipynb /var/lib/jupyter/pentest/base
+    chown jupyter:jupyter /var/lib/jupyter/pentest -R
   '';
 
   # Virtualisation
