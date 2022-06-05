@@ -384,7 +384,7 @@ in {
   services.jupyter = {
     enable = true;
     password = "'sha1:1b961dc713fb:88483270a63e57d18d43cf337e629539de1436ba'";
-    command = "export PATH=\"$PATH:/run/current-system/sw/bin\"";
+    command = "PATH=\"$PATH:/run/current-system/sw/bin\"";
   };
 
   users.users.jupyter.group = "jupyter";
