@@ -60,6 +60,7 @@ in {
 
   # Define a user account
   users.users.user = {
+    homeMode = "750";
     isNormalUser = true;
     extraGroups = [
       "libvirtd"
