@@ -236,6 +236,7 @@ in {
      syncthing
      terraform
      testssl
+     texlive.combined.scheme-full
      thc-hydra
      thefuck
      tig
