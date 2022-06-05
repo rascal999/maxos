@@ -391,6 +391,7 @@ in {
   users.users.jupyter.group = "jupyter";
   users.users.jupyter = {
     extraGroups = [
+      "docker"
       "users"
     ];
   };
