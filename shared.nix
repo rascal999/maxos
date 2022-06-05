@@ -158,6 +158,7 @@ in {
      jd-gui
      john
      jq
+     jupyter
      jython
      k3s
      keepassxc
