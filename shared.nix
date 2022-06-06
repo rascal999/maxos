@@ -233,6 +233,7 @@ in {
      sshfs
      #steam
      stockfish
+     subfinder
      #sway
      syncthing
      terraform
