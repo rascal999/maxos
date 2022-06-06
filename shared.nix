@@ -145,6 +145,7 @@ in {
      grc
      grim
      gsettings-desktop-schemas
+     hakrawler
      hexedit
      hey
      hping
