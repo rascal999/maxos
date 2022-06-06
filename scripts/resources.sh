@@ -108,6 +108,7 @@ docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Frame
 #docker pull dwisiswant0/apkleaks                         # Scanning APK file for URIs, endpoints & secrets
 docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
 docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
+docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
 
 ###
 ### https://github.com/cybersecsi/RAUDI
@@ -308,6 +309,9 @@ git_update https://github.com/mzet-/linux-exploit-suggester.git $HOME/git/pentes
 git_update https://github.com/va1da5/docker-objection-for-android.git $HOME/git/misc/objection
 git_update https://github.com/iddoeldor/frida-snippets.git $HOME/git/misc/frida-snippets
 #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
+
+git_update https://github.com/m4ll0k/Infoga.git $HOME/git/pentest-tools/Infoga
+docker build . -t infoga
 
 # apkleaks
 git_update https://github.com/dwisiswant0/apkleaks.git $HOME/git/pentest-tools/apkleaks
