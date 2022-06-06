@@ -400,15 +400,9 @@ in {
   # Jupyter
   services.jupyter = {
     enable = true;
+    notebookDir = "~/jupyter";
     password = "'sha1:1b961dc713fb:88483270a63e57d18d43cf337e629539de1436ba'";
-  };
-
-  users.users.jupyter.group = "jupyter";
-  users.users.jupyter = {
-    extraGroups = [
-      "docker"
-      "users"
-    ];
+    user = "user";
   };
 
   systemd.services.jupyter = {
@@ -420,10 +414,10 @@ in {
 
   ## Copy template scripts
   system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
-    mkdir -p /var/lib/jupyter/pentest/base
-    rm /var/lib/jupyter/pentest/base/*.ipynb
-    cp /home/user/git/nixos/resources/jupyter/pentest/*.ipynb /var/lib/jupyter/pentest/base
-    chown jupyter:jupyter /var/lib/jupyter/pentest -R
+    mkdir -p ${config.users.users.username.home}/jupyter/pentest/base
+    rm ${config.users.users.username.home}/jupyter/pentest/base/*.ipynb
+    cp ${config.users.users.username.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.username.home}/jupyter/pentest/base
+    chown user:users ${config.users.users.username.home}/jupyter/pentest -R
   '';
 
   # Virtualisation
