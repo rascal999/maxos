@@ -80,6 +80,7 @@ in {
   environment.systemPackages = with pkgs; [
      acpi
      apktool
+     amass
      android-studio
      android-tools
      appimage-run
@@ -204,6 +205,7 @@ in {
      pavucontrol
      pciutils
      pdfgrep
+     photon
      pinentry
      peco
      protonmail-bridge
@@ -242,6 +244,7 @@ in {
      texlive.combined.scheme-full
      thc-hydra
      thefuck
+     theharvester
      tig
      tmux
      trufflehog
