@@ -93,7 +93,7 @@
       };
 
       screenshot = {
-        id = 3;
+        id = 2;
         name = "Screenshot";
         isDefault = true;
         settings = defaultSettings;
