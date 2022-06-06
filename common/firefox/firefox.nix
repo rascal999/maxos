@@ -66,7 +66,6 @@
 
     "ui.systemUsesDarkTheme" = 1;
   };
-
   in {
     # Firefox
     programs.firefox = {
@@ -78,30 +77,30 @@
           name = "Default";
           isDefault = true;
           settings = defaultSettings;
+
+          userChrome = import ./css/userChrome.css;
+          userContent = import ./css/userContent.css;
         };
 
-        userChrome = import ./css/userChrome.css;
-        userContent = import ./css/userContent.css;
-      };
+        burp = {
+          id = 1;
+          name = "Burp";
+          isDefault = false;
+          settings = defaultSettings;
 
-      burp = {
-        id = 1;
-        name = "Burp";
-        isDefault = false;
-        settings = defaultSettings;
+          userChrome = import ./css/userChromeBurp.css;
+          userContent = import ./css/userContent.css;
+        };
 
-        userChrome = import ./css/userChromeBurp.css;
-        userContent = import ./css/userContent.css;
-      };
+        screenshot = {
+          id = 3;
+          name = "Screenshot";
+          isDefault = false;
+          settings = defaultSettings;
 
-      screenshot = {
-        id = 3;
-        name = "Screenshot";
-        isDefault = false;
-        settings = defaultSettings;
-
-        userChrome = import ./css/userChrome.css;
-        userContent = import ./css/userContent.css;
+          userChrome = import ./css/userChrome.css;
+          userContent = import ./css/userContent.css;
+        };
       };
     };
   };
