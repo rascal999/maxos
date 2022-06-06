@@ -753,6 +753,15 @@ d-eyewitness() {
     dunst-handle "EyeWitness - $CONTENT" "file:///$PWD/eyewitness_$TIMESTAMP/report.html" &; disown
 }
 
+d-screenshot() {
+  if [[ "$#" -lt "2" ]]; then
+      echo "d-screenshot <screenshot|full_screenshot|screenshot_series|full_screenshot_series> <URL> [resolution] [delay]"
+      return 1 
+  fi
+
+  docker run --shm-size 1G --rm -v $PWD:/screenshots alekzonder/puppeteer:latest $@
+}
+
 d-cyberchef() {
     docker run --rm -d -p 8000:8000 mpepping/cyberchef
     firefox http://localhost:8000 &; disown

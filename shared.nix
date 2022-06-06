@@ -404,6 +404,7 @@ in {
     notebookDir = "~/jupyter";
     password = "'sha1:1b961dc713fb:88483270a63e57d18d43cf337e629539de1436ba'";
     user = "user";
+    group = "users";
   };
 
   systemd.services.jupyter = {
