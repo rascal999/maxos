@@ -75,7 +75,7 @@
       default = {
         id = 0;
         name = "Default";
-        isDefault = true;
+        isDefault = false;
         settings = defaultSettings;
 
         userChrome = import ./css/userChrome.css;
@@ -95,7 +95,7 @@
       screenshot = {
         id = 3;
         name = "Screenshot";
-        isDefault = false;
+        isDefault = true;
         settings = defaultSettings;
 
         userChrome = import ./css/userChrome.css;
