@@ -190,6 +190,7 @@ in {
      ngrok
      nixos-generators
      nmap
+     nodejs
      notify-desktop
      ntfs3g
      #nvidia-docker
