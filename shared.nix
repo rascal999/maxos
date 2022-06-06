@@ -225,6 +225,7 @@ in {
      remmina
      rsync
      ruby
+     rustscan
      rxvt-unicode
      screen
      screenfetch
