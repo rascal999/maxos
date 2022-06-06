@@ -414,10 +414,10 @@ in {
 
   ## Copy template scripts
   system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
-    mkdir -p ${config.users.users.username.home}/jupyter/pentest/base
-    rm ${config.users.users.username.home}/jupyter/pentest/base/*.ipynb
-    cp ${config.users.users.username.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.username.home}/jupyter/pentest/base
-    chown user:users ${config.users.users.username.home}/jupyter/pentest -R
+    mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
+    rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb
+    cp ${config.users.users.user.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.user.home}/jupyter/pentest/base
+    chown user:users ${config.users.users.user.home}/jupyter/pentest -R
   '';
 
   # Virtualisation
