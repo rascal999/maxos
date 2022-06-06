@@ -415,7 +415,7 @@ in {
   ## Copy template scripts
   system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
     mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
-    rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb
+    rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb || true
     cp ${config.users.users.user.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.user.home}/jupyter/pentest/base
     chown user:users ${config.users.users.user.home}/jupyter/pentest -R
   '';
