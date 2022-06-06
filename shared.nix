@@ -149,6 +149,7 @@ in {
      hey
      hping
      htop
+     httpx
      i3
      i3status-rust
      imagemagick
@@ -244,7 +245,6 @@ in {
      texlive.combined.scheme-full
      thc-hydra
      thefuck
-     theharvester
      tig
      tmux
      trufflehog
