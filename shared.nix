@@ -173,6 +173,7 @@ in {
      lshw
      lynis
      mako
+     masscan
      mcrypt
      mosh
      mplayer
