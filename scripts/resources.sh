@@ -25,9 +25,14 @@ function docker_pull_prompt() {
 }
 
 function git_update() {
-  git clone $1 $2
-  cd $2
-  git pull
+  find $2 -maxdepth 0 -type d -mtime -1
+
+  # Only pull if directory not modified in last day
+  if [[ "$?" == "0" ]]; then
+    git clone $1 $2
+    cd $2
+    git pull
+  fi
 }  
 
 ###
