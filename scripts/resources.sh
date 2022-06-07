@@ -395,6 +395,10 @@ docker build -t vulnx ./docker/
 git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/wapiti
 #docker build . -t wapiti
 
+# v86
+git_update https://github.com/copy/v86.git $HOME/git/misc/v86
+docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
+
 ###
 ### Misc tools
 ###
