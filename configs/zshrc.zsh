@@ -87,6 +87,10 @@ d-filebrowserhere() {
     firefox http://127.0.0.1:1080/ &; disown
 }
 
+d-ivre() {
+    docker-compose up -d --project-directory /home/user/git/pentest-tools/ivre/docker
+}
+
 a-localhostrun() {
     if [[ "$#" -ne "1" ]]; then
       echo "Specify port number"
