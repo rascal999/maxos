@@ -13,6 +13,18 @@ function docker_login_prompt() {
     done
 }
 
+SKIP_DOCKER=0
+function skip_docker_prompt() {
+    while true; do
+        read -p "Skip docker? [yN] " yn
+        case $yn in
+            [Yy]* ) SKIP_DOCKER=1; break;;
+            [Nn]* ) break;;
+            * ) break;;
+        esac
+    done
+}
+
 function docker_pull_prompt() {
     while true; do
         read -p "$1 rebuilt daily, pull? [yN] " yn
@@ -25,130 +37,140 @@ function docker_pull_prompt() {
 }
 
 function git_update() {
-  find $2 -maxdepth 0 -type d -mtime -1
+  DIR_ACCESSED=`find $2 -maxdepth 0 -type d -atime -1 | wc -l`
 
-  # Only pull if directory not modified in last day
-  if [[ "$?" == "0" ]]; then
+  # Only pull if directory not accessed in last day
+  if [[ "$DIR_ACCESSED" == "0" ]]; then
     git clone $1 $2
     cd $2
     git pull
+    return 0
   fi
+  return 1
 }  
 
-###
-### Prompts
-###
-docker_login_prompt
-docker_pull_prompt booyaabes/kali-linux-full docker_pull-kali-linux-full
-docker_pull_prompt firefart/dockerctf docker_pull-dockerctf          # Docker image with some common ctf tools
+function update_docker_images() {
+  ###
+  ### Prompts
+  ###
+  docker_login_prompt
+  docker_pull_prompt booyaabes/kali-linux-full docker_pull-kali-linux-full
+  docker_pull_prompt firefart/dockerctf docker_pull-dockerctf          # Docker image with some common ctf tools
 
-###
-### Operating Systems
-###
-docker pull alpine
-docker pull ubuntu
-docker pull centos
-docker pull debian
-docker pull amazonlinux
-docker pull fedora
-#docker pull kalilinux/kali-rolling
+  ###
+  ### Operating Systems
+  ###
+  docker pull alpine
+  docker pull ubuntu
+  docker pull centos
+  docker pull debian
+  docker pull amazonlinux
+  docker pull fedora
+  #docker pull kalilinux/kali-rolling
 
-###
-### Other stuff
-###
-docker pull trufflesuite/ganache-cli                     # Local blockchain dev
-docker pull owasp/zap2docker-stable                      # official OWASP ZAP
-docker pull wpscanteam/wpscan                            # official WPScan
-docker pull metasploitframework/metasploit-framework     # Official Metasploit
-docker pull citizenstig/dvwa                             # Damn Vulnerable Web Application (DVWA)
-docker pull l505/vulnerablewordpress                     # Vulnerable WordPress Installation
-docker pull hmlio/vaas-cve-2014-6271                     # Vulnerability as a service: Shellshock
-docker pull hmlio/vaas-cve-2014-0160                     # Vulnerability as a service: Heartbleed
-docker pull opendns/security-ninjas                      # Security Ninjas
-docker pull diogomonica/docker-bench-security            # Docker Bench for Security
-docker pull ismisepaul/securityshepherd                  # OWASP Security Shepherd
-docker pull danmx/docker-owasp-webgoat                   # OWASP WebGoat Project docker image
-docker pull vulnerables/web-owasp-nodegoat               # OWASP NodeGoat
-docker pull citizenstig/nowasp                           # OWASP Mutillidae II Web Pen-Test Practice Application
-docker pull bkimminich/juice-shop                        # OWASP Juice Shop
-docker pull phocean/msf                                  # Docker Metasploit
-docker pull frapsoft/slowhttptest                        # Application Layer DoS attack simulator
-docker pull guidelacour/whatweb                          # Next generation web scanner
-docker pull opensecurity/cmsscan                         # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
-docker pull epi052/feroxbuster                           # A fast, simple, recursive content discovery tool written in Rust
-docker pull mikesplain/openvas                           # OpenVAS is a full-featured vulnerability scanner
-docker pull mpepping/cyberchef                           # The Cyber Swiss Army Knife
-docker pull phocean/beef                                 # BeEF framework for XSS browser exploitation
-docker pull byt3bl33d3r/crackmapexec                     # A swiss army knife for pentesting networks
-docker pull rossja/ncc-scoutsuite                        # Multi-Cloud Security Auditing Tool
-docker pull dstotijn/hetty                               # Hetty is an HTTP toolkit for security research
-docker pull stefanscherer/winrm                          # The ultimate WinRM shell for hacking/pentesting
-docker pull eystsen/altoro                               # Altoro Mutual - Demo Vulnerable Web Bank
-docker pull mutzel/all-in-one-hackazon:postinstall       # LAMP Hackazon deployment in a single container
-docker pull tuxotron/tiredful-api                        # Broken web application based on REST API
-docker pull tuxotron/xvwa                                # Xtreme Vulnerable Web Application
-docker pull filebrowser/filebrowser                      # Web File Browser 
-docker pull remnux/ciphey                                # Automatically decrypt, decode, and crack
-docker pull bettercap/bettercap                          # The Swiss Army knife for 802.11, BLE, IPv4 and IPv6 networks
-docker pull dominicbreuker/stego-toolkit                 # Collection of steganography tools - helps with CTF challenges
-docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
-docker pull rflathers/nginxserve                         # nginx
-docker pull ghcr.io/linuxserver/thelounge                # IRC client
-docker pull mythril/myth                                 # Security analysis tool for EVM bytecode
-docker pull trailofbits/manticore                        # Symbolic execution tool for smart contracts
-docker pull trailofbits/eth-security-toolbox             # Trail of Bits Ethereum security tools
-docker pull williamjackson/cartography                   # Consolidates infrastructure assets and the relationships between them
-docker pull mlabouardy/komiser                           # Cloud Environment Inspector
-docker pull toniblyx/prowler                             # Perform AWS security audits
-docker pull arkadiyt/aws_public_ips                      # Fetch all public IP addresses tied to your AWS account
-docker pull accurics/terrascan                           # Detect compliance and security violations across IaC
-docker pull bridgecrew/checkov                           # Checkov is a static code analysis tool for infrastructure-as-code
-docker pull projectdiscovery/nuclei                      # Configurable targeted scanning based on templates
-docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tunnel as a SOCKS5 proxy
-docker pull dperson/torproxy                             # Tor and Privoxy docker container
-docker pull cmnatic/rustscan                             # The Modern Port Scanner
-docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
-#docker pull xerosecurity/sn1per                          # Discover the attack surface and prioritize risks
-docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
-#docker pull dwisiswant0/apkleaks                         # Scanning APK file for URIs, endpoints & secrets
-docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
-docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
-docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
+  ###
+  ### Other stuff
+  ###
+  docker pull trufflesuite/ganache-cli                     # Local blockchain dev
+  docker pull owasp/zap2docker-stable                      # official OWASP ZAP
+  docker pull wpscanteam/wpscan                            # official WPScan
+  docker pull metasploitframework/metasploit-framework     # Official Metasploit
+  docker pull citizenstig/dvwa                             # Damn Vulnerable Web Application (DVWA)
+  docker pull l505/vulnerablewordpress                     # Vulnerable WordPress Installation
+  docker pull hmlio/vaas-cve-2014-6271                     # Vulnerability as a service: Shellshock
+  docker pull hmlio/vaas-cve-2014-0160                     # Vulnerability as a service: Heartbleed
+  docker pull opendns/security-ninjas                      # Security Ninjas
+  docker pull diogomonica/docker-bench-security            # Docker Bench for Security
+  docker pull ismisepaul/securityshepherd                  # OWASP Security Shepherd
+  docker pull danmx/docker-owasp-webgoat                   # OWASP WebGoat Project docker image
+  docker pull vulnerables/web-owasp-nodegoat               # OWASP NodeGoat
+  docker pull citizenstig/nowasp                           # OWASP Mutillidae II Web Pen-Test Practice Application
+  docker pull bkimminich/juice-shop                        # OWASP Juice Shop
+  docker pull phocean/msf                                  # Docker Metasploit
+  docker pull frapsoft/slowhttptest                        # Application Layer DoS attack simulator
+  docker pull guidelacour/whatweb                          # Next generation web scanner
+  docker pull opensecurity/cmsscan                         # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
+  docker pull epi052/feroxbuster                           # A fast, simple, recursive content discovery tool written in Rust
+  docker pull mikesplain/openvas                           # OpenVAS is a full-featured vulnerability scanner
+  docker pull mpepping/cyberchef                           # The Cyber Swiss Army Knife
+  docker pull phocean/beef                                 # BeEF framework for XSS browser exploitation
+  docker pull byt3bl33d3r/crackmapexec                     # A swiss army knife for pentesting networks
+  docker pull rossja/ncc-scoutsuite                        # Multi-Cloud Security Auditing Tool
+  docker pull dstotijn/hetty                               # Hetty is an HTTP toolkit for security research
+  docker pull stefanscherer/winrm                          # The ultimate WinRM shell for hacking/pentesting
+  docker pull eystsen/altoro                               # Altoro Mutual - Demo Vulnerable Web Bank
+  docker pull mutzel/all-in-one-hackazon:postinstall       # LAMP Hackazon deployment in a single container
+  docker pull tuxotron/tiredful-api                        # Broken web application based on REST API
+  docker pull tuxotron/xvwa                                # Xtreme Vulnerable Web Application
+  docker pull filebrowser/filebrowser                      # Web File Browser 
+  docker pull remnux/ciphey                                # Automatically decrypt, decode, and crack
+  docker pull bettercap/bettercap                          # The Swiss Army knife for 802.11, BLE, IPv4 and IPv6 networks
+  docker pull dominicbreuker/stego-toolkit                 # Collection of steganography tools - helps with CTF challenges
+  docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
+  docker pull rflathers/nginxserve                         # nginx
+  docker pull ghcr.io/linuxserver/thelounge                # IRC client
+  docker pull mythril/myth                                 # Security analysis tool for EVM bytecode
+  docker pull trailofbits/manticore                        # Symbolic execution tool for smart contracts
+  docker pull trailofbits/eth-security-toolbox             # Trail of Bits Ethereum security tools
+  docker pull williamjackson/cartography                   # Consolidates infrastructure assets and the relationships between them
+  docker pull mlabouardy/komiser                           # Cloud Environment Inspector
+  docker pull toniblyx/prowler                             # Perform AWS security audits
+  docker pull arkadiyt/aws_public_ips                      # Fetch all public IP addresses tied to your AWS account
+  docker pull accurics/terrascan                           # Detect compliance and security violations across IaC
+  docker pull bridgecrew/checkov                           # Checkov is a static code analysis tool for infrastructure-as-code
+  docker pull projectdiscovery/nuclei                      # Configurable targeted scanning based on templates
+  docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tunnel as a SOCKS5 proxy
+  docker pull dperson/torproxy                             # Tor and Privoxy docker container
+  docker pull cmnatic/rustscan                             # The Modern Port Scanner
+  docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
+  #docker pull xerosecurity/sn1per                          # Discover the attack surface and prioritize risks
+  docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
+  #docker pull dwisiswant0/apkleaks                         # Scanning APK file for URIs, endpoints & secrets
+  docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
+  docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
+  docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
 
-###
-### https://github.com/cybersecsi/RAUDI
-###
-docker pull secsi/apktool        
-docker pull secsi/bfac           
-docker pull secsi/dirb           
-docker pull secsi/dirhunt        
-docker pull secsi/dirsearch      
-docker pull secsi/dnscan         
-docker pull secsi/ffuf           
-docker pull secsi/fierce         
-docker pull secsi/findsploit     
-docker pull secsi/gitrob         
-docker pull secsi/gittools       
-docker pull secsi/gobuster       
-docker pull secsi/hydra          
-docker pull secsi/jwt_tool       
-docker pull secsi/knockpy        
-docker pull secsi/lfisuite       
-docker pull secsi/masscan        
-docker pull secsi/massdns        
-docker pull secsi/nmap           
-docker pull secsi/puredns        
-docker pull secsi/race-the-web   
-docker pull secsi/restfulharvest 
-docker pull secsi/retire         
-docker pull secsi/sandcastle     
-docker pull secsi/sqlmap         
-docker pull secsi/sublist3r      
-docker pull secsi/theharvester   
-docker pull secsi/waybackpy      
-docker pull secsi/whatweb
-#docker pull secsi/eyewitness     
-#docker pull secsi/nikto          
+  ###
+  ### https://github.com/cybersecsi/RAUDI
+  ###
+  docker pull secsi/apktool        
+  docker pull secsi/bfac           
+  docker pull secsi/dirb           
+  docker pull secsi/dirhunt        
+  docker pull secsi/dirsearch      
+  docker pull secsi/dnscan         
+  docker pull secsi/ffuf           
+  docker pull secsi/fierce         
+  docker pull secsi/findsploit     
+  docker pull secsi/gitrob         
+  docker pull secsi/gittools       
+  docker pull secsi/gobuster       
+  docker pull secsi/hydra          
+  docker pull secsi/jwt_tool       
+  docker pull secsi/knockpy        
+  docker pull secsi/lfisuite       
+  docker pull secsi/masscan        
+  docker pull secsi/massdns        
+  docker pull secsi/nmap           
+  docker pull secsi/puredns        
+  docker pull secsi/race-the-web   
+  docker pull secsi/restfulharvest 
+  docker pull secsi/retire         
+  docker pull secsi/sandcastle     
+  docker pull secsi/sqlmap         
+  docker pull secsi/sublist3r      
+  docker pull secsi/theharvester   
+  docker pull secsi/waybackpy      
+  docker pull secsi/whatweb
+  #docker pull secsi/eyewitness     
+  #docker pull secsi/nikto          
+}
+
+skip_docker_prompt
+
+if [[ "$SKIP_DOCKER" == "0" ]]; then
+  update_docker_images
+fi
 
 # hetty fs
 mkdir $HOME/.hetty
@@ -282,8 +304,10 @@ git_update https://github.com/Sector443/awesome-list-of-public-pentesting-report
 ###
 git_update https://github.com/OWASP/wstg $HOME/git/pentest-frameworks/wstg
 git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-frameworks/owasp-mstg
-cd $HOME/git/pentest-frameworks/owasp-mstg
-bash tools/docker/pandoc_makedocs.sh
+if [[ "$?" == "0" ]]; then
+  cd $HOME/git/pentest-frameworks/owasp-mstg
+  bash tools/docker/pandoc_makedocs.sh
+fi
 
 ###
 ### Pentest Tools
@@ -316,26 +340,36 @@ git_update https://github.com/iddoeldor/frida-snippets.git $HOME/git/misc/frida-
 #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
 
 git_update https://github.com/m4ll0k/Infoga.git $HOME/git/pentest-tools/Infoga
-docker build . -t infoga
+if [[ "$?" == "0" ]]; then
+  docker build . -t infoga
+fi
 
 # apkleaks
 git_update https://github.com/dwisiswant0/apkleaks.git $HOME/git/pentest-tools/apkleaks
-docker build . -t apkleaks
+if [[ "$?" == "0" ]]; then
+  docker build . -t apkleaks
+fi
 
 # angularjs-csti-scanner
 git_update https://github.com/tijme/angularjs-csti-scanner.git $HOME/git/pentest-tools/angularjs-csti-scanner.git
-docker build . -t angularjs-csti-scanner
+if [[ "$?" == "0" ]]; then
+  docker build . -t angularjs-csti-scanner
+fi
 
 # Arjun
 git_update https://github.com/s0md3v/Arjun.git $HOME/git/pentest-tools/Arjun
-docker build . -t arjun
+if [[ "$?" == "0" ]]; then
+  docker build . -t arjun
+fi
 
 # RAUDI
 git_update https://github.com/cybersecsi/RAUDI $HOME/git/pentest-tools/RAUDI
-python -m venv .
-source bin/activate
-pip install -r requirements.txt
-python3 ./raudi.py --all
+if [[ "$?" == "0" ]]; then
+  python -m venv .
+  source bin/activate
+  pip install -r requirements.txt
+  python3 ./raudi.py --all
+fi
 
 # frida
 mkdir -p $HOME/venv/pentest-tools/frida
@@ -346,55 +380,81 @@ pip install frida-tools
 
 # cloudsploit
 git_update https://github.com/aquasecurity/cloudsploit.git $HOME/git/pentest-tools/cloudsploit
-docker build . -t cloudsploit:0.0.1
+if [[ "$?" == "0" ]]; then
+  docker build . -t cloudsploit:0.0.1
+fi
 
 # S3Scanner
 git_update https://github.com/sa7mon/S3Scanner.git $HOME/git/pentest-tools/S3Scanner
-docker build . -t s3scanner:latest
+if [[ "$?" == "0" ]]; then
+  docker build . -t s3scanner:latest
+fi
 
 # aws-security-viz
 git_update https://github.com/anaynayak/aws-security-viz.git $HOME/git/pentest-tools/aws-security-viz
-docker build -t sec-viz .
+if [[ "$?" == "0" ]]; then
+  docker build -t sec-viz .
+fi
 
 # CloudMapper
 git_update https://github.com/duo-labs/cloudmapper.git $HOME/git/pentest-tools/cloudmapper
-docker build -t cloudmapper .
+if [[ "$?" == "0" ]]; then
+  docker build -t cloudmapper .
+fi
 
 # EyeWitness
 git_update https://github.com/FortyNorthSecurity/EyeWitness.git $HOME/git/pentest-tools/EyeWitness
-docker build --build-arg user=$USER --tag eyewitness --file ./Python/Dockerfile .
+if [[ "$?" == "0" ]]; then
+  docker build --build-arg user=$USER --tag eyewitness --file ./Python/Dockerfile .
+fi
 
 # spiderfoot
 git_update https://github.com/smicallef/spiderfoot.git $HOME/git/pentest-tools/spiderfoot
-docker build . -t spiderfoot
+if [[ "$?" == "0" ]]; then
+  docker build . -t spiderfoot
+fi
 
 # routersploit
 git_update https://www.github.com/threat9/routersploit $HOME/git/pentest-tools/routersploit
-docker build -t routersploit .
+if [[ "$?" == "0" ]]; then
+  docker build -t routersploit .
+fi
 
 # scanless
 git_update https://github.com/vesche/scanless.git $HOME/git/pentest-tools/scanless
-docker build -t scanless .
+if [[ "$?" == "0" ]]; then
+  docker build -t scanless .
+fi
 
 # joomscan
 git_update https://github.com/OWASP/joomscan.git $HOME/git/pentest-tools/joomscan
-docker build -t rezasp/joomscan .
+if [[ "$?" == "0" ]]; then
+  docker build -t rezasp/joomscan .
+fi
 
 # nikto
 git_update https://github.com/sullo/nikto.git $HOME/git/pentest-tools/nikto
-docker build -t "sullo/nikto" .
+if [[ "$?" == "0" ]]; then
+  docker build -t "sullo/nikto" .
+fi
 
 # impacket
 git_update https://github.com/SecureAuthCorp/impacket.git $HOME/git/pentest-tools/impacket
-docker build -t "impacket:latest" .
+if [[ "$?" == "0" ]]; then
+  docker build -t "impacket:latest" .
+fi
 
 # droopescan
 git_update https://github.com/droope/droopescan.git $HOME/git/pentest-tools/droopescan
-docker build -t droope/droopescan .
+if [[ "$?" == "0" ]]; then
+  docker build -t droope/droopescan .
+fi
 
 # vulnx
 git_update https://github.com/anouarbensaad/VulnX.git $HOME/git/pentest-tools/VulnX
-docker build -t vulnx ./docker/
+if [[ "$?" == "0" ]]; then
+  docker build -t vulnx ./docker/
+fi
 
 # wapiti
 git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/wapiti
@@ -416,7 +476,9 @@ git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-conf
 
 # v86
 git_update https://github.com/copy/v86.git $HOME/git/misc/v86
-docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
+if [[ "$?" == "0" ]]; then
+  docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
+fi
 
 ###
 ### Exploits
@@ -431,8 +493,8 @@ git_update https://github.com/random-robbie/bruteforce-lists.git $HOME/git/wordl
 git_update https://github.com/google/fuzzing.git $HOME/git/wordlists/fuzzing
 git_update https://github.com/six2dez/OneListForAll.git $HOME/git/wordlists/OneListForAll
 git_update https://github.com/v0re/dirb.git $HOME/git/wordlists/dirb
-wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -o $HOME/git/wordlists/content_discovery_all.txt
 git_update https://github.com/danielmiessler/SecLists.git $HOME/git/wordlists/SecLists
+wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -o $HOME/git/wordlists/content_discovery_all.txt
 
 # ISOs / VMs
 #mkdir $HOME/VMs
