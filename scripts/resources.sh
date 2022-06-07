@@ -396,7 +396,7 @@ git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/
 #docker build . -t wapiti
 
 # IVRE
-git_update https://github.com/ivre/ivre.git
+git_update https://github.com/ivre/ivre.git $HOME/git/pentest-tools/ivre
 
 ###
 ### Misc tools
