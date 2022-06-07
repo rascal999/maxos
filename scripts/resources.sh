@@ -395,9 +395,8 @@ docker build -t vulnx ./docker/
 git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/wapiti
 #docker build . -t wapiti
 
-# v86
-git_update https://github.com/copy/v86.git $HOME/git/misc/v86
-docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
+# IVRE
+git_update https://github.com/ivre/ivre.git
 
 ###
 ### Misc tools
@@ -409,6 +408,10 @@ git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
 git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
 git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
 git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
+
+# v86
+git_update https://github.com/copy/v86.git $HOME/git/misc/v86
+docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
 
 ###
 ### Exploits
