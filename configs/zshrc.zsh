@@ -88,7 +88,11 @@ d-filebrowserhere() {
 }
 
 d-ivre() {
-    docker-compose up -d --project-directory /home/user/git/pentest-tools/ivre/docker
+    docker-compose -f /home/user/git/pentest-tools/ivre/docker/docker-compose.yml up -d
+}
+
+d-ivre-kill() {
+    docker-compose -f /home/user/git/pentest-tools/ivre/docker/docker-compose.yml down
 }
 
 a-localhostrun() {
