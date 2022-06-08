@@ -16,6 +16,18 @@ in
 
   environment.systemPackages = [ nvidia-offload ];
 
+  # X11 / i3
+  services.xserver = {
+    enable = true;
+    desktopManager.plasma5.enable = true;
+    displayManager = {
+      defaultSession = "none+plasma";
+      lightdm.enable = true;
+      autoLogin.enable = true;
+      autoLogin.user = "user";
+    };
+  };
+
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.prime = {
     offload.enable = true;

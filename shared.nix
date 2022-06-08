@@ -344,7 +344,9 @@ in {
       autoLogin.enable = true;
       autoLogin.user = "user";
     };
+  };
       
+  services.xserver = {
     # Touchpad
     synaptics = {
       enable = true;
