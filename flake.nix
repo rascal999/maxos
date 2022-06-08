@@ -79,48 +79,6 @@
 
         #specialArgs = { inherit inputs; };
       };
-
-      vm-rog-test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
-        modules = [
-          ./common/nur.nix
-          ./shared.nix
-          ./hosts/vm-rog-test/vm-rog-test-configuration.nix
-          ./hosts/vm-rog-test/vm-rog-test-hw.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.user = import ./home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
-        ];
-
-        #specialArgs = { inherit inputs; };
-      };
-
-      vm-rig-test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
-        modules = [
-          ./common/nur.nix
-          ./shared.nix
-          ./hosts/vm-rig-test/vm-rig-test-configuration.nix
-          ./hosts/vm-rig-test/vm-rig-test-hw.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.user = import ./home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
-        ];
-
-        #specialArgs = { inherit inputs; };
-      };
     };
   };
 }
