@@ -91,16 +91,6 @@
         userChrome = import ./css/userChromeBurp.css;
         userContent = import ./css/userContent.css;
       };
-
-      screenshot = {
-        id = 2;
-        name = "Screenshot";
-        isDefault = false;
-        settings = defaultSettings;
-
-        userChrome = import ./css/userChrome.css;
-        userContent = import ./css/userContent.css;
-      };
     };
   };
 }
