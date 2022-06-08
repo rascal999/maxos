@@ -333,16 +333,6 @@ in {
   # For WireGuard
   networking.firewall.checkReversePath = false;
 
-  services.xserver = {
-    # Touchpad
-    synaptics = {
-      enable = true;
-      vertTwoFingerScroll = true;
-      palmDetect = true;
-      minSpeed = "1.5";
-    };
-  };
-
   ## Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;

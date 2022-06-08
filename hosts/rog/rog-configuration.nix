@@ -29,6 +29,16 @@ in
     };
   };
 
+  services.xserver = {
+    # Touchpad
+    synaptics = {
+      enable = true;
+      vertTwoFingerScroll = true;
+      palmDetect = true;
+      minSpeed = "1.5";
+    };
+  };
+
   services.xserver.videoDrivers = [ "nvidia" "amdgpu" ];
   hardware.nvidia.prime = {
     offload.enable = true;

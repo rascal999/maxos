@@ -18,6 +18,16 @@
     };
   };
 
+  services.xserver = {
+    # Touchpad
+    synaptics = {
+      enable = true;
+      vertTwoFingerScroll = true;
+      palmDetect = true;
+      minSpeed = "1.5";
+    };
+  };
+
   virtualisation.docker.enableNvidia = true;
 
   # Enable cron service
