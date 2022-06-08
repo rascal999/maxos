@@ -21,7 +21,7 @@ in
     enable = true;
     desktopManager.plasma5.enable = true;
     displayManager = {
-      defaultSession = "none+plasma";
+      defaultSession = "plasma";
       lightdm.enable = true;
       autoLogin.enable = true;
       autoLogin.user = "user";
