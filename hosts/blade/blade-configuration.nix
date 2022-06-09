@@ -16,6 +16,7 @@ in
 
   environment.systemPackages = with pkgs; [
     nvidia-offload
+    openrazer-daemon
     razergenie
   ];
 
