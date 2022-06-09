@@ -10,6 +10,10 @@ ip r
 echo
 nmcli con | grep wg_
 echo
+ping -c1 -w4 8.8.8.8
+echo
+ping -c1 -w4 1.1.1.1
+echo
 ping -c1 -w4 10.44.0.1
 
 if [[ "$?" == "0" ]]; then
