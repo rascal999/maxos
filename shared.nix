@@ -52,6 +52,9 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # No
+  config.powerManagement.enable = false;
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
