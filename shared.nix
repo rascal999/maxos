@@ -156,6 +156,7 @@ in {
      imagemagick
      inetutils
      inkscape
+     iotop
      ipcalc
      iwd
      jadx
