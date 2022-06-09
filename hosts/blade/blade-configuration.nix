@@ -14,7 +14,7 @@ in
   hardware.nvidia.modesetting.enable = true;
   hardware.opengl.enable = true;
 
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     nvidia-offload
     razergenie
   ];
