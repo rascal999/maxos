@@ -1,7 +1,0 @@
-[Desktop Entry]
-Exec=konsole -e bash --rcfile /home/user/git/nixos/scripts/wg_test.sh
-Icon=dialog-scripts
-Name=wg_test.sh
-Path=
-Type=Application
-X-KDE-AutostartScript=true
