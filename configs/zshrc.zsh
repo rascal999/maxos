@@ -34,6 +34,10 @@ dunst-handle() {
 ###
 ### Misc
 ###
+test-vpn() {
+    /home/user/git/nixos/scripts/wg_test.sh
+}
+
 a-gg() {
     googler --np "$@"
 }
