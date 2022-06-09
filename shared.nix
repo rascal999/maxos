@@ -178,6 +178,7 @@ in {
      libreoffice-fresh
      libsecret
      lshw
+     ltrace
      lynis
      mako
      masscan
