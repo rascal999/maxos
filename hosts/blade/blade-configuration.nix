@@ -16,6 +16,8 @@ in
 
   environment.systemPackages = [ nvidia-offload ];
 
+  services.upower.enable = false;
+
   # X11 / i3
   services.xserver = {
     enable = true;
