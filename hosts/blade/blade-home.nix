@@ -25,7 +25,8 @@
 
   home.file = {
     ".mime.types".source = ../../common/firefox/mime.types;
-    ".kde/share/config/kdeglobals".source = ../../resources/kdeglobals;
+    ".kde/share/config/kdeglobals".source = ../../configs/kdeglobals;
+    ".config/autostart/wg_test.sh.desktop" = ../../configs/wg_test.sh.desktop;
   };
 
   # This value determines the Home Manager release that your
