@@ -212,6 +212,7 @@ in {
      pinentry
      peco
      protonmail-bridge
+     pstree
      pwgen
      #python-with-my-packages
      python310
