@@ -14,7 +14,10 @@ in
   hardware.nvidia.modesetting.enable = true;
   hardware.opengl.enable = true;
 
-  environment.systemPackages = [ nvidia-offload ];
+  environment.systemPackages = [
+    nvidia-offload
+    razergenie
+  ];
 
   # X11 / i3
   services.xserver = {
