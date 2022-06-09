@@ -6,7 +6,7 @@
     };
 
     enable = true;
-    enableAutosuggestions = true;
+    enableAutosuggestions = false;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
 
