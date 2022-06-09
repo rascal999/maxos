@@ -13,10 +13,11 @@ in
   networking.hostName = "blade";
   hardware.nvidia.modesetting.enable = true;
   hardware.opengl.enable = true;
+  hardware.openrazer.enable = true;
+  hardware.openrazer.users = [ user ];
 
   environment.systemPackages = with pkgs; [
     nvidia-offload
-    openrazer-daemon
     razergenie
   ];
 
