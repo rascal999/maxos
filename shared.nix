@@ -53,7 +53,7 @@ in {
   services.printing.enable = true;
 
   # No
-  powerManagement.enable = false;
+  #powerManagement.enable = false;
 
   # Enable sound.
   sound.enable = true;
