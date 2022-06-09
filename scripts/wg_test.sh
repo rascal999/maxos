@@ -10,18 +10,14 @@ ip r
 echo
 nmcli con | grep wg_
 echo
-ping -c1 -w4 8.8.8.8
+curl -s -o /dev/null -w "BBC HTTP code: %{http_code}\n" https://www.bbc.co.uk/
 echo
-ping -c1 -w4 1.1.1.1
+ping -w2 -c1 -q 8.8.8.8 | grep -E "stat|packets "
 echo
-ping -c1 -w4 10.44.0.1
+ping -w2 -c1 -q 10.44.0.1 | grep -E "stat|packets "
 
-if [[ "$?" == "0" ]]; then
-    echo -e "${GREEN}##############"
-    echo -e "### ALL OK ###"
-    echo -e "##############${NC}"
+if [[ "${PIPESTATUS[0]}" == "0" ]]; then
+    echo -e "${GREEN}### ALL OK ###${NC}"
 else
-    echo -e "${RED}###################################################################"
-    echo -e "### ERROR! PLEASE TAKE A PICTURE OF THIS SCREEN AND EMAIL TO US ###"
-    echo -e "###################################################################${NC}"
+    echo -e "${RED}###>>> ERROR! PLEASE TAKE A PICTURE OF THIS SCREEN AND EMAIL TO US <<<###${NC}"
 fi
