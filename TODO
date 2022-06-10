@@ -1,5 +1,6 @@
 Always on docker images investigation
 - Resource usage
+  - Exclude laptops?
 - Proxy?
 - Internal domains instead of localhost:PORT?
   - docker run registration to proxy?
@@ -11,6 +12,7 @@ NixOS
   - No UI
 - Generic VM profile
   - Fresh NixOS install to determine disk usage
+- ISO build?
 
 Jupyter
 - Mobile notebook
@@ -19,3 +21,4 @@ Jupyter
   - VulnKB
 
 Check Firefox bookmarks
+Resource script tidy / improvements
