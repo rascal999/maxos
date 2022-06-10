@@ -80,7 +80,7 @@
         #specialArgs = { inherit inputs; };
       };
 
-      iso = nixos.lib.nixosSystem {
+      iso = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
