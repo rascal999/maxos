@@ -123,7 +123,7 @@ function update_docker_images() {
   docker pull dperson/torproxy                             # Tor and Privoxy docker container
   docker pull cmnatic/rustscan                             # The Modern Port Scanner
   docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
-  #docker pull xerosecurity/sn1per                         # Discover the attack surface and prioritize risks
+  docker pull xer0dayz/sn1per                              # Discover the attack surface and prioritize risks
   docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
   #docker pull dwisiswant0/apkleaks                        # Scanning APK file for URIs, endpoints & secrets
   docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
