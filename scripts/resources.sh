@@ -71,64 +71,65 @@ function update_docker_images() {
   ###
   ### Other stuff
   ###
-  docker pull trufflesuite/ganache-cli           # Local blockchain dev
-  docker pull owasp/zap2docker-stable            # official OWASP ZAP
-  docker pull wpscanteam/wpscan              # official WPScan
-  docker pull metasploitframework/metasploit-framework   # Official Metasploit
-  docker pull citizenstig/dvwa               # Damn Vulnerable Web Application (DVWA)
-  docker pull l505/vulnerablewordpress           # Vulnerable WordPress Installation
-  docker pull hmlio/vaas-cve-2014-6271           # Vulnerability as a service: Shellshock
-  docker pull hmlio/vaas-cve-2014-0160           # Vulnerability as a service: Heartbleed
-  docker pull opendns/security-ninjas            # Security Ninjas
-  docker pull diogomonica/docker-bench-security      # Docker Bench for Security
-  docker pull ismisepaul/securityshepherd          # OWASP Security Shepherd
-  docker pull danmx/docker-owasp-webgoat           # OWASP WebGoat Project docker image
-  docker pull vulnerables/web-owasp-nodegoat         # OWASP NodeGoat
-  docker pull citizenstig/nowasp               # OWASP Mutillidae II Web Pen-Test Practice Application
-  docker pull bkimminich/juice-shop            # OWASP Juice Shop
-  docker pull phocean/msf                  # Docker Metasploit
-  docker pull frapsoft/slowhttptest            # Application Layer DoS attack simulator
-  docker pull guidelacour/whatweb              # Next generation web scanner
-  docker pull opensecurity/cmsscan             # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
-  docker pull epi052/feroxbuster               # A fast, simple, recursive content discovery tool written in Rust
-  docker pull mikesplain/openvas               # OpenVAS is a full-featured vulnerability scanner
-  docker pull mpepping/cyberchef               # The Cyber Swiss Army Knife
-  docker pull phocean/beef                 # BeEF framework for XSS browser exploitation
-  docker pull byt3bl33d3r/crackmapexec           # A swiss army knife for pentesting networks
-  docker pull rossja/ncc-scoutsuite            # Multi-Cloud Security Auditing Tool
-  docker pull dstotijn/hetty                 # Hetty is an HTTP toolkit for security research
-  docker pull stefanscherer/winrm              # The ultimate WinRM shell for hacking/pentesting
-  docker pull eystsen/altoro                 # Altoro Mutual - Demo Vulnerable Web Bank
-  docker pull mutzel/all-in-one-hackazon:postinstall     # LAMP Hackazon deployment in a single container
-  docker pull tuxotron/tiredful-api            # Broken web application based on REST API
-  docker pull tuxotron/xvwa                # Xtreme Vulnerable Web Application
-  docker pull filebrowser/filebrowser            # Web File Browser 
-  docker pull remnux/ciphey                # Automatically decrypt, decode, and crack
-  docker pull bettercap/bettercap              # The Swiss Army knife for 802.11, BLE, IPv4 and IPv6 networks
-  docker pull dominicbreuker/stego-toolkit         # Collection of steganography tools - helps with CTF challenges
-  docker pull oracleinanutshell/oracle-xe-11g        # Oracle DB
-  docker pull rflathers/nginxserve             # nginx
-  docker pull ghcr.io/linuxserver/thelounge        # IRC client
-  docker pull mythril/myth                 # Security analysis tool for EVM bytecode
-  docker pull trailofbits/manticore            # Symbolic execution tool for smart contracts
-  docker pull trailofbits/eth-security-toolbox       # Trail of Bits Ethereum security tools
-  docker pull williamjackson/cartography           # Consolidates infrastructure assets and the relationships between them
-  docker pull mlabouardy/komiser               # Cloud Environment Inspector
-  docker pull toniblyx/prowler               # Perform AWS security audits
-  docker pull arkadiyt/aws_public_ips            # Fetch all public IP addresses tied to your AWS account
-  docker pull accurics/terrascan               # Detect compliance and security violations across IaC
-  docker pull bridgecrew/checkov               # Checkov is a static code analysis tool for infrastructure-as-code
-  docker pull projectdiscovery/nuclei            # Configurable targeted scanning based on templates
-  docker pull kizzx2/wireguard-socks-proxy         # Expose a WireGuard tunnel as a SOCKS5 proxy
-  docker pull dperson/torproxy               # Tor and Privoxy docker container
-  docker pull cmnatic/rustscan               # The Modern Port Scanner
-  docker pull vuls/vuls                  # Vulnerability scanner for Linux/FreeBSD
-  #docker pull xerosecurity/sn1per              # Discover the attack surface and prioritize risks
+  docker pull trufflesuite/ganache-cli                     # Local blockchain dev
+  docker pull owasp/zap2docker-stable                      # official OWASP ZAP
+  docker pull wpscanteam/wpscan                            # official WPScan
+  docker pull metasploitframework/metasploit-framework     # Official Metasploit
+  docker pull citizenstig/dvwa                             # Damn Vulnerable Web Application (DVWA)
+  docker pull l505/vulnerablewordpress                     # Vulnerable WordPress Installation
+  docker pull hmlio/vaas-cve-2014-6271                     # Vulnerability as a service: Shellshock
+  docker pull hmlio/vaas-cve-2014-0160                     # Vulnerability as a service: Heartbleed
+  docker pull opendns/security-ninjas                      # Security Ninjas
+  docker pull diogomonica/docker-bench-security            # Docker Bench for Security
+  docker pull ismisepaul/securityshepherd                  # OWASP Security Shepherd
+  docker pull danmx/docker-owasp-webgoat                   # OWASP WebGoat Project docker image
+  docker pull vulnerables/web-owasp-nodegoat               # OWASP NodeGoat
+  docker pull citizenstig/nowasp                           # OWASP Mutillidae II Web Pen-Test Practice Application
+  docker pull bkimminich/juice-shop                        # OWASP Juice Shop
+  docker pull phocean/msf                                  # Docker Metasploit
+  docker pull frapsoft/slowhttptest                        # Application Layer DoS attack simulator
+  docker pull guidelacour/whatweb                          # Next generation web scanner
+  docker pull opensecurity/cmsscan                         # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
+  docker pull epi052/feroxbuster                           # A fast, simple, recursive content discovery tool written in Rust
+  docker pull mikesplain/openvas                           # OpenVAS is a full-featured vulnerability scanner
+  docker pull mpepping/cyberchef                           # The Cyber Swiss Army Knife
+  docker pull phocean/beef                                 # BeEF framework for XSS browser exploitation
+  docker pull byt3bl33d3r/crackmapexec                     # A swiss army knife for pentesting networks
+  docker pull rossja/ncc-scoutsuite                        # Multi-Cloud Security Auditing Tool
+  docker pull dstotijn/hetty                               # Hetty is an HTTP toolkit for security research
+  docker pull stefanscherer/winrm                          # The ultimate WinRM shell for hacking/pentesting
+  docker pull eystsen/altoro                               # Altoro Mutual - Demo Vulnerable Web Bank
+  docker pull mutzel/all-in-one-hackazon:postinstall       # LAMP Hackazon deployment in a single container
+  docker pull tuxotron/tiredful-api                        # Broken web application based on REST API
+  docker pull tuxotron/xvwa                                # Xtreme Vulnerable Web Application
+  docker pull filebrowser/filebrowser                      # Web File Browser 
+  docker pull remnux/ciphey                                # Automatically decrypt, decode, and crack
+  docker pull bettercap/bettercap                          # The Swiss Army knife for 802.11, BLE, IPv4 and IPv6 networks
+  docker pull dominicbreuker/stego-toolkit                 # Collection of steganography tools - helps with CTF challenges
+  docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
+  docker pull rflathers/nginxserve                         # nginx
+  docker pull ghcr.io/linuxserver/thelounge                # IRC client
+  docker pull mythril/myth                                 # Security analysis tool for EVM bytecode
+  docker pull trailofbits/manticore                        # Symbolic execution tool for smart contracts
+  docker pull trailofbits/eth-security-toolbox             # Trail of Bits Ethereum security tools
+  docker pull williamjackson/cartography                   # Consolidates infrastructure assets and the relationships between them
+  docker pull mlabouardy/komiser                           # Cloud Environment Inspector
+  docker pull toniblyx/prowler                             # Perform AWS security audits
+  docker pull arkadiyt/aws_public_ips                      # Fetch all public IP addresses tied to your AWS account
+  docker pull accurics/terrascan                           # Detect compliance and security violations across IaC
+  docker pull bridgecrew/checkov                           # Checkov is a static code analysis tool for infrastructure-as-code
+  docker pull projectdiscovery/nuclei                      # Configurable targeted scanning based on templates
+  docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tunnel as a SOCKS5 proxy
+  docker pull dperson/torproxy                             # Tor and Privoxy docker container
+  docker pull cmnatic/rustscan                             # The Modern Port Scanner
+  docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
+  #docker pull xerosecurity/sn1per                         # Discover the attack surface and prioritize risks
   docker pull opensecurity/mobile-security-framework-mobsf # Mobile Security Framework (MobSF)
-  #docker pull dwisiswant0/apkleaks             # Scanning APK file for URIs, endpoints & secrets
-  docker pull alekzonder/puppeteer             # Headless Chrome Node.js API
-  docker pull simonthomas/theharvester           # E-mails, subdomains and names Harvester - OSINT
-  docker pull unapibageek/ctfr               # Abusing Certificate Transparency logs for domains
+  #docker pull dwisiswant0/apkleaks                        # Scanning APK file for URIs, endpoints & secrets
+  docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
+  docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
+  docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
+  docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
 
   ###
   ### https://github.com/cybersecsi/RAUDI
