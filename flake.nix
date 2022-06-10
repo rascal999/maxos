@@ -79,6 +79,25 @@
 
         #specialArgs = { inherit inputs; };
       };
+
+      iso = nixos.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          "${nixos}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+          ./common/nur.nix
+          ./shared.nix
+          ./hosts/rog/rog-configuration.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.user = import ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
+        ];
+      };
     };
   };
 }
