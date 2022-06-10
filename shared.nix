@@ -13,7 +13,6 @@ let
   ]; 
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [ "intel_pstate=active" ];
 
   # Set your time zone.

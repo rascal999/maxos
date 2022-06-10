@@ -10,6 +10,7 @@ let
   '';
 in
 {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # Use the GRUB 2 boot loader.
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
