@@ -67,73 +67,73 @@
         "Title": "Altoro Mutual",
         "URL": "http://127.10.0.1:1080/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Damn Vulnerable Web Application (DVWA) v1.9",
         "URL": "http://127.10.0.2:1080/setup.php",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "WordPress",
         "URL": "http://127.10.0.3:1080/wp-admin/install.php",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Shellshock CVE-2014-6271",
         "URL": "http://127.10.0.4:1080/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Heartbleed CVE-2014-0160",
         "URL": "https://127.10.0.5:8443/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "WebGoat",
         "URL": "http://127.10.0.6:1080/WebGoat/login.mvc",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "nowasp",
         "URL": "http://127.10.0.7:1080/database-offline.php",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "OWASP Juice Shop",
         "URL": "http://127.10.0.8:1080/#/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Hackazon",
         "URL": "http://127.10.0.9:1080/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Tiredful API",
         "URL": "http://127.10.0.10:1080/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "XVWA",
         "URL": "http://127.10.0.11:1080/xvwa/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Security Ninja",
         "URL": "http://127.10.0.12:1080/",
         "Placement": "toolbar",
-        "Folder": "Eduactional Docker Images"
+        "Folder": "Docker Images"
       },
       {
         "Title": "Amazon Web Services Sign-In",
@@ -152,32 +152,6 @@
         "URL": "file:///home/user/pdfs/education/aws",
         "Placement": "toolbar",
         "Folder": "Cloud"
-      },
-      {
-        "Title": "YouTube",
-        "URL": "https://www.youtube.com/",
-        "Placement": "toolbar",
-        "Folder": "Entertainment"
-      },
-      {
-        "Title": "Reddit - Dive into anything",
-        "Favicon": "https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png",
-        "URL": "https://www.reddit.com/",
-        "Placement": "toolbar",
-        "Folder": "Entertainment"
-      },
-      {
-        "Title": "Typing Test English",
-        "URL": "https://10fastfingers.com/typing-test/english",
-        "Placement": "toolbar",
-        "Folder": "Misc"
-      },
-      {
-        "Title": "GitHub trending (month)",
-        "Favicon": "https://github.com/fluidicon.png",
-        "URL": "https://github.com/trending?since=monthly",
-        "Placement": "toolbar",
-        "Folder": "Misc"
       },
       {
         "Title": "The Guardian",
@@ -287,80 +261,87 @@
         "Folder": "PT Tools"
       },
       {
+        "Title": "GitHub trending (month)",
+        "Favicon": "https://github.com/fluidicon.png",
+        "URL": "https://github.com/trending?since=monthly",
+        "Placement": "toolbar",
+        "Folder": "Education"
+      },
+      {
         "Title": "awesome-pentest-cheat-sheets",
         "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "Cheatsheet-God",
         "URL": "file:///home/user/git/pentest-education/Cheatsheet-God/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "Hack The Box",
         "Favicon": "https://www.hackthebox.com/images/landingv3/favicon.png",
         "URL": "https://www.hackthebox.com/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "Halborn Public Reports",
         "URL": "file:///home/user/git/pentest-education/HalbornPublicReports/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "h4cker cheat sheets",
         "URL": "file:///home/user/git/pentest-education/h4cker/cheat_sheets/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "OWASP Cheat Sheet Series",
         "URL": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/Glossary.html",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "OWASP MSTG",
         "URL": "file:///home/user/git/pentest-education/owasp-mstg/OWASP_MSTG-SNAPSHOT.pdf",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "PENTESTING BIBLE",
         "URL": "file:///home/user/git/pentest-education/PENTESTING-BIBLE/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "Public Pentesting Reports",
         "URL": "file:///home/user/git/pentest-education/public-pentesting-reports/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "TryHackMe",
         "Favicon": "https://assets.tryhackme.com/img/favicon.png",
         "URL": "https://tryhackme.com/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "VulnHub",
         "Favicon": "https://www.vulnhub.com/static/img/touch-icon-ipad-retina.png",
         "URL": "https://www.vulnhub.com/",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "Web Security Academy (PortSwigger)",
         "Favicon": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
         "URL": "https://portswigger.net/web-security",
         "Placement": "toolbar",
-        "Folder": "PT Education"
+        "Folder": "Education"
       },
       {
         "Title": "Google Maps",
