@@ -13,6 +13,7 @@ NixOS
 - Generic VM profile
   - Fresh NixOS install to determine disk usage
 - ISO build?
+- Merge common host specific settings such as grub
 
 Jupyter
 - Test IP range notebook
