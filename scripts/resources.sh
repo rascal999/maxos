@@ -245,6 +245,7 @@ git_update https://github.com/faif/python-patterns.git $HOME/git/education/pytho
 ###
 ### Pentest Education
 ###
+git_update https://github.com/nixawk/pentest-wiki.git $HOME/git/pentest-education/pentest-wiki
 git_update https://github.com/vulhub/vulhub.git $HOME/git/pentest-education/vulhub
 git_update https://github.com/Lissy93/personal-security-checklist.git $HOME/git/pentest-education/personal-security-checklist
 git_update https://github.com/HalbornSecurity/PublicReports.git $HOME/git/pentest-education/HalbornPublicReports
