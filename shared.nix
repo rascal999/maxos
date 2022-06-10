@@ -246,6 +246,7 @@ in {
      sqlmap
      sshfs
      #steam
+     steampipe
      stockfish
      subfinder
      #sway
