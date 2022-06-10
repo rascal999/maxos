@@ -15,6 +15,10 @@ NixOS
 - ISO build?
 
 Jupyter
+- Test IP range notebook
+  - Verify PDF export
+- Test web application notebok
+  - Verify PDF export
 - Mobile notebook
 - Wireless notebook
 - Tool digest for reporting?
