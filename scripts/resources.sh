@@ -315,6 +315,7 @@ fi
 ###
 ### Pentest Tools
 ###
+git_update https://github.com/s0md3v/Corsy.git $HOME/git/pentest-tools/Corsy
 git_update https://github.com/epinna/tplmap.git $HOME/git/pentest-tools/tplmap
 git_update https://github.com/crawlab-team/crawlab.git $HOME/git/pentest-tools/crawlab
 git_update https://github.com/epi052/feroxbuster.git $HOME/git/pentest-tools/feroxbuster
