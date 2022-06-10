@@ -140,6 +140,7 @@ in {
      git-crypt
      glances
      #gnome.gnome-keyring
+     gnumake
      gnupg
      go
      gobuster
