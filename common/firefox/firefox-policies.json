@@ -233,92 +233,134 @@
         "Folder": "Nix"
       },
       {
-        "Title": "Jupyter",
-        "URL": "http://localhost:8888/",
+        "Title": "Sharelatex",
+        "URL": "http://localhost:8090/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "Jupyter",
+        "URL": "http://localhost:8000/",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
       },
       {
         "Title": "IVRE",
-        "URL": "http://localhost/",
+        "URL": "http://localhost:8010/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "reNgine",
+        "URL": "http://localhost:8020/",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "OpenVAS",
+        "URL": "https://localhost:8030/",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "CyberChef",
+        "URL": "http://localhost:8040/",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "Mobile Security Framework",
+        "URL": "http://localhost:8050/",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "spiderfoot",
+        "URL": "http://localhost:8060/",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
+      },
+      {
+        "Title": "AWS Security Viz",
+        "URL": "http://localhost:8070/navigator.html#aws-security-viz.png",
+        "Placement": "toolbar",
+        "Folder": "PT Tools"
       },
       {
         "Title": "awesome-pentest-cheat-sheets",
         "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "Cheatsheet-God",
         "URL": "file:///home/user/git/pentest-education/Cheatsheet-God/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "Hack The Box",
         "Favicon": "https://www.hackthebox.com/images/landingv3/favicon.png",
         "URL": "https://www.hackthebox.com/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "Halborn Public Reports",
         "URL": "file:///home/user/git/pentest-education/HalbornPublicReports/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "h4cker cheat sheets",
         "URL": "file:///home/user/git/pentest-education/h4cker/cheat_sheets/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "OWASP Cheat Sheet Series",
         "URL": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/Glossary.html",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "OWASP MSTG",
         "URL": "file:///home/user/git/pentest-education/owasp-mstg/OWASP_MSTG-SNAPSHOT.pdf",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "PENTESTING BIBLE",
         "URL": "file:///home/user/git/pentest-education/PENTESTING-BIBLE/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "Public Pentesting Reports",
         "URL": "file:///home/user/git/pentest-education/public-pentesting-reports/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "TryHackMe",
         "Favicon": "https://assets.tryhackme.com/img/favicon.png",
         "URL": "https://tryhackme.com/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "VulnHub",
         "Favicon": "https://www.vulnhub.com/static/img/touch-icon-ipad-retina.png",
         "URL": "https://www.vulnhub.com/",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "Web Security Academy (PortSwigger)",
         "Favicon": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
         "URL": "https://portswigger.net/web-security",
         "Placement": "toolbar",
-        "Folder": "Pentesting"
+        "Folder": "PT Education"
       },
       {
         "Title": "Google Maps",
