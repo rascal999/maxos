@@ -23,4 +23,6 @@
       minSpeed = "1.5";
     };
   };
+
+  fonts.fontconfig.enable = lib.mkForce true;
 }
