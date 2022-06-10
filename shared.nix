@@ -9,6 +9,7 @@ let
   my-python-packages = python-packages: with python-packages; [
     pip
     setuptools
+    requests
   ]; 
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
@@ -220,7 +221,7 @@ in {
      protonmail-bridge
      pstree
      pwgen
-     #python-with-my-packages
+     python-with-my-packages
      python310
      qemu
      qemu-utils

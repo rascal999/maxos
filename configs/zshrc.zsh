@@ -100,6 +100,22 @@ d-filebrowserhere() {
   firefox http://127.0.0.1:1080/ &; disown
 }
 
+d-rengine() {
+  cd $HOME/git/pentest-tools/rengine
+  sudo make up
+
+  while true; do
+    echo -n "Create user for rengine? [yN] "
+    read yn
+    case $yn in
+      [Yy]* ) make username; break;;
+      [Nn]* ) break;;
+      * ) break;;
+    esac
+  done
+  cd -
+}
+
 d-ivre() {
   docker-compose -f /home/user/git/pentest-tools/ivre/docker/docker-compose.yml up -d
 }

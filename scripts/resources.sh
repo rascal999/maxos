@@ -37,7 +37,7 @@ function docker_pull_prompt() {
 }
 
 function git_update() {
-  DIR_ACCESSED=`find $2 -maxdepth 0 -type d -atime -1 | wc -l`
+  DIR_ACCESSED=`find $2 -maxdepth 0 -type d -atime -1 2>/dev/null | wc -l`
 
   # Only pull if directory not accessed in last day
   if [[ "$DIR_ACCESSED" == "0" ]]; then
@@ -324,7 +324,6 @@ git_update https://github.com/gwen001/pentest-tools.git $HOME/git/pentest-tools/
 git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/pentest-tools/awesome-stacks
 git_update https://github.com/portainer/portainer $HOME/git/pentest-tools/portainer
 git_update https://github.com/LasCC/Hack-Tools.git $HOME/git/pentest-tools/Hack-Tools
-git_update https://github.com/yogeshojha/rengine.git $HOME/git/pentest-tools/rengine
 git_update https://github.com/commixproject/commix.git $HOME/git/pentest-tools/commix
 git_update https://github.com/qeeqbox/social-analyzer.git $HOME/git/pentest-tools/social-analyzer
 git_update https://github.com/zaproxy/zaproxy.git $HOME/git/pentest-tools/zaproxy
@@ -341,6 +340,12 @@ git_update https://github.com/mzet-/linux-exploit-suggester.git $HOME/git/pentes
 git_update https://github.com/va1da5/docker-objection-for-android.git $HOME/git/misc/objection
 git_update https://github.com/iddoeldor/frida-snippets.git $HOME/git/misc/frida-snippets
 #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
+
+git_update https://github.com/yogeshojha/rengine.git $HOME/git/pentest-tools/rengine
+if [[ "$?" == "0" ]]; then
+  make certs
+  make build
+fi
 
 git_update https://github.com/m4ll0k/Infoga.git $HOME/git/pentest-tools/Infoga
 if [[ "$?" == "0" ]]; then
