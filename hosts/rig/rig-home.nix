@@ -32,7 +32,7 @@
     enable = true;
     repositories = {
       nixos = {
-        path = config.home.homeDirectory + "/git/nixos-um";
+        path = config.home.homeDirectory + "/git/nixos";
         uri = "git@github.com:rascal999/nixos.git";
       };
     };
