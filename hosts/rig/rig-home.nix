@@ -33,7 +33,7 @@
     repositories = {
       nixos = {
         path = config.home.homeDirectory + "/git/nixos";
-        uri = "https://github.com:rascal999/nixos.git";
+        uri = "https://github.com/rascal999/nixos.git";
       };
     };
   };
