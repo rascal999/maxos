@@ -394,10 +394,10 @@ in {
     wantedBy = [ "multi-user.target" ]; 
     after = [ "network-online.target" ];
     description = "Clone/pull rascal999:nixos and copy Jupyter templates";
+    script = "${config.users.users.user.home}/.startup.sh";
     serviceConfig = {
       Type = "forking";
       User = "user";
-      Script = "${config.users.users.user.home}/.startup.sh";
     };
   };
 
