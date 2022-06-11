@@ -396,7 +396,7 @@ in {
     description = "Clone/pull rascal999:nixos and copy Jupyter templates";
     serviceConfig = {
       Type = "forking";
-      User = "${cfg.user}";
+      User = "${config.user}";
       script = "${config.users.users.user.home}/.startup.sh";
     };
   };
