@@ -16,7 +16,7 @@ in {
   boot.kernelParams = [ "intel_pstate=active" ];
   boot.initrd.network = {
     enable = true;
-  }
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/London";
