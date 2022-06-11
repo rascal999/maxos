@@ -397,7 +397,7 @@ in {
     serviceConfig = {
       Type = "forking";
       User = "user";
-      script = "${config.users.users.user.home}/.startup.sh";
+      Script = "${config.users.users.user.home}/.startup.sh";
     };
   };
 
