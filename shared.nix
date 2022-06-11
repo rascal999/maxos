@@ -388,7 +388,7 @@ in {
 
   ## Copy template scripts
   system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
-    git clone https://github.com/rascal999/nixos ${config.users.users.user.home}/git/nixos || git -C ${config.users.users.user.home}/git/nixos pull
+    ${pkgs.git}/bin/git clone https://github.com/rascal999/nixos ${config.users.users.user.home}/git/nixos || ${pkgs.git}/bin/git -C ${config.users.users.user.home}/git/nixos pull
     mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
     rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb || true
     cp ${config.users.users.user.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.user.home}/jupyter/pentest/base || true
