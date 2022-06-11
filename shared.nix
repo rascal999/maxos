@@ -14,10 +14,6 @@ let
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
   boot.kernelParams = [ "intel_pstate=active" ];
-  boot.initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
-  boot.initrd.network = {
-    enable = true;
-  };
 
   # Set your time zone.
   time.timeZone = "Europe/London";
