@@ -14,6 +14,9 @@ let
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
   boot.kernelParams = [ "intel_pstate=active" ];
+  boot.initrd.network = {
+    enable = true;
+  }
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -387,14 +390,11 @@ in {
   };
 
   ## Copy template scripts
-  system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
-    ${pkgs.git}/bin/git config --global --add safe.directory /home/user/git/nixos || true
+  system.userActivationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
     ${pkgs.git}/bin/git clone https://github.com/rascal999/nixos ${config.users.users.user.home}/git/nixos || ${pkgs.git}/bin/git -C ${config.users.users.user.home}/git/nixos pull
     mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
     rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb || true
     cp ${config.users.users.user.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.user.home}/jupyter/pentest/base || true
-    chown user:users ${config.users.users.user.home}/jupyter/pentest -R
-    chown user:users ${config.users.users.user.home}/git/nixos -R
   '';
 
   # Virtualisation
