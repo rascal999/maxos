@@ -28,5 +28,12 @@
 
   # Override defaults
   fonts.fontconfig.enable = lib.mkForce true;
-  services.xserver.resolutions = lib.mkOverride [{ x = 1920; y = 1440; } { x = 1024; y = 768 }];
+  services.xserver.resolutions = lib.mkOverride [
+    {
+      x = 1920; y = 1440;
+    }
+    {
+      x = 1024; y = 768;
+    }
+  ];
 }
