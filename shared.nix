@@ -14,6 +14,10 @@ let
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
   boot.kernelParams = [ "intel_pstate=active" ];
+  boot.initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
+  boot.initrd.network = {
+    enable = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -387,7 +391,7 @@ in {
   };
 
   ## Copy template scripts
-  system.userActivationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
+  system.userActivationScripts.copyPentestTemplates = ''
     ${pkgs.git}/bin/git clone https://github.com/rascal999/nixos ${config.users.users.user.home}/git/nixos || ${pkgs.git}/bin/git -C ${config.users.users.user.home}/git/nixos pull
     mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
     rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb || true
