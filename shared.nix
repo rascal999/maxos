@@ -388,6 +388,7 @@ in {
 
   ## Copy template scripts
   system.activationScripts.copyPentestTemplates = lib.stringAfter [ "var"] ''
+    ${pkgs.git}/bin/git config --global --add safe.directory /home/user/git/nixos || true
     ${pkgs.git}/bin/git clone https://github.com/rascal999/nixos ${config.users.users.user.home}/git/nixos || ${pkgs.git}/bin/git -C ${config.users.users.user.home}/git/nixos pull
     mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
     rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb || true
