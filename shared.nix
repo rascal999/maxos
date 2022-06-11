@@ -390,13 +390,16 @@ in {
     ];
   };
 
-  ## Copy template scripts
-  system.userActivationScripts.copyPentestTemplates = ''
-    ${pkgs.git}/bin/git clone https://github.com/rascal999/nixos ${config.users.users.user.home}/git/nixos || ${pkgs.git}/bin/git -C ${config.users.users.user.home}/git/nixos pull
-    mkdir -p ${config.users.users.user.home}/jupyter/pentest/base
-    rm ${config.users.users.user.home}/jupyter/pentest/base/*.ipynb || true
-    cp ${config.users.users.user.home}/git/nixos/resources/jupyter/pentest/*.ipynb ${config.users.users.user.home}/jupyter/pentest/base || true
-  '';
+  systemd.services.startupTasks = {
+    wantedBy = [ "multi-user.target" ]; 
+    after = [ "network-online.target" ];
+    description = "Clone/pull rascal999:nixos and copy Jupyter templates";
+    serviceConfig = {
+      Type = "forking";
+      User = "${cfg.user}";
+      script = "${config.users.users.user.home}/.startup.sh";
+    };
+  };
 
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
