@@ -394,14 +394,10 @@ in {
     wantedBy = [ "multi-user.target" ]; 
     after = [ "network-online.target" ];
     description = "Clone/pull rascal999:nixos and copy Jupyter templates";
-    script = "${config.users.users.user.home}/.startup.sh";
+    script = "/home/user/.startup.sh";
     serviceConfig = {
       Type = "oneshot";
       User = "user";
-      ExecStart = "git clone https://github.com/rascal999/nixos ${HOME}/git/nixos || git -C ${HOME}/git/nixos pull";
-      ExecStart = "mkdir -p ${HOME}/jupyter/pentest/base";
-      ExecStart = "rm ${HOME}/jupyter/pentest/base/*.ipynb";
-      ExecStart = "cp ${HOME}/git/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base";
     };
   };
 
