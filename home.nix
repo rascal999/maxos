@@ -27,6 +27,17 @@
     ".mime.types".source = ./common/firefox/mime.types;
   };
 
+  # Fetch rascal999:nixos
+  services.git-sync = {
+    enable = true;
+    repositories = {
+      nixos = {
+        path = config.home.homeDirectory + "/git/nixos";
+        uri = "git@github.com:rascal999/nixos.git";
+      };
+    };
+  };
+
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
