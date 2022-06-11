@@ -114,6 +114,7 @@ in {
      git
      #gitleaks
      git-crypt
+     git-sync
      glances
      #gnome.gnome-keyring
      gnumake
