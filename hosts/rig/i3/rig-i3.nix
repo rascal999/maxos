@@ -58,6 +58,7 @@ in {
         "${mod}+Tab" = "workspace next";
         "${mod}+0" = "workspace number 10";
         "${mod}+1" = "workspace number 1";
+        "${mod}+2" = "workspace number 2";
         "${mod}+3" = "workspace number 3";
         "${mod}+4" = "workspace number 4";
         "${mod}+5" = "workspace number 5";
