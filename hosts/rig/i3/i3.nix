@@ -12,6 +12,19 @@
         {
           command = "exec /run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40";
         }
+        {
+          command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
+          notification = false;
+        }
+        {
+          command = "exec ${pkgs.xorg.setxkbmap}/bin/setxkbmap dvorak";
+          always = true;
+          notification = false;
+        }
+        {
+          command = "exec ${pkgs.firefox}/bin/firefox";
+          workspace = "1";
+        }
       ];
     };
   };
