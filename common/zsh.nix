@@ -56,6 +56,7 @@
       dig = "grc dig";
       id = "grc id";
       ps = "grc ps";
+      lg = "lazygit";
       a-r = "export TIMESTAMP = `date +%Y%m%d_%H%M%S` && asciinema rec $HOME/asciinema/asciinema_$TIMESTAMP.log";
       a-k = "grc kubectl";
       a-d = "grc docker";
