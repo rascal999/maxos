@@ -1,6 +1,14 @@
 { config, pkgs, lib, ... }:
 
 {
+  networking.hostName = "iso";
+
+  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
+  # Per-interface useDHCP will be mandatory in the future, so this generated config
+  # replicates the default behaviour.
+  networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.scanRandMacAddress = false;
+
   # X11 / i3
   services.xserver = {
     enable = true;
@@ -24,13 +32,13 @@
     };
   };
 
-  networking.hostName = "iso";
-
   # Override defaults
   fonts.fontconfig.enable = lib.mkForce true;
+
   services.xserver.resolutions = [
     {
       x = 1920; y = 1440;
     }
   ];
 }
+
