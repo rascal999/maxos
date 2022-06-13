@@ -37,7 +37,7 @@ if [[ ! $(ls $DISK 2>/dev/null) ]]; then
 fi
 
 # Check we're in NixOS
-if [ "$HOSTNAME" != "nixos" ]; then
+if [ "$HOSTNAME" != "nixos" && "$HOSTNAME" != "iso" ]; then
     echo "This doesn't look like NixOS, bailing"
     exit 1
 fi

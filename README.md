@@ -28,5 +28,5 @@ cd nixos-master/
 ### Install
 
 ```
-./init.sh
+./scripts/init.sh
 ```
