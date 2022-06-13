@@ -76,6 +76,7 @@ in {
      binwalk
      brightnessctl
      brillo
+     broot
      #btop
      burpsuite
      calibre
@@ -96,11 +97,15 @@ in {
      dmenu
      docker
      docker-compose
+     dog
+     duf
      dunst
+     du-dust
      electrum
      enum4linux
      #evolution
      fcrackzip
+     fd
      feh
      ffmpeg
      ffuf
@@ -136,6 +141,7 @@ in {
      hping
      htop
      httpx
+     hyper
      i3
      i3status-rust
      imagemagick
@@ -157,6 +163,7 @@ in {
      kubectl
      kubernetes-helm
      kustomize
+     lazygit
      libreoffice-fresh
      libsecret
      lshw
@@ -212,6 +219,7 @@ in {
      rdesktop
      redshift
      remmina
+     ripgrep-all
      rsync
      ruby
      rustscan
@@ -238,6 +246,7 @@ in {
      thc-hydra
      thefuck
      tig
+     tldr
      tmux
      trufflehog
      tor
