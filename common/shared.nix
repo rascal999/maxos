@@ -195,6 +195,7 @@ in {
      openssl
      openttd
      openvpn
+     OVMF
      p7zip
      pandoc
      pass
