@@ -101,10 +101,8 @@
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
-          ./common/nur.nix
-          ./common/shared.nix
           ./hosts/vm/configuration.nix
-          "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+          ./hosts/vm/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [

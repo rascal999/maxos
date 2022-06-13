@@ -11,7 +11,7 @@ rm /mnt/etc/nixos/configuration.nix
 # Git repo?
 if [[ -d ".git" ]]; then
   mkdir hosts/$1
-  cp /mnt/etc/nixos/hardware-configuration.nix hosts/$1/${1}-hw.nix
+  cp /mnt/etc/nixos/hardware-configuration.nix hosts/$1/
 
   git config --global user.email "${1}@dev.net"
   git config --global user.name "Aidan"
@@ -20,4 +20,4 @@ if [[ -d ".git" ]]; then
   git push
 fi
 
-nixos-install --flake .#$1 --root /mnt --impure
+echo nixos-install --flake .#$1 --root /mnt --impure
