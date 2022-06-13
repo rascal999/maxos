@@ -89,7 +89,7 @@
         modules = [
           ./common/nur.nix
           ./common/shared.nix
-          ./hosts/vm/configuration.nix
+          ./hosts/iso/configuration.nix
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
 
           home-manager.nixosModules.home-manager {

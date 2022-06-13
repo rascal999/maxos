@@ -69,4 +69,4 @@ sudo mount /dev/mapper/root /mnt
 sudo mkdir /mnt/boot
 sudo mount ${DISK}${BOOT_PARTITION} /mnt/boot
 
-./setup.sh $DESIRED_HOSTNAME
+./scripts/setup.sh $DESIRED_HOSTNAME
