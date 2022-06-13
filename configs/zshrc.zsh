@@ -55,7 +55,6 @@ new() {
   echo "fd            Fast find"
   echo "rg            ripgrep"
   echo "rga           ripgrep (PDFs, zips, docx etc.)"
-  echo
 }
 
 test-vpn() {
