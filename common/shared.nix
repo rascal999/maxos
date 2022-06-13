@@ -13,10 +13,60 @@ let
   ]; 
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Use the GRUB 2 boot loader.
+  boot.loader.grub.enable = true;
+  boot.loader.grub.version = 2;
+  boot.loader.grub.efiSupport = true;
+  boot.loader.grub.efiInstallAsRemovable = true;
+  boot.loader.grub.useOSProber = true;
+
+  # Define on which hard drive you want to install Grub.
+  boot.loader.grub.device = "nodev"; # or "nodev" for efi only
+  boot.loader.grub.extraEntries = ''
+    menuentry "Reboot" {
+      reboot
+    }
+    menuentry "Poweroff" {
+      halt
+    }
+  '';
+
+  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
+  # Per-interface useDHCP will be mandatory in the future, so this generated config
+  # replicates the default behaviour.
+  networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.scanRandMacAddress = false;
+
   boot.kernelParams = [ "intel_pstate=active" ];
   boot.initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
   boot.initrd.network = {
     enable = true;
+  };
+
+  hardware.opengl.driSupport32Bit = true;
+
+  # X11 / i3
+  services.xserver = {
+    enable = true;
+    windowManager.i3.enable = true;
+
+    displayManager = {
+      defaultSession = "none+i3";
+      lightdm.enable = true;
+      autoLogin.enable = true;
+      autoLogin.user = "user";
+    };
+  };
+
+  services.xserver = {
+    # Touchpad
+    synaptics = {
+      enable = true;
+      vertTwoFingerScroll = true;
+      palmDetect = true;
+      minSpeed = "1.5";
+    };
   };
 
   # Set your time zone.
@@ -33,7 +83,7 @@ in {
   services.printing.enable = true;
 
   # No
-  #powerManagement.enable = false;
+  powerManagement.enable = false;
 
   # Enable sound.
   sound.enable = true;
@@ -304,8 +354,6 @@ in {
 
   # Steam
   #programs.steam.enable = true;
-  # Sway
-  #programs.sway.enable = true;
 
   # List services that you want to enable:
   # Enable zsh
@@ -360,7 +408,7 @@ in {
 
   # k3s
   services.k3s.enable = false;
-  services.k3s.role = "server";
+  #services.k3s.role = "server";
 
   # Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
@@ -415,13 +463,6 @@ in {
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
-  ## VirtualBox
-  #virtualisation.virtualbox.host = {
-  #  enable = true;
-  #  enableExtensionPack = true;
-  #  enableHardening = false;
-  #};
-
   # QEMU
   virtualisation.libvirtd = {
     enable = true;
@@ -452,5 +493,4 @@ in {
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "22.05"; # Did you read the comment?
-
 }

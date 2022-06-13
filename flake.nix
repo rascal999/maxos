@@ -20,7 +20,6 @@
     system = "x86_64-linux";
 
     commonModules = [
-      ./common/configuration.nix
       ./common/nur.nix
       ./common/shared.nix
 
