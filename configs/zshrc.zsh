@@ -46,6 +46,18 @@ dunst-handle() {
 ###
 ### Misc
 ###
+new() {
+  echo "### New commands ###"
+  echo "broot         File explorer"
+  echo "duf           Disk usage"
+  echo "dust          Find big files"
+  echo "lazygit / lg  git tool"
+  echo "fd            Fast find"
+  echo "rg            ripgrep"
+  echo "rga           ripgrep (PDFs, zips, docx etc.)"
+  echo
+}
+
 test-vpn() {
   ${HOME}/git/nixos/scripts/wg_test.sh
 }
