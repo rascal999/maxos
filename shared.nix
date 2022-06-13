@@ -219,6 +219,7 @@ in {
      rdesktop
      redshift
      remmina
+     ripgrep
      ripgrep-all
      rsync
      ruby
