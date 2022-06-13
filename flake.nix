@@ -19,16 +19,13 @@
   let
     system = "x86_64-linux";
 
-    commonModules = [
+    commonSettings = [
       ./common/nur.nix
       ./common/shared.nix
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-
-        # Optionally, use home-manager.extraSpecialArgs to pass
-        # arguments to home.nix
       }
     ];
   in {
@@ -36,7 +33,7 @@
       ### BLADE
       blade = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = commonModules ++ [
+        modules = commonSettings ++ [
           ./hosts/blade/configuration.nix
           ./hosts/blade/hardware.nix
 
@@ -53,7 +50,7 @@
       ### RIG
       rig = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = commonModules ++ [
+        modules = commonSettings ++ [
           ./hosts/rig/configuration.nix
           ./hosts/rig/hardware.nix
 
@@ -69,14 +66,14 @@
       ### ROG
       rog = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = commonModules ++ [
+        modules = commonSettings ++ [
           ./hosts/rog/configuration.nix
           ./hosts/rog/hardware.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
-              ./home.nix
               ./common/i3-vars.nix
+              ./home.nix
             ];
           })
         ];
@@ -91,16 +88,30 @@
           ./hosts/iso/configuration.nix
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
 
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+          ({ pkgs, ... }: {
             home-manager.users.user.imports = [
-              ./home.nix
               ./common/i3-vars.nix
+              ./home.nix
             ];
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
+          })
+        ];
+      };
+
+      ### VM
+      vm = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = commonSettings ++ [
+          ./common/nur.nix
+          ./common/shared.nix
+          ./hosts/vm/configuration.nix
+          "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./common/i3-vars.nix
+              ./home.nix
+            ];
+          })
         ];
       };
     };

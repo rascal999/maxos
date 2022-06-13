@@ -5,6 +5,19 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   virtualisation.docker.enableNvidia = true;
 
+  # X11 / i3
+  services.xserver = {
+    enable = true;
+    windowManager.i3.enable = true;
+
+    displayManager = {
+      defaultSession = "none+i3";
+      lightdm.enable = true;
+      autoLogin.enable = true;
+      autoLogin.user = "user";
+    };
+  };
+
   # Enable cron service
   services.cron = {
     enable = true;

@@ -19,16 +19,6 @@
     };
   };
 
-  services.xserver = {
-    # Touchpad
-    synaptics = {
-      enable = true;
-      vertTwoFingerScroll = true;
-      palmDetect = true;
-      minSpeed = "1.5";
-    };
-  };
-
   # Override defaults
   fonts.fontconfig.enable = lib.mkForce true;
 
