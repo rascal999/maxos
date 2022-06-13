@@ -68,7 +68,6 @@ in {
      android-tools
      appimage-run
      asciinema
-     atom
      autokey
      awscli
      azure-cli
