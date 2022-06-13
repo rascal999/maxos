@@ -311,7 +311,7 @@ in {
   programs.zsh.enable = true;
 
   # Firefox policy for extensions
-  environment.etc."firefox/policies/policies.json".source = ./common/firefox/firefox-policies.json;
+  environment.etc."firefox/policies/policies.json".source = ./firefox/firefox-policies.json;
 
   # Laptop light
   programs.light.enable = true;

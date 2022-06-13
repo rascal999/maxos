@@ -15,84 +15,90 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  let
+    system = "x86_64-linux";
+
+    commonModules = [
+      ./common/configuration.nix
+      ./common/nur.nix
+      ./common/shared.nix
+
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+
+        # Optionally, use home-manager.extraSpecialArgs to pass
+        # arguments to home.nix
+      }
+    ];
+  in {
     nixosConfigurations = {
+      ### BLADE
       blade = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+        modules = commonModules ++ [
+          ./hosts/blade/configuration.nix
+          ./hosts/blade/hardware.nix
 
-        modules = [
-          ./common/nur.nix
-          ./shared.nix
-          ./hosts/blade/blade-configuration.nix
-          ./hosts/blade/blade-hw.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.user = import ./hosts/blade/blade-home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./common/i3-vars.nix
+              ./home.nix
+              ./hosts/blade/home.nix
+            ];
+          })
         ];
-
-        #specialArgs = { inherit inputs; };
       };
 
+      ### RIG
       rig = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+        modules = commonModules ++ [
+          ./hosts/rig/configuration.nix
+          ./hosts/rig/hardware.nix
 
-        modules = [
-          ./common/nur.nix
-          ./shared.nix
-          ./hosts/rig/rig-configuration.nix
-          ./hosts/rig/rig-hw.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.user = import ./hosts/rig/rig-home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./home.nix
+              ./hosts/rig/i3/i3.nix
+            ];
+          })
         ];
-
-        #specialArgs = { inherit inputs; };
       };
 
+      ### ROG
       rog = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+        modules = commonModules ++ [
+          ./hosts/rog/configuration.nix
+          ./hosts/rog/hardware.nix
 
-        modules = [
-          ./common/nur.nix
-          ./shared.nix
-          ./hosts/rog/rog-configuration.nix
-          ./hosts/rog/rog-hw.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.user = import ./home.nix;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./home.nix
+              ./common/i3-vars.nix
+            ];
+          })
         ];
-
-        #specialArgs = { inherit inputs; };
       };
 
+      ### ISO
       iso = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-
+        inherit system;
         modules = [
-          "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
           ./common/nur.nix
-          ./shared.nix
+          ./common/shared.nix
           ./hosts/vm/configuration.nix
+          "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.user = import ./home.nix;
-
+            home-manager.users.user.imports = [
+              ./home.nix
+              ./common/i3-vars.nix
+            ];
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
           }

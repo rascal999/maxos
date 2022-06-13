@@ -13,8 +13,6 @@ in {
     config = {
       modifier = mod;
 
-      defaultWorkspace = "workspace number 1";
-
       fonts = ["DejaVu Sans Mono, FontAwesome 6"];
 
       keybindings = lib.mkDefault {
@@ -84,24 +82,6 @@ in {
       };
 
       workspaceAutoBackAndForth = true;
-
-      startup = [
-        {
-          command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
-          #always = true;
-          notification = false;
-        }
-        {
-          command = "exec ${pkgs.xorg.setxkbmap}/bin/setxkbmap dvorak";
-          always = true;
-          notification = false;
-        }
-        {
-          command = "exec ${pkgs.firefox}/bin/firefox";
-          #always = true;
-          workspace = "1";
-        }
-      ];
 
       bars = [
         {
