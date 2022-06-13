@@ -72,6 +72,7 @@ in {
      autokey
      awscli
      azure-cli
+     bat
      binwalk
      brightnessctl
      brillo
