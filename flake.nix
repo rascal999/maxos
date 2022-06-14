@@ -112,6 +112,22 @@
           })
         ];
       };
+
+      ### BLUEBOY
+      blueboy = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = commonSettings ++ [
+          ./hosts/blueboy/configuration.nix
+          ./hosts/blueboy/hardware.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./common/i3-vars.nix
+              ./home.nix
+            ];
+          })
+        ];
+      };
     };
   };
 }
