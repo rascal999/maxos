@@ -16,6 +16,9 @@ NixOS
 - Merge common host specific settings such as grub
 
 Jupyter
+- Bugs
+  - Web / theHarvester / ctfr
+    - Screenshot: docker: invalid reference format: repository name must be lowercase.
 - Test IP range notebook
   - Verify PDF export
 - Test web application notebok
