@@ -10,12 +10,12 @@ if [[ `hostname` == "rig" ]]; then
 
     sleep 4
 
-    i3-msg "workspace 1, move workspace to output HDMI-0"
-    i3-msg "workspace 2, move workspace to output USB-C-0"
+    i3-msg "workspace 10, move workspace to output HDMI-0"
+    i3-msg "workspace 1, move workspace to output USB-C-0"
     i3-msg "workspace 7, move workspace to output DP-4"
 
     for WORKSPACE_FILE in "$@" ; do
-      WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -o "[0-9]"`
+      WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
       i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     done
 
