@@ -54,7 +54,6 @@ in {
         "${mod}+Shift+Right" = "move right";
 
         # Workspace
-        "${mod}+Tab" = "workspace next";
         "${mod}+0" = "workspace number 10";
         "${mod}+1" = "workspace number 1";
         "${mod}+2" = "workspace number 2";
