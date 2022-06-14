@@ -2,3 +2,4 @@
 
 git pull
 nixos-rebuild --use-remote-sudo --flake .#$HOST --impure switch
+${HOME}/.startup.sh
