@@ -114,6 +114,16 @@ d-sherlock() {
   docker run --rm -t sherlock "$@"
 }
 
+d-sharelatex() {
+  sed -i "s#- 80:80#- ${PORT_SHARELATEX}:80#g" ${HOME}/git/misc/overleaf/docker-compose.yml
+  docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml up -d
+}
+
+d-sharelatex-kill() {
+  sed -i "s#- ${PORT_SHARELATEX}:80#- 80:80#g" ${HOME}/git/misc/overleaf/docker-compose.yml
+  docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml down
+}
+
 d-windowshellhere() {
   docker -c 2019-box run --rm -it -v "C:$(pwd):C:/source" -w "C:/source" "$@"
 }
@@ -148,14 +158,14 @@ d-rengine-kill() {
 }
 
 d-ivre() {
-  sed -i "s#- \"80:80\"#- \"${PORT_IVRE}:80\"#g" ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml
+  sed -i "s#- \"80:80\"#- \"127.0.0.1:${PORT_IVRE}:80\"#g" ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml
   docker-compose -f ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml up -d
 }
 
 d-ivre-kill() {
-  # git pull must work
   docker-compose -f ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml down
-  sed -i "s#- \"${PORT_IVRE}:80\"#- \"80:80\"#g" ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml
+  # git pull must work
+  sed -i "s#- \"127.0.0.1:${PORT_IVRE}:80\"#- \"80:80\"#g" ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml
 }
 
 a-localhostrun() {
