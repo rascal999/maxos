@@ -35,7 +35,7 @@
         inherit system;
         modules = commonSettings ++ [
           ./hosts/blade/configuration.nix
-          ./hosts/blade/hardware.nix
+          ./hosts/blade/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -52,7 +52,7 @@
         inherit system;
         modules = commonSettings ++ [
           ./hosts/rig/configuration.nix
-          ./hosts/rig/hardware.nix
+          ./hosts/rig/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -68,7 +68,7 @@
         inherit system;
         modules = commonSettings ++ [
           ./hosts/rog/configuration.nix
-          ./hosts/rog/hardware.nix
+          ./hosts/rog/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -118,7 +118,7 @@
         inherit system;
         modules = commonSettings ++ [
           ./hosts/blueboy/configuration.nix
-          ./hosts/blueboy/hardware.nix
+          ./hosts/blueboy/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
