@@ -23,6 +23,7 @@ interface_name_include = []
 [[block]]
 block = "external_ip"
 format = "{country_flag} {asn} '{org}' {ip}"
+with_network_manager = false;
 error_interval = 300
 interval = 300
 
