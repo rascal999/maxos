@@ -153,6 +153,7 @@ in {
      flameshot
      fswebcam
      fzf
+     gammastep
      gcc
      genymotion
      ghidra-bin
@@ -265,7 +266,6 @@ in {
      screen
      screenfetch
      scrot
-     sct
      sddm
      signal-desktop
      slack

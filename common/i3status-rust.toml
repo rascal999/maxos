@@ -9,7 +9,7 @@ format = "{display} {brightness}"
 
 [[block]]
 block = "hueshift"
-hue_shifter = "sct"
+hue_shifter = "gammastep"
 step = 100
 click_temp = 1900 
 
