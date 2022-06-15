@@ -5,19 +5,13 @@ icons = "awesome"
 block = "xrandr"
 icons = true
 resolution = true
+format = "{display} {brightness}"
 
 [[block]]
 block = "hueshift"
-hue_shifter = "redshift"
+hue_shifter = "sct"
 step = 100
 click_temp = 1900 
-
-[[block]]
-block = "keyboard_layout"
-driver = "xkbswitch"
-on_click = "xkb-switch -n"
-format = "{layout} {variant}"
-interval = 1
 
 [[block]]
 block = "battery"
@@ -46,11 +40,6 @@ interval = 600
 block = "docker"
 interval = 10
 format = "{running}/{total}"
-
-[[block]]
-block = "custom"
-command = "echo -n 'Procs: ' && ps aux | grep -vE \"echo -n 'Processes: '|grep -vE|ps aux|%MEM\" | wc -l"
-interval = 15
 
 [[block]]
 block = "load"

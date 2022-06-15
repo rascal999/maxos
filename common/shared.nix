@@ -265,6 +265,7 @@ in {
      screen
      screenfetch
      scrot
+     sct
      sddm
      signal-desktop
      slack
