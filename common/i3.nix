@@ -84,7 +84,7 @@ in {
 
       bars = [
         {
-          fonts = [ "DejaVu Sans Mono" "FontAwesome 12" ];
+          fonts = [ "DejaVu Sans Mono" "FontAwesome 9" ];
           position = "bottom";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
           colors = {
