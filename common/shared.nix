@@ -290,6 +290,7 @@ in {
      trufflehog
      tor
      #tor-browser-bundle-bin
+     trivy
      twmn
      unrar
      unzip

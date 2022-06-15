@@ -342,6 +342,19 @@ git_update https://github.com/va1da5/docker-objection-for-android.git $HOME/git/
 git_update https://github.com/iddoeldor/frida-snippets.git $HOME/git/misc/frida-snippets
 #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
 
+# Nettacker
+git_update https://github.com/OWASP/Nettacker.git $HOME/git/pentest-tools/Nettacker
+if [[ "$?" == "0" ]]; then
+  docker build . -t nettacker
+fi
+
+# Raccoon
+git_update https://github.com/evyatarmeged/Raccoon.git $HOME/git/pentest-tools/Raccoon
+if [[ "$?" == "0" ]]; then
+  docker build -t evyatarmeged/raccoon .
+fi
+
+# rengine
 git_update https://github.com/yogeshojha/rengine.git $HOME/git/pentest-tools/rengine
 if [[ "$?" == "0" ]]; then
   make certs
