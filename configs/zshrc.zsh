@@ -18,6 +18,11 @@ PORT_SPIDERFOOT=8060
 PORT_AWS_SECURITY_VIZ=8070
 PORT_BURP=8080
 PORT_SHARELATEX=8090
+PORT_GOTTY=9000
+
+export MCFLY_KEY_SCHEME=vim
+export MCFLY_RESULTS=40
+export MCFLY_RESULTS_SORT=LAST_RUN
 
 if [ -n "${DISPLAY+x}" ]; then
   xmodmap -e "keycode 81=Prior KP_9"
@@ -51,9 +56,9 @@ new() {
   echo "broot         File explorer"
   echo "duf           Disk usage"
   echo "dust          Find big files"
-  echo "lazygit / lg  git tool"
   echo "fd            Fast find"
   echo "gotty         Terminal command over web"
+  echo "lazygit / lg  git tool"
   echo "rg            ripgrep"
   echo "rga           ripgrep (PDFs, zips, docx etc.)"
   echo "tldr          TL;DR for command"
@@ -176,6 +181,18 @@ a-localhostrun() {
   else
     ssh -R 80:localhost:$1 nokey@localhost.run
   fi
+}
+
+a-localhostrun-gotty() {
+  if [[ "$#" -lt "1" ]]; then
+    echo "ERROR: Specify command"
+    return 1
+  fi
+
+  TIMESTAMP=`date +%Y%m%d_%H%M%S`
+  screen -S ${TIMESTAMP}_testssl -adm gotty --port 9000 $@
+  ssh -R 80:localhost:9000 nokey@localhost.run
+  screen -S ${TIMESTAMP}_testssl -X quit
 }
 
 a-localhostrun-nginx() {
@@ -2450,6 +2467,8 @@ ds-zammad-kill() {
   sleep 6
   docker volume prune
 }
+
+eval "$(mcfly init zsh)"
 
 # appwrite.ds bibliogram.ds bookstack.ds botpress.ds calibre.ds chatwoot.ds commento.ds crater.ds cryptpad.ds directus.ds discourse.ds dolibarr.ds drawio.ds element.ds ethercalc.ds etherpad.ds ethibox.ds fathom.ds firefly.ds flarum.ds framadate.ds freshrss.ds ghost.ds gitlab.ds gogs.ds grafana.ds grav.ds habitica.ds hasura.ds hedgedoc.ds huginn.ds invoiceninja.ds jenkins.ds jitsi.ds kanboard.ds listmonk.ds magento.ds mailserver.ds mailtrain.ds mastodon.ds matomo.ds mattermost.ds matterwiki.ds mautic.ds mediawiki.ds metabase.ds minio.ds mobilizon.ds monitoring.ds n8n.ds nextcloud.ds nitter.ds nocodb.ds odoo.ds passbolt.ds peertube.ds phpbb.ds pinafore.ds pixelfed.ds plume.ds polr.ds portainer.ds posthog.ds prestashop.ds pydio.ds pytition.ds rainloop.ds redmine.ds registry.ds rocketchat.ds rsshub.ds scrumblr.ds searx.ds suitecrm.ds taiga.ds talk.ds traefik.ds umami.ds uptime-kuma.ds waiting.ds wallabag.ds wekan.ds whoogle-search.ds wikijs.ds wordpress.ds writefreely.ds zammad.ds 
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
