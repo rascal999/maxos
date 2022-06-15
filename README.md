@@ -1,6 +1,6 @@
 # NixOS config and dotfiles
 
-![NixOS desktop](/resources/screenshots/20220527_nixos.png)
+![NixOS desktop](/resources/screenshots/20220615_nixos.png)
 
 Glorious!
 
