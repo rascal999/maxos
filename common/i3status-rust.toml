@@ -34,14 +34,9 @@ interface_name_include = []
 
 [[block]]
 block = "external_ip"
-format = "{country_flag} {asn} '{org}' {ip}"
-
-[[block]]
-block = "nvidia_gpu"
-label = "RTX 2080 Ti"
-show_memory = true
-show_clocks = true
-interval = 3
+[block.format]
+full = "{country_flag} {asn} '{org}' {ip}"
+short = "{country_flag} {asn} {ip}"
 
 [[block]]
 block = "custom"
