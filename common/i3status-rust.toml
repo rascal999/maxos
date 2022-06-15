@@ -2,12 +2,6 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
-block = "xrandr"
-icons = true
-resolution = true
-format = "{display} {brightness}"
-
-[[block]]
 block = "hueshift"
 hue_shifter = "gammastep"
 step = 100
