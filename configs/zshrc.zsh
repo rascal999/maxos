@@ -53,8 +53,10 @@ new() {
   echo "dust          Find big files"
   echo "lazygit / lg  git tool"
   echo "fd            Fast find"
+  echo "gotty         Terminal command over web"
   echo "rg            ripgrep"
   echo "rga           ripgrep (PDFs, zips, docx etc.)"
+  echo "tldr          TL;DR for command"
 }
 
 test-vpn() {

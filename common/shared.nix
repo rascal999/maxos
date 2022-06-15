@@ -168,6 +168,7 @@ in {
      go
      gobuster
      googler
+     gotty
      gpa
      grc
      grim
@@ -208,6 +209,7 @@ in {
      lynis
      mako
      masscan
+     mcfly
      mcrypt
      mosh
      mplayer

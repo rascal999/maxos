@@ -16,7 +16,7 @@ hide_missing = true
 
 [[block]]
 block = "networkmanager"
-on_click = "alacritty -e nmtui"
+on_click = "/run/current-system/sw/bin/urxvt -e nmtui"
 interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
 interface_name_include = []
 
