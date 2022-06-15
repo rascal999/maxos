@@ -54,6 +54,7 @@ dunst-handle() {
 new() {
   echo "### New commands ###"
   echo "broot         File explorer"
+  echo "choose        cut / awk replacement"
   echo "duf           Disk usage"
   echo "dust          Find big files"
   echo "fd            Fast find"

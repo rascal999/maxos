@@ -119,6 +119,7 @@ in {
      cht-sh
      chroma
      chromium
+     choose
      cifs-utils
      clamav
      connman
