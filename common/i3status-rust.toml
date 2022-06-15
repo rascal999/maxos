@@ -2,6 +2,24 @@ theme = "solarized-dark"
 icons = "awesome"
 
 [[block]]
+block = "xrandr"
+icons = true
+resolution = true
+
+[[block]]
+block = "hueshift"
+hue_shifter = "redshift"
+step = 100
+click_temp = 1900 
+
+[[block]]
+block = "keyboard_layout"
+driver = "xkbswitch"
+on_click = "xkb-switch -n"
+format = "{layout} {variant}"
+interval = 1
+
+[[block]]
 block = "battery"
 interval = 10
 format = "{percentage} {time}"
@@ -15,30 +33,25 @@ interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
 interface_name_include = []
 
 [[block]]
-block = "custom"
-command = "curl ifconfig.me"
-interval = 300
+block = "external_ip"
+format = "{country_flag} {asn} '{org}' {ip}"
+
+[[block]]
+block = "nvidia_gpu"
+label = "RTX 2080 Ti"
+show_memory = true
+show_clocks = true
+interval = 3
 
 [[block]]
 block = "custom"
 command = "uname -r | sed 's/-arch1.*//g'"
 interval = 600
 
-#[[block]]
-#block = "custom"
-#command = "curl \"https://wttr.in/Bournemouth?format=3&m\""
-#interval = 600
-#on_click = "firefox -P default http://wttr.in/Bournemouth"
-
-#[[block]]
-#block = "custom"
-#command = "echo -n 'BTC:GBP ' && curl http://api.coindesk.com/v1/bpi/currentprice/GBP.json | jq -r '.bpi[\"GBP\"][\"rate\"]' | cut -f1 -d'.'"
-#interval = 600
-
-#[[block]]
-#block = "custom"
-#command = "echo -n 'ETH:GBP ' && curl https://cryptomate.co.uk/api/ETH/GBP | jq -r '.ETH[\"price\"]' | cut -f1 -d'.'"
-#interval = 600
+[[block]]
+block = "docker"
+interval = 10
+format = "{running}/{total}"
 
 [[block]]
 block = "custom"
@@ -72,3 +85,10 @@ interval = 20
 block = "time"
 interval = 60
 format = "%m/%d %R"
+
+[[block]]
+block = "sound"
+format = "Vol: {volume}"
+[block.mappings]
+"alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo" = "🔈"
+"alsa_output.pci-0000_00_1b.0.analog-stereo" = "🎧"

@@ -312,6 +312,7 @@ in {
      x11docker
      x11vnc
      xcalib
+     xkb-switch-i3
      xlockmore
      #xmind
      xorg.xbacklight
