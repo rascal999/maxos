@@ -41,6 +41,9 @@
         # Because I'm blind
         "layout.css.devPixelsPerPx" = "1.3";
 
+        # Total Cookie Protection
+        "network.cookie.cookieBehavior" = 5;
+
         "privacy.donottrackheader.enabled" = true;
         "privacy.trackingprotection.cryptomining.enabled" = true;
         "privacy.trackingprotection.enabled" = true;
