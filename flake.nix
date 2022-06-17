@@ -20,6 +20,7 @@
     system = "x86_64-linux";
 
     commonSettings = [
+      ./common/docker.nix
       ./common/nur.nix
       ./common/shared.nix
 

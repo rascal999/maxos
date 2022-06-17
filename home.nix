@@ -2,8 +2,8 @@
 
 {
   imports = [
-    common/i3.nix
     common/firefox/firefox.nix
+    common/i3.nix
     common/tmux.nix
     common/xresources.nix
     common/zsh.nix
