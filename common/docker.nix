@@ -20,4 +20,10 @@
       ports = [ "8030:443" ];
     };
   };
+  virtualisation.oci-containers.containers = {
+    cyberchef = {
+      image = "mpepping/cyberchef";
+      ports = [ "8050:8000" ];
+    };
+  };
 }
