@@ -53,6 +53,7 @@ dunst-handle() {
 ###
 new() {
   echo "### New commands ###"
+  echo "alt+n        networkmanager_dmenu"
   echo "broot         File explorer"
   echo "choose        cut / awk replacement"
   echo "duf           Disk usage"
