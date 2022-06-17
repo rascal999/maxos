@@ -26,6 +26,7 @@
   home.file = {
     ".mime.types".source = ./common/firefox/mime.types;
     ".startup.sh".source = ./scripts/startup.sh;
+    ".vimrc".source = ./common/vimrc.nix;
   };
 
   # This value determines the Home Manager release that your
