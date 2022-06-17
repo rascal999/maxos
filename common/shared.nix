@@ -219,6 +219,7 @@ in {
      navi
      nethogs
      networkmanager
+     networkmanager_dmenu
      neocomp
      ngrep
      ngrok
