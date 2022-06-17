@@ -27,13 +27,13 @@
     };
   };
   virtualisation.oci-containers.containers = {
-    spiderfoot = {
+    mobsf = {
       image = "opensecurity/mobile-security-framework-mobsf";
       ports = [ "127.0.0.1:8050:8000" ];
     };
   };
   virtualisation.oci-containers.containers = {
-    cyberchef = {
+    spiderfoot = {
       image = "spiderfoot";
       ports = [ "8060:5001" ];
     };
