@@ -33,6 +33,7 @@ in {
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
         "${mod}+m" = "exec /home/user/git/nixos/scripts/toggle_touchpad.sh";
+        "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+s" = "exec ${pkgs.scrot}/bin/scrot";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+u" = "fullscreen";
