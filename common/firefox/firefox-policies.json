@@ -207,58 +207,64 @@
         "Folder": "Nix"
       },
       {
+        "Title": "Trilium",
+        "URL": "http://localhost:9020/",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "Sharelatex",
         "URL": "http://localhost:8090/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "Jupyter",
         "URL": "http://localhost:8000/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "IVRE",
         "URL": "http://localhost:8010/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "reNgine",
         "URL": "http://localhost:8020/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "OpenVAS",
         "URL": "https://localhost:8030/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "CyberChef",
         "URL": "http://localhost:8040/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "Mobile Security Framework",
         "URL": "http://localhost:8050/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "spiderfoot",
         "URL": "http://localhost:8060/",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "AWS Security Viz",
         "URL": "http://localhost:8070/navigator.html#aws-security-viz.png",
         "Placement": "toolbar",
-        "Folder": "PT Tools"
+        "Folder": "Tools"
       },
       {
         "Title": "GitHub trending (month)",
