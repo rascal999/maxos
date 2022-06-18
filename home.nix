@@ -19,10 +19,6 @@
     EDITOR = "vim";
   };
 
-  services.syncthing = {
-    enable = true;
-  };
-
   home.file = {
     ".mime.types".source = ./common/firefox/mime.types;
     ".startup.sh".source = ./scripts/startup.sh;
