@@ -120,6 +120,7 @@
         modules = commonSettings ++ [
           ./hosts/blueboy/configuration.nix
           ./hosts/blueboy/hardware-configuration.nix
+          ./hosts/blueboy/trilium.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
