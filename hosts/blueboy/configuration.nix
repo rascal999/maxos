@@ -7,7 +7,7 @@
     prefixLength = 24;
   }];
 
-  networking.defaultGateway = "192.168.1.1";
+  networking.defaultGateway = "192.168.0.1";
   networking.nameservers = [ "8.8.8.8" ];
 
   #services.xserver.videoDrivers = [ "nvidia" ];
