@@ -282,7 +282,6 @@ in {
      stockfish
      subfinder
      #sway
-     syncthing
      terraform
      testssl
      texlive.combined.scheme-full
@@ -410,7 +409,7 @@ in {
   services.logind.lidSwitch = "ignore";
 
   # syncthing
-  #services.syncthing.enable = true;
+  services.syncthing.enable = true;
   #services.syncthing.user = "user";
   #services.syncthing.dataDir = "/home/user/syncthing";
   #services.syncthing.configDir = "/home/user/.config/syncthing";
