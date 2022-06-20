@@ -336,6 +336,12 @@
         "Folder": "Education"
       },
       {
+        "Title": "Vulhub",
+        "URL": "file:///home/user/git/pentest-education/vulhub/README.md",
+        "Placement": "toolbar",
+        "Folder": "Education"
+      },
+      {
         "Title": "VulnHub",
         "Favicon": "https://www.vulnhub.com/static/img/touch-icon-ipad-retina.png",
         "URL": "https://www.vulnhub.com/",
