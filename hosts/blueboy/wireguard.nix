@@ -4,9 +4,9 @@
     wireguard = {
       extraOptions = [
                        "--rm"
-                       "--cap-add NET_ADMIN"
-                       "--device /dev/net/tun:/dev/net/tun"
-                       "-v /root/wg-access-server-data:/data"
+                       "--cap-add=NET_ADMIN"
+                       "--device=/dev/net/tun:/dev/net/tun"
+                       "--volume=/root/wg-access-server-data:/data"
                      ];
       image = "place1/wg-access-server";
       ports = [
