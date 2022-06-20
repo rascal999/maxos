@@ -9,7 +9,7 @@
   virtualisation.oci-containers.containers = {
     wireguard = {
       environmentFiles = [ 
-                          config.age.secrets.wireguard-env.path;
+                          config.age.secrets.wireguard-env.path
                          ];
       extraOptions = [
                        "--cap-add=NET_ADMIN"
