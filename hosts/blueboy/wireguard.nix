@@ -1,9 +1,20 @@
 { config, pkgs, lib, ... }: {
+  age.secrets = {
+    wireguard-key = {
+      file = ../../secrets/wireguard-key.age;
+    }
+
+    wireguard-password = {
+      file = ../../secrets/wireguard-password.age;
+    }
+  };
+
   virtualisation.oci-containers.backend = "docker";
   virtualisation.oci-containers.containers = {
     wireguard = {
       environment = { 
-                      WG_ADMIN_PASSWORD = "password";
+                      WG_ADMIN_PASSWORD = config.age.secrets.wireguard-key.path
+                      WG_WIREGUARD_PRIVATE_KEY = config.age.secrets.wireguard-key.path;
                     };
       extraOptions = [
                        "--cap-add=NET_ADMIN"

@@ -4,4 +4,6 @@ let
 in
 {
   "secret.age".publicKeys = [ user ];
+  "wireguard-key.age".publicKeys = [ user ];
+  "wireguard-password.age".publicKeys = [ user ];
 }
