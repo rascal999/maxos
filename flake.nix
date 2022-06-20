@@ -2,6 +2,8 @@
   description = "NixOS configuration";
 
   inputs = {
+    agenix.url = "github:ryantm/agenix";
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -15,11 +17,12 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, agenix, ... }:
   let
     system = "x86_64-linux";
 
     commonSettings = [
+      agenix.nixosModule
       ./common/docker.nix
       ./common/nur.nix
       ./common/shared.nix

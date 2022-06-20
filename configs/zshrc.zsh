@@ -74,6 +74,10 @@ test-vpn() {
   ${HOME}/git/nixos/scripts/wg_test.sh
 }
 
+a-agenix() {
+  nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- $@
+}
+
 a-gg() {
   googler --np "$@"
 }
