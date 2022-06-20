@@ -1,4 +1,10 @@
 { config, pkgs, lib, ... }: {
+  age.secrets = {
+    ddclient-password = {
+      file = ../../secrets/ddclient-password.age;
+    };
+  };
+
   services.ddclient = {
     enable = true;
     passwordFile = config.age.secrets.ddclient-password.path;
