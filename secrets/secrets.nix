@@ -1,8 +1,8 @@
 let
   # Don't forget to `a-agenix --rekey` when updating public keys
-  user_rig = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOOZSriO6sNxrA55MGpuL/rg1Uej0m+/S76pa+Iw2AT7";
-  user_blueboy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAIHvP/ols9rRoSXH8/vxZ8Gn5WeuuYLDaDV5SKgJoQT";
-  user_rog = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG/bKOQ4P5Rz8qZciHunVhpcnX1lwyogNhE1YUqidM44";
+  user_rig = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFujWqx7S6oMZf8G4SvP3+LkKjxD9ZwyCBJVqmtUl/x7";
+  user_blueboy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGfxGYgiWarGdkmG3K+A3y/QR7vWVqddmEOscrory7Vf";
+  user_rog = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAOpZ0o7uDjhBM2zTfrH8O964mQcqVVjqEckbLr1r2Jg";
   users = [ user_rig user_blueboy user_rog ];
 in
 {
