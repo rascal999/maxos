@@ -7,6 +7,5 @@ let
 in
 {
   "secret.age".publicKeys = hosts;
-  "wireguard-key.age".publicKeys = hosts;
-  "wireguard-password.age".publicKeys = hosts;
+  "wireguard-env.age".publicKeys = hosts;
 }
