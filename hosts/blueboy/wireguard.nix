@@ -3,7 +3,6 @@
   virtualisation.oci-containers.containers = {
     wireguard = {
       extraOptions = [
-                       "--rm"
                        "--cap-add=NET_ADMIN"
                        "--device=/dev/net/tun:/dev/net/tun"
                        "--volume=/root/wg-access-server-data:/data"
