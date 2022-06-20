@@ -408,12 +408,6 @@ in {
   # Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
 
-  # syncthing
-  services.syncthing.enable = true;
-  #services.syncthing.user = "user";
-  #services.syncthing.dataDir = "/home/user/syncthing";
-  #services.syncthing.configDir = "/home/user/.config/syncthing";
-
   # For Obsidian
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [

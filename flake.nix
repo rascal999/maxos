@@ -23,6 +23,7 @@
       ./common/docker.nix
       ./common/nur.nix
       ./common/shared.nix
+      ./common/syncthing.nix
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
