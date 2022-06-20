@@ -124,6 +124,7 @@
         inherit system;
         modules = commonSettings ++ [
           ./hosts/blueboy/configuration.nix
+          ./hosts/blueboy/ddclient.nix
           ./hosts/blueboy/hardware-configuration.nix
           ./hosts/blueboy/trilium.nix
           ./hosts/blueboy/syncthing.nix
