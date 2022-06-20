@@ -2,11 +2,11 @@
   age.secrets = {
     wireguard-key = {
       file = ../../secrets/wireguard-key.age;
-    }
+    };
 
     wireguard-password = {
       file = ../../secrets/wireguard-password.age;
-    }
+    };
   };
 
   virtualisation.oci-containers.backend = "docker";
