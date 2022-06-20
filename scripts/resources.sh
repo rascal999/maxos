@@ -130,6 +130,7 @@ function update_docker_images() {
   docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
   docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
   docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
+  docker pull zadam/trilium                                # Personal knowledge base
 
   ###
   ### https://github.com/cybersecsi/RAUDI
