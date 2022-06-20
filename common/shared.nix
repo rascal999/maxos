@@ -397,6 +397,7 @@ in {
     8085
     8384
     8443
+    9020
     22000
   ];
   networking.firewall.allowedUDPPorts = [ 53 ];
