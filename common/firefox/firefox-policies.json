@@ -207,6 +207,12 @@
         "Folder": "Nix"
       },
       {
+        "Title": "Syncthing",
+        "URL": "http://localhost:8384/",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "Trilium",
         "URL": "http://localhost:9020/",
         "Placement": "toolbar",
