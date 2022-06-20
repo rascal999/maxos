@@ -12,5 +12,6 @@
     server = "dynamicdns.park-your-domain.com";
     use = "web, web=dynamicdns.park-your-domain.com/getip";
     username = "alm.gg";
+    zone = "alm.gg";
   };
 }
