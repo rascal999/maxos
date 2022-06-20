@@ -13,8 +13,8 @@
   virtualisation.oci-containers.containers = {
     wireguard = {
       environment = { 
-                      WG_ADMIN_PASSWORD = config.age.secrets.wireguard-key.path;
-                      WG_WIREGUARD_PRIVATE_KEY = config.age.secrets.wireguard-key.path;
+                      WG_ADMIN_PASSWORD = config.age.secrets.wireguard-password;
+                      WG_WIREGUARD_PRIVATE_KEY = config.age.secrets.wireguard-key;
                     };
       extraOptions = [
                        "--cap-add=NET_ADMIN"
