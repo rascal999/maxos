@@ -1,8 +1,8 @@
 { config, pkgs, lib, ... }: {
   services.trilium-server = {
     enable = true;
-    dataDir = "/home/user/Data/trilium";
-    host = "0.0.0.0";
+    dataDir = "/home/user/trilium";
+    host = "127.0.0.1";
     port = 9020;
   };
 }

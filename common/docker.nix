@@ -8,13 +8,6 @@
   #  };
   #};
   virtualisation.oci-containers.containers = {
-    focalboard = {
-      image = "zadam/trilium";
-      ports = [ "127.0.0.1:9020:8080" ];
-      volumes = [ "/home/user/Data/trilium:/home/node/trilium-data"];
-    };
-  };
-  virtualisation.oci-containers.containers = {
     openvas = {
       image = "mikesplain/openvas";
       ports = [ "127.0.0.1:8030:443" ];

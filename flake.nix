@@ -24,6 +24,7 @@
       ./common/nur.nix
       ./common/shared.nix
       ./common/syncthing.nix
+      ./common/trilium.nix
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
