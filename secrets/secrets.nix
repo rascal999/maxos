@@ -6,6 +6,7 @@ let
   hosts = [ host_rig host_blueboy host_rog ];
 in
 {
+  "ddclient-password.age".publicKeys = hosts;
   "secret.age".publicKeys = hosts;
   "wireguard-env.age".publicKeys = hosts;
 }
