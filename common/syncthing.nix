@@ -2,6 +2,28 @@
   services.syncthing = {
     enable = true;
 
+    folders = {
+      "Camera" = {
+        id = "gm1920_16jh-photos";
+        devices = [
+          "blueboy"
+          "GM1920"
+          "rig"
+          "rog"
+        ];
+      };
+
+      "Data" = {
+        id = "kwfru-wgejw";
+        devices = [
+          "blueboy"
+          "GM1920"
+          "rig"
+          "rog"
+        ];
+      };
+    };
+
     devices = {
       "blueboy" = {
         autoAcceptFolders = true;
