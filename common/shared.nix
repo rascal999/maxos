@@ -400,7 +400,11 @@ in {
     9020
     22000
   ];
-  networking.firewall.allowedUDPPorts = [ 53 ];
+  networking.firewall.allowedUDPPorts = [
+    53
+    21027
+    22000
+  ];
 
   # k3s
   services.k3s.enable = false;
