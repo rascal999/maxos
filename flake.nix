@@ -24,7 +24,6 @@
     commonSettings = [
       agenix.nixosModule
       ./common/docker.nix
-      ./common/grub.nix
       ./common/nur.nix
       ./common/pkgs_base.nix
       ./common/shared.nix
@@ -41,6 +40,7 @@
       blade = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/grub.nix
           ./common/pkgs_additional.nix
           ./hosts/blade/configuration.nix
           ./hosts/blade/hardware-configuration.nix
@@ -59,6 +59,7 @@
       rig = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/grub.nix
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
           ./hosts/rig/configuration.nix
@@ -77,6 +78,7 @@
       rog = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/grub.nix
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
           ./hosts/rog/configuration.nix
@@ -94,17 +96,9 @@
       ### ISO
       iso = nixpkgs.lib.nixosSystem {
         inherit system;
-        modules = [
-          ./common/nur.nix
-          ./common/pkgs_base.nix
-          ./common/shared.nix
+        modules = commonSettings ++ [
           ./hosts/iso/configuration.nix
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
-
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-          }
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -119,6 +113,7 @@
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/grub.nix
           ./common/pkgs_additional.nix
           ./hosts/vm/configuration.nix
           ./hosts/vm/hardware-configuration.nix
@@ -136,6 +131,7 @@
       blueboy = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/grub.nix
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
           ./hosts/blueboy/configuration.nix
