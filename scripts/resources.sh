@@ -5,12 +5,12 @@ echo "Pentest resources script"
 usage() {
   echo "Usage: $0 [-a] [-e] [-g] [-o] [-p] [-t] [-v] [-w]" 1>&2;
   echo
-  echo "-a (auth)           Docker authentication"
-  echo "-e (education)      Pull educational repos"
-  echo "-g (git)            Pull git repos"
+  echo "-a (Auth)           Docker authentication"
+  echo "-e (Educational)    Pull educational repos"
+  echo "-g (Git)            Pull git repos"
   echo "-o (OS)             Pull Operating Systems (docker)"
   echo "-p (PDFs)           Pull AWS PDFs"
-  echo "-t (tools)          Pull tools (docker)"
+  echo "-t (Tools)          Pull tools (docker)"
   echo "-v (Vulnerable)     Vulnerable things (docker)"
   echo "-w (Wordlists)      Pull wordlists"
   echo
