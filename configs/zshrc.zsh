@@ -849,7 +849,7 @@ d-astra() {
 }
 
 d-openvas() {
-  docker run -p ${PORT_OPENVAS}:443 --name openvas mikesplain/openvas
+  docker run -p ${PORT_OPENVAS}:443 --name openvas greenbone/openvas
 }
 
 d-beef() {

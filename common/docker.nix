@@ -9,7 +9,7 @@
   #};
   virtualisation.oci-containers.containers = {
     openvas = {
-      image = "mikesplain/openvas";
+      image = "greenbone/openvas";
       ports = [ "127.0.0.1:8030:443" ];
     };
   };

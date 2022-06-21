@@ -125,7 +125,7 @@ function pull_tools_docker() {
   docker pull guidelacour/whatweb                          # Next generation web scanner
   docker pull opensecurity/cmsscan                         # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
   docker pull epi052/feroxbuster                           # A fast, simple, recursive content discovery tool written in Rust
-  docker pull mikesplain/openvas                           # OpenVAS is a full-featured vulnerability scanner
+  docker pull greenbone/openvas                           # OpenVAS is a full-featured vulnerability scanner
   docker pull mpepping/cyberchef                           # The Cyber Swiss Army Knife
   docker pull phocean/beef                                 # BeEF framework for XSS browser exploitation
   docker pull byt3bl33d3r/crackmapexec                     # A swiss army knife for pentesting networks
