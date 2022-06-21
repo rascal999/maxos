@@ -26,6 +26,7 @@
       ./common/docker.nix
       ./common/grub.nix
       ./common/nur.nix
+      ./common/pkgs_base.nix
       ./common/shared.nix
       ./common/trilium.nix
 
@@ -40,6 +41,7 @@
       blade = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/pkgs_additional.nix
           ./hosts/blade/configuration.nix
           ./hosts/blade/hardware-configuration.nix
 
@@ -57,9 +59,10 @@
       rig = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/pkgs_additional.nix
+          ./common/syncthing.nix
           ./hosts/rig/configuration.nix
           ./hosts/rig/hardware-configuration.nix
-          ./common/syncthing.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -74,9 +77,10 @@
       rog = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/pkgs_additional.nix
+          ./common/syncthing.nix
           ./hosts/rog/configuration.nix
           ./hosts/rog/hardware-configuration.nix
-          ./common/syncthing.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -114,6 +118,7 @@
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/pkgs_additional.nix
           ./hosts/vm/configuration.nix
           ./hosts/vm/hardware-configuration.nix
 
@@ -130,6 +135,7 @@
       blueboy = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/pkgs_additional.nix
           ./common/syncthing.nix
           ./hosts/blueboy/configuration.nix
           ./hosts/blueboy/ddclient.nix
