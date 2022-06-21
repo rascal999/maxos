@@ -96,6 +96,7 @@
         inherit system;
         modules = [
           ./common/nur.nix
+          ./common/pkgs_base.nix
           ./common/shared.nix
           ./hosts/iso/configuration.nix
           "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
