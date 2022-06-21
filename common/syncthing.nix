@@ -11,6 +11,7 @@
           "rig"
           "rog"
         ];
+        path = "/home/user/Camera";
       };
 
       "Data" = {
@@ -21,6 +22,7 @@
           "rig"
           "rog"
         ];
+        path = "/home/user/Data";
       };
     };
 
