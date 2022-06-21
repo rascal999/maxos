@@ -314,6 +314,7 @@ function pull_educational_repos() {
   git_update https://github.com/imthenachoman/How-To-Secure-A-Linux-Server.git $HOME/git/pentest-education/How-To-Secure-A-Linux-Server
   git_update https://github.com/Hacker0x01/hacker101.git $HOME/git/pentest-education/hacker101
   git_update https://github.com/shieldfy/API-Security-Checklist.git $HOME/git/pentest-education/API-Security-Checklist
+  git_update https://github.com/google/google-ctf.git $HOME/git/pentest-education/google-ctf
 
   git_update https://github.com/OWASP/CheatSheetSeries.git $HOME/git/pentest-education/CheatSheetSeries
   rm -rf $HOME/git/pentest-education/CheatSheetSeriesZip
