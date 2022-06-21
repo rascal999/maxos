@@ -375,6 +375,7 @@ function pull_tool_repos() {
   git_update https://github.com/sherlock-project/sherlock.git $HOME/git/pentest-tools/sherlock
   git_update https://github.com/ivre/ivre.git $HOME/git/pentest-tools/ivre
   git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/wapiti
+  git_update https://github.com/google/tsunami-security-scanner.git $HOME/git/pentest-tools/tsunami-security-scanner
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
 
   ###
