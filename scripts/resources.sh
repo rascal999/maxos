@@ -3,9 +3,10 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-g] [-o] [-p] [-t] [-v] [-w]" 1>&2;
+  echo "Usage: $0 [-a] [-e] [-g] [-o] [-p] [-t] [-v] [-w]" 1>&2;
   echo
   echo "-a (auth)           Docker authentication"
+  echo "-e (education)      Pull educational repos"
   echo "-g (git)            Pull git repos"
   echo "-o (OS)             Pull Operating Systems (docker)"
   echo "-p (PDFs)           Pull AWS PDFs"
@@ -23,10 +24,11 @@ usage() {
 }
 
 arg_auth=0
-arg_git=0
+arg_educational=0
+arg_tools_git=0
 arg_os=0
 arg_pdf=0
-arg_tools=0
+arg_tools_docker=0
 arg_vulnerable=0
 arg_wordlists=0
 
@@ -34,16 +36,17 @@ while getopts agoptvw flag
 do
     case "${flag}" in
         a) arg_auth=1;;
-        g) arg_git=1;;
+        e) arg_educational=1;;
+        g) arg_tools_git=1;;
         o) arg_os=1;;
         p) arg_pdf=1;;
-        t) arg_tools=1;;
+        t) arg_tools_docker=1;;
         v) arg_vulnerable=1;;
         w) arg_wordlists=1;;
     esac
 done
 
-arg_sum=$((${arg_git}+${arg_os}+${arg_pdf}+${arg_tools}+${arg_vulnerable}+${arg_wordlists}))
+arg_sum=$((${arg_educational}+${arg_tools_git}+${arg_os}+${arg_pdf}+${arg_tools_docker}+${arg_vulnerable}+${arg_wordlists}))
 
 # No options specified?
 if [ "${arg_sum}" == "0" ]; then
@@ -54,10 +57,11 @@ echo
 echo "Selection"
 echo "---"
 echo "Docker auth: $arg_auth"
-echo "Git pull: $arg_git"
+echo "Educational repos: $arg_educational"
+echo "Git pull: $arg_tools_git"
 echo "OS (docker): $arg_os"
 echo "AWS PDFs: $arg_pdf"
-echo "Tools (docker): $arg_tools"
+echo "Tools (docker): $arg_tools_docker"
 echo "Vulnerabe things (docker): $arg_vulnerable"
 echo "Wordlists: $arg_wordlists"
 echo
@@ -245,7 +249,7 @@ function pull_aws_pdfs() {
     -O $HOME/pdfs/education/aws/aws-kms-best-practices.pdf
 }
 
-function pull_git_repos() {
+function pull_educational_repos() {
   ###
   ### GitHub
   ###
@@ -324,7 +328,9 @@ function pull_git_repos() {
   git_update https://github.com/Hack-with-Github/Awesome-Hacking.git $HOME/git/pentest-education/Awesome-Hacking
   git_update https://github.com/juliocesarfort/public-pentesting-reports.git $HOME/git/pentest-education/public-pentesting-reports
   git_update https://github.com/Sector443/awesome-list-of-public-pentesting-reports.git $HOME/git/pentest-education/awesome-list-of-public-pentesting-reports
+}
 
+function pull_tool_repos() {
   ###
   ### Pentest Frameworks
   ###
@@ -369,6 +375,23 @@ function pull_git_repos() {
   git_update https://github.com/ivre/ivre.git $HOME/git/pentest-tools/ivre
   git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/wapiti
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
+
+  ###
+  ### Misc tools
+  ###
+  git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
+  git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
+  git_update https://github.com/rvaiya/warpd.git $HOME/git/misc/warpd
+  git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
+  git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
+  git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
+  git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
+
+  ###
+  ### Exploits
+  ###
+  git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
+  git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
   # Nettacker
   git_update https://github.com/OWASP/Nettacker.git $HOME/git/pentest-tools/Nettacker
@@ -492,28 +515,11 @@ function pull_git_repos() {
     docker build -t vulnx ./docker/
   fi
 
-  ###
-  ### Misc tools
-  ###
-  git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
-  git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
-  git_update https://github.com/rvaiya/warpd.git $HOME/git/misc/warpd
-  git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
-  git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
-  git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
-  git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
-
   # v86
   git_update https://github.com/copy/v86.git $HOME/git/misc/v86
   if [[ "$?" == "0" ]]; then
     docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
   fi
-
-  ###
-  ### Exploits
-  ###
-  git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
-  git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 }
 
 function pull_wordlists() {
@@ -536,9 +542,14 @@ if [ $arg_auth == 1 ]; then
   docker login
 fi
 
+# Educational repos
+if [ $arg_educational == 1 ]; then
+  pull_educational_repos
+fi
+
 # Git pull
-if [ $arg_git == 1 ]; then
-  pull_git_repos
+if [ $arg_tools_git == 1 ]; then
+  pull_tool_repos
 fi
 
 # OS (docker)
@@ -552,7 +563,7 @@ if [ $arg_pdf == 1 ]; then
 fi
 
 # Tools (docker)
-if [ $arg_tools == 1 ]; then
+if [ $arg_tools_docker == 1 ]; then
   pull_tools_docker
 fi
 
