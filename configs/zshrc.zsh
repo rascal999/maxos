@@ -129,7 +129,7 @@ d-sherlock() {
     return 1
   fi
 
-  docker run --rm -t sherlock "$@"
+  docker run --rm -t theyahya/sherlock "$@"
 }
 
 d-sharelatex() {
