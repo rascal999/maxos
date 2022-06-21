@@ -31,4 +31,10 @@
       ports = [ "8060:5001" ];
     };
   };
+  virtualisation.oci-containers.containers = {
+    filestash = {
+      image = "machines/filestash";
+      ports = [ "9040:8334" ];
+    };
+  };
 }
