@@ -16,7 +16,7 @@ usage() {
   echo
   echo "Examples:"
   echo "# Everything"
-  echo "$0 -agoptvw"
+  echo "$0 -aegoptvw"
   echo
   echo "# ISO environment"
   echo "$0 -gptw"
