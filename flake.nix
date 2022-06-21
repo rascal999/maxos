@@ -26,7 +26,6 @@
       ./common/docker.nix
       ./common/nur.nix
       ./common/shared.nix
-      ./common/syncthing.nix
       ./common/trilium.nix
 
       home-manager.nixosModules.home-manager {
@@ -59,6 +58,7 @@
         modules = commonSettings ++ [
           ./hosts/rig/configuration.nix
           ./hosts/rig/hardware-configuration.nix
+          ./common/syncthing.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -75,6 +75,7 @@
         modules = commonSettings ++ [
           ./hosts/rog/configuration.nix
           ./hosts/rog/hardware-configuration.nix
+          ./common/syncthing.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
@@ -123,11 +124,12 @@
       blueboy = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/syncthing.nix
           ./hosts/blueboy/configuration.nix
           ./hosts/blueboy/ddclient.nix
           ./hosts/blueboy/hardware-configuration.nix
-          ./hosts/blueboy/trilium.nix
           ./hosts/blueboy/syncthing.nix
+          ./hosts/blueboy/trilium.nix
           ./hosts/blueboy/wireguard.nix
 
           ({ pkgs, ... }: {
