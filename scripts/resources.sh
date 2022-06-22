@@ -164,22 +164,30 @@ function pull_tools_docker() {
   docker pull machines/filestash                           # A modern web client for file protocols
   docker pull theyahya/sherlock                            # Hunt down social media accounts
   docker pull lirantal/is-website-vulnerable               # Find known security vulnerabilities in frontend JS libs
+  docker pull guidelacour/dnsenum                          # Enumerates DNS information from a domain among other things
+  docker pull elceef/dnstwist                              # Domain name permutation engine
 
   ###
   ### https://github.com/cybersecsi/RAUDI
   ###
   docker pull secsi/apktool
   docker pull secsi/bfac
+  docker pull secsi/cloudfail
+  docker pull secsi/cmseek
   docker pull secsi/dirb
   docker pull secsi/dirhunt
   docker pull secsi/dirsearch
   docker pull secsi/dnscan
+  docker pull secsi/dvcs-ripper
   docker pull secsi/ffuf
   docker pull secsi/fierce
   docker pull secsi/findsploit
+  docker pull secsi/getjs
   docker pull secsi/gitrob
   docker pull secsi/gittools
   docker pull secsi/gobuster
+  docker pull secsi/gospider
+  docker pull secsi/httprobe
   docker pull secsi/hydra
   docker pull secsi/jwt_tool
   docker pull secsi/knockpy
