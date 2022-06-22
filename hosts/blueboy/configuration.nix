@@ -26,6 +26,11 @@
     #};
   };
 
+  # Jupyter
+  services.jupyter = {
+    ip = "0.0.0.0";
+  }
+
   # Enable cron service
   services.cron = {
     enable = true;
