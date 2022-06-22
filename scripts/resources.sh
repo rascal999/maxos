@@ -163,6 +163,7 @@ function pull_tools_docker() {
   docker pull zadam/trilium                                # Personal knowledge base
   docker pull machines/filestash                           # A modern web client for file protocols
   docker pull theyahya/sherlock                            # Hunt down social media accounts
+  docker pull lirantal/is-website-vulnerable               # Find known security vulnerabilities in frontend JS libs
 
   ###
   ### https://github.com/cybersecsi/RAUDI
