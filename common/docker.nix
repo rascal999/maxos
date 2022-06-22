@@ -37,4 +37,10 @@
       ports = [ "9040:8334" ];
     };
   };
+  virtualisation.oci-containers.containers = {
+    houdini = {
+      image = "rascal999/houdini";
+      ports = [ "9050:3000" ];
+    };
+  };
 }
