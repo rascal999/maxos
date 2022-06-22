@@ -231,6 +231,12 @@
         "Folder": "Tools"
       },
       {
+        "Title": "HOUDINI",
+        "URL": "http://localhost:9050/",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "IVRE",
         "URL": "http://localhost:8010/",
         "Placement": "toolbar",
