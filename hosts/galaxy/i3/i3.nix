@@ -6,9 +6,9 @@
       defaultWorkspace = "workspace number 2";
 
       startup = [
-        {
-          command = "exec ${../../../scripts/monitors.sh}";
-        }
+        #{
+        #  command = "exec ${../../../scripts/monitors.sh}";
+        #}
         {
           command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
           notification = false;
