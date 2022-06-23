@@ -23,7 +23,6 @@
 
     commonSettings = [
       agenix.nixosModule
-      ./common/docker.nix
       ./common/nur.nix
       ./common/pkgs_base.nix
       ./common/shared.nix
@@ -40,6 +39,7 @@
       blade = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/docker.nix
           ./common/grub.nix
           ./common/pkgs_additional.nix
           ./hosts/blade/configuration.nix
@@ -59,6 +59,7 @@
       rig = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/docker.nix
           ./common/grub.nix
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
@@ -78,6 +79,7 @@
       rog = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/docker.nix
           ./common/grub.nix
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
@@ -113,6 +115,7 @@
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
+          ./common/docker.nix
           ./common/grub.nix
           ./common/pkgs_additional.nix
           ./hosts/vm/configuration.nix
