@@ -94,10 +94,10 @@ function pull_os_docker() {
   #docker pull firefart/dockerctf                           # Docker image with some common ctf tools
 }
 
+###
+### Vulnerable things
+###
 function pull_vulnerable_things_docker() {
-  ###
-  ### Vulnerable things
-  ###
   docker pull citizenstig/dvwa                             # Damn Vulnerable Web Application (DVWA)
   docker pull l505/vulnerablewordpress                     # Vulnerable WordPress Installation
   docker pull hmlio/vaas-cve-2014-6271                     # Vulnerability as a service: Shellshock
@@ -114,6 +114,9 @@ function pull_vulnerable_things_docker() {
   docker pull tuxotron/xvwa                                # Xtreme Vulnerable Web Application
 }
 
+###
+### Tools (docker)
+###
 function pull_tools_docker() {
   docker pull trufflesuite/ganache-cli                     # Local blockchain dev
   docker pull owasp/zap2docker-stable                      # official OWASP ZAP
@@ -209,10 +212,10 @@ function pull_tools_docker() {
   docker pull secsi/nikto
 }
 
+###
+### AWS Resources
+###
 function pull_aws_pdfs() {
-  ###
-  ### AWS Resources
-  ###
   mkdir -p $HOME/pdfs/education/aws
   wget -c https://d1.awsstatic.com/whitepapers/aws-overview.pdf \
     -O $HOME/pdfs/education/aws/aws-overview.pdf
@@ -258,10 +261,10 @@ function pull_aws_pdfs() {
     -O $HOME/pdfs/education/aws/aws-kms-best-practices.pdf
 }
 
+###
+### Educational repos (GitHub)
+###
 function pull_educational_repos() {
-  ###
-  ### GitHub
-  ###
   git_update https://github.com/Azure/terraform.git $HOME/git/education/terraform
   git_update https://github.com/hashicorp/learn-terraform-provision-aks-cluster.git $HOME/git/education/learn-terraform-provision-aks-cluster
   git_update https://github.com/open-guides/og-aws.git $HOME/git/education/og-aws
@@ -324,6 +327,7 @@ function pull_educational_repos() {
   git_update https://github.com/Hacker0x01/hacker101.git $HOME/git/pentest-education/hacker101
   git_update https://github.com/shieldfy/API-Security-Checklist.git $HOME/git/pentest-education/API-Security-Checklist
   git_update https://github.com/google/google-ctf.git $HOME/git/pentest-education/google-ctf
+  git_update https://github.com/madhuakula/kubernetes-goat.git $HOME/git/pentest-education/kubernetes-goat
 
   git_update https://github.com/OWASP/CheatSheetSeries.git $HOME/git/pentest-education/CheatSheetSeries
   rm -rf $HOME/git/pentest-education/CheatSheetSeriesZip
@@ -340,6 +344,9 @@ function pull_educational_repos() {
   git_update https://github.com/Sector443/awesome-list-of-public-pentesting-reports.git $HOME/git/pentest-education/awesome-list-of-public-pentesting-reports
 }
 
+###
+### Pentest Tools
+###
 function pull_tool_repos() {
   ###
   ### Pentest Frameworks
@@ -351,9 +358,6 @@ function pull_tool_repos() {
     bash tools/docker/pandoc_makedocs.sh
   fi
 
-  ###
-  ### Pentest Tools
-  ###
   git_update https://github.com/s0md3v/Corsy.git $HOME/git/pentest-tools/Corsy
   git_update https://github.com/epinna/tplmap.git $HOME/git/pentest-tools/tplmap
   git_update https://github.com/crawlab-team/crawlab.git $HOME/git/pentest-tools/crawlab
@@ -533,10 +537,10 @@ function pull_tool_repos() {
   fi
 }
 
+###
+### Wordlists
+###
 function pull_wordlists() {
-  ###
-  ### Wordlists
-  ###
   git_update https://github.com/random-robbie/bruteforce-lists.git $HOME/git/wordlists/bruteforce-lists
   git_update https://github.com/google/fuzzing.git $HOME/git/wordlists/fuzzing
   git_update https://github.com/six2dez/OneListForAll.git $HOME/git/wordlists/OneListForAll

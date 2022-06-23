@@ -108,6 +108,7 @@ in {
      jython
      k3s
      keepassxc
+     kind
      kompose
      kubectl
      kubernetes-helm
