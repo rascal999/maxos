@@ -153,6 +153,26 @@
           })
         ];
       };
+
+      ### GALAXY
+      galaxy = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = commonSettings ++ [
+          ./common/docker.nix
+          ./common/grub.nix
+          ./common/pkgs_additional.nix
+          ./common/syncthing.nix
+          ./hosts/galaxy/configuration.nix
+          ./hosts/galaxy/hardware-configuration.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./common/i3-vars.nix
+              ./home.nix
+            ];
+          })
+        ];
+      };
     };
   };
 }
