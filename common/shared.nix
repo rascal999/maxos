@@ -149,7 +149,7 @@
     api-nist =
     {
       source = config.age.secrets.api-nist.path;
-      mode = "0440";
+      mode = "0444";
     };
   };
 
