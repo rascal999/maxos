@@ -8,6 +8,7 @@ usage() {
   echo "-a (Auth)             Docker authentication"
   echo "-e (Educational)      Pull educational resources (git)"
   echo "-g (Tools)            Pull tools (git)"
+  echo "-k (Kali)             Pull Kali (docker)"
   echo "-o (OS)               Pull Operating Systems (docker)"
   echo "-p (PDFs)             Pull AWS PDFs (AWS)"
   echo "-t (Tools)            Pull tools (docker)"
@@ -15,8 +16,11 @@ usage() {
   echo "-w (Wordlists)        Pull wordlists (git)"
   echo
   echo "Examples:"
-  echo "# Everything"
+  echo "# Everything except Kali"
   echo "$0 -aegoptvw"
+  echo
+  echo "# Everything"
+  echo "$0 -aegkoptvw"
   echo
   echo "# ISO environment"
   echo "$0 -gptw"
@@ -26,18 +30,20 @@ usage() {
 arg_auth=0
 arg_educational=0
 arg_tools_git=0
+arg_kali=0
 arg_os=0
 arg_pdf=0
 arg_tools_docker=0
 arg_vulnerable=0
 arg_wordlists=0
 
-while getopts aegoptvw flag
+while getopts aegkoptvw flag
 do
     case "${flag}" in
         a) arg_auth=1;;
         e) arg_educational=1;;
         g) arg_tools_git=1;;
+        k) arg_kali=1;;
         o) arg_os=1;;
         p) arg_pdf=1;;
         t) arg_tools_docker=1;;
@@ -46,7 +52,7 @@ do
     esac
 done
 
-arg_sum=$((${arg_educational}+${arg_tools_git}+${arg_os}+${arg_pdf}+${arg_tools_docker}+${arg_vulnerable}+${arg_wordlists}))
+arg_sum=$((${arg_educational}+${arg_tools_git}+${arg_kali}+${arg_os}+${arg_pdf}+${arg_tools_docker}+${arg_vulnerable}+${arg_wordlists}))
 
 # No options specified?
 if [ "${arg_sum}" == "0" ]; then
@@ -59,6 +65,7 @@ echo "---"
 echo "Docker auth: $arg_auth"
 echo "Educational repos: $arg_educational"
 echo "Git pull: $arg_tools_git"
+echo "Kali (docker): $arg_kali"
 echo "OS (docker): $arg_os"
 echo "AWS PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
@@ -79,11 +86,17 @@ function git_update() {
   return 1
 }
 
+function pull_kali_docker() {
+  ###
+  ### Operating Systems (heavy)
+  ###
+  docker pull booyaabes/kali-linux-full
+}
+
 function pull_os_docker() {
   ###
   ### Operating Systems
   ###
-  docker pull booyaabes/kali-linux-full
   docker pull alpine
   docker pull ubuntu
   docker pull centos
@@ -568,6 +581,11 @@ fi
 # Git pull
 if [ $arg_tools_git == 1 ]; then
   pull_tool_repos
+fi
+
+# Kali (docker)
+if [ $arg_kali == 1 ]; then
+  pull_kali_docker
 fi
 
 # OS (docker)
