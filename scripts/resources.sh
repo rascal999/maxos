@@ -408,6 +408,9 @@ function pull_tool_repos() {
   git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
+  # AutoPWN-Suite
+  git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
+
   # Nettacker
   git_update https://github.com/OWASP/Nettacker.git $HOME/git/pentest-tools/Nettacker
   if [[ "$?" == "0" ]]; then

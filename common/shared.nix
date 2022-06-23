@@ -4,16 +4,7 @@
 
 { config, pkgs, lib, ... }:
 
-with pkgs;
-let
-  my-python-packages = python-packages: with python-packages; [
-    autopwn-suite
-    pip
-    setuptools
-    requests
-  ]; 
-  python-with-my-packages = python3.withPackages my-python-packages;
-in {
+{
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
