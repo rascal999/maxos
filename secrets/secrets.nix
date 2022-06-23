@@ -9,4 +9,5 @@ in
   "ddclient-password.age".publicKeys = hosts;
   "secret.age".publicKeys = hosts;
   "wireguard-env.age".publicKeys = hosts;
+  "api-nist.age".publicKeys = hosts;
 }

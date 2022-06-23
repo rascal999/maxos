@@ -104,11 +104,11 @@
   # For WireGuard
   networking.firewall.checkReversePath = false;
 
-  ## Bluetooth
+  # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  ## Timesync
+  # Timesync
   services.timesyncd.enable = true;
 
   # Firewall
@@ -137,6 +137,21 @@
     21027
     22000
   ];
+
+  # api-nist
+  age.secrets = {
+    api-nist = {
+      file = ../secrets/api-nist.age;
+    };
+  };
+
+  environment.etc = {
+    api-nist =
+    {
+      source = config.age.secrets.api-nist.path;
+      mode = "0440";
+    };
+  };
 
   # k3s
   services.k3s.enable = false;
