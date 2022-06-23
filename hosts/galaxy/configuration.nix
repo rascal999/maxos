@@ -3,6 +3,8 @@
 {
   networking.hostName = "galaxy";
 
+  services.xserver.videoDrivers = [ "intel" ];
+
   # X11 / i3
   services.xserver = {
     enable = true;
