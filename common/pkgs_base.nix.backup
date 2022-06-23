@@ -38,7 +38,7 @@ in {
      connman
      connman-gtk
      coreutils
-     #cutter
+     cutter
      cups-brother-hl3140cw
      dbeaver
      dex2jar
