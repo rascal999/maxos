@@ -10,7 +10,7 @@
   networking.defaultGateway = "192.168.0.1";
   networking.nameservers = [ "8.8.8.8" ];
 
-  #services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
   virtualisation.docker.enableNvidia = true;
 
   # X11 / i3
