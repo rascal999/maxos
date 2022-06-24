@@ -6,5 +6,7 @@ rm ${HOME}/jupyter/pentest/base/*.ipynb
 rm -rf ${HOME}/jupyter/pentest/base/tools
 cp ${HOME}/git/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
 # Mullvad VPN
-mkdir ${HOME}/vpn
-tar xvf /etc/vpn-mullvad.tar.gz -C ${HOME}/vpn
+echo -n "Placing VPN profiles.."
+rm -rf ${HOME}/vpn || true
+/run/current-system/sw/bin/tar xf /etc/vpn-mullvad -C ${HOME} || true
+echo "Done"

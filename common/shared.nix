@@ -146,7 +146,7 @@
   };
 
   environment.etc = {
-    vpn-mullvad.tar.gz =
+    vpn-mullvad =
     {
       source = config.age.secrets.vpn-mullvad.path;
       mode = "0444";
