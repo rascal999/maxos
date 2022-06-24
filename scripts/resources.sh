@@ -182,6 +182,7 @@ function pull_tools_docker() {
   docker pull lirantal/is-website-vulnerable               # Find known security vulnerabilities in frontend JS libs
   docker pull guidelacour/dnsenum                          # Enumerates DNS information from a domain among other things
   docker pull elceef/dnstwist                              # Domain name permutation engine
+  docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
 
   ###
   ### https://github.com/cybersecsi/RAUDI
