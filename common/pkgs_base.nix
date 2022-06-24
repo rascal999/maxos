@@ -85,6 +85,7 @@ in {
      grim
      gsettings-desktop-schemas
      hakrawler
+     hashcat
      hexedit
      hey
      hping
