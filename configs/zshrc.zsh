@@ -156,6 +156,7 @@ d-filebrowserhere() {
 
 d-rengine() {
   sed -i "s#- 443:443/tcp#- ${PORT_RENGINE}:443/tcp#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
+  sed -i "s#8000:8000/8000#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
   cd $HOME/git/pentest-tools/rengine
   sudo make up
 
@@ -176,6 +177,7 @@ d-rengine-kill() {
   sudo make down
   # git pull must work
   sed -i "s#- ${PORT_RENGINE}:443/tcp#- 443:443/tcp#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
+  sed -i "s#8000/8000:8000#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
 }
 
 d-ivre() {
