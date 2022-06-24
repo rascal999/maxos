@@ -7,8 +7,9 @@ let
   hosts = [ host_blueboy host_galaxy host_rig host_rog ];
 in
 {
+  "api-nist.age".publicKeys = hosts;
   "ddclient-password.age".publicKeys = hosts;
   "secret.age".publicKeys = hosts;
+  "vpn-mullvad.age".publicKeys = hosts;
   "wireguard-env.age".publicKeys = hosts;
-  "api-nist.age".publicKeys = hosts;
 }

@@ -138,6 +138,21 @@
     22000
   ];
 
+  # VPN
+  age.secrets = {
+    vpn-mullvad = {
+      file = ../secrets/vpn-mullvad.age;
+    };
+  };
+
+  environment.etc = {
+    vpn-mullvad.tar.gz =
+    {
+      source = config.age.secrets.vpn-mullvad.path;
+      mode = "0444";
+    };
+  };
+
   # api-nist
   age.secrets = {
     api-nist = {
@@ -193,7 +208,7 @@
   systemd.services.startupTasks = {
     wantedBy = [ "multi-user.target" ]; 
     after = [ "network-online.target" ];
-    description = "Clone/pull rascal999:nixos and copy Jupyter templates";
+    description = "Extra tasks";
     script = "/home/user/.startup.sh";
     serviceConfig = {
       Type = "oneshot";
