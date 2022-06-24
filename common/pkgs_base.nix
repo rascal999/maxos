@@ -172,6 +172,7 @@ in {
      ripgrep
      ripgrep-all
      rsync
+     rtorrent
      ruby
      rustscan
      rxvt-unicode
