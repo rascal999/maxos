@@ -136,12 +136,14 @@ d-sherlock() {
 d-sharelatex() {
   # git pull must work
   sed -i "s#- 80:80#- 127.0.0.1:${PORT_SHARELATEX}:80#g" ${HOME}/git/misc/overleaf/docker-compose.yml
+  sed -i "s#image: sharelatex/sharelatex#image: tuetenk0pp/sharelatex-full#g" ${HOME}/git/misc/overleaf/docker-compose.yml
   docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml up -d
 }
 
 d-sharelatex-kill() {
   # git pull must work
   sed -i "s#- 127.0.0.1:${PORT_SHARELATEX}:80#- 80:80#g" ${HOME}/git/misc/overleaf/docker-compose.yml
+  sed -i "s#image: tuetenk0pp/sharelatex-full#image: sharelatex/sharelatex#g" ${HOME}/git/misc/overleaf/docker-compose.yml
   docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml down
 }
 
