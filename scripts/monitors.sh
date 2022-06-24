@@ -32,5 +32,5 @@ if [[ `hostname` == "galaxy" ]]; then
     sleep 4
     /run/current-system/sw/bin/xrandr --output HDMI1 --off
     sleep 4
-    /run/current-system/sw/bin/xrandr --output HDMI1 --auto --right-of eDP-1
+    /run/current-system/sw/bin/xrandr --output HDMI1 --auto --right-of eDP1
 fi
