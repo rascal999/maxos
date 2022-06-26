@@ -1,13 +1,6 @@
-Always on docker images investigation
-- Resource usage
-  - Exclude laptops?
-- Proxy?
-- Internal domains instead of localhost:PORT?
-  - docker run registration to proxy?
-- Ensure no external access
+Spiderfoot persist
 
 NixOS
-- Server profile?
 - Minimalist install?
   - No UI
 - Generic VM profile
