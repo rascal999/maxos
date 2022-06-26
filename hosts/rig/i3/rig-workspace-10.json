@@ -11,12 +11,12 @@
        "y": 0
     },
     "marks": [],
-    "name": "Obsidian",
+    "name": "Mozilla Firefox",
     "percent": 1,
     "swallows": [
        {
-          "class": "^obsidian$",
-          "instance": "^obsidian$"
+          "class": "^firefox$",
+          "instance": "^Navigator$"
        }
     ],
     "type": "con"
