@@ -21,6 +21,7 @@ in {
 
         "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+c" = "kill";
+        "${mod}+Shift+m" = "exec /home/user/git/nixos/scripts/monitors.sh";
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
