@@ -158,7 +158,6 @@
       galaxy = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
-          ./common/docker.nix
           ./common/grub.nix
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
