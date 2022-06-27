@@ -613,3 +613,6 @@ fi
 if [ $arg_vulnerable == 1 ]; then
   pull_wordlists
 fi
+
+# Notify
+/home/user/git/nixos/scripts/telegram_notify.sh "`hostname` | Finished updating resources."
