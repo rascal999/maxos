@@ -138,25 +138,16 @@
     22000
   ];
 
-  # VPN
-  age.secrets = {
-    vpn-mullvad = {
-      file = ../secrets/vpn-mullvad.age;
-    };
-  };
-
-  environment.etc = {
-    vpn-mullvad =
-    {
-      source = config.age.secrets.vpn-mullvad.path;
-      mode = "0444";
-    };
-  };
-
-  # api-nist
+  # Secrets
   age.secrets = {
     api-nist = {
       file = ../secrets/api-nist.age;
+    };
+    api-telegram = {
+      file = ../secrets/api-telegram.age;
+    };
+    vpn-mullvad = {
+      file = ../secrets/vpn-mullvad.age;
     };
   };
 
@@ -164,6 +155,16 @@
     api-nist =
     {
       source = config.age.secrets.api-nist.path;
+      mode = "0444";
+    };
+    api-telegram =
+    {
+      source = config.age.secrets.api-telegram.path;
+      mode = "0444";
+    };
+    vpn-mullvad =
+    {
+      source = config.age.secrets.vpn-mullvad.path;
       mode = "0444";
     };
   };
