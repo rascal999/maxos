@@ -629,4 +629,4 @@ if [ $arg_vulnerable == 1 ]; then
 fi
 
 # Notify
-/home/user/git/nixos/scripts/telegram_notify.sh "Finished updating resources."
+/home/user/git/nixos/scripts/telegram_notify.sh -a -m "Finished updating resources."
