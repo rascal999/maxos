@@ -11,8 +11,9 @@ fi
 
 MESSAGE=$1
 DISABLE_NOTIFACITON="false"
+JSON='{"chat_id": "'$CHAT_ID'", "parse_mode":"MarkdownV2", "text": "```text '$HOSTNAME' | '$MESSAGE'```", "disable_notification": '$DISABLE_NOTIFICATION'}'
 
 curl -X POST \
      -H 'Content-Type: application/json' \
-     -d "{\"chat_id\": \"$CHAT_ID\", \"parse_mode\":\"MarkdownV2\", \"text\": \"$HOSTNAME | \`\`\`$MESSAGE\`\`\`\", \"disable_notification\": $DISABLE_NOTIFICATION}'" \
+     -d "$JSON" \
      https://api.telegram.org/bot${BOT_API_KEY}/sendMessage
