@@ -59,7 +59,7 @@ dunst-handle() {
 ###
 a-notify()
 {
-  /home/user/git/nixos/scripts/telegram_notify.sh "$HOSTNAME | $@"
+  /home/user/git/nixos/scripts/telegram_notify.sh "$@"
 }
 
 new() {
