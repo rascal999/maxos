@@ -115,6 +115,7 @@ in {
      kubernetes-helm
      kustomize
      lazygit
+     libnotify
      libreoffice-fresh
      libsecret
      lshw
