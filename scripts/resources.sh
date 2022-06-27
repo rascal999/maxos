@@ -415,6 +415,7 @@ function pull_tool_repos() {
   git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
   git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
+  git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
 
   ###
   ### Exploits
@@ -422,8 +423,11 @@ function pull_tool_repos() {
   git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
-  # AutoPWN-Suite
-  git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
+  # DrHeader
+  git_update https://github.com/Santandersecurityresearch/DrHeader.git $HOME/git/pentest-tools/DrHeader
+  if [[ "$?" == "0" ]]; then
+    docker build . -t drheader
+  fi
 
   # Nettacker
   git_update https://github.com/OWASP/Nettacker.git $HOME/git/pentest-tools/Nettacker
