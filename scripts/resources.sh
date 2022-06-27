@@ -423,6 +423,16 @@ function pull_tool_repos() {
   git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
+  ###
+  ### Tools which need building
+  ###
+
+  # shcheck
+  git_update https://github.com/santoru/shcheck.git $HOME/git/pentest-tools/shcheck
+  if [[ "$?" == "0" ]]; then
+    docker build . -t shcheck
+  fi
+
   # DrHeader
   git_update https://github.com/Santandersecurityresearch/DrHeader.git $HOME/git/pentest-tools/DrHeader
   if [[ "$?" == "0" ]]; then
