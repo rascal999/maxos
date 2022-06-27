@@ -57,6 +57,11 @@ dunst-handle() {
 ###
 ### Misc
 ###
+a-notify()
+{
+  /home/user/git/nixos/scripts/telegram_notify.sh "`hostname` | $@"
+}
+
 new() {
   echo "### New commands ###"
   echo "alt+n        networkmanager_dmenu"
