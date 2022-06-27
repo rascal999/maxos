@@ -1,4 +1,6 @@
-Spiderfoot persist
+Docker
+- Spiderfoot persist
+- Other images persist?
 
 NixOS
 - Minimalist install?
@@ -6,20 +8,19 @@ NixOS
 - Generic VM profile
   - Fresh NixOS install to determine disk usage
 - ISO build?
-- Merge common host specific settings such as grub
+  - Schedule on blueboy?
+  - dd USB every X days?
 
 Jupyter
-- Bugs
-  - Web / theHarvester / ctfr
-    - Screenshot: docker: invalid reference format: repository name must be lowercase.
+- Clickjack test for PT Web
 - Test IP range notebook
   - Verify PDF export
 - Test web application notebok
   - Verify PDF export
-- Mobile notebook
-- Wireless notebook
 - Tool digest for reporting?
   - VulnKB
 
+Security
+- Check open ports on different profiles
+
 Check Firefox bookmarks
-Resource script tidy / improvements
