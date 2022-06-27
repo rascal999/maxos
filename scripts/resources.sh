@@ -356,6 +356,7 @@ function pull_educational_repos() {
   git_update https://github.com/Hack-with-Github/Awesome-Hacking.git $HOME/git/pentest-education/Awesome-Hacking
   git_update https://github.com/juliocesarfort/public-pentesting-reports.git $HOME/git/pentest-education/public-pentesting-reports
   git_update https://github.com/Sector443/awesome-list-of-public-pentesting-reports.git $HOME/git/pentest-education/awesome-list-of-public-pentesting-reports
+  git_update https://github.com/OWASP/railsgoat.git $HOME/git/pentest-education/railsgoat
 }
 
 ###
