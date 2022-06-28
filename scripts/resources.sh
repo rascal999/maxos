@@ -196,6 +196,8 @@ function pull_tools_docker() {
   docker pull elceef/dnstwist                              # Domain name permutation engine
   docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
   docker pull thewhiteh4t/finalrecon                       # The Last Web Recon Tool You'll Need
+  docker pull screetsec/sudomy:v1.1.9-dev                  # Subdomain enumeration tool
+  docker pull xshuden/xsstrike                             # Most advanced XSS scanner
 
   ### https://github.com/cybersecsi/RAUDI
   docker pull secsi/apktool
@@ -374,6 +376,7 @@ function pull_educational_repos() {
   git_update https://github.com/juliocesarfort/public-pentesting-reports.git $HOME/git/pentest-education/public-pentesting-reports
   git_update https://github.com/Sector443/awesome-list-of-public-pentesting-reports.git $HOME/git/pentest-education/awesome-list-of-public-pentesting-reports
   git_update https://github.com/OWASP/railsgoat.git $HOME/git/pentest-education/railsgoat
+  git_update https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters.git $HOME/git/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters
 }
 
 ###
@@ -436,6 +439,12 @@ function pull_tool_repos() {
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
   ### Tools which need building
+  # howmanypeoplearearound
+  git_update https://github.com/schollz/howmanypeoplearearound.git $HOME/git/pentest-tools/howmanypeoplearearound
+  if [[ "$?" == "0" ]]; then
+    docker build . -t howmanypeoplearearound
+  fi
+
   # shcheck
   git_update https://github.com/santoru/shcheck.git $HOME/git/pentest-tools/shcheck
   if [[ "$?" == "0" ]]; then
