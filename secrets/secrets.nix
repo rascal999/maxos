@@ -8,9 +8,11 @@ let
 in
 {
   "api-nist.age".publicKeys = hosts;
-  "ddclient-password.age".publicKeys = hosts;
+  "api-shodan.age".publicKeys = hosts;
+  "api-telegram.age".publicKeys = hosts;
+  "api-virustotal.age".publicKeys = hosts;
+  "password-ddclient.age".publicKeys = hosts;
   "secret.age".publicKeys = hosts;
-  "telegram.age".publicKeys = hosts;
   "vpn-mullvad.age".publicKeys = hosts;
   "wireguard-env.age".publicKeys = hosts;
 }
