@@ -39,7 +39,7 @@ arg_tools_docker=0
 arg_vulnerable=0
 arg_wordlists=0
 
-while getopts aegkoptvw flag
+while getopts abegkoptvw flag
 do
     case "${flag}" in
         a) arg_auth=1;;
