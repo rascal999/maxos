@@ -146,6 +146,9 @@
     api-telegram = {
       file = ../secrets/api-telegram.age;
     };
+    api-virustotal = {
+      file = ../secrets/api-virustotal.age;
+    };
     vpn-mullvad = {
       file = ../secrets/vpn-mullvad.age;
     };
@@ -160,6 +163,11 @@
     api-telegram =
     {
       source = config.age.secrets.api-telegram.path;
+      mode = "0444";
+    };
+    api-virustotal =
+    {
+      source = config.age.secrets.api-virustotal.path;
       mode = "0444";
     };
     vpn-mullvad =
