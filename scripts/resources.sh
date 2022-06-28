@@ -3,9 +3,10 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-e] [-g] [-o] [-p] [-t] [-v] [-w]" 1>&2;
+  echo "Usage: $0 [-a] [-b] [-e] [-g] [k] [-o] [-p] [-t] [-v] [-w]" 1>&2;
   echo
   echo "-a (Auth)             Docker authentication"
+  echo "-b (Bug bounties)     Pull bug bounties (git)"
   echo "-e (Educational)      Pull educational resources (git)"
   echo "-g (Tools)            Pull tools (git)"
   echo "-k (Kali)             Pull Kali (docker)"
@@ -17,10 +18,10 @@ usage() {
   echo
   echo "Examples:"
   echo "# Everything except Kali"
-  echo "$0 -aegoptvw"
+  echo "$0 -abegoptvw"
   echo
   echo "# Everything"
-  echo "$0 -aegkoptvw"
+  echo "$0 -abegkoptvw"
   echo
   echo "# ISO environment"
   echo "$0 -gptw"
@@ -28,6 +29,7 @@ usage() {
 }
 
 arg_auth=0
+arg_bug_bounties=0
 arg_educational=0
 arg_tools_git=0
 arg_kali=0
@@ -41,6 +43,7 @@ while getopts aegkoptvw flag
 do
     case "${flag}" in
         a) arg_auth=1;;
+        b) arg_bug_bounties=1;;
         e) arg_educational=1;;
         g) arg_tools_git=1;;
         k) arg_kali=1;;
@@ -52,7 +55,15 @@ do
     esac
 done
 
-arg_sum=$((${arg_educational}+${arg_tools_git}+${arg_kali}+${arg_os}+${arg_pdf}+${arg_tools_docker}+${arg_vulnerable}+${arg_wordlists}))
+arg_sum=$((${arg_bug_bounties} + \
+           ${arg_educational} + \
+           ${arg_tools_git} + \
+           ${arg_kali} + \
+           ${arg_os} + \
+           ${arg_pdf} + \
+           ${arg_tools_docker} + \
+           ${arg_vulnerable} + \
+           ${arg_wordlists}))
 
 # No options specified?
 if [ "${arg_sum}" == "0" ]; then
@@ -63,6 +74,7 @@ echo
 echo "Selection"
 echo "---"
 echo "Docker auth: $arg_auth"
+echo "Bug bounties: $arg_bug_bounties"
 echo "Educational repos: $arg_educational"
 echo "Git pull: $arg_tools_git"
 echo "Kali (docker): $arg_kali"
@@ -86,17 +98,17 @@ function git_update() {
   return 1
 }
 
+###
+### Operating Systems (heavy)
+###
 function pull_kali_docker() {
-  ###
-  ### Operating Systems (heavy)
-  ###
   docker pull booyaabes/kali-linux-full
 }
 
+###
+### Operating Systems
+###
 function pull_os_docker() {
-  ###
-  ### Operating Systems
-  ###
   docker pull alpine
   docker pull ubuntu
   docker pull centos
@@ -183,10 +195,9 @@ function pull_tools_docker() {
   docker pull guidelacour/dnsenum                          # Enumerates DNS information from a domain among other things
   docker pull elceef/dnstwist                              # Domain name permutation engine
   docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
+  docker pull thewhiteh4t/finalrecon                       # The Last Web Recon Tool You'll Need
 
-  ###
   ### https://github.com/cybersecsi/RAUDI
-  ###
   docker pull secsi/apktool
   docker pull secsi/bfac
   docker pull secsi/cloudfail
@@ -275,6 +286,14 @@ function pull_aws_pdfs() {
     -O $HOME/pdfs/education/aws/aws-kms-best-practices.pdf
 }
 
+
+###
+### Bug bounties
+###
+function pull_bug_bounties() {
+  git_update https://github.com/arkadiyt/bounty-targets-data.git $HOME/git/bug-bounty/bounty-targets-data
+}
+
 ###
 ### Educational repos (GitHub)
 ###
@@ -296,9 +315,7 @@ function pull_educational_repos() {
   git_update https://github.com/DopplerHQ/awesome-interview-questions.git $HOME/git/education/awesome-interview-questions
   git_update https://github.com/faif/python-patterns.git $HOME/git/education/python-patterns
 
-  ###
   ### Pentest Education
-  ###
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
   git_update https://github.com/nixawk/pentest-wiki.git $HOME/git/pentest-education/pentest-wiki
   git_update https://github.com/vulhub/vulhub.git $HOME/git/pentest-education/vulhub
@@ -363,9 +380,7 @@ function pull_educational_repos() {
 ### Pentest Tools
 ###
 function pull_tool_repos() {
-  ###
   ### Pentest Frameworks
-  ###
   git_update https://github.com/OWASP/wstg $HOME/git/pentest-frameworks/wstg
   git_update https://github.com/OWASP/owasp-mstg.git $HOME/git/pentest-frameworks/owasp-mstg
   if [[ "$?" == "0" ]]; then
@@ -406,9 +421,7 @@ function pull_tool_repos() {
   git_update https://github.com/google/tsunami-security-scanner.git $HOME/git/pentest-tools/tsunami-security-scanner
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
 
-  ###
   ### Misc tools
-  ###
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
   git_update https://github.com/rvaiya/warpd.git $HOME/git/misc/warpd
@@ -418,16 +431,11 @@ function pull_tool_repos() {
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
   git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
 
-  ###
   ### Exploits
-  ###
   git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
-  ###
   ### Tools which need building
-  ###
-
   # shcheck
   git_update https://github.com/santoru/shcheck.git $HOME/git/pentest-tools/shcheck
   if [[ "$?" == "0" ]]; then
@@ -587,6 +595,11 @@ mkdir $HOME/.hetty
 # Docker auth
 if [ $arg_auth == 1 ]; then
   docker login
+fi
+
+# Bug bounties
+if [ $arg_bug_bounties == 1 ]; then
+  pull_bug_bounties
 fi
 
 # Educational repos
