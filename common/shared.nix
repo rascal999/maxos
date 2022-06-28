@@ -143,6 +143,9 @@
     api-nist = {
       file = ../secrets/api-nist.age;
     };
+    api-shodan = {
+      file = ../secrets/api-shodan.age;
+    };
     api-telegram = {
       file = ../secrets/api-telegram.age;
     };
@@ -158,6 +161,11 @@
     api-nist =
     {
       source = config.age.secrets.api-nist.path;
+      mode = "0444";
+    };
+    api-shodan =
+    {
+      source = config.age.secrets.api-shodan.path;
       mode = "0444";
     };
     api-telegram =
