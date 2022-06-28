@@ -69,6 +69,7 @@ new() {
   echo "choose        cut / awk replacement"
   echo "duf           Disk usage"
   echo "dust          Find big files"
+  echo "d-hmpaa       Howmanypeoplearearound (wifi scan)"
   echo "fd            Fast find"
   echo "gotty         Terminal command over web"
   echo "lazygit / lg  git tool"
@@ -154,6 +155,10 @@ d-sharelatex-kill() {
 
 d-windowshellhere() {
   docker -c 2019-box run --rm -it -v "C:$(pwd):C:/source" -w "C:/source" "$@"
+}
+
+d-hmpaa() {
+  docker run --rm -it --net=host --name howmanypeoplearearound howmanypeoplearearound
 }
 
 d-filebrowserhere() {
