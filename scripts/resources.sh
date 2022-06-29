@@ -3,13 +3,13 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-b] [-e] [-g] [k] [-o] [-p] [-t] [-v] [-w]" 1>&2;
+  echo "Usage: $0 [-a] [-b] [-e] [-g] [-h] [-o] [-p] [-t] [-v] [-w]" 1>&2;
   echo
   echo "-a (Auth)             Docker authentication"
   echo "-b (Bug bounties)     Pull bug bounties (git)"
   echo "-e (Educational)      Pull educational resources (git)"
   echo "-g (Tools)            Pull tools (git)"
-  echo "-k (Kali)             Pull Kali (docker)"
+  echo "-h (Heavy)            Pull heavy images (Kali, dockerctf)"
   echo "-o (OS)               Pull Operating Systems (docker)"
   echo "-p (PDFs)             Pull AWS PDFs (AWS)"
   echo "-t (Tools)            Pull tools (docker)"
@@ -17,11 +17,11 @@ usage() {
   echo "-w (Wordlists)        Pull wordlists (git)"
   echo
   echo "Examples:"
-  echo "# Everything except Kali"
+  echo "# Everything except heavy images"
   echo "$0 -abegoptvw"
   echo
   echo "# Everything"
-  echo "$0 -abegkoptvw"
+  echo "$0 -abeghoptvw"
   echo
   echo "# ISO environment"
   echo "$0 -gptw"
@@ -32,21 +32,21 @@ arg_auth=0
 arg_bug_bounties=0
 arg_educational=0
 arg_tools_git=0
-arg_kali=0
+arg_heavy=0
 arg_os=0
 arg_pdf=0
 arg_tools_docker=0
 arg_vulnerable=0
 arg_wordlists=0
 
-while getopts abegkoptvw flag
+while getopts abeghoptvw flag
 do
     case "${flag}" in
         a) arg_auth=1;;
         b) arg_bug_bounties=1;;
         e) arg_educational=1;;
         g) arg_tools_git=1;;
-        k) arg_kali=1;;
+        h) arg_heavy=1;;
         o) arg_os=1;;
         p) arg_pdf=1;;
         t) arg_tools_docker=1;;
@@ -58,7 +58,7 @@ done
 arg_sum=$((${arg_bug_bounties} + \
            ${arg_educational} + \
            ${arg_tools_git} + \
-           ${arg_kali} + \
+           ${arg_heavy} + \
            ${arg_os} + \
            ${arg_pdf} + \
            ${arg_tools_docker} + \
@@ -77,7 +77,7 @@ echo "Docker auth: $arg_auth"
 echo "Bug bounties: $arg_bug_bounties"
 echo "Educational repos: $arg_educational"
 echo "Git pull: $arg_tools_git"
-echo "Kali (docker): $arg_kali"
+echo "Kali (docker): $arg_heavy"
 echo "OS (docker): $arg_os"
 echo "AWS PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
@@ -99,10 +99,13 @@ function git_update() {
 }
 
 ###
-### Operating Systems (heavy)
+### Heavy images (docker)
 ###
-function pull_kali_docker() {
+function pull_heavy_docker() {
   docker pull booyaabes/kali-linux-full
+  docker pull firefart/dockerctf                           # Docker image with some common ctf tools
+  docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
+  docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
 }
 
 ###
@@ -116,7 +119,6 @@ function pull_os_docker() {
   docker pull amazonlinux
   docker pull fedora
   #docker pull kalilinux/kali-rolling
-  #docker pull firefart/dockerctf                           # Docker image with some common ctf tools
 }
 
 ###
@@ -153,7 +155,7 @@ function pull_tools_docker() {
   docker pull guidelacour/whatweb                          # Next generation web scanner
   docker pull opensecurity/cmsscan                         # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
   docker pull epi052/feroxbuster                           # A fast, simple, recursive content discovery tool written in Rust
-  docker pull greenbone/openvas                           # OpenVAS is a full-featured vulnerability scanner
+  docker pull greenbone/openvas                            # OpenVAS is a full-featured vulnerability scanner
   docker pull mpepping/cyberchef                           # The Cyber Swiss Army Knife
   docker pull phocean/beef                                 # BeEF framework for XSS browser exploitation
   docker pull byt3bl33d3r/crackmapexec                     # A swiss army knife for pentesting networks
@@ -187,14 +189,12 @@ function pull_tools_docker() {
   docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
   docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
   docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
-  docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
   docker pull zadam/trilium                                # Personal knowledge base
   docker pull machines/filestash                           # A modern web client for file protocols
   docker pull theyahya/sherlock                            # Hunt down social media accounts
   docker pull lirantal/is-website-vulnerable               # Find known security vulnerabilities in frontend JS libs
   docker pull guidelacour/dnsenum                          # Enumerates DNS information from a domain among other things
   docker pull elceef/dnstwist                              # Domain name permutation engine
-  docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
   docker pull thewhiteh4t/finalrecon                       # The Last Web Recon Tool You'll Need
   docker pull screetsec/sudomy:v1.1.9-dev                  # Subdomain enumeration tool
   docker pull xshuden/xsstrike                             # Most advanced XSS scanner
@@ -621,9 +621,9 @@ if [ $arg_tools_git == 1 ]; then
   pull_tool_repos
 fi
 
-# Kali (docker)
-if [ $arg_kali == 1 ]; then
-  pull_kali_docker
+# Heavy images (docker)
+if [ $arg_heavy == 1 ]; then
+  pull_heavy_docker
 fi
 
 # OS (docker)
