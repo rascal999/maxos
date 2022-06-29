@@ -69,6 +69,9 @@ if [[ "$arg_kill" == "1" ]]; then
 
   if [[ "$MULLVAD_PROFILE" != "" ]]; then 
     sudo nmcli connection delete $MULLVAD_PROFILE
+  else
+    echo "ERROR: No Mullvad profiles to remove."
+    exit 1
   fi
 fi
 
