@@ -3,6 +3,7 @@
 with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
+    distro
     pip
     setuptools
     requests
@@ -225,6 +226,7 @@ in {
      xcalib
      xkb-switch-i3
      xlockmore
+     xidel
      xorg.xbacklight
      xorg.xeyes
      xorg.xmodmap
