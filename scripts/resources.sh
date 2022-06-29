@@ -3,13 +3,14 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-b] [-e] [-g] [-h] [-o] [-p] [-t] [-v] [-w]" 1>&2;
+  echo "Usage: $0 [-a] [-b] [-e] [-g] [-h] [-m] [-o] [-p] [-t] [-v] [-w]" 1>&2;
   echo
   echo "-a (Auth)             Docker authentication"
   echo "-b (Bug bounties)     Pull bug bounties (git)"
   echo "-e (Educational)      Pull educational resources (git)"
   echo "-g (Tools)            Pull tools (git)"
   echo "-h (Heavy)            Pull heavy images (Kali, dockerctf etc.)"
+  echo "-m (Misc)             Misc tools (docker)"
   echo "-o (OS)               Pull Operating Systems (docker)"
   echo "-p (PDFs)             Pull AWS PDFs (AWS)"
   echo "-t (Tools)            Pull tools (docker)"
@@ -18,12 +19,12 @@ usage() {
   echo
   echo "Examples:"
   echo "# Everything except heavy images"
-  echo "$0 -abegoptvw"
+  echo "$0 -abegmoptvw"
   echo
   echo "# Everything"
-  echo "$0 -abeghoptvw"
+  echo "$0 -abeghmoptvw"
   echo
-  echo "# ISO environment"
+  echo "# ISO / VM environment"
   echo "$0 -gptw"
   exit 1;
 }
@@ -33,6 +34,7 @@ arg_bug_bounties=0
 arg_educational=0
 arg_tools_git=0
 arg_heavy=0
+arg_misc=0
 arg_os=0
 arg_pdf=0
 arg_tools_docker=0
@@ -47,6 +49,7 @@ do
         e) arg_educational=1;;
         g) arg_tools_git=1;;
         h) arg_heavy=1;;
+        m) arg_misc=1;;
         o) arg_os=1;;
         p) arg_pdf=1;;
         t) arg_tools_docker=1;;
@@ -59,6 +62,7 @@ arg_sum=$((${arg_bug_bounties} + \
            ${arg_educational} + \
            ${arg_tools_git} + \
            ${arg_heavy} + \
+           ${arg_misc} + \
            ${arg_os} + \
            ${arg_pdf} + \
            ${arg_tools_docker} + \
@@ -78,6 +82,7 @@ echo "Bug bounties: $arg_bug_bounties"
 echo "Educational repos: $arg_educational"
 echo "Git pull: $arg_tools_git"
 echo "Heavy images (docker): $arg_heavy"
+echo "Misc tools (docker): $arg_misc"
 echo "OS (docker): $arg_os"
 echo "AWS PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
@@ -106,6 +111,26 @@ function pull_heavy_docker() {
   docker pull firefart/dockerctf                           # Docker image with some common ctf tools
   docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
   docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
+}
+
+###
+### Misc tools
+###
+function pull_misc_tools() {
+  docker pull trufflesuite/ganache-cli                     # Local blockchain dev
+  docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
+  docker pull rflathers/nginxserve                         # nginx
+  docker pull ghcr.io/linuxserver/thelounge                # IRC client
+  docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tunnel as a SOCKS5 proxy
+  docker pull dperson/torproxy                             # Tor and Privoxy docker container
+  docker pull zadam/trilium                                # Personal knowledge base
+
+  git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
+  git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
+  git_update https://github.com/rvaiya/warpd.git $HOME/git/misc/warpd
+  git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
+  git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
+  git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
 }
 
 ###
@@ -145,7 +170,6 @@ function pull_vulnerable_things_docker() {
 ### Tools (docker)
 ###
 function pull_tools_docker() {
-  docker pull trufflesuite/ganache-cli                     # Local blockchain dev
   docker pull owasp/zap2docker-stable                      # official OWASP ZAP
   docker pull wpscanteam/wpscan                            # official WPScan
   docker pull metasploitframework/metasploit-framework     # Official Metasploit
@@ -166,9 +190,6 @@ function pull_tools_docker() {
   docker pull remnux/ciphey                                # Automatically decrypt, decode, and crack
   docker pull bettercap/bettercap                          # The Swiss Army knife for 802.11, BLE, IPv4 and IPv6 networks
   docker pull dominicbreuker/stego-toolkit                 # Collection of steganography tools - helps with CTF challenges
-  docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
-  docker pull rflathers/nginxserve                         # nginx
-  docker pull ghcr.io/linuxserver/thelounge                # IRC client
   docker pull mythril/myth                                 # Security analysis tool for EVM bytecode
   docker pull trailofbits/manticore                        # Symbolic execution tool for smart contracts
   docker pull trailofbits/eth-security-toolbox             # Trail of Bits Ethereum security tools
@@ -179,8 +200,6 @@ function pull_tools_docker() {
   docker pull accurics/terrascan                           # Detect compliance and security violations across IaC
   docker pull bridgecrew/checkov                           # Checkov is a static code analysis tool for infrastructure-as-code
   docker pull projectdiscovery/nuclei                      # Configurable targeted scanning based on templates
-  docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tunnel as a SOCKS5 proxy
-  docker pull dperson/torproxy                             # Tor and Privoxy docker container
   docker pull cmnatic/rustscan                             # The Modern Port Scanner
   docker pull vuls/vuls                                    # Vulnerability scanner for Linux/FreeBSD
   docker pull xer0dayz/sn1per                              # Discover the attack surface and prioritize risks
@@ -189,7 +208,6 @@ function pull_tools_docker() {
   docker pull alekzonder/puppeteer                         # Headless Chrome Node.js API
   docker pull simonthomas/theharvester                     # E-mails, subdomains and names Harvester - OSINT
   docker pull unapibageek/ctfr                             # Abusing Certificate Transparency logs for domains
-  docker pull zadam/trilium                                # Personal knowledge base
   docker pull machines/filestash                           # A modern web client for file protocols
   docker pull theyahya/sherlock                            # Hunt down social media accounts
   docker pull lirantal/is-website-vulnerable               # Find known security vulnerabilities in frontend JS libs
@@ -425,12 +443,6 @@ function pull_tool_repos() {
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
 
   ### Misc tools
-  git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
-  git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
-  git_update https://github.com/rvaiya/warpd.git $HOME/git/misc/warpd
-  git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
-  git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
-  git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
   git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
 
@@ -624,6 +636,11 @@ fi
 # Heavy images (docker)
 if [ $arg_heavy == 1 ]; then
   pull_heavy_docker
+fi
+
+# Misc tools
+if [ $arg_misc == 1 ]; then
+  pull_misc_tools
 fi
 
 # OS (docker)
