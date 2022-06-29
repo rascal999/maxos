@@ -36,6 +36,7 @@
     enable = true;
     systemCronJobs = [
       "0 20 * * *        root    ${pkgs.rsync}/bin/rsync -avz --no-perms /var/lib/trilium admin@192.168.0.254:/volume1/k8s-syncthing-data/data/"
+      "0 4 * * *         root    /home/user/git/nixos/scripts/build_iso.sh"
     ];
   };
 }
