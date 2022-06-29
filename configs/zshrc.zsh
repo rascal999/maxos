@@ -90,6 +90,10 @@ a-gg() {
   googler --np "$@"
 }
 
+a-vpn() {
+  /home/user/git/nixos/scripts/vpn.sh "$@"
+}
+
 d-shell() {
   docker run --rm -it --entrypoint=/bin/bash "$@"
 }
