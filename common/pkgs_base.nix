@@ -86,7 +86,6 @@ in {
      grim
      gsettings-desktop-schemas
      hakrawler
-     hakrevdns
      hashcat
      hexedit
      hey
