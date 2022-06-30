@@ -64,18 +64,12 @@ a-notify()
 
 new() {
   echo "### New commands ###"
-  echo "alt+n        networkmanager_dmenu"
-  echo "broot         File explorer"
-  echo "choose        cut / awk replacement"
-  echo "duf           Disk usage"
-  echo "dust          Find big files"
-  echo "d-hmpaa       Howmanypeoplearearound (wifi scan)"
-  echo "fd            Fast find"
-  echo "gotty         Terminal command over web"
-  echo "lazygit / lg  git tool"
-  echo "rg            ripgrep"
-  echo "rga           ripgrep (PDFs, zips, docx etc.)"
-  echo "tldr          TL;DR for command"
+  echo "a-localhostrun-gotty    Terminal command over web"
+  echo "alt+n                   networkmanager_dmenu"
+  echo "broot                   File explorer"
+  echo "d-hmpaa                 Howmanypeoplearearound (wifi scan)"
+  echo "rga                     ripgrep (PDFs, zips, docx etc.)"
+  echo "tldr                    TL;DR for command"
 }
 
 test-vpn() {
