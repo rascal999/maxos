@@ -9,6 +9,14 @@ let
     requests
   ]; 
   python-with-my-packages = python3.withPackages my-python-packages;
+  hakrevdns = buildGoModule {
+    src = fetchFromGitHub {
+      owner = "hakluke";
+      repo = "hakrevdns";
+      rev = "master";
+      sha256 = "022p52aipc9gnmfpg7pblmqvq58brgssxihyw0g11ijsz54n5mzk";
+    };
+  };
 in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -86,6 +94,7 @@ in {
      grim
      gsettings-desktop-schemas
      hakrawler
+     hakrevdns
      hashcat
      hexedit
      hey
