@@ -162,7 +162,7 @@ function pull_vulnerable_things_docker() {
   docker pull opendns/security-ninjas                      # Security Ninjas
   docker pull ismisepaul/securityshepherd                  # OWASP Security Shepherd
   docker pull danmx/docker-owasp-webgoat                   # OWASP WebGoat Project docker image
-  docker pull vulnerables/web-owasp-nodegoat               # OWASP NodeGoat
+  #docker pull vulnerables/web-owasp-nodegoat               # OWASP NodeGoat
   docker pull citizenstig/nowasp                           # OWASP Mutillidae II Web Pen-Test Practice Application
   docker pull bkimminich/juice-shop                        # OWASP Juice Shop
   docker pull eystsen/altoro                               # Altoro Mutual - Demo Vulnerable Web Bank
@@ -184,7 +184,7 @@ function pull_tools_docker() {
   docker pull guidelacour/whatweb                          # Next generation web scanner
   docker pull opensecurity/cmsscan                         # CMS Scanner: Scan Wordpress, Drupal, Joomla, vBulletin
   docker pull epi052/feroxbuster                           # A fast, simple, recursive content discovery tool written in Rust
-  docker pull greenbone/openvas                            # OpenVAS is a full-featured vulnerability scanner
+  #docker pull greenbone/openvas                            # OpenVAS is a full-featured vulnerability scanner
   docker pull mpepping/cyberchef                           # The Cyber Swiss Army Knife
   docker pull phocean/beef                                 # BeEF framework for XSS browser exploitation
   docker pull byt3bl33d3r/crackmapexec                     # A swiss army knife for pentesting networks
