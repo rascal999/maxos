@@ -43,6 +43,7 @@ in {
      cups-brother-hl3140cw
      dbeaver
      dex2jar
+     dhcp
      dhcpcd
      dig
      dmenu
