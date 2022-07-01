@@ -9,8 +9,7 @@ fi
 
 # Check we haven't built ISO for this hash
 if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
-  echo "Should build"
-  #nix --extra-experimental-features flakes --extra-experimental-features nix-command build .#nixosConfigurations.iso.config.system.build.isoImage --impure
+  nix --extra-experimental-features flakes --extra-experimental-features nix-command build .#nixosConfigurations.iso.config.system.build.isoImage --impure
   # Problem?
   if [[ "$?" == "0" ]]; then
     /home/user/git/nixos/scripts/telegram_notify.sh -m "Finished building ISO."
