@@ -41,6 +41,6 @@
     netbootxyz = {
       image = "ghcr.io/netbootxyz/netbootxyz";
       ports = [ "69:69/udp" ];
-    }
+    };
   }
 }
