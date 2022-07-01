@@ -134,6 +134,7 @@
   ];
   networking.firewall.allowedUDPPorts = [
     53
+    69
     21027
     22000
   ];

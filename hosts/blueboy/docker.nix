@@ -12,35 +12,35 @@
       image = "greenbone/openvas";
       ports = [ "8030:443" ];
     };
-  };
-  virtualisation.oci-containers.containers = {
+
     cyberchef = {
       image = "mpepping/cyberchef";
       ports = [ "8040:8000" ];
     };
-  };
-  virtualisation.oci-containers.containers = {
+
     mobsf = {
       image = "opensecurity/mobile-security-framework-mobsf";
       ports = [ "8050:8000" ];
     };
-  };
-  virtualisation.oci-containers.containers = {
+
     spiderfoot = {
       image = "spiderfoot";
       ports = [ "8060:5001" ];
     };
-  };
-  virtualisation.oci-containers.containers = {
+
     filestash = {
       image = "machines/filestash";
       ports = [ "9040:8334" ];
     };
-  };
-  virtualisation.oci-containers.containers = {
+
     houdini = {
       image = "rascal999/houdini";
       ports = [ "9050:3000" ];
     };
+
+    netbootxyz = {
+      image = "ghcr.io/netbootxyz/netbootxyz";
+      ports = [ "69:69/udp" ];
+    }
   };
 }
