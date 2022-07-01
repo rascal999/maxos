@@ -138,6 +138,7 @@
           ./common/pkgs_additional.nix
           ./common/syncthing.nix
           ./hosts/blueboy/configuration.nix
+          ./hosts/blueboy/dhcp.nix
           ./hosts/blueboy/docker.nix
           ./hosts/blueboy/ddclient.nix
           ./hosts/blueboy/hardware-configuration.nix
