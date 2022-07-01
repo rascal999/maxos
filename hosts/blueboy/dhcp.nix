@@ -15,16 +15,6 @@
         interface eno1;
         range 192.168.0.20 192.168.0.200;
         next-server 192.168.0.69;
-        if exists user-class and ( option user-class = "iPXE" ) {
-          filename "http://boot.netboot.xyz/menu.ipxe";
-        } elsif option arch = encode-int ( 16, 16 ) {
-          filename "http://boot.netboot.xyz/ipxe/netboot.xyz.efi";
-          option vendor-class-identifier "HTTPClient";
-        } elsif option arch = 00:07 {
-          filename "netboot.xyz.efi";
-        } else {
-          filename "netboot.xyz.kpxe";
-        }
       }
     '';
   };
