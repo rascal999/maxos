@@ -95,10 +95,10 @@ function git_update() {
 
   # Only pull if directory not accessed in last day
   if [[ "$DIR_ACCESSED" == "0" ]]; then
-  git clone --depth 1 $1 $2
-  cd $2
-  git pull
-  return 0
+    git clone --depth 1 $1 $2
+    cd $2
+    git pull
+    return 0
   fi
   return 1
 }
