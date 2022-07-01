@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   services.dhcpd4 = {
     enable = true;
-    interfaces = [ "enp39s0" ];
+    interfaces = [ "eno1" ];
     extraConfig = ''
       option domain-name-servers 1.1.1.1;
       option subnet-mask 255.255.255.0;
@@ -12,7 +12,7 @@
         max-lease-time 3600; 
         option broadcast-address 192.168.0.255;
         option routers 192.168.0.1;
-        interface enp39s0;
+        interface eno1;
         range 192.168.0.20 192.168.0.200;
       }
     '';
