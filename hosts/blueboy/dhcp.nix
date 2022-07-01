@@ -15,6 +15,7 @@
         interface eno1;
         range 192.168.0.20 192.168.0.200;
         next-server 192.168.0.69;
+        filename "netboot.xyz.efi";
       }
     '';
   };
