@@ -10,7 +10,7 @@ usage() {
   echo "-e (Educational)      Pull educational resources (git)"
   echo "-g (Tools)            Pull tools (git)"
   echo "-h (Heavy)            Pull heavy images (Kali, dockerctf etc.)"
-  echo "-m (Misc)             Misc tools (docker)"
+  echo "-m (Misc)             Misc things"
   echo "-o (OS)               Pull Operating Systems (docker)"
   echo "-p (PDFs)             Pull AWS PDFs (AWS)"
   echo "-t (Tools)            Pull tools (docker)"
@@ -82,7 +82,7 @@ echo "Bug bounties: $arg_bug_bounties"
 echo "Educational repos: $arg_educational"
 echo "Git pull: $arg_tools_git"
 echo "Heavy images (docker): $arg_heavy"
-echo "Misc tools (docker): $arg_misc"
+echo "Misc things: $arg_misc"
 echo "OS (docker): $arg_os"
 echo "AWS PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
@@ -114,9 +114,9 @@ function pull_heavy_docker() {
 }
 
 ###
-### Misc tools
+### Misc things
 ###
-function pull_misc_tools() {
+function pull_misc_things() {
   docker pull trufflesuite/ganache-cli                     # Local blockchain dev
   docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
   docker pull rflathers/nginxserve                         # nginx
@@ -131,6 +131,11 @@ function pull_misc_tools() {
   git_update https://github.com/overleaf/overleaf.git $HOME/git/misc/overleaf
   git_update https://github.com/TeamPiped/Piped-Docker $HOME/git/misc/Piped-Docker
   git_update https://github.com/deviantony/docker-elk.git $HOME/git/misc/docker-elk
+  git_update https://github.com/misterch0c/CrimeBoards.git $HOME/git/misc/CrimeBoards
+  git_update https://github.com/misterch0c/what_is_this_c2.git $HOME/git/misc/what_is_this_c2
+  git_update https://github.com/jessfraz/dockerfiles.git $HOME/git/misc/jessfraz-dockerfiles
+  git_update https://github.com/docker/labs.git $HOME/git/misc/docker-labs
+  git_update https://github.com/StevenBlack/hosts.git $HOME/git/misc/StevenBlack-hosts
 }
 
 ###
@@ -334,6 +339,9 @@ function pull_educational_repos() {
   git_update https://github.com/veggiemonk/awesome-docker.git $HOME/git/education/awesome-docker
   git_update https://github.com/DopplerHQ/awesome-interview-questions.git $HOME/git/education/awesome-interview-questions
   git_update https://github.com/faif/python-patterns.git $HOME/git/education/python-patterns
+  git_update https://github.com/bregman-arie/devops-exercises.git $HOME/git/education/devops-exercises
+  git_update https://github.com/MichaelCade/90DaysOfDevOps.git $HOME/git/education/90DaysOfDevOps
+  git_update https://github.com/veeral-patel/how-to-secure-anything.git $HOME/git/education/how-to-secure-anything
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -345,7 +353,6 @@ function pull_educational_repos() {
   git_update https://github.com/jassics/awesome-aws-security.git $HOME/git/pentest-education/awesome-aws-security
   git_update https://github.com/mytechnotalent/Reverse-Engineering.git $HOME/git/pentest-education/Reverse-Engineering
   git_update https://github.com/sundowndev/hacker-roadmap.git $HOME/git/pentest-education/hacker-roadmap
-
   git_update https://github.com/The-Art-of-Hacking/h4cker.git $HOME/git/pentest-education/h4cker
   git_update https://github.com/vitalysim/Awesome-Hacking-Resources.git $HOME/git/pentest-education/Awesome-Hacking-Resources
   git_update https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques.git $HOME/git/pentest-education/RedTeam-Tactics-and-Techniques
@@ -379,7 +386,6 @@ function pull_educational_repos() {
   git_update https://github.com/shieldfy/API-Security-Checklist.git $HOME/git/pentest-education/API-Security-Checklist
   git_update https://github.com/google/google-ctf.git $HOME/git/pentest-education/google-ctf
   git_update https://github.com/madhuakula/kubernetes-goat.git $HOME/git/pentest-education/kubernetes-goat
-
   git_update https://github.com/OWASP/CheatSheetSeries.git $HOME/git/pentest-education/CheatSheetSeries
   rm -rf $HOME/git/pentest-education/CheatSheetSeriesZip
   mkdir $HOME/git/pentest-education/CheatSheetSeriesZip
@@ -395,6 +401,14 @@ function pull_educational_repos() {
   git_update https://github.com/Sector443/awesome-list-of-public-pentesting-reports.git $HOME/git/pentest-education/awesome-list-of-public-pentesting-reports
   git_update https://github.com/OWASP/railsgoat.git $HOME/git/pentest-education/railsgoat
   git_update https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters.git $HOME/git/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters
+  git_update https://github.com/HarmJ0y/CheatSheets.git $HOME/git/pentest-education/HarmJ0y-CheatSheets
+  git_update https://github.com/trailofbits/ctf.git $HOME/git/pentest-education/trailofbits-ctf
+  git_update https://github.com/trailofbits/publications.git $HOME/git/pentest-education/trailofbits-publications
+  git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/pentest-education/the-practical-linux-hardening-guide
+  git_update https://github.com/upgundecha/howtheysre.git $HOME/git/pentest-education/howtheysre
+
+  # Blue team
+  git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
 }
 
 ###
@@ -441,6 +455,10 @@ function pull_tool_repos() {
   git_update https://github.com/wapiti-scanner/wapiti.git $HOME/git/pentest-tools/wapiti
   git_update https://github.com/google/tsunami-security-scanner.git $HOME/git/pentest-tools/tsunami-security-scanner
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
+  git_update https://github.com/vletoux/pingcastle.git $HOME/git/pentest-tools/pingcastle
+  git_update https://github.com/BloodHoundAD/BloodHound.git $HOME/git/pentest-tools/BloodHound
+  git_update https://github.com/n1nj4sec/pupy.git $HOME/git/pentest-tools/pupy
+  git_update https://github.com/google/oss-fuzz.git $HOME/git/pentest-tools/oss-fuzz
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
@@ -451,6 +469,12 @@ function pull_tool_repos() {
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
   ### Tools which need building
+  # twa
+  git_update https://github.com/trailofbits/twa.git $HOME/git/pentest-tools/twa
+  if [[ "$?" == "0" ]]; then
+    docker build . -t twa
+  fi
+
   # howmanypeoplearearound
   git_update https://github.com/schollz/howmanypeoplearearound.git $HOME/git/pentest-tools/howmanypeoplearearound
   if [[ "$?" == "0" ]]; then
@@ -640,7 +664,7 @@ fi
 
 # Misc tools
 if [ $arg_misc == 1 ]; then
-  pull_misc_tools
+  pull_misc_things
 fi
 
 # OS (docker)
