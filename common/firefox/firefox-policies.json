@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "bibitnow018@aqpl.mc2.chalmers.se": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bibitnow/addon-12869417-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "jid1-ZSMfwe4lCAw9oQ@jetpack": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/url-to-qrcode/addon-11218076-latest.xpi",
         "installation_mode": "normal_installed"
