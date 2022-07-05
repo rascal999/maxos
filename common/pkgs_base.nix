@@ -112,6 +112,7 @@ in {
      k3s
      keepassxc
      kind
+     kiwix
      kompose
      kubectl
      kubernetes-helm
