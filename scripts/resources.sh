@@ -407,8 +407,11 @@ function pull_educational_repos() {
   git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/pentest-education/the-practical-linux-hardening-guide
   git_update https://github.com/upgundecha/howtheysre.git $HOME/git/pentest-education/howtheysre
 
-  # Blue team
+  ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
+
+  ### OSINT
+  git_update https://github.com/jivoi/awesome-osint.git $HOME/git/pentest-education/awesome-osint
 }
 
 ###
