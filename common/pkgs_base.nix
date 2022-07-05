@@ -19,6 +19,7 @@ in {
      android-studio
      android-tools
      appimage-run
+     aria
      asciinema
      autokey
      awscli
@@ -88,6 +89,7 @@ in {
      gsettings-desktop-schemas
      hakrawler
      hashcat
+     hdparm
      hexedit
      hey
      hping

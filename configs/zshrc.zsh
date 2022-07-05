@@ -66,6 +66,7 @@ new() {
   echo "### New commands ###"
   echo "a-localhostrun-gotty    Terminal command over web"
   echo "alt+n                   networkmanager_dmenu"
+  echo "aria2c                  wget alternative"
   echo "broot                   File explorer"
   echo "d-hmpaa                 Howmanypeoplearearound (wifi scan)"
   echo "rga                     ripgrep (PDFs, zips, docx etc.)"

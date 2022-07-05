@@ -3,7 +3,7 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-b] [-e] [-g] [-h] [-m] [-o] [-p] [-t] [-v] [-w]" 1>&2;
+  echo "Usage: $0 [-a] [-b] [-e] [-g] [-h] [-m] [-o] [-p] [-t] [-v] [-w] [-z]" 1>&2;
   echo
   echo "-a (Auth)             Docker authentication"
   echo "-b (Bug bounties)     Pull bug bounties (git)"
@@ -16,13 +16,14 @@ usage() {
   echo "-t (Tools)            Pull tools (docker)"
   echo "-v (Vulnerable)       Vulnerable things (docker)"
   echo "-w (Wordlists)        Pull wordlists (git)"
+  echo "-z (ZIMs)             Pull ZIMs (kiwix)"
   echo
   echo "Examples:"
-  echo "# Everything except heavy images"
+  echo "# Everything except heavy images and ZIMs"
   echo "$0 -abegmoptvw"
   echo
   echo "# Everything"
-  echo "$0 -abeghmoptvw"
+  echo "$0 -abeghmoptvwz"
   echo
   echo "# ISO / VM environment"
   echo "$0 -gptw"
@@ -40,8 +41,9 @@ arg_pdf=0
 arg_tools_docker=0
 arg_vulnerable=0
 arg_wordlists=0
+arg_zims=0
 
-while getopts abeghmoptvw flag
+while getopts abeghmoptvwz flag
 do
     case "${flag}" in
         a) arg_auth=1;;
@@ -55,6 +57,7 @@ do
         t) arg_tools_docker=1;;
         v) arg_vulnerable=1;;
         w) arg_wordlists=1;;
+        z) arg_zims=1;;
     esac
 done
 
@@ -67,7 +70,8 @@ arg_sum=$((${arg_bug_bounties} + \
            ${arg_pdf} + \
            ${arg_tools_docker} + \
            ${arg_vulnerable} + \
-           ${arg_wordlists}))
+           ${arg_wordlists} + \
+           ${arg_zims}))
 
 # No options specified?
 if [ "${arg_sum}" == "0" ]; then
@@ -88,6 +92,7 @@ echo "AWS PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
 echo "Vulnerabe things (docker): $arg_vulnerable"
 echo "Wordlists: $arg_wordlists"
+echo "ZIMs: $arg_zims"
 echo
 
 function git_update() {
@@ -637,6 +642,15 @@ function pull_wordlists() {
   wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O $HOME/git/wordlists/content_discovery_all.txt
 }
 
+###
+### ZIMs
+###
+function pull_zims() {
+  aria2c -x 2 -o /home/user/.local/share/kiwix https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2022-01.zim
+  aria2c -x 2 -o /home/user/.local/share/kiwix https://download.kiwix.org/zim/gutenberg/gutenberg_en_all_2022-05.zim 
+  aria2c -x 2 -o /home/user/.local/share/kiwix https://download.kiwix.org/zim/zimit/cheatography.com_en_all_2021-09.zim
+}
+
 # hetty fs
 mkdir $HOME/.hetty
 
@@ -693,6 +707,11 @@ fi
 # Wordlists
 if [ $arg_vulnerable == 1 ]; then
   pull_wordlists
+fi
+
+# ZIMs
+if [ $arg_zims == 1 ]; then
+  pull_zims
 fi
 
 # Notify
