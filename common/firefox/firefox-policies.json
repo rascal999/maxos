@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "ademking@betterviewer": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/betterviewer/addon-2740191-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "bibitnow018@aqpl.mc2.chalmers.se": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bibitnow/addon-12869417-latest.xpi",
         "installation_mode": "normal_installed"
