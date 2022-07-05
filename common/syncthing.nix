@@ -32,6 +32,11 @@
         id = "3YBMQYS-46IZSTQ-HLIP3O2-E22P3GJ-OS2PFCY-GTINZAF-PMH6HTN-2GDV4Q3";
         introducer = false;
       };
+      "galaxy" = {
+        autoAcceptFolders = true;
+        id = "DPWLINN-X2GRAYG-2IYFOXT-CRWLY3L-BMRDJGT-KE5ELWF-M76VOXR-XFREWQG";
+        introducer = false;
+      };
       "GM1920" = {
         id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
         introducer = true;
