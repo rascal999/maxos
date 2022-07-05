@@ -38,12 +38,12 @@
       };
       "rig" = {
         autoAcceptFolders = true;
-        id = "JI3WBOJ-OCPX2PC-YBWPNJJ-WHHPMG3-LTHUN57-2PWLZUU-VMFA32S-TP7MPAN";
+        id = "TTM76HX-M6H5JG7-KZ2YHMG-UPT5HQZ-OEPQFNX-FOMAWGB-GPTYPG6-QS7DHA4";
         introducer = false;
       };
       "rog" = {
         autoAcceptFolders = true;
-        id = "NDXASQ4-A36OLGF-2OYABLJ-MZCPDIA-TDZR56X-4L4X6O3-4E5KSEY-3MVKTA2";
+        id = "JI3WBOJ-OCPX2PC-YBWPNJJ-WHHPMG3-LTHUN57-2PWLZUU-VMFA32S-TP7MPAN";
         introducer = false;
       };
     };
