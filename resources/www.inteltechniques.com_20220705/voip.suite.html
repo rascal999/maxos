@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name=“robots” content=“noarchive”>
+        <meta name=“robots” content=“notranslate”>
+        <meta name=“robots” content=“noimageindex”>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>Privacy Services by Michael Bazzell</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template -->
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container header">
+            <div class="justify-content-between row">
+                <div class="col-auto d-block">
+                  <a href="index.html">
+                    <div class="row">
+                        <h1 class="float-end title">IntelTechniques</h1>
+                    </div>
+                    <div class="float-end row">
+                        <span class="lh-1 titlename">By Michael Bazzell</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row align-items-center col-auto" data-bs-toggle="tooltip">
+                    <div class="icons">
+                        <a href="podcast.html" title="Podcast"><i class="fas fa-microphone-alt"></i></a>
+                        <a href="https://inteltechniques.com/blog/" title="Blog"><i class="fas fa-newspaper"></i></a>
+                        <a href="https://inteltechniques.com/blog/feed/" title="RSS"><i class="fas fa-rss-square"></i></a>
+                        <a href="https://www.twitter.com/inteltechniques" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a href="https://www.linkedin.com/company/inteltechniques/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="align-middle navbar navbar-dark navbar-expand-md sticky-top text-center">
+            <div class="align-items-center container d-flex justify-content-evenly">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarCollapse" class="collapse">
+                    <ul class="mb-2 mb-md-0 me-auto navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="training.html">Training</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="links.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tools/index.html">Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://inteltechniques.com/blog/">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="podcast.html">Podcast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://unredactedmagazine.com" target="_blank">Magazine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="books.html">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">VoIPSuite Guide</h4>
+                            <hr/>
+                            <p class="card-text">
+                            If you have been following the steps in <a href="book7.html" target="_blank">Extreme Privacy</a>, you might possess VOIP telephone service through <a href="https://www.twilio.com/referral/9FGpxr" target="_blank">Twilio</a> or Telnyx. In the book, I offer ways to push SMS text messages to email, but that does not allow you to send messages. The following steps create your own self-hosted SMS web app which allows you to send and receive SMS text messages through unlimited Telnyx and/or Twilio telephone numbers within any platform (Windows, Mac, Linux, iOS, Android, browser, etc.). The instructions at the end of this page allow optional calling features within the same application. You will need to obtain access to Twilio and/or Telnyx as explained within Extreme Privacy, 3rd Edition. Once your accounts are created, verified, and configured for VOICE as explained in the book (but not configured for SMS!), conduct the following. The process is lengthy, but only needs completed once. You will need to dedicate an uninterrupted hour for this tutorial.<br><br>
+
+                            First, you need to create a database which will hold all of the message content. You can use the free version of MongoDB for this. Think of this as the storage for your text messages to which only you have access.<br><br>
+
+                            Open a new tab and navigate to http://www.mongodb.com/<br>
+                            Click "Start Free"<br>
+                            Enter email, name, and password<br>
+                            Confirm verification email<br>
+                            Begin the onboarding process<br>
+                            Leave "Organization" information as-is<br>
+                            Enter "VOIP" as the "Project Name"<br>
+                            Click "Continue"<br>
+                            Select the "Free Basic" tier and click "Create"<br>
+                            Accept all default options<br>
+                            Click "Create Cluster"<br>
+                            Allow cluster to be created (1-3 minutes)<br>
+                            Click "Browse Collections"<br>
+                            Click "Add My Own Data"<br>
+                            Enter a unique "Database Name"<br>
+                            Enter a unique "Collection Name"<br>
+                            Click "Create"<br>
+                            Click the leaf in the upper-left to return to your dashboard<br>
+                            Click on your project<br>
+                            Click "Connect"<br>
+                            Click "Allow Access From Anywhere"<br>
+                            Click "Add IP Address"<br>
+                            Enter a username and password for the database (no special chars)<br>
+                            Click "Create Database User"<br>
+                            Click "Choose a Connection Method"<br>
+                            Click "Connect using MongoDB Compass<br>
+                            Click "I have MongoDB Compass"<br>
+                            Copy the "connection string" into a text document or password manager<br>
+                            Click "Close"<br>
+                            Enable 2FA at https://account.mongodb.com/account/profile/security<br><br>
+
+                            Next, you need a host for your web app. For this, you can use a free version of Heroku. Think of this as the website which will execute the software for your daily use.<br><br>
+
+                            Navigate to https://www.heroku.com/<br>
+                            Click "Sign up for free"<br>
+                            Enter mandatory details<br>
+                            Click "Create free account"<br>
+                            Confirm verification email<br>
+                            Click "Accept"<br>
+                            Click profile icon in upper-right<br>
+                            Click "Account Settings"<br>
+                            Click "Billing"<br>
+                            Click "Add credit card" (no charge made, just provides additional credits)<br>
+                            Enter credit card or Privacy.com card<br>
+                            Provide any random billing details if using Privacy.com<br>
+                            Click "Save Details"<br>
+                            Pause card if using Privacy.com (prevents any future charges)<br>
+                            Click the upper-left icon to return to the "Dashboard"<br>
+                            Click "Create New App"<br>
+                            Provide any "App name", which must be unique<br>
+                            Click "Create App"<br>
+                            If you do not see your app details, click the logo in the upper-left and select your app<br>
+                            Click the "Settings" tab<br>
+                            Click "Reveal Config Vars"<br>
+                            Enter "BASE_URL" in the "KEY" field<br>
+                            Scroll down and copy the URL in the "Domains" section (https://xxx.herokuapp.com/)<br>
+                            Paste the URL in the "VALUE" field under the "Config Vars" section<br>
+                            Click "Add"<br>
+                            Enter "DB" in the "KEY" field<br>
+                            Paste the MongoDB "connection string" copied previously into the "VALUE" field<br>
+                            Replace "password" with the password created for the database in the previous MongoDB steps<br>
+                            Be sure to remove the brackets (< >) around the password!<br>
+                            Click "Add"<br>
+                            Enter "COOKIE_KEY" in the empty "KEY" field<br>
+                            Enter 20 random characters in the "VALUE" field<br>
+                            Click "Add"<br>
+                            Enable 2FA at https://dashboard.heroku.com/account<br><br>
+
+                            Next, you need a free Github account which you can copy or "fork" the app itself into. This will synchronize with the app host.<br><br>
+
+                            Open a new tab and navigate to https://github.com/<br>
+                            Click "Sign up for Github" (or log into your account)<br>
+                            Follow any prompts to enter email, password, and username<br>
+                            Confirm verification email<br>
+                            Navigate to https://github.com/0perationPrivacy/VoIP<br>
+                            Click "Fork" in the upper right<br>
+                            If prompted, create a new repository called "VoIP"
+                            Click "Fetch upstream" in upper-right<br>
+                            If available, click "Fetch and merge" (this is a redundant step)<br>
+                            Enable 2FA at https://github.com/settings/security<br><br>
+
+                            Return to the Heroku browser tab<br>
+                            Click the "Deploy" tab<br>
+                            Click the Github option (middle)<br>
+                            Make sure you are logged into your Github account<br>
+                            Click "Connect to Github"<br>
+                            Click "Authorize Heroku"<br>
+                            Click the "Deploy" tab<br>
+                            In the Github section enter "VoIP" (case-sensitive) and click "Search"<br>
+                            Click "Connect" next to the result<br>
+                            Click "Enable Automatic Deploys"<br>
+                            Click "Deploy Branch"<br>
+                            Click the "Settings" tab<br>
+                            Scroll to "Domains"<br>
+                            Copy the URL, such as https://xxx.herokuapp.com<br>
+                            Navigate to that URL, which is the link you will access for this app<br>
+                            Optional: Bookmark it on desktop for future use<br>
+                            Optional: Create a mobile "home screen" shortcut<br><br>
+
+                            You can now launch your new web app within any browser by navigating to the URL mentioned above (https://xxx.herokuapp.com). If necessary, refresh the browser until you see the login page. Next, you must configure each Telnyx or Twilio number you wish to use within this app.<br><br>
+
+                            Click "Sign Up" to create a new account<br>
+                            Enter a unique username<br>
+                            Enter a secure password<br>
+                            Click "Sign Up"<br>
+                            Log into your new account<br>
+                            Click the dropdown menu and select "Add New Profile"<br>
+                            Enter a "Profile" name as desired (ex: phone number) and "Save"<br>
+                            Make sure this profile is selected and displayed<br>
+                            Click the Settings icon in the upper-left<br>
+                            Click "Profile Settings"<br><br>
+
+                            For Telnyx numbers:<br>
+                            Select the Telnyx option<br>
+                            Enter your Telnyx API key available within the Telnyx Dashboard<br>
+                            Click "Get Number"<br>
+                            Choose the desired number within the dropdown menu<br>
+                            Click "Save" then "OK"<br><br>
+
+                            For Twilio numbers:<br>
+                            Select the Twilio option<br>
+                            Enter your Twilio SID and Token available within the Twilio Dashboard<br>
+                            Click "Get Number"<br>
+                            Choose the desired number within the dropdown menu<br>
+                            Click "Save" then "OK"<br><br>
+
+                            Repeat the process of creating a new profile for each number you own. You can delete a profile by selecting the profile, clicking the settings icon, and clicking the trash can icon for that profile.<br><br>
+
+                            Calling (BETA): You can place calls within VoIPSuite by clicking the phone icon in the upper-left while in any profile. Incoming calls require the app to be open and ready to answer. This all requires your browser to have microphone permissions. We are aware of bugs with this, especially with Twilio. You may need to click "Save" again within each profile's "Profile Settings" for the calling feature to take effect within existing profiles. Updates coming soon.<br><br>
+
+                            <img src="img/sms.png" class="img-fluid"><br><br>
+
+                            Once you have your account created, you should consider disabling new accounts. This prevents someone from creating an account within your app and using your online resources. This is optional, but encouraged.<br><br>
+
+                            Return to https://dashboard.heroku.com/apps<br>
+                            Select your app<br>
+                            Click "Settings"<br>
+                            Click "Reveal Config Vars"<br>
+                            In the "KEY" field enter "SIGNUPS"<br>
+                            In the "VALUE" field enter "off"<br>
+                            Click "Add"<br><br>
+
+                            Next, you need to make sure your new web app does not "sleep" after inactivity. You can use a free version of Uptime Robot to ping your new web app every 20 minutes with the following steps.<br><br>
+
+                            Navigate to https://uptimerobot.com/<br>
+                            Click "Register for Free"<br>
+                            Provide any name, email, and password<br>
+                            Confirm verification email<br>
+                            Optional: Navigate to https://uptimerobot.com/dashboard.php#mySettings<br>
+                            Optional: Select the 2FA checkbox and enable 2FA<br>
+                            Return to the dashboard<br>
+                            Click "Add New Monitor"<br>
+                            Change "Monitor Type" to "HTTP(S)"<br>
+                            Apply "Friendly Name" of "VOIP"<br>
+                            Provide URL of your Heroku App used previously<br>
+                            Change "Monitoring Interval" to "20 minutes"<br>
+                            Click "Create Monitor"<br>
+                            Click the "Create..." button again<br><br>
+
+                            Finally, you should apply updates every week, especially while bugs are fixed and features are added, with the following steps.<br><br>
+
+                            Navigate to https://github.com/<br>
+                            Sign into your account<br>
+                            Select your app (fork of the original)<br>
+                            Click "Fetch upstream" in upper-right<br>
+                            If available, click "Fetch and merge"<br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                      <div class="card">
+                          <div class="card-body">
+                              <h4 class="card-title">Privacy Guide</h4>
+                              <hr/>
+                              <p class="card-text text-center">My latest (2022 4th Edition) book on Extreme Privacy is now available. Click <a href="book7.html">HERE</a> for details.<br /><br /><a href="book7.html"><div class="mx-auto"><img src="img/EP4-3D.png" class="img-fluid"></div></a><br />
+                              <div class="text-center">
+                              <a href="book7.html" class="btn">Buy the Book</a>
+                              </div>
+                              </p>
+                          </div>
+                      </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Weekly Podcast</h4>
+                            <hr/>
+                            <p class="card-text text-center">The weekly podcast presents ideas to help you become digitally invisible, stay secure from cyber threats, and make you a better online investigator. All book updates will be presented on the show. Click <a href="podcast.html">HERE</a> to listen or subscribe.<br /><br /><a href="podcast.html"><div class="mx-auto"><img src="img/podcast.png" class="img-fluid rounded"></div></a></p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center py-5 px-3">
+</div>
+            <footer class="text-center">
+                <ul>
+                    <li>Copyright © 2009-2022 IntelTechniques.com</li>
+                    <li>All Rights Reserved</li>
+                    <li><a href="privacy.html" style="color: #ecf0f1;">Privacy Policy</a></li>
+                </ul>
+            </footer>
+        </main>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

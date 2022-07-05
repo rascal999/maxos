@@ -283,6 +283,12 @@
         "Folder": "Tools"
       },
       {
+        "Title": "IntelTechniques (OSINT)",
+        "URL": "file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "GitHub trending (month)",
         "Favicon": "https://github.com/fluidicon.png",
         "URL": "https://github.com/trending?since=monthly",

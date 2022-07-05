@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "Avenir";
+    src: url("fonts/AvenirLTStd-Book.otf");
+}
+
+body {
+    /* padding-top: 5rem */
+    background: #303942;
+    font-family: Avenir;
+}
+
+/* HEADER */
+.header {
+    background-color: rgb(0, 0, 0, 0.2); /* 10% black transparecy*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Avenir;
+}
+
+nav {
+    margin-bottom: 0rem;
+    background: #303942;
+}
+
+/* margins around box. top & bottom should be double of sides to keep even */
+.card {
+    margin: 0.4rem 0.2rem 0.4rem 0.2rem;    /* top right bottom left */
+    border-color: #303942; /* same as background */
+    border-radius: 0.25rem; /* corner rounding */
+}
+
+/* first card element for each column has 0 upper margin */
+.card:first-child {
+    margin-top: 0rem;
+}
+
+.col-md-4,
+.col-md-8 {
+    padding: 0rem;
+}
+
+/* all icon spacing left/right */
+.fas,
+.fa {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* give the icons some space on either side */
+}
+.btn {
+    background-color: #303942;
+    color: #ecf0f1;
+}
+.btn:hover {
+    background-color: rgba(0,0,0,0.5);
+    /* last value is opacity. 0.7 will make it lighter, 1 will make it black */
+
+    color: #ecf0f1; /* font color on hover */
+}
+
+.title {
+    color: #ecf0f1;
+    font-variant: small-caps;
+    font-family: Avenir;
+}
+@keyframes slideInFromLeft {
+    /*title name animation, position and transparency*/
+    0% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.titlename {
+    color: #ecf0f1;
+    font-family: Avenir;
+    animation: 1s ease-out 0s 1 slideInFromLeft; /* 1st number controls duration, 3rd delay, 4th repetition*/
+}
+
+.nav-link {
+    border-radius: 10px;
+    transition: background-color .4s ease-in-out;
+    color:#ecf0f1 !important;
+}
+
+.nav-item:hover a {
+    color: #bdc3c7!important;
+}
+
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.float-end.title {
+    margin-bottom: 0px;
+}
+
+.icons a {
+    font-size: 22px;
+    /* social media icons size */
+
+    padding: 10px;
+    display: inline-block;
+    color: #ecf0f1;
+    transition: .4s ease-in-out;
+}
+.icons a:hover {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+/* FOOTER */
+footer > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 0 0 0.75em;
+    padding: 0 0 0 0.75em;
+    border-left: solid 1px #e0e0e0;
+    border-color: #bdc3c7;
+    color: #bdc3c7;
+}
+
+footer > ul > li:first-child {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+text-decoration: none;
+}
+
+div a {
+text-decoration:none;
+}
+
+.mx-auto {
+max-width: 250px;
+}
+
+.bidi {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* --------------- if the screen size is 768px or LESS --------------- */
+@media only screen and (max-width: 768px){
+    #navbarCollapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+    }
+    #navbarCollapse.show {
+        display: block!important;
+    }
+    .icons a {
+        font-size: 18px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .fas, .fa {
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* --------------- if the screen size is 768px or MORE --------------- */
+@media only screen and (min-width: 768px){
+    #navbarCollapse {
+        display: flex !important;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}

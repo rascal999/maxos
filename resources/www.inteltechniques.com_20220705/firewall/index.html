@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name=“robots” content=“noarchive”>
+        <meta name=“robots” content=“notranslate”>
+        <meta name=“robots” content=“noimageindex”>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>IntelTechniques pfSense Firewall</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../assets/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
+        <!-- Custom styles for this template -->
+        <link href="../style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container header">
+            <div class="justify-content-between row">
+                <div class="col-auto d-block">
+                  <a href="../index.html">
+                    <div class="row">
+                        <h1 class="float-end title">IntelTechniques</h1>
+                    </div>
+                    <div class="float-end row">
+                        <span class="lh-1 titlename">By Michael Bazzell</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row align-items-center col-auto" data-bs-toggle="tooltip">
+                    <div class="icons">
+                        <a href="../podcast.html" title="Podcast"><i class="fas fa-microphone-alt"></i></a>
+                        <a href="https://inteltechniques.com/blog/" title="Blog"><i class="fas fa-newspaper"></i></a>
+                        <a href="https://inteltechniques.com/blog/feed/" title="RSS"><i class="fas fa-rss-square"></i></a>
+                        <a href="https://www.twitter.com/inteltechniques" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a href="https://www.linkedin.com/company/inteltechniques/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="align-middle navbar navbar-dark navbar-expand-md sticky-top text-center">
+            <div class="align-items-center container d-flex justify-content-evenly">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarCollapse" class="collapse">
+                    <ul class="mb-2 mb-md-0 me-auto navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" aria-current="page" href="../training.html">Training</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../links.html">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../tools/index.html">Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://inteltechniques.com/blog/">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../podcast.html">Podcast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://unredactedmagazine.com" target="_blank">Magazine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../books.html">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">pfSense Firewall</h4>
+                            <hr/>
+                            <p class="card-text">This page presents configuration files to import a custom build into pfSense as explained within Extreme Privacy. While configuration files from previous editions are provided as an archive, they are no longer updated. Only the official files presented below were tested with the current version of pfSense.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Configuration Files</h4>
+                            <hr/>
+                            <p class="card-text">
+                            Updated March 25 2022. Note that pfSense 2.6.0 or newer is required for the following files. First, select the following appropriate configuration file for your device. The "Netflix" options provide no VPN protection within the last "OPT" port, which can be used for video streaming services if needed. </p>
+                            <hr>
+                            <p align="justify">
+                            Model: <a href="https://amzn.to/2NRIfpA" target="_blank">FW2B 2-port Vault</a><br>
+                            Configuration: <a href="2022.FW2B-Proton-US.xml" target="_blank">ProtonVPN US Server</a><br>
+                            Configuration: <a href="2022.FW2B-PIA-US.xml" target="_blank">PIA US Server</a><br><br>
+
+                            Model: <a href="https://amzn.to/31jMzlk" target="_blank">FW4B 4-port Vault</a><br>
+                            Configuration: <a href="2022.FW4B-Proton-US.xml" target="_blank">ProtonVPN US Server</a><br>
+                            Configuration: <a href="2022.FW4B-Proton-US-Netflix.xml" target="_blank">ProtonVPN US Server (open "Netflix" port)</a><br>
+                            Configuration: <a href="2022.FW4B-PIA-US.xml" target="_blank">PIA US Server</a><br>
+                            Configuration: <a href="2022.FW4B-PIA-US-Netflix.xml" target="_blank">PIA US Server (open "Netflix" port)</a><br><br>
+
+                            Model: <a href="https://amzn.to/2NRIfpA" target="_blank">FW6B 6-port Vault</a><br>
+                            Configuration: <a href="2022.FW6B-Proton-US.xml" target="_blank">ProtonVPN US Server</a><br>
+                            Configuration: <a href="2022.FW6B-Proton-US-Netflix.xml" target="_blank">ProtonVPN US Server (open "Netflix" port)</a><br>
+                            Configuration: <a href="2022.FW6B-PIA-US.xml" target="_blank">PIA US Server</a><br>
+                            Configuration: <a href="2022.FW6B-PIA-US-Netflix.xml" target="_blank">PIA US Server (open "Netflix" port)</a><br>
+                            <hr>
+                            Next, import the file. While logged into your pfSense portal, conduct the following.<br><br>
+                            •	Click on Diagnostics then Backup &amp; Restore.<br>
+                              •	Click Browse in the Restore section.<br>
+                              •	Select the file downloaded.<br>
+                              •	Click Restore Configuration and allow the device to reboot. <br>
+                              •	Log into pfSense with a username of <samp>admin</samp> and password of <samp>admin1234</samp>.<br>
+                              •	Click on System then User Manager.<br>
+                              •	Click the pencil icon to the right of the admin user.<br>
+                              •	Change the password to a secure option and save the changes. Reboot the router and verify login.<br><br>
+                            You must now apply your own ProtonVPN credentials into the firewall with the following tasks.<br><br>
+                              •	In pfSense, click VPN then OpenVPN.<br>
+                              •	Click the Clients menu option and click the pencil icon to edit the setting.<br>
+                              •	In the User Authentication section, change the username and password to match your own credentials. If using ProtonVPN, your username and password are NOT the creds used for the app. Find your OpenVPN creds in the ProtonVPN Dashboard. PIA credentials are the same as for account access.<br>
+                            •	If using ProtonVPN, consider changing "us.protonvpn.net" to a specific server near your location. If you want to only connect to local servers within a state or country, you must identify the IP address associated with each server. Assume you are in Texas and want to use only Texas servers. Log into your ProtonVPN account through a web browser and click “Downloads” in the left menu. Choose “OpenVPN configuration files”, then select “Router”, “UDP”, and “Standard server configs”. Select your location, such as “United States”, then select an appropriate server, such as US-TX#9 (Texas). Click the “Download” link to the right and obtain a configuration file for that server. Open this file within a text editor to identify the IP address. Replace "us.protonvpn.net" within pfSense to this new IP address. Entering an IP address of a server is always preferred over a domain name. Use the tutorial within Extreme Privacy to add multiple servers for redundancy.<br>
+                            •	If using PIA, consider changing "us-texas.privacy.network" to a specific server near your location. A full list of all servers is available <a href="https://www.privateinternetaccess.com/openvpn/openvpn-strong.zip" target="_blank">HERE</a><br>
+                            •	Plug your home internet connection into the WAN port.<br>
+                            •	Plug your Wi-Fi router into the LAN port.<br>
+                            •	Other devices can plug into the OPT ports, which will only work if the LAN port is also in use.</p>
+                             </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Previous Files</h4>
+                            <hr/>
+                            <p class="card-text">
+<p>The following files are referenced within Extreme Privacy (Second and Third Editions). These are no longer updated or maintained, but should work with most pfSense 2.3.x through 2.6.x installations. <br>
+<p align="justify"><a href="FW2B-ProtonVPN-US.xml">FW2B 2-port Vault with ProtonVPN US Server (3rd Ed.)</a></p>
+<p align="justify"><a href="FW4B-ProtonVPN-US.xml">FW4B 4-port Vault with ProtonVPN US Server (3rd Ed.)</a></p>
+<p align="justify"><a href="FW4B-N-ProtonVPN-US.xml">FW4B 4-port Vault with ProtonVPN US Server and "Netflix" port. (3rd Ed.)</a></p>
+<p align="justify"><a href="FW6B-ProtonVPN-US.xml">FW6B 6-port Vault with ProtonVPN US Server (3rd Ed.)</a></p>
+<p align="justify"><a href="FW6B-N-ProtonVPN-US.xml">FW6B 6-port Vault with ProtonVPN US Server and "Netflix" port. (3rd Ed.)</a></p>
+<p align="justify"><a href="FW2B-PIA-US.xml">FW2B 2-port Vault with PIA US Server (3rd Ed.)</a></p>
+<p align="justify"><a href="FW4B-PIA-US.xml">FW4B 4-port Vault with PIA US Server (3rd Ed.)</a></p>
+<p align="justify"><a href="FW4B-N-PIA-US.xml">FW4B 4-port Vault with PIA US Server and "Netflix" port. (3rd Ed.)</a></p>
+<p align="justify"><a href="FW6B-PIA-US.xml">FW6B 6-port Vault with PIA US Server (3rd Ed.)</a></p>
+<p align="justify"><a href="FW6B-N-PIA-US.xml">FW6B 6-port Vault with PIA US Server and "Netflix" port. (3rd Ed.)</a></p>
+<p><a href="2-port-ProtonVPN-US-DNS-No-VPNPassword-admin1234.xml">FW2B 2-port Vault with ProtonVPN US Server (Auto-select)(2nd Ed.)</a></p>
+<p><a href="2-port-PIA-west-DNS-No-VPNPassword-admin1234.xml">FW2B 2-port Vault with PIA West Coast Server(2nd Ed.)</a></p>
+<p><a href="2-port-PIA-east-DNS-No-VPNPassword-admin1234.xml">FW2B 2-port Vault with PIA East Coast Server(2nd Ed.)</a></p>
+<p><a href="4-port-ProtonVPN-US-DNS-No-VPNPassword-admin1234.xml">FW4B 4-port Vault with ProtonVPN US Server (Auto-select)(2nd Ed.)</a></p>
+<p><a href="4-port-PIA-west-DNS-No-VPNPassword-admin1234.xml">FW4B 4-port Vault with PIA West Coast Server(2nd Ed.)</a></p>
+<p><a href="4-port-PIA-east-DNS-No-VPNPassword-admin1234.xml">FW4B 4-port Vault with PIA East Coast Server(2nd Ed.)</a></p>
+<p><a href="6-port-ProtonVPN-west-DNS-No-VPNPassword-admin1234.xml">FW6 6-port Vault with ProtonVPN US Server (Auto-select)(2nd Ed.)</a></p>
+<p><a href="6-port-PIA-west-DNS-No-VPNPassword-admin1234.xml">FW6 6-port Vault with PIA West Coast Server(2nd Ed.)</a></p>
+<p><a href="6-port-PIA-east-DNS-No-VPNPassword-admin1234.xml">FW6 6-port Vault with PIA East Coast Server(2nd Ed.)</a><br></p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Suggested VPN</h4>
+                            <hr/>
+                            <p class="card-text text-center">We currently recommend <a href="https://go.getproton.me/aff_c?offer_id=26&aff_id=1519&url_id=282" target="_blank">ProtonVPN</a> as the most private and secure VPN for most firewalls. We also recommend <a href="https://www.privateinternetaccess.com/ThePSOSHOW" target="_blank">PIA</a> for many scenarios. Click the button below to learn more about these considerations.</p>
+                            <div class="text-center">
+                            <a href="../vpn.html" class="btn">More VPN Details</a>
+                            </div><br>
+                            <p class="card-text text-center">To order service with the best discounts available, please use the following affiliate links.<br>
+                            <div class="text-center">
+                            <a href="https://go.getproton.me/aff_c?offer_id=26&aff_id=1519&url_id=282" class="btn" target="_blank">ProtonVPN</a>
+                            </div><br>
+                            <div class="text-center">
+                            <a href="https://www.privateinternetaccess.com/ThePSOSHOW" class="btn" target="_blank">PIA VPN</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Protectli Vault</h4>
+                            <hr/>
+                            <p class="card-text text-center">
+             We currently recommend the Protectli Vault for home firewalls with the following minimal specs:<br>
+            <br>
+            Memory: 4GB<br>
+            Storage: 32GB<br>
+            Wi-Fi: None<br>
+            BIOS: Coreboot<br>
+            <br>
+
+            The following direct purchase links are pre-configured for use as a Firewall:<br><br>
+            2-Port FW2B: <a href="https://amzn.to/2NRIfpA" target="_blank">amzn.to/2NRIfpA</a><br>
+            4-Port FW4B: <a href="https://amzn.to/31jMzlk" target="_blank">amzn.to/31jMzlk</a><br>
+            6-Port FW6B: <a href="https://amzn.to/3rygKm8" target="_blank">amzn.to/3lPBaCo</a><br><br>
+
+          If you have home internet speeds over 200mbps, choose the 4-port or 6-port. If your home internet speed is over 300mbps, choose the 6-port. If you want to have a non-VPN port for Netflix or other streaming, choose the 4-port or 6-port. I currently use <a href="https://amzn.to/31jMzlk" target="_blank">THIS MODEL</a>.
+</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Privacy Guide</h4>
+                            <hr/>
+                            <p class="card-text text-center">My latest (2022 4th Edition) book on Extreme Privacy is now available. Click <a href="../book7.html">HERE</a> for details.<br><br><a href="../book7.html"><div class="mx-auto"><img src="../img/EP4-3D.png" class="img-fluid"></div></a><br>
+                            <div class="text-center">
+                            <a href="../book7.html" class="btn">Buy the Book</a>
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Weekly Podcast</h4>
+                            <hr/>
+                            <p class="card-text text-center">The weekly podcast presents ideas to help you become digitally invisible, stay secure from cyber threats, and make you a better online investigator. All book updates will be presented on the show. Click <a href="podcast.html">HERE</a> to listen or subscribe.<br /><br /><a href="../podcast.html"><div class="mx-auto"><img src="../img/podcast.png" class="img-fluid rounded"></div></a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center py-5 px-3">
+</div>
+            <footer class="text-center">
+                <ul>
+                    <li>Copyright © 2009-2022 IntelTechniques.com</li>
+                    <li>All Rights Reserved</li>
+                    <li><a href="../privacy.html" style="color: #ecf0f1;">Privacy Policy</a></li>
+                </ul>
+            </footer>
+        </main>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
