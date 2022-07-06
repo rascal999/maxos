@@ -9,6 +9,22 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "sponsorBlocker@ajay.app": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/addon-2590937-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "{f1423c11-a4e2-4709-a0f8-6d6a68c83d08}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/hacktools/addon-2649669-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "info@worldbrain.io": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/worldbrain/addon-803922-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
+      "saladict@crimx.com": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ext-saladict/addon-978778-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "ademking@betterviewer": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/betterviewer/addon-2740191-latest.xpi",
         "installation_mode": "normal_installed"
@@ -160,6 +176,96 @@
         "URL": "file:///home/user/pdfs/education/aws",
         "Placement": "toolbar",
         "Folder": "Cloud"
+      },
+      {
+        "Title": "awesome",
+        "URL": "https://github.com/topics/awesome?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "bugbounty",
+        "URL": "https://github.com/topics/bugbounty?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "containers",
+        "URL": "https://github.com/topics/containers?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "docker",
+        "URL": "https://github.com/topics/docker?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "hacking",
+        "URL": "https://github.com/topics/hacking?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "internal-tools",
+        "URL": "https://github.com/topics/internal-tools?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "osint",
+        "URL": "https://github.com/topics/osint?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "pentest-scripts",
+        "URL": "https://github.com/topics/pentest-scripts?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "pentest-tools",
+        "URL": "https://github.com/topics/pentest-tools?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "self-hosted",
+        "URL": "https://github.com/topics/self-hosted?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "scanner",
+        "URL": "https://github.com/topics/scanner?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "security",
+        "URL": "https://github.com/topics/security?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "social-engineering",
+        "URL": "https://github.com/topics/social-engineering?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "termnial",
+        "URL": "https://github.com/topics/terminal?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
+      },
+      {
+        "Title": "vulnerabilities",
+        "URL": "https://github.com/topics/vulnerabilities?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub Topics"
       },
       {
         "Title": "Local Wiki (kiwix)",
