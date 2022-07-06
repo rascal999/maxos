@@ -178,94 +178,100 @@
         "Folder": "Cloud"
       },
       {
-        "Title": "awesome",
+        "Title": "Trending monthly repos",
+        "URL": "https://github.com/trending?since=monthly",
+        "Placement": "toolbar",
+        "Folder": "GitHub"
+      },
+      {
+        "Title": "awesome (topic)",
         "URL": "https://github.com/topics/awesome?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "bugbounty",
+        "Title": "bugbounty (topic)",
         "URL": "https://github.com/topics/bugbounty?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "containers",
+        "Title": "containers (topic)",
         "URL": "https://github.com/topics/containers?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "docker",
+        "Title": "docker (topic)",
         "URL": "https://github.com/topics/docker?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "hacking",
+        "Title": "hacking (topic)",
         "URL": "https://github.com/topics/hacking?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "internal-tools",
+        "Title": "internal-tools (topic)",
         "URL": "https://github.com/topics/internal-tools?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "osint",
+        "Title": "osint (topic)",
         "URL": "https://github.com/topics/osint?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "pentest-scripts",
+        "Title": "pentest-scripts (topic)",
         "URL": "https://github.com/topics/pentest-scripts?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "pentest-tools",
+        "Title": "pentest-tools (topic)",
         "URL": "https://github.com/topics/pentest-tools?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "self-hosted",
-        "URL": "https://github.com/topics/self-hosted?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub Topics"
-      },
-      {
-        "Title": "scanner",
+        "Title": "scanner (topic)",
         "URL": "https://github.com/topics/scanner?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "security",
+        "Title": "security (topic)",
         "URL": "https://github.com/topics/security?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "social-engineering",
+        "Title": "self-hosted (topic)",
+        "URL": "https://github.com/topics/self-hosted?o=desc&s=stars",
+        "Placement": "toolbar",
+        "Folder": "GitHub"
+      },
+      {
+        "Title": "social-engineering (topic)",
         "URL": "https://github.com/topics/social-engineering?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "termnial",
+        "Title": "termnial (topic)",
         "URL": "https://github.com/topics/terminal?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
-        "Title": "vulnerabilities",
+        "Title": "vulnerabilities (topic)",
         "URL": "https://github.com/topics/vulnerabilities?o=desc&s=stars",
         "Placement": "toolbar",
-        "Folder": "GitHub Topics"
+        "Folder": "GitHub"
       },
       {
         "Title": "Local Wiki (kiwix)",
