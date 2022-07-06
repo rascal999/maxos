@@ -65,6 +65,7 @@ a-notify()
 
 new() {
   echo "### New commands ###"
+  echo "a-fo                    Open Firefox at CWD"
   echo "a-localhostrun-gotty    Terminal command over web"
   echo "alt+n                   networkmanager_dmenu"
   echo "aria2c                  wget alternative"
@@ -80,6 +81,10 @@ test-vpn() {
 
 a-agenix() {
   nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- $@
+}
+
+a-fo() {
+  firefox `pwd`
 }
 
 a-gg() {
