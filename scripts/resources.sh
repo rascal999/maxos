@@ -646,9 +646,9 @@ function pull_wordlists() {
 ### ZIMs
 ###
 function pull_zims() {
-  aria2c -x 2 -o /home/user/.local/share/kiwix https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2022-01.zim
-  aria2c -x 2 -o /home/user/.local/share/kiwix https://download.kiwix.org/zim/gutenberg/gutenberg_en_all_2022-05.zim 
-  aria2c -x 2 -o /home/user/.local/share/kiwix https://download.kiwix.org/zim/zimit/cheatography.com_en_all_2021-09.zim
+  aria2c -x 2 --continue=true -d /home/user/.local/share/kiwix https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_2022-01.zim
+  aria2c -x 2 --continue=true -d /home/user/.local/share/kiwix https://download.kiwix.org/zim/gutenberg/gutenberg_en_all_2022-05.zim
+  aria2c -x 2 --continue=true -d /home/user/.local/share/kiwix https://download.kiwix.org/zim/zimit/cheatography.com_en_all_2021-09.zim
 }
 
 # hetty fs

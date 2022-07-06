@@ -39,7 +39,7 @@
         "experiments.supported" = false;
 
         # Because I'm blind
-        "layout.css.devPixelsPerPx" = "1.3";
+        "layout.css.devPixelsPerPx" = "1.5";
 
         # Total Cookie Protection
         "network.cookie.cookieBehavior" = 5;

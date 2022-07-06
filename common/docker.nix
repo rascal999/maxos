@@ -43,4 +43,16 @@
       ports = [ "127.0.0.1:9050:3000" ];
     };
   };
+  virtualisation.oci-containers.containers = {
+    kiwix = {
+      cmd = [
+              "cheatography.com_en_all_2021-09.zim"
+              "gutenberg_en_all_2022-05.zim"
+              "wikipedia_en_all_nopic_2022-01.zim"
+            ];
+      image = "kiwix/kiwix-serve";
+      ports = [ "127.0.0.1:9060:80" ];
+      volumes = [ "/home/user/.local/share/kiwix:/data" ];
+    };
+  };
 }

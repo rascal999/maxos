@@ -162,6 +162,12 @@
         "Folder": "Cloud"
       },
       {
+        "Title": "Local Wiki (kiwix)",
+        "URL": "http://localhost:9060/?lang=eng",
+        "Placement": "toolbar",
+        "Folder": "Misc"
+      },
+      {
         "Title": "The Guardian",
         "Favicon": "https://assets.guim.co.uk/images/favicons/fee5e2d638d1c35f6d501fa397e53329/152x152.png",
         "URL": "https://www.theguardian.com/uk",
@@ -221,37 +227,37 @@
         "Folder": "Tools"
       },
       {
-        "Title": "Trilium",
+        "Title": "KB (Trilium)",
         "URL": "http://localhost:9020/",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
       {
-        "Title": "Sharelatex",
+        "Title": "Reporting Tool (Sharelatex)",
         "URL": "http://localhost:8090/",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
       {
-        "Title": "Jupyter",
+        "Title": "Automated Scans (Jupyter)",
         "URL": "http://localhost:8000/",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
       {
-        "Title": "HOUDINI",
+        "Title": "Docker commands (HOUDINI)",
         "URL": "http://localhost:9050/",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
       {
-        "Title": "IVRE",
+        "Title": "Network recon (IVRE)",
         "URL": "http://localhost:8010/",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
       {
-        "Title": "reNgine",
+        "Title": "Web app scanner (reNgine)",
         "URL": "https://localhost:8020/",
         "Placement": "toolbar",
         "Folder": "Tools"
@@ -275,7 +281,7 @@
         "Folder": "Tools"
       },
       {
-        "Title": "spiderfoot",
+        "Title": "OSINT (SpiderFoot)",
         "URL": "http://localhost:8060/",
         "Placement": "toolbar",
         "Folder": "Tools"

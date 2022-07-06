@@ -6,6 +6,10 @@ Author: dpcdpc11.gumroad.com
 ENJOY!
 */
 
+* {
+  font-size: 12pt !important
+}
+
 #navigator-toolbox {
   border: 0 !important;
 }
