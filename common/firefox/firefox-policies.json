@@ -9,16 +9,16 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{504e1565-ddd7-4fc3-bec3-079ddb622b2c}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/daily/addon-883898-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "sponsorBlocker@ajay.app": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/addon-2590937-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "{f1423c11-a4e2-4709-a0f8-6d6a68c83d08}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/hacktools/addon-2649669-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "info@worldbrain.io": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/worldbrain/addon-803922-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "saladict@crimx.com": {
