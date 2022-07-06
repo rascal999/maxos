@@ -417,13 +417,6 @@
         "Folder": "Tools"
       },
       {
-        "Title": "GitHub trending (month)",
-        "Favicon": "https://github.com/fluidicon.png",
-        "URL": "https://github.com/trending?since=monthly",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
         "Title": "awesome-pentest-cheat-sheets",
         "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
         "Placement": "toolbar",
