@@ -468,6 +468,7 @@ function pull_tool_repos() {
   git_update https://github.com/BloodHoundAD/BloodHound.git $HOME/git/pentest-tools/BloodHound
   git_update https://github.com/n1nj4sec/pupy.git $HOME/git/pentest-tools/pupy
   git_update https://github.com/google/oss-fuzz.git $HOME/git/pentest-tools/oss-fuzz
+  git_update https://github.com/internetwache/GitTools.git $HOME/git/pentest-tools/GitTools
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
