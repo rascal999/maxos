@@ -27,7 +27,7 @@ in {
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
 
-        "${mod}+b" = "exec /home/user/burp.sh";
+        "${mod}+b" = "exec /home/user/git/nixos-next/scripts/burp.sh";
         "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
