@@ -1,4 +1,4 @@
-pageInfo:
+ pageInfo:
   title: Dashy
   description: Welcome to your new dashboard!
   navLinks:
@@ -26,6 +26,18 @@ sections:
         url: http://localhost:8040/
         target: newtab
         id: 0_1300_cyberchef
+      - title: Docker commands
+        description: HOUDINI
+        icon: http://localhost:9050/favicon.ico
+        url: http://localhost:9050/
+        target: newtab
+        id: 1_1300_dockercommands
+      - title: Reporting Tool
+        description: Sharelatex
+        icon: http://localhost:8090/favicon.ico
+        url: http://localhost:8090/
+        target: newtab
+        id: 2_1300_reportingtool
   - name: Pentest Reports
     displayData:
       sortBy: default
@@ -33,7 +45,13 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
-    items: []
+    items:
+      - title: Halborn Reports
+        url: file:///home/user/git/pentest-education/HalbornPublicReports/
+        id: 0_1522_halbornreports
+      - title: Public Pentest Reports
+        url: file:///home/user/git/pentest-education/public-pentesting-reports/
+        id: 1_1522_publicpentestreports
   - name: Education
     displayData:
       sortBy: default
@@ -41,4 +59,80 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
-    items: []
+    items:
+      - title: Local Wiki
+        url: http://localhost:9060/?lang=eng
+        target: newtab
+        id: 0_924_localwiki
+      - title: Trilium
+        description: Knowledge Base
+        url: http://localhost:9020/
+        target: newtab
+        id: 1_924_trilium
+  - name: Pentest Scanners
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Automated Scans
+        description: Jupyter
+        icon: http://localhost:8000/favicon.ico
+        url: http://localhost:8000/
+        target: newtab
+        id: 0_1600_automatedscans
+      - title: Mobile App Scanner
+        description: Mobile Security Framework
+        icon: http://localhost:8050/static/img/favicon.ico
+        url: http://localhost:8050/
+        target: newtab
+        id: 1_1600_mobileappscanner
+      - title: Web App Scanner
+        description: reNgine
+        icon: ''
+        url: https://localhost:8020/
+        target: newtab
+        id: 2_1600_webappscanner
+  - name: OSINT
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: IntelTechniques
+        url: >-
+          file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html
+        target: newtab
+        id: 0_397_inteltechniques
+      - title: OSINT Techniques
+        icon: https://www.osinttechniques.com/favicon.ico
+        url: https://www.osinttechniques.com/
+        target: newtab
+        id: 1_397_osinttechniques
+      - title: SpiderFoot
+        description: ''
+        icon: http://localhost:8060/static/img/spiderfoot-icon.png
+        url: http://localhost:8060/
+        target: newtab
+        id: 2_397_spiderfoot
+  - name: Misc
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: LibreTranslate
+        icon: http://localhost:9070/static/favicon.ico
+        url: http://localhost:9070/
+        target: newtab
+        id: 0_396_libretranslate
+      - title: Syncthing
+        url: http://localhost:8384/
+        target: newtab
+        id: 1_396_syncthing
