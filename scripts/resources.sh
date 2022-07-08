@@ -479,6 +479,12 @@ function pull_tool_repos() {
   git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
 
   ### Tools which need building
+  # redgo
+  git_update https://github.com/rascal999/redgo.git
+  if [[ "$?" == "0" ]]; then
+    docker build . -t redgo
+  fi
+
   # twa
   git_update https://github.com/trailofbits/twa.git $HOME/git/pentest-tools/twa
   if [[ "$?" == "0" ]]; then
