@@ -425,6 +425,12 @@
         "Folder": "Tools"
       },
       {
+        "Title": "LibreTranslate",
+        "URL": "http://localhost:9070",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "awesome-pentest-cheat-sheets",
         "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
         "Placement": "toolbar",
