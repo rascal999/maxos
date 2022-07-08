@@ -8,7 +8,22 @@
     "Homepage": {
       "StartPage": "previous-session"
     },
+    "SearchEngines": {
+      "Add": [
+        {
+          "Name": "SearXNG",
+          "URLTemplate": "http://localhost:9080/search?q={searchTerms}",
+          "Method": "GET",
+          "IconURL": "http://localhost:9080/favicon.ico",
+          "Alias": "SearXNG"
+        }
+      ]
+    },
     "ExtensionSettings": {
+      "{af37054b-3ace-46a2-ac59-709e4412bec6}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/add-custom-search-engine/addon-989796-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "jid1-xUfzOsOFlzSOXg@jetpack": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/reddit-enhancement-suite/addon-387429-latest.xpi",
         "installation_mode": "normal_installed"

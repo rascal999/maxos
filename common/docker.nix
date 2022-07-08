@@ -43,6 +43,12 @@
       ports = [ "127.0.0.1:9070:5000" ];
     };
 
+    searxng = {
+      environment = { INSTANCE_NAME = "nixos-instance"; };
+      image = "searxng/searxng";
+      ports = [ "127.0.0.1:9080:8080" ];
+    };
+
     kiwix = {
       cmd = [
               "cheatography.com_en_all_2021-09.zim"
