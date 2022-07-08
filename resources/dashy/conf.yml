@@ -8,7 +8,7 @@ pageInfo:
       path: https://dashy.to/docs
 appConfig:
   theme: one-dark
-  layout: horizontal
+  layout: vertical
   iconSize: small
   language: en
 sections:
@@ -20,7 +20,12 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
-    items: []
+    items:
+      - title: CyberChef
+        icon: http://localhost:8040/assets/aecc661b69309290f600.ico
+        url: http://localhost:8040/
+        target: newtab
+        id: 0_1300_cyberchef
   - name: Pentest Reports
     displayData:
       sortBy: default

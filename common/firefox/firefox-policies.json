@@ -111,6 +111,12 @@
     },
     "Bookmarks": [
       {
+        "Favicon": "http://localhost:9090/favicon.ico",
+        "Title": "Dashy",
+        "URL": "http://localhost:9090/",
+        "Placement": "toolbar"
+      },
+      {
         "Title": "Altoro Mutual",
         "URL": "http://127.10.0.1:1080/",
         "Placement": "toolbar",
