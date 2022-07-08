@@ -68,13 +68,14 @@ new() {
   echo "### New commands ###"
   echo "a-fo                    Open Firefox at CWD"
   echo "a-localhostrun-gotty    Terminal command over web"
-  echo "alt+n                   networkmanager_dmenu"
   echo "aria2c                  wget alternative"
   echo "broot                   File explorer"
   echo "croc                    Share files between machines"
   echo "d-hmpaa                 Howmanypeoplearearound (wifi scan)"
-  echo "rga                     ripgrep (PDFs, zips, docx etc.)"
+  echo "gitleaks                Discover secrets using Gitleaks"
+  echo "k6                      Loaod testing with scripting"
   echo "tldr                    TL;DR for command"
+  echo "wuzz                    Interactive cli tool for HTTP inspection"
 }
 
 test-vpn() {
