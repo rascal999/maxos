@@ -6,7 +6,6 @@
     "DisableProfileImport": true,
     "NoDefaultBookmarks": true,
     "Homepage": {
-      "URL": "http://localhost:9090/",
       "StartPage": "previous-session"
     },
     "SearchEngines": {
@@ -21,10 +20,6 @@
       ]
     },
     "ExtensionSettings": {
-      "{66E978CD-981F-47DF-AC42-E3CF417C1467}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/new-tab-homepage/addon-777-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "{af37054b-3ace-46a2-ac59-709e4412bec6}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/add-custom-search-engine/addon-989796-latest.xpi",
         "installation_mode": "normal_installed"
