@@ -44,6 +44,12 @@
     };
   };
   virtualisation.oci-containers.containers = {
+    houdini = {
+      image = "libretranslate/libretranslate";
+      ports = [ "127.0.0.1:9070:5000" ];
+    };
+  };
+  virtualisation.oci-containers.containers = {
     kiwix = {
       cmd = [
               "cheatography.com_en_all_2021-09.zim"
