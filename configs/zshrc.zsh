@@ -71,6 +71,7 @@ new() {
   echo "alt+n                   networkmanager_dmenu"
   echo "aria2c                  wget alternative"
   echo "broot                   File explorer"
+  echo "croc                    Share files between machines"
   echo "d-hmpaa                 Howmanypeoplearearound (wifi scan)"
   echo "rga                     ripgrep (PDFs, zips, docx etc.)"
   echo "tldr                    TL;DR for command"

@@ -40,6 +40,7 @@ in {
      connman
      connman-gtk
      coreutils
+     croc
      #cutter
      cups-brother-hl3140cw
      dbeaver
