@@ -76,6 +76,7 @@ in {
      ghidra-bin
      gimp
      git
+     gitleaks
      git-crypt
      glances
      gnumake
@@ -113,6 +114,7 @@ in {
      jupyter
      jython
      k3s
+     k6
      keepassxc
      kind
      kiwix
@@ -226,6 +228,7 @@ in {
      wireshark-qt
      woeusb
      wpscan
+     wuzz
      x11docker
      x11vnc
      xcalib
