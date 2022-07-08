@@ -20,6 +20,7 @@
   };
 
   home.file = {
+    ".config/dashy/conf.yml".source = ./resources/dashy/conf.yml;
     ".mime.types".source = ./common/firefox/mime.types;
     ".startup.sh".source = ./scripts/startup.sh;
     ".vimrc".source = ./common/vimrc.nix;

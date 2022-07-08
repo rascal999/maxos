@@ -52,7 +52,7 @@
     dashy = {
       image = "lissy93/dashy";
       ports = [ "127.0.0.1:9090:80" ];
-      volumes = [ "/home/user/git/nixos/resources/dashy/conf.yml:/app/public/conf.yml" ];
+      volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
     };
 
     kiwix = {
