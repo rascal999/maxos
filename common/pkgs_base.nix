@@ -107,6 +107,7 @@ in {
      ipcalc
      iwd
      jadx
+     jaeles
      jdk
      jd-gui
      john

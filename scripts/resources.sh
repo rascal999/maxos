@@ -330,6 +330,7 @@ function pull_bug_bounties() {
 ### Educational repos (GitHub)
 ###
 function pull_educational_repos() {
+  ### Misc
   git_update https://github.com/Azure/terraform.git $HOME/git/education/terraform
   git_update https://github.com/hashicorp/learn-terraform-provision-aks-cluster.git $HOME/git/education/learn-terraform-provision-aks-cluster
   git_update https://github.com/open-guides/og-aws.git $HOME/git/education/og-aws
@@ -349,6 +350,8 @@ function pull_educational_repos() {
   git_update https://github.com/bregman-arie/devops-exercises.git $HOME/git/education/devops-exercises
   git_update https://github.com/MichaelCade/90DaysOfDevOps.git $HOME/git/education/90DaysOfDevOps
   git_update https://github.com/veeral-patel/how-to-secure-anything.git $HOME/git/education/how-to-secure-anything
+  git_update https://github.com/jlevy/the-art-of-command-line.git $HOME/git/education/the-art-of-command-line
+  git_update https://github.com/0xAX/linux-insides.git $HOME/git/education/linux-insides
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -413,6 +416,7 @@ function pull_educational_repos() {
   git_update https://github.com/trailofbits/publications.git $HOME/git/pentest-education/trailofbits-publications
   git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/pentest-education/the-practical-linux-hardening-guide
   git_update https://github.com/upgundecha/howtheysre.git $HOME/git/pentest-education/howtheysre
+  git_update https://github.com/RistBS/Awesome-RedTeam-Cheatsheet.git $HOME/git/pentest-education/Awesome-RedTeam-Cheatsheet
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
@@ -470,6 +474,8 @@ function pull_tool_repos() {
   git_update https://github.com/n1nj4sec/pupy.git $HOME/git/pentest-tools/pupy
   git_update https://github.com/google/oss-fuzz.git $HOME/git/pentest-tools/oss-fuzz
   git_update https://github.com/internetwache/GitTools.git $HOME/git/pentest-tools/GitTools
+  git_update https://github.com/S3cur3Th1sSh1t/WinPwn.git $HOME/git/pentest-tools/WinPwn
+  git_update https://github.com/liamg/traitor.git $HOME/git/pentest-tools/traitor
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
