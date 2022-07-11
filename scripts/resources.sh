@@ -418,12 +418,18 @@ function pull_educational_repos() {
   git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/pentest-education/the-practical-linux-hardening-guide
   git_update https://github.com/upgundecha/howtheysre.git $HOME/git/pentest-education/howtheysre
   git_update https://github.com/RistBS/Awesome-RedTeam-Cheatsheet.git $HOME/git/pentest-education/Awesome-RedTeam-Cheatsheet
+  git_update https://github.com/dsopas/assessment-mindset.git $HOME/git/pentest-education/assessment-mindset
+  git_update https://github.com/rmusser01/Infosec_Reference.git $HOME/git/pentest-education/Infosec_Reference
+  git_update https://github.com/EdOverflow/bugbounty-cheatsheet.git $HOME/git/pentest-education/bugbounty-cheatsheet
+  git_update https://github.com/decalage2/awesome-security-hardening.git $HOME/git/pentest-education/awesome-security-hardening
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
+  git_update https://github.com/fabacab/awesome-cybersecurity-blueteam.git $HOME/git/pentest-education/awesome-cybersecurity-blueteam
 
   ### OSINT
   git_update https://github.com/jivoi/awesome-osint.git $HOME/git/pentest-education/awesome-osint
+  git_update https://github.com/jakejarvis/awesome-shodan-queries.git $HOME/git/pentest-education/awesome-shodan-queries
 }
 
 ###
