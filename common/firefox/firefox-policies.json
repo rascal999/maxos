@@ -450,6 +450,12 @@
         "Folder": "Nix"
       },
       {
+        "Title": "draw.io",
+        "URL": "http://localhost:10010/",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "Syncthing",
         "URL": "http://localhost:8384/",
         "Placement": "toolbar",

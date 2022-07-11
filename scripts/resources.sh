@@ -130,6 +130,7 @@ function pull_misc_things() {
   docker pull dperson/torproxy                             # Tor and Privoxy docker container
   docker pull zadam/trilium                                # Personal knowledge base
   docker pull kiwix/kiwix-serve                            # Internet. Offline.
+  docker pull jgraph/drawio                                # draw.io
 
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks

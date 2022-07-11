@@ -60,6 +60,11 @@
       ports = [ "127.0.0.1:10000:4000" ];
     };
 
+    drawio = {
+      image = "jgraph/drawio";
+      ports = [ "127.0.0.1:10010:8080" ];
+    };
+
     kiwix = {
       cmd = [
               "cheatography.com_en_all_2021-09.zim"
