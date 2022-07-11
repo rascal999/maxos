@@ -227,6 +227,7 @@ function pull_tools_docker() {
   docker pull thewhiteh4t/finalrecon                       # The Last Web Recon Tool You'll Need
   docker pull screetsec/sudomy:v1.1.9-dev                  # Subdomain enumeration tool
   docker pull xshuden/xsstrike                             # Most advanced XSS scanner
+  docker pull djangobyjeffrey/gtfobins                     # Bypass local security restrictions in misconfigured systems
 
   ### https://github.com/cybersecsi/RAUDI
   docker pull secsi/apktool

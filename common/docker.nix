@@ -55,6 +55,11 @@
       volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
     };
 
+    gtfobins = {
+      image = "djangobyjeffrey/gtfobins";
+      ports = [ "127.0.0.1:10000:4000" ];
+    };
+
     kiwix = {
       cmd = [
               "cheatography.com_en_all_2021-09.zim"
