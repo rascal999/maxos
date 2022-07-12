@@ -145,6 +145,7 @@ in {
      neocomp
      ngrep
      ngrok
+     nixops
      nixos-generators
      nmap
      nodejs

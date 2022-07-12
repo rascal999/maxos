@@ -97,9 +97,9 @@
 
   # Flakes
   #nix.package = pkgs.nixUnstable;
-  #nix.extraOptions = ''
-  #  experimental-features = nix-command flakes
-  #'';
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
 
   # For WireGuard
   networking.firewall.checkReversePath = false;
@@ -197,6 +197,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
     "electron-18.1.0"
+    "python2.7-pyjwt-1.7.1"
   ];
 
   # docker
