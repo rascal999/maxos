@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-GIT_CURRENT_HASH=`cd /home/user/git/nixos && git rev-parse --short HEAD`
+GIT_CURRENT_HASH=`sudo -u user git -C /home/user/git/nixos rev-parse --short HEAD`
 GIT_PREV_HASH=0
 
 if [[ -f "/tmp/iso_hash" ]]; then
