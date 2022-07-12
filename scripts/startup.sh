@@ -1,6 +1,5 @@
 # Clone nixos
-/run/current-system/sw/bin/rm -rf ${HOME}/git/nixos
-/run/current-system/sw/bin/git clone https://github.com/rascal999/nixos ${HOME}/git/nixos
+/run/current-system/sw/bin/git clone https://github.com/rascal999/nixos ${HOME}/git/nixos || /run/current-system/sw/bin/git -C ${HOME}/git/nixos pull
 # Jupyter templates
 mkdir -p ${HOME}/jupyter/pentest/base
 rm ${HOME}/jupyter/pentest/base/*.ipynb
