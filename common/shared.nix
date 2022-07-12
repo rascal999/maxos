@@ -237,6 +237,8 @@
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
 
+  virtualisation.virtualbox.host.enable = true;
+
   # QEMU
   virtualisation.libvirtd = {
     enable = true;
