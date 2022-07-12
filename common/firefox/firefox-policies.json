@@ -450,6 +450,12 @@
         "Folder": "Nix"
       },
       {
+        "Title": "netdata",
+        "URL": "http://localhost:19999/",
+        "Placement": "toolbar",
+        "Folder": "Tools"
+      },
+      {
         "Title": "draw.io",
         "URL": "http://localhost:10010/",
         "Placement": "toolbar",

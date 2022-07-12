@@ -7,7 +7,7 @@ let
     pip
     setuptools
     requests
-  ]; 
+  ];
   python-with-my-packages = python3.withPackages my-python-packages;
 in {
   # List packages installed in system profile. To search, run:

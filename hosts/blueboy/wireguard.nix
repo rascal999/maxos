@@ -8,7 +8,7 @@
   virtualisation.oci-containers.backend = "docker";
   virtualisation.oci-containers.containers = {
     wireguard = {
-      environmentFiles = [ 
+      environmentFiles = [
                           config.age.secrets.wireguard-env.path
                          ];
       extraOptions = [

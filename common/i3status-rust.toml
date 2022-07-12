@@ -5,7 +5,7 @@ icons = "awesome"
 block = "hueshift"
 hue_shifter = "gammastep"
 step = 100
-click_temp = 1900 
+click_temp = 1900
 
 [[block]]
 block = "battery"

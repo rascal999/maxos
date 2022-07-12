@@ -5,9 +5,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      android-studio
-     libreoffice-fresh                                                                                                            
+     libreoffice-fresh
      OVMF
      qemu
-     qemu-utils                                                 
+     qemu-utils
   ];
 }

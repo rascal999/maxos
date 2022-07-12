@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 
-let 
+let
   mod = "Mod1";
 in {
   xsession.windowManager.i3 = {

@@ -117,7 +117,7 @@ html[sizemode="maximized"] #titlebar #TabsToolbar {
 #TabsToolbar > .titlebar-buttonbox-container {
     background: #151C24 !important;
 }
-  
+
 #titlebar #TabsToolbar {
   background: #151C24 !important;
 }
@@ -162,7 +162,7 @@ html[sizemode="maximized"] #titlebar #TabsToolbar {
 .urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
   background: #A8BFE16E !important;
 }
-.urlbarView-row[dynamicType="onboardTabToSearch"]:hover > .urlbarView-row-inner, 
+.urlbarView-row[dynamicType="onboardTabToSearch"]:hover > .urlbarView-row-inner,
 .urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover > .urlbarView-row-inner, .urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]):hover,
 .searchbar-engine-one-off-item:not([selected]):hover, .addengine-item:hover {
     background: #A8BFE130 !important;

@@ -42,5 +42,11 @@
       image = "ghcr.io/netbootxyz/netbootxyz";
       ports = [ "69:69/udp" ];
     };
+
+    nginx-autoindex = {
+      image = "dceoy/nginx-autoindex";
+      ports = [ "10010:80" ];
+      volumes = [ "/home/user/git/nixos/result:/var/lib/nginx/html:ro" ];
+    };
   };
 }

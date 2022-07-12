@@ -65,6 +65,25 @@
       ports = [ "127.0.0.1:10010:8080" ];
     };
 
+    netdata = {
+      extraOptions = [
+                      "--cap-add=SYS_PTRACE"
+                      "--security-opt=apparmor=unconfined"
+                     ];
+      image = "netdata/netdata";
+      ports = [ "127.0.0.1:19999:19999" ];
+      volumes = [
+                  "netdataconfig:/etc/netdata"
+                  "netdatalib:/var/lib/netdata"
+                  "netdatacache:/var/cache/netdata"
+                  "/etc/passwd:/host/etc/passwd:ro"
+                  "/etc/group:/host/etc/group:ro"
+                  "/proc:/host/proc:ro"
+                  "/sys:/host/sys:ro"
+                  "/etc/os-release:/host/etc/os-release:ro"
+                ];
+    };
+
     kiwix = {
       cmd = [
               "cheatography.com_en_all_2021-09.zim"

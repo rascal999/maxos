@@ -29,6 +29,7 @@ PORT_LIBRETRANSLATE=9070
 PORT_SEARXNG=9080
 PORT_DASHY=9090
 PORT_GTFOBINS=10000
+PORT_NGINX_ISO=10010
 PORT_WIREGUARD=51820
 
 export MCFLY_KEY_SCHEME=vim
@@ -124,7 +125,7 @@ d-shellhere() {
 d-shellhereport() {
   if [[ "$#" -ne "2" ]]; then
     echo "d-shellhereport <image> <port>"
-    return 1 
+    return 1
   fi
   dirname=${PWD##*/}
   docker run --rm -it -v $(pwd):/${dirname} -p $2:$2 --entrypoint=/bin/bash "$1"
@@ -569,7 +570,7 @@ awsscan() {
   echo "###"
   a-prowler $2 $3 $4
   echo "###"
-  echo "### aws-public-ips" 
+  echo "### aws-public-ips"
   echo "###"
   a-aws-public-ips $1 $2 $3 $4
 }
@@ -857,7 +858,7 @@ d-myth() {
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
   WORK_DIR=$HOME/tool-output/myth/$TIMESTAMP
   mkdir -p $WORK_DIR 2>/dev/null
-  docker run -it --rm -v $(pwd):/home/mythril/sol mythril/myth a sol/$1 --solv $2 > $WORK_DIR/${TIMESTAMP}_myth 
+  docker run -it --rm -v $(pwd):/home/mythril/sol mythril/myth a sol/$1 --solv $2 > $WORK_DIR/${TIMESTAMP}_myth
   CONTENT="$@ completed"
   notify-dekstop "myth - $CONTENT"
 }
@@ -906,7 +907,7 @@ d-eyewitness() {
 d-screenshot() {
   if [[ "$#" -lt "2" ]]; then
     echo "d-screenshot <screenshot|full_screenshot|screenshot_series|full_screenshot_series> <URL> [resolution] [delay]"
-    return 1 
+    return 1
   fi
 
   docker run --shm-size 1G --rm -v $PWD:/screenshots alekzonder/puppeteer:latest $@
@@ -946,7 +947,7 @@ d-spiderfoot(){
 d-arjun(){
   if [[ "$#" -lt "1" ]]; then
     echo "d-arjun <URL>"
-    return 1 
+    return 1
   fi
 
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
@@ -1063,15 +1064,15 @@ d-responder() {
 d-smbclient() {
   if [[ "$#" -lt "1" ]]; then
     echo "d-smbclient <IP>"
-    return 1 
+    return 1
   fi
 
   shares=('C$' 'D$' 'ADMIN$' 'IPC$' 'PRINT$' 'FAX$' 'SYSVOL' 'NETLOGON')
 
   for share in ${shares[*]}; do
-    output=$(docker run -it --rm --net=host booyaabes/kali-linux-full smbclient -U '%' -N \\\\$@\\$share -c '') 
+    output=$(docker run -it --rm --net=host booyaabes/kali-linux-full smbclient -U '%' -N \\\\$@\\$share -c '')
 
-    if [[ -z $output ]]; then 
+    if [[ -z $output ]]; then
       # no output if command goes through, assuming that a session was created
       echo "[+] creating a null session is possible for $share"
     else
@@ -2520,5 +2521,5 @@ ds-zammad-kill() {
 
 eval "$(mcfly init zsh)"
 
-# appwrite.ds bibliogram.ds bookstack.ds botpress.ds calibre.ds chatwoot.ds commento.ds crater.ds cryptpad.ds directus.ds discourse.ds dolibarr.ds drawio.ds element.ds ethercalc.ds etherpad.ds ethibox.ds fathom.ds firefly.ds flarum.ds framadate.ds freshrss.ds ghost.ds gitlab.ds gogs.ds grafana.ds grav.ds habitica.ds hasura.ds hedgedoc.ds huginn.ds invoiceninja.ds jenkins.ds jitsi.ds kanboard.ds listmonk.ds magento.ds mailserver.ds mailtrain.ds mastodon.ds matomo.ds mattermost.ds matterwiki.ds mautic.ds mediawiki.ds metabase.ds minio.ds mobilizon.ds monitoring.ds n8n.ds nextcloud.ds nitter.ds nocodb.ds odoo.ds passbolt.ds peertube.ds phpbb.ds pinafore.ds pixelfed.ds plume.ds polr.ds portainer.ds posthog.ds prestashop.ds pydio.ds pytition.ds rainloop.ds redmine.ds registry.ds rocketchat.ds rsshub.ds scrumblr.ds searx.ds suitecrm.ds taiga.ds talk.ds traefik.ds umami.ds uptime-kuma.ds waiting.ds wallabag.ds wekan.ds whoogle-search.ds wikijs.ds wordpress.ds writefreely.ds zammad.ds 
+# appwrite.ds bibliogram.ds bookstack.ds botpress.ds calibre.ds chatwoot.ds commento.ds crater.ds cryptpad.ds directus.ds discourse.ds dolibarr.ds drawio.ds element.ds ethercalc.ds etherpad.ds ethibox.ds fathom.ds firefly.ds flarum.ds framadate.ds freshrss.ds ghost.ds gitlab.ds gogs.ds grafana.ds grav.ds habitica.ds hasura.ds hedgedoc.ds huginn.ds invoiceninja.ds jenkins.ds jitsi.ds kanboard.ds listmonk.ds magento.ds mailserver.ds mailtrain.ds mastodon.ds matomo.ds mattermost.ds matterwiki.ds mautic.ds mediawiki.ds metabase.ds minio.ds mobilizon.ds monitoring.ds n8n.ds nextcloud.ds nitter.ds nocodb.ds odoo.ds passbolt.ds peertube.ds phpbb.ds pinafore.ds pixelfed.ds plume.ds polr.ds portainer.ds posthog.ds prestashop.ds pydio.ds pytition.ds rainloop.ds redmine.ds registry.ds rocketchat.ds rsshub.ds scrumblr.ds searx.ds suitecrm.ds taiga.ds talk.ds traefik.ds umami.ds uptime-kuma.ds waiting.ds wallabag.ds wekan.ds whoogle-search.ds wikijs.ds wordpress.ds writefreely.ds zammad.ds
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

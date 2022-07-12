@@ -114,7 +114,7 @@ function git_update() {
 function pull_heavy_docker() {
   docker pull booyaabes/kali-linux-full
   docker pull firefart/dockerctf                           # Docker image with some common ctf tools
-  docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support 
+  docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support
   docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
 }
 
@@ -131,6 +131,7 @@ function pull_misc_things() {
   docker pull zadam/trilium                                # Personal knowledge base
   docker pull kiwix/kiwix-serve                            # Internet. Offline.
   docker pull jgraph/drawio                                # draw.io
+  docker pull netdata/netdata                              # Netdata dashboard
 
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
