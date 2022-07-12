@@ -2,10 +2,11 @@
 
 usage() {
   echo "Telegram notify script"
-  echo "Usage: $0 -m <message> [-a] [-e] [-g] [-o] [-p] [-t] [-v] [-w]" 1>&2;
+  echo "Usage: $0 -m <message> [-a] [-m] [-q]" 1>&2;
   echo
   echo "-a (Alert)            Notification alert"
   echo "-m (Message)          Message to send"
+  echo "-q (Quiet)            Don't output to stdout"
   echo
   echo "Examples:"
   echo "# Non-urgent message"
@@ -18,12 +19,14 @@ usage() {
 
 arg_alert="true"
 arg_message="empty"
+arg_quiet="false"
 
-while getopts am: flag
+while getopts am:q flag
 do
     case "${flag}" in
         a) arg_alert="false";;
         m) arg_message=${OPTARG};;
+        q) arg_quiet="true";;
     esac
 done
 
@@ -47,8 +50,10 @@ curl -s -X POST \
      -d "$JSON" \
      https://api.telegram.org/bot${BOT_API_KEY}/sendMessage > /dev/null
 
-if [[ "$?" == "0" ]]; then
-  echo "Notified via Telegram."
-else
-  echo "ERROR: Telegram notify issue."
+if [[ "$arg_quiet" == "false" ]]; then
+  if [[ "$?" == "0" ]]; then
+    echo "Notified via Telegram."
+  else
+    echo "ERROR: Telegram notify issue."
+  fi
 fi

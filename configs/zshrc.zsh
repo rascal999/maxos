@@ -44,6 +44,13 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 ###
+### SSH alert
+###
+if [[ -n "$SSH_CONNECTION" ]]; then
+  $HOME/git/nixos/scripts/telegram_notify.sh -a -q -m "Login from $SSH_CLIENT"
+fi
+
+###
 ### Dunst
 ###
 dunst-handle() {
