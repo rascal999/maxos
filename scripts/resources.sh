@@ -142,7 +142,6 @@ function pull_misc_things() {
   git_update https://github.com/misterch0c/CrimeBoards.git $HOME/git/misc/CrimeBoards
   git_update https://github.com/misterch0c/what_is_this_c2.git $HOME/git/misc/what_is_this_c2
   git_update https://github.com/jessfraz/dockerfiles.git $HOME/git/misc/jessfraz-dockerfiles
-  git_update https://github.com/docker/labs.git $HOME/git/misc/docker-labs
   git_update https://github.com/StevenBlack/hosts.git $HOME/git/misc/StevenBlack-hosts
 }
 
@@ -333,8 +332,6 @@ function pull_bug_bounties() {
 ###
 function pull_educational_repos() {
   ### Misc
-  git_update https://github.com/Azure/terraform.git $HOME/git/education/terraform
-  git_update https://github.com/hashicorp/learn-terraform-provision-aks-cluster.git $HOME/git/education/learn-terraform-provision-aks-cluster
   git_update https://github.com/open-guides/og-aws.git $HOME/git/education/og-aws
   git_update https://github.com/OpenZeppelin/awesome-openzeppelin $HOME/git/education/awesome-openzeppelin
   git_update https://github.com/smartcontractkit/full-blockchain-solidity-course-py $HOME/git/education/full-blockchain-solidity-course-py
@@ -384,7 +381,6 @@ function pull_educational_repos() {
   git_update https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet.git $HOME/git/pentest-education/Java-Deserialization-Cheat-Sheet
   git_update https://github.com/ihebski/DefaultCreds-cheat-sheet.git $HOME/git/pentest-education/DefaultCreds-cheat-sheet
   git_update https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet.git $HOME/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet
-  git_update https://github.com/jakejarvis/awesome-shodan-queries.git $HOME/git/pentest-education/awesome-shodan-queries
   git_update https://github.com/OlivierLaflamme/Cheatsheet-God.git $HOME/git/pentest-education/Cheatsheet-God
   git_update https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE.git $HOME/git/pentest-education/PENTESTING-BIBLE
   git_update https://github.com/sinfulz/JustTryHarder.git $HOME/git/pentest-education/JustTryHarder
@@ -423,6 +419,7 @@ function pull_educational_repos() {
   git_update https://github.com/rmusser01/Infosec_Reference.git $HOME/git/pentest-education/Infosec_Reference
   git_update https://github.com/EdOverflow/bugbounty-cheatsheet.git $HOME/git/pentest-education/bugbounty-cheatsheet
   git_update https://github.com/decalage2/awesome-security-hardening.git $HOME/git/pentest-education/awesome-security-hardening
+  git_update https://github.com/OWASP/Top10 $HOME/git/pentest-education/Top10
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
@@ -431,6 +428,8 @@ function pull_educational_repos() {
   ### OSINT
   git_update https://github.com/jivoi/awesome-osint.git $HOME/git/pentest-education/awesome-osint
   git_update https://github.com/jakejarvis/awesome-shodan-queries.git $HOME/git/pentest-education/awesome-shodan-queries
+  git_update https://github.com/cipher387/Dorks-collections-list.git  $HOME/git/pentest-education/Dorks-collections-list
+  git_update https://github.com/techgaun/github-dorks.git $HOME/git/pentest-education/github-dorks
 }
 
 ###

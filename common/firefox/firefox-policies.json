@@ -109,6 +109,848 @@
         "installation_mode": "normal_installed"
       }
     },
+    "ManagedBookmarks": [
+      {
+        "toplevel_name": "Init"
+      },
+      {
+        "name": "Blockchain",
+        "children": [
+          {
+            "name": "Bitcoin",
+            "children": [
+              {
+                "name": "Bitcoin",
+                "url": "https://bitcoin.org/en/"
+              }
+            ]
+          },
+          {
+            "name": "Ethereum",
+            "children": [
+              {
+                "name": "Ethereum",
+                "url": "https://ethereum.org/en/"
+              }
+            ]
+          },
+          {
+            "name": "Explorers",
+            "children": [
+              {
+                "name": "Blockchain.com",
+                "url": "https://www.blockchain.com/explorer?view=btc"
+              },
+              {
+                "name": "Etherscan",
+                "url": "https://etherscan.io/"
+              }
+            ]
+          },
+          {
+            "name": "Resources",
+            "children": [
+              {
+                "name": "awesome-openzeppelin",
+                "url": "file:///home/user/git/education/awesome-openzeppelin"
+              },
+              {
+                "name": "full-blockchain-solidity-course",
+                "url": "file:///home/user/git/education/full-blockchain-solidity-course-py"
+              },
+              {
+                "name": "smart-contract-best-practices",
+                "url": "file:///home/user/git/education/smart-contract-best-practices"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blueteam",
+        "children": [
+          {
+            "name": "awesome-cybersecurity-blueteam",
+            "url": "file:///home/user/git/pentest-education/awesome-cybersecurity-blueteam"
+          },
+          {
+            "name": "awesome-security-hardening",
+            "url": "file:///home/user/git/pentest-education/awesome-security-hardening"
+          },
+          {
+            "name": "awesome-windows-domain-hardening",
+            "url": "file:///home/user/git/pentest-education/awesome-windows-domain-hardening"
+          },
+          {
+            "name": "how-to-secure-anything",
+            "url": "file:///home/user/git/education/how-to-secure-anything"
+          },
+          {
+            "name": "personal-security-checklist",
+            "url": "file:///home/user/git/pentest-education/personal-security-checklist"
+          }
+        ]
+      },
+      {
+        "name": "Cheatsheets",
+        "children": [
+          {
+            "name": "Active-Directory-Exploitation-Cheat-Sheet",
+            "url": "file:///home/user/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet"
+          },
+          {
+            "name": "awesome-pentest-cheat-sheets",
+            "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets"
+          },
+          {
+            "name": "Awesome-RedTeam-Cheatsheet",
+            "url": "file:///home/user/git/pentest-education/Awesome-RedTeam-Cheatsheet"
+          },
+          {
+            "name": "bugbounty-cheatsheet",
+            "url": "file:///home/user/git/pentest-education/bugbounty-cheatsheet"
+          },
+          {
+            "name": "Cheatsheet-God",
+            "url": "file:///home/user/git/pentest-education/Cheatsheet-God"
+          },
+          {
+            "name": "CheatSheets",
+            "url": "file:///home/user/git/pentest-education/HarmJ0y-CheatSheets"
+          },
+          {
+            "name": "CheatSheetSeries",
+            "url": "file:///home/user/git/pentest-education/CheatSheetSeries"
+          },
+          {
+            "name": "DefaultCreds-cheat-sheet",
+            "url": "file:///home/user/git/pentest-education/DefaultCreds-cheat-sheet"
+          },
+          {
+            "name": "DockerCheatSheet",
+            "url": "file:///home/user/git/pentest-education/DockerCheatSheet"
+          },
+          {
+            "name": "Java-Deserialization-Cheat-Sheet",
+            "url": "file:///home/user/git/pentest-education/Java-Deserialization-Cheat-Sheet"
+          },
+          {
+            "name": "JustTryHarder",
+            "url": "file:///home/user/git/pentest-education/JustTryHarder"
+          },
+          {
+            "name": "Pentest-Cheat-Sheets",
+            "url": "file:///home/user/git/pentest-education/Pentest-Cheat-Sheets"
+          },
+          {
+            "name": "awesome-pentest-cheat-sheets",
+            "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets"
+          },
+          {
+            "name": "awesome-pentest-cheat-sheets",
+            "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets"
+          },
+          {
+            "name": "awesome-pentest-cheat-sheets",
+            "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets"
+          }
+        ]
+      },
+      {
+        "name": "Compliance",
+        "children": [
+          {
+            "name": "CIS benchmarks",
+            "url": "https://www.cisecurity.org/cis-benchmarks/"
+          }
+        ]
+      },
+      {
+        "name": "Containers",
+        "children": [
+          {
+            "name": "awesome-docker",
+            "url": "file:///home/user/git/education/awesome-docker"
+          },
+          {
+            "name": "docker/labs",
+            "url": "file:///home/user/git/pentest-education/docker-labs"
+          }
+        ]
+      },
+      {
+        "name": "Clients",
+        "children": [
+          {
+          }
+        ]
+      },
+      {
+        "name": "Cloud",
+        "children": [
+          {
+            "name": "AWS",
+            "children": [
+              {
+                "name": "awesome-aws-security",
+                "url": "file:///home/user/git/pentest-education/awesome-aws-security"
+              },
+              {
+                "name": "AWS Console",
+                "url": "https://console.aws.amazon.com/"
+              },
+              {
+                "name": "Educational PDFs",
+                "url": "file:///home/user/pdfs/education/aws"
+              },
+              {
+                "name": "my-arsenal-of-aws-security-tools",
+                "url": "file:///home/user/git/pentest-education/my-arsenal-of-aws-security-tools"
+              },
+              {
+                "name": "og-aws",
+                "url": "file:///home/user/git/education/og-aws"
+              },
+              {
+                "name": "Tools",
+                "children": [
+                  {
+                    "name": "Tool",
+                    "url": "file:///home/user/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Azure",
+            "children": [
+              {
+                "name": "Portal",
+                "url": "file:///home/user/git/education/og-aws"
+              }
+            ]
+          },
+          {
+            "name": "GCP",
+            "children": [
+              {
+                "name": "Console",
+                "url": "https://console.cloud.google.com/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Curiosity",
+        "children": [
+          {
+            "name": "awesome",
+            "url": "file:///home/user/git/education/awesome"
+          },
+          {
+            "name": "awesome-awesomeness",
+            "url": "file:///home/user/git/pentest-education/awesome-awesomeness"
+          },
+          {
+            "name": "coding-interview-university",
+            "url": "file:///home/user/git/education/coding-interview-university"
+          },
+          {
+            "name": "hacker101",
+            "url": "file:///home/user/git/pentest-education/hacker101"
+          },
+          {
+            "name": "howtheysre",
+            "url": "file:///home/user/git/pentest-education/howtheysre"
+          },
+          {
+            "name": "Reverse-Engineering",
+            "url": "file:///home/user/git/pentest-education/Reverse-Engineering"
+          },
+          {
+            "name": "papers-we-love",
+            "url": "file:///home/user/git/education/papers-we-love"
+          },
+          {
+            "name": "test-your-sysadmin-skills",
+            "url": "file:///home/user/git/pentest-education/test-your-sysadmin-skills"
+          }
+        ]
+      },
+      {
+        "name": "Data",
+        "children": [
+          {
+            "name": "public-apis",
+            "url": "file:///home/user/git/education/public-apis"
+          }
+        ]
+      },
+      {
+        "name": "Exploits",
+        "children": [
+          {
+            "name": "cve",
+            "url": "file:///home/user/git/misc/cve"
+          },
+          {
+            "name": "exploitdb",
+            "url": "file:///home/user/git/pentest-education/exploitdb"
+          },
+          {
+            "name": "PayloadsAllTheThings",
+            "url": "file:///home/user/git/pentest-education/PayloadsAllTheThings"
+          }
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "children": [
+          {
+            "name": "owasp-mstg",
+            "url": "file:///home/user/git/pentest-frameworks/owasp-mstg"
+          },
+          {
+            "name": "Top10",
+            "url": "file:///home/user/git/pentest-education/Top10"
+          },
+          {
+            "name": "wstg",
+            "url": "file:///home/user/git/pentest-frameworks/wstg"
+          }
+        ]
+      },
+      {
+        "name": "GitHub",
+        "children": [
+          {
+            "name": "Topics",
+            "children": [
+              {
+                "name": "trending",
+                "url": "https://github.com/trending?since=monthly"
+              },
+              {
+                "name": "awesome",
+                "url": "https://github.com/topics/awesome?o=desc&s=stars"
+              },
+              {
+                "name": "bugbounty",
+                "url": "https://github.com/topics/bugbounty?o=desc&s=stars"
+              },
+              {
+                "name": "containers",
+                "url": "https://github.com/topics/containers?o=desc&s=stars"
+              },
+              {
+                "name": "docker",
+                "url": "https://github.com/topics/docker?o=desc&s=stars"
+              },
+              {
+                "name": "hacking",
+                "url": "https://github.com/topics/hacking?o=desc&s=stars"
+              },
+              {
+                "name": "internal-tools",
+                "url": "https://github.com/topics/internal-tools?o=desc&s=stars"
+              },
+              {
+                "name": "osint",
+                "url": "https://github.com/topics/osint?o=desc&s=stars"
+              },
+              {
+                "name": "pentest-scripts",
+                "url": "https://github.com/topics/pentest-scripts?o=desc&s=stars"
+              },
+              {
+                "name": "pentest-tools",
+                "url": "https://github.com/topics/pentest-tools?o=desc&s=stars"
+              },
+              {
+                "name": "scanner",
+                "url": "https://github.com/topics/scanner?o=desc&s=stars"
+              },
+              {
+                "name": "security",
+                "url": "https://github.com/topics/security?o=desc&s=stars"
+              },
+              {
+                "name": "self-hosted",
+                "url": "https://github.com/topics/self-hosted?o=desc&s=stars"
+              },
+              {
+                "name": "social-engineering",
+                "url": "https://github.com/topics/social-engineering?o=desc&s=stars"
+              },
+              {
+                "name": "terminal",
+                "url": "https://github.com/topics/terminal?o=desc&s=stars"
+              },
+              {
+                "name": "vulnerabilities",
+                "url": "https://github.com/topics/vulnerabilities?o=desc&s=stars"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lab",
+        "children": [
+          {
+            "name": "kubernetes-goat",
+            "url": "file:///$HOME/git/pentest-education/kubernetes-goat"
+          },
+          {
+            "name": "railsgoat",
+            "url": "file:///$HOME/git/pentest-education/railsgoat"
+          },
+          {
+            "name": "vulhub",
+            "url": "file:///$HOME/git/pentest-education/vulhub"
+          },
+          {
+            "name": "CTF",
+            "children": [
+              {
+                "name": "awesome-ctf",
+                "url": "file:///$HOME/git/pentest-education/vulhub"
+              },
+              {
+                "name": "ctf",
+                "url": "file:///$HOME/git/pentest-education/trailofbits-ctf"
+              },
+              {
+                "name": "google-ctf",
+                "url": "file:///$HOME/git/pentest-education/google-ctf"
+              }
+            ]
+          },
+          {
+            "name": "Vulnerable Docker images",
+            "children": [
+              {
+                "name": "Altoro Mutual",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "DVWA v1.9",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "Hackazon",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "Heartbleed",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "nowasp",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "OWASP Juice Shop",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "Security Ninja",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "Tireful API",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "WebGoat",
+                "url": "http://172.10.0."
+              },
+              {
+                "name": "XVWA",
+                "url": "http://172.10.0."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Linux",
+        "children": [
+          {
+            "name": "awesome-tunneling",
+            "url": "file:///home/user/git/education/awesome-tunneling"
+          },
+          {
+            "name": "How-To-Secure-A-Linux-Server",
+            "url": "file:///home/user/git/pentest-education/How-To-Secure-A-Linux-Server"
+          },
+          {
+            "name": "linux-insides",
+            "url": "file:///home/user/git/education/linux-insides"
+          },
+          {
+            "name": "the-practical-linux-hardening-guide",
+            "url": "file:///home/user/git/pentest-education/the-practical-linux-hardening-guide"
+          }
+        ]
+      },
+      {
+        "name": "Misc",
+        "children": [
+          {
+            "name": "awesome-interview-questions",
+            "url": "file:///home/user/git/education/awesome-interview-questions"
+          },
+          {
+            "name": "awesome-selfhosted",
+            "url": "file:///home/user/git/education/awesome-selfhosted"
+          },
+          {
+            "name": "CrimeBoards",
+            "url": "file:///home/user/git/misc/CrimeBoards"
+          },
+          {
+            "name": "devops-exercises",
+            "url": "file:///home/user/git/education/devops-exercises"
+          },
+          {
+            "name": "jessfraz/dockerfiles",
+            "url": "file:///home/user/git/education/devops-exercises"
+          },
+          {
+            "name": "what_is_this_c2",
+            "url": "file:///home/user/git/misc/what_is_this_c2"
+          },
+          {
+            "name": "90DaysOfDevops",
+            "url": "file:///home/user/git/education/90DaysOfDevOps"
+          },
+          {
+            "name": "Bug bounties",
+            "children": [
+              {
+                "name": "Bugcrowd",
+                "url": "https://www.bugcrowd.com/"
+              },
+              {
+                "name": "HackerOne",
+                "url": "https://hackerone.com/"
+              },
+              {
+                "name": "bounty-target-data",
+                "url": "file:///home/user/git/bug-bounty/bounty-targets-data"
+              },
+              {
+                "name": "Resources-for-Beginner-Bug-Bounty-Hunters",
+                "url": "file:///home/user/git/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters"
+              }
+            ]
+          },
+          {
+            "name": "CLI",
+            "children": [
+              {
+                "name": "the-art-of-command-line",
+                "url": "file:///home/user/git/education/the-art-of-command-line"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Programming",
+        "children": [
+          {
+            "name": "free-programming-books",
+            "url": "file:///home/user/git/education/free-programming-books"
+          },
+          {
+            "name": "python-patterns",
+            "url": "file:///home/user/git/education/python-patterns"
+          }
+        ]
+      },
+      {
+        "name": "Redteam",
+        "children": [
+          {
+            "name": "RedTeam-Tactics-and-Techniques",
+            "url": "file:///home/user/git/pentest-education/RedTeam-Tactics-and-Techniques"
+          }
+        ]
+      },
+      {
+        "name": "Reporting",
+        "children": [
+          {
+            "name": "awesome-list-of-public-pentesting-reports",
+            "url": "file:///home/user/git/pentest-education/awesome-list-of-public-pentesting-reports"
+          },
+          {
+            "name": "PublicReports",
+            "url": "file:///home/user/git/pentest-education/HalbornPublicReports"
+          },
+          {
+            "name": "public-pentesting-reports",
+            "url": "file:///home/user/git/pentest-education/public-pentesting-reports"
+          }
+        ]
+      },
+      {
+        "name": "Tools",
+        "children": [
+          {
+            "name": "CyberChef",
+            "url": "http://localhost:8040/"
+          },
+          {
+            "name": "HOUDINI",
+            "url": "http://localhost:9050/"
+          },
+          {
+            "name": "Jupyter",
+            "url": "http://localhost:8000/"
+          },
+          {
+            "name": "Infrastructure",
+            "children": [
+              {
+                "name": "IVRE",
+                "url": "http://localhost:8010/"
+              },
+              {
+                "name": "Nessus",
+                "url": "file:///"
+              }
+            ]
+          },
+          {
+            "name": "Misc",
+            "children": [
+              {
+                "name": "draw.io",
+                "url": "http://localhost:10010/"
+              },
+              {
+                "name": "LibreTranslate",
+                "url": "http://localhost:9070/"
+              },
+              {
+                "name": "Trilium",
+                "url": "http://localhost:9020/"
+              },
+              {
+                "name": "Syncthing",
+                "url": "http://localhost:8384/"
+              }
+            ]
+          },
+          {
+            "name": "Mobile",
+            "children": [
+              {
+                "name": "Mobile Security Framework",
+                "url": "http://localhost:8050/"
+              }
+            ]
+          },
+          {
+            "name": "Monitoring",
+            "children": [
+              {
+                "name": "netdata",
+                "url": "http://localhost:19999/"
+              }
+            ]
+          },
+          {
+            "name": "OSINT",
+            "children": [
+              {
+                "name": "Carrot2",
+                "url": "https://search.carrot2.org/#/search/web"
+              },
+              {
+                "name": "IntelTechniques",
+                "url": "file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html"
+              },
+              {
+                "name": "OSINT Techniques",
+                "url": "https://www.osinttechniques.com/"
+              },
+              {
+                "name": "SpiderFoot",
+                "url": "http://localhost:8060/"
+              }
+            ]
+          },
+          {
+            "name": "Reporting",
+            "children": [
+              {
+                "name": "Overleaf",
+                "url": "http://localhost:8090/"
+              }
+            ]
+          },
+          {
+            "name": "Web",
+            "children": [
+              {
+                "name": "reNgine",
+                "url": "https://localhost:8020/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pentesting",
+        "children": [
+          {
+            "name": "API",
+            "children": [
+              {
+                "name": "API-Security-Checklist",
+                "url": "file:///home/user/git/pentest-education/API-Security-Checklist"
+              },
+              {
+                "name": "awesome-api-security",
+                "url": "file:///home/user/git/pentest-education/awesome-api-security"
+              }
+            ]
+          },
+          {
+            "name": "Mobile",
+            "children": [
+              {
+                "name": "android-security-awesome",
+                "url": "file:///home/user/git/pentest-education/android-security-awesome"
+              },
+              {
+                "name": "awesome-mobile-security",
+                "url": "file:///home/user/git/pentest-education/awesome-mobile-security"
+              },
+              {
+                "name": "secure-mobile-development",
+                "url": "file:///home/user/git/pentest-education/secure-mobile-development"
+              }
+            ]
+          },
+          {
+            "name": "OSINT",
+            "children": [
+              {
+                "name": "awesome-osint",
+                "url": "file:///home/user/git/pentest-education/awesome-osint"
+              },
+              {
+                "name": "awesome-shodan-quries",
+                "url": "file:///home/user/git/pentest-education/awesome-shodan-queries"
+              },
+              {
+                "name": "Dorks",
+                "children": [
+                  {
+                    "name": "Dorks-collections-list",
+                    "url": "file:///home/user/git/pentest-education/Dorks-collections-list"
+                  },
+                  {
+                    "name": "github-dorks",
+                    "url": "file:///home/user/git/pentest-education/github-dorks"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Resources",
+            "children": [
+              {
+                "name": "assessment-mindset",
+                "url": "file:///home/user/git/pentest-education/assessment-mindset"
+              },
+              {
+                "name": "awesome-appsec",
+                "url": "file:///home/user/git/pentest-education/awesome-appsec"
+              },
+              {
+                "name": "awesome-hacking",
+                "url": "file:///home/user/git/pentest-education/awesome-hacking"
+              },
+              {
+                "name": "Awesome-Hacking",
+                "url": "file:///home/user/git/pentest-education/Awesome-Hacking"
+              },
+              {
+                "name": "Awesome-Hacking-Resources",
+                "url": "file:///home/user/git/pentest-education/Awesome-Hacking-Resources"
+              },
+              {
+                "name": "awesome-pentest",
+                "url": "file:///home/user/git/pentest-education/awesome-pentest"
+              },
+              {
+                "name": "Awesome-Pentest",
+                "url": "file:///home/user/git/pentest-education/Awesome-Pentest"
+              },
+              {
+                "name": "awesome-security",
+                "url": "file:///home/user/git/pentest-education/awesome-security"
+              },
+              {
+                "name": "hacker-roadmap",
+                "url": "file:///home/user/git/pentest-education/hacker-roadmap"
+              },
+              {
+                "name": "h4cker",
+                "url": "file:///home/user/git/pentest-education/h4cker"
+              },
+              {
+                "name": "Infosec_Reference",
+                "url": "file:///home/user/git/pentest-education/Infosec_Reference"
+              },
+              {
+                "name": "pentest-wiki",
+                "url": "file:///home/user/git/pentest-education/pentest-wiki"
+              },
+              {
+                "name": "Pentest-Tools",
+                "url": "file:///home/user/git/pentest-education/Pentest-Tools"
+              },
+              {
+                "name": "PENTESTING-BIBLE",
+                "url": "file:///home/user/git/pentest-education/PENTESTING-BIBLE"
+              },
+              {
+                "name": "the-book-of-secret-knowledge",
+                "url": "file:///home/user/git/pentest-education/the-book-of-secret-knowledge"
+              },
+              {
+                "name": "trailofbits publications",
+                "url": "file:///home/user/git/pentest-education/trailofbits-publications"
+              }
+            ]
+          },
+          {
+            "name": "Web",
+            "children": [
+              {
+                "name": "awesome-web-security",
+                "url": "file:///home/user/git/pentest-education/awesome-web-security"
+              },
+              {
+                "name": "top10webseclist",
+                "url": "file:///home/user/git/pentest-education/top10webseclist"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+
     "Bookmarks": [
       {
         "Favicon": "http://localhost:9090/favicon.ico",
