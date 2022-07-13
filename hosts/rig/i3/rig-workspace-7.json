@@ -11,12 +11,12 @@
        "y": 0
     },
     "marks": [],
-    "name": "Slack",
+    "name": "Mozilla Firefox",
     "percent": 1,
     "swallows": [
        {
-          "class": "^Slack$",
-          "instance": "^slack$"
+          "class": "^firefox$",
+          "instance": "^Navigator$"
        }
     ],
     "type": "con"

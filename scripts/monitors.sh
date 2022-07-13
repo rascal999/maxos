@@ -20,9 +20,6 @@ if [[ `hostname` == "rig" ]]; then
     done
 
     sleep 4
-
-    /run/current-system/sw/bin/slack &
-    sleep 2
     /run/current-system/sw/bin/firefox -P "Default" &
 fi
 
