@@ -279,13 +279,6 @@
         ]
       },
       {
-        "name": "Clients",
-        "children": [
-          {
-          }
-        ]
-      },
-      {
         "name": "Cloud",
         "children": [
           {
@@ -533,43 +526,51 @@
             "children": [
               {
                 "name": "Altoro Mutual",
-                "url": "http://172.10.0."
+                "url": "http://172.10.0.1:1080/"
               },
               {
                 "name": "DVWA v1.9",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.2:1080/setup.php"
               },
               {
                 "name": "Hackazon",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.9:1080/"
               },
               {
                 "name": "Heartbleed",
-                "url": "http://172.10.0."
+                "url": "https://127.10.0.5:8443/"
               },
               {
                 "name": "nowasp",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.7:1080/database-offline.php"
               },
               {
                 "name": "OWASP Juice Shop",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.8:1080/#/"
               },
               {
                 "name": "Security Ninja",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.12:1080/"
+              },
+              {
+                "name": "Shellshock",
+                "url": "http://127.10.0.4:1080/"
               },
               {
                 "name": "Tireful API",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.10:1080/"
               },
               {
                 "name": "WebGoat",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.6:1080/WebGoat/login.mvc"
+              },
+              {
+                "name": "Wordpress",
+                "url": "http://127.10.0.3:1080/wp-admin/install.php"
               },
               {
                 "name": "XVWA",
-                "url": "http://172.10.0."
+                "url": "http://127.10.0.11:1080/xvwa/"
               }
             ]
           }
@@ -581,6 +582,10 @@
           {
             "name": "awesome-tunneling",
             "url": "file:///home/user/git/education/awesome-tunneling"
+          },
+          {
+            "name": "GTFOBins",
+            "url": "http://127.0.0.1:10000/"
           },
           {
             "name": "How-To-Secure-A-Linux-Server",
@@ -905,6 +910,10 @@
                 "url": "file:///home/user/git/pentest-education/hacker-roadmap"
               },
               {
+                "name": "Hack The Box",
+                "url": "https://www.hackthebox.com/"
+              },
+              {
                 "name": "h4cker",
                 "url": "file:///home/user/git/pentest-education/h4cker"
               },
@@ -931,6 +940,14 @@
               {
                 "name": "trailofbits publications",
                 "url": "file:///home/user/git/pentest-education/trailofbits-publications"
+              },
+              {
+                "name": "TryHackMe",
+                "url": "https://tryhackme.com/"
+              },
+              {
+                "name": "Web Security Academy (PortSwigger)",
+                "url": "https://portswigger.net/web-security"
               }
             ]
           },
@@ -957,307 +974,6 @@
         "Title": "Dashy",
         "URL": "http://localhost:9090/",
         "Placement": "toolbar"
-      },
-      {
-        "Title": "Amazon Web Services Sign-In",
-        "URL": "https://console.aws.amazon.com/",
-        "Placement": "toolbar",
-        "Folder": "Cloud"
-      },
-      {
-        "Title": "Microsoft Azure",
-        "URL": "https://aka.ms/azureportal",
-        "Placement": "toolbar",
-        "Folder": "Cloud"
-      },
-      {
-        "Title": "AWS PDFs",
-        "URL": "file:///home/user/pdfs/education/aws",
-        "Placement": "toolbar",
-        "Folder": "Cloud"
-      },
-      {
-        "Title": "Altoro Mutual",
-        "URL": "http://127.10.0.1:1080/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "Damn Vulnerable Web Application (DVWA) v1.9",
-        "URL": "http://127.10.0.2:1080/setup.php",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "WordPress",
-        "URL": "http://127.10.0.3:1080/wp-admin/install.php",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "Shellshock CVE-2014-6271",
-        "URL": "http://127.10.0.4:1080/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "Heartbleed CVE-2014-0160",
-        "URL": "https://127.10.0.5:8443/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "WebGoat",
-        "URL": "http://127.10.0.6:1080/WebGoat/login.mvc",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "nowasp",
-        "URL": "http://127.10.0.7:1080/database-offline.php",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "OWASP Juice Shop",
-        "URL": "http://127.10.0.8:1080/#/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "Hackazon",
-        "URL": "http://127.10.0.9:1080/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "Tiredful API",
-        "URL": "http://127.10.0.10:1080/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "XVWA",
-        "URL": "http://127.10.0.11:1080/xvwa/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "Security Ninja",
-        "URL": "http://127.10.0.12:1080/",
-        "Placement": "toolbar",
-        "Folder": "Docker Images"
-      },
-      {
-        "Title": "GTFOBins",
-        "URL": "http://127.0.0.1:10000/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "awesome-pentest-cheat-sheets",
-        "URL": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/docs/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Cheatsheet-God",
-        "URL": "file:///home/user/git/pentest-education/Cheatsheet-God/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Hack The Box",
-        "Favicon": "https://www.hackthebox.com/images/landingv3/favicon.png",
-        "URL": "https://www.hackthebox.com/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Halborn Public Reports",
-        "URL": "file:///home/user/git/pentest-education/HalbornPublicReports/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "h4cker cheat sheets",
-        "URL": "file:///home/user/git/pentest-education/h4cker/cheat_sheets/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "OWASP Cheat Sheet Series",
-        "URL": "file:///home/user/git/pentest-education/CheatSheetSeriesZip/site/Glossary.html",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "OWASP MSTG",
-        "URL": "file:///home/user/git/pentest-education/owasp-mstg/OWASP_MSTG-SNAPSHOT.pdf",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "PENTESTING BIBLE",
-        "URL": "file:///home/user/git/pentest-education/PENTESTING-BIBLE/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Public Pentesting Reports",
-        "URL": "file:///home/user/git/pentest-education/public-pentesting-reports/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "TryHackMe",
-        "Favicon": "https://assets.tryhackme.com/img/favicon.png",
-        "URL": "https://tryhackme.com/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Vulhub",
-        "URL": "file:///home/user/git/pentest-education/vulhub/README.md",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "VulnHub",
-        "Favicon": "https://www.vulnhub.com/static/img/touch-icon-ipad-retina.png",
-        "URL": "https://www.vulnhub.com/",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Web Security Academy (PortSwigger)",
-        "Favicon": "https://portswigger.net/content/images/logos/apple-touch-icon.png",
-        "URL": "https://portswigger.net/web-security",
-        "Placement": "toolbar",
-        "Folder": "Education"
-      },
-      {
-        "Title": "Trending monthly repos",
-        "URL": "https://github.com/trending?since=monthly",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "awesome (topic)",
-        "URL": "https://github.com/topics/awesome?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "bugbounty (topic)",
-        "URL": "https://github.com/topics/bugbounty?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "containers (topic)",
-        "URL": "https://github.com/topics/containers?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "docker (topic)",
-        "URL": "https://github.com/topics/docker?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "hacking (topic)",
-        "URL": "https://github.com/topics/hacking?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "internal-tools (topic)",
-        "URL": "https://github.com/topics/internal-tools?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "osint (topic)",
-        "URL": "https://github.com/topics/osint?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "pentest-scripts (topic)",
-        "URL": "https://github.com/topics/pentest-scripts?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "pentest-tools (topic)",
-        "URL": "https://github.com/topics/pentest-tools?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "scanner (topic)",
-        "URL": "https://github.com/topics/scanner?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "security (topic)",
-        "URL": "https://github.com/topics/security?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "self-hosted (topic)",
-        "URL": "https://github.com/topics/self-hosted?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "social-engineering (topic)",
-        "URL": "https://github.com/topics/social-engineering?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "termnial (topic)",
-        "URL": "https://github.com/topics/terminal?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "vulnerabilities (topic)",
-        "URL": "https://github.com/topics/vulnerabilities?o=desc&s=stars",
-        "Placement": "toolbar",
-        "Folder": "GitHub"
-      },
-      {
-        "Title": "Local Wiki (kiwix)",
-        "URL": "http://localhost:9060/?lang=eng",
-        "Placement": "toolbar",
-        "Folder": "Misc"
-      },
-      {
-        "Title": "The Guardian",
-        "Favicon": "https://assets.guim.co.uk/images/favicons/fee5e2d638d1c35f6d501fa397e53329/152x152.png",
-        "URL": "https://www.theguardian.com/uk",
-        "Placement": "toolbar",
-        "Folder": "News"
-      },
-      {
-        "Title": "Home - BBC News",
-        "Favicon": "https://m.files.bbci.co.uk/modules/bbc-morph-news-waf-page-meta/5.2.0/apple-touch-icon.png",
-        "URL": "https://www.bbc.co.uk/news",
-        "Placement": "toolbar",
-        "Folder": "News"
-      },
-      {
-        "Title": "World News",
-        "Favicon": "https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png",
-        "URL": "https://www.reddit.com/r/worldnews/",
-        "Placement": "toolbar",
-        "Folder": "News"
       },
       {
         "Title": "GitHub - rascal999/nixos",
@@ -1292,104 +1008,14 @@
         "Folder": "Nix"
       },
       {
-        "Title": "netdata",
-        "URL": "http://localhost:19999/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "draw.io",
-        "URL": "http://localhost:10010/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Syncthing",
-        "URL": "http://localhost:8384/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "KB (Trilium)",
-        "URL": "http://localhost:9020/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Reporting Tool (Sharelatex)",
-        "URL": "http://localhost:8090/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Automated Scans (Jupyter)",
-        "URL": "http://localhost:8000/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Docker commands (HOUDINI)",
-        "URL": "http://localhost:9050/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Network recon (IVRE)",
-        "URL": "http://localhost:8010/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Web app scanner (reNgine)",
-        "URL": "https://localhost:8020/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
         "Title": "OpenVAS",
         "URL": "https://localhost:8030/",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
       {
-        "Title": "CyberChef",
-        "URL": "http://localhost:8040/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "Mobile Security Framework",
-        "URL": "http://localhost:8050/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "OSINT (SpiderFoot)",
-        "URL": "http://localhost:8060/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
         "Title": "AWS Security Viz",
         "URL": "http://localhost:8070/navigator.html#aws-security-viz.png",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "IntelTechniques (OSINT)",
-        "URL": "file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "OSINT Techniques",
-        "URL": "https://www.osinttechniques.com/",
-        "Placement": "toolbar",
-        "Folder": "Tools"
-      },
-      {
-        "Title": "LibreTranslate",
-        "URL": "http://localhost:9070",
         "Placement": "toolbar",
         "Folder": "Tools"
       },
