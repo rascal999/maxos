@@ -31,6 +31,12 @@
     ip = "0.0.0.0";
   };
 
+  # Firewall
+  networking.firewall.allowedTCPPorts = [
+    8010 # ivre
+  ];
+
+
   # Enable cron service
   services.cron = {
     enable = true;

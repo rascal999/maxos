@@ -102,6 +102,7 @@ function git_update() {
   if [[ "$DIR_ACCESSED" == "0" ]]; then
     git clone --depth 1 $1 $2
     cd $2
+    git reset --hard
     git pull
     return 0
   fi
