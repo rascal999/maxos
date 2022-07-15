@@ -801,6 +801,19 @@
             ]
           },
           {
+            "name": "Reverse Engineering",
+            "children": [
+              {
+                "name": "Compiler Explorer",
+                "url": "http://localhost:10020/"
+              },
+              {
+                "name": "Decompiler Explorer",
+                "url": "https://dogbolt.org/"
+              }
+            ]
+          },
+          {
             "name": "Web",
             "children": [
               {

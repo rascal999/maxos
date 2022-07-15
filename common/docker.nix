@@ -65,6 +65,11 @@
       ports = [ "127.0.0.1:10010:8080" ];
     };
 
+    compiler-explorer = {
+      image = "madduci/docker-compiler-explorer";
+      ports = [ "127.0.0.1:10020:10240" ];
+    };
+
     netdata = {
       extraOptions = [
                       "--cap-add=SYS_PTRACE"

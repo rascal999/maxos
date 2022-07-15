@@ -230,6 +230,8 @@ function pull_tools_docker() {
   docker pull screetsec/sudomy:v1.1.9-dev                  # Subdomain enumeration tool
   docker pull xshuden/xsstrike                             # Most advanced XSS scanner
   docker pull djangobyjeffrey/gtfobins                     # Bypass local security restrictions in misconfigured systems
+  docker pull madduci/docker-compiler-explorer             # Run compilers from your web browser and interact with the assembly
+  docker pull aquasec/trivy                                # Vulnerability scanner for container images, file systems etc.
 
   ### https://github.com/cybersecsi/RAUDI
   docker pull secsi/apktool
