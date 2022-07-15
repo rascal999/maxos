@@ -151,7 +151,8 @@ html[sizemode="maximized"] #titlebar #TabsToolbar {
 }
 #urlbar-input, #urlbar-scheme,
 .searchbar-textbox {
-  color: #D7DEEA !important
+  color: #D7DEEA !important;
+  min-width: 1200px !important;
 }
 .urlbarView-url {
     color: #E76463 !important;
@@ -281,5 +282,4 @@ searchbar#searchbar {
   background-color: #151C24 !important;
 }
 
-}
 ''
