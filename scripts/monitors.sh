@@ -4,7 +4,7 @@ if [[ `hostname` == "rig" ]]; then
     sleep 3
 
     # 0
-    /run/current-system/sw/bin/xrandr --output DP-0 --auto --right-of HDMI-0
+    /run/current-system/sw/bin/xrandr --output DP-4 --auto --right-of HDMI-0
     # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --left-of HDMI-0
 
@@ -12,7 +12,7 @@ if [[ `hostname` == "rig" ]]; then
 
     i3-msg "workspace 10, move workspace to output HDMI-0"
     i3-msg "workspace 1, move workspace to output USB-C-0"
-    i3-msg "workspace 7, move workspace to output DP-0"
+    i3-msg "workspace 7, move workspace to output DP-4"
 
     for WORKSPACE_FILE in "$@" ; do
       WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
