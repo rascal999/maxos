@@ -43,7 +43,7 @@
       };
       "rig" = {
         autoAcceptFolders = true;
-        id = "TTM76HX-M6H5JG7-KZ2YHMG-UPT5HQZ-OEPQFNX-FOMAWGB-GPTYPG6-QS7DHA4";
+        id = "3CETFIS-4P5BTDB-TQRFO54-H6ECZH4-OLHU2LB-DTQFTVA-ZFMPYJH-7FVSRA6";
         introducer = false;
       };
       "rog" = {
