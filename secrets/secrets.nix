@@ -3,7 +3,7 @@ let
   host_blueboy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGfxGYgiWarGdkmG3K+A3y/QR7vWVqddmEOscrory7Vf";
   host_galaxy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP4ocz0cS0v/JmgnyvqfMMYGaaAYflJCy2AJthWA6Met";
   host_rig = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN3W0Fth1UvZEqaPYM+fKPn4ZStvrk8GswTSj5He3Z3d";
-  host_rog = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFujWqx7S6oMZf8G4SvP3+LkKjxD9ZwyCBJVqmtUl/x7";
+  host_rog = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJzSkIhetIXA8SWm95Ewq10rqZvEYr+bwrjv2AWskORL";
   hosts = [ host_blueboy host_galaxy host_rig host_rog ];
 in
 {
