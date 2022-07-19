@@ -48,7 +48,7 @@
       };
       "rog" = {
         autoAcceptFolders = true;
-        id = "JI3WBOJ-OCPX2PC-YBWPNJJ-WHHPMG3-LTHUN57-2PWLZUU-VMFA32S-TP7MPAN";
+        id = "TTM76HX-M6H5JG7-KZ2YHMG-UPT5HQZ-OEPQFNX-FOMAWGB-GPTYPG6-QS7DHA4";
         introducer = false;
       };
     };
