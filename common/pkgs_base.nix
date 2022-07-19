@@ -100,7 +100,7 @@ in {
      crowbar
      crunch
      cups-brother-hl3140cw
-     cutter
+     #cutter
      dalfox
      dbeaver
      dcfldd
