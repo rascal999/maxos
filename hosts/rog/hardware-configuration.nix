@@ -14,14 +14,14 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5b4a4fb5-0cba-4f1c-9f55-bc03745d9cf0";
+    { device = "/dev/disk/by-uuid/21e311ac-0dcd-46bf-94d3-b1d32db1f304";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/cdef85b8-c753-478e-9846-0d1c803ec9d8";
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/55af763a-3586-4c98-8e5e-9eb5357b4545";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/BF6B-D0EB";
+    { device = "/dev/disk/by-uuid/DE1D-FA6A";
       fsType = "vfat";
     };
 
@@ -32,7 +32,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp4s0f3u1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp4s0f3u2.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
