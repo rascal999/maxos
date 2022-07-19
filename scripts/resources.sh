@@ -133,6 +133,8 @@ function pull_misc_things() {
   docker pull kiwix/kiwix-serve                            # Internet. Offline.
   docker pull jgraph/drawio                                # draw.io
   docker pull netdata/netdata                              # Netdata dashboard
+  docker pull ivre/db                                      # Network recon framework
+  docker pull ivre/client                                  # Network recon framework
 
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
