@@ -1,6 +1,6 @@
 let
   # Don't forget to `a-agenix --rekey` when updating public keys
-  host_blueboy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGfxGYgiWarGdkmG3K+A3y/QR7vWVqddmEOscrory7Vf";
+  host_blueboy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAIHvP/ols9rRoSXH8/vxZ8Gn5WeuuYLDaDV5SKgJoQT";
   host_galaxy = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP4ocz0cS0v/JmgnyvqfMMYGaaAYflJCy2AJthWA6Met";
   host_rig = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP";
   host_rog = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJzSkIhetIXA8SWm95Ewq10rqZvEYr+bwrjv2AWskORL";
