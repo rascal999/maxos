@@ -438,6 +438,10 @@
                 "url": "https://github.com/topics/containers?o=desc&s=stars"
               },
               {
+                "name": "cve",
+                "url": "https://github.com/topics/cve?o=desc&s=stars"
+              },
+              {
                 "name": "docker",
                 "url": "https://github.com/topics/docker?o=desc&s=stars"
               },
@@ -721,6 +725,10 @@
           {
             "name": "Jupyter",
             "url": "http://localhost:8000/"
+          },
+          {
+            "name": "OpenCVE",
+            "url": "http://localhost:10030/"
           },
           {
             "name": "Infrastructure",

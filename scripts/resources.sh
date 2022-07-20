@@ -435,6 +435,7 @@ function pull_educational_repos() {
   git_update https://github.com/jakejarvis/awesome-shodan-queries.git $HOME/git/pentest-education/awesome-shodan-queries
   git_update https://github.com/cipher387/Dorks-collections-list.git  $HOME/git/pentest-education/Dorks-collections-list
   git_update https://github.com/techgaun/github-dorks.git $HOME/git/pentest-education/github-dorks
+  git_update https://github.com/edoardottt/awesome-hacker-search-engines.git $HOME/git/pentest-education/awesome-hacker-search-engines
 
   ### Misc
   git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
@@ -497,12 +498,30 @@ function pull_tool_repos() {
   git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
 
   ### Exploits
-  git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/misc/CVE-2021-4034
-  git_update https://github.com/trickest/cve.git $HOME/git/misc/cve
+  git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/exploits/CVE-2021-4034
+  git_update https://github.com/trickest/cve.git $HOME/git/exploits/cve
+  git_update https://github.com/Mr-xn/Penetration_Testing_POC.git $HOME/git/exploits/Penetration_Testing_POC
+  git_update https://github.com/qazbnm456/awesome-cve-poc.git $HOME/git/exploits/awesome-cve-poc
+  git_update https://github.com/tunz/js-vuln-db.git $HOME/git/exploits/js-vuln-db
 
   ### Tools which need building
+  # OpenCVE
+  git_update https://github.com/opencve/opencve-docker.git $HOME/git/exploits/opencve-docker
+  if [[ "$?" == "0" ]]; then
+    cp $HOME/git/nixos-next/resources/configs/opencve/opencve.cfg conf
+    # sed ports
+    sed -i 's/8000/10030/g' docker-compose.yml
+    sed -i 's/${OPENCVE_PORT:-10030}:10030/10030:10030/g' docker-compose.yml
+
+    # Build and spin up
+    docker-compose build
+    docker-compose up -d postgres redis webserver celery_worker
+    docker exec -it webserver opencve upgrade-db
+    docker exec -it webserver opencve import-data
+  fi
+
   # redgo
-  git_update https://github.com/rascal999/redgo.git
+  git_update https://github.com/rascal999/redgo.git $HOME/git/pentest-tools/redgo
   if [[ "$?" == "0" ]]; then
     docker build . -t redgo
   fi
