@@ -361,6 +361,7 @@ function pull_educational_repos() {
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
   git_update https://github.com/nixawk/pentest-wiki.git $HOME/git/pentest-education/pentest-wiki
   git_update https://github.com/vulhub/vulhub.git $HOME/git/pentest-education/vulhub
+  git_update https://github.com/nixawk/labs.git $HOME/git/pentest-education/nixawk_labs
   git_update https://github.com/Lissy93/personal-security-checklist.git $HOME/git/pentest-education/personal-security-checklist
   git_update https://github.com/HalbornSecurity/PublicReports.git $HOME/git/pentest-education/HalbornPublicReports
   git_update https://github.com/toniblyx/my-arsenal-of-aws-security-tools.git $HOME/git/pentest-education/my-arsenal-of-aws-security-tools
@@ -496,6 +497,7 @@ function pull_tool_repos() {
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
   git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
+  git_update https://github.com/vimagick/dockerfiles.git $HOME/git/misc/vimagick_dockerfiles
 
   ### Exploits
   git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/exploits/CVE-2021-4034
@@ -505,6 +507,9 @@ function pull_tool_repos() {
   git_update https://github.com/tunz/js-vuln-db.git $HOME/git/exploits/js-vuln-db
 
   ### Tools which need building
+  # VulnX
+  git_update https://github.com/anouarbensaad/vulnx.git $HOME/git/pentest-tools/vulnx
+
   # OpenCVE
   git_update https://github.com/opencve/opencve-docker.git $HOME/git/exploits/opencve-docker
   if [[ "$?" == "0" ]]; then
@@ -512,10 +517,14 @@ function pull_tool_repos() {
     # sed ports
     sed -i 's/8000/10030/g' docker-compose.yml
     sed -i 's/${OPENCVE_PORT:-10030}:10030/10030:10030/g' docker-compose.yml
+    # sed redis image for sharelatex and ports
+    sed -i 's/redis/redis-opencve/g' docker-compose.yml
+    sed -i 's/image: redis-opencve:buster/image: redis:buster/g' docker-compose.yml
+    sed -i 's/${REDIS_PORT:-6379}:6379/6380:6380/g' docker-compose.yml
 
     # Build and spin up
     docker-compose build
-    docker-compose up -d postgres redis webserver celery_worker
+    docker-compose up -d postgres redis-opencve webserver celery_worker
     docker exec -it webserver opencve upgrade-db
     docker exec -it webserver opencve import-data
   fi

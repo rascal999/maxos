@@ -728,7 +728,7 @@
           },
           {
             "name": "OpenCVE",
-            "url": "http://localhost:10030/"
+            "url": "http://127.0.0.1:10030/cve"
           },
           {
             "name": "Infrastructure",
