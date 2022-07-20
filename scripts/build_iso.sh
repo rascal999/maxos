@@ -13,11 +13,10 @@ if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
   # Problem?
   if [[ "$?" == "0" ]]; then
     /home/user/git/nixos/scripts/telegram_notify.sh -m "Finished building ISO."
+    echo $GIT_CURRENT_HASH > /tmp/iso_hash
   else
     /home/user/git/nixos/scripts/telegram_notify.sh -m "Error code while building ISO: $?"
   fi
 else
   /home/user/git/nixos/scripts/telegram_notify.sh -m "ISO already built for $GIT_CURRENT_HASH"
 fi
-
-echo $GIT_CURRENT_HASH > /tmp/iso_hash
