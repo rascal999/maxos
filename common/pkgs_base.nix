@@ -486,6 +486,7 @@ in {
      vim
      virt-manager
      vlc
+     vmware-horizon-client
      volatility3
      vue
      vulnix

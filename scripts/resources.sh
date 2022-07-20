@@ -356,6 +356,7 @@ function pull_educational_repos() {
   git_update https://github.com/veeral-patel/how-to-secure-anything.git $HOME/git/education/how-to-secure-anything
   git_update https://github.com/jlevy/the-art-of-command-line.git $HOME/git/education/the-art-of-command-line
   git_update https://github.com/0xAX/linux-insides.git $HOME/git/education/linux-insides
+  git_update https://github.com/0xricksanchez/paper_collection.git $HOME/git/education/paper_collection
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -521,6 +522,7 @@ function pull_tool_repos() {
     sed -i 's/redis/redis-opencve/g' docker-compose.yml
     sed -i 's/image: redis-opencve:buster/image: redis:buster/g' docker-compose.yml
     sed -i 's/${REDIS_PORT:-6379}:6379/6380:6380/g' docker-compose.yml
+    sed -i 's/${POSTGRES_PORT:-5432}:5432/5433:5433/g' docker-compose.yml
 
     # Build and spin up
     docker-compose build
