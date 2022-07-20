@@ -694,6 +694,10 @@
             "url": "file:///home/user/git/pentest-education/awesome-list-of-public-pentesting-reports"
           },
           {
+            "name": "cyberowl",
+            "url": "file:///home/user/git/pentest-education/cyberowl"
+          },
+          {
             "name": "PublicReports",
             "url": "file:///home/user/git/pentest-education/HalbornPublicReports"
           },

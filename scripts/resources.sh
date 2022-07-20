@@ -435,6 +435,9 @@ function pull_educational_repos() {
   git_update https://github.com/jakejarvis/awesome-shodan-queries.git $HOME/git/pentest-education/awesome-shodan-queries
   git_update https://github.com/cipher387/Dorks-collections-list.git  $HOME/git/pentest-education/Dorks-collections-list
   git_update https://github.com/techgaun/github-dorks.git $HOME/git/pentest-education/github-dorks
+
+  ### Misc
+  git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
 }
 
 ###
