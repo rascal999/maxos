@@ -1,0 +1,74 @@
+version: "3.4"
+x-restart-policy: &restart_policy
+    restart: unless-stopped
+x-opencve-defaults: &opencve_defaults
+    <<: *restart_policy
+    image: opencve:${OPENCVE_VERSION}
+    volumes:
+        - ${OPENCVE_CONFIG_PATH}:/app/opencve.cfg:ro
+
+services:
+    webserver:
+        <<: *opencve_defaults
+        container_name: webserver
+        build:
+            context: .
+            args:
+                - OPENCVE_VERSION=${OPENCVE_VERSION}
+                - HTTP_PROXY=${HTTP_PROXY:-}
+                - HTTPS_PROXY=${HTTPS_PROXY:-}
+            dockerfile: Dockerfile
+        depends_on:
+            - postgres-opencve
+        command: webserver -b 0.0.0.0:10030
+        networks:
+            - backend
+        ports:
+            - 127.0.0.1:10030:10030
+    celery_beat:
+        <<: *opencve_defaults
+        container_name: celery_beat
+        depends_on:
+            - webserver
+            - redis-opencve
+        command: celery-beat
+        networks:
+            - backend
+    celery_worker:
+        <<: *opencve_defaults
+        container_name: celery_worker
+        depends_on:
+            - webserver
+            - redis-opencve
+        command: celery-worker
+        networks:
+            - backend
+    redis-opencve:
+        <<: *restart_policy
+        container_name: redis-opencve
+        image: redis:buster
+        networks:
+            - backend
+        ports:
+            - 127.0.0.1:6380:6380
+    postgres-opencve:
+        <<: *restart_policy
+        container_name: postgres-opencve
+        image: postgres:11
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER:-opencve}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-opencve}
+            POSTGRES_DB: opencve
+            PGDATA: /var/lib/postgreqsql/data
+        networks:
+            - backend
+        expose:
+            - 5432
+        volumes:
+            - postgres-opencve:/var/lib/postgreqsql/data
+
+networks:
+    backend:
+
+volumes:
+    postgres-opencve:
