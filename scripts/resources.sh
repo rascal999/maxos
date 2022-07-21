@@ -3,11 +3,12 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-b] [-e] [-g] [-h] [-m] [-o] [-p] [-t] [-v] [-w] [-z]" 1>&2;
+  echo "Usage: $0 [-a] [-b] [-e] [-f] [-g] [-h] [-m] [-o] [-p] [-t] [-v] [-w] [-z]" 1>&2;
   echo
   echo "-a (Auth)             Docker authentication"
   echo "-b (Bug bounties)     Pull bug bounties (git)"
   echo "-e (Educational)      Pull educational resources (git)"
+  echo "-f (Force)            Force git pulls (bypass 'cache' check)"
   echo "-g (Tools)            Pull tools (git)"
   echo "-h (Heavy)            Pull heavy images (Kali, dockerctf etc.)"
   echo "-m (Misc)             Misc things"
@@ -20,10 +21,10 @@ usage() {
   echo
   echo "Examples:"
   echo "# Everything except heavy images and ZIMs"
-  echo "$0 -abegmoptvw"
+  echo "$0 -abefgmoptvw"
   echo
   echo "# Everything"
-  echo "$0 -abeghmoptvwz"
+  echo "$0 -abefghmoptvwz"
   echo
   echo "# ISO / VM environment"
   echo "$0 -gptw"
@@ -33,6 +34,7 @@ usage() {
 arg_auth=0
 arg_bug_bounties=0
 arg_educational=0
+arg_force=0
 arg_tools_git=0
 arg_heavy=0
 arg_misc=0
@@ -43,12 +45,13 @@ arg_vulnerable=0
 arg_wordlists=0
 arg_zims=0
 
-while getopts abeghmoptvwz flag
+while getopts abefghmoptvwz flag
 do
     case "${flag}" in
         a) arg_auth=1;;
         b) arg_bug_bounties=1;;
         e) arg_educational=1;;
+        f) arg_force=1;;
         g) arg_tools_git=1;;
         h) arg_heavy=1;;
         m) arg_misc=1;;
@@ -84,6 +87,7 @@ echo "---"
 echo "Docker auth: $arg_auth"
 echo "Bug bounties: $arg_bug_bounties"
 echo "Educational repos: $arg_educational"
+echo "Force git pull: $arg_force"
 echo "Git pull: $arg_tools_git"
 echo "Heavy images (docker): $arg_heavy"
 echo "Misc things: $arg_misc"
@@ -99,7 +103,8 @@ function git_update() {
   DIR_ACCESSED=`find $2 -maxdepth 0 -type d -atime -1 2>/dev/null | wc -l`
 
   # Only pull if directory not accessed in last day
-  if [[ "$DIR_ACCESSED" == "0" ]]; then
+  # or forced
+  if [[ "$DIR_ACCESSED" == "0" || "$arg_force" == "1" ]]; then
     git clone --depth 1 $1 $2
     cd $2
     git reset --hard
