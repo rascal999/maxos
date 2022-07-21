@@ -517,12 +517,14 @@ function pull_tool_repos() {
     cp $HOME/git/nixos-next/resources/configs/opencve/opencve.cfg conf
     # sed ports
     sed -i 's/8000/10030/g' docker-compose.yml
-    sed -i 's/${OPENCVE_PORT:-10030}:10030/10030:10030/g' docker-compose.yml
-    # sed redis image for sharelatex and ports
+    sed -i 's/${OPENCVE_PORT:-10030}:10030/127.0.0.1:10030:10030/g' docker-compose.yml
+    # sed redis/postgres image for sharelatex and ports
     sed -i 's/redis/redis-opencve/g' docker-compose.yml
     sed -i 's/image: redis-opencve:buster/image: redis:buster/g' docker-compose.yml
+    sed -i 's/postgres/postgres-opencve/g' docker-compose.yml
+    sed -i 's/image: postgres-opencve:11/image: postgres:11/g' docker-compose.yml
     sed -i 's/${REDIS_PORT:-6379}:6379/6380:6380/g' docker-compose.yml
-    sed -i 's/${POSTGRES_PORT:-5432}:5432/5433:5433/g' docker-compose.yml
+    sed -i 's/${POSTGRES_PORT:-5432}:5432/5433:5432/g' docker-compose.yml
 
     # Build and spin up
     docker-compose build
