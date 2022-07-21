@@ -528,7 +528,7 @@ function pull_tool_repos() {
 
     # Build and spin up
     docker-compose build
-    docker-compose up -d postgres redis-opencve webserver celery_worker
+    docker-compose up -d postgres-opencve redis-opencve webserver celery_worker
     docker exec -it webserver opencve upgrade-db
     docker exec -it webserver opencve import-data
   fi
