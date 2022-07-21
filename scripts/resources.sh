@@ -524,7 +524,7 @@ function pull_tool_repos() {
     sed -i 's/postgres/postgres-opencve/g' docker-compose.yml
     sed -i 's/image: postgres-opencve:11/image: postgres:11/g' docker-compose.yml
     sed -i 's/${REDIS_PORT:-6379}:6379/6380:6380/g' docker-compose.yml
-    sed -i 's/${POSTGRES_PORT:-5432}:5432/5433:5432/g' docker-compose.yml
+    #sed -i 's/${POSTGRES_PORT:-5432}:5432/5433:5432/g' docker-compose.yml
 
     # Build and spin up
     docker-compose build
