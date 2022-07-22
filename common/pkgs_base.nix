@@ -3,6 +3,7 @@
 with pkgs;
 let
   my-python-packages = python-packages: with python-packages; [
+    beautifulsoup4
     distro
     pip
     requests
