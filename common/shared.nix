@@ -109,7 +109,7 @@
   services.blueman.enable = true;
 
   # Timesync
-  services.timesyncd.enable = true;
+  #services.timesyncd.enable = true;
 
   # Firewall
   networking.firewall.enable = true;

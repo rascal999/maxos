@@ -21,6 +21,8 @@
   let
     system = "x86_64-linux";
 
+    lib = nixpkgs.lib;
+
     commonSettings = [
       agenix.nixosModule
       ./common/nur.nix
@@ -112,7 +114,7 @@
       };
 
       ### VM
-      vm = nixpkgs.lib.nixosSystem {
+      vm = lib.makeOverridable nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonSettings ++ [
           ./common/docker.nix

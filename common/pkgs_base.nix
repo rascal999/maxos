@@ -324,6 +324,7 @@ in {
      ngrok
      nixops
      nixos-generators
+     nixos-shell
      nload
      nmap
      nmap-formatter

@@ -995,9 +995,8 @@
 
     "Bookmarks": [
       {
-        "Favicon": "http://localhost:9090/favicon.ico",
-        "Title": "Dashy",
-        "URL": "http://localhost:9090/",
+        "Title": "Buffer",
+        "URL": "data:text/html;base64,PGh0bWwgY29udGVudGVkaXRhYmxlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPgo=",
         "Placement": "toolbar"
       },
       {
