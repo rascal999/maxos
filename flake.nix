@@ -118,7 +118,7 @@
         inherit system;
         modules = commonSettings ++ [
           ./common/docker.nix
-          ./common/grub.nix
+          #./common/grub.nix
           ./common/pkgs_additional.nix
           ./hosts/vm/configuration.nix
           ./hosts/vm/hardware-configuration.nix
