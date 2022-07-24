@@ -2,11 +2,11 @@
 
 {
   imports = [
-    common/firefox/firefox.nix
-    common/i3.nix
-    common/tmux.nix
-    common/xresources.nix
-    common/zsh.nix
+    config/firefox/firefox.nix
+    config/i3.nix
+    config/tmux.nix
+    config/xresources.nix
+    config/zsh.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -21,9 +21,9 @@
 
   home.file = {
     ".config/dashy/conf.yml".source = ./config/dashy/conf.yml;
-    ".mime.types".source = ./common/firefox/mime.types;
+    ".mime.types".source = ./config/firefox/mime.types;
     ".startup.sh".source = ./scripts/startup.sh;
-    ".vimrc".source = ./common/vimrc.nix;
+    ".vimrc".source = ./config/vimrc.nix;
   };
 
   # This value determines the Home Manager release that your
