@@ -120,6 +120,7 @@
           ./config/docker.nix
           ./config/pkgs_additional.nix
           ./hosts/vm/configuration.nix
+          ./hosts/vm/vm.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
