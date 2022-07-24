@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  virtualisation = {
+  virtualbox = {
     extraDisk = {
       label = "test";
       mountPoint = "/test";
