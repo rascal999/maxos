@@ -521,8 +521,8 @@ function pull_tool_repos() {
   # OpenCVE
   git_update https://github.com/opencve/opencve-docker.git $HOME/git/exploits/opencve-docker
   if [[ "$?" == "0" ]]; then
-    cp $HOME/git/nixos-next/resources/configs/opencve/opencve.cfg conf
-    cp $HOME/git/nixos-next/resources/configs/opencve/docker-compose.yml .
+    cp $HOME/git/nixos-next/configs/opencve/opencve.cfg conf
+    cp $HOME/git/nixos-next/configs/opencve/docker-compose.yml .
 
     # Build and spin up
     docker-compose build

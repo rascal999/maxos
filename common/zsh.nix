@@ -15,7 +15,7 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
-    initExtra = builtins.readFile ../configs/zshrc.zsh + ''
+    initExtra = builtins.readFile ../configs/zsh/zshrc.zsh + ''
       source ${./p10k.zsh}
     '';
 
