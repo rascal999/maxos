@@ -31,11 +31,14 @@
     memorySize = 4096;
 
     params = {
+      audio = "none";
+      audioin = "off";
+      audioout = "off";
       cpus = "4";
       nic1 = "bridged";
+      usbehci = "off";
     };
 
-    usbehci = "off";
     vmFileName = "XVM_20220725_01";
     vmName = "XVM";
   };
