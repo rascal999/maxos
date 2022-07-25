@@ -45,17 +45,20 @@
     enable = true;
     duration = 5000;
     soundCommand = "/run/current-system/sw/bin/mpv /home/user/git/nixos/resources/sounds/percussion-sound-614.mp3";
-    text.font.size = 25;
+    text.font.size = 30;
 
-    window.animation = {
-      bounce.enable = false;
-      easeIn = {
-        curve = 14;
-        duration = 700;
-      };
-      easeOut = {
-        curve = 13;
-        duration = 700;
+    window = {
+      height = 40;
+      animation = {
+        bounce.enable = false;
+        easeIn = {
+          curve = 14;
+          duration = 700;
+        };
+        easeOut = {
+          curve = 13;
+          duration = 700;
+        };
       };
     };
   };
