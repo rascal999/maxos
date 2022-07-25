@@ -178,7 +178,6 @@ in {
     gcc                                                                                                  #
     gef                                                                                                  # A modern experience for GDB with advanced debugging features for exploit developers & reverse engineers
     genymotion                                                                                           # Fast and easy Android emulation
-    ghidra-bin                                                                                           #
     ghost                                                                                                # Android post-exploitation framework
     gimp                                                                                                 # The GNU Image Manipulation Program
     git                                                                                                  # Distributed version control system
@@ -487,7 +486,6 @@ in {
     vim                                                                                                  #
     virt-manager                                                                                         # Desktop user interface for managing virtual machines
     vlc                                                                                                  # Cross-platform media player and streaming server
-    vmware-horizon-client                                                                                # Allows you to connect to your VMware Horizon virtual desktop
     volatility3                                                                                          # Volatile memory extraction frameworks
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
     vulnix                                                                                               # NixOS vulnerability scanner
@@ -535,7 +533,6 @@ in {
     zkar                                                                                                 # Java serialization protocol analysis tool
     zlib                                                                                                 # Lossless data-compression library
     zmap                                                                                                 # Fast single packet network scanner designed for Internet-wide network surveys
-    zoom-us                                                                                              # zoom.us video conferencing application
     zotero                                                                                               # Collect, organize, cite, and share your research sources
     zsh                                                                                                  # The Z shell
     zsh-autosuggestions                                                                                  # Fish shell autosuggestions for Zsh
