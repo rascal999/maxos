@@ -40,6 +40,9 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # Stop screen timeout
+  services.screen-locker.xss-lock.screensaverCycle = 0;
+
   # twmn
   services.twmn = {
     enable = true;
