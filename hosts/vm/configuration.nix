@@ -36,7 +36,7 @@
     };
 
     usbehci = "off";
-    vmFileName = "XVM_20220725_01"
+    vmFileName = "XVM_20220725_01";
     vmName = "XVM";
   };
 }
