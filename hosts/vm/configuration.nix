@@ -24,5 +24,20 @@
       x = 1920; y = 1440;
     }
   ];
+
+  # VM settings
+  virtualbox = {
+    baseImageFreeSpace = 64 * 1024;
+    cpus = "4";
+    memorySize = 4096;
+
+    params = {
+      nic1 = "bridged";
+    };
+
+    usbehci = "off";
+    vmFileName = "XVM_20220725_01"
+    vmName = "XVM";
+  };
 }
 
