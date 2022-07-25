@@ -39,4 +39,13 @@ in
     # Bus ID of the NVIDIA GPU. You can find it using lspci, either under 3D or VGA
     nvidiaBusId = "PCI:1:0:0";
   };
+
+  # Enable cron service
+  services.cron = {
+    enable = true;
+    systemCronJobs = [
+      "25 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
+      "55 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
+    ];
+  };
 }
