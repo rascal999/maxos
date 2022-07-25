@@ -28,10 +28,10 @@
   # VM settings
   virtualbox = {
     baseImageFreeSpace = 64 * 1024;
-    cpus = "4";
     memorySize = 4096;
 
     params = {
+      cpus = "4";
       nic1 = "bridged";
     };
 
