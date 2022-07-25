@@ -24,7 +24,7 @@
     ".mime.types".source = ./config/firefox/mime.types;
     ".startup.sh".source = ./scripts/startup.sh;
     ".vimrc".source = ./config/vimrc.nix;
-    ".config/twmn/twmn.conf".source = ./config/twmn.conf;
+    #".config/twmn/twmn.conf".source = ./config/twmn.conf;
   };
 
   # This value determines the Home Manager release that your
@@ -39,4 +39,24 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # twmn
+  services.twmn = {
+    enable = true;
+    duration = 5000;
+    soundCommand = "/run/current-system/sw/bin/mpv /home/user/git/nixos/resources/sounds/percussion-sound-614.mp3";
+    text.font.size = 25;
+
+    window.animation = {
+      bounce.enable = false;
+      easeIn = {
+        curve = 14;
+        duration = 700;
+      };
+      easeOut = {
+        curve = 13;
+        duration = 700;
+      };
+    };
+  };
 }
