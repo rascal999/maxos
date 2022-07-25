@@ -151,6 +151,7 @@ function pull_misc_things() {
   git_update https://github.com/misterch0c/what_is_this_c2.git $HOME/git/misc/what_is_this_c2
   git_update https://github.com/jessfraz/dockerfiles.git $HOME/git/misc/jessfraz-dockerfiles
   git_update https://github.com/StevenBlack/hosts.git $HOME/git/misc/StevenBlack-hosts
+  git_update https://github.com/NixOS/nixpkgs.git $HOME/git/misc/nixpkgs
 }
 
 ###
