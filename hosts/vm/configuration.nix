@@ -27,7 +27,12 @@
 
   # VM settings
   virtualbox = {
-    baseImageFreeSpace = 64 * 1024;
+    extraDisk = {
+      label = "git";
+      mountPoint = "/git";
+      size = 64 * 1024;
+    };
+
     memorySize = 4096;
 
     params = {
@@ -39,7 +44,7 @@
       usbehci = "off";
     };
 
-    vmFileName = "XVM_20220725_01";
+    vmFileName = "XVM_20220725_02.ova";
     vmName = "XVM";
   };
 }
