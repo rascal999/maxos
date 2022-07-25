@@ -24,6 +24,7 @@
     ".mime.types".source = ./config/firefox/mime.types;
     ".startup.sh".source = ./scripts/startup.sh;
     ".vimrc".source = ./config/vimrc.nix;
+    ".config/twmn/twmn.conf".source = ./config/twmn.conf;
   };
 
   # This value determines the Home Manager release that your
