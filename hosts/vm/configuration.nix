@@ -27,7 +27,7 @@
 
   # VM settings
   virtualbox = {
-    #baseImageSize = 64 * 1024;
+    baseImageSize = 64 * 1024;
 
     extraDisk = {
       label = "docker";
@@ -35,7 +35,7 @@
       size = 200 * 1024;
     };
 
-    memorySize = 4096;
+    memorySize = 8192;
 
     params = {
       audio = "none";
@@ -47,7 +47,7 @@
       usbehci = "off";
     };
 
-    vmFileName = "XVM_20220726_02.ova";
+    vmFileName = "XVM_20220726_03.ova";
     vmName = "XVM";
   };
 }
