@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
+  boot.loader.grub.enable = true;
+  boot.loader.grub.version = 2;
+
   networking.hostName = "xvm";
 
   # X11 / i3
@@ -43,7 +46,6 @@
       audioout = "off";
       cpus = "4";
       nic1 = "bridged";
-      nictype1 = "virtio";
       usbehci = "off";
     };
 
@@ -51,4 +53,3 @@
     vmName = "XVM";
   };
 }
-

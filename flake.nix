@@ -141,7 +141,8 @@
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
           ./config/syncthing.nix
-          ./hosts/vm/configuration.nix
+          ./hosts/xvm/configuration.nix
+          ./hosts/xvm/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
