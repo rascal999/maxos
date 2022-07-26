@@ -37,7 +37,7 @@ fi
 
 if [[ ! -f /etc/api-telegram ]]; then
   echo "ERROR: Cannot notify via Telegram, no API key"
-  exit 1
+  exit 0
 fi
 
 source /etc/api-telegram
