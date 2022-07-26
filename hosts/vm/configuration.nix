@@ -28,9 +28,9 @@
   # VM settings
   virtualbox = {
     extraDisk = {
-      label = "git";
-      mountPoint = "/git";
-      size = 64 * 1024;
+      label = "docker";
+      mountPoint = "/var/lib/docker";
+      size = 1 * 1024;
     };
 
     memorySize = 4096;
@@ -44,7 +44,7 @@
       usbehci = "off";
     };
 
-    vmFileName = "XVM_20220725_02.ova";
+    vmFileName = "XVM_20220726_01.ova";
     vmName = "XVM";
   };
 }
