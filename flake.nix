@@ -26,7 +26,7 @@
     configSettings = [
       agenix.nixosModule
       ./config/nur.nix
-      ./config/pkgs_base.nix
+      ./config/pkgs_minimal.nix
       ./config/shared.nix
       ./config/trilium.nix
 
@@ -44,6 +44,7 @@
           ./config/docker.nix
           ./config/grub.nix
           ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
           ./hosts/blade/configuration.nix
           ./hosts/blade/hardware-configuration.nix
 
@@ -64,6 +65,7 @@
           ./config/docker.nix
           ./config/grub.nix
           ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
           ./config/syncthing.nix
           ./hosts/rig/configuration.nix
           ./hosts/rig/hardware-configuration.nix
@@ -84,6 +86,7 @@
           ./config/docker.nix
           ./config/grub.nix
           ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
           ./config/syncthing.nix
           ./hosts/rog/configuration.nix
           ./hosts/rog/hardware-configuration.nix
@@ -118,7 +121,6 @@
         inherit system;
         modules = configSettings ++ [
           ./config/docker.nix
-          #./config/pkgs_additional.nix
           ./hosts/vm/configuration.nix
 
           ({ pkgs, ... }: {
@@ -136,6 +138,7 @@
         modules = configSettings ++ [
           ./config/grub.nix
           ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
           ./config/syncthing.nix
           ./hosts/blueboy/configuration.nix
           ./hosts/blueboy/dhcp.nix
@@ -161,6 +164,7 @@
         modules = configSettings ++ [
           ./config/grub.nix
           ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
           ./config/syncthing.nix
           ./hosts/galaxy/configuration.nix
           ./hosts/galaxy/hardware-configuration.nix
