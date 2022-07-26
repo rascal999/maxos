@@ -143,34 +143,6 @@
     22000
   ];
 
-  environment.etc = {
-    api-nist =
-    {
-      source = config.age.secrets.api-nist.path;
-      mode = "0444";
-    };
-    api-shodan =
-    {
-      source = config.age.secrets.api-shodan.path;
-      mode = "0444";
-    };
-    api-telegram =
-    {
-      source = config.age.secrets.api-telegram.path;
-      mode = "0444";
-    };
-    api-virustotal =
-    {
-      source = config.age.secrets.api-virustotal.path;
-      mode = "0444";
-    };
-    vpn-mullvad =
-    {
-      source = config.age.secrets.vpn-mullvad.path;
-      mode = "0444";
-    };
-  };
-
   # k3s
   services.k3s.enable = false;
   #services.k3s.role = "server";
