@@ -9,7 +9,7 @@ cp ${HOME}/git/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/b
 # Mullvad VPN
 if [[ ! -f /etc/vpn-mullvad ]]; then
   echo "ERROR: Cannot place VPN profiles, could not decrypt?"
-  exit 1
+  exit 0
 fi
 
 echo -n "Placing VPN profiles.."
