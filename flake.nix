@@ -138,6 +138,7 @@
         inherit system;
         modules = configSettings ++ [
           ./config/docker.nix
+          ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
           ./config/syncthing.nix
