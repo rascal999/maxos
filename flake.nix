@@ -66,6 +66,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/rig/configuration.nix
           ./hosts/rig/hardware-configuration.nix
@@ -87,6 +88,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/rog/configuration.nix
           ./hosts/rog/hardware-configuration.nix
@@ -161,6 +163,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/blueboy/configuration.nix
           ./hosts/blueboy/dhcp.nix
@@ -187,6 +190,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/galaxy/configuration.nix
           ./hosts/galaxy/hardware-configuration.nix
