@@ -132,6 +132,26 @@
         ];
       };
 
+      ### XVM
+      ### The VM is minimal, XVM will pull everything
+      xvm = lib.makeOverridable nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = configSettings ++ [
+          ./config/docker.nix
+          ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
+          ./config/syncthing.nix
+          ./hosts/vm/configuration.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./config/i3-vars.nix
+              ./home.nix
+            ];
+          })
+        ];
+      };
+
       ### BLUEBOY
       blueboy = nixpkgs.lib.nixosSystem {
         inherit system;

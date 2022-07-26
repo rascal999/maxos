@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-  networking.hostName = "vm";
+  networking.hostName = "xvm";
 
   # X11 / i3
   services.xserver = {
@@ -27,10 +27,12 @@
 
   # VM settings
   virtualbox = {
+    #baseImageSize = 64 * 1024;
+
     extraDisk = {
       label = "docker";
       mountPoint = "/var/lib/docker";
-      size = 1 * 1024;
+      size = 200 * 1024;
     };
 
     memorySize = 4096;
@@ -44,7 +46,7 @@
       usbehci = "off";
     };
 
-    vmFileName = "XVM_20220726_01.ova";
+    vmFileName = "XVM_20220726_02.ova";
     vmName = "XVM";
   };
 }
