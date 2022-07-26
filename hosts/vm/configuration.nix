@@ -32,7 +32,7 @@
     extraDisk = {
       label = "docker";
       mountPoint = "/var/lib/docker";
-      size = 200 * 1024;
+      size = 128 * 1024;
     };
 
     memorySize = 8192;
@@ -47,7 +47,7 @@
       usbehci = "off";
     };
 
-    vmFileName = "XVM_20220726_03.ova";
+    vmFileName = "XVM_20220726_04.ova";
     vmName = "XVM";
   };
 }
