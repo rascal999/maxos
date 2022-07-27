@@ -301,7 +301,7 @@
     valgrind                                                                                             # Debugging and profiling tool suite
     vegeta                                                                                               # Versatile HTTP load testing tool
     velero                                                                                               #
-    vmware-workstation                                                                                   # Industry standard desktop hypervisor for x86-64 architecture
+    #vmware-workstation                                                                                   # Industry standard desktop hypervisor for x86-64 architecture
     volatility3                                                                                          # Volatile memory extraction frameworks
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
     vulnix                                                                                               # NixOS vulnerability scanner

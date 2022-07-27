@@ -8,6 +8,7 @@
     arduino                                                                                              # Basic Octave implementation of the matlab arduino extension, allowing communication to a programmed arduino board to control its hardware
     ghidra-bin
     libreoffice-fresh
+    linuxKernel.packages.linux_5_15.vmware
     OVMF
     qemu
     qemu-utils

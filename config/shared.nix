@@ -11,7 +11,10 @@
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.scanRandMacAddress = false;
 
-  boot.kernelParams = [ "intel_pstate=active" ];
+  boot.kernelParams = [
+    "intel_pstate=active"
+    "transparent_hugepage=never"
+  ];
   boot.initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
   boot.initrd.network = {
     enable = true;
@@ -194,15 +197,17 @@
 
   # Virtualisation
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
+  virtualisation = {
+    virtualbox.host.enable = true;
+    vmware.host.enable = true;
 
-  virtualisation.virtualbox.host.enable = true;
-
-  # QEMU
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu.ovmf.enable = true;
-    qemu.swtpm.enable = true;
-    qemu.ovmf.packages = [ pkgs.OVMFFull ];
+    # QEMU
+    libvirtd = {
+      enable = true;
+      qemu.ovmf.enable = true;
+      qemu.swtpm.enable = true;
+      qemu.ovmf.packages = [ pkgs.OVMFFull ];
+    };
   };
 
   # opensnitch
