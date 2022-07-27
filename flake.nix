@@ -118,12 +118,28 @@
         ];
       };
 
-      ### VM
-      vm = lib.makeOverridable nixpkgs.lib.nixosSystem {
+      ### VM (VirtualBox)
+      vm_virtualbox = lib.makeOverridable nixpkgs.lib.nixosSystem {
         inherit system;
         modules = configSettings ++ [
           ./config/docker.nix
-          ./hosts/vm/configuration.nix
+          ./hosts/vm_virtualbox/configuration.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./config/i3-vars.nix
+              ./home.nix
+            ];
+          })
+        ];
+      };
+
+      ### VM (VMware)
+      vm_vmware = lib.makeOverridable nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = configSettings ++ [
+          ./config/docker.nix
+          ./hosts/vm_vmware/configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
