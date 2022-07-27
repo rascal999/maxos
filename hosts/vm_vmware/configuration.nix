@@ -27,12 +27,9 @@
 
   # VM settings
   vmware = {
-    baseImageSize = 200 * 1024;
+    baseImageSize = 64 * 1024;
 
-    memorySize = 8192;
-
-    vmFileName = "XVM_20220727_01.vmdk";
-    vmName = "XVM";
+    vmFileName = "XVM_20220727_02.vmdk";
   };
 }
 
