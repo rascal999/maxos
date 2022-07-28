@@ -5,6 +5,7 @@ let
   my-python-packages = python-packages: with python-packages; [
     beautifulsoup4
     distro
+    flask
     pip
     requests
     setuptools
@@ -91,6 +92,7 @@ in {
     mplayer                                                                                              # A movie player that supports many video formats
     mpv                                                                                                  # General-purpose media player, fork of MPlayer and mplayer2
     mtr                                                                                                  # A network diagnostics tool
+    python-with-my-packages
     navi                                                                                                 # An interactive cheatsheet tool for the command-line and application launchers
     ncftp                                                                                                # Command line FTP (File Transfer Protocol) client
     netcat-gnu                                                                                           #
