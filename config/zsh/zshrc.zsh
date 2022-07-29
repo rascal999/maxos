@@ -186,6 +186,7 @@ d-filebrowserhere() {
 d-rengine() {
   sed -i "s#- 443:443/tcp#- ${PORT_RENGINE}:443/tcp#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
   sed -i "s#- 80:80/tcp#- 80/tcp#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
+  sed -i "s#- \"5432:5432\"#- \"5434:5432\"#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
   sed -i 's#"8000:8000"#"8000"#g' ${HOME}/git/pentest-tools/rengine/docker-compose.yml
   cd $HOME/git/pentest-tools/rengine
   sudo make up
