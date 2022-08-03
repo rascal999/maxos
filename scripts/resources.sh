@@ -434,6 +434,7 @@ function pull_educational_repos() {
   git_update https://github.com/decalage2/awesome-security-hardening.git $HOME/git/pentest-education/awesome-security-hardening
   git_update https://github.com/OWASP/Top10 $HOME/git/pentest-education/Top10
   git_update https://github.com/mikeroyal/Open-Source-Security-Guide.git $HOME/git/pentest-education/Open-Source-Security-Guide
+  git_update https://github.com/riramar/Web-Attack-Cheat-Sheet $HOME/git/pentest-education/Web-Attack-Cheat-Sheet
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
