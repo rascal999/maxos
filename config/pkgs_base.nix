@@ -234,6 +234,7 @@
     pwntools                                                                                             # CTF framework and exploit development library
     radamsa                                                                                              # A general purpose fuzzer
     radare2                                                                                              # unix-like reverse engineering framework and commandline tools
+    rclone                                                                                               # Command line program to sync files and directories to and from major cloud storage
     reaverwps                                                                                            #
     reaverwps-t6x                                                                                        #
     recoverjpeg                                                                                          # Recover lost JPEGs and MOV files on a bogus memory card or disk
