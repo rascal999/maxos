@@ -9,6 +9,7 @@ let
     pip
     pytest
     requests
+    selenium
     setuptools
     wordcloud
   ];
