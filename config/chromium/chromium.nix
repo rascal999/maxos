@@ -4,6 +4,7 @@
     enable = true;
 
     extensions =  [
+      { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # Dark Reader
       { id = "ddihdomdfpicmiobogkoaideoklkhbah"; } # Dark Theme
       { id = "pnhdnpnnffpijjbnhnipkehhibchdeok"; } # EpubPress
       { id = "ecabifbgmdmgdllomnfinbmaellmclnh"; } # Reader View
