@@ -10,16 +10,18 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class SqRegister():
-  def setup_method(self, method):
+  def setup_method(self):
     options = Options()
     options.headless = False
-    self.driver = webdriver.Firefox(options=options)
+    options.profile = True
+    self.driver = webdriver.Firefox(options)
     self.vars = {}
 
-  def teardown_method(self, method):
+  def teardown_method(self):
     self.driver.quit()
 
   def sqregister(self):

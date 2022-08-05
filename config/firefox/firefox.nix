@@ -142,6 +142,15 @@
         userChrome = import ./css/userChromeBurp.css;
         userContent = import ./css/userContent.css;
       };
+
+      selenium = {
+        id = 2;
+        name = "Selenium";
+        isDefault = false;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
     };
   };
 }
