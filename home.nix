@@ -2,6 +2,7 @@
 
 {
   imports = [
+    config/chromium/chromium.nix
     config/firefox/firefox.nix
     config/i3.nix
     config/tmux.nix
