@@ -29,7 +29,7 @@ in {
 
         "${mod}+b" = "exec /home/user/git/nixos-next/scripts/burp.sh";
         "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
-        "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.75";
+        "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.60";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
