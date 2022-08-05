@@ -7,6 +7,7 @@ let
     distro
     flask
     pip
+    pytest
     requests
     setuptools
     wordcloud
