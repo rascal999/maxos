@@ -6,6 +6,7 @@
     extensions =  [
       { id = "mooikfkahbdckldjjndioackbalphokd"; } # Selenium
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
+      { id = "mafbdhjdkjnoafhfelkjpchpaepjknad"; } # Dark Theme
     ];
   };
 }
