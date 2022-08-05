@@ -4,9 +4,14 @@
     enable = true;
 
     extensions =  [
+      { id = "ddihdomdfpicmiobogkoaideoklkhbah"; } # Dark Theme
+      { id = "pnhdnpnnffpijjbnhnipkehhibchdeok"; } # EpubPress
+      { id = "ecabifbgmdmgdllomnfinbmaellmclnh"; } # Reader View
+      { id = "kbmfpngjjgdllneeigpgjifpgocmfgmb"; } # Reddit Enhancement Suite
       { id = "mooikfkahbdckldjjndioackbalphokd"; } # Selenium
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
-      { id = "ddihdomdfpicmiobogkoaideoklkhbah"; } # Dark Theme
+      { id = "iplffkdpngmdjhlpjmppncnlhomiipha"; } # Unpaywall
+      { id = "nffaoalbilbmmfgbnbgppjihopabppdk"; } # Video Speed Controller
     ];
   };
 }
