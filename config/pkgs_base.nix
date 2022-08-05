@@ -64,6 +64,7 @@
     chntpw                                                                                               # An utility to reset the password of any user that has a valid local account on a Windows system
     chopchop                                                                                             # CLI to search for sensitive services/files/folders
     chroma                                                                                               # A general purpose syntax highlighter in pure Go
+    chromedriver                                                                                         # A WebDriver server for running Selenium tests on Chrome
     clair                                                                                                # Vulnerability Static Analysis for Containers
     cliam                                                                                                # Cloud agnostic IAM permissions enumerator
     cloudbrute                                                                                           # Cloud enumeration tool

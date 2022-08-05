@@ -5,51 +5,49 @@ import pytest
 import time
 import json
 from selenium import webdriver
-from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 class SqRegister():
   def setup_method(self):
-    options = Options()
-    options.headless = False
-    options.profile = True
-    self.driver = webdriver.Firefox(options)
+    service = Service("/run/current-system/sw/bin/chromedriver")
+    self.driver = webdriver.Chrome(service=service)
     self.vars = {}
-
+  
   def teardown_method(self):
     self.driver.quit()
-
-  def sqregister(self):
-    self.driver.get("http://localhost:9000/sessions/new?return_to=%2F")
+  
+  def test_sqregister(self):
+    self.driver.get("http://localhost:9000/")
+    time.sleep(2)
+    #self.driver.set_window_size(537, 885)
     self.driver.find_element(By.ID, "login").click()
     self.driver.find_element(By.ID, "login").send_keys("admin")
     self.driver.find_element(By.ID, "password").send_keys("admin")
-    self.driver.find_element(By.CSS_SELECTOR, ".button").click()
+    self.driver.find_element(By.ID, "password").send_keys(Keys.ENTER)
+    time.sleep(2)
     self.driver.find_element(By.ID, "old_password").click()
     self.driver.find_element(By.ID, "old_password").send_keys("admin")
     self.driver.find_element(By.ID, "password").send_keys("testtest")
     self.driver.find_element(By.ID, "password_confirmation").send_keys("testtest")
     self.driver.find_element(By.ID, "change-password").click()
+    time.sleep(2)
     self.driver.find_element(By.CSS_SELECTOR, ".create-project-mode-type-manual").click()
+    time.sleep(2)
     self.driver.find_element(By.ID, "project-name").send_keys("scan")
     self.driver.find_element(By.CSS_SELECTOR, ".button:nth-child(4)").click()
-    element = self.driver.find_element(By.CSS_SELECTOR, ".button:nth-child(4)")
-    actions = ActionChains(self.driver)
-    actions.move_to_element(element).perform()
+    time.sleep(2)
     self.driver.find_element(By.CSS_SELECTOR, ".tutorial-mode-manual > img").click()
     self.driver.find_element(By.CSS_SELECTOR, ".text-middle:nth-child(2)").click()
-    self.driver.find_element(By.CSS_SELECTOR, "form").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".js-continue").click()
-    self.driver.find_element(By.CSS_SELECTOR, "li:nth-child(4) > label").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".big-spacer-top li:nth-child(1) > label").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".huge-spacer-top").click()
+    element = self.driver.find_element(By.CLASS, "spacer-right text-middle")
+    print(element.text)
 
 if __name__ == "__main__":
-  run = SqRegister()
+  run = SqRegister()  
   run.setup_method()
-  run.sqregister()
+  run.test_sqregister()
