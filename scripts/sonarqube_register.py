@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import requests
+import subprocess as sp
 import sys
 import time
 #import xmltodict, json
@@ -89,12 +90,15 @@ def main():
     sq_token = json.loads(endpoint_create_fetch_token.text)['token']
     print("Token: " + sq_token)
 
+    sq_ip = sp.getoutput("docker inspect `docker ps -a | grep sonarqube | choose 0` | jq -r '.[].NetworkSettings.IPAddress'")
+
+    # RUN SCANNER
     os.system("docker run \
       --rm \
-      -e SONAR_HOST_URL='" + parsed.url + "' \
+      -e SONAR_HOST_URL='http://" + str(sq_ip) + ":9000' \
       -e SONAR_LOGIN='" + sq_token + "' \
       -v '" + os.getcwd() + ":/usr/src' \
-      sonarsource/sonar-scanner-cli")
+      sonarsource/sonar-scanner-cli -Dsonar.projectKey=scan")
 
 if __name__ == "__main__":
     main()
