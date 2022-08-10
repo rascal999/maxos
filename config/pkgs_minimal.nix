@@ -42,6 +42,7 @@ in {
     duf                                                                                                  # Disk Usage/Free Utility
     dunst                                                                                                # Lightweight and customizable notification daemon
     electrum                                                                                             # A lightweight Bitcoin wallet
+    ethtool                                                                                              # Utility for controlling network drivers and hardware
     evillimiter                                                                                          # Tool that monitors, analyzes and limits the bandwidth
     fd                                                                                                   # A simple, fast and user-friendly alternative to find
     feh                                                                                                  # A light-weight image viewer
