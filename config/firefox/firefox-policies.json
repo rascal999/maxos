@@ -178,6 +178,14 @@
             "url": "file:///home/user/git/pentest-education/awesome-cybersecurity-blueteam"
           },
           {
+            "name": "awesome-devsecops",
+            "url": "file:///home/user/git/pentest-education/awesome-devsecops"
+          },
+          {
+            "name": "awesome-incident-response",
+            "url": "file:///home/user/git/pentest-education/awesome-incident-response"
+          },
+          {
             "name": "awesome-security-hardening",
             "url": "file:///home/user/git/pentest-education/awesome-security-hardening"
           },
@@ -245,14 +253,6 @@
           {
             "name": "Pentest-Cheat-Sheets",
             "url": "file:///home/user/git/pentest-education/Pentest-Cheat-Sheets"
-          },
-          {
-            "name": "awesome-pentest-cheat-sheets",
-            "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets"
-          },
-          {
-            "name": "awesome-pentest-cheat-sheets",
-            "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets"
           },
           {
             "name": "awesome-pentest-cheat-sheets",
@@ -351,6 +351,10 @@
             "url": "file:///home/user/git/pentest-education/awesome-awesomeness"
           },
           {
+            "name": "awesome-lockpicking",
+            "url": "file:///home/user/git/pentest-education/awesome-lockpicking"
+          },
+          {
             "name": "coding-interview-university",
             "url": "file:///home/user/git/education/coding-interview-university"
           },
@@ -363,12 +367,16 @@
             "url": "file:///home/user/git/pentest-education/howtheysre"
           },
           {
-            "name": "Reverse-Engineering",
-            "url": "file:///home/user/git/pentest-education/Reverse-Engineering"
+            "name": "Mind-Expanding-Books",
+            "url": "file:///home/user/git/education/Mind-Expanding-Books"
           },
           {
             "name": "papers-we-love",
             "url": "file:///home/user/git/education/papers-we-love"
+          },
+          {
+            "name": "Reverse-Engineering",
+            "url": "file:///home/user/git/pentest-education/Reverse-Engineering"
           },
           {
             "name": "test-your-sysadmin-skills",
@@ -517,7 +525,7 @@
             "children": [
               {
                 "name": "awesome-ctf",
-                "url": "file:///$HOME/git/pentest-education/vulhub"
+                "url": "file:///$HOME/git/pentest-education/awesome-ctf"
               },
               {
                 "name": "ctf",
@@ -911,6 +919,18 @@
                 "url": "file:///home/user/git/pentest-education/awesome-appsec"
               },
               {
+                "name": "awesome-embedded-and-iot-security",
+                "url": "file:///home/user/git/pentest-education/awesome-embedded-and-iot-security"
+              },
+              {
+                "name": "awesome-executable-packing",
+                "url": "file:///home/user/git/pentest-education/awesome-executable-packing"
+              },
+              {
+                "name": "awesome-fuzzing",
+                "url": "file:///home/user/git/pentest-education/awesome-fuzzing"
+              },
+              {
                 "name": "awesome-hacking",
                 "url": "file:///home/user/git/pentest-education/awesome-hacking"
               },
@@ -919,8 +939,20 @@
                 "url": "file:///home/user/git/pentest-education/Awesome-Hacking"
               },
               {
+                "name": "awesome-hacking-locations",
+                "url": "file:///home/user/git/pentest-education/awesome-hacking-locations"
+              },
+              {
+                "name": "awesome-honeypots",
+                "url": "file:///home/user/git/pentest-education/awesome-honeypots"
+              },
+              {
                 "name": "Awesome-Hacking-Resources",
                 "url": "file:///home/user/git/pentest-education/Awesome-Hacking-Resources"
+              },
+              {
+                "name": "awesome-malware-analysis",
+                "url": "file:///home/user/git/pentest-education/awesome-malware-analysis"
               },
               {
                 "name": "awesome-pentest",

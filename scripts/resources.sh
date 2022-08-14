@@ -364,6 +364,7 @@ function pull_educational_repos() {
   git_update https://github.com/jlevy/the-art-of-command-line.git $HOME/git/education/the-art-of-command-line
   git_update https://github.com/0xAX/linux-insides.git $HOME/git/education/linux-insides
   git_update https://github.com/0xricksanchez/paper_collection.git $HOME/git/education/paper_collection
+  git_update https://github.com/hackerkid/Mind-Expanding-Books.git $HOME/git/education/Mind-Expanding-Books
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -436,10 +437,19 @@ function pull_educational_repos() {
   git_update https://github.com/OWASP/Top10 $HOME/git/pentest-education/Top10
   git_update https://github.com/mikeroyal/Open-Source-Security-Guide.git $HOME/git/pentest-education/Open-Source-Security-Guide
   git_update https://github.com/riramar/Web-Attack-Cheat-Sheet $HOME/git/pentest-education/Web-Attack-Cheat-Sheet
+  git_update https://github.com/brootware/awesome-cyber-security-university.git $HOME/git/pentest-education/awesome-cyber-security-university
+  git_update https://github.com/rshipp/awesome-malware-analysis.git $HOME/git/pentest-education/awesome-malware-analysis
+  git_update https://github.com/daviddias/awesome-hacking-locations.git $HOME/git/pentest-education/awesome-hacking-locations
+  git_update https://github.com/fabacab/awesome-lockpicking.git $HOME/git/pentest-education/awesome-lockpicking
+  git_update https://github.com/cpuu/awesome-fuzzing.git $HOME/git/pentest-education/awesome-fuzzing
+  git_update https://github.com/fkie-cad/awesome-embedded-and-iot-security.git $HOME/git/pentest-education/awesome-embedded-and-iot-security
+  git_update https://github.com/dhondta/awesome-executable-packing.git $HOME/git/pentest-education/awesome-executable-packing
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
   git_update https://github.com/fabacab/awesome-cybersecurity-blueteam.git $HOME/git/pentest-education/awesome-cybersecurity-blueteam
+  git_update https://github.com/meirwah/awesome-incident-response.git $HOME/git/pentest-education/awesome-incident-response
+  git_update https://github.com/TaptuIT/awesome-devsecops.git $HOME/git/pentest-education/awesome-devsecops
 
   ### OSINT
   git_update https://github.com/jivoi/awesome-osint.git $HOME/git/pentest-education/awesome-osint
