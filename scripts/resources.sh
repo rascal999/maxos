@@ -128,18 +128,19 @@ function pull_heavy_docker() {
 ### Misc things
 ###
 function pull_misc_things() {
-  docker pull trufflesuite/ganache-cli                     # Local blockchain dev
-  docker pull oracleinanutshell/oracle-xe-11g              # Oracle DB
-  docker pull rflathers/nginxserve                         # nginx
-  docker pull ghcr.io/linuxserver/thelounge                # IRC client
-  docker pull kizzx2/wireguard-socks-proxy                 # Expose a WireGuard tunnel as a SOCKS5 proxy
-  docker pull dperson/torproxy                             # Tor and Privoxy docker container
-  docker pull zadam/trilium                                # Personal knowledge base
-  docker pull kiwix/kiwix-serve                            # Internet. Offline.
-  docker pull jgraph/drawio                                # draw.io
-  docker pull netdata/netdata                              # Netdata dashboard
-  docker pull ivre/db                                      # Network recon framework
-  docker pull ivre/client                                  # Network recon framework
+  docker pull trufflesuite/ganache-cli                              # Local blockchain dev
+  docker pull oracleinanutshell/oracle-xe-11g                       # Oracle DB
+  docker pull rflathers/nginxserve                                  # nginx
+  docker pull ghcr.io/linuxserver/thelounge                         # IRC client
+  docker pull kizzx2/wireguard-socks-proxy                          # Expose a WireGuard tunnel as a SOCKS5 proxy
+  docker pull dperson/torproxy                                      # Tor and Privoxy docker container
+  docker pull zadam/trilium                                         # Personal knowledge base
+  docker pull kiwix/kiwix-serve                                     # Internet. Offline.
+  docker pull jgraph/drawio                                         # draw.io
+  docker pull netdata/netdata                                       # Netdata dashboard
+  docker pull ivre/db                                               # Network recon framework
+  docker pull ivre/client                                           # Network recon framework
+  docker pull ghcr.io/openbb-finance/openbbterminal-poetry:latest   # Investment Research for Everyone, Anywhere
 
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
@@ -665,6 +666,12 @@ function pull_tool_repos() {
   git_update https://github.com/OWASP/joomscan.git $HOME/git/pentest-tools/joomscan
   if [[ "$?" == "0" ]]; then
     docker build -t rezasp/joomscan .
+  fi
+
+  # MHDDoS
+  git_update https://github.com/MatrixTM/MHDDoS.git $HOME/git/pentest-tools/MHDDoS
+  if [[ "$?" == "0" ]]; then
+    docker build . -t mhddos
   fi
 
   # impacket

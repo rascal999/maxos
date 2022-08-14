@@ -84,6 +84,8 @@ new() {
   echo "aria2c                  wget alternative"
   echo "broot                   File explorer"
   echo "croc                    Share files between machines"
+  echo "d-bb                    OpenBB finance terminal"
+  echo "d-dos                   MHDDoS"
   echo "d-hmpaa                 Howmanypeoplearearound (wifi scan)"
   echo "gitleaks                Discover secrets using Gitleaks"
   echo "k6                      Loaod testing with scripting"
@@ -176,6 +178,14 @@ d-windowshellhere() {
 
 d-hmpaa() {
   docker run --rm -it --net=host --name howmanypeoplearearound howmanypeoplearearound
+}
+
+d-dos() {
+  docker run --rm mhddos "$@"
+}
+
+d-bb() {
+  docker run -it --rm ghcr.io/openbb-finance/openbbterminal-poetry:latest
 }
 
 d-filebrowserhere() {
