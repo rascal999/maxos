@@ -39,6 +39,9 @@
     };
 
     libretranslate = {
+      extraOptions = [
+                      "--cpus=2"
+                     ];
       image = "libretranslate/libretranslate";
       ports = [ "127.0.0.1:9070:5000" ];
     };
