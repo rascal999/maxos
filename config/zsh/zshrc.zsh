@@ -90,7 +90,7 @@ new() {
   echo "d-dos                       MHDDoS"
   echo "d-hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "gitleaks                    Discover secrets using Gitleaks"
-  echo "k6                          Loaod testing with scripting"
+  echo "k6                          Load testing with scripting"
   echo "tldr                        TL;DR for command"
   echo "wuzz                        Interactive cli tool for HTTP inspection"
 }
