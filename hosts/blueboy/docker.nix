@@ -15,6 +15,9 @@
       extraOptions = [
         "--network=host"
       ];
+      ports = [
+                "0.0.0.0:10050:8123"
+              ];
     };
 
     wireguard = {
