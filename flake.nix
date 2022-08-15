@@ -188,7 +188,6 @@
           ./hosts/blueboy/hardware-configuration.nix
           ./hosts/blueboy/syncthing.nix
           ./hosts/blueboy/trilium.nix
-          ./hosts/blueboy/wireguard.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [

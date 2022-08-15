@@ -1,13 +1,38 @@
 { config, pkgs, lib, ... }: {
+  age.secrets = {
+    wireguard-env = {
+      file = ../../secrets/wireguard-env.age;
+    };
+  };
+
   virtualisation.oci-containers.backend = "docker";
-  #virtualisation.oci-containers.containers = {
-  #  focalboard = {
-  #    image = "mattermost/focalboard";
-  #    ports = [ "127.0.0.1:9010:8000" ];
-  #    volumes = [ "/home/user/Data/focalboard:/data"];
-  #  };
-  #};
+
   virtualisation.oci-containers.containers = {
+    homeassistant = {
+      volumes = [ "home-assistant:/config" ];
+      environment.TZ = "Europe/Berlin";
+      image = "ghcr.io/home-assistant/home-assistant:stable"; # Warning: if the tag does not change, the image will not be updated
+      extraOptions = [
+        "--network=host"
+      ];
+    };
+
+    wireguard = {
+      environmentFiles = [
+                          config.age.secrets.wireguard-env.path
+                         ];
+      extraOptions = [
+                       "--cap-add=NET_ADMIN"
+                       "--device=/dev/net/tun:/dev/net/tun"
+                       "--volume=/root/wg-access-server-data:/data"
+                     ];
+      image = "place1/wg-access-server";
+      ports = [
+                "0.0.0.0:9030:8000"
+                "0.0.0.0:51820:51820/udp"
+              ];
+    };
+
     openvas = {
       image = "greenbone/openvas";
       ports = [ "8030:443" ];
