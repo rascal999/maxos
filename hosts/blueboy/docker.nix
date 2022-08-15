@@ -12,9 +12,6 @@
       volumes = [ "home-assistant:/config" ];
       environment.TZ = "Europe/Berlin";
       image = "ghcr.io/home-assistant/home-assistant:stable"; # Warning: if the tag does not change, the image will not be updated
-      extraOptions = [
-        "--network=host"
-      ];
       ports = [
                 "0.0.0.0:10050:8123"
               ];
