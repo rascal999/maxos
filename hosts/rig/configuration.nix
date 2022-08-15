@@ -19,7 +19,7 @@
   };
 
   # WOL
-  services.wakeonlan.interfaces = [ { interface = "enp39s0"; method = "magicpacket"; }] ;
+  networking.interfaces.enp39s0.wakeOnLan.enable = true;
 
   # Enable cron service
   services.cron = {
