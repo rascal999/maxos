@@ -23,6 +23,7 @@
   home.file = {
     ".config/dashy/conf.yml".source = ./config/dashy/conf.yml;
     ".mime.types".source = ./config/firefox/mime.types;
+    ".privatebin/conf/conf.php".source = ./config/privatebin/conf.php;
     ".startup.sh".source = ./scripts/startup.sh;
     ".vimrc".source = ./config/vimrc.nix;
     #".config/twmn/twmn.conf".source = ./config/twmn.conf;
