@@ -80,18 +80,19 @@ a-notify()
 
 new() {
   echo "### New commands ###"
-  echo "a-fo                    Open Firefox at CWD"
-  echo "a-localhostrun-gotty    Terminal command over web"
-  echo "aria2c                  wget alternative"
-  echo "broot                   File explorer"
-  echo "croc                    Share files between machines"
-  echo "d-bb                    OpenBB finance terminal"
-  echo "d-dos                   MHDDoS"
-  echo "d-hmpaa                 Howmanypeoplearearound (wifi scan)"
-  echo "gitleaks                Discover secrets using Gitleaks"
-  echo "k6                      Loaod testing with scripting"
-  echo "tldr                    TL;DR for command"
-  echo "wuzz                    Interactive cli tool for HTTP inspection"
+  echo "a-fo                        Open Firefox at CWD"
+  echo "a-localhostrun-gotty        Terminal command over web"
+  echo "a-localhostrun-privatebin   Privatebin over localhost.run"
+  echo "aria2c                      wget alternative"
+  echo "broot                       File explorer"
+  echo "croc                        Share files between machines"
+  echo "d-bb                        OpenBB finance terminal"
+  echo "d-dos                       MHDDoS"
+  echo "d-hmpaa                     Howmanypeoplearearound (wifi scan)"
+  echo "gitleaks                    Discover secrets using Gitleaks"
+  echo "k6                          Loaod testing with scripting"
+  echo "tldr                        TL;DR for command"
+  echo "wuzz                        Interactive cli tool for HTTP inspection"
 }
 
 test-vpn() {
@@ -283,6 +284,11 @@ a-localhostrun-filebrowser() {
   ssh -R 80:localhost:1080 nokey@localhost.run
   echo "Stopping filebrowser docker instance.."
   docker stop localhostrun-filebrowser
+}
+
+a-localhostrun-privatebin() {
+  ssh -R 80:localhost:10040 nokey@localhost.run
+  echo "Stopping localhost.run connection.."
 }
 
 a-cloudmapper-gather() {

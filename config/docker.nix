@@ -107,7 +107,6 @@
       image = "privatebin/nginx-fpm-alpine";
       ports = [ "127.0.0.1:10040:8080" ];
       volumes = [
-                  "/home/user/.privatebin/shared:/srv/data"
                   "/home/user/.privatebin/conf/conf.php:/srv/cfg/conf.php:ro"
                 ];
     };
