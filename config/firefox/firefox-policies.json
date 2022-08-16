@@ -367,6 +367,10 @@
             "url": "file:///home/user/git/pentest-education/howtheysre"
           },
           {
+            "name": "Kiwix (wikis)",
+            "url": "http://localhost:9060/?lang=eng"
+          },
+          {
             "name": "Mind-Expanding-Books",
             "url": "file:///home/user/git/education/Mind-Expanding-Books"
           },
