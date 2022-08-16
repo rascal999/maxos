@@ -1,12 +1,6 @@
 { config, pkgs, lib, ... }: {
   virtualisation.oci-containers.backend = "docker";
-  #virtualisation.oci-containers.containers = {
-  #  focalboard = {
-  #    image = "mattermost/focalboard";
-  #    ports = [ "127.0.0.1:9010:8000" ];
-  #    volumes = [ "/home/user/Data/focalboard:/data"];
-  #  };
-  #};
+
   virtualisation.oci-containers.containers = {
     openvas = {
       image = "greenbone/openvas";
@@ -56,6 +50,21 @@
       image = "lissy93/dashy";
       ports = [ "127.0.0.1:9090:80" ];
       volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
+    };
+
+    grafana = {
+      environment = {
+                      GF_DEFAULT_INSTANCE_NAME = "grafana.home";
+                      GF_INSTALL_PLUGINS = "grafana-strava-datasource";
+                      GF_STRAVA_DS_DATA_PATH = "/var/lib/grafana/strava";
+                    };
+      image = "grafana/grafana-oss";
+      ports = [ "127.0.0.1:10060:3000" ];
+      volumes = [
+                  "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
+                  "/home/user/git/nixos/resources/grafana/provisioning/datasources/:/etc/grafana/provisioning/dashboards/"
+                  "/home/user/git/nixos/resources/grafana/dashboards:/mnt/dashboards"
+                ];
     };
 
     gtfobins = {

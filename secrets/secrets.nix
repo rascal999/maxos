@@ -9,6 +9,7 @@ in
 {
   "api-nist.age".publicKeys = hosts;
   "api-shodan.age".publicKeys = hosts;
+  "api-strava.age".publicKeys = hosts;
   "api-telegram.age".publicKeys = hosts;
   "api-virustotal.age".publicKeys = hosts;
   "password-ddclient.age".publicKeys = hosts;

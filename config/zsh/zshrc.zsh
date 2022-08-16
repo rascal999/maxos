@@ -34,6 +34,7 @@ PORT_COMPILER_EXPLORER=10020
 PORT_OPENCVE=10030
 PORT_PRIVATEBIN=10040
 PORT_HOME_ASSISTANT=10050
+PORT_GRAFANA=10060
 PORT_WIREGUARD=51820
 
 export MCFLY_KEY_SCHEME=vim
@@ -101,7 +102,7 @@ test-vpn() {
 }
 
 a-agenix() {
-  nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- $@
+  sudo EDITOR=vim nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- -i /etc/ssh/ssh_host_ed25519_key $@
 }
 
 a-fo() {

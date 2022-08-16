@@ -763,6 +763,10 @@
                 "url": "http://localhost:10010/"
               },
               {
+                "name": "Grafana",
+                "url": "http://grafana.home:10060/"
+              },
+              {
                 "name": "LibreTranslate",
                 "url": "http://localhost:9070/"
               },
