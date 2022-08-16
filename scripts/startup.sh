@@ -7,7 +7,10 @@ rm -rf ${HOME}/jupyter/pentest/base/tools
 cp ${HOME}/git/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
 
 # Grafana Strava directory
+echo "Setting up Grafana directory.."
 sudo mkdir -p /var/lib/docker/volumes/grafana-data/_data/strava || true
+sudo chown 472:root /var/lib/docker/volumes/grafana-data/_data/strava -R || true
+echo "Done"
 
 # Mullvad VPN
 if [[ ! -f /etc/vpn-mullvad ]]; then
