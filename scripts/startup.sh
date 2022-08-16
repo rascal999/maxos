@@ -6,6 +6,9 @@ rm ${HOME}/jupyter/pentest/base/*.ipynb
 rm -rf ${HOME}/jupyter/pentest/base/tools
 cp ${HOME}/git/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
 
+# Grafana Strava directory
+sudo mkdir -p /var/lib/docker/volumes/grafana-data/_data/strava || true
+
 # Mullvad VPN
 if [[ ! -f /etc/vpn-mullvad ]]; then
   echo "ERROR: Cannot place VPN profiles, could not decrypt?"
