@@ -62,7 +62,7 @@
       ports = [ "127.0.0.1:10060:3000" ];
       volumes = [
                   "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
-                  "/home/user/git/nixos/resources/grafana/provisioning/datasources/:/etc/grafana/provisioning/dashboards/"
+                  "/home/user/git/nixos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
                   "/home/user/git/nixos/resources/grafana/dashboards:/mnt/dashboards"
                 ];
     };
