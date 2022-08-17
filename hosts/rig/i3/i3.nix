@@ -3,7 +3,7 @@
 {
   xsession.windowManager.i3 = {
     config = {
-      defaultWorkspace = "workspace number 2";
+      defaultWorkspace = "workspace number 1";
 
       startup = [
         {
@@ -27,7 +27,7 @@
         }
         {
           command = "exec ${pkgs.logseq}/bin/logseq";
-          workspace = "0";
+          workspace = "10";
         }
       ];
     };
