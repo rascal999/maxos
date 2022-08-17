@@ -25,6 +25,10 @@
           command = "exec ${pkgs.firefox}/bin/firefox";
           workspace = "1";
         }
+        {
+          command = "exec ${pkgs.logseq}/bin/logseq";
+          workspace = "0";
+        }
       ];
     };
   };

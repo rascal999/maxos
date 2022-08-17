@@ -69,6 +69,7 @@
     cliam                                                                                                # Cloud agnostic IAM permissions enumerator
     cloudbrute                                                                                           # Cloud enumeration tool
     cloudlist                                                                                            # Tool for listing assets from multiple cloud providers
+    conda                                                                                                # Conda is a package manager for Python
     connman                                                                                              #
     connman-gtk                                                                                          # GTK GUI for Connman
     corkscrew                                                                                            # A tool for tunneling SSH through HTTP proxies
@@ -157,6 +158,7 @@
     hashcat-utils                                                                                        # Small utilities that are useful in advanced password cracking
     hashdeep                                                                                             # A set of cross-platform tools to compute hashes
     hcxtools                                                                                             # Tools for capturing wlan traffic and conversion to hashcat and John the Ripper formats
+    headscale                                                                                            # An open source, self-hosted implementation of the Tailscale control server
     hey                                                                                                  # HTTP load generator, ApacheBench (ab) replacement
     hivex                                                                                                # Windows registry hive extraction library
     honeytrap                                                                                            # Advanced Honeypot framework
@@ -190,6 +192,7 @@
     ldeep                                                                                                # In-depth LDAP enumeration utility
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
+    logseq                                                                                               # A local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
     macchanger                                                                                           # A utility for viewing/manipulating the MAC address of network interfaces
     masscan                                                                                              # Fast scan of the Internet

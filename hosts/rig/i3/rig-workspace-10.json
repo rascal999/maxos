@@ -11,12 +11,12 @@
        "y": 0
     },
     "marks": [],
-    "name": "Mozilla Firefox",
-    "percent": 1,
+    "name": "Logseq",
+    "percent": 0.5,
     "swallows": [
        {
-          "class": "^firefox$",
-          "instance": "^Navigator$"
+          "class": "^Logseq$",
+          "instance": "^logseq$"
        }
     ],
     "type": "con"
