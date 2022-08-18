@@ -200,6 +200,7 @@
     metabigor                                                                                            # Tool to perform OSINT tasks
     mfcuk                                                                                                # MiFare Classic Universal toolKit
     mfoc                                                                                                 # Mifare Classic Offline Cracker
+    mimeo                                                                                                # Open files by MIME-type or file name using regular expressions
     mitmproxy                                                                                            # Man-in-the-middle proxy
     mongoaudit                                                                                           # MongoDB auditing and pentesting tool
     monsoon                                                                                              # Fast HTTP enumerator

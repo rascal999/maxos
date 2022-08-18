@@ -8,18 +8,11 @@
     "Homepage": {
       "StartPage": "previous-session"
     },
-    "SearchEngines": {
-      "Add": [
-        {
-          "Name": "SearXNG",
-          "URLTemplate": "http://localhost:9080/search?q={searchTerms}",
-          "Method": "GET",
-          "IconURL": "http://localhost:9080/favicon.ico",
-          "Alias": "SearXNG"
-        }
-      ]
-    },
     "ExtensionSettings": {
+      "{1c5e4c6f-5530-49a3-b216-31ce7d744db0}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/markdownload/addon-2641778-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{a6fd85ed-e919-4a43-a5af-8da18bda539f}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/selenium-ide/addon-13759230-latest.xpi",
         "installation_mode": "normal_installed"
