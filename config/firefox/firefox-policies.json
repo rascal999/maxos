@@ -740,6 +740,10 @@
             "url": "http://127.0.0.1:10030/cve"
           },
           {
+            "name": "PrivateBin",
+            "url": "http://127.0.0.1:10040/"
+          },
+          {
             "name": "Infrastructure",
             "children": [
               {
