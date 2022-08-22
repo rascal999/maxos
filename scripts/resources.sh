@@ -514,6 +514,7 @@ function pull_tool_repos() {
   git_update https://github.com/internetwache/GitTools.git $HOME/git/pentest-tools/GitTools
   git_update https://github.com/S3cur3Th1sSh1t/WinPwn.git $HOME/git/pentest-tools/WinPwn
   git_update https://github.com/liamg/traitor.git $HOME/git/pentest-tools/traitor
+  git_update https://github.com/twintproject/twint.git $HOME/git/pentest-tools/twint
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
@@ -529,6 +530,12 @@ function pull_tool_repos() {
   git_update https://github.com/jonaslejon/malicious-pdf.git $HOME/git/exploits/malicious-pdf
 
   ### Tools which need building
+  # social-analyzer
+  git_update https://github.com/qeeqbox/social-analyzer.git $HOME/git/pentest-tools/social-analyzer
+  if [[ "$?" == "0" ]]; then
+    docker build -t social-analyzer .
+  fi
+
   # VulnX
   git_update https://github.com/anouarbensaad/vulnx.git $HOME/git/pentest-tools/vulnx
 
