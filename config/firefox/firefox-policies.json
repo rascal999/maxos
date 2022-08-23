@@ -510,6 +510,10 @@
             "url": "file:///$HOME/git/pentest-education/kubernetes-goat"
           },
           {
+            "name": "Pentest Labs",
+            "url": "file:///$HOME/Data/logseq/pages/Pentest%20labs.md"
+          },
+          {
             "name": "railsgoat",
             "url": "file:///$HOME/git/pentest-education/railsgoat"
           },

@@ -22,6 +22,11 @@
   };
 
   environment.etc = {
+    api-instagram =
+    {
+      source = config.age.secrets.api-instagram.path;
+      mode = "0444";
+    };
     api-nist =
     {
       source = config.age.secrets.api-nist.path;
