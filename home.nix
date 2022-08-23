@@ -22,6 +22,7 @@
 
   home.file = {
     ".config/dashy/conf.yml".source = ./config/dashy/conf.yml;
+    ".config/nginx/mime.types".source = ./resources/nginx/mime.types;
     ".mime.types".source = ./config/firefox/mime.types;
     ".privatebin/conf/conf.php".source = ./config/privatebin/conf.php;
     ".startup.sh".source = ./scripts/startup.sh;

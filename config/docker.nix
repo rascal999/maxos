@@ -2,6 +2,15 @@
   virtualisation.oci-containers.backend = "docker";
 
   virtualisation.oci-containers.containers = {
+    nginx = {
+      image = "dceoy/nginx-autoindex";
+      ports = [ "127.0.0.1:10070:80" ];
+      volumes = [
+                  "/home/user/.config/nginx/mime.types:/etc/nginx/mime.types:ro"
+                  "/home/user/git:/var/lib/nginx/html:ro"
+                ];
+    };
+
     openvas = {
       image = "greenbone/openvas";
       ports = [ "127.0.0.1:8030:443" ];

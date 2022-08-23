@@ -638,6 +638,10 @@
             "url": "file:///home/user/git/education/devops-exercises"
           },
           {
+            "name": "/home/user/git",
+            "url": "http://resources.home:10070"
+          },
+          {
             "name": "jessfraz/dockerfiles",
             "url": "file:///home/user/git/education/devops-exercises"
           },
