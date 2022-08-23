@@ -530,6 +530,12 @@ function pull_tool_repos() {
   git_update https://github.com/jonaslejon/malicious-pdf.git $HOME/git/exploits/malicious-pdf
 
   ### Tools which need building
+  # Osintgram
+  git_update https://github.com/Datalux/Osintgram.git $HOME/git/pentest-tools/Osintgram
+  if [[ "$?" == "0" ]]; then
+    docker build -t osintgram .
+  fi
+
   # social-analyzer
   git_update https://github.com/qeeqbox/social-analyzer.git $HOME/git/pentest-tools/social-analyzer
   if [[ "$?" == "0" ]]; then
