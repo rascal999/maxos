@@ -52,6 +52,7 @@
     cassowary                                                                                            # Modern cross-platform HTTP load-testing tool written in Go
     certipy                                                                                              # Tool to enumerate and abuse misconfigurations in Active Directory Certificate Services
     cfripper                                                                                             # Tool for analysing CloudFormation templates
+    cgdb                                                                                                 # A curses interface to gdb
     chain-bench                                                                                          # An open-source tool for auditing your software supply chain stack for security compliance based on a new CIS Software Supply Chain benchmark
     changetower                                                                                          # Tools to watch for webppage changes
     checkip                                                                                              # CLI tool that checks an IP address using various public services
@@ -133,6 +134,8 @@
     galer                                                                                                # Tool to fetch URLs from HTML attributes
     gammastep                                                                                            #
     gau                                                                                                  # Tool to fetch known URLs
+    gdb                                                                                                  # The GNU Project debugger
+    gdbgui                                                                                               # A browser-based frontend for GDB
     gef                                                                                                  # A modern experience for GDB with advanced debugging features for exploit developers & reverse engineers
     genymotion                                                                                           # Fast and easy Android emulation
     ghost                                                                                                # Android post-exploitation framework
