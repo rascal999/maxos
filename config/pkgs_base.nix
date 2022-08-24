@@ -11,7 +11,7 @@
     aflplusplus                                                                                          #
     aiodnsbrute                                                                                          # DNS brute force utility
     aircrack-ng                                                                                          # Wireless encryption cracking tools
-    airgeddon                                                                                            # Multi-use TUI to audit wireless networks.
+    airgeddon                                                                                            # Multi-use TUI to audit wireless networks
     amass                                                                                                # In-Depth DNS Enumeration and Network Mapping
     androguard                                                                                           # Tool and Python library to interact with Android Files
     android-tools                                                                                        # Android SDK platform tools
@@ -33,6 +33,7 @@
     bandwhich                                                                                            # A CLI utility for displaying current network utilization
     bettercap                                                                                            # A man in the middle tool
     bingrep                                                                                              # Greps through binaries from various OSs and architectures, and colors them
+    bintools                                                                                             # Tools for manipulating binaries (linker, assembler, etc.) (wrapper script)
     binwalk                                                                                              # A tool for searching a given binary image for embedded files
     boofuzz                                                                                              # Network protocol fuzzing tool
     bore-cli                                                                                             # Rust tool to create TCP tunnels
@@ -248,7 +249,7 @@
     recoverjpeg                                                                                          # Recover lost JPEGs and MOV files on a bogus memory card or disk
     redfang                                                                                              # A small proof-of-concept application to find non discoverable bluetooth devices
     regexploit                                                                                           # Tool to find regular expressions which are vulnerable to ReDoS
-    rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset.
+    rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset
     routersploit                                                                                         # Exploitation Framework for Embedded Devices
     rshijack                                                                                             # TCP connection hijacker
     rustcat                                                                                              # Port listener and reverse shell
@@ -272,6 +273,7 @@
     sniffglue                                                                                            # Secure multithreaded packet sniffer
     snmpcheck                                                                                            # SNMP enumerator
     spike                                                                                                # A RISC-V ISA Simulator
+    sqlite                                                                                               # A self-contained, serverless, zero-configuration, transactional SQL database engine
     sqlmap                                                                                               # Automatic SQL injection and database takeover tool
     srm                                                                                                  # Delete files securely
     ssb                                                                                                  # Tool to bruteforce SSH server
@@ -300,7 +302,7 @@
     tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
     traitor                                                                                              # Automatic Linux privilege escalation
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI
-    truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes. It works on Linux and it is optimized for Nvidia Cuda technology.
+    truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes. It works on Linux and it is optimized for Nvidia Cuda technology
     trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
     trufflehog                                                                                           # Searches through git repositories for high entropy strings and secrets, digging deep into commit history
     tsung                                                                                                # A high-performance benchmark framework for various protocols including HTTP, XMPP, LDAP, etc
@@ -323,7 +325,7 @@
     wifite2                                                                                              # Rewrite of the popular wireless network auditor, wifite
     win-virtio                                                                                           # Windows VirtIO Drivers
     wipe                                                                                                 # Secure file wiping utility
-    witness                                                                                              # A pluggable framework for software supply chain security.
+    witness                                                                                              # A pluggable framework for software supply chain security
     wol                                                                                                  # Implements Wake On LAN functionality in a small program
     wprecon                                                                                              # WordPress vulnerability recognition tool
     wpscan                                                                                               # Black box WordPress vulnerability scanner

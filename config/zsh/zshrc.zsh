@@ -83,6 +83,7 @@ a-notify()
 
 new() {
   echo "### New commands ###"
+  echo "a-ech                       Export command history"
   echo "a-fo                        Open Firefox at CWD"
   echo "a-localhostrun-gotty        Terminal command over web"
   echo "a-localhostrun-privatebin   Privatebin over localhost.run"
@@ -104,6 +105,11 @@ test-vpn() {
 
 a-agenix() {
   sudo EDITOR=vim nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- -i /etc/ssh/ssh_host_ed25519_key $@
+}
+
+# export command history
+a-ech() {
+  sqlite3 $HOME/.local/share/mcfly/history.db "select cmd from commands" | sort | uniq
 }
 
 a-fo() {
