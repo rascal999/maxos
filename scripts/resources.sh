@@ -141,6 +141,16 @@ function pull_misc_things() {
   docker pull ivre/db                                               # Network recon framework
   docker pull ivre/client                                           # Network recon framework
   docker pull ghcr.io/openbb-finance/openbbterminal-poetry:latest   # Investment Research for Everyone, Anywhere
+  docker pull apache/superset                                       # Business intelligence web application
+  docker pull dceoy/nginx-autoindex                                 # Nginx with autoindex
+  docker pull grafana/grafana-oss                                   # Visualize metrics, logs, and traces from multiple sources
+  docker pull libretranslate/libretranslate                         # Free and Open Source Machine Translation API
+  docker pull lissy93/dashy                                         # A self-hostable personal dashboard built for you
+  docker pull morawskim/htrace.sh                                   # Simple Swiss Army knife for http/https troubleshooting
+  docker pull peterdavehello/tor-socks-proxy                        # Tiny Docker image as onion Tor SOCKS5 proxy shield
+  docker pull privatebin/nginx-fpm-alpine                           # PrivateBin docker image
+  docker pull ghcr.io/requarks/wiki                                 # Wiki.js | A modern and powerful wiki app built on Node.js
+  docker pull searxng/searxng                                       # Free internet metasearch engine
 
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks
@@ -187,6 +197,7 @@ function pull_vulnerable_things_docker() {
   docker pull mutzel/all-in-one-hackazon:postinstall       # LAMP Hackazon deployment in a single container
   docker pull tuxotron/tiredful-api                        # Broken web application based on REST API
   docker pull tuxotron/xvwa                                # Xtreme Vulnerable Web Application
+  docker pull vulnerables/web-owasp-nodegoat               # OWASP NodeGoat, a vulnerable nodejs application
 }
 
 ###
@@ -242,6 +253,13 @@ function pull_tools_docker() {
   docker pull djangobyjeffrey/gtfobins                     # Bypass local security restrictions in misconfigured systems
   docker pull madduci/docker-compiler-explorer             # Run compilers from your web browser and interact with the assembly
   docker pull aquasec/trivy                                # Vulnerability scanner for container images, file systems etc.
+  docker pull arachni/arachni                              # Web Application Security Scanner Framework
+  docker pull carlospolop/legion                           # Automatic Enumeration Tool based in Open Source tools
+  docker pull ghcr.io/mxrch/ghunt                          # Offensive Google framework
+  docker pull rascal999/houdini                            # Docker Images for Network Intrusion
+  docker pull sundowndev/phoneinfoga                       # Information gathering & OSINT framework for phone numbers
+  docker pull vainlystrain/tidos-framework                 # Offensive Manual Web Application Penetration Testing Framework
+  docker pull verovaleros/domain_analyzer                  # Analyze the security of domain by finding information
 
   ### https://github.com/cybersecsi/RAUDI
   docker pull secsi/apktool
