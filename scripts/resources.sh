@@ -164,6 +164,10 @@ function pull_misc_things() {
   git_update https://github.com/StevenBlack/hosts.git $HOME/git/misc/StevenBlack-hosts
   git_update https://github.com/NixOS/nixpkgs.git $HOME/git/misc/nixpkgs
   git_update https://github.com/CompVis/stable-diffusion.git $HOME/git/misc/stable-diffusion
+  git_update https://github.com/AykutSarac/jsoncrack.com.git $HOME/git/misc/jsoncrack.com
+  if [[ "$?" == "0" ]]; then
+    docker build -t jsoncrack .
+  fi
 }
 
 ###

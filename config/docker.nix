@@ -129,5 +129,10 @@
                   "/home/user/.privatebin/conf/conf.php:/srv/cfg/conf.php:ro"
                 ];
     };
+
+    jsoncrack = {
+      image = "jsoncrack";
+      ports = [ "127.0.0.1:10090:8080" ];
+    };
   };
 }

@@ -740,6 +740,10 @@
             "url": "http://localhost:9050/"
           },
           {
+            "name": "jsoncrack",
+            "url": "http://localhost:10090/"
+          },
+          {
             "name": "Jupyter",
             "url": "http://localhost:8000/"
           },
