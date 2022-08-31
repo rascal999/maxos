@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{jid1-KKzOGWgsW3Ao4Q@jetpack}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/addon-481438-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{1c5e4c6f-5530-49a3-b216-31ce7d744db0}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/markdownload/addon-2641778-latest.xpi",
         "installation_mode": "normal_installed"
@@ -29,20 +33,12 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/flagfox/addon-5791-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "{504e1565-ddd7-4fc3-bec3-079ddb622b2c}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/daily/addon-883898-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "sponsorBlocker@ajay.app": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/addon-2590937-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "{f1423c11-a4e2-4709-a0f8-6d6a68c83d08}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/hacktools/addon-2649669-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "saladict@crimx.com": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ext-saladict/addon-978778-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "ademking@betterviewer": {
