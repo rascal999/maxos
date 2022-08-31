@@ -388,6 +388,8 @@ function pull_educational_repos() {
   git_update https://github.com/0xAX/linux-insides.git $HOME/git/education/linux-insides
   git_update https://github.com/0xricksanchez/paper_collection.git $HOME/git/education/paper_collection
   git_update https://github.com/hackerkid/Mind-Expanding-Books.git $HOME/git/education/Mind-Expanding-Books
+  git_update https://github.com/microsoft/ML-For-Beginners.git $HOME/git/education/ML-For-Beginners
+  git_update https://github.com/sobolevn/awesome-cryptography.git $HOME/git/education/awesome-cryptography
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
