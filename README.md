@@ -1,8 +1,20 @@
 # NixOS config and dotfiles
 
-![NixOS desktop](/resources/screenshots/20220706_nixos.png)
+My OS config for security testing.
 
-Glorious!
+* Over 470 software packages
+* ~300 zsh aliases
+* Over 260 bookmarks
+  * ~50 security podcast links
+  * ~30 online lab links
+* ~200 git repos
+* ~170 docker images
+* ~30 web applications
+* ~25 Firefox extensions
+* Text-only offline [Wikipedia](http://localhost:9060/wikipedia_en_all_nopic_2022-01/A/User:The_other_Kiwix_guy/Landing)
+* [Jupyter Notebooks](http://localhost:8000/tree?) for pentesting
+
+![NixOS desktop](/resources/screenshots/20220706_nixos.png)
 
 ## Install
 
