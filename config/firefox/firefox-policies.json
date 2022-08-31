@@ -1017,6 +1017,83 @@
         ]
       },
       {
+        "name": "Recon",
+        "children": [
+          {
+            "name": "Binary Edge",
+            "url": "https://www.binaryedge.io/"
+          },
+          {
+            "name": "Censys",
+            "url": "https://search.censys.io/"
+          },
+          {
+            "name": "crt.sh",
+            "url": "https://crt.sh/"
+          },
+          {
+            "name": "FullHunt",
+            "url": "https://fullhunt.io/search"
+          },
+          {
+            "name": "GrayHatWarfare",
+            "url": "https://buckets.grayhatwarfare.com/"
+          },
+          {
+            "name": "hunter",
+            "url": "https://hunter.io/"
+          },
+          {
+            "name": "IntelligenceX",
+            "url": "https://intelx.io/tools?tab=general"
+          },
+          {
+            "name": "LeakIX",
+            "url": "https://leakix.net/"
+          },
+          {
+            "name": "Netlas",
+            "url": "https://app.netlas.io/responses/"
+          },
+          {
+            "name": "ONYPHE",
+            "url": "https://www.onyphe.io/"
+          },
+          {
+            "name": "Packet Storm Security",
+            "url": "https://packetstormsecurity.com/files/"
+          },
+          {
+            "name": "PublicWWW",
+            "url": "https://publicwww.com/"
+          },
+          {
+            "name": "Pulsedive",
+            "url": "https://pulsedive.com/"
+          },
+          {
+            "name": "Shodan",
+            "url": "https://www.shodan.io/"
+          },
+          {
+            "name": "URL Scan",
+            "url": "https://urlscan.io/"
+          },
+          {
+            "name": "Vulners",
+            "url": "https://vulners.com/"
+          },
+          {
+            "name": "Wigle",
+            "url": "https://www.wigle.net/"
+          },
+          {
+            "name": "ZoomEye",
+            "url": "https://www.zoomeye.org/"
+          }
+        ]
+      },
+      {
         "name": "Redteam",
         "children": [
           {

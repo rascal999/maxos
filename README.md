@@ -4,9 +4,10 @@ My OS config for security testing.
 
 * Over 470 software packages
 * ~300 zsh aliases
-* Over 260 bookmarks
+* Over 280 bookmarks
   * ~50 security podcast links
   * ~30 online lab links
+  * ~20 security oriented search engines
 * ~200 git repos
 * ~170 docker images
 * ~30 web applications
