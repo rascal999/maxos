@@ -9,7 +9,7 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
-      "{jid1-KKzOGWgsW3Ao4Q@jetpack}": {
+      "jid1-KKzOGWgsW3Ao4Q@jetpack": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/addon-481438-latest.xpi",
         "installation_mode": "normal_installed"
       },
