@@ -539,6 +539,127 @@
             ]
           },
           {
+            "name": "Online",
+            "children": [
+              {
+                "name": "alert to win",
+                "url": "https://alf.nu/alert1"
+              },
+              {
+                "name": "Attack-Defense",
+                "url": "https://attackdefense.com/"
+              },
+              {
+                "name": "CMD Challenge",
+                "url": "https://cmdchallenge.com/"
+              },
+              {
+                "name": "CTF Komodo Security",
+                "url": "https://ctf.komodosec.com/"
+              },
+              {
+                "name": "Explotation Education",
+                "url": "https://exploit.education/"
+              },
+              {
+                "name": "Google CTF",
+                "url": "https://capturetheflag.withgoogle.com/"
+              },
+              {
+                "name": "Hacker101",
+                "url": "https://ctf.hacker101.com"
+              },
+              {
+                "name": "Hacker Security",
+                "url": "https://hackersec.com/capture-the-flag-ctf/"
+              },
+              {
+                "name": "Hacking-Lab",
+                "url": "https://www.hacking-lab.com/events/"
+              },
+              {
+                "name": "Hacksplaining",
+                "url": "https://www.hacksplaining.com/lessons"
+              },
+              {
+                "name": "HackTheBox",
+                "url": "https://www.hackthebox.eu"
+              },
+              {
+                "name": "Hackthis",
+                "url": "https://www.hackthis.co.uk"
+              },
+              {
+                "name": "ImmersiveLabs",
+                "url": "https://immersivelabs.com/"
+              },
+              {
+                "name": "NewbieContest",
+                "url": "https://www.newbiecontest.org/"
+              },
+              {
+                "name": "OverTheWire",
+                "url": "http://overthewire.org"
+              },
+              {
+                "name": "Penetration Testing Practice Labs",
+                "url": "https://www.amanhardikar.com/mindmaps/Practice.html"
+              },
+              {
+                "name": "PentestIT LAB",
+                "url": "https://lab.pentestit.ru"
+              },
+              {
+                "name": "Pentestlab",
+                "url": "https://pentesterlab.com/"
+              },
+              {
+                "name": "PicoCTF",
+                "url": "https://picoctf.com"
+              },
+              {
+                "name": "Practical Pentest Labs",
+                "url": "https://practicalpentestlabs.com/"
+              },
+              {
+                "name": "PWNABLE",
+                "url": "https://pwnable.kr/play.php"
+              },
+              {
+                "name": "Root-Me",
+                "url": "https://www.root-me.org/?lang=en"
+              },
+              {
+                "name": "SANS Challenger",
+                "url": "https://www.sans.org/mlp/holiday-hack-challenge/"
+              },
+              {
+                "name": "SmashTheStack",
+                "url": "http://www.smashthestack.org/wargames.html"
+              },
+              {
+                "name": "The Cryptopals Crypto Challenges",
+                "url": "https://cryptopals.com/"
+              },
+              {
+                "name": "Try Hack Me",
+                "url": "https://tryhackme.com/"
+              },
+              {
+                "name": "Vulnhub",
+                "url": "https://www.vulnhub.com"
+              },
+              {
+                "name": "W3Challs https://w3challs.com/",
+                "url": "https://w3challs.com/"
+              },
+              {
+                "name": "WeChall",
+                "url": "http://www.wechall.net/"
+              }
+            ]
+          },
+          {
             "name": "Vulnerable Docker images",
             "children": [
               {
@@ -682,6 +803,203 @@
                 "url": "file:///home/user/git/education/the-art-of-command-line"
               }
             ]
+          }
+        ]
+      },
+      {
+        "name": "Podcasts",
+        "children": [
+          {
+            "name": "2 Cyber Chicks",
+            "url": "https://2cyberchicks.simplecast.com/episodes"
+          },
+          {
+            "name": "401 Access Denied Podcast",
+            "url": "https://delinea.com/events/podcasts"
+          },
+          {
+            "name": "7 Minute Security",
+            "url": "https://www.stitcher.com/show/7-minute-security"
+          },
+          {
+            "name": "8th Layer Insights",
+            "url": "https://www.stitcher.com/show/8th-layer-insights"
+          },
+          {
+            "name": "Absolute AppSec",
+            "url": "https://absoluteappsec.com/"
+          },
+          {
+            "name": "Adopting Zero Trust",
+            "url": "https://www.youtube.com/channel/UCOTUC_MaIidzMJ7seMkj5Fg"
+          },
+          {
+            "name": "Adventures of Alice and Bob",
+            "url": "https://www.beyondtrust.com/podcast"
+          },
+          {
+            "name": "Brakeing Down Security",
+            "url": "https://www.brakeingsecurity.com/"
+          },
+          {
+            "name": "Click Here",
+            "url": "https://www.stitcher.com/show/click-here"
+          },
+          {
+            "name": "Crypto-Gram Security Podcast",
+            "url": "https://crypto-gram.libsyn.com/"
+          },
+          {
+            "name": "Cyber Security Headlines by the CISO Series",
+            "url": "https://www.stitcher.com/show/cyber-security-headlines"
+          },
+          {
+            "name": "Cyber Security Sauna",
+            "url": "https://www.withsecure.com/en/whats-new/podcasts"
+          },
+          {
+            "name": "Cybersecurity Today by ITWC",
+            "url": "https://www.itworldcanada.com/podcasts"
+          },
+          {
+            "name": "Cyberside Chats",
+            "url": "https://www.epiqglobal.com/en-us/resource-center/cyberside-chats"
+          },
+          {
+            "name": "CyberWire Daily",
+            "url": "https://www.stitcher.com/show/the-cyberwire-your-cyber-security-news-connection"
+          },
+          {
+            "name": "Cyber Work",
+            "url": "https://www.infosecinstitute.com/podcast/"
+          },
+          {
+            "name": "Darknet Diaries",
+            "url": "https://darknetdiaries.com/episode/"
+          },
+          {
+            "name": "Defrag This",
+            "url": "https://podcasts.apple.com/us/podcast/defrag-this/id1234621622"
+          },
+          {
+            "name": "H4unt3d Hacker",
+            "url": "https://podcasts.apple.com/gb/podcast/h4unt3d-hacker/id1569755148"
+          },
+          {
+            "name": "Hacker Valley Studio Podcast",
+            "url": "https://hackervalley.com/show/hackervalley/"
+          },
+          {
+            "name": "Hacking Humans",
+            "url": "https://www.stitcher.com/show/hacking-humans"
+          },
+          {
+            "name": "Identity at the Center",
+            "url": "https://www.identityatthecenter.com/listen"
+          },
+          {
+            "name": "Life of a CISO",
+            "url": "https://podcasts.apple.com/us/podcast/life-of-a-ciso-with-dr-eric-cole/id1458386656"
+          },
+          {
+            "name": "Malicious Life",
+            "url": "https://www.stitcher.com/show/malicious-life"
+          },
+          {
+            "name": "Naked Security Podcast",
+            "url": "https://nakedsecurity.sophos.com/category/audio-and-video/podcast/"
+          },
+          {
+            "name": "Open Source Security Podcast",
+            "url": "https://www.stitcher.com/show/the-open-source-security-podcast"
+          },
+          {
+            "name": "OWASP Podcast",
+            "url": "https://soundcloud.com/owasp-podcast"
+          },
+          {
+            "name": "Risky Business",
+            "url": "https://risky.biz/"
+          },
+          {
+            "name": "SANS Internet Stormcenter Daily Cyber Podcast",
+            "url": "https://isc.sans.edu/podcast/#"
+          },
+          {
+            "name": "Security in Five",
+            "url": "https://www.stitcher.com/show/security-in-five"
+          },
+          {
+            "name": "Security Now",
+            "url": "https://podcasts.apple.com/us/podcast/security-now-audio/id79016499?uo=10"
+          },
+          {
+            "name": "Security Weekly",
+            "url": "https://securityweekly.com/listen/"
+          },
+          {
+            "name": "Simply Cyber",
+            "url": "https://podcasts.apple.com/us/podcast/simply-cyber/id1590662228"
+          },
+          {
+            "name": "Smashing Security",
+            "url": "https://www.smashingsecurity.com/episodes/"
+          },
+          {
+            "name": "Task Force 7 Cyber Security Radio",
+            "url": "https://podcasts.apple.com/us/podcast/task-force-7-cyber-security-radio/id1291030493"
+          },
+          {
+            "name": "The 443 Security Simplified",
+            "url": "https://podcasts.apple.com/us/podcast/the-443-security-simplified/id1399962220"
+          },
+          {
+            "name": "The Cyberlaw Podcast",
+            "url": "https://podcasts.apple.com/us/podcast/the-cyberlaw-podcast/id830593115"
+          },
+          {
+            "name": "The Cyber Tap (cyberTAP)",
+            "url": "https://podcasts.apple.com/gb/podcast/the-cyber-tap/id1500337895"
+          },
+          {
+            "name": "The Hacker Chronicles",
+            "url": "https://podcasts.apple.com/us/podcast/the-hacker-chronicles/id1599393610"
+          },
+          {
+            "name": "The Hacker Mind",
+            "url": "https://podcasts.apple.com/us/podcast/the-hacker-mind/id1523725831"
+          },
+          {
+            "name": "The Privacy, Security, & OSINT Show",
+            "url": "https://soundcloud.com/user-98066669"
+          },
+          {
+            "name": "The Shared Security Show",
+            "url": "https://sharedsecurity.net/"
+          },
+          {
+            "name": "The Shellsharks Podcast",
+            "url": "https://www.stitcher.com/show/the-shellsharks-podcast"
+          },
+          {
+            "name": "The Social-Engineer Podcast",
+            "url": "https://podcasts.apple.com/gb/podcast/the-social-engineer-podcast/id334648685"
+          },
+          {
+            "name": "The Virtual CISO Moment",
+            "url": "https://podcasts.apple.com/us/podcast/the-virtual-ciso-moment/id1608185823"
+          },
+          {
+            "name": "Unsupervised Learning",
+            "url": "https://podcasts.apple.com/gb/podcast/unsupervised-learning/id1099711235"
+          },
+          {
+            "name": "We Talk Cyber (Monica Talks Cyber)",
+            "url": "https://podcasts.apple.com/lv/podcast/monica-talks-cyber/id1524150524"
+          },
+          {
+            "name": "What The Shell?",
+            "url": "https://podcasts.apple.com/us/podcast/what-the-shell/id1582675663"
           }
         ]
       },
