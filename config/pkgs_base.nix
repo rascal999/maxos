@@ -23,6 +23,7 @@
     aria                                                                                                 #
     arping                                                                                               # Broadcasts a who-has ARP packet on the network and prints answers
     arp-scan                                                                                             # ARP scanning and fingerprinting tool
+    arsenal                                                                                              # Tool to generate commands for security and network tools
     asciinema                                                                                            # Terminal session recorder and the best companion of asciinema.org
     atftp                                                                                                # Advanced tftp tools
     authoscope                                                                                           # Scriptable network authentication cracker
@@ -175,6 +176,7 @@
     ike-scan                                                                                             # Tool to discover, fingerprint and test IPsec VPN servers
     imagemagick                                                                                          #
     inkscape                                                                                             # Vector graphics editor
+    inql                                                                                                 # Security testing tool for GraphQL
     ipscan                                                                                               # Fast and friendly network scanner
     jadx                                                                                                 # Dex to Java decompiler
     jaeles                                                                                               # Tool for automated Web application testing

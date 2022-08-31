@@ -87,8 +87,9 @@ new() {
   echo "a-ech                       Export command history"
   echo "a-fo                        Open Firefox at CWD"
   echo "a-localhostrun-gotty        Terminal command over web"
-  echo "a-localhostrun-privatebin   Privatebin over localhost.run"
+  echo "a-localhostrun-privatebin   Privatebin over web"
   echo "aria2c                      wget alternative"
+  echo "arsenal                     Generate commands for security and network tools"
   echo "broot                       File explorer"
   echo "croc                        Share files between machines"
   echo "d-bb                        OpenBB finance terminal"
@@ -96,6 +97,7 @@ new() {
   echo "d-hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "gitleaks                    Discover secrets using Gitleaks"
   echo "k6                          Load testing with scripting"
+  eoch "inql                        Security testing tool for GraphQL"
   echo "tldr                        TL;DR for command"
   echo "wuzz                        Interactive cli tool for HTTP inspection"
 }
