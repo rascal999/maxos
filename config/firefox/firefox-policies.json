@@ -963,10 +963,6 @@
             "url": "https://cyberguards.com/"
           },
           {
-            "name": "Daniel Makelley",
-            "url": "https://www.danielmakelley.com/"
-          },
-          {
             "name": "Daniel Miessler",
             "url": "https://danielmiessler.com/"
           },
@@ -1070,6 +1066,10 @@
           {
             "name": "CybersecNews Weekly",
             "url": "https://buttondown.email/CybersecNewsWeekly"
+          },
+          {
+            "name": "Daniel Kelley",
+            "url": "https://www.danielmakelley.com/"
           },
           {
             "name": "Gov Info Security",
