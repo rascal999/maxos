@@ -546,12 +546,24 @@
                 "url": "https://attackdefense.com/"
               },
               {
+                "name": "Certified Secure",
+                "url": "https://www.certifiedsecure.com/frontpage"
+              },
+              {
                 "name": "CMD Challenge",
                 "url": "https://cmdchallenge.com/"
               },
               {
                 "name": "CTF Komodo Security",
                 "url": "https://ctf.komodosec.com/"
+              },
+              {
+                "name": "Cybrary",
+                "url": "https://www.cybrary.it/"
+              },
+              {
+                "name": "echoCTF.RED",
+                "url": "https://echoctf.red/"
               },
               {
                 "name": "Explotation Education",
@@ -586,6 +598,10 @@
                 "url": "https://www.hackthis.co.uk"
               },
               {
+                "name": "HackXpert",
+                "url": "https://hackxpert.com/index.php"
+              },
+              {
                 "name": "ImmersiveLabs",
                 "url": "https://immersivelabs.com/"
               },
@@ -606,7 +622,7 @@
                 "url": "https://lab.pentestit.ru"
               },
               {
-                "name": "Pentestlab",
+                "name": "PentesterLab",
                 "url": "https://pentesterlab.com/"
               },
               {
@@ -622,6 +638,10 @@
                 "url": "https://pwnable.kr/play.php"
               },
               {
+                "name": "RangeForce",
+                "url": "https://www.rangeforce.com/"
+              },
+              {
                 "name": "Root-Me",
                 "url": "https://www.root-me.org/?lang=en"
               },
@@ -634,8 +654,16 @@
                 "url": "http://www.smashthestack.org/wargames.html"
               },
               {
+                "name": "TCM Security",
+                "url": "https://academy.tcm-sec.com/"
+              },
+              {
                 "name": "The Cryptopals Crypto Challenges",
                 "url": "https://cryptopals.com/"
+              },
+              {
+                "name": "Try2Hack.Me",
+                "url": "https://try2hack.me/"
               },
               {
                 "name": "Try Hack Me",
@@ -730,6 +758,103 @@
             "url": "file:///home/user/git/education/linux-insides"
           },
           {
+            "name": "Online",
+            "children": [
+              {
+                "name": "Conquering the Command Line",
+                "url": "https://conqueringthecommandline.com/"
+              },
+              {
+                "name": "Cyberciti Bash Shell Scripting Tutorial",
+                "url": "https://bash.cyberciti.biz/guide/Main_Page"
+              },
+              {
+                "name": "Digital Ocean - Getting Started With Linux",
+                "url": "https://www.digitalocean.com/community/tutorial_series/getting-started-with-linux"
+              },
+              {
+                "name": "Eduonix - Learn Linux From Scratch",
+                "url": "https://www.eduonix.com/courses/system-programming/learn-linux-from-scratch"
+              },
+              {
+                "name": "FOSS Linux",
+                "url": "https://www.fosslinux.com/"
+              },
+              {
+                "name": "Guru99 - Linux Tutorial Summary",
+                "url": "https://www.guru99.com/unix-linux-tutorial.html"
+              },
+              {
+                "name": "Intellipaat - Linux Tutorial For Beginners",
+                "url": "https://www.youtube.com/watch?v=4ZHvZge1Lsw"
+              },
+              {
+                "name": "It's FOSS",
+                "url": "https://itsfoss.com/"
+              },
+              {
+                "name": "LabEx - Linux For Noobs",
+                "url": "https://labex.io/courses/linux-for-noobs"
+              },
+              {
+                "name": "Learn Enough Command Line to Be Dangerous",
+                "url": "https://www.learnenough.com/command-line-tutorial"
+              },
+              {
+                "name": "Linux Academy",
+                "url": "https://www.youtube.com/channel/UClGShptNEuvTWGAAfpa2Etw"
+              },
+              {
+                "name": "LinuxFoundationX",
+                "url": "https://www.edx.org/school/linuxfoundationx"
+              },
+              {
+                "name": "Linux Handbook",
+                "url": "https://linuxhandbook.com/"
+              },
+              {
+                "name": "Linux Hint",
+                "url": "https://linuxhint.com/"
+              },
+              {
+                "name": "Linuxize",
+                "url": "https://linuxize.com/"
+              },
+              {
+                "name": "Linux Journey",
+                "url": "https://linuxjourney.com/"
+              },
+              {
+                "name": "LinuxOPsys",
+                "url": "https://linuxopsys.com/"
+              },
+              {
+                "name": "Linux Survival",
+                "url": "https://linuxsurvival.com/"
+              },
+              {
+                "name": "nixCraft",
+                "url": "https://www.nixcraft.com/"
+              },
+              {
+                "name": "Ryan's Tutorials",
+                "url": "https://ryanstutorials.net/"
+              },
+              {
+                "name": "Tecmint",
+                "url": "https://www.tecmint.com/"
+              },
+              {
+                "name": "The Debian Administrator's Handbook",
+                "url": "https://debian-handbook.info/"
+              },
+              {
+                "name": "TLDP - Advanced Bash Scripting Guide",
+                "url": "https://tldp.org/LDP/abs/html/"
+              }
+            ]
+          },
+          {
             "name": "the-practical-linux-hardening-guide",
             "url": "file:///home/user/git/pentest-education/the-practical-linux-hardening-guide"
           }
@@ -797,6 +922,399 @@
               {
                 "name": "the-art-of-command-line",
                 "url": "file:///home/user/git/education/the-art-of-command-line"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "News",
+        "children": [
+          {
+            "name": "all InfoSec news",
+            "url": "https://allinfosecnews.com/"
+          },
+          {
+            "name": "Comodo",
+            "url": "https://blog.comodo.com/"
+          },
+          {
+            "name": "CVE Trends",
+            "url": "https://cvetrends.com/"
+          },
+          {
+            "name": "Cyber Defense Magazine",
+            "url": "https://www.cyberdefensemagazine.com/"
+          },
+          {
+            "name": "Cyber Magazine",
+            "url": "https://cybermagazine.com/"
+          },
+          {
+            "name": "Cybersecurity Insiders",
+            "url": "https://www.cybersecurity-insiders.com/"
+          },
+          {
+            "name": "Cyber Security Review",
+            "url": "https://www.cybersecurity-review.com/"
+          },
+          {
+            "name": "Cyber Guards",
+            "url": "https://cyberguards.com/"
+          },
+          {
+            "name": "Daniel Makelley",
+            "url": "https://www.danielmakelley.com/"
+          },
+          {
+            "name": "Daniel Miessler",
+            "url": "https://danielmiessler.com/"
+          },
+          {
+            "name": "Dark Reading",
+            "url": "https://www.darkreading.com/"
+          },
+          {
+            "name": "GBHackers on Security",
+            "url": "https://gbhackers.com/"
+          },
+          {
+            "name": "Hacker Combat",
+            "url": "https://hackercombat.com/"
+          },
+          {
+            "name": "HackRead",
+            "url": "https://www.hackread.com/"
+          },
+          {
+            "name": "Help Net Security",
+            "url": "https://www.helpnetsecurity.com/"
+          },
+          {
+            "name": "Information Security Buzz",
+            "url": "https://informationsecuritybuzz.com/"
+          },
+          {
+            "name": "Infosecurity Magazine",
+            "url": "https://www.infosecurity-magazine.com/"
+          },
+          {
+            "name": "Internet Storm Center",
+            "url": "https://isc.sans.edu/"
+          },
+          {
+            "name": "IT Security Guru",
+            "url": "https://www.itsecurityguru.org/"
+          },
+          {
+            "name": "Pentester Land",
+            "url": "https://pentester.land/"
+          },
+          {
+            "name": "SearchSecurity",
+            "url": "https://www.techtarget.com/searchsecurity/"
+          },
+          {
+            "name": "securibee",
+            "url": "https://securib.ee/"
+          },
+          {
+            "name": "Security Gladiators",
+            "url": "https://securitygladiators.com/"
+          },
+          {
+            "name": "TaoSecurity",
+            "url": "https://www.taosecurity.com/"
+          },
+          {
+            "name": "TechWorm",
+            "url": "https://www.techworm.net/"
+          },
+          {
+            "name": "The Last Watchdog",
+            "url": "https://www.lastwatchdog.com/"
+          },
+          {
+            "name": "The Security Ledger",
+            "url": "https://securityledger.com/"
+          },
+          {
+            "name": "threatABLE",
+            "url": "https://www.threatable.io/"
+          }
+        ]
+      },
+      {
+        "name": "Newsletters",
+        "children": [
+          {
+            "name": "Advisory Week",
+            "url": "https://advisoryweek.com/"
+          },
+          {
+            "name": "API Security Newsletter",
+            "url": "https://apisecurity.io/"
+          },
+          {
+            "name": "AWS Security Digest",
+            "url": "https://app.mailbrew.com/zoph/aws-security-digest-HrkhwqNrwBBk"
+          },
+          {
+            "name": "Blockchain Threat Intelligence",
+            "url": "https://newsletter.blockthreat.io/"
+          },
+          {
+            "name": "CSO Online",
+            "url": "https://www.csoonline.com/uk/news/"
+          },
+          {
+            "name": "CybersecNews Weekly",
+            "url": "https://buttondown.email/CybersecNewsWeekly"
+          },
+          {
+            "name": "Gov Info Security",
+            "url": "https://www.govinfosecurity.com/welcome-to-govinfosecuritycom-a-1314"
+          },
+          {
+            "name": "Graham Cluley",
+            "url": "https://grahamcluley.com/"
+          },
+          {
+            "name": "Hive Five Newsletter",
+            "url": "https://securib.ee/newsletter/"
+          },
+          {
+            "name": "Krebs On Security",
+            "url": "https://krebsonsecurity.com/"
+          },
+          {
+            "name": "Naked Security",
+            "url": "https://nakedsecurity.sophos.com/"
+          },
+          {
+            "name": "Risky Biz",
+            "url": "https://risky.biz/subscribe/"
+          },
+          {
+            "name": "RTCSec",
+            "url": "https://www.rtcsec.com/subscribe/"
+          },
+          {
+            "name": "Schneier on Security",
+            "url": "https://www.schneier.com/"
+          },
+          {
+            "name": "SecPro",
+            "url": "https://secpro.co/en/"
+          },
+          {
+            "name": "The Hacker News",
+            "url": "https://thehackernews.com/"
+          },
+          {
+            "name": "This Week in 4n6",
+            "url": "https://thisweekin4n6.com/"
+          },
+          {
+            "name": "Threatpost",
+            "url": "https://threatpost.com/"
+          },
+          {
+            "name": "tl;dr sec Newsletter",
+            "url": "https://tldrsec.com/newsletter/"
+          },
+          {
+            "name": "TripWire - State of Security",
+            "url": "https://www.tripwire.com/state-of-security/"
+          },
+          {
+            "name": "Unsupervised Learning Community",
+            "url": "https://danielmiessler.com/newsletter/"
+          },
+          {
+            "name": "We Live Security",
+            "url": "https://www.welivesecurity.com/"
+          },
+          {
+            "name": "Zero Day",
+            "url": "https://www.zdnet.com/blog/security/"
+          }
+        ]
+      },
+      {
+        "name": "Pentesting",
+        "children": [
+          {
+            "name": "API",
+            "children": [
+              {
+                "name": "API-Security-Checklist",
+                "url": "file:///home/user/git/pentest-education/API-Security-Checklist"
+              },
+              {
+                "name": "awesome-api-security",
+                "url": "file:///home/user/git/pentest-education/awesome-api-security"
+              }
+            ]
+          },
+          {
+            "name": "Mobile",
+            "children": [
+              {
+                "name": "android-security-awesome",
+                "url": "file:///home/user/git/pentest-education/android-security-awesome"
+              },
+              {
+                "name": "awesome-mobile-security",
+                "url": "file:///home/user/git/pentest-education/awesome-mobile-security"
+              },
+              {
+                "name": "secure-mobile-development",
+                "url": "file:///home/user/git/pentest-education/secure-mobile-development"
+              }
+            ]
+          },
+          {
+            "name": "OSINT",
+            "children": [
+              {
+                "name": "awesome-osint",
+                "url": "file:///home/user/git/pentest-education/awesome-osint"
+              },
+              {
+                "name": "awesome-shodan-quries",
+                "url": "file:///home/user/git/pentest-education/awesome-shodan-queries"
+              },
+              {
+                "name": "Dorks",
+                "children": [
+                  {
+                    "name": "Dorks-collections-list",
+                    "url": "file:///home/user/git/pentest-education/Dorks-collections-list"
+                  },
+                  {
+                    "name": "github-dorks",
+                    "url": "file:///home/user/git/pentest-education/github-dorks"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Resources",
+            "children": [
+              {
+                "name": "assessment-mindset",
+                "url": "file:///home/user/git/pentest-education/assessment-mindset"
+              },
+              {
+                "name": "awesome-appsec",
+                "url": "file:///home/user/git/pentest-education/awesome-appsec"
+              },
+              {
+                "name": "awesome-embedded-and-iot-security",
+                "url": "file:///home/user/git/pentest-education/awesome-embedded-and-iot-security"
+              },
+              {
+                "name": "awesome-executable-packing",
+                "url": "file:///home/user/git/pentest-education/awesome-executable-packing"
+              },
+              {
+                "name": "awesome-fuzzing",
+                "url": "file:///home/user/git/pentest-education/awesome-fuzzing"
+              },
+              {
+                "name": "awesome-hacking",
+                "url": "file:///home/user/git/pentest-education/awesome-hacking"
+              },
+              {
+                "name": "Awesome-Hacking",
+                "url": "file:///home/user/git/pentest-education/Awesome-Hacking"
+              },
+              {
+                "name": "awesome-hacking-locations",
+                "url": "file:///home/user/git/pentest-education/awesome-hacking-locations"
+              },
+              {
+                "name": "awesome-honeypots",
+                "url": "file:///home/user/git/pentest-education/awesome-honeypots"
+              },
+              {
+                "name": "Awesome-Hacking-Resources",
+                "url": "file:///home/user/git/pentest-education/Awesome-Hacking-Resources"
+              },
+              {
+                "name": "awesome-malware-analysis",
+                "url": "file:///home/user/git/pentest-education/awesome-malware-analysis"
+              },
+              {
+                "name": "awesome-pentest",
+                "url": "file:///home/user/git/pentest-education/awesome-pentest"
+              },
+              {
+                "name": "Awesome-Pentest",
+                "url": "file:///home/user/git/pentest-education/Awesome-Pentest"
+              },
+              {
+                "name": "awesome-security",
+                "url": "file:///home/user/git/pentest-education/awesome-security"
+              },
+              {
+                "name": "hacker-roadmap",
+                "url": "file:///home/user/git/pentest-education/hacker-roadmap"
+              },
+              {
+                "name": "Hack The Box",
+                "url": "https://www.hackthebox.com/"
+              },
+              {
+                "name": "h4cker",
+                "url": "file:///home/user/git/pentest-education/h4cker"
+              },
+              {
+                "name": "Infosec_Reference",
+                "url": "file:///home/user/git/pentest-education/Infosec_Reference"
+              },
+              {
+                "name": "pentest-wiki",
+                "url": "file:///home/user/git/pentest-education/pentest-wiki"
+              },
+              {
+                "name": "Pentest-Tools",
+                "url": "file:///home/user/git/pentest-education/Pentest-Tools"
+              },
+              {
+                "name": "PENTESTING-BIBLE",
+                "url": "file:///home/user/git/pentest-education/PENTESTING-BIBLE"
+              },
+              {
+                "name": "the-book-of-secret-knowledge",
+                "url": "file:///home/user/git/pentest-education/the-book-of-secret-knowledge"
+              },
+              {
+                "name": "trailofbits publications",
+                "url": "file:///home/user/git/pentest-education/trailofbits-publications"
+              },
+              {
+                "name": "TryHackMe",
+                "url": "https://tryhackme.com/"
+              },
+              {
+                "name": "Web Security Academy (PortSwigger)",
+                "url": "https://portswigger.net/web-security"
+              }
+            ]
+          },
+          {
+            "name": "Web",
+            "children": [
+              {
+                "name": "awesome-web-security",
+                "url": "file:///home/user/git/pentest-education/awesome-web-security"
+              },
+              {
+                "name": "top10webseclist",
+                "url": "file:///home/user/git/pentest-education/top10webseclist"
               }
             ]
           }
@@ -1257,181 +1775,107 @@
         ]
       },
       {
-        "name": "Pentesting",
+        "name": "YouTube",
         "children": [
           {
-            "name": "API",
-            "children": [
-              {
-                "name": "API-Security-Checklist",
-                "url": "file:///home/user/git/pentest-education/API-Security-Checklist"
-              },
-              {
-                "name": "awesome-api-security",
-                "url": "file:///home/user/git/pentest-education/awesome-api-security"
-              }
-            ]
+            "name": "13Cubed",
+            "url": "https://www.youtube.com/c/13cubed"
           },
           {
-            "name": "Mobile",
-            "children": [
-              {
-                "name": "android-security-awesome",
-                "url": "file:///home/user/git/pentest-education/android-security-awesome"
-              },
-              {
-                "name": "awesome-mobile-security",
-                "url": "file:///home/user/git/pentest-education/awesome-mobile-security"
-              },
-              {
-                "name": "secure-mobile-development",
-                "url": "file:///home/user/git/pentest-education/secure-mobile-development"
-              }
-            ]
+            "name": "Black Hat",
+            "url": "https://www.youtube.com/c/BlackHatOfficialYT"
           },
           {
-            "name": "OSINT",
-            "children": [
-              {
-                "name": "awesome-osint",
-                "url": "file:///home/user/git/pentest-education/awesome-osint"
-              },
-              {
-                "name": "awesome-shodan-quries",
-                "url": "file:///home/user/git/pentest-education/awesome-shodan-queries"
-              },
-              {
-                "name": "Dorks",
-                "children": [
-                  {
-                    "name": "Dorks-collections-list",
-                    "url": "file:///home/user/git/pentest-education/Dorks-collections-list"
-                  },
-                  {
-                    "name": "github-dorks",
-                    "url": "file:///home/user/git/pentest-education/github-dorks"
-                  }
-                ]
-              }
-            ]
+            "name": "BlackPerl",
+            "url": "https://www.youtube.com/c/BlackPerl"
           },
           {
-            "name": "Resources",
-            "children": [
-              {
-                "name": "assessment-mindset",
-                "url": "file:///home/user/git/pentest-education/assessment-mindset"
-              },
-              {
-                "name": "awesome-appsec",
-                "url": "file:///home/user/git/pentest-education/awesome-appsec"
-              },
-              {
-                "name": "awesome-embedded-and-iot-security",
-                "url": "file:///home/user/git/pentest-education/awesome-embedded-and-iot-security"
-              },
-              {
-                "name": "awesome-executable-packing",
-                "url": "file:///home/user/git/pentest-education/awesome-executable-packing"
-              },
-              {
-                "name": "awesome-fuzzing",
-                "url": "file:///home/user/git/pentest-education/awesome-fuzzing"
-              },
-              {
-                "name": "awesome-hacking",
-                "url": "file:///home/user/git/pentest-education/awesome-hacking"
-              },
-              {
-                "name": "Awesome-Hacking",
-                "url": "file:///home/user/git/pentest-education/Awesome-Hacking"
-              },
-              {
-                "name": "awesome-hacking-locations",
-                "url": "file:///home/user/git/pentest-education/awesome-hacking-locations"
-              },
-              {
-                "name": "awesome-honeypots",
-                "url": "file:///home/user/git/pentest-education/awesome-honeypots"
-              },
-              {
-                "name": "Awesome-Hacking-Resources",
-                "url": "file:///home/user/git/pentest-education/Awesome-Hacking-Resources"
-              },
-              {
-                "name": "awesome-malware-analysis",
-                "url": "file:///home/user/git/pentest-education/awesome-malware-analysis"
-              },
-              {
-                "name": "awesome-pentest",
-                "url": "file:///home/user/git/pentest-education/awesome-pentest"
-              },
-              {
-                "name": "Awesome-Pentest",
-                "url": "file:///home/user/git/pentest-education/Awesome-Pentest"
-              },
-              {
-                "name": "awesome-security",
-                "url": "file:///home/user/git/pentest-education/awesome-security"
-              },
-              {
-                "name": "hacker-roadmap",
-                "url": "file:///home/user/git/pentest-education/hacker-roadmap"
-              },
-              {
-                "name": "Hack The Box",
-                "url": "https://www.hackthebox.com/"
-              },
-              {
-                "name": "h4cker",
-                "url": "file:///home/user/git/pentest-education/h4cker"
-              },
-              {
-                "name": "Infosec_Reference",
-                "url": "file:///home/user/git/pentest-education/Infosec_Reference"
-              },
-              {
-                "name": "pentest-wiki",
-                "url": "file:///home/user/git/pentest-education/pentest-wiki"
-              },
-              {
-                "name": "Pentest-Tools",
-                "url": "file:///home/user/git/pentest-education/Pentest-Tools"
-              },
-              {
-                "name": "PENTESTING-BIBLE",
-                "url": "file:///home/user/git/pentest-education/PENTESTING-BIBLE"
-              },
-              {
-                "name": "the-book-of-secret-knowledge",
-                "url": "file:///home/user/git/pentest-education/the-book-of-secret-knowledge"
-              },
-              {
-                "name": "trailofbits publications",
-                "url": "file:///home/user/git/pentest-education/trailofbits-publications"
-              },
-              {
-                "name": "TryHackMe",
-                "url": "https://tryhackme.com/"
-              },
-              {
-                "name": "Web Security Academy (PortSwigger)",
-                "url": "https://portswigger.net/web-security"
-              }
-            ]
+            "name": "Bugcrowd",
+            "url": "https://www.youtube.com/c/Bugcrowd"
           },
           {
-            "name": "Web",
-            "children": [
-              {
-                "name": "awesome-web-security",
-                "url": "file:///home/user/git/pentest-education/awesome-web-security"
-              },
-              {
-                "name": "top10webseclist",
-                "url": "file:///home/user/git/pentest-education/top10webseclist"
-              }
-            ]
+            "name": "Computerphile",
+            "url": "https://www.youtube.com/user/Computerphile"
+          },
+          {
+            "name": "David Bombal",
+            "url": "https://www.youtube.com/c/DavidBombal"
+          },
+          {
+            "name": "HackerSploit",
+            "url": "https://www.youtube.com/c/HackerSploit"
+          },
+          {
+            "name": "Hak5",
+            "url": "https://www.youtube.com/c/hak5"
+          },
+          {
+            "name": "Infosec Institute",
+            "url": "https://www.youtube.com/c/InfoSecInstitute"
+          },
+          {
+            "name": "infosec live",
+            "url": "https://www.youtube.com/c/infoseclive"
+          },
+          {
+            "name": "InsiderPhD",
+            "url": "https://www.youtube.com/c/InsiderPhD"
+          },
+          {
+            "name": "IppSec",
+            "url": "https://www.youtube.com/c/ippsec"
+          },
+          {
+            "name": "Joe Collins",
+            "url": "https://www.youtube.com/user/BadEditPro"
+          },
+          {
+            "name": "John Hammond",
+            "url": "https://www.youtube.com/c/JohnHammond010"
+          },
+          {
+            "name": "LiveOverflow",
+            "url": "https://www.youtube.com/c/LiveOverflow"
+          },
+          {
+            "name": "Nahamsec",
+            "url": "https://www.youtube.com/c/Nahamsec"
+          },
+          {
+            "name": "NetworkChuck",
+            "url": "https://www.youtube.com/c/NetworkChuck"
+          },
+          {
+            "name": "Null Byte",
+            "url": "https://www.youtube.com/c/NullByteWHT"
+          },
+          {
+            "name": "Peter Yaworski (Web Development Tutorials)",
+            "url": "https://www.youtube.com/c/yaworsk1"
+          },
+          {
+            "name": "Professor Messer",
+            "url": "https://www.youtube.com/c/professormesser"
+          },
+          {
+            "name": "Security Now",
+            "url": "https://www.youtube.com/c/securitynow"
+          },
+          {
+            "name": "Security Weekly",
+            "url": "https://www.youtube.com/c/SecurityWeekly"
+          },
+          {
+            "name": "STÖK",
+            "url": "https://www.youtube.com/c/STOKfredrik"
+          },
+          {
+            "name": "The Cyber Mentor",
+            "url": "https://www.youtube.com/c/TheCyberMentor"
+          },
+          {
+            "name": "The PC Security Channel",
+            "url": "https://www.youtube.com/c/thepcsecuritychannel"
           }
         ]
       }
