@@ -226,6 +226,7 @@
     nth                                                                                                  #
     ntlmrecon                                                                                            # Information enumerator for NTLM authentication enabled web endpoints
     ntopng                                                                                               # High-speed web-based traffic analysis and flow collection tool
+    nuclear                                                                                              # Streaming music player that finds free music for you
     nwipe                                                                                                # Securely erase disks
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner

@@ -364,6 +364,15 @@
             "url": "file:///home/user/git/education/Mind-Expanding-Books"
           },
           {
+            "name": "Online",
+            "children": [
+              {
+                "name": "Learn Anything",
+                "url": "https://learn-anything.xyz/"
+              }
+            ]
+          },
+          {
             "name": "papers-we-love",
             "url": "file:///home/user/git/education/papers-we-love"
           },
@@ -423,6 +432,14 @@
       {
         "name": "GitHub",
         "children": [
+          {
+            "name": "'This should never happen'",
+            "url": "https://github.com/search?q=This+should+never+happen&type=Code&utf8=%E2%9C%93"
+          },
+          {
+            "name": "stars:>1",
+            "url": "https://github.com/search?p=1&q=stars%3A%3E1&type=Repositories"
+          },
           {
             "name": "Topics",
             "children": [
@@ -878,6 +895,10 @@
           {
             "name": "devops-exercises",
             "url": "file:///home/user/git/education/devops-exercises"
+          },
+          {
+            "name": "flappy.html",
+            "url": "https://gist.github.com/gullyn/95b2ab9e465317f1d4e4607cf6e94205"
           },
           {
             "name": "/home/user/git",
@@ -1356,6 +1377,10 @@
             "url": "https://www.brakeingsecurity.com/"
           },
           {
+            "name": "Breach",
+            "url": "https://www.carbonite.com/podcasts/breach/"
+          },
+          {
             "name": "Click Here",
             "url": "https://www.stitcher.com/show/click-here"
           },
@@ -1392,6 +1417,10 @@
             "url": "https://darknetdiaries.com/episode/"
           },
           {
+            "name": "Defensive Security Podcast",
+            "url": "https://app.stitcher.com/browse/feed/52097/episodes"
+          },
+          {
             "name": "Defrag This",
             "url": "https://podcasts.apple.com/us/podcast/defrag-this/id1234621622"
           },
@@ -1406,6 +1435,10 @@
           {
             "name": "Hacking Humans",
             "url": "https://www.stitcher.com/show/hacking-humans"
+          },
+          {
+            "name": "Humans of InfoSec",
+            "url": "https://soundcloud.com/humans-of-infosec"
           },
           {
             "name": "Identity at the Center",
@@ -1430,6 +1463,18 @@
           {
             "name": "OWASP Podcast",
             "url": "https://soundcloud.com/owasp-podcast"
+          },
+          {
+            "name": "Privacy Advisor Podcast",
+            "url": "https://iapp.org/news/privacy-advisor-podcast/"
+          },
+          {
+            "name": "Privacy, Security, & OSINT Show - IntelTechniques",
+            "url": "https://inteltechniques.com/podcast.html"
+          },
+          {
+            "name": "Purple Squad Security",
+            "url": "https://www.stitcher.com/show/purple-squad-security"
           },
           {
             "name": "Risky Business",
@@ -1488,6 +1533,10 @@
             "url": "https://soundcloud.com/user-98066669"
           },
           {
+            "name": "The Secure Developer",
+            "url": "https://soundcloud.com/heavybit/sets/the-secure-developer"
+          },
+          {
             "name": "The Shared Security Show",
             "url": "https://sharedsecurity.net/"
           },
@@ -1502,6 +1551,14 @@
           {
             "name": "The Virtual CISO Moment",
             "url": "https://podcasts.apple.com/us/podcast/the-virtual-ciso-moment/id1608185823"
+          },
+          {
+            "name": "Troy Hunt's Weekly Update Podcast",
+            "url": "https://podcasts.apple.com/au/podcast/troy-hunts-weekly-update-podcast/id1176454699"
+          },
+          {
+            "name": "Ubuntu Security Podcast",
+            "url": "https://podcasts.apple.com/au/podcast/ubuntu-security-podcast/id1429360004"
           },
           {
             "name": "Unsupervised Learning",

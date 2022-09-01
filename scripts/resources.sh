@@ -165,6 +165,13 @@ function pull_misc_things() {
   git_update https://github.com/NixOS/nixpkgs.git $HOME/git/misc/nixpkgs
   git_update https://github.com/CompVis/stable-diffusion.git $HOME/git/misc/stable-diffusion
   #git_update https://github.com/Red-Laboratory/Malware-collection.git $HOME/git/misc/Malware-collection
+  git_update https://github.com/chrislgarry/Apollo-11.git $HOME/git/misc/Apollo-11
+  git_update https://github.com/daviddao/awful-ai.git $HOME/git/misc/awful-ai
+  git_update https://github.com/tylertreat/comcast.git $HOME/git/misc/comcast
+  git_update https://github.com/kootenpv/whereami.git $HOME/git/misc/whereami
+  git_update https://github.com/kdn251/interviews.git $HOME/git/misc/interviews
+  git_update https://github.com/0x192/universal-android-debloater.git $HOME/git/misc/universal-android-debloater
+  git_update https://github.com/tensorflow/models.git $HOME/git/misc/tensorflow-models
 
   # jsoncrack
   git_update https://github.com/AykutSarac/jsoncrack.com.git $HOME/git/misc/jsoncrack.com
@@ -394,6 +401,18 @@ function pull_educational_repos() {
   git_update https://github.com/microsoft/ML-For-Beginners.git $HOME/git/education/ML-For-Beginners
   git_update https://github.com/sobolevn/awesome-cryptography.git $HOME/git/education/awesome-cryptography
   git_update https://github.com/lfit/itpol.git $HOME/git/education/itpol
+  git_update https://github.com/alex/what-happens-when.git $HOME/git/education/what-happens-when
+  git_update https://github.com/sdmg15/Best-websites-a-programmer-should-visit.git $HOME/git/education/Best-websites-a-programmer-should-visit
+  git_update https://github.com/tsiege/Tech-Interview-Cheat-Sheet.git $HOME/git/education/Tech-Interview-Cheat-Sheet
+  git_update https://github.com/cfenollosa/os-tutorial.git $HOME/git/education/os-tutorial
+  git_update https://github.com/GorvGoyl/Clone-Wars.git $HOME/git/education/Clone-Wars
+  git_update https://github.com/kkuchta/css-only-chat.git $HOME/git/education/css-only-chat
+  git_update https://github.com/karan/Projects.git $HOME/git/education/karan-Projects
+  git_update https://github.com/abduvik/just-enough-series.git $HOME/git/education/just-enough-series
+  git_update https://github.com/ibraheemdev/modern-unix.git $HOME/git/education/modern-unix
+  git_update https://github.com/kamranahmedse/developer-roadmap.git $HOME/git/education/developer-roadmap
+  git_update https://github.com/rShetty/awesome-podcasts.git $HOME/git/education/awesome-podcasts
+  git_update https://github.com/practical-tutorials/project-based-learning.git $HOME/git/education/project-based-learning
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -479,6 +498,7 @@ function pull_educational_repos() {
   git_update https://github.com/fabacab/awesome-cybersecurity-blueteam.git $HOME/git/pentest-education/awesome-cybersecurity-blueteam
   git_update https://github.com/meirwah/awesome-incident-response.git $HOME/git/pentest-education/awesome-incident-response
   git_update https://github.com/TaptuIT/awesome-devsecops.git $HOME/git/pentest-education/awesome-devsecops
+  git_update https://github.com/mandiant/red_team_tool_countermeasures.git $HOME/git/pentest-education/red_team_tool_countermeasures
 
   ### OSINT
   git_update https://github.com/jivoi/awesome-osint.git $HOME/git/pentest-education/awesome-osint
@@ -760,6 +780,9 @@ function pull_wordlists() {
   git_update https://github.com/six2dez/OneListForAll.git $HOME/git/wordlists/OneListForAll
   git_update https://github.com/v0re/dirb.git $HOME/git/wordlists/dirb
   git_update https://github.com/danielmiessler/SecLists.git $HOME/git/wordlists/SecLists
+  git_update https://github.com/minimaxir/big-list-of-naughty-strings.git $HOME/git/wordlists/big-list-of-naughty-strings
+  git_update https://github.com/berzerk0/Probable-Wordlists.git $HOME/git/wordlists/Probable-Wordlists
+
   wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O $HOME/git/wordlists/content_discovery_all.txt
 }
 
