@@ -1297,6 +1297,10 @@
                 "url": "file:///home/user/git/pentest-education/Infosec_Reference"
               },
               {
+                "name": "Offensive Security Cheatsheet",
+                "url": "https://cheatsheet.haax.fr/"
+              },
+              {
                 "name": "pentest-wiki",
                 "url": "file:///home/user/git/pentest-education/pentest-wiki"
               },
@@ -1665,11 +1669,15 @@
         ]
       },
       {
-        "name": "Redteam",
+        "name": "Red Team",
         "children": [
           {
             "name": "RedTeam-Tactics-and-Techniques",
             "url": "file:///home/user/git/pentest-education/RedTeam-Tactics-and-Techniques"
+          },
+          {
+            "name": "Red Team Guides",
+            "url": "https://redteam.guide/"
           }
         ]
       },
