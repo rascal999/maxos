@@ -17,11 +17,6 @@
           notification = false;
         }
         {
-          command = "exec ${pkgs.xorg.setxkbmap}/bin/setxkbmap dvorak";
-          always = true;
-          notification = false;
-        }
-        {
           command = "exec ${pkgs.firefox}/bin/firefox";
           workspace = "1";
         }

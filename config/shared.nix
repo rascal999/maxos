@@ -30,6 +30,8 @@
       palmDetect = true;
       minSpeed = "1.5";
     };
+    layout = "gb";
+    xkbVariant = "dvorakukp";
   };
 
   # Set your time zone.
