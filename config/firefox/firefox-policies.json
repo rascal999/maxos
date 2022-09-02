@@ -1177,26 +1177,24 @@
             "name": "CTI & OSINT Online Resources (offline)",
             "children": [
               {
-                {
-                  "name": "Bookmarks",
-                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Bookmarks.html"
-                },
-                {
-                  "name": "Collated Search Resources",
-                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Collated Search Resources.html"
-                },
-                {
-                  "name": "Selector IoC Search",
-                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Selector IoC Search.html"
-                },
-                {
-                  "name": "Tools",
-                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Tools.html"
-                },
-                {
-                  "name": "Training Learning",
-                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Training Learning.html"
-                }
+                "name": "Bookmarks",
+                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Bookmarks.html"
+              },
+              {
+                "name": "Collated Search Resources",
+                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Collated Search Resources.html"
+              },
+              {
+                "name": "Selector IoC Search",
+                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Selector IoC Search.html"
+              },
+              {
+                "name": "Tools",
+                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Tools.html"
+              },
+              {
+                "name": "Training Learning",
+                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Training Learning.html"
               }
             ]
           },
