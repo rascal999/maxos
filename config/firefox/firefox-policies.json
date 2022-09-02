@@ -1163,6 +1163,58 @@
         ]
       },
       {
+        "name": "OSINT",
+        "children": [
+          {
+            "name": "'Must Have' Free Resources for OSINT",
+            "url": "https://www.sans.org/blog/-must-have-free-resources-for-open-source-intelligence-osint-/"
+          },
+          {
+            "name": "CTI & OSINT Online Resources",
+            "url": "https://docs.google.com/spreadsheets/d/1klugQqw6POlBtuzon8S0b18-gpsDwX-5OYRrB7TyNEw/edit#gid=0"
+          },
+          {
+            "name": "CTI & OSINT Online Resources (offline)",
+            "children": [
+              {
+                {
+                  "name": "Bookmarks",
+                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Bookmarks.html"
+                },
+                {
+                  "name": "Collated Search Resources",
+                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Collated Search Resources.html"
+                },
+                {
+                  "name": "Selector IoC Search",
+                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Selector IoC Search.html"
+                },
+                {
+                  "name": "Tools",
+                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Tools.html"
+                },
+                {
+                  "name": "Training Learning",
+                  "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Training Learning.html"
+                }
+              }
+            ]
+          },
+          {
+            "name": "Nixintel's OSINT Resource List",
+            "url": "https://start.me/p/rx6Qj8/nixintel-s-osint-resource-list"
+          },
+          {
+            "name": "osint.link",
+            "url": "https://osint.link/"
+          },
+          {
+            "name": "The Ultimate OSINT collection",
+            "url": "https://start.me/p/DPYPMz/the-ultimate-osint-collection"
+          }
+        ]
+      },
+      {
         "name": "Pentesting",
         "children": [
           {
@@ -1797,6 +1849,10 @@
                 "url": "file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html"
               },
               {
+                "name": "OSINT Games",
+                "url": "https://www.osint.games/"
+              },
+              {
                 "name": "OSINT Techniques",
                 "url": "https://www.osinttechniques.com/"
               },
@@ -1937,6 +1993,10 @@
           {
             "name": "The Cyber Mentor",
             "url": "https://www.youtube.com/c/TheCyberMentor"
+          },
+          {
+            "name": "The OSINT Curious Project",
+            "url": "https://www.youtube.com/c/TheOSINTCuriousProject"
           },
           {
             "name": "The PC Security Channel",
