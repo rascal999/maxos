@@ -37,6 +37,7 @@ PORT_HOME_ASSISTANT=10050
 PORT_GRAFANA=10060
 PORT_NGINX=10070
 PORT_JSONCRACK=10090
+PORT_NESSUS=10100
 PORT_WIREGUARD=51820
 
 export MCFLY_KEY_SCHEME=vim
@@ -125,6 +126,20 @@ a-gg() {
 
 a-vpn() {
   /home/user/git/nixos/scripts/vpn.sh "$@"
+}
+
+d-nessus() {
+  echo -n "Nessus activation code? "
+  read NESSUS_ACTIVATION_CODE
+  if [[ ! -z "$NESSUS_ACTIVATION_CODE" ]]; then
+    echo -n "Stopping existing nessus instance.."
+    docker stop nessus
+    echo -n "Removing existing nessus instance.."
+    docker rm nessus
+    docker run --name "nessus" -d -p 127.0.0.1:10100:8834 -e ACTIVATION_CODE=$NESSUS_ACTIVATION_CODE -e USERNAME=admin -e PASSWORD=password tenableofficial/nessus
+  else
+    echo "ERROR: Provide activation code"
+  fi
 }
 
 d-shell() {
