@@ -230,6 +230,7 @@
     nwipe                                                                                                # Securely erase disks
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner
+    openfortivpn                                                                                         # Client for PPP+SSL VPN tunnel services
     openttd                                                                                              # Transport Tycoon Deluxe
     oshka                                                                                                # Tool for extracting nested CI/CD supply chains and executing commands
     ostinato                                                                                             # A packet traffic generator and analyzer
