@@ -109,6 +109,7 @@
     driftnet                                                                                             # Watches network traffic, and picks out and displays JPEG and GIF images for display
     drill                                                                                                # HTTP load testing application inspired by Ansible syntax
     dsniff                                                                                               # collection of tools for network auditing and penetration testing
+    eclipses.eclipse-java                                                                                # Eclipse IDE for Java Developers
     enum4linux                                                                                           # A tool for enumerating information from Windows and Samba systems
     enum4linux-ng                                                                                        # Windows/Samba enumeration tool
     erosmb                                                                                               # SMB network scanner
@@ -155,6 +156,7 @@
     gqrx                                                                                                 # Software defined radio (SDR) receiver
     grim                                                                                                 # Grab images from a Wayland compositor
     grype                                                                                                # Vulnerability scanner for container images and filesystems
+    gsettings-desktop-schemas                                                                            # Collection of GSettings schemas for settings shared by various components of a desktop
     gzrt                                                                                                 # The gzip Recovery Toolkit
     hachoir                                                                                              # Python library to view and edit a binary stream
     hakrawler                                                                                            # Web crawler for the discovery of endpoints and assets
