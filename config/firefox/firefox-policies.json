@@ -1388,6 +1388,10 @@
                 "url": "file:///home/user/git/pentest-education/awesome-web-security"
               },
               {
+                "name": "OSCP tips and tricks",
+                "url": "file:///home/user/git/nixos/resources/OSCP tips and tricks 20220908.html"
+              },
+              {
                 "name": "top10webseclist",
                 "url": "file:///home/user/git/pentest-education/top10webseclist"
               }
