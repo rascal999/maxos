@@ -1764,6 +1764,10 @@
             "url": "http://localhost:8040/"
           },
           {
+            "name": "gifcap",
+            "url": "http://localhost:10110/"
+          },
+          {
             "name": "HOUDINI",
             "url": "http://localhost:9050/"
           },

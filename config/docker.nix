@@ -134,5 +134,10 @@
       image = "jsoncrack";
       ports = [ "127.0.0.1:10090:8080" ];
     };
+
+    gifcap = {
+      image = "rascal999/gifcap";
+      ports = [ "127.0.0.1:10110:5000" ];
+    };
   };
 }
