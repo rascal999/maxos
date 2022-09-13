@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "@retire.js": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/retire-js/addon-808743-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "jid1-KKzOGWgsW3Ao4Q@jetpack": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/addon-481438-latest.xpi",
         "installation_mode": "normal_installed"
