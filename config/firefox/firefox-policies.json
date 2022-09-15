@@ -317,7 +317,7 @@
             "children": [
               {
                 "name": "Portal",
-                "url": "file:///home/user/git/education/og-aws"
+                "url": "https://portal.azure.com/"
               }
             ]
           },
@@ -409,6 +409,10 @@
           {
             "name": "exploitdb",
             "url": "file:///home/user/git/pentest-education/exploitdb"
+          },
+          {
+            "name": "Exploit Database",
+            "url": "https://www.exploit-db.com/"
           },
           {
             "name": "PayloadsAllTheThings",
@@ -567,6 +571,10 @@
                 "url": "https://attackdefense.com/"
               },
               {
+                "name": "Beginner Web App Hacking - The Cyber Mentor",
+                "url": "https://www.youtube.com/watch?v=24fHLWXGS-M"
+              },
+              {
                 "name": "Certified Secure",
                 "url": "https://www.certifiedsecure.com/frontpage"
               },
@@ -577,6 +585,10 @@
               {
                 "name": "CTF Komodo Security",
                 "url": "https://ctf.komodosec.com/"
+              },
+              {
+                "name": "CyberSecLabs",
+                "url": "https://www.cyberseclabs.co.uk/"
               },
               {
                 "name": "Cybrary",
@@ -593,6 +605,10 @@
               {
                 "name": "Google CTF",
                 "url": "https://capturetheflag.withgoogle.com/"
+              },
+              {
+                "name": "Hack This Site",
+                "url": "https://www.hackthis.co.uk"
               },
               {
                 "name": "Hacker101",
@@ -701,6 +717,10 @@
               {
                 "name": "WeChall",
                 "url": "http://www.wechall.net/"
+              },
+              {
+                "name": "Web Security Academy (PortSwigger)",
+                "url": "https://portswigger.net/web-security"
               }
             ]
           },
@@ -1373,14 +1393,6 @@
               {
                 "name": "trailofbits publications",
                 "url": "file:///home/user/git/pentest-education/trailofbits-publications"
-              },
-              {
-                "name": "TryHackMe",
-                "url": "https://tryhackme.com/"
-              },
-              {
-                "name": "Web Security Academy (PortSwigger)",
-                "url": "https://portswigger.net/web-security"
               }
             ]
           },
@@ -1653,6 +1665,55 @@
         "name": "Recon",
         "children": [
           {
+            "name": "Paid",
+            "children": [
+              {
+                "name": "Binary Edge",
+                "url": "https://www.binaryedge.io/"
+              },
+              {
+                "name": "Dehashed",
+                "url": "https://www.dehashed.com/"
+              },
+              {
+                "name": "FullHunt",
+                "url": "https://fullhunt.io/"
+              },
+              {
+                "name": "GreyNoise",
+                "url": "https://www.greynoise.io/"
+              },
+              {
+                "name": "PolySwarm",
+                "url": "https://polyswarm.io/"
+              },
+              {
+                "name": "PublicWWW",
+                "url": "https://publicwww.com/"
+              },
+              {
+                "name": "searchcode",
+                "url": "https://searchcode.com/"
+              },
+              {
+                "name": "Vulners",
+                "url": "https://vulners.com/"
+              },
+              {
+                "name": "SecurityTrails",
+                "url": "https://securitytrails.com/"
+              }
+            ]
+          },
+          {
+            "name": "AbuseIPDB",
+            "url": "https://www.abuseipdb.com/"
+          },
+          {
+            "name": "ARIN",
+            "url": "https://search.arin.net/"
+          },
+          {
             "name": "Binary Edge",
             "url": "https://www.binaryedge.io/"
           },
@@ -1665,6 +1726,14 @@
             "url": "https://crt.sh/"
           },
           {
+            "name": "DNSdumpster",
+            "url": "https://dnsdumpster.com/"
+          },
+          {
+            "name": "DorkSearch",
+            "url": "https://dorksearch.com/"
+          },
+          {
             "name": "FullHunt",
             "url": "https://fullhunt.io/search"
           },
@@ -1673,12 +1742,20 @@
             "url": "https://buckets.grayhatwarfare.com/"
           },
           {
+            "name": "grep.app",
+            "url": "https://grep.app/"
+          },
+          {
             "name": "hunter",
             "url": "https://hunter.io/"
           },
           {
             "name": "IntelligenceX",
             "url": "https://intelx.io/tools?tab=general"
+          },
+          {
+            "name": "IPAddress.com",
+            "url": "https://www.ipaddress.com/"
           },
           {
             "name": "LeakIX",
@@ -1713,8 +1790,16 @@
             "url": "https://urlscan.io/"
           },
           {
-            "name": "Vulners",
-            "url": "https://vulners.com/"
+            "name": "VirusTotal",
+            "url": "https://www.virustotal.com/"
+          },
+          {
+            "name": "WayBackMachine",
+            "url": "https://archive.org/web/"
+          },
+          {
+            "name": "What is My IP Address",
+            "url": "https://whatismyip.live/"
           },
           {
             "name": "Wigle",
@@ -1757,6 +1842,15 @@
           {
             "name": "public-pentesting-reports",
             "url": "file:///home/user/git/pentest-education/public-pentesting-reports"
+          }
+        ]
+      },
+      {
+        "name": "Threat Intelligence",
+        "children": [
+          {
+            "name": "AlienVault",
+            "url": "https://otx.alienvault.com/"
           }
         ]
       },
@@ -1933,6 +2027,10 @@
             "url": "https://www.youtube.com/c/DavidBombal"
           },
           {
+            "name": "Ethical Hacking in 12 Hours - They Cyber Mentor",
+            "url": "https://www.youtube.com/watch?v=fNzpcB7ODxQ"
+          },
+          {
             "name": "HackerSploit",
             "url": "https://www.youtube.com/c/HackerSploit"
           },
@@ -1965,6 +2063,10 @@
             "url": "https://www.youtube.com/c/JohnHammond010"
           },
           {
+            "name": "Linux for Ethical Hackers",
+            "url": "https://www.youtube.com/watch?v=U1w4T03B30I"
+          },
+          {
             "name": "LiveOverflow",
             "url": "https://www.youtube.com/c/LiveOverflow"
           },
@@ -1975,6 +2077,10 @@
           {
             "name": "NetworkChuck",
             "url": "https://www.youtube.com/c/NetworkChuck"
+          },
+          {
+            "name": "Network Pentesting - freeCodeCamp.org",
+            "url": "https://www.youtube.com/watch?v=3Kq1MIfTWCE"
           },
           {
             "name": "Null Byte",
