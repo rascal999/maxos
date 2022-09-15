@@ -58,7 +58,7 @@
     chain-bench                                                                                          # An open-source tool for auditing your software supply chain stack for security compliance based on a new CIS Software Supply Chain benchmark
     changetower                                                                                          # Tools to watch for webppage changes
     checkip                                                                                              # CLI tool that checks an IP address using various public services
-    checkov                                                                                              # Static code analysis tool for infrastructure-as-code
+    #checkov                                                                                              # Static code analysis tool for infrastructure-as-code
     checksec                                                                                             # Tool for checking security bits on executables
     cherrytree                                                                                           # An hierarchical note taking application
     chipsec                                                                                              # Platform Security Assessment Framework
@@ -242,7 +242,7 @@
     pev                                                                                                  # A full-featured, open source, multiplatform command line toolkit to work with PE (Portable Executables) binaries
     phrasendrescher                                                                                      # A modular and multi processing pass phrase cracking tool
     pinentry                                                                                             # GnuPG’s interface to passphrase input
-    pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
+    #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
