@@ -50,7 +50,7 @@
   services.twmn = {
     enable = true;
     duration = 5000;
-    soundCommand = "/run/current-system/sw/bin/mpv /home/user/git/nixos/resources/sounds/percussion-sound-614.mp3";
+    soundCommand = "/run/current-system/sw/bin/mpv /home/user/git/maxos/resources/sounds/percussion-sound-614.mp3";
     text.font.size = 30;
 
     window = {

@@ -1,10 +1,10 @@
 # Clone nixos
-/run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/nixos || /run/current-system/sw/bin/git -C ${HOME}/git/nixos pull
+/run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/maxos || /run/current-system/sw/bin/git -C ${HOME}/git/maxos pull
 # Jupyter templates
 mkdir -p ${HOME}/jupyter/pentest/base
 rm ${HOME}/jupyter/pentest/base/*.ipynb
 rm -rf ${HOME}/jupyter/pentest/base/tools
-cp ${HOME}/git/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
+cp ${HOME}/git/maxos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
 
 # Grafana Strava directory
 echo -n "Setting up Grafana directory.."

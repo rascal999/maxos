@@ -57,7 +57,7 @@ bindkey "^[[1;5C" forward-word
 ### SSH alert
 ###
 if [[ -n "$SSH_CONNECTION" ]]; then
-  screen -adm $HOME/git/nixos/scripts/telegram_notify.sh -a -q -m "Login from $SSH_CLIENT"
+  screen -adm $HOME/git/maxos/scripts/telegram_notify.sh -a -q -m "Login from $SSH_CLIENT"
 fi
 
 ###
@@ -81,7 +81,7 @@ dunst-handle() {
 ###
 a-notify()
 {
-  /home/user/git/nixos/scripts/telegram_notify.sh "$@"
+  /home/user/git/maxos/scripts/telegram_notify.sh "$@"
 }
 
 new() {
@@ -105,7 +105,7 @@ new() {
 }
 
 test-vpn() {
-  ${HOME}/git/nixos/scripts/wg_test.sh
+  ${HOME}/git/maxos/scripts/wg_test.sh
 }
 
 a-agenix() {
@@ -126,7 +126,7 @@ a-gg() {
 }
 
 a-vpn() {
-  /home/user/git/nixos/scripts/vpn.sh "$@"
+  /home/user/git/maxos/scripts/vpn.sh "$@"
 }
 
 d-nessus() {
@@ -453,7 +453,7 @@ a-cartography(){
   echo "Press enter to continue."
   read
 
-  cd $HOME/git/nixos-bootstrap/resources/docker/cartography
+  cd $HOME/git/maxos-bootstrap/resources/docker/cartography
   docker-compose up -d neo4j
   sleep 3
   docker-compose up -d cartography
@@ -673,9 +673,9 @@ fscan() {
     echo "Example: fscan 10.0.0.1 http://10.0.0.1:1337"
     return 1
   else
-    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/nixos-bootstrap/scripts/fscan_left.sh" "$@" &
+    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/maxos-bootstrap/scripts/fscan_left.sh" "$@" &
     disown
-    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/nixos-bootstrap/scripts/fscan_right.sh" "$@" &
+    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/maxos-bootstrap/scripts/fscan_right.sh" "$@" &
     disown
   fi
 }
@@ -687,9 +687,9 @@ wscan() {
     echo "Example: wscan 10.0.0.1"
     return 1
   else
-    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/nixos-bootstrap/scripts/wscan_left.sh" "$@" &
+    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/maxos-bootstrap/scripts/wscan_left.sh" "$@" &
     disown
-    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/nixos-bootstrap/scripts/wscan_right.sh" "$@" &
+    /run/current-system/sw/bin/urxvt -bg black -fg white -e "$HOME/git/maxos-bootstrap/scripts/wscan_right.sh" "$@" &
     disown
   fi
 }

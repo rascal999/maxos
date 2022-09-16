@@ -140,7 +140,7 @@ sections:
     items:
       - title: IntelTechniques
         url: >-
-          file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html
+          file:///home/user/git/maxos/resources/www.inteltechniques.com_20220705/index.html
         target: newtab
         id: 0_397_inteltechniques
       - title: OSINT Techniques

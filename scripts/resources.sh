@@ -597,8 +597,8 @@ function pull_tool_repos() {
   # OpenCVE
   git_update https://github.com/opencve/opencve-docker.git $HOME/git/exploits/opencve-docker
   if [[ "$?" == "0" ]]; then
-    cp $HOME/git/nixos-next/config/opencve/opencve.cfg conf
-    cp $HOME/git/nixos-next/config/opencve/docker-compose.yml .
+    cp $HOME/git/maxos/config/opencve/opencve.cfg conf
+    cp $HOME/git/maxos/config/opencve/docker-compose.yml .
 
     # Build and spin up
     docker-compose build
@@ -860,4 +860,4 @@ if [ $arg_zims == 1 ]; then
 fi
 
 # Notify
-/home/user/git/nixos/scripts/telegram_notify.sh -a -m "Finished updating resources."
+/home/user/git/maxos/scripts/telegram_notify.sh -a -m "Finished updating resources."

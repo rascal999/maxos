@@ -1202,23 +1202,23 @@
             "children": [
               {
                 "name": "Bookmarks",
-                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Bookmarks.html"
+                "url": "file:///home/user/git/maxos/resources/CTI & OSINT Online Resources_20220902/Bookmarks.html"
               },
               {
                 "name": "Collated Search Resources",
-                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Collated Search Resources.html"
+                "url": "file:///home/user/git/maxos/resources/CTI & OSINT Online Resources_20220902/Collated Search Resources.html"
               },
               {
                 "name": "Selector IoC Search",
-                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Selector IoC Search.html"
+                "url": "file:///home/user/git/maxos/resources/CTI & OSINT Online Resources_20220902/Selector IoC Search.html"
               },
               {
                 "name": "Tools",
-                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Tools.html"
+                "url": "file:///home/user/git/maxos/resources/CTI & OSINT Online Resources_20220902/Tools.html"
               },
               {
                 "name": "Training Learning",
-                "url": "file:///home/user/git/nixos-next/resources/CTI & OSINT Online Resources_20220902/Training Learning.html"
+                "url": "file:///home/user/git/maxos/resources/CTI & OSINT Online Resources_20220902/Training Learning.html"
               }
             ]
           },
@@ -1405,7 +1405,7 @@
               },
               {
                 "name": "OSCP tips and tricks",
-                "url": "file:///home/user/git/nixos/resources/OSCP tips and tricks 20220908.html"
+                "url": "file:///home/user/git/maxos/resources/OSCP tips and tricks 20220908.html"
               },
               {
                 "name": "top10webseclist",
@@ -1950,7 +1950,7 @@
               },
               {
                 "name": "IntelTechniques",
-                "url": "file:///home/user/git/nixos/resources/www.inteltechniques.com_20220705/index.html"
+                "url": "file:///home/user/git/maxos/resources/www.inteltechniques.com_20220705/index.html"
               },
               {
                 "name": "OSINT Games",

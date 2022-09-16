@@ -71,7 +71,7 @@
     nginx-autoindex = {
       image = "dceoy/nginx-autoindex";
       ports = [ "10010:80" ];
-      volumes = [ "/home/user/git/nixos/result:/var/lib/nginx/html:ro" ];
+      volumes = [ "/home/user/git/maxos/result:/var/lib/nginx/html:ro" ];
     };
   };
 }

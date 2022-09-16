@@ -72,8 +72,8 @@
       volumes = [
                   "grafana-data:/var/lib/grafana"
                   "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
-                  "/home/user/git/nixos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
-                  "/home/user/git/nixos/resources/grafana/dashboards:/mnt/dashboards"
+                  "/home/user/git/maxos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
+                  "/home/user/git/maxos/resources/grafana/dashboards:/mnt/dashboards"
                 ];
     };
 
