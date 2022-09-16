@@ -19,7 +19,7 @@ in {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
-        "${mod}+Shift+l" = "exec ${pkgs.sudo}/bin/sudo poweroff";
+        "${mod}+Shift+l" = "exec sudo poweroff";
         "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
