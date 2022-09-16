@@ -99,7 +99,7 @@ new() {
   echo "d-hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "gitleaks                    Discover secrets using Gitleaks"
   echo "k6                          Load testing with scripting"
-  eoch "inql                        Security testing tool for GraphQL"
+  echo "inql                        Security testing tool for GraphQL"
   echo "tldr                        TL;DR for command"
   echo "wuzz                        Interactive cli tool for HTTP inspection"
 }

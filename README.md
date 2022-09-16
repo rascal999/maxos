@@ -2,9 +2,17 @@
 
 Abraham Lincoln
 
-# NixOS config and dotfiles
+# Why?
 
-My OS config for security testing.
+TL;DR - This VM/build will probably be useful for exams and people interested in security research.
+
+The goal of this [NixOS](https://nixos.org/) config is to bundle as many tools/aliases/bookmarks as possible to make my pentesting life easier. I never invested the time to really customise my base installation because these customisations were not easily or consistently portable. I didn't want to invest the time customising a machine, getting used to the customisations, and then having to tweak a new build to get to the same place. This all changed when I discovered [NixOS](https://nixos.org/). Now I can customise to my heart's content (almost) and deploy these customisations on any device.
+
+My quest to divorce the data from the tin continues..
+
+# Highlights
+
+This NixOS config comes with a few things to make my life easier while pentesting.
 
 * Over 470 software packages
 * ~300 zsh aliases
@@ -26,29 +34,41 @@ My OS config for security testing.
 
 # ZSH aliases
 
-All available here (and more).
+All available [here](/config/zsh/zshrc.zsh) (and more).
 
 ## localhost.run filebrowser
+
+Deploy externally accessible, web-based file browser in one command.
 
 ![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-filebrowser.gif)
 
 ## localhost.run nginx
 
+Deploy externally accessible, web-based nginx instance in one command.
+
 ![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-nginx.gif)
 
 ## Vulnerable labs
+
+Deploy a vulnerable lab in one command.
 
 ![d-lab-start](/resources/gifcap/gifcap-d-lab-start.gif)
 
 ## Ubuntu docker image and port
 
+Deploy an Ubuntu docker image with an arbitrary port exposed in one command.
+
 ![d-shellhereport](/resources/gifcap/gifcap-d-shellhereport.gif)
 
 ## One line SMB server in CWD
 
+Deploy a SMB share of the current working directory in one command.
+
 ![d-smbservehere](/resources/gifcap/gifcap-d-smbservehere.gif)
 
 ## Tor array
+
+Deploy a Tor array (a arbitrary number of docker instances which all connect to the Tor network individually and expose incrementing ports) in one command.
 
 ![d-tor-array](/resources/gifcap/gifcap-d-tor-array.gif)
 
