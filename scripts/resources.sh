@@ -274,6 +274,8 @@ function pull_tools_docker() {
   docker pull sundowndev/phoneinfoga                       # Information gathering & OSINT framework for phone numbers
   docker pull vainlystrain/tidos-framework                 # Offensive Manual Web Application Penetration Testing Framework
   docker pull verovaleros/domain_analyzer                  # Analyze the security of domain by finding information
+  docker pull rflathers/webdav                             # Share current directory over anonymous webdav
+  docker pull rflathers/impacket                           # Collection of Python classes for working with network protocols
 
   ### https://github.com/cybersecsi/RAUDI
   docker pull secsi/apktool

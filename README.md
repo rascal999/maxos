@@ -24,11 +24,39 @@ My OS config for security testing.
 
 ![NixOS desktop](/resources/screenshots/20220706_nixos.png)
 
-## Install
+# ZSH aliases
+
+All available here (and more).
+
+## localhost.run filebrowser
+
+![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-filebrowser.gif)
+
+## localhost.run nginx
+
+![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-nginx.gif)
+
+## Vulnerable labs
+
+![d-lab-start](/resources/gifcap/gifcap-d-lab-start.gif)
+
+## Ubuntu docker image and port
+
+![d-shellhereport](/resources/gifcap/gifcap-d-shellhereport.gif)
+
+## One line SMB server in CWD
+
+![d-smbservehere](/resources/gifcap/gifcap-d-smbservehere.gif)
+
+## Tor array
+
+![d-tor-array](/resources/gifcap/gifcap-d-tor-array.gif)
+
+# Install
 
 Use unstable ISO (https://www.google.com/search?q=nixos+iso+unstable) for flake support.
 
-### Get repo
+## Get repo
 
 ```
 # Set SSH key for GitHub
@@ -45,7 +73,7 @@ unzip master.zip
 cd nixos-master/
 ```
 
-### Install
+## Install
 
 ```
 ./scripts/init.sh
