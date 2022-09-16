@@ -22,18 +22,6 @@
 
   hardware.opengl.driSupport32Bit = true;
 
-  services.xserver = {
-    # Touchpad
-    synaptics = {
-      enable = true;
-      vertTwoFingerScroll = true;
-      palmDetect = true;
-      minSpeed = "1.5";
-    };
-    layout = "gb";
-    xkbVariant = "dvorakukp";
-  };
-
   # Set your time zone.
   time.timeZone = "Europe/London";
 

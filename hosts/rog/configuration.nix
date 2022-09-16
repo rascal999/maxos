@@ -27,6 +27,17 @@ in
       autoLogin.enable = true;
       autoLogin.user = "user";
     };
+
+    # Touchpad
+    synaptics = {
+      enable = true;
+      vertTwoFingerScroll = true;
+      palmDetect = true;
+      minSpeed = "1.5";
+    };
+
+    layout = "gb";
+    xkbVariant = "dvorakukp";
   };
 
   services.xserver.videoDrivers = [ "nvidia" "amdgpu" ];
