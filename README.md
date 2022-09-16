@@ -8,7 +8,7 @@ Abraham Lincoln
 
 # Why?
 
-TL;DR - This VM/build will probably be useful for exams and people interested in security research.
+**TL;DR** - This VM/build will probably be useful for exams and people interested in security research.
 
 The goal of this [NixOS](https://nixos.org/) config is to bundle as many bookmarks / shell aliases / docker images / Firefox extensions / git repos / tools as possible to make my pentesting life easier. I never invested the time to customise my base installation before because these customisations were not easily or consistently portable.
 
@@ -50,7 +50,7 @@ Deploy externally accessible, web-based file browser in one command.
 
 ## localhost.run nginx
 
-Deploy externally accessible, web-based nginx instance in one command.
+Deploy externally accessible nginx instance in one command.
 
 ![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-nginx.gif)
 
@@ -68,7 +68,7 @@ Deploy an Ubuntu docker image with an arbitrary port exposed in one command.
 
 ## One line SMB server in CWD
 
-Deploy a SMB share of the current working directory in one command.
+Deploy an SMB share in the current working directory in one command.
 
 ![d-smbservehere](/resources/gifcap/gifcap-d-smbservehere.gif)
 
