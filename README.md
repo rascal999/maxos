@@ -8,7 +8,7 @@ Abraham Lincoln
 
 # Why?
 
-**TL;DR** - This VM / build will probably be useful for exams and people interested in security research.
+**TL;DR** - This VM / build will probably be useful for pentesting exams and people interested in security research.
 
 The goal of this [NixOS](https://nixos.org/) config is to bundle as many bookmarks / shell aliases / docker images / Firefox extensions / git repos / tools as possible to make my pentesting life easier. I never invested the time to customise my base installation before because these customisations were not easily or consistently portable.
 
@@ -40,43 +40,47 @@ This NixOS config comes with a few things to make my life easier while pentestin
 * Text-only offline [Wikipedia](http://localhost:9060/wikipedia_en_all_nopic_2022-01/A/User:The_other_Kiwix_guy/Landing)
 * [Jupyter Notebooks](http://localhost:8000/tree?) for pentesting
 
+## Security-focused Firefox bookmarks
+
+[Here](/config/firefox/firefox-policies.json) are some security-focused Firefox bookmarks.
+
 ![Some Firefox bookmarks](/resources/gifcap/gifcap-ff-bookmarks.gif)
 
-# ZSH aliases
+## ZSH aliases
 
 All available [here](/config/zsh/zshrc.zsh) (and more).
 
-## localhost.run filebrowser
+### localhost.run filebrowser
 
 Deploy externally accessible, web-based file browser in one command.
 
 ![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-filebrowser.gif)
 
-## localhost.run nginx
+### localhost.run nginx
 
 Deploy externally accessible nginx instance in one command.
 
 ![a-localhostrun-filebrowser](/resources/gifcap/gifcap-a-localhostrun-nginx.gif)
 
-## Vulnerable labs
+### Vulnerable labs
 
 Deploy a vulnerable lab in one command.
 
 ![d-lab-start](/resources/gifcap/gifcap-d-lab-start.gif)
 
-## Ubuntu docker image and port
+### Ubuntu docker image and port
 
 Deploy an Ubuntu docker image with an arbitrary port exposed in one command.
 
 ![d-shellhereport](/resources/gifcap/gifcap-d-shellhereport.gif)
 
-## One line SMB server in CWD
+### One line SMB server in CWD
 
 Deploy an SMB share in the current working directory in one command.
 
 ![d-smbservehere](/resources/gifcap/gifcap-d-smbservehere.gif)
 
-## Tor array
+### Tor array
 
 Deploy a Tor array (a arbitrary number of docker instances which all connect to the Tor network individually and expose incrementing ports) in one command.
 
