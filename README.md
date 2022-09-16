@@ -2,6 +2,10 @@
 
 Abraham Lincoln
 
+# What?
+
+[NixOS](https://nixos.org/) config geared towards pentesters and security researchers.
+
 # Why?
 
 TL;DR - This VM/build will probably be useful for exams and people interested in security research.
