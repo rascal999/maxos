@@ -8,13 +8,17 @@ Abraham Lincoln
 
 # Why?
 
-**TL;DR** - This VM/build will probably be useful for exams and people interested in security research.
+**TL;DR** - This VM / build will probably be useful for exams and people interested in security research.
 
 The goal of this [NixOS](https://nixos.org/) config is to bundle as many bookmarks / shell aliases / docker images / Firefox extensions / git repos / tools as possible to make my pentesting life easier. I never invested the time to customise my base installation before because these customisations were not easily or consistently portable.
 
 I didn't want to invest the time customising a machine, getting used to the customisations, and then having to tweak a new build to get to the same place. This all changed when I discovered [NixOS](https://nixos.org/). Now I can customise to my heart's content (almost, with the exception of Firefox extension settings) and deploy these customisations on any device.
 
 My quest to divorce the data from the tin continues..
+
+# Where?
+
+The easiest way to get up and running is via the OVA image available soon (9.8GB).
 
 # Highlights
 
@@ -36,7 +40,7 @@ This NixOS config comes with a few things to make my life easier while pentestin
 * Text-only offline [Wikipedia](http://localhost:9060/wikipedia_en_all_nopic_2022-01/A/User:The_other_Kiwix_guy/Landing)
 * [Jupyter Notebooks](http://localhost:8000/tree?) for pentesting
 
-![NixOS desktop](/resources/screenshots/20220706_nixos.png)
+![Some Firefox bookmarks](/resources/gifcap/gifcap-ff-bookmarks.gif)
 
 # ZSH aliases
 
@@ -77,6 +81,10 @@ Deploy an SMB share in the current working directory in one command.
 Deploy a Tor array (a arbitrary number of docker instances which all connect to the Tor network individually and expose incrementing ports) in one command.
 
 ![d-tor-array](/resources/gifcap/gifcap-d-tor-array.gif)
+
+# resources.sh
+
+[This](/scripts/resources.sh) script it pretty important to the build. I haven't got it building on top of the VM image yet, but it's responsible for pulling git repos, docker images, and other resources. I recommend you run this if you install maxos.
 
 # Install
 
