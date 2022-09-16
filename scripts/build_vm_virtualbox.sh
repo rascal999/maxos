@@ -9,7 +9,7 @@ fi
 
 # Check we haven't built ISO for this hash
 if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
-  nixos-generate --flake .#vm -f virtualbox
+  nixos-generate --flake .#vm_virtualbox -f virtualbox
   # Problem?
   if [[ "$?" == "0" ]]; then
     /home/user/git/maxos/scripts/telegram_notify.sh -m "Finished building VirtualBox VM."
