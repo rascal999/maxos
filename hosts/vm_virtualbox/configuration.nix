@@ -1,15 +1,15 @@
 { config, pkgs, lib, ... }:
 
 {
-  networking.hostName = "xvm";
+  networking.hostName = "maxos";
 
-  # X11 / i3
+  # X11 / plasma
   services.xserver = {
     enable = true;
-    windowManager.i3.enable = true;
+    desktopManager.plasma5.enable = true;
 
     displayManager = {
-      defaultSession = "none+i3";
+      defaultSession = "none+plasma5";
       lightdm.enable = true;
       autoLogin.enable = true;
       autoLogin.user = "user";
@@ -47,7 +47,7 @@
       usbehci = "off";
     };
 
-    vmFileName = "XVM_20220726_04.ova";
-    vmName = "XVM";
+    vmFileName = "maxos.ova";
+    vmName = "maxos";
   };
 }
