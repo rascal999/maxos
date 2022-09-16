@@ -90,6 +90,8 @@ Deploy a Tor array (a arbitrary number of docker instances which all connect to 
 
 [This](/scripts/resources.sh) script it pretty important to the build. I haven't got it building on top of the VM image yet, but it's responsible for pulling git repos, docker images, and other resources. I recommend you run this if you install maxos.
 
+![resources.sh](/resources/gifcap/gifcap-resources-sh.gif)
+
 # Install
 
 Use unstable ISO (https://www.google.com/search?q=nixos+iso+unstable) for flake support.
