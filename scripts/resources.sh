@@ -415,6 +415,8 @@ function pull_educational_repos() {
   git_update https://github.com/kamranahmedse/developer-roadmap.git $HOME/git/education/developer-roadmap
   git_update https://github.com/rShetty/awesome-podcasts.git $HOME/git/education/awesome-podcasts
   git_update https://github.com/practical-tutorials/project-based-learning.git $HOME/git/education/project-based-learning
+  git_update https://github.com/Developer-Y/cs-video-courses.git $HOME/git/education/cs-video-courses
+  git_update https://github.com/drduh/macOS-Security-and-Privacy-Guide.git $HOME/git/education/macOS-Security-and-Privacy-Guide
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
