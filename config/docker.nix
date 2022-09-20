@@ -139,5 +139,10 @@
       image = "rascal999/gifcap";
       ports = [ "127.0.0.1:10110:5000" ];
     };
+
+    attack-navigator = {
+      image = "attack-navigator";
+      ports = [ "127.0.0.1:10120:4200" ];
+    };
   };
 }

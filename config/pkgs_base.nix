@@ -200,7 +200,7 @@
     ldeep                                                                                                # In-depth LDAP enumeration utility
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
-    logseq                                                                                               # A local-first, non-linear, outliner notebook for organizing and sharing your personal knowledge base
+    logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
     macchanger                                                                                           # A utility for viewing/manipulating the MAC address of network interfaces
     masscan                                                                                              # Fast scan of the Internet

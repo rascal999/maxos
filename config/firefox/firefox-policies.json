@@ -1874,6 +1874,10 @@
         "name": "Tools",
         "children": [
           {
+            "name": "ATT&CK Navigator",
+            "url": "http://localhost:10120/"
+          },
+          {
             "name": "CyberChef",
             "url": "http://localhost:8040/"
           },

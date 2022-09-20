@@ -584,6 +584,13 @@ function pull_tool_repos() {
   git_update https://github.com/jonaslejon/malicious-pdf.git $HOME/git/exploits/malicious-pdf
 
   ### Tools which need building
+  # ATT&CK Navigator
+  git_update https://github.com/mitre-attack/attack-navigator.git $HOME/git/pentest-tools/attack-navigator
+  if [[ "$?" == "0" ]]; then
+    sed 's/node:16/node:14/g' Dockerfile
+    docker build -t attack-navigator .
+  fi
+
   # Osintgram
   git_update https://github.com/Datalux/Osintgram.git $HOME/git/pentest-tools/Osintgram
   if [[ "$?" == "0" ]]; then
