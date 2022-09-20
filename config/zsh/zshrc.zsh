@@ -98,6 +98,7 @@ new() {
   echo "d-bb                        OpenBB finance terminal"
   echo "d-dos                       MHDDoS"
   echo "d-hmpaa                     Howmanypeoplearearound (wifi scan)"
+  echo "d-phash                     psudohash"
   echo "gitleaks                    Discover secrets using Gitleaks"
   echo "k6                          Load testing with scripting"
   echo "inql                        Security testing tool for GraphQL"
@@ -191,6 +192,10 @@ d-sherlock() {
   fi
 
   docker run --rm -t theyahya/sherlock "$@"
+}
+
+d-phash() {
+  python /home/user/git/pentest-tools/psudohash/psudohash.py -cpa -y 1990-2030 -w $@
 }
 
 d-sharelatex() {

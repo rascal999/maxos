@@ -576,6 +576,7 @@ function pull_tool_repos() {
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
   git_update https://github.com/GamehunterKaan/AutoPWN-Suite.git $HOME/git/pentest-tools/AutoPWN-Suite
   git_update https://github.com/vimagick/dockerfiles.git $HOME/git/misc/vimagick_dockerfiles
+  git_update https://github.com/t3l3machus/psudohash.git $HOME/git/pentest-tools/psudohash
 
   ### Exploits
   git_update https://github.com/berdav/CVE-2021-4034 $HOME/git/exploits/CVE-2021-4034
