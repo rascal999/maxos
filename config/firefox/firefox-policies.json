@@ -643,6 +643,22 @@
                 "url": "https://immersivelabs.com/"
               },
               {
+                "name": "KONTRA AWS Top 10 (interactive)",
+                "url": "https://application.security/free/kontra-aws-clould-top-10"
+              },
+              {
+                "name": "KONTRA Front-end Top 10 (interactive)",
+                "url": "https://application.security/free/kontra-front-end-top-10"
+              },
+              {
+                "name": "KONTRA OWASP API Top 10 (interactive)",
+                "url": "https://application.security/free/owasp-top-10-API"
+              },
+              {
+                "name": "KONTRA OWASP Web Top 10 (interactive)",
+                "url": "https://application.security/free/owasp-top-10"
+              },
+              {
                 "name": "NewbieContest",
                 "url": "https://www.newbiecontest.org/"
               },
