@@ -495,6 +495,9 @@ function pull_educational_repos() {
   git_update https://github.com/fkie-cad/awesome-embedded-and-iot-security.git $HOME/git/pentest-education/awesome-embedded-and-iot-security
   git_update https://github.com/dhondta/awesome-executable-packing.git $HOME/git/pentest-education/awesome-executable-packing
   git_update https://github.com/muhammet-mucahit/Security-Exercises.git $HOME/git/pentest-education/Security-Exercises
+  git_update https://github.com/A0RX/Red-Blueteam-party.git $HOME/git/pentest-education/Red-Blueteam-party
+  git_update https://github.com/0xMrNiko/Awesome-Red-Teaming.git $HOME/git/pentest-education/Awesome-Red-Teaming
+  git_update https://github.com/J0hnbX/RedTeam-Resources.git $HOME/git/pentest-education/RedTeam-Resources
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
