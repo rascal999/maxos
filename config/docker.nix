@@ -145,4 +145,24 @@
       ports = [ "127.0.0.1:10120:4200" ];
     };
   };
+
+  systemd.services.docker-nginx.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-openvas.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-cyberchef.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-mobsf.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-spiderfoot.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-filestash.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-houdini.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-searxng.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-dashy.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-grafana.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-gtfobins.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-drawio.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-compiler-explorer.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-netdata.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-kiwix.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-privatebin.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-jsoncrack.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-gifcap.serviceConfig.TimeoutStopSec = lib.mkForce 20;
+  systemd.services.docker-attack-navigator.serviceConfig.TimeoutStopSec = lib.mkForce 20;
 }
