@@ -167,6 +167,10 @@
     group = "users";
   };
 
+  systemd.extraConfig = ''
+    DefaultTimeoutStopSec=10s
+  '';
+
   systemd.services.jupyter = {
     path = [
       pkgs.bash
