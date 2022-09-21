@@ -180,6 +180,7 @@
     inkscape                                                                                             # Vector graphics editor
     inql                                                                                                 # Security testing tool for GraphQL
     ipscan                                                                                               # Fast and friendly network scanner
+    iw                                                                                                   # Tool to use nl80211
     jadx                                                                                                 # Dex to Java decompiler
     jaeles                                                                                               # Tool for automated Web application testing
     john                                                                                                 # John the Ripper password cracker
