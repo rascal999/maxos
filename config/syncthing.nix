@@ -7,6 +7,7 @@
         id = "gm1920_16jh-photos";
         devices = [
           "blueboy"
+          "fold4"
           "GM1920"
           "rig"
           "rog"
@@ -18,6 +19,7 @@
         id = "kwfru-wgejw";
         devices = [
           "blueboy"
+          "fold4"
           "GM1920"
           "rig"
           "rog"
@@ -36,6 +38,10 @@
         autoAcceptFolders = true;
         id = "DPWLINN-X2GRAYG-2IYFOXT-CRWLY3L-BMRDJGT-KE5ELWF-M76VOXR-XFREWQG";
         introducer = false;
+      };
+      "fold4" = {
+        id = "PLY3QVN-3NQYXXB-PJO6KJ3-3MJ3H6B-QVQKRWI-CNX6PNS-VDADBY2-2J4VFA5";
+        introducer = true;
       };
       "GM1920" = {
         id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
