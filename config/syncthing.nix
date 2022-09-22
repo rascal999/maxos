@@ -41,7 +41,7 @@
       };
       "fold4" = {
         id = "PLY3QVN-3NQYXXB-PJO6KJ3-3MJ3H6B-QVQKRWI-CNX6PNS-VDADBY2-2J4VFA5";
-        introducer = true;
+        introducer = false;
       };
       "GM1920" = {
         id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
