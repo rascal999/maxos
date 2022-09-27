@@ -255,6 +255,14 @@ d-rengine-kill() {
   cd -
 }
 
+a-alarm() {
+  if [[ "$#" -ne "2" ]]; then
+    echo "a-alarm 10:00 \"Meeting\""
+  else
+    /etc/profiles/per-user/user/bin/twmnc -c "### $1 ###" | at $2
+  fi
+}
+
 d-ivre() {
   sed -i "s#- \"80:80\"#- \"127.0.0.1:${PORT_IVRE}:80\"#g" ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml
   docker-compose -f ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml up -d

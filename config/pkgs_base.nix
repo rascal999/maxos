@@ -25,6 +25,7 @@
     arp-scan                                                                                             # ARP scanning and fingerprinting tool
     arsenal                                                                                              # Tool to generate commands for security and network tools
     asciinema                                                                                            # Terminal session recorder and the best companion of asciinema.org
+    at                                                                                                   # The classical Unix `at' job scheduling command
     atftp                                                                                                # Advanced tftp tools
     authoscope                                                                                           # Scriptable network authentication cracker
     autokey                                                                                              # Desktop automation utility for Linux and X11
