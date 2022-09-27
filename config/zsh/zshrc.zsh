@@ -87,6 +87,7 @@ a-notify()
 
 new() {
   echo "### New commands ###"
+  echo "a-alarm                     a-alarm 10:30 \"Meeting\""
   echo "a-ech                       Export command history"
   echo "a-fo                        Open Firefox at CWD"
   echo "a-localhostrun-gotty        Terminal command over web"
@@ -259,7 +260,7 @@ a-alarm() {
   if [[ "$#" -ne "2" ]]; then
     echo "a-alarm 10:00 \"Meeting\""
   else
-    /etc/profiles/per-user/user/bin/twmnc -c "### $1 ###" | at $2
+    echo "/etc/profiles/per-user/user/bin/twmnc -c \"### $2 ###\"" | at $1
   fi
 }
 

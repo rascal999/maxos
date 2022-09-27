@@ -66,18 +66,15 @@
   };
 
   # For at command
-  users.users.atd = {
-    homeMode = "750";
-    isNormalUser = true;
-    hashedPassword = "!";
-  };
+  services.atd.enable = true;
+  services.atd.allowEveryone = true;
 
   users.groups.atd.members = [
     "atd"
     "user"
   ];
 
-  environment.etc."at.allow".source = ./at.allow;
+  environment.etc."at/at.allow".source = ./at.allow;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
