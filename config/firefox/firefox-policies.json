@@ -164,7 +164,7 @@
         ]
       },
       {
-        "name": "Blueteam",
+        "name": "Blue Team",
         "children": [
           {
             "name": "awesome-cybersecurity-blueteam",
@@ -189,6 +189,10 @@
           {
             "name": "how-to-secure-anything",
             "url": "file:///home/user/git/education/how-to-secure-anything"
+          },
+          {
+            "name": "Open-Source-Security-Guide",
+            "url": "file:///home/user/git/pentest-education/Open-Source-Security-Guide/README.md"
           },
           {
             "name": "personal-security-checklist",
@@ -290,6 +294,10 @@
                 "url": "https://console.aws.amazon.com/"
               },
               {
+                "name": "aws (PDFs)",
+                "url": "file:///home/user/pdfs/education/aws"
+              },
+              {
                 "name": "Educational PDFs",
                 "url": "file:///home/user/pdfs/education/aws"
               },
@@ -336,24 +344,48 @@
         "name": "Curiosity",
         "children": [
           {
+            "name": "awful-ai",
+            "url": "file:///home/user/git/misc/awful-ai/README.md"
+          },
+          {
+            "name": "Apollo-11",
+            "url": "file:///home/user/git/misc/Apollo-11"
+          },
+          {
             "name": "awesome",
-            "url": "file:///home/user/git/education/awesome"
+            "url": "file:///home/user/git/education/awesome/readme.md"
           },
           {
             "name": "awesome-awesomeness",
-            "url": "file:///home/user/git/pentest-education/awesome-awesomeness"
+            "url": "file:///home/user/git/pentest-education/awesome-awesomeness/README.md"
+          },
+          {
+            "name": "awesome-compose",
+            "url": "file:///home/user/git/misc/awesome-compose/README.md"
+          },
+          {
+            "name": "awesome-cryptography",
+            "url": "file:///home/user/git/education/awesome-cryptography/README.md"
           },
           {
             "name": "awesome-lockpicking",
-            "url": "file:///home/user/git/pentest-education/awesome-lockpicking"
+            "url": "file:///home/user/git/pentest-education/awesome-lockpicking/README.md"
           },
           {
-            "name": "coding-interview-university",
-            "url": "file:///home/user/git/education/coding-interview-university"
+            "name": "Clone-Wars",
+            "url": "file:///home/user/git/education/Clone-Wars/README.md"
           },
           {
-            "name": "hacker101",
-            "url": "file:///home/user/git/pentest-education/hacker101"
+            "name": "cs-video-courses",
+            "url": "file:///home/user/git/education/cs-video-courses/README.md"
+          },
+          {
+            "name": "css-only-chat",
+            "url": "file:///home/user/git/education/css-only-chat/README.md"
+          },
+          {
+            "name": "docker-elk",
+            "url": "file:///home/user/git/misc/docker-elk/README.md"
           },
           {
             "name": "howtheysre",
@@ -364,8 +396,16 @@
             "url": "http://localhost:9060/?lang=eng"
           },
           {
+            "name": "macOS-Security-and-Privacy",
+            "url": "file:///home/user/git/education/macOS-Security-and-Privacy-Guide/README.md"
+          },
+          {
             "name": "Mind-Expanding-Books",
             "url": "file:///home/user/git/education/Mind-Expanding-Books"
+          },
+          {
+            "name": "ML-For-Beginners",
+            "url": "file:///home/user/git/education/ML-For-Beginners/README.md"
           },
           {
             "name": "Online",
@@ -377,6 +417,14 @@
             ]
           },
           {
+            "name": "os-tutorial",
+            "url": "file:///home/user/git/education/os-tutorial/README.md"
+          },
+          {
+            "name": "paper_collection",
+            "url": "file:///home/user/git/education/paper_collection/README.md"
+          },
+          {
             "name": "papers-we-love",
             "url": "file:///home/user/git/education/papers-we-love"
           },
@@ -385,8 +433,16 @@
             "url": "file:///home/user/git/pentest-education/Reverse-Engineering"
           },
           {
+            "name": "Security-Exercises",
+            "url": "file:///home/user/git/pentest-education/Security-Exercises/README.md"
+          },
+          {
             "name": "test-your-sysadmin-skills",
             "url": "file:///home/user/git/pentest-education/test-your-sysadmin-skills"
+          },
+          {
+            "name": "vimagick_dockerfiles",
+            "url": "file:///home/user/git/misc/vimagick_dockerfiles/README.md"
           }
         ]
       },
@@ -403,6 +459,10 @@
         "name": "Exploits",
         "children": [
           {
+            "name": "awesome-cve-poc",
+            "url": "file:///home/user/git/exploits/awesome-cve-poc/README.md"
+          },
+          {
             "name": "cve",
             "url": "file:///home/user/git/misc/cve"
           },
@@ -415,8 +475,20 @@
             "url": "https://www.exploit-db.com/"
           },
           {
+            "name": "js-vuln-db",
+            "url": "file:///home/user/git/exploits/js-vuln-db/README.md"
+          },
+          {
+            "name": "malicious-pdf",
+            "url": "file:///home/user/git/exploits/malicious-pdf/README.md"
+          },
+          {
             "name": "PayloadsAllTheThings",
             "url": "file:///home/user/git/pentest-education/PayloadsAllTheThings"
+          },
+          {
+            "name": "Penetration_Testing_POC",
+            "url": "file:///home/user/git/exploits/Penetration_Testing_POC"
           }
         ]
       },
@@ -524,6 +596,27 @@
         ]
       },
       {
+        "name": "Interviews",
+        "children": [
+          {
+            "name": "awesome-interview-questions",
+            "url": "file:///home/user/git/education/awesome-interview-questions"
+          },
+          {
+            "name": "coding-interview-university",
+            "url": "file:///home/user/git/education/coding-interview-university/README.md"
+          },
+          {
+            "name": "interviews",
+            "url": "file:///home/user/git/misc/interviews/README.md"
+          },
+          {
+            "name": "Tech-Interview-Cheat-Sheet",
+            "url": "file:///home/user/git/education/Tech-Interview-Cheat-Sheet/README.md"
+          }
+        ]
+      },
+      {
         "name": "Lab",
         "children": [
           {
@@ -556,6 +649,10 @@
               {
                 "name": "google-ctf",
                 "url": "file:///$HOME/git/pentest-education/google-ctf"
+              },
+              {
+                "name": "trailofbits-ctf",
+                "url": "file:///home/user/git/pentest-education/trailofbits-ctf/"
               }
             ]
           },
@@ -815,6 +912,10 @@
             "url": "file:///home/user/git/education/linux-insides"
           },
           {
+            "name": "modern-unix",
+            "url": "file:///home/user/git/education/modern-unix/README.md"
+          },
+          {
             "name": "Online",
             "children": [
               {
@@ -921,10 +1022,6 @@
         "name": "Misc",
         "children": [
           {
-            "name": "awesome-interview-questions",
-            "url": "file:///home/user/git/education/awesome-interview-questions"
-          },
-          {
             "name": "awesome-selfhosted",
             "url": "file:///home/user/git/education/awesome-selfhosted"
           },
@@ -943,6 +1040,10 @@
           {
             "name": "/home/user/git",
             "url": "http://resources.home:10070"
+          },
+          {
+            "name": "itpol",
+            "url": "file:///home/user/git/education/itpol/"
           },
           {
             "name": "jessfraz/dockerfiles",
@@ -1331,6 +1432,10 @@
                 "url": "file:///home/user/git/pentest-education/awesome-appsec"
               },
               {
+                "name": "awesome-cyber-security-university",
+                "url": "file:///home/user/git/pentest-education/awesome-cyber-security-university/README.md"
+              },
+              {
                 "name": "awesome-embedded-and-iot-security",
                 "url": "file:///home/user/git/pentest-education/awesome-embedded-and-iot-security"
               },
@@ -1341,6 +1446,10 @@
               {
                 "name": "awesome-fuzzing",
                 "url": "file:///home/user/git/pentest-education/awesome-fuzzing"
+              },
+              {
+                "name": "awesome-hacker-search-engines",
+                "url": "file:///home/user/git/pentest-education/awesome-hacker-search-engines/README.md"
               },
               {
                 "name": "awesome-hacking",
@@ -1377,6 +1486,14 @@
               {
                 "name": "awesome-security",
                 "url": "file:///home/user/git/pentest-education/awesome-security"
+              },
+              {
+                "name": "frida-snippets",
+                "url": "file:///home/user/git/misc/frida-snippets/README.md"
+              },
+              {
+                "name": "hacker101",
+                "url": "file:///home/user/git/pentest-education/hacker101/README.md"
               },
               {
                 "name": "hacker-roadmap",
@@ -1434,6 +1551,10 @@
               {
                 "name": "top10webseclist",
                 "url": "file:///home/user/git/pentest-education/top10webseclist"
+              },
+              {
+                "name": "Web-Attack-Cheat-Sheet",
+                "url": "file:///home/user/git/pentest-education/Web-Attack-Cheat-Sheet/README.md"
               }
             ]
           }
@@ -1465,6 +1586,10 @@
           {
             "name": "Adopting Zero Trust",
             "url": "https://www.youtube.com/channel/UCOTUC_MaIidzMJ7seMkj5Fg"
+          },
+          {
+            "name": "awesome-podcasts",
+            "url": "file:///home/user/git/education/awesome-podcasts/README.md"
           },
           {
             "name": "Adventures of Alice and Bob",
@@ -1676,12 +1801,36 @@
         "name": "Programming",
         "children": [
           {
+            "name": "Best-websites-a-programmer-should-visit",
+            "url": "file:///home/user/git/education/Best-websites-a-programmer-should-visit/README.md"
+          },
+          {
+            "name": "developer-roadmap",
+            "url": "file:///home/user/git/education/developer-roadmap/readme.md"
+          },
+          {
             "name": "free-programming-books",
             "url": "file:///home/user/git/education/free-programming-books"
           },
           {
+            "name": "just-enough-series",
+            "url": "file:///home/user/git/education/just-enough-series/README.md"
+          },
+          {
+            "name": "karen-Projects",
+            "url": "file:///home/user/git/education/karan-Projects/README.md"
+          },
+          {
+            "name": "project-based-learning",
+            "url": "file:///home/user/git/education/project-based-learning/README.md"
+          },
+          {
             "name": "python-patterns",
             "url": "file:///home/user/git/education/python-patterns"
+          },
+          {
+            "name": "TheAlgorithmsPython",
+            "url": "file:///home/user/git/education/TheAlgorithmsPython"
           }
         ]
       },
@@ -1839,12 +1988,24 @@
         "name": "Red Team",
         "children": [
           {
-            "name": "RedTeam-Tactics-and-Techniques",
-            "url": "file:///home/user/git/pentest-education/RedTeam-Tactics-and-Techniques"
+            "name": "Awesome-Red-Teaming",
+            "url": "file:///home/user/git/pentest-education/Awesome-Red-Teaming/README.md"
+          },
+          {
+            "name": "Red-Blueteam-party",
+            "url": "file:///home/user/git/pentest-education/Red-Blueteam-party/README.md"
           },
           {
             "name": "Red Team Guides",
             "url": "https://redteam.guide/"
+          },
+          {
+            "name": "RedTeam-Resources",
+            "url": "file:///home/user/git/pentest-education/RedTeam-Resources"
+          },
+          {
+            "name": "RedTeam-Tactics-and-Techniques",
+            "url": "file:///home/user/git/pentest-education/RedTeam-Tactics-and-Techniques"
           }
         ]
       },

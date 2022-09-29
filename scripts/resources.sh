@@ -172,6 +172,7 @@ function pull_misc_things() {
   git_update https://github.com/kdn251/interviews.git $HOME/git/misc/interviews
   git_update https://github.com/0x192/universal-android-debloater.git $HOME/git/misc/universal-android-debloater
   git_update https://github.com/tensorflow/models.git $HOME/git/misc/tensorflow-models
+  git_update https://github.com/docker/awesome-compose.git $HOME/git/misc/awesome-compose
 
   # jsoncrack
   git_update https://github.com/AykutSarac/jsoncrack.com.git $HOME/git/misc/jsoncrack.com
@@ -417,6 +418,7 @@ function pull_educational_repos() {
   git_update https://github.com/practical-tutorials/project-based-learning.git $HOME/git/education/project-based-learning
   git_update https://github.com/Developer-Y/cs-video-courses.git $HOME/git/education/cs-video-courses
   git_update https://github.com/drduh/macOS-Security-and-Privacy-Guide.git $HOME/git/education/macOS-Security-and-Privacy-Guide
+  git_update https://github.com/TheAlgorithms/Python.git $HOME/git/education/TheAlgorithmsPython
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
