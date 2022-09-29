@@ -8,12 +8,6 @@ step = 100
 click_temp = 1900
 
 [[block]]
-block = "battery"
-interval = 10
-format = "{percentage} {time}"
-hide_missing = true
-
-[[block]]
 block = "networkmanager"
 on_click = "/run/current-system/sw/bin/urxvt -e nmtui"
 interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
@@ -25,6 +19,12 @@ format = "{country_flag} {asn} '{org}' {ip}"
 with_network_manager = false
 error_interval = 300
 interval = 300
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage} {time}"
+hide_missing = true
 
 [[block]]
 block = "custom"
