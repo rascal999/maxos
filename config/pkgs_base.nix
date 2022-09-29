@@ -292,6 +292,7 @@
     sshping                                                                                              # Measure character-echo latency and bandwidth for an interactive ssh session
     ssldump                                                                                              # An SSLv3/TLS network protocol analyzer
     sslsplit                                                                                             # Transparent SSL/TLS interception
+    steam                                                                                                # A digital distribution platform
     steampipe                                                                                            # select * from cloud;
     stegseek                                                                                             # Tool to crack steganography
     stockfish                                                                                            # Strong open source chess engine
