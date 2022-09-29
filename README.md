@@ -22,7 +22,7 @@ The easiest way to get up and running is via the OVA image available [here](http
 
 # Security warning
 
-I have made a conscious effort to ensure that docker images and tools which run on this build are only accessible on your machine,
+I have made a conscious effort to ensure that docker images and tools which run on this build are only accessible on your machine, but I don't have a build pipeline which checks this, nor do I scan this repo for security issues. You have been warned.
 
 # Highlights
 
