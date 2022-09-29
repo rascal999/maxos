@@ -20,9 +20,9 @@ My quest to divorce the data from the tin continues..
 
 The easiest way to get up and running is via the OVA image available [here](https://mega.nz/file/yR92lRrQ#W3eRoMSFT0HkHwSseQAt31KPLFNfsy2BKXPrXiY5kdo) (9.8GB). The VM comes with KDE rather than i3wm by default because I appreciate that you probably don't want to learn all of my [i3wm shortcuts](/config/i3.nix). You can of course build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customising the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix).
 
-# A word of warning
+# Security warning
 
-The idea behind [NixOS](https://nixos.org/) is powerful, and is sweeping the tech world. Everything as code! The learning curve is steep, and I'm really just a novice in the NixOS ecosystem myself. Feel free to do what you want with this code, but be warned, the NixOS way is a long and difficult road.
+I have made a conscious effort to ensure that docker images and tools which run on this build are only accessible on your machine,
 
 # Highlights
 
