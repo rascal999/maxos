@@ -992,7 +992,7 @@
         "name": "News",
         "children": [
           {
-            "name": "all InfoSec news",
+            "name": "All InfoSec news",
             "url": "https://allinfosecnews.com/"
           },
           {
@@ -1030,6 +1030,10 @@
           {
             "name": "Dark Reading",
             "url": "https://www.darkreading.com/"
+          },
+          {
+            "name": "Errata Security",
+            "url": "https://blog.erratasec.com/"
           },
           {
             "name": "GBHackers on Security",
@@ -1098,6 +1102,10 @@
           {
             "name": "threatABLE",
             "url": "https://www.threatable.io/"
+          },
+          {
+            "name": "Troy Hunt",
+            "url": "https://www.troyhunt.com/"
           }
         ]
       },
