@@ -8,12 +8,6 @@ step = 100
 click_temp = 1900
 
 [[block]]
-block = "networkmanager"
-on_click = "/run/current-system/sw/bin/urxvt -e nmtui"
-interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
-interface_name_include = []
-
-[[block]]
 block = "external_ip"
 format = "{country_flag} {asn} '{org}' {ip}"
 with_network_manager = false
@@ -21,29 +15,36 @@ error_interval = 300
 interval = 300
 
 [[block]]
+block = "networkmanager"
+on_click = "/run/current-system/sw/bin/urxvt -e nmtui"
+interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
+interface_name_include = []
+ap_format = "{ssid^5} {strength}"
+
+[[block]]
 block = "battery"
 interval = 10
 format = "{percentage} {time}"
 hide_missing = true
 
-[[block]]
-block = "custom"
-command = "uname -r | sed 's/-arch1.*//g'"
-interval = 600
+#[[block]]
+#block = "custom"
+#command = "uname -r | sed 's/-arch1.*//g'"
+#interval = 600
 
-[[block]]
-block = "docker"
-interval = 10
-format = "{running}/{total}"
+#[[block]]
+#block = "docker"
+#interval = 10
+#format = "{running}/{total}"
 
 [[block]]
 block = "load"
 interval = 1
 format = "{1m} {5m} {15m}"
 
-[[block]]
-block = "cpu"
-interval = 1
+#[[block]]
+#block = "cpu"
+#interval = 1
 
 [[block]]
 block = "memory"
@@ -61,12 +62,13 @@ interval = 20
 
 [[block]]
 block = "time"
-interval = 60
+interval = 30
 format = "%m/%d %R"
 
 [[block]]
 block = "sound"
 format = "{volume}"
+headphones_indicator = true
 [block.mappings]
 "alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo" = "🔈"
 "alsa_output.pci-0000_00_1b.0.analog-stereo" = "🎧"
