@@ -98,6 +98,14 @@ Deploy a Tor array (a arbitrary number of docker instances which all connect to 
 
 # Install
 
+## Build VM
+
+```
+docker build . -t maxos-vm-builder
+docker run --privileged -v `pwd`:/mnt maxos-vm-builder
+```
+
+## Base Install
 Use unstable ISO (https://www.google.com/search?q=nixos+iso+unstable) for flake support.
 
 ## Get repo

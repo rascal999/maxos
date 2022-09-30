@@ -21,12 +21,6 @@ interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
 interface_name_include = []
 ap_format = "{ssid^5} {strength}"
 
-[[block]]
-block = "battery"
-interval = 10
-format = "{percentage} {time}"
-hide_missing = true
-
 #[[block]]
 #block = "custom"
 #command = "uname -r | sed 's/-arch1.*//g'"
@@ -64,6 +58,12 @@ interval = 20
 block = "time"
 interval = 30
 format = "%m/%d %R"
+
+[[block]]
+block = "battery"
+interval = 10
+format = "{percentage} {time}"
+hide_missing = true
 
 [[block]]
 block = "sound"
