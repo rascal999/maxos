@@ -489,6 +489,10 @@
           {
             "name": "Penetration_Testing_POC",
             "url": "file:///home/user/git/exploits/Penetration_Testing_POC"
+          },
+          {
+            "name": "PoC_CVEs",
+            "url": "file:///home/user/git/exploits/PoC_CVEs"
           }
         ]
       },

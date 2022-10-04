@@ -587,6 +587,7 @@ function pull_tool_repos() {
   git_update https://github.com/qazbnm456/awesome-cve-poc.git $HOME/git/exploits/awesome-cve-poc
   git_update https://github.com/tunz/js-vuln-db.git $HOME/git/exploits/js-vuln-db
   git_update https://github.com/jonaslejon/malicious-pdf.git $HOME/git/exploits/malicious-pdf
+  git_update https://github.com/tg12/PoC_CVEs.git $HOME/git/exploits/PoC_CVEs
 
   ### Tools which need building
   # ATT&CK Navigator
