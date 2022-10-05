@@ -26,7 +26,10 @@
   ];
 
   # For https://github.com/NixOS/nixpkgs/issues/59867
-  systemd.services.docker.serviceConfig.execStart = "{pkgs.docker}/bin/dockerd -g /home/user/maxos/docker -H fd://";
+  systemd.services.docker.serviceConfig.ExecStart = [
+    ""
+    "${pkgs.docker}/bin/dockerd -g /home/user/maxos -H fd://"
+  ];
 
   # VM settings
   virtualbox = {
