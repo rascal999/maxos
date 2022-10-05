@@ -13,7 +13,7 @@ usage() {
   echo "-h (Heavy)            Pull heavy images (Kali, dockerctf etc.)"
   echo "-m (Misc)             Misc things"
   echo "-o (OS)               Pull Operating Systems (docker)"
-  echo "-p (PDFs)             Pull AWS PDFs (AWS)"
+  echo "-p (PDFs)             Pull PDFs"
   echo "-t (Tools)            Pull tools (docker)"
   echo "-v (Vulnerable)       Vulnerable things (docker)"
   echo "-w (Wordlists)        Pull wordlists (git)"
@@ -92,7 +92,7 @@ echo "Git pull: $arg_tools_git"
 echo "Heavy images (docker): $arg_heavy"
 echo "Misc things: $arg_misc"
 echo "OS (docker): $arg_os"
-echo "AWS PDFs: $arg_pdf"
+echo "PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
 echo "Vulnerabe things (docker): $arg_vulnerable"
 echo "Wordlists: $arg_wordlists"
@@ -319,9 +319,10 @@ function pull_tools_docker() {
 }
 
 ###
-### AWS Resources
+### PDFs
 ###
-function pull_aws_pdfs() {
+function pull_pdfs() {
+  # AWS
   mkdir -p $HOME/pdfs/education/aws
   wget -c https://d1.awsstatic.com/whitepapers/aws-overview.pdf \
     -O $HOME/pdfs/education/aws/aws-overview.pdf
@@ -365,6 +366,11 @@ function pull_aws_pdfs() {
     -O $HOME/pdfs/education/aws/security-at-the-edge.pdf
   wget -c https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf \
     -O $HOME/pdfs/education/aws/aws-kms-best-practices.pdf
+
+  # Misc
+  wget -c https://alm.gg/drive-download-20221005T135825Z-001.zip \
+    -O $HOME/pdfs/education/alm_gg_pdfs.zip
+  unzip $HOME/pdfs/education/alm_gg_pdfs.zip -d $HOME/pdfs/education/misc
 }
 
 
@@ -856,9 +862,9 @@ if [ $arg_os == 1 ]; then
   pull_os_docker
 fi
 
-# AWS PDFs
+# PDFs
 if [ $arg_pdf == 1 ]; then
-  pull_aws_pdfs
+  pull_pdfs
 fi
 
 # Tools (docker)

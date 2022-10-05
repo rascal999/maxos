@@ -1093,6 +1093,10 @@
             ]
           },
           {
+            "name": "alm.gg PDFs",
+            "url": "file:///home/user/pdfs/education/misc"
+          },
+          {
             "name": "awesome-selfhosted",
             "url": "file:///home/user/git/education/awesome-selfhosted"
           },
