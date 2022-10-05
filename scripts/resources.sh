@@ -573,6 +573,9 @@ function pull_tool_repos() {
   git_update https://github.com/S3cur3Th1sSh1t/WinPwn.git $HOME/git/pentest-tools/WinPwn
   git_update https://github.com/liamg/traitor.git $HOME/git/pentest-tools/traitor
   git_update https://github.com/twintproject/twint.git $HOME/git/pentest-tools/twint
+  git_update https://github.com/deepfence/ThreatMapper.git $HOME/git/pentest-tools/ThreatMapper
+  git_update https://github.com/lmammino/jwt-cracker $HOME/git/pentest-tools/jwt-cracker
+  git_update https://github.com/sc0tfree/mentalist.git $HOME/git/pentest-tools/mentalist
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config

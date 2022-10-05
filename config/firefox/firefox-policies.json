@@ -164,6 +164,30 @@
         ]
       },
       {
+        "name": "Blogs",
+        "children": [
+          {
+            "name": "Comodo",
+            "url": "https://blog.comodo.com/"
+          },
+          {
+            "name": "Errata Security",
+            "url": "https://blog.erratasec.com/"
+          },
+          {
+            "name": "Malwarebytes Labs",
+            "url": "https://www.malwarebytes.com/blog"
+          },
+          {
+            "name": "Talos",
+            "url": "https://blog.talosintelligence.com/"
+          },
+          {
+            "name": "Zero Day",
+            "url": "https://www.zdnet.com/blog/security/"
+          }
+      },
+      {
         "name": "Blue Team",
         "children": [
           {
@@ -344,6 +368,15 @@
         "name": "Curiosity",
         "children": [
           {
+            "name": "Online",
+            "children": [
+              {
+                "name": "Learn Anything",
+                "url": "https://learn-anything.xyz/"
+              }
+            ]
+          },
+          {
             "name": "awful-ai",
             "url": "file:///home/user/git/misc/awful-ai/README.md"
           },
@@ -406,15 +439,6 @@
           {
             "name": "ML-For-Beginners",
             "url": "file:///home/user/git/education/ML-For-Beginners/README.md"
-          },
-          {
-            "name": "Online",
-            "children": [
-              {
-                "name": "Learn Anything",
-                "url": "https://learn-anything.xyz/"
-              }
-            ]
           },
           {
             "name": "os-tutorial",
@@ -517,14 +541,6 @@
         "name": "GitHub",
         "children": [
           {
-            "name": "'This should never happen'",
-            "url": "https://github.com/search?q=This+should+never+happen&type=Code&utf8=%E2%9C%93"
-          },
-          {
-            "name": "stars:>1",
-            "url": "https://github.com/search?p=1&q=stars%3A%3E1&type=Repositories"
-          },
-          {
             "name": "Topics",
             "children": [
               {
@@ -596,6 +612,14 @@
                 "url": "https://github.com/topics/vulnerabilities?o=desc&s=stars"
               }
             ]
+          },
+          {
+            "name": "'This should never happen'",
+            "url": "https://github.com/search?q=This+should+never+happen&type=Code&utf8=%E2%9C%93"
+          },
+          {
+            "name": "stars:>1",
+            "url": "https://github.com/search?p=1&q=stars%3A%3E1&type=Repositories"
           }
         ]
       },
@@ -624,35 +648,19 @@
         "name": "Lab",
         "children": [
           {
-            "name": "kubernetes-goat",
-            "url": "file:///$HOME/git/pentest-education/kubernetes-goat"
-          },
-          {
-            "name": "Pentest Labs",
-            "url": "file:///$HOME/Data/logseq/pages/Pentest%20labs.md"
-          },
-          {
-            "name": "railsgoat",
-            "url": "file:///$HOME/git/pentest-education/railsgoat"
-          },
-          {
-            "name": "vulhub",
-            "url": "file:///$HOME/git/pentest-education/vulhub"
-          },
-          {
             "name": "CTF",
             "children": [
               {
                 "name": "awesome-ctf",
-                "url": "file:///$HOME/git/pentest-education/awesome-ctf"
+                "url": "file:///home/user/git/pentest-education/awesome-ctf"
               },
               {
                 "name": "ctf",
-                "url": "file:///$HOME/git/pentest-education/trailofbits-ctf"
+                "url": "file:///home/user/git/pentest-education/trailofbits-ctf"
               },
               {
                 "name": "google-ctf",
-                "url": "file:///$HOME/git/pentest-education/google-ctf"
+                "url": "file:///home/user/git/pentest-education/google-ctf"
               },
               {
                 "name": "trailofbits-ctf",
@@ -688,12 +696,20 @@
                 "url": "https://ctf.komodosec.com/"
               },
               {
+                "name": "Cyber Security News",
+                "url": "https://cybersecuritynews.com/"
+              },
+              {
                 "name": "CyberSecLabs",
                 "url": "https://www.cyberseclabs.co.uk/"
               },
               {
                 "name": "Cybrary",
                 "url": "https://www.cybrary.it/"
+              },
+              {
+                "name": "CyWare",
+                "url": "https://cyware.com/cyber-security-news-articles"
               },
               {
                 "name": "echoCTF.RED",
@@ -758,6 +774,10 @@
               {
                 "name": "KONTRA OWASP Web Top 10 (interactive)",
                 "url": "https://application.security/free/owasp-top-10"
+              },
+              {
+                "name": "LetsDefend",
+                "url": "https://letsdefend.io/"
               },
               {
                 "name": "NewbieContest",
@@ -893,32 +913,28 @@
                 "url": "http://127.10.0.11:1080/xvwa/"
               }
             ]
+          },
+          {
+            "name": "kubernetes-goat",
+            "url": "file:///home/user/git/pentest-education/kubernetes-goat"
+          },
+          {
+            "name": "Pentest Labs",
+            "url": "file:///home/user/Data/logseq/pages/Pentest%20labs.md"
+          },
+          {
+            "name": "railsgoat",
+            "url": "file:///home/user/git/pentest-education/railsgoat"
+          },
+          {
+            "name": "vulhub",
+            "url": "file:///home/user/git/pentest-education/vulhub"
           }
         ]
       },
       {
         "name": "Linux",
         "children": [
-          {
-            "name": "awesome-tunneling",
-            "url": "file:///home/user/git/education/awesome-tunneling"
-          },
-          {
-            "name": "GTFOBins",
-            "url": "http://127.0.0.1:10000/"
-          },
-          {
-            "name": "How-To-Secure-A-Linux-Server",
-            "url": "file:///home/user/git/pentest-education/How-To-Secure-A-Linux-Server"
-          },
-          {
-            "name": "linux-insides",
-            "url": "file:///home/user/git/education/linux-insides"
-          },
-          {
-            "name": "modern-unix",
-            "url": "file:///home/user/git/education/modern-unix/README.md"
-          },
           {
             "name": "Online",
             "children": [
@@ -1017,6 +1033,26 @@
             ]
           },
           {
+            "name": "awesome-tunneling",
+            "url": "file:///home/user/git/education/awesome-tunneling"
+          },
+          {
+            "name": "GTFOBins",
+            "url": "http://127.0.0.1:10000/"
+          },
+          {
+            "name": "How-To-Secure-A-Linux-Server",
+            "url": "file:///home/user/git/pentest-education/How-To-Secure-A-Linux-Server"
+          },
+          {
+            "name": "linux-insides",
+            "url": "file:///home/user/git/education/linux-insides"
+          },
+          {
+            "name": "modern-unix",
+            "url": "file:///home/user/git/education/modern-unix/README.md"
+          },
+          {
             "name": "the-practical-linux-hardening-guide",
             "url": "file:///home/user/git/pentest-education/the-practical-linux-hardening-guide"
           }
@@ -1025,6 +1061,36 @@
       {
         "name": "Misc",
         "children": [
+          {
+            "name": "Bug bounties",
+            "children": [
+              {
+                "name": "Bugcrowd",
+                "url": "https://www.bugcrowd.com/"
+              },
+              {
+                "name": "HackerOne",
+                "url": "https://hackerone.com/"
+              },
+              {
+                "name": "bounty-target-data",
+                "url": "file:///home/user/git/bug-bounty/bounty-targets-data"
+              },
+              {
+                "name": "Resources-for-Beginner-Bug-Bounty-Hunters",
+                "url": "file:///home/user/git/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters"
+              }
+            ]
+          },
+          {
+            "name": "CLI",
+            "children": [
+              {
+                "name": "the-art-of-command-line",
+                "url": "file:///home/user/git/education/the-art-of-command-line"
+              }
+            ]
+          },
           {
             "name": "awesome-selfhosted",
             "url": "file:///home/user/git/education/awesome-selfhosted"
@@ -1061,36 +1127,6 @@
             "name": "90DaysOfDevops",
             "url": "file:///home/user/git/education/90DaysOfDevOps"
           },
-          {
-            "name": "Bug bounties",
-            "children": [
-              {
-                "name": "Bugcrowd",
-                "url": "https://www.bugcrowd.com/"
-              },
-              {
-                "name": "HackerOne",
-                "url": "https://hackerone.com/"
-              },
-              {
-                "name": "bounty-target-data",
-                "url": "file:///home/user/git/bug-bounty/bounty-targets-data"
-              },
-              {
-                "name": "Resources-for-Beginner-Bug-Bounty-Hunters",
-                "url": "file:///home/user/git/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters"
-              }
-            ]
-          },
-          {
-            "name": "CLI",
-            "children": [
-              {
-                "name": "the-art-of-command-line",
-                "url": "file:///home/user/git/education/the-art-of-command-line"
-              }
-            ]
-          }
         ]
       },
       {
@@ -1101,8 +1137,12 @@
             "url": "https://allinfosecnews.com/"
           },
           {
-            "name": "Comodo",
-            "url": "https://blog.comodo.com/"
+            "name": "BleepingComputer",
+            "url": "https://www.bleepingcomputer.com/"
+          },
+          {
+            "name": "CISO Series",
+            "url": "https://cisoseries.com/"
           },
           {
             "name": "CVE Trends",
@@ -1113,20 +1153,24 @@
             "url": "https://www.cyberdefensemagazine.com/"
           },
           {
-            "name": "Cyber Magazine",
-            "url": "https://cybermagazine.com/"
+            "name": "Cyber Guards",
+            "url": "https://cyberguards.com/"
           },
           {
-            "name": "Cybersecurity Insiders",
-            "url": "https://www.cybersecurity-insiders.com/"
+            "name": "Cyber Magazine",
+            "url": "https://cybermagazine.com/"
           },
           {
             "name": "Cyber Security Review",
             "url": "https://www.cybersecurity-review.com/"
           },
           {
-            "name": "Cyber Guards",
-            "url": "https://cyberguards.com/"
+            "name": "CyberScoop",
+            "url": "https://www.cyberscoop.com/"
+          },
+          {
+            "name": "Cybersecurity Insiders",
+            "url": "https://www.cybersecurity-insiders.com/"
           },
           {
             "name": "Daniel Miessler",
@@ -1135,10 +1179,6 @@
           {
             "name": "Dark Reading",
             "url": "https://www.darkreading.com/"
-          },
-          {
-            "name": "Errata Security",
-            "url": "https://blog.erratasec.com/"
           },
           {
             "name": "GBHackers on Security",
@@ -1189,6 +1229,10 @@
             "url": "https://securitygladiators.com/"
           },
           {
+            "name": "Sophos News",
+            "url": "https://news.sophos.com/en-us/"
+          },
+          {
             "name": "TaoSecurity",
             "url": "https://www.taosecurity.com/"
           },
@@ -1197,8 +1241,20 @@
             "url": "https://www.techworm.net/"
           },
           {
+            "name": "The Daily Swig",
+            "url": "https://portswigger.net/daily-swig"
+          },
+          {
+            "name": "The DFIR Report",
+            "url": "https://thedfirreport.com/"
+          },
+          {
             "name": "The Last Watchdog",
             "url": "https://www.lastwatchdog.com/"
+          },
+          {
+            "name": "The Record",
+            "url": "https://therecord.media/"
           },
           {
             "name": "The Security Ledger",
@@ -1274,6 +1330,10 @@
             "url": "https://www.rtcsec.com/subscribe/"
           },
           {
+            "name": "SANS NewsBites",
+            "url": "https://www.sans.org/newsletters/newsbites/"
+          },
+          {
             "name": "Schneier on Security",
             "url": "https://www.schneier.com/"
           },
@@ -1308,24 +1368,12 @@
           {
             "name": "We Live Security",
             "url": "https://www.welivesecurity.com/"
-          },
-          {
-            "name": "Zero Day",
-            "url": "https://www.zdnet.com/blog/security/"
           }
         ]
       },
       {
         "name": "OSINT",
         "children": [
-          {
-            "name": "'Must Have' Free Resources for OSINT",
-            "url": "https://www.sans.org/blog/-must-have-free-resources-for-open-source-intelligence-osint-/"
-          },
-          {
-            "name": "CTI & OSINT Online Resources",
-            "url": "https://docs.google.com/spreadsheets/d/1klugQqw6POlBtuzon8S0b18-gpsDwX-5OYRrB7TyNEw/edit#gid=0"
-          },
           {
             "name": "CTI & OSINT Online Resources (offline)",
             "children": [
@@ -1350,6 +1398,18 @@
                 "url": "file:///home/user/git/maxos/resources/CTI & OSINT Online Resources_20220902/Training Learning.html"
               }
             ]
+          },
+          {
+            "name": "'Must Have' Free Resources for OSINT",
+            "url": "https://www.sans.org/blog/-must-have-free-resources-for-open-source-intelligence-osint-/"
+          },
+          {
+            "name": "Bendobrown OSINT videos",
+            "url": "https://www.youtube.com/c/Bendobrown/videos"
+          },
+          {
+            "name": "CTI o OSINT Online Resources",
+            "url": "https://docs.google.com/spreadsheets/d/1klugQqw6POlBtuzon8S0b18-gpsDwX-5OYRrB7TyNEw/edit#gid=0"
           },
           {
             "name": "Nixintel's OSINT Resource List",
@@ -2047,36 +2107,29 @@
         "name": "Tools",
         "children": [
           {
-            "name": "ATT&CK Navigator",
-            "url": "http://localhost:10120/"
-          },
-          {
-            "name": "CyberChef",
-            "url": "http://localhost:8040/"
-          },
-          {
-            "name": "gifcap",
-            "url": "http://localhost:10110/"
-          },
-          {
-            "name": "HOUDINI",
-            "url": "http://localhost:9050/"
-          },
-          {
-            "name": "jsoncrack",
-            "url": "http://localhost:10090/"
-          },
-          {
-            "name": "Jupyter",
-            "url": "http://localhost:8000/"
-          },
-          {
-            "name": "OpenCVE",
-            "url": "http://127.0.0.1:10030/cve"
-          },
-          {
-            "name": "PrivateBin",
-            "url": "http://127.0.0.1:10040/"
+            "name": "Images",
+            "children": [
+              {
+                "name": "Bing",
+                "url": "https://www.bing.com/"
+              },
+              {
+                "name": "Forensically",
+                "url": "https://29a.ch/photo-forensics/#forensic-magnifier"
+              },
+              {
+                "name": "FotoForensics",
+                "url": "https://fotoforensics.com/"
+              },
+              {
+                "name": "Google Images",
+                "url": "https://images.google.com/"
+              },
+              {
+                "name": "Yandex Images",
+                "url": "https://yandex.com/images/"
+              }
+            ]
           },
           {
             "name": "Infrastructure",
@@ -2160,6 +2213,15 @@
             ]
           },
           {
+            "name": "Passwords",
+            "children": [
+              {
+                "name": "CrackStation",
+                "url": "https://crackstation.net/"
+              }
+            ]
+          },
+          {
             "name": "Reporting",
             "children": [
               {
@@ -2189,6 +2251,38 @@
                 "url": "https://localhost:8020/"
               }
             ]
+          },
+          {
+            "name": "ATT&CK Navigator",
+            "url": "http://localhost:10120/"
+          },
+          {
+            "name": "CyberChef",
+            "url": "http://localhost:8040/"
+          },
+          {
+            "name": "gifcap",
+            "url": "http://localhost:10110/"
+          },
+          {
+            "name": "HOUDINI",
+            "url": "http://localhost:9050/"
+          },
+          {
+            "name": "jsoncrack",
+            "url": "http://localhost:10090/"
+          },
+          {
+            "name": "Jupyter",
+            "url": "http://localhost:8000/"
+          },
+          {
+            "name": "OpenCVE",
+            "url": "http://127.0.0.1:10030/cve"
+          },
+          {
+            "name": "PrivateBin",
+            "url": "http://127.0.0.1:10040/"
           }
         ]
       },
