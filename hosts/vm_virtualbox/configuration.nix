@@ -25,14 +25,17 @@
     }
   ];
 
+  # For https://github.com/NixOS/nixpkgs/issues/59867
+  systemd.services.docker.serviceConfig.execStart = "{pkgs.docker}/bin/dockerd -g /home/user/.docker -H fd://";
+
   # VM settings
   virtualbox = {
     baseImageSize = 64 * 1024;
 
     extraDisk = {
-      label = "docker";
-      #mountPoint = "/var/lib/docker";
-      size = 128 * 1024;
+      label = "home";
+      mountPoint = "/home/user";
+      size = 512 * 1024;
     };
 
     memorySize = 8192;

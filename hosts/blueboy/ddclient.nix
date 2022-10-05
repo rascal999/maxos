@@ -7,7 +7,7 @@
 
   services.ddclient = {
     enable = true;
-    domains = [ "@" ];
+    domains = [ "home" ];
     passwordFile = config.age.secrets.password-ddclient.path;
     protocol = "namecheap";
     server = "dynamicdns.park-your-domain.com";
