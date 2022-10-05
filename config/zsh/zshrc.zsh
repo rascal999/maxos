@@ -92,6 +92,7 @@ new() {
   echo "a-fo                        Open Firefox at CWD"
   echo "a-localhostrun-gotty        Terminal command over web"
   echo "a-localhostrun-privatebin   Privatebin over web"
+  echo "bwcalc                      Bandwidth transfer time estimator"
   echo "aria2c                      wget alternative"
   echo "arsenal                     Generate commands for security and network tools"
   echo "broot                       File explorer"
@@ -130,6 +131,10 @@ a-gg() {
 
 a-vpn() {
   /home/user/git/maxos/scripts/vpn.sh "$@"
+}
+
+bwcalc() {
+  /home/user/git/maxos-next/scripts/bwcalc.py "$@"
 }
 
 d-nessus() {
