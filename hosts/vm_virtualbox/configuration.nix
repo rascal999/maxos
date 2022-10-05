@@ -26,7 +26,7 @@
   ];
 
   # For https://github.com/NixOS/nixpkgs/issues/59867
-  systemd.services.docker.serviceConfig.execStart = "{pkgs.docker}/bin/dockerd -g /home/user/.docker -H fd://";
+  systemd.services.docker.serviceConfig.execStart = "{pkgs.docker}/bin/dockerd -g /home/user/maxos/docker -H fd://";
 
   # VM settings
   virtualbox = {
@@ -34,7 +34,7 @@
 
     extraDisk = {
       label = "home";
-      mountPoint = "/home/user";
+      mountPoint = "/home/user/maxos";
       size = 512 * 1024;
     };
 
