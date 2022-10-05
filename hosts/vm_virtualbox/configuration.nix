@@ -31,7 +31,7 @@
 
     extraDisk = {
       label = "docker";
-      mountPoint = "/var/lib/docker";
+      #mountPoint = "/var/lib/docker";
       size = 128 * 1024;
     };
 

@@ -2424,6 +2424,12 @@
         "Folder": "Nix"
       },
       {
+        "Title": "GitHub - NixOS/nixpkgs",
+        "URL": "https://github.com/NixOS/nixpkgs",
+        "Placement": "toolbar",
+        "Folder": "Nix"
+      },
+      {
         "Title": "Home Manager Configuration Options",
         "URL": "https://rycee.gitlab.io/home-manager/options.html",
         "Placement": "toolbar",

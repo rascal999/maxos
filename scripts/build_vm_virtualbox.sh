@@ -7,7 +7,7 @@ if [[ -f "/tmp/vm_virtualbox_hash" ]]; then
   GIT_PREV_HASH=`cat /tmp/vm_virtualbox_hash`
 fi
 
-# Check we haven't built ISO for this hash
+# Check we haven't built VM for this hash
 if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
   nixos-generate --flake .#vm_virtualbox -f virtualbox
   # Problem?
