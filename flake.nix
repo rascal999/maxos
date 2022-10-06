@@ -128,6 +128,7 @@
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
               ./home.nix
+              ./hosts/vm_virtualbox/home.nix
             ];
           })
         ];
