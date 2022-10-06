@@ -122,7 +122,6 @@
       vm_virtualbox = lib.makeOverridable nixpkgs.lib.nixosSystem {
         inherit system;
         modules = configSettings ++ [
-          ./config/docker.nix
           ./hosts/vm_virtualbox/configuration.nix
 
           ({ pkgs, ... }: {
