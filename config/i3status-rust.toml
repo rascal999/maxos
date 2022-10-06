@@ -55,15 +55,15 @@ unit = "GB"
 interval = 20
 
 [[block]]
-block = "time"
-interval = 30
-format = "%m/%d %R"
-
-[[block]]
 block = "battery"
 interval = 10
 format = "{percentage} {time}"
 hide_missing = true
+
+[[block]]
+block = "time"
+interval = 30
+format = "%m/%d %R"
 
 [[block]]
 block = "sound"
