@@ -583,6 +583,7 @@ function pull_tool_repos() {
   git_update https://github.com/lmammino/jwt-cracker $HOME/git/pentest-tools/jwt-cracker
   git_update https://github.com/sc0tfree/mentalist.git $HOME/git/pentest-tools/mentalist
   git_update https://github.com/AngelSecurityTeam/Tool-ExploitPack.git $HOME/git/pentest-tools/ExploitPack
+  git_update https://github.com/in9uz/VLANPWN.git $HOME/git/pentest-tools/VLANPWN
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config
