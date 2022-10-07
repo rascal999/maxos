@@ -29,6 +29,7 @@
     atftp                                                                                                # Advanced tftp tools
     authoscope                                                                                           # Scriptable network authentication cracker
     autokey                                                                                              # Desktop automation utility for Linux and X11
+    autossh                                                                                              # Automatically restart SSH sessions and tunnels
     awscli                                                                                               # Unified tool to manage your AWS services
     azure-cli                                                                                            # Next generation multi-platform command line experience for Azure
     badchars                                                                                             # HEX badchar generator for different programming languages
@@ -93,6 +94,7 @@
     detect-secrets                                                                                       # An enterprise friendly way of detecting and preventing secrets in code
     dex2jar                                                                                              # Tools to work with android .dex and java .class files
     dhcpdump                                                                                             # A tool for visualization of DHCP packets as recorded and output by tcpdump to analyze DHCP server responses
+    diff-pdf                                                                                             # Simple tool for visually comparing two PDF files
     dirb                                                                                                 # A web content scanner
     dislocker                                                                                            # Read BitLocker encrypted partitions in Linux
     dismap                                                                                               # Asset discovery and identification tools
