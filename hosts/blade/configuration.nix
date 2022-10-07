@@ -11,7 +11,8 @@ let
 in
 {
   networking.hostName = "blade";
-  networking.interfaces.wg-vpn.mtu = 1364;
+  #networking.interfaces.wg-vpn.mtu = 1364;
+  networking.interfaces.wg-vpn.mtu = 1200;
   hardware.nvidia.modesetting.enable = true;
   hardware.opengl.enable = true;
   hardware.openrazer.enable = true;
