@@ -39,6 +39,8 @@ in
       autoLogin.user = "user";
     };
 
+    libinput.enable = false;
+
     # Touchpad
     synaptics = {
       enable = true;
