@@ -10,6 +10,7 @@ let
     pip
     pytest
     requests
+    scapy
     selenium
     setuptools
     wordcloud
