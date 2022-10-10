@@ -71,8 +71,6 @@
       a-ytmp3 = "youtube-dl --extract-audio --audio-format mp3 ";
       ff = "firefox ";
       ls = "grc ls";
-      cat = "colorize_cat";
-      less = "colorize_less";
     };
   };
 }
