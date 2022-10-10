@@ -1027,10 +1027,7 @@ d-sniper() {
 }
 
 d-impacket() {
-  mkdir -p $HOME/tool-output/impacket
-  TIMESTAMP=`date +%Y%m%d_%H%M%S`
-  SCRIPT_LOG=$HOME/tool-output/impacket/$TIMESTAMP.log
-  script $SCRIPT_LOG -c "docker run --rm -it rflathers/impacket \"$@\""
+  docker run --rm -it rflathers/impacket "$@"
 }
 
 d-smbservehere() {
