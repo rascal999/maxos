@@ -1081,7 +1081,7 @@ d-postfiledumphere() {
 }
 
 d-kali() {
-  docker run -it --rm booyaabes/kali-linux-full /bin/bash
+  docker run -it --rm booyaabes/kali-linux-full /bin/bash "$@"
 }
 
 d-kalihere() {
