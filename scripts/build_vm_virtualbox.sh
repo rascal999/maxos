@@ -17,6 +17,8 @@ if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
   else
     /home/user/git/maxos/scripts/telegram_notify.sh -m "Error code while building VirtualBox VM: $?"
   fi
+  return 0
 else
   /home/user/git/maxos/scripts/telegram_notify.sh -m "VirtualBox VM already built for $GIT_CURRENT_HASH"
+  return 1
 fi
