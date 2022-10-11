@@ -2303,6 +2303,10 @@
             "url": "https://www.youtube.com/c/BlackHatOfficialYT"
           },
           {
+            "name": "Black Hills Information Security",
+            "url": "https://www.youtube.com/c/BlackHillsInformationSecurity"
+          },
+          {
             "name": "BlackPerl",
             "url": "https://www.youtube.com/c/BlackPerl"
           },
@@ -2315,12 +2319,40 @@
             "url": "https://www.youtube.com/user/Computerphile"
           },
           {
+            "name": "cybercdh",
+            "url": "https://www.youtube.com/c/cybercdh"
+          },
+          {
+            "name": "Cyberspatial",
+            "url": "https://www.youtube.com/c/Cyberspatial"
+          },
+          {
+            "name": "Cyrill Gössi",
+            "url": "https://www.youtube.com/channel/UCp1rLlh9AQN9Pejzbg9dcAg"
+          },
+          {
             "name": "David Bombal",
             "url": "https://www.youtube.com/c/DavidBombal"
           },
           {
+            "name": "Day Cyberwox",
+            "url": "https://www.youtube.com/c/DayCyberwox"
+          },
+          {
+            "name": "DC CyberSec",
+            "url": "https://www.youtube.com/c/DCcybersec"
+          },
+          {
+            "name": "DEFCONConference",
+            "url": "https://www.youtube.com/user/DEFCONConference"
+          },
+          {
             "name": "Ethical Hacking in 12 Hours - They Cyber Mentor",
             "url": "https://www.youtube.com/watch?v=fNzpcB7ODxQ"
+          },
+          {
+            "name": "Hack eXPlorer",
+            "url": "https://www.youtube.com/c/HackeXPlorer"
           },
           {
             "name": "HackerSploit",
@@ -2345,6 +2377,10 @@
           {
             "name": "IppSec",
             "url": "https://www.youtube.com/c/ippsec"
+          },
+          {
+            "name": "ITProTV",
+            "url": "https://www.youtube.com/c/ItproTv"
           },
           {
             "name": "Joe Collins",
@@ -2379,12 +2415,36 @@
             "url": "https://www.youtube.com/c/NullByteWHT"
           },
           {
+            "name": "MalwareTechBlog",
+            "url": "https://www.youtube.com/c/MalwareTechBlog"
+          },
+          {
+            "name": "Offensive Security",
+            "url": "https://www.youtube.com/c/OffensiveSecurityTraining"
+          },
+          {
+            "name": "Outpost Gray",
+            "url": "https://www.youtube.com/c/OutpostGray"
+          },
+          {
+            "name": "OWASP Foundation",
+            "url": "https://www.youtube.com/c/OWASPGLOBAL"
+          },
+          {
+            "name": "Pentester Academy TV",
+            "url": "https://www.youtube.com/c/PentesterAcademyTV"
+          },
+          {
             "name": "Peter Yaworski (Web Development Tutorials)",
             "url": "https://www.youtube.com/c/yaworsk1"
           },
           {
             "name": "Professor Messer",
             "url": "https://www.youtube.com/c/professormesser"
+          },
+          {
+            "name": "SANS Offensive Operations",
+            "url": "https://www.youtube.com/c/SANSOffensiveOperations"
           },
           {
             "name": "Security Now",
@@ -2395,6 +2455,10 @@
             "url": "https://www.youtube.com/c/SecurityWeekly"
           },
           {
+            "name": "Simply Cyber",
+            "url": "https://www.youtube.com/c/GeraldAuger"
+          },
+          {
             "name": "STÖK",
             "url": "https://www.youtube.com/c/STOKfredrik"
           },
@@ -2403,12 +2467,24 @@
             "url": "https://www.youtube.com/c/TheCyberMentor"
           },
           {
+            "name": "The Hated One",
+            "url": "https://www.youtube.com/c/TheHatedOne"
+          },
+          {
             "name": "The OSINT Curious Project",
             "url": "https://www.youtube.com/c/TheOSINTCuriousProject"
           },
           {
             "name": "The PC Security Channel",
             "url": "https://www.youtube.com/c/thepcsecuritychannel"
+          },
+          {
+            "name": "The XSS Rat",
+            "url": "https://www.youtube.com/c/TheXSSrat"
+          },
+          {
+            "name": "Z-winK University",
+            "url": "https://www.youtube.com/channel/UCDl4jpAVAezUdzsDBDDTGsQ/"
           }
         ]
       }
