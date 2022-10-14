@@ -58,7 +58,9 @@ curl -s -X POST \
 if [[ "$arg_quiet" == "false" ]]; then
   if [[ "$?" == "0" ]]; then
     echo "Notified via Telegram."
+    exit 0
   else
     echo "ERROR: Telegram notify issue."
+    exit 1
   fi
 fi
