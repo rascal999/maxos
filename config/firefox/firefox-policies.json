@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "DontFuckWithPaste@raim.ist": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/don-t-fuck-with-paste/addon-816029-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "@retire.js": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/retire-js/addon-808743-latest.xpi",
         "installation_mode": "normal_installed"
