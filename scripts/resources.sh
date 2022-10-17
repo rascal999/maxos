@@ -425,6 +425,7 @@ function pull_educational_repos() {
   git_update https://github.com/Developer-Y/cs-video-courses.git $HOME/git/education/cs-video-courses
   git_update https://github.com/drduh/macOS-Security-and-Privacy-Guide.git $HOME/git/education/macOS-Security-and-Privacy-Guide
   git_update https://github.com/TheAlgorithms/Python.git $HOME/git/education/TheAlgorithmsPython
+  git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -522,9 +523,6 @@ function pull_educational_repos() {
   git_update https://github.com/cipher387/Dorks-collections-list.git  $HOME/git/pentest-education/Dorks-collections-list
   git_update https://github.com/techgaun/github-dorks.git $HOME/git/pentest-education/github-dorks
   git_update https://github.com/edoardottt/awesome-hacker-search-engines.git $HOME/git/pentest-education/awesome-hacker-search-engines
-
-  ### Misc
-  git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
 }
 
 ###
