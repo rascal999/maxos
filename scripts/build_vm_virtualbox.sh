@@ -2,9 +2,9 @@
 
 usage() {
   echo "Build VirtualBox VM script"
-  echo "Usage: $0 -m <message> [-a] [-m] [-q]" 1>&2;
+  echo "Usage: $0 [-n]" 1>&2;
   echo
-  echo "-n (Notify)           Notify on build"
+  echo "-n (Don't notify)     Don't notify on build"
   echo
   echo "Examples:"
   echo "# Do not notify"
@@ -15,7 +15,7 @@ usage() {
 
 arg_notify="true"
 
-while getopts am:q flag
+while getopts n flag
 do
     case "${flag}" in
         n) arg_notify="false";;
@@ -34,8 +34,10 @@ fi
 # Check we haven't built VM for this hash
 if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
   nixos-generate --flake .#vm_virtualbox -f virtualbox -o maxos_virtualbox
+  RETURN_VALUE=$?
+  echo $RETURN_VALUE > /tmp/ummm
   # Problem?
-  if [[ "$?" == "0" ]]; then
+  if [[ "$RETURN_VALUE" == "0" ]]; then
     if [[ "$arg_notify" == "true" ]]; then
       /home/user/git/maxos/scripts/telegram_notify.sh -m "Finished building VirtualBox VM."
     fi
