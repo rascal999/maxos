@@ -370,7 +370,7 @@ function pull_pdfs() {
   # Misc
   wget -c https://alm.gg/drive-download-20221005T135825Z-001.zip \
     -O $HOME/pdfs/education/alm_gg_pdfs.zip
-  unzip $HOME/pdfs/education/alm_gg_pdfs.zip -d $HOME/pdfs/education/misc
+  unzip -o $HOME/pdfs/education/alm_gg_pdfs.zip -d $HOME/pdfs/education/misc
 }
 
 
