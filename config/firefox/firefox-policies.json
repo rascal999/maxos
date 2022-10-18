@@ -386,6 +386,10 @@
             ]
           },
           {
+            "name": "awesome-piracy",
+            "url": "file:///home/user/git/misc/awesome-piracy"
+          },
+          {
             "name": "awful-ai",
             "url": "file:///home/user/git/misc/awful-ai/README.md"
           },
@@ -1581,6 +1585,10 @@
                 "url": "file:///home/user/git/pentest-education/awesome-security"
               },
               {
+                "name": "Free-Security-eBooks",
+                "url": "file:///home/user/git/pentest-education/Free-Security-eBooks"
+              },
+              {
                 "name": "frida-snippets",
                 "url": "file:///home/user/git/misc/frida-snippets/README.md"
               },
@@ -1621,12 +1629,20 @@
                 "url": "file:///home/user/git/pentest-education/PENTESTING-BIBLE"
               },
               {
+                "name": "technical-whitepapers",
+                "url": "file:///home/user/pdfs/education/technical-whitepapers"
+              },
+              {
                 "name": "the-book-of-secret-knowledge",
                 "url": "file:///home/user/git/pentest-education/the-book-of-secret-knowledge"
               },
               {
                 "name": "trailofbits publications",
                 "url": "file:///home/user/git/pentest-education/trailofbits-publications"
+              },
+              {
+                "name": "yeahhub ebooks",
+                "url": "file:///home/user/pdfs/education/yeahhub"
               }
             ]
           },

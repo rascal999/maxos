@@ -173,6 +173,7 @@ function pull_misc_things() {
   git_update https://github.com/0x192/universal-android-debloater.git $HOME/git/misc/universal-android-debloater
   git_update https://github.com/tensorflow/models.git $HOME/git/misc/tensorflow-models
   git_update https://github.com/docker/awesome-compose.git $HOME/git/misc/awesome-compose
+  git_update https://github.com/Igglybuff/awesome-piracy.git $HOME/git/misc/awesome-piracy
 
   # jsoncrack
   git_update https://github.com/AykutSarac/jsoncrack.com.git $HOME/git/misc/jsoncrack.com
@@ -371,6 +372,11 @@ function pull_pdfs() {
   wget -c https://alm.gg/drive-download-20221005T135825Z-001.zip \
     -O $HOME/pdfs/education/alm_gg_pdfs.zip
   unzip -o $HOME/pdfs/education/alm_gg_pdfs.zip -d $HOME/pdfs/education/misc
+  wget -c https://alm.gg/Yeahhub_ebooks.zip \
+    -O $HOME/pdfs/education/Yeahhub_ebooks.zip
+  unzip -o $HOME/pdfs/education/Yeahhub_ebooks.zip -d $HOME/pdfs/education/yeahhub
+
+  git_update https://github.com/trimstray/technical-whitepapers.git $HOME/pdfs/education/technical-whitepapers
 }
 
 
@@ -516,6 +522,7 @@ function pull_educational_repos() {
   git_update https://github.com/husnainfareed/Awesome-Ethical-Hacking-Resources.git $HOME/git/pentest-education/Awesome-Ethical-Hacking-Resources
   git_update https://github.com/pop3ret/AWSome-Pentesting.git $HOME/git/pentest-education/AWSome-Pentesting
   git_update https://github.com/dwisiswant0/awesome-oneliner-bugbounty.git $HOME/git/pentest-education/awesome-oneliner-bugbounty
+  git_update https://github.com/Hack-with-Github/Free-Security-eBooks.git $HOME/git/pentest-education/Free-Security-eBooks
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
