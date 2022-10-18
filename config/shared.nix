@@ -11,13 +11,20 @@
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.scanRandMacAddress = false;
 
-  boot.kernelParams = [
-    "intel_pstate=active"
-    "transparent_hugepage=never"
-  ];
-  boot.initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
-  boot.initrd.network = {
-    enable = true;
+  boot = {
+    blacklistedKernelModules = [
+      "dvb_usb_rtl28xxu"
+    ];
+
+    kernelParams = [
+      "intel_pstate=active"
+      "transparent_hugepage=never"
+    ];
+
+    initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
+    initrd.network = {
+      enable = true;
+    };
   };
 
   hardware.opengl.driSupport32Bit = true;
@@ -50,8 +57,9 @@
     isNormalUser = true;
     extraGroups = [
       "docker"
-      "libvirtd"
       "kvm"
+      "libvirtd"
+      "plugdev"
       "qemu-libvirtd"
       "vboxusers"
       "video"
@@ -103,6 +111,11 @@
   #nix.package = pkgs.nixUnstable;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
+  '';
+
+  # HAM
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", GROUP="users", MODE="0666", SYMLINK+="rtl_sdr"
   '';
 
   # For WireGuard

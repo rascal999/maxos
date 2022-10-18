@@ -157,6 +157,7 @@
     gotestwaf                                                                                            # Tool for API and OWASP attack simulation
     gpa                                                                                                  # Graphical user interface for the GnuPG
     gqrx                                                                                                 # Software defined radio (SDR) receiver
+    gqrx-gr-audio                                                                                        # Software defined radio (SDR) receiver
     grim                                                                                                 # Grab images from a Wayland compositor
     grype                                                                                                # Vulnerability scanner for container images and filesystems
     gsettings-desktop-schemas                                                                            # Collection of GSettings schemas for settings shared by various components of a desktop
@@ -263,6 +264,7 @@
     rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset
     routersploit                                                                                         # Exploitation Framework for Embedded Devices
     rshijack                                                                                             # TCP connection hijacker
+    rtl-sdr                                                                                              # Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
     rustcat                                                                                              # Port listener and reverse shell
     rustscan                                                                                             # Faster Nmap Scanning with Rust
     safecopy                                                                                             # Data recovery tool for damaged hardware
@@ -333,6 +335,7 @@
     waybar                                                                                               # Highly customizable Wayland bar for Sway and Wlroots based compositors
     wayvnc                                                                                               # A VNC server for wlroots based Wayland compositors
     wbox                                                                                                 # A simple HTTP benchmarking tool
+    welle-io                                                                                             # A DAB/DAB+ Software Radio
     whispers                                                                                             # Tool to identify hardcoded secrets in static structured text
     wifite2                                                                                              # Rewrite of the popular wireless network auditor, wifite
     win-virtio                                                                                           # Windows VirtIO Drivers
