@@ -26,7 +26,7 @@ I have made a conscious effort to ensure that docker images and tools which run 
 
 # Highlights
 
-This NixOS config comes with a few things to make my life easier while pentesting.
+This NixOS config comes with a few things to make my life easier while pentesting (some of these resources are available after running the [resources.sh](/scripts/resources.sh) script).
 
 * Over SOFTWARE_PACKAGES software packages
 * ZSH_ALIASES zsh aliases
