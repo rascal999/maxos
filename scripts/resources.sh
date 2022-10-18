@@ -513,6 +513,7 @@ function pull_educational_repos() {
   git_update https://github.com/J0hnbX/RedTeam-Resources.git $HOME/git/pentest-education/RedTeam-Resources
   git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
   git_update https://github.com/husnainfareed/Awesome-Ethical-Hacking-Resources.git $HOME/git/pentest-education/Awesome-Ethical-Hacking-Resources
+  git_update https://github.com/pop3ret/AWSome-Pentesting.git $HOME/git/pentest-education/AWSome-Pentesting
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening

@@ -37,7 +37,7 @@ This NixOS config comes with a few things to make my life easier while pentestin
   * 34 news resources
   * 28 search engines
   * 24 newsletters
-* 248 git repos
+* 249 git repos
 * 168 docker images
 * 33 web applications
 * 25 Firefox extensions

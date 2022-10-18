@@ -327,6 +327,10 @@
                 "url": "file:///home/user/pdfs/education/aws"
               },
               {
+                "name": "AWSome-Pentesting",
+                "url": "file:///home/user/git/pentest-education/AWSome-Pentesting"
+              },
+              {
                 "name": "Educational PDFs",
                 "url": "file:///home/user/pdfs/education/aws"
               },
