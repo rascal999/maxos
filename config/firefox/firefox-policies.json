@@ -386,14 +386,6 @@
             ]
           },
           {
-            "name": "awesome-piracy",
-            "url": "file:///home/user/git/misc/awesome-piracy"
-          },
-          {
-            "name": "awful-ai",
-            "url": "file:///home/user/git/misc/awful-ai/README.md"
-          },
-          {
             "name": "Apollo-11",
             "url": "file:///home/user/git/misc/Apollo-11"
           },
@@ -416,6 +408,14 @@
           {
             "name": "awesome-lockpicking",
             "url": "file:///home/user/git/pentest-education/awesome-lockpicking/README.md"
+          },
+          {
+            "name": "awesome-piracy",
+            "url": "file:///home/user/git/misc/awesome-piracy"
+          },
+          {
+            "name": "awful-ai",
+            "url": "file:///home/user/git/misc/awful-ai/README.md"
           },
           {
             "name": "Clone-Wars",
