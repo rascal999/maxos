@@ -425,7 +425,8 @@ function pull_educational_repos() {
   git_update https://github.com/Developer-Y/cs-video-courses.git $HOME/git/education/cs-video-courses
   git_update https://github.com/drduh/macOS-Security-and-Privacy-Guide.git $HOME/git/education/macOS-Security-and-Privacy-Guide
   git_update https://github.com/TheAlgorithms/Python.git $HOME/git/education/TheAlgorithmsPython
-  git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
+  git_update https://github.com/learn-anything/youtube.git $HOME/git/education/learn-anything-youtube
+  git_update https://github.com/PrejudiceNeutrino/YouTube_Channels.git $HOME/git/education/YouTube_Channels
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -509,6 +510,7 @@ function pull_educational_repos() {
   git_update https://github.com/A0RX/Red-Blueteam-party.git $HOME/git/pentest-education/Red-Blueteam-party
   git_update https://github.com/0xMrNiko/Awesome-Red-Teaming.git $HOME/git/pentest-education/Awesome-Red-Teaming
   git_update https://github.com/J0hnbX/RedTeam-Resources.git $HOME/git/pentest-education/RedTeam-Resources
+  git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening

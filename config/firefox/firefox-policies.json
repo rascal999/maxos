@@ -434,6 +434,10 @@
             "url": "http://localhost:9060/?lang=eng"
           },
           {
+            "name": "Learn anything YouTube",
+            "url": "file:///home/user/git/education/learn-anything-youtube"
+          },
+          {
             "name": "macOS-Security-and-Privacy",
             "url": "file:///home/user/git/education/macOS-Security-and-Privacy-Guide/README.md"
           },
@@ -472,6 +476,10 @@
           {
             "name": "vimagick_dockerfiles",
             "url": "file:///home/user/git/misc/vimagick_dockerfiles/README.md"
+          },
+          {
+            "name": "YouTube Channels",
+            "url": "file:///home/user/git/education/YouTube_Channels"
           }
         ]
       },
