@@ -428,6 +428,7 @@ function pull_educational_repos() {
   git_update https://github.com/learn-anything/youtube.git $HOME/git/education/learn-anything-youtube
   git_update https://github.com/PrejudiceNeutrino/YouTube_Channels.git $HOME/git/education/YouTube_Channels
   git_update https://github.com/zero-to-mastery/resources.git $HOME/git/education/zero-to-mastery-resources
+  git_update https://github.com/onceupon/Bash-Oneliner.git $HOME/git/education/Bash-Oneliner
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -514,6 +515,7 @@ function pull_educational_repos() {
   git_update https://github.com/karimhabush/cyberowl.git $HOME/git/pentest-education/cyberowl
   git_update https://github.com/husnainfareed/Awesome-Ethical-Hacking-Resources.git $HOME/git/pentest-education/Awesome-Ethical-Hacking-Resources
   git_update https://github.com/pop3ret/AWSome-Pentesting.git $HOME/git/pentest-education/AWSome-Pentesting
+  git_update https://github.com/dwisiswant0/awesome-oneliner-bugbounty.git $HOME/git/pentest-education/awesome-oneliner-bugbounty
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening

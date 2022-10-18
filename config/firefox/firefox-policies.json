@@ -1054,6 +1054,10 @@
             "url": "file:///home/user/git/education/awesome-tunneling"
           },
           {
+            "name": "Bash-Oneliner",
+            "url": "file:///home/user/git/education/Bash-Oneliner"
+          },
+          {
             "name": "GTFOBins",
             "url": "http://127.0.0.1:10000/"
           },
@@ -1629,6 +1633,10 @@
           {
             "name": "Web",
             "children": [
+              {
+                "name": "awesome-oneliner-bugbounty",
+                "url": "file:///home/user/git/pentest-education/awesome-oneliner-bugbounty"
+              },
               {
                 "name": "awesome-web-security",
                 "url": "file:///home/user/git/pentest-education/awesome-web-security"
