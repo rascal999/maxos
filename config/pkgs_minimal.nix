@@ -13,6 +13,7 @@ let
     scapy
     selenium
     setuptools
+    torch
     wordcloud
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
