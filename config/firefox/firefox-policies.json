@@ -1521,6 +1521,10 @@
                 "url": "file:///home/user/git/pentest-education/awesome-embedded-and-iot-security"
               },
               {
+                "name": "Awesome-Ethical-Hacking-Resources",
+                "url": "file:///home/user/git/pentest-education/Awesome-Ethical-Hacking-Resources"
+              },
+              {
                 "name": "awesome-executable-packing",
                 "url": "file:///home/user/git/pentest-education/awesome-executable-packing"
               },
@@ -1677,6 +1681,10 @@
             "url": "https://www.beyondtrust.com/podcast"
           },
           {
+            "name": "BarCode Cybersecurity Podcast",
+            "url": "https://thebarcodepodcast.com/"
+          },
+          {
             "name": "Brakeing Down Security",
             "url": "https://www.brakeingsecurity.com/"
           },
@@ -1691,6 +1699,10 @@
           {
             "name": "Crypto-Gram Security Podcast",
             "url": "https://crypto-gram.libsyn.com/"
+          },
+          {
+            "name": "Cyber Crime Junkies",
+            "url": "https://cybercrimejunkies.com/"
           },
           {
             "name": "Cyber Security Headlines by the CISO Series",
@@ -1727,6 +1739,10 @@
           {
             "name": "Defrag This",
             "url": "https://podcasts.apple.com/us/podcast/defrag-this/id1234621622"
+          },
+          {
+            "name": "Dr Dark Web Podcast",
+            "url": "https://www.youtube.com/c/Cybersixgill/videos"
           },
           {
             "name": "H4unt3d Hacker",
@@ -1825,6 +1841,14 @@
             "url": "https://podcasts.apple.com/gb/podcast/the-cyber-tap/id1500337895"
           },
           {
+            "name": "The Cyber Queens Podcast",
+            "url": "https://podcasts.apple.com/us/podcast/the-cyber-queens-podcast/id1643732283"
+          },
+          {
+            "name": "The Cyber Ranch Podcast",
+            "url": "https://podcasts.apple.com/us/podcast/the-cyber-ranch-podcast/id1549705840"
+          },
+          {
             "name": "The Hacker Chronicles",
             "url": "https://podcasts.apple.com/us/podcast/the-hacker-chronicles/id1599393610"
           },
@@ -1912,6 +1936,10 @@
           {
             "name": "TheAlgorithmsPython",
             "url": "file:///home/user/git/education/TheAlgorithmsPython"
+          },
+          {
+            "name": "zero-to-mastery-resources",
+            "url": "file:///home/user/git/education/zero-to-mastery-resources"
           }
         ]
       },
@@ -1922,12 +1950,20 @@
             "name": "Paid",
             "children": [
               {
+                "name": "AlienVault",
+                "url": "https://otx.alienvault.com/"
+              },
+              {
                 "name": "Binary Edge",
                 "url": "https://www.binaryedge.io/"
               },
               {
                 "name": "Dehashed",
                 "url": "https://www.dehashed.com/"
+              },
+              {
+                "name": "FOFA",
+                "url": "https://fofa.info/"
               },
               {
                 "name": "FullHunt",
@@ -2002,6 +2038,10 @@
           {
             "name": "hunter",
             "url": "https://hunter.io/"
+          },
+          {
+            "name": "Hybrid Analysis",
+            "url": "https://www.hybrid-analysis.com/"
           },
           {
             "name": "IntelligenceX",
@@ -2117,6 +2157,10 @@
           {
             "name": "AlienVault",
             "url": "https://otx.alienvault.com/"
+          },
+          {
+            "name": "PhishTank",
+            "url": "https://www.phishtank.org/"
           }
         ]
       },
@@ -2263,6 +2307,14 @@
           {
             "name": "Web",
             "children": [
+              {
+                "name": "Abuse.net",
+                "url": "https://www.abuse.net/lookup.phtml"
+              },
+              {
+                "name": "browserling",
+                "url": "https://www.browserling.com/"
+              },
               {
                 "name": "reNgine",
                 "url": "https://localhost:8020/"
