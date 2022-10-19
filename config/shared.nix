@@ -118,6 +118,9 @@
     SUBSYSTEM=="usb", ATTRS{idVendor}=="0bda", ATTRS{idProduct}=="2838", GROUP="users", MODE="0666", SYMLINK+="rtl_sdr"
   '';
 
+  # Mosh
+  programs.mosh.enable = true;
+
   # For WireGuard
   networking.firewall.checkReversePath = false;
 
