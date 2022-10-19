@@ -151,6 +151,16 @@
         userChrome = import ./css/userChrome.css;
         userContent = import ./css/userContent.css;
       };
+
+      youtube = {
+        id = 3;
+        name = "YouTube";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
     };
   };
 }

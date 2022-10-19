@@ -236,6 +236,7 @@
     ntopng                                                                                               # High-speed web-based traffic analysis and flow collection tool
     nuclear                                                                                              # Streaming music player that finds free music for you
     nwipe                                                                                                # Securely erase disks
+    obs-studio                                                                                           # Free and open source software for video recording and live streaming
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner
     openfortivpn                                                                                         # Client for PPP+SSL VPN tunnel services
@@ -313,6 +314,7 @@
     testssl                                                                                              # CLI tool to check a server's TLS/SSL capabilities
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
     thc-hydra                                                                                            # A very fast network logon cracker which support many different services
+    tor-browser-bundle-bin                                                                               # Tor Browser Bundle built by torproject.org
     tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
     traitor                                                                                              # Automatic Linux privilege escalation
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI

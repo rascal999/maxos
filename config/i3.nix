@@ -21,6 +21,7 @@ in {
 
         "${mod}+Shift+l" = "exec sudo poweroff";
         "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
+        "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
         "${mod}+Shift+p" = "restart";
