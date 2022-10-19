@@ -28,7 +28,6 @@
       ./config/nur.nix
       ./config/pkgs_minimal.nix
       ./config/shared.nix
-      ./config/trilium.nix
 
       home-manager.nixosModules.home-manager {
         home-manager.useGlobalPkgs = true;
@@ -186,7 +185,6 @@
           ./hosts/blueboy/ddclient.nix
           ./hosts/blueboy/hardware-configuration.nix
           ./hosts/blueboy/syncthing.nix
-          ./hosts/blueboy/trilium.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
