@@ -121,6 +121,9 @@
   # Mosh
   programs.mosh.enable = true;
 
+  # x2go
+  services.x2goserver.enable = true;
+
   # For WireGuard
   networking.firewall.checkReversePath = false;
 
@@ -216,7 +219,7 @@
   environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
   virtualisation = {
     virtualbox.host.enable = true;
-    vmware.host.enable = true;
+    #vmware.host.enable = true;
 
     # QEMU
     libvirtd = {

@@ -326,6 +326,7 @@
     valgrind                                                                                             # Debugging and profiling tool suite
     vegeta                                                                                               # Versatile HTTP load testing tool
     velero                                                                                               #
+    ventoy-bin                                                                                           # An open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files
     #vmware-workstation                                                                                   # Industry standard desktop hypervisor for x86-64 architecture
     volatility3                                                                                          # Volatile memory extraction frameworks
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
@@ -347,6 +348,7 @@
     wstunnel                                                                                             #
     wuzz                                                                                                 # Interactive cli tool for HTTP inspection
     x11docker                                                                                            # Run graphical applications with Docker
+    x2goclient                                                                                           # Graphical NoMachine NX3 remote desktop client
     xcalib                                                                                               # A tiny monitor calibration loader for X and MS-Windows
     xidel                                                                                                # Command line tool to download and extract data from HTML/XML pages as well as JSON APIs
     xorex                                                                                                # XOR Key Extractor
