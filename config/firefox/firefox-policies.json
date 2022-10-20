@@ -1573,6 +1573,10 @@
                 "url": "file:///home/user/git/pentest-education/Awesome-Pentest/README.md"
               },
               {
+                "name": "awesome-sec-talks",
+                "url": "file:///home/user/git/pentest-education/awesome-sec-talks/README.md"
+              },
+              {
                 "name": "awesome-security",
                 "url": "file:///home/user/git/pentest-education/awesome-security/README.md"
               },

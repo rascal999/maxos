@@ -14,6 +14,10 @@
           command = "exec ${pkgs.firefox}/bin/firefox";
           workspace = "1";
         }
+        {
+          command = "exec ${pkgs.chromium}/bin/chromium";
+          workspace = "7";
+        }
       ];
     };
   };

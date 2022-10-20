@@ -523,6 +523,7 @@ function pull_educational_repos() {
   git_update https://github.com/pop3ret/AWSome-Pentesting.git $HOME/git/pentest-education/AWSome-Pentesting
   git_update https://github.com/dwisiswant0/awesome-oneliner-bugbounty.git $HOME/git/pentest-education/awesome-oneliner-bugbounty
   git_update https://github.com/Hack-with-Github/Free-Security-eBooks.git $HOME/git/pentest-education/Free-Security-eBooks
+  git_update https://github.com/PaulSec/awesome-sec-talks.git $HOME/git/pentest-education/awesome-sec-talks
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
