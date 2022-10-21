@@ -31,7 +31,7 @@ in {
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
 
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
-        "${mod}+o" = "exec ${pkgs.obsidian}/bin/obsidian";
+        "${mod}+o" = "exec ${pkgs.obs-studio}/bin/obs";
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";

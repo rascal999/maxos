@@ -190,6 +190,7 @@
     john                                                                                                 # John the Ripper password cracker
     junkie                                                                                               # Deep packet inspection swiss-army knife
     k6                                                                                                   # A modern load testing tool, using Go and JavaScript
+    kaitai-struct-compiler                                                                               # Compiler to generate binary data parsers
     kalibrate-hackrf                                                                                     # Calculate local oscillator frequency offset in hackrf devices
     kalibrate-rtl                                                                                        # Calculate local oscillator frequency offset in RTL-SDR devices
     kdigger                                                                                              # An in-pod context discovery tool for Kubernetes penetration testing
@@ -262,6 +263,7 @@
     recoverjpeg                                                                                          # Recover lost JPEGs and MOV files on a bogus memory card or disk
     redfang                                                                                              # A small proof-of-concept application to find non discoverable bluetooth devices
     regexploit                                                                                           # Tool to find regular expressions which are vulnerable to ReDoS
+    rehex                                                                                                # Reverse Engineers' Hex Editor
     rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset
     routersploit                                                                                         # Exploitation Framework for Embedded Devices
     rshijack                                                                                             # TCP connection hijacker
@@ -324,6 +326,7 @@
     tsung                                                                                                # A high-performance benchmark framework for various protocols including HTTP, XMPP, LDAP, etc
     ubertooth                                                                                            # Open source wireless development platform suitable for Bluetooth experimentation
     uddup                                                                                                # Tool for de-duplication URLs
+    unar                                                                                                 # An archive unpacker program
     urlhunter                                                                                            # Recon tool that allows searching shortened URLs
     valgrind                                                                                             # Debugging and profiling tool suite
     vegeta                                                                                               # Versatile HTTP load testing tool
