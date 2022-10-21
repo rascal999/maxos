@@ -8,6 +8,7 @@ in {
 
     extraConfig = ''
       default_border pixel 1
+      for_window [title=".*YouTube.*"] move to workspace "10";
     '';
 
     config = {
