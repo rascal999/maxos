@@ -271,6 +271,7 @@
     rustcat                                                                                              # Port listener and reverse shell
     rustscan                                                                                             # Faster Nmap Scanning with Rust
     safecopy                                                                                             # Data recovery tool for damaged hardware
+    scrcpy                                                                                               # Display and control Android devices over USB or TCP/IP
     safety-cli                                                                                           #
     sddm                                                                                                 # QML based X11 display manager
     secretscanner                                                                                        # Tool to find secrets and passwords in container images and file systems
