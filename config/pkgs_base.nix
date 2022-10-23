@@ -288,6 +288,7 @@
     sngrep                                                                                               # A tool for displaying SIP calls message flows from terminal
     sniffglue                                                                                            # Secure multithreaded packet sniffer
     snmpcheck                                                                                            # SNMP enumerator
+    sox                                                                                                  # Sample Rate Converter for audio
     spike                                                                                                # A RISC-V ISA Simulator
     sqlite                                                                                               # A self-contained, serverless, zero-configuration, transactional SQL database engine
     sqlmap                                                                                               # Automatic SQL injection and database takeover tool
