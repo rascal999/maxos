@@ -217,6 +217,7 @@
     mfoc                                                                                                 # Mifare Classic Offline Cracker
     mimeo                                                                                                # Open files by MIME-type or file name using regular expressions
     mitmproxy                                                                                            # Man-in-the-middle proxy
+    monero-gui                                                                                           # Private, secure, untraceable currency
     mongoaudit                                                                                           # MongoDB auditing and pentesting tool
     monsoon                                                                                              # Fast HTTP enumerator
     mubeng                                                                                               # Proxy checker and IP rotator
