@@ -43,6 +43,7 @@ in {
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+u" = "fullscreen";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
+        "${mod}+w" = "exec sudo ${pkgs.wireshark}/bin/wireshark";
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
 
         "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";

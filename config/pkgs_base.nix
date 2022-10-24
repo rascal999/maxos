@@ -255,6 +255,7 @@
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
     pwntools                                                                                             # CTF framework and exploit development library
+    qpaeq                                                                                                # An equalizer interface for pulseaudio's equalizer sinks
     radamsa                                                                                              # A general purpose fuzzer
     radare2                                                                                              # unix-like reverse engineering framework and commandline tools
     rclone                                                                                               # Command line program to sync files and directories to and from major cloud storage
