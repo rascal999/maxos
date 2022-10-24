@@ -287,6 +287,10 @@
           {
             "name": "Windows and AD exploitation cheat sheet",
             "url": "file:///home/user/git/maxos/resources/Windows%20and%20AD%20Exploitation%20Cheat%20Sheet%2020220920.html"
+          },
+          {
+            "name": "Windows Event Log Analysis and IR Response Guide",
+            "url": "file:///home/user/git/maxos/resources/pdfs/20221024_Windows_Event_Log_Analysis_IR_Response.pdf"
           }
         ]
       },
