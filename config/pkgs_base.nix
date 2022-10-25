@@ -361,6 +361,7 @@
     xcalib                                                                                               # A tiny monitor calibration loader for X and MS-Windows
     xidel                                                                                                # Command line tool to download and extract data from HTML/XML pages as well as JSON APIs
     xorex                                                                                                # XOR Key Extractor
+    xorg.xhost                                                                                           #
     xortool                                                                                              # Tool to analyze multi-byte XOR cipher
     xwayland                                                                                             #
     yara                                                                                                 # The pattern matching swiss knife for malware researchers
