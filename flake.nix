@@ -130,7 +130,7 @@
       };
 
       ### Minimal VM (VirtualBox)
-      vm_virtualbox_wg = lib.makeOverridable nixpkgs.lib.nixosSystem {
+      vm_virtualbox_minimal = lib.makeOverridable nixpkgs.lib.nixosSystem {
         inherit system;
         modules = minimalConfigSettings ++ [
           ./hosts/vm_virtualbox_wg/configuration.nix
