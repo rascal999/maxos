@@ -70,7 +70,9 @@
     chopchop                                                                                             # CLI to search for sensitive services/files/folders
     chroma                                                                                               # A general purpose syntax highlighter in pure Go
     chromedriver                                                                                         # A WebDriver server for running Selenium tests on Chrome
+    chromium                                                                                             #
     clair                                                                                                # Vulnerability Static Analysis for Containers
+    clamav                                                                                               # Antivirus engine designed for detecting Trojans, viruses, malware and other malicious threats
     cliam                                                                                                # Cloud agnostic IAM permissions enumerator
     cloudbrute                                                                                           # Cloud enumeration tool
     cloudlist                                                                                            # Tool for listing assets from multiple cloud providers
@@ -84,6 +86,7 @@
     croc                                                                                                 # Easily and securely send things from one computer to another
     crowbar                                                                                              # A brute forcing tool that can be used during penetration tests
     crunch                                                                                               # Wordlist generator
+    cups-brother-hl3140cw                                                                                #
     dalfox                                                                                               # Tool for analysing parameter and XSS scanning
     dbeaver                                                                                              # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
     dcfldd                                                                                               # An enhanced version of GNU dd
@@ -99,6 +102,7 @@
     dislocker                                                                                            # Read BitLocker encrypted partitions in Linux
     dismap                                                                                               # Asset discovery and identification tools
     dive                                                                                                 # A tool for exploring each layer in a docker image
+    dmenu                                                                                                # A generic, highly customizable, and efficient menu for the X Window System
     dnsenum                                                                                              # A tool to enumerate DNS information
     dnsrecon                                                                                             # DNS Enumeration script
     dnstake                                                                                              # Tool to check missing hosted DNS zones
@@ -113,6 +117,7 @@
     drill                                                                                                # HTTP load testing application inspired by Ansible syntax
     dsniff                                                                                               # collection of tools for network auditing and penetration testing
     eclipses.eclipse-java                                                                                # Eclipse IDE for Java Developers
+    electrum                                                                                             # A lightweight Bitcoin wallet
     enum4linux                                                                                           # A tool for enumerating information from Windows and Samba systems
     enum4linux-ng                                                                                        # Windows/Samba enumeration tool
     erosmb                                                                                               # SMB network scanner
@@ -125,11 +130,14 @@
     extundelete                                                                                          # Utility that can recover deleted files from an ext3 or ext4 partition
     fcrackzip                                                                                            # zip password cracker, similar to fzc, zipcrack and others
     feroxbuster                                                                                          # Fast, simple, recursive content discovery tool
+    ffmpeg                                                                                               # Bindings for the ffmpeg libraries
     ffuf                                                                                                 # Fast web fuzzer written in Go
     fierce                                                                                               # DNS reconnaissance tool for locating non-contiguous IP space
+    filezilla                                                                                            # Graphical FTP, FTPS and SFTP client
     findomain                                                                                            # The fastest and cross-platform subdomain enumerator
     firecracker                                                                                          # Secure, fast, minimal micro-container virtualization
     firectl                                                                                              # A command-line tool to run Firecracker microVMs
+    firefox                                                                                              #
     flameshot                                                                                            # Powerful yet simple to use screenshot software
     flashrom                                                                                             # Utility for reading, writing, erasing and verifying flash ROM chips
     foremost                                                                                             # Recover files based on their contents
@@ -145,6 +153,7 @@
     gef                                                                                                  # A modern experience for GDB with advanced debugging features for exploit developers & reverse engineers
     genymotion                                                                                           # Fast and easy Android emulation
     ghost                                                                                                # Android post-exploitation framework
+    gimp                                                                                                 # The GNU Image Manipulation Program
     gitleaks                                                                                             # Scan git repos (or files) for secrets
     glances                                                                                              # Cross-platform curses-based monitoring tool
     gnupg                                                                                                # PHP wrapper for GpgME library that provides access to GnuPG
@@ -179,14 +188,19 @@
     httptunnel                                                                                           # Creates a bidirectional virtual data connection tunnelled in HTTP requests
     httpx                                                                                                # Fast and multi-purpose HTTP toolkit
     hyper                                                                                                # A terminal built on web technologies
+    i3                                                                                                   # A tiling window manager
+    i3status-rust                                                                                        #
     ike-scan                                                                                             # Tool to discover, fingerprint and test IPsec VPN servers
     imagemagick                                                                                          #
     inkscape                                                                                             # Vector graphics editor
     inql                                                                                                 # Security testing tool for GraphQL
+    iodine                                                                                               # NetworkManager's iodine plugin
     ipscan                                                                                               # Fast and friendly network scanner
     iw                                                                                                   # Tool to use nl80211
     jadx                                                                                                 # Dex to Java decompiler
     jaeles                                                                                               # Tool for automated Web application testing
+    jd-gui                                                                                               # Fast Java Decompiler with powerful GUI
+    jdk                                                                                                  #
     john                                                                                                 # John the Ripper password cracker
     junkie                                                                                               # Deep packet inspection swiss-army knife
     k6                                                                                                   # A modern load testing tool, using Go and JavaScript
@@ -194,10 +208,12 @@
     kalibrate-hackrf                                                                                     # Calculate local oscillator frequency offset in hackrf devices
     kalibrate-rtl                                                                                        # Calculate local oscillator frequency offset in RTL-SDR devices
     kdigger                                                                                              # An in-pod context discovery tool for Kubernetes penetration testing
+    keepassxc                                                                                            #
     kerbrute                                                                                             # Kerberos bruteforce utility
     kind                                                                                                 # Kubernetes IN Docker - local clusters for testing Kubernetes
     kismet                                                                                               # Wireless network sniffer
     kiterunner                                                                                           # Contextual content discovery tool
+    kiwix                                                                                                # An offline reader for Web content
     knockpy                                                                                              # Tool to scan subdomains
     kubeaudit                                                                                            # Audit tool for Kubernetes
     kubescape                                                                                            # Tool for testing if Kubernetes is deployed securely
@@ -207,6 +223,7 @@
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
     libgccjit                                                                                            # GNU Compiler Collection
+    libnotify                                                                                            # A library that sends desktop notifications to a notification daemon
     logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
     macchanger                                                                                           # A utility for viewing/manipulating the MAC address of network interfaces
@@ -220,6 +237,8 @@
     monero-gui                                                                                           # Private, secure, untraceable currency
     mongoaudit                                                                                           # MongoDB auditing and pentesting tool
     monsoon                                                                                              # Fast HTTP enumerator
+    mplayer                                                                                              # A movie player that supports many video formats
+    mpv                                                                                                  # General-purpose media player, fork of MPlayer and mplayer2
     mubeng                                                                                               # Proxy checker and IP rotator
     multimon-ng                                                                                          # Multimon is a digital baseband audio protocol decoder
     naabu                                                                                                # Fast SYN/CONNECT port scanner
@@ -228,11 +247,14 @@
     nbtscanner                                                                                           # NetBIOS scanner written in Rust
     ncrack                                                                                               # Network authentication tool
     neocomp                                                                                              # A fork of Compton, a compositor for X11
+    net-snmp                                                                                             # Clients and server for the SNMP network monitoring protocol
     netdiscover                                                                                          # A network address discovering tool, developed mainly for those wireless networks without dhcp server, it also works on hub/switched networks
     netsniff-ng                                                                                          # Swiss army knife for daily Linux network plumbing
-    net-snmp                                                                                             # Clients and server for the SNMP network monitoring protocol
+    networkmanager                                                                                       # Network configuration and management tool
+    networkmanager_dmenu                                                                                 #
     ngrep                                                                                                # Network packet analyzer
     nmap-formatter                                                                                       # Tool that allows you to convert nmap output
+    notify-desktop                                                                                       # Little application that lets you send desktop notifications with one command
     nth                                                                                                  #
     ntlmrecon                                                                                            # Information enumerator for NTLM authentication enabled web endpoints
     ntopng                                                                                               # High-speed web-based traffic analysis and flow collection tool
@@ -248,11 +270,15 @@
     p0f                                                                                                  # Passive network reconnaissance and fingerprinting tool
     pandoc                                                                                               #
     pass                                                                                                 # Stores, retrieves, generates, and synchronizes passwords securely
+    pavucontrol                                                                                          # PulseAudio Volume Control
+    pdfgrep                                                                                              # Commandline utility to search text in PDF files
+    pdf-parser                                                                                           # Parse a PDF document
     pev                                                                                                  # A full-featured, open source, multiplatform command line toolkit to work with PE (Portable Executables) binaries
     phrasendrescher                                                                                      # A modular and multi processing pass phrase cracking tool
     pinentry                                                                                             # GnuPG’s interface to passphrase input
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
+    putty                                                                                                # A Free Telnet/SSH Client
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
     pwntools                                                                                             # CTF framework and exploit development library
@@ -260,30 +286,37 @@
     radamsa                                                                                              # A general purpose fuzzer
     radare2                                                                                              # unix-like reverse engineering framework and commandline tools
     rclone                                                                                               # Command line program to sync files and directories to and from major cloud storage
+    rdesktop                                                                                             # Open source client for Windows Terminal Services
     reaverwps                                                                                            #
     reaverwps-t6x                                                                                        #
     recoverjpeg                                                                                          # Recover lost JPEGs and MOV files on a bogus memory card or disk
     redfang                                                                                              # A small proof-of-concept application to find non discoverable bluetooth devices
     regexploit                                                                                           # Tool to find regular expressions which are vulnerable to ReDoS
     rehex                                                                                                # Reverse Engineers' Hex Editor
+    redshift                                                                                             # Screen color temperature manager
+    remmina                                                                                              # Remote desktop client written in GTK
     rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset
     routersploit                                                                                         # Exploitation Framework for Embedded Devices
     rshijack                                                                                             # TCP connection hijacker
     rtl-sdr                                                                                              # Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
     rustcat                                                                                              # Port listener and reverse shell
     rustscan                                                                                             # Faster Nmap Scanning with Rust
+    rxvt-unicode                                                                                         # A clone of the well-known terminal emulator rxvt
     safecopy                                                                                             # Data recovery tool for damaged hardware
     scrcpy                                                                                               # Display and control Android devices over USB or TCP/IP
+    scrot                                                                                                # A command-line screen capture utility
     safety-cli                                                                                           #
     sddm                                                                                                 # QML based X11 display manager
     secretscanner                                                                                        # Tool to find secrets and passwords in container images and file systems
     siege                                                                                                # HTTP load tester
+    signal-desktop                                                                                       # Private, simple, and secure messenger
     simg2img                                                                                             # Tool to convert Android sparse images to raw images
     sipp                                                                                                 # The SIPp testing tool
     sipsak                                                                                               # SIP Swiss army knife
     sipvicious                                                                                           # Set of tools to audit SIP based VoIP systems
     sish                                                                                                 # HTTP(S)/WS(S)/TCP Tunnels to localhost
     skjold                                                                                               # Tool to Python dependencies against security advisory databases
+    slack                                                                                                # Desktop client for Slack
     sleuthkit                                                                                            # A forensic/data recovery tool
     slowlorust                                                                                           # Lightweight slowloris (HTTP DoS) tool
     sn0int                                                                                               # Semi-automatic OSINT framework and package manager
@@ -337,6 +370,8 @@
     velero                                                                                               #
     ventoy-bin                                                                                           # An open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files
     #vmware-workstation                                                                                   # Industry standard desktop hypervisor for x86-64 architecture
+    virt-manager                                                                                         # Desktop user interface for managing virtual machines
+    vlc                                                                                                  # Cross-platform media player and streaming server
     volatility3                                                                                          # Volatile memory extraction frameworks
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
     vulnix                                                                                               # NixOS vulnerability scanner
@@ -350,6 +385,7 @@
     wifite2                                                                                              # Rewrite of the popular wireless network auditor, wifite
     win-virtio                                                                                           # Windows VirtIO Drivers
     wipe                                                                                                 # Secure file wiping utility
+    wireshark-qt                                                                                         #
     witness                                                                                              # A pluggable framework for software supply chain security
     wol                                                                                                  # Implements Wake On LAN functionality in a small program
     wprecon                                                                                              # WordPress vulnerability recognition tool
@@ -357,15 +393,21 @@
     wstunnel                                                                                             #
     wuzz                                                                                                 # Interactive cli tool for HTTP inspection
     x11docker                                                                                            # Run graphical applications with Docker
+    x11vnc                                                                                               # A VNC server connected to a real X11 screen
     x2goclient                                                                                           # Graphical NoMachine NX3 remote desktop client
     xcalib                                                                                               # A tiny monitor calibration loader for X and MS-Windows
     xidel                                                                                                # Command line tool to download and extract data from HTML/XML pages as well as JSON APIs
+    xlockmore                                                                                            # Screen locker for the X Window System
     xorex                                                                                                # XOR Key Extractor
+    xorg.xbacklight                                                                                      #
+    xorg.xeyes                                                                                           #
     xorg.xhost                                                                                           #
+    xorg.xmodmap                                                                                         #
     xortool                                                                                              # Tool to analyze multi-byte XOR cipher
     xwayland                                                                                             #
     yara                                                                                                 # The pattern matching swiss knife for malware researchers
     yersinia                                                                                             # A framework for layer 2 attacks
+    youtube-dl                                                                                           # Emacs youtube-dl download manager
     zap                                                                                                  # Java application for web penetration testing
     zeek                                                                                                 # Network analysis framework much different from a typical IDS
     zkar                                                                                                 # Java serialization protocol analysis tool
