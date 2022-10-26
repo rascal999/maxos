@@ -133,7 +133,7 @@
       vm_virtualbox_minimal = lib.makeOverridable nixpkgs.lib.nixosSystem {
         inherit system;
         modules = minimalConfigSettings ++ [
-          ./hosts/vm_virtualbox_wg/configuration.nix
+          ./hosts/vm_virtualbox_minimal/configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
