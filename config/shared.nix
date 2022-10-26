@@ -169,6 +169,8 @@
   # Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
 
+  nixpkgs.config.allowUnfree = true;
+
   # docker
   virtualisation.docker = {
     enable = true;
