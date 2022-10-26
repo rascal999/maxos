@@ -169,13 +169,6 @@
   # Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
 
-  # For Obsidian
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-18.1.0"
-    "python2.7-pyjwt-1.7.1"
-  ];
-
   # docker
   virtualisation.docker = {
     enable = true;

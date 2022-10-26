@@ -23,6 +23,18 @@
 
     lib = nixpkgs.lib;
 
+    minimalConfigSettings = [
+      #agenix.nixosModule
+      #./config/nur.nix
+      ./config/pkgs_minimal.nix
+      ./config/shared.nix
+
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+      }
+    ];
+
     configSettings = [
       agenix.nixosModule
       ./config/nur.nix
@@ -112,6 +124,21 @@
             home-manager.users.user.imports = [
               ./config/i3-vars.nix
               ./home.nix
+            ];
+          })
+        ];
+      };
+
+      ### VM (VirtualBox)
+      vm_virtualbox_wg = lib.makeOverridable nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = minimalConfigSettings ++ [
+          ./hosts/vm_virtualbox_wg/configuration.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./home.nix
+              ./hosts/vm_virtualbox/home.nix
             ];
           })
         ];
