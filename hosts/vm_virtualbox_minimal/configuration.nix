@@ -25,8 +25,10 @@
       audioin = "off";
       audioout = "off";
       cpus = "4";
-      nic1 = "bridged";
+      nic1 = "nat";
       nictype1 = "virtio";
+      #nic1 = "bridged";
+      #nictype1 = "virtio";
       usbehci = "off";
     };
 
