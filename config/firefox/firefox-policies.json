@@ -486,6 +486,10 @@
             "url": "file:///home/user/git/pentest-education/Security-Exercises/README.md"
           },
           {
+            "name": "spyserver status map (radio)",
+            "url": "https://airspy.com/directory/#"
+          },
+          {
             "name": "test-your-sysadmin-skills",
             "url": "file:///home/user/git/pentest-education/test-your-sysadmin-skills/README.md"
           },
@@ -2233,7 +2237,7 @@
               },
               {
                 "name": "Nessus",
-                "url": "file:///"
+                "url": "https://127.0.0.1:10100/"
               }
             ]
           },
