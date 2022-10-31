@@ -30,6 +30,12 @@ in
     ];
   };
 
+  # xrdp
+  services.xrdp.enable = true;
+  services.xrdp.defaultWindowManager = "startplasma-x11";
+  networking.firewall.allowedTCPPorts = [ 3389 ];
+  # Soon: services.xrdp.openFirewall = true;
+
   services.xserver = {
     enable = true;
     desktopManager.plasma5.enable = true;
