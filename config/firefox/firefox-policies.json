@@ -532,6 +532,10 @@
             "url": "https://www.exploit-db.com/"
           },
           {
+            "name": "inTheWild",
+            "url": "https://inthewild.io/feed"
+          },
+          {
             "name": "js-vuln-db",
             "url": "file:///home/user/git/exploits/js-vuln-db/README.md"
           },
