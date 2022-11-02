@@ -49,31 +49,31 @@ if [[ ! -f "$arg_targets" ]]; then
 fi
 
 # Select interface or bail on fail
-if [[ "$arg_interface" == "false" ]]; then
-  arg_interface=`ip r | grep default | choose 4`
-  arg_router_ip=`ip r | grep default | choose 2`
-
-  if [[ "$arg_interface" == "" ]]; then
-    echo "ERROR: Unable to automatically select an interface to scan from"
-    exit 1
-  fi
-  echo "INFO: Selected $arg_interface for scanning.."
-fi
+#if [[ "$arg_interface" == "false" ]]; then
+#  arg_interface=`ip r | grep default | choose 4`
+#  arg_router_ip=`ip r | grep default | choose 2`
+#
+#  if [[ "$arg_interface" == "" ]]; then
+#    echo "ERROR: Unable to automatically select an interface to scan from"
+#    exit 1
+#  fi
+#  echo "INFO: Selected $arg_interface for scanning.."
+#fi
 
 # Router IP
-if [[ "$arg_router_ip" == "false" ]]; then
-  echo "ERROR: Must specify router IP if you're specifying interface"
-  exit 1
-fi
+#if [[ "$arg_router_ip" == "false" ]]; then
+#  echo "ERROR: Must specify router IP if you're specifying interface"
+#  exit 1
+#fi
 
 # Source MAC
 if [[ "$arg_mac" == "false" ]]; then
   arg_mac=`ip a sh $arg_interface | rg "link/" | choose 1 | sed "s/:/-/g"`
 
-  if [[ "$arg_mac" == "" ]]; then
-    echo "ERROR: Couldn't automatically select MAC"
-    exit 1
-  fi
+#  if [[ "$arg_mac" == "" ]]; then
+#    echo "ERROR: Couldn't automatically select MAC"
+#    exit 1
+#  fi
   echo "INFO: Set MAC to $arg_mac for scanning.."
 fi
 
@@ -95,7 +95,17 @@ echo
 
 # masscan TCP top 100
 echo "### Masscan TCP top 100"
-sudo time masscan -iL $arg_targets --source-mac $arg_mac --router-ip $arg_router_ip --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_top_100.bin
+#sudo time masscan -iL $arg_targets --source-mac $arg_mac --router-ip $arg_router_ip --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_top_100.bin
+
+if [[ "$arg_interface" == "false" ]]; then
+  cp $arg_targets $RESULTS_DIR
+  arg_targets_file=`echo $arg_targets | choose --field-separator '/' -1`
+
+  time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file --top-ports=100 --rate=5000 -oB /mnt/masscan_tcp_top_100.bin
+else
+  sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_top_100.bin
+fi
+
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oG ${RESULTS_DIR}/masscan_tcp_top_100.grep
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oJ ${RESULTS_DIR}/masscan_tcp_top_100.json
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oX ${RESULTS_DIR}/masscan_tcp_top_100.xml
@@ -108,7 +118,8 @@ echo
 
 # masscan TCP all
 echo "### Masscan TCP all"
-sudo time masscan -iL $arg_targets --source-mac $arg_mac --router-ip $arg_router_ip --interface $arg_interface -p - --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
+#sudo time masscan -iL $arg_targets --source-mac $arg_mac --router-ip $arg_router_ip --interface $arg_interface -p - --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
+sudo time masscan -iL $arg_targets -p - --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oG ${RESULTS_DIR}/masscan_tcp_all.grep
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oJ ${RESULTS_DIR}/masscan_tcp_all.json
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oX ${RESULTS_DIR}/masscan_tcp_all.xml
