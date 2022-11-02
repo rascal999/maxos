@@ -116,6 +116,10 @@ a.netscan() {
   /home/user/git/maxos/scripts/netscan.sh $@
 }
 
+a.netscanparse() {
+  /home/user/git/maxos/scripts/netscan_logseq.py $@
+}
+
 a.agenix() {
   sudo EDITOR=vim nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- -i /etc/ssh/ssh_host_ed25519_key $@
 }
