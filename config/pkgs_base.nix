@@ -9,6 +9,7 @@
     afflib                                                                                               # Advanced forensic format library
     afl                                                                                                  # Powerful fuzzer via genetic algorithms and instrumentation
     aflplusplus                                                                                          #
+    aha                                                                                                  # ANSI HTML Adapter
     aiodnsbrute                                                                                          # DNS brute force utility
     aircrack-ng                                                                                          # Wireless encryption cracking tools
     airgeddon                                                                                            # Multi-use TUI to audit wireless networks
@@ -167,6 +168,7 @@
     gpa                                                                                                  # Graphical user interface for the GnuPG
     gqrx                                                                                                 # Software defined radio (SDR) receiver
     gqrx-gr-audio                                                                                        # Software defined radio (SDR) receiver
+    grepcidr                                                                                             # Filter IPv4 and IPv6 addresses matching CIDR patterns
     grim                                                                                                 # Grab images from a Wayland compositor
     grype                                                                                                # Vulnerability scanner for container images and filesystems
     gsettings-desktop-schemas                                                                            # Collection of GSettings schemas for settings shared by various components of a desktop
