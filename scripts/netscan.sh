@@ -2,21 +2,20 @@
 
 usage() {
   echo "Net scan script"
-  echo "Usage: $0 -n <scan-name> -t <targets-file> [-i <interface>] [-m <source-mac>] [-r <router-ip>]" 1>&2;
+  echo "Usage: $0 -n <scan-name> -t <targets-file> [-i <interface>]" 1>&2;
   echo
   echo "-n (Scan name)      Name of scan"
   echo "-t (Targets file)   Targets file"
   echo "-i (Interface)      Interface to scan from"
-  echo "-m (Source MAC)     Source MAC of interface"
-  echo "-r (Router IP)      IP address of router"
   echo
   echo "Examples:"
   echo "# Basic usage"
-  echo "$0 -n client_name -t ranges.txt -i enp39s0 -r 192.168.0.1"
+  echo "$0 -n client_name -t ranges.txt -i eth0"
   echo
   exit 1;
 }
 
+arg_auto_interface="false"
 arg_interface="false"
 arg_mac="false"
 arg_name="false"
@@ -49,37 +48,22 @@ if [[ ! -f "$arg_targets" ]]; then
 fi
 
 # Select interface or bail on fail
-#if [[ "$arg_interface" == "false" ]]; then
-#  arg_interface=`ip r | grep default | choose 4`
-#  arg_router_ip=`ip r | grep default | choose 2`
-#
-#  if [[ "$arg_interface" == "" ]]; then
-#    echo "ERROR: Unable to automatically select an interface to scan from"
-#    exit 1
-#  fi
-#  echo "INFO: Selected $arg_interface for scanning.."
-#fi
+if [[ "$arg_interface" == "false" ]]; then
+  arg_interface=`ip r | grep default | choose 4`
+  arg_auto_interface="true"
 
-# Router IP
-#if [[ "$arg_router_ip" == "false" ]]; then
-#  echo "ERROR: Must specify router IP if you're specifying interface"
-#  exit 1
-#fi
-
-# Source MAC
-if [[ "$arg_mac" == "false" ]]; then
-  arg_mac=`ip a sh $arg_interface | rg "link/" | choose 1 | sed "s/:/-/g"`
-
-#  if [[ "$arg_mac" == "" ]]; then
-#    echo "ERROR: Couldn't automatically select MAC"
-#    exit 1
-#  fi
-  echo "INFO: Set MAC to $arg_mac for scanning.."
+  if [[ "$arg_interface" == "" ]]; then
+    echo "ERROR: Unable to automatically select an interface to scan from"
+    exit 1
+  fi
+  echo "INFO: Selected $arg_interface network interface for scanning.."
+  #sleep 5
 fi
 
 NOW=`date "+%Y%m%d_%H%M%S"`
 RESULTS_DIR="/home/user/scans/${NOW}_${arg_name}"
 mkdir -p $RESULTS_DIR
+firefox $RESULTS_DIR
 
 echo
 
@@ -87,17 +71,14 @@ echo
 echo "### Ping sweep"
 sudo time nmap -e $arg_interface -iL $arg_targets -sn -n -T4 -oA ${RESULTS_DIR}/nmap_ping_scan
 
-echo "### These hosts responded to ping sweep (ICMP)" > ${RESULTS_DIR}/nmap_ping_scan_results.txt
-echo >> ${RESULTS_DIR}/nmap_ping_scan_results.txt
-cat ${RESULTS_DIR}/nmap_ping_scan.gnmap | grep "Status: Up" | choose 1 >> ${RESULTS_DIR}/nmap_ping_scan_results.txt
-firefox ${RESULTS_DIR}/nmap_ping_scan_results.txt
+echo "### These hosts responded to ping sweep (ICMP)" > ${RESULTS_DIR}/results_nmap_ping_scan.txt
+echo >> ${RESULTS_DIR}/results_nmap_ping_scan.txt
+cat ${RESULTS_DIR}/nmap_ping_scan.gnmap | grep "Status: Up" | choose 1 >> ${RESULTS_DIR}/results_nmap_ping_scan.txt
 echo
 
 # masscan TCP top 100
 echo "### Masscan TCP top 100"
-#sudo time masscan -iL $arg_targets --source-mac $arg_mac --router-ip $arg_router_ip --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_top_100.bin
-
-if [[ "$arg_interface" == "false" ]]; then
+if [[ "$arg_auto_interface" == "true" ]]; then
   cp $arg_targets $RESULTS_DIR
   arg_targets_file=`echo $arg_targets | choose --field-separator '/' -1`
 
@@ -110,24 +91,26 @@ sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oG ${RESULTS_DIR
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oJ ${RESULTS_DIR}/masscan_tcp_top_100.json
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oX ${RESULTS_DIR}/masscan_tcp_top_100.xml
 
-echo "### Masscan open TCP ports (top 100)" > ${RESULTS_DIR}/masscan_tcp_top_100.txt 
-echo >> ${RESULTS_DIR}/masscan_tcp_top_100.txt
-cat ${RESULTS_DIR}/masscan_tcp_top_100.grep | grep -E "^Timestamp: " | choose 3 6 | cut -d '/' -f 1 | sed 's/ /:/g' | sort -V >> ${RESULTS_DIR}/masscan_tcp_top_100.txt
-firefox ${RESULTS_DIR}/masscan_tcp_top_100.txt
+echo "### Masscan open TCP ports (top 100)" > ${RESULTS_DIR}/results_masscan_tcp_top_100.txt 
+echo >> ${RESULTS_DIR}/results_masscan_tcp_top_100.txt
+cat ${RESULTS_DIR}/masscan_tcp_top_100.grep | grep -E "^Timestamp: " | choose 3 6 | cut -d '/' -f 1 | sed 's/ /:/g' | sort -V >> ${RESULTS_DIR}/results_masscan_tcp_top_100.txt
 echo
 
 # masscan TCP all
 echo "### Masscan TCP all"
-#sudo time masscan -iL $arg_targets --source-mac $arg_mac --router-ip $arg_router_ip --interface $arg_interface -p - --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
-sudo time masscan -iL $arg_targets -p - --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
+if [[ "$arg_auto_interface" == "true" ]]; then
+  time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file -p - --rate=5000 -oB /mnt/masscan_tcp_all.bin
+else
+  sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
+fi
+
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oG ${RESULTS_DIR}/masscan_tcp_all.grep
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oJ ${RESULTS_DIR}/masscan_tcp_all.json
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oX ${RESULTS_DIR}/masscan_tcp_all.xml
 
-echo "### Masscan open TCP ports (all)" > ${RESULTS_DIR}/masscan_tcp_all.txt 
-echo >> ${RESULTS_DIR}/masscan_tcp_all.txt
-cat ${RESULTS_DIR}/masscan_tcp_all.grep | grep -E "^Timestamp: " | choose 3 6 | cut -d '/' -f 1 | sed 's/ /:/g' | sort -V >> ${RESULTS_DIR}/masscan_tcp_all.txt
-firefox ${RESULTS_DIR}/masscan_tcp_all.txt
+echo "### Masscan open TCP ports (all)" > ${RESULTS_DIR}/results_masscan_tcp_all.txt 
+echo >> ${RESULTS_DIR}/results_masscan_tcp_all.txt
+cat ${RESULTS_DIR}/masscan_tcp_all.grep | grep -E "^Timestamp: " | choose 3 6 | cut -d '/' -f 1 | sed 's/ /:/g' | sort -V >> ${RESULTS_DIR}/results_masscan_tcp_all.txt
 echo
 
 # nmap TCP all

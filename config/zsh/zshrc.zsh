@@ -113,7 +113,7 @@ test-vpn() {
 }
 
 a.netscan() {
-  /home/user/git/maxos/scripts/netscan.sh
+  /home/user/git/maxos/scripts/netscan.sh $@
 }
 
 a.agenix() {
