@@ -80,27 +80,27 @@ dunst-handle() {
 ###
 ### Misc
 ###
-a-notify()
+a.notify()
 {
   /home/user/git/maxos/scripts/telegram_notify.sh "$@"
 }
 
 new() {
   echo "### New commands ###"
-  echo "a-alarm                     a-alarm 10:30 \"Meeting\""
-  echo "a-ech                       Export command history"
-  echo "a-fo                        Open Firefox at CWD"
-  echo "a-localhostrun-gotty        Terminal command over web"
-  echo "a-localhostrun-privatebin   Privatebin over web"
+  echo "a.alarm                     a.alarm 10:30 \"Meeting\""
+  echo "a.ech                       Export command history"
+  echo "a.fo                        Open Firefox at CWD"
+  echo "a.localhostrun-gotty        Terminal command over web"
+  echo "a.localhostrun-privatebin   Privatebin over web"
   echo "aria2c                      wget alternative"
   echo "arsenal                     Generate commands for security and network tools"
   echo "broot                       File explorer"
   echo "bwcalc                      Bandwidth transfer time estimator"
   echo "croc                        Share files between machines"
-  echo "d-bb                        OpenBB finance terminal"
-  echo "d-dos                       MHDDoS"
-  echo "d-hmpaa                     Howmanypeoplearearound (wifi scan)"
-  echo "d-phash                     psudohash"
+  echo "d.bb                        OpenBB finance terminal"
+  echo "d.dos                       MHDDoS"
+  echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
+  echo "d.phash                     psudohash"
   echo "gitleaks                    Discover secrets using Gitleaks"
   echo "k6                          Load testing with scripting"
   echo "inql                        Security testing tool for GraphQL"
@@ -112,24 +112,28 @@ test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
 }
 
-a-agenix() {
+a.netscan() {
+  /home/user/git/maxos/scripts/netscan.sh
+}
+
+a.agenix() {
   sudo EDITOR=vim nix --extra-experimental-features flakes --extra-experimental-features nix-command run github:ryantm/agenix -- -i /etc/ssh/ssh_host_ed25519_key $@
 }
 
 # export command history
-a-ech() {
+a.ech() {
   sqlite3 $HOME/.local/share/mcfly/history.db "select cmd from commands" | sort | uniq
 }
 
-a-fo() {
+a.fo() {
   firefox `pwd`
 }
 
-a-gg() {
+a.gg() {
   googler --np "$@"
 }
 
-a-vpn() {
+a.vpn() {
   /home/user/git/maxos/scripts/vpn.sh "$@"
 }
 
@@ -137,7 +141,7 @@ bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
 }
 
-d-nessus() {
+d.nessus() {
   echo -n "Nessus activation code? "
   read NESSUS_ACTIVATION_CODE
   if [[ ! -z "$NESSUS_ACTIVATION_CODE" ]]; then
@@ -151,20 +155,20 @@ d-nessus() {
   fi
 }
 
-d-shell() {
+d.shell() {
   docker run --rm -it --entrypoint=/bin/bash "$@"
 }
 
-d-shellsh() {
+d.shellsh() {
   docker run --rm -it --entrypoint=/bin/sh "$@"
 }
 
-d-shellhere() {
+d.shellhere() {
   dirname=${PWD##*/}
   docker run --rm -it --entrypoint=/bin/bash -v $(pwd):/${dirname} -w /${dirname} "$@"
 }
 
-d-shellhereport() {
+d.shellhereport() {
   if [[ "$#" -ne "2" ]]; then
     echo "d-shellhereport <image> <port>"
     return 1
@@ -173,25 +177,25 @@ d-shellhereport() {
   docker run --rm -it -v $(pwd):/${dirname} -p $2:$2 --entrypoint=/bin/bash "$1"
 }
 
-d-shellnamed() {
+d.shellnamed() {
   echo -n "Instance name? "
   read INSTANCE
   docker run --network host --name $INSTANCE -i -t --entrypoint=/bin/bash "$@"
 }
 
-d-shellnamedhere() {
+d.shellnamedhere() {
   dirname=${PWD##*/}
   echo -n "Instance name? "
   read INSTANCE
   docker run --network host --name $INSTANCE -it --entrypoint=/bin/bash -v $(pwd):/${dirname} -w /${dirname} "$@"
 }
 
-d-shellresume() {
+d.shellresume() {
   docker start "$@"
   docker exec -it "$@" /bin/bash
 }
 
-d-sherlock() {
+d.sherlock() {
   if [[ "$#" -ne "1" ]]; then
     echo "ERROR: Specify username"
     return 1
@@ -200,42 +204,42 @@ d-sherlock() {
   docker run --rm -t theyahya/sherlock "$@"
 }
 
-d-phash() {
+d.phash() {
   python /home/user/git/pentest-tools/psudohash/psudohash.py -cpa -y 1990-2030 -w $@
 }
 
-d-sharelatex() {
+d.sharelatex() {
   sed -i "s#- 80:80#- 127.0.0.1:${PORT_SHARELATEX}:80#g" ${HOME}/git/misc/overleaf/docker-compose.yml
   sed -i "s#image: sharelatex/sharelatex#image: tuetenk0pp/sharelatex-full#g" ${HOME}/git/misc/overleaf/docker-compose.yml
   docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml up -d
 }
 
-d-sharelatex-kill() {
+d.sharelatex-kill() {
   docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml down
 }
 
-d-windowshellhere() {
+d.windowshellhere() {
   docker -c 2019-box run --rm -it -v "C:$(pwd):C:/source" -w "C:/source" "$@"
 }
 
-d-hmpaa() {
+d.hmpaa() {
   docker run --rm -it --net=host --name howmanypeoplearearound howmanypeoplearearound
 }
 
-d-dos() {
+d.dos() {
   docker run --rm mhddos "$@"
 }
 
-d-bb() {
+d.bb() {
   docker run -it --rm ghcr.io/openbb-finance/openbbterminal-poetry:latest
 }
 
-d-filebrowserhere() {
+d.filebrowserhere() {
   screen -S filebrowser -adm docker run --rm --name filebrowser -p 1080:80 -v $(pwd):/srv filebrowser/filebrowser
   firefox http://127.0.0.1:1080/ &; disown
 }
 
-d-rengine() {
+d.rengine() {
   cd $HOME/git/pentest-tools/rengine
   cp $HOME/git/maxos/resources/rengine/docker-compose.yml .
   sed -i "s#- 443:443/tcp#- ${PORT_RENGINE}:443/tcp#g" ${HOME}/git/pentest-tools/rengine/docker-compose.yml
@@ -253,14 +257,14 @@ d-rengine() {
   cd -
 }
 
-d-rengine-kill() {
+d.rengine-kill() {
   cd $HOME/git/pentest-tools/rengine
   sudo make down
   git reset --hard
   cd -
 }
 
-a-alarm() {
+a.alarm() {
   if [[ "$#" -ne "2" ]]; then
     echo "a-alarm 10:00 \"Meeting\""
   else
@@ -268,16 +272,16 @@ a-alarm() {
   fi
 }
 
-d-ivre() {
+d.ivre() {
   sed -i "s#- \"80:80\"#- \"127.0.0.1:${PORT_IVRE}:80\"#g" ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml
   docker-compose -f ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml up -d
 }
 
-d-ivre-kill() {
+d.ivre-kill() {
   docker-compose -f ${HOME}/git/pentest-tools/ivre/docker/docker-compose.yml down
 }
 
-a-localhostrun() {
+a.localhostrun() {
   if [[ "$#" -ne "1" ]]; then
     echo "Specify port number"
   else
@@ -285,7 +289,7 @@ a-localhostrun() {
   fi
 }
 
-a-localhostrun-gotty() {
+a.localhostrun-gotty() {
   if [[ "$#" -lt "1" ]]; then
     echo "ERROR: Specify command"
     return 1
@@ -297,7 +301,7 @@ a-localhostrun-gotty() {
   screen -S ${TIMESTAMP}_testssl -X quit
 }
 
-a-localhostrun-nginx() {
+a.localhostrun-nginx() {
   # Security measure
   if [[ "`pwd`" == "$HOME" ]]; then
     echo "ERROR: Not running in $HOME .."
@@ -310,7 +314,7 @@ a-localhostrun-nginx() {
   docker stop localhostrun-nginx
 }
 
-a-localhostrun-filebrowser() {
+a.localhostrun-filebrowser() {
   # Security measure
   if [[ "`pwd`" == "$HOME" ]]; then
     echo "ERROR: Not running in $HOME"
@@ -333,12 +337,12 @@ a-localhostrun-filebrowser() {
   docker stop localhostrun-filebrowser
 }
 
-a-localhostrun-privatebin() {
+a.localhostrun-privatebin() {
   ssh -R 80:localhost:10040 nokey@localhost.run
   echo "Stopping localhost.run connection.."
 }
 
-a-cloudmapper-gather() {
+a.cloudmapper-gather() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-cloudmapper-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -355,7 +359,7 @@ a-cloudmapper-gather() {
       python cloudmapper.py prepare --account client ;"
 }
 
-a-cloudmapper-serve() {
+a.cloudmapper-serve() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-cloudmapper-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -371,7 +375,7 @@ a-cloudmapper-serve() {
   fi
 }
 
-a-cloudmapper() {
+a.cloudmapper() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-cloudmapper <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -393,7 +397,7 @@ a-cloudmapper() {
   fi
 }
 
-a-scout-gather() {
+a.scout-gather() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-scout-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -406,7 +410,7 @@ a-scout-gather() {
       --secret-access-key $3"
 }
 
-a-scout-serve() {
+a.scout-serve() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-scout-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -420,7 +424,7 @@ a-scout-serve() {
   fi
 }
 
-a-scout() {
+a.scout() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-scout <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -442,7 +446,7 @@ a-scout() {
   fi
 }
 
-a-aws-security-viz(){
+a.aws-security-viz(){
   if [[ "$#" -ne "3" ]]; then
     echo "a-aws-security-viz <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -457,7 +461,7 @@ a-aws-security-viz(){
   fi
 }
 
-a-cartography(){
+a.cartography(){
   while true; do
     echo -n "Launch cartography? [yN] "
     read yn
@@ -481,7 +485,7 @@ a-cartography(){
   cd -
 }
 
-a-prowler-gather() {
+a.prowler-gather() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-prowler-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -503,7 +507,7 @@ a-prowler-gather() {
     toniblyx/prowler:latest -M csv,json,json-asff,html
 }
 
-a-prowler-serve() {
+a.prowler-serve() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-prowler-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -517,7 +521,7 @@ a-prowler-serve() {
   fi
 }
 
-a-prowler() {
+a.prowler() {
   if [[ "$#" -ne "3" ]]; then
     echo "a-prowler <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -539,7 +543,7 @@ a-prowler() {
   fi
 }
 
-a-aws-public-ips() {
+a.aws-public-ips() {
   if [[ "$#" -ne "4" ]]; then
     echo "a-aws-public-ips <REGION> <CLIENT> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -570,7 +574,7 @@ a-aws-public-ips() {
   done
 }
 
-a-cloudsploit() {
+a.cloudsploit() {
   if [[ "$#" -ne "4" ]]; then
     echo "a-cloudsploit <COMPLIANCE_TYPE> <CLIENT> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
@@ -769,14 +773,14 @@ osint() {
 ###
 ### Tools
 ###
-d-vpn() {
+d.vpn() {
   docker run -d --rm --cap-add=NET_ADMIN \
     --volume ${HOME}/vpn:/etc/wireguard/:ro \
     -p 127.0.0.1:1080:1080 \
     kizzx2/wireguard-socks-proxy
 }
 
-d-vpn-array() {
+d.vpn-array() {
   if [[ "$#" -ne "1" ]]; then
     echo "d-vpn-array <instance-count>"
     return 1
@@ -807,7 +811,7 @@ d-vpn-array() {
   echo "1080 == ${PORT_1080_LAST}"
 }
 
-d-vpn-array-kill() {
+d.vpn-array-kill() {
   INSTANCES=$(docker ps -q -f "ancestor=kizzx2/wireguard-socks-proxy")
   if [[ "$INSTANCES" == "" ]]; then
     echo "No VPN instances to stop"
@@ -816,14 +820,14 @@ d-vpn-array-kill() {
   fi
 }
 
-d-tor() {
+d.tor() {
   docker run --rm -it -p 127.0.0.1:8118:8118 \
     -p 127.0.0.1:9050:9050 \
     -p 127.0.0.1:9051:9051 \
     -d dperson/torproxy
 }
 
-d-tor-array() {
+d.tor-array() {
   if [[ "$#" -ne "1" ]]; then
     echo "d-tor-array <instance-count>"
     return 1
@@ -857,7 +861,7 @@ d-tor-array() {
   echo "8118 == ${PORT_8118_LAST}\t9050 == ${PORT_9050_LAST}\t9051 == ${PORT_10051_LAST}"
 }
 
-d-tor-array-kill() {
+d.tor-array-kill() {
   INSTANCES=$(docker ps -q -f "ancestor=dperson/torproxy")
   if [[ "$INSTANCES" == "" ]]; then
     echo "No tor instances to stop"
@@ -866,11 +870,11 @@ d-tor-array-kill() {
   fi
 }
 
-d-pcf() {
+d.pcf() {
   docker-compose -f $HOME/git/pentest-tools/pcf/docker-compose.yml up
 }
 
-d-testssl() {
+d.testssl() {
   if [[ "$#" -ne "1" ]]; then
     echo "d-testssl <url>"
     return 1
@@ -887,7 +891,7 @@ d-testssl() {
   #notify-desktop "testssl - $CONTENT"
 }
 
-d-tlsmate() {
+d.tlsmate() {
   if [[ "$#" -ne "1" ]]; then
     echo "d-tlsmate <url>"
     return 1
@@ -897,15 +901,15 @@ d-tlsmate() {
     --progress $1
 }
 
-d-nuclei() {
+d.nuclei() {
   docker run --rm -v $(pwd):/mnt projectdiscovery/nuclei $@
 }
 
-d-eth-security-toolbox() {
+d.eth-security-toolbox() {
   docker run -it --rm -v $(pwd):/share trailofbits/eth-security-toolbox
 }
 
-d-myth() {
+d.myth() {
   if [[ "$#" -ne "2" ]]; then
     echo "d-myth <file> <solv>"
     return 1
@@ -919,24 +923,24 @@ d-myth() {
   notify-dekstop "myth - $CONTENT"
 }
 
-d-thelounge() {
+d.thelounge() {
   screen -S thelounge -adm docker run --rm -it --name thelounge -e PUID=1000 -e PGID=1000 -e TZ=Europe/London -p 127.11.0.1:9000:9000 -v $HOME/.config/thelounge:/config ghcr.io/linuxserver/thelounge
   firefox http://127.11.0.1:9000 &; disown
 }
 
-d-stego-toolkit() {
+d.stego-toolkit() {
   docker run --rm -it --name stego-toolkit -v $(pwd):/data dominicbreuker/stego-toolkit /bin/bash "$@"
 }
 
-d-bettercap() {
+d.bettercap() {
   docker run --rm -it --name bettercap --net=host bettercap/bettercap
 }
 
-d-ciphey() {
+d.ciphey() {
   docker run -it --rm --name ciphey -v $(pwd):/home/nonroot/workdir remnux/ciphey "$@"
 }
 
-d-astra() {
+d.astra() {
   docker run --rm -d --name astra-mongo mongo
   cd $HOME/git/pentest-tools/Astra
   docker build -t astra .
@@ -944,23 +948,23 @@ d-astra() {
   firefox http://localhost:8094 &; disown
 }
 
-d-openvas() {
+d.openvas() {
   docker run -p ${PORT_OPENVAS}:443 --name openvas greenbone/openvas
 }
 
-d-beef() {
+d.beef() {
   mkdir -p $HOME/.msf4
   docker run --rm -it --net=host -v $HOME/.msf4:/root/.msf4:Z -v /tmp/msf:/tmp/data:Z --name=beef phocean/beef
 }
 
-d-eyewitness() {
+d.eyewitness() {
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
   docker run --rm -it -v $PWD:/tmp/EyeWitness eyewitness -f /tmp/EyeWitness/$@ -d /tmp/EyeWitness/eyewitness_$TIMESTAMP
   CONTENT="$@ completed"
   dunst-handle "EyeWitness - $CONTENT" "file:///$PWD/eyewitness_$TIMESTAMP/report.html" &; disown
 }
 
-d-screenshot() {
+d.screenshot() {
   if [[ "$#" -lt "2" ]]; then
     echo "d-screenshot <screenshot|full_screenshot|screenshot_series|full_screenshot_series> <URL> [resolution] [delay]"
     return 1
@@ -969,12 +973,12 @@ d-screenshot() {
   docker run --shm-size 1G --rm -v $PWD:/screenshots alekzonder/puppeteer:latest $@
 }
 
-d-cyberchef() {
+d.cyberchef() {
   docker run --rm -d -p ${PORT_CYBERCHEF}:8000 mpepping/cyberchef
   firefox http://localhost:${PORT_CYBERCHEF} &; disown
 }
 
-d-feroxbuster() {
+d.feroxbuster() {
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
   WORK_DIR=$HOME/tool-output/feroxbuster/$TIMESTAMP
   LOOT_DIR="/mnt"
@@ -985,22 +989,22 @@ d-feroxbuster() {
   notify-desktop "feroxbuster - $CONTENT"
 }
 
-d-feroxbuster-slow() {
+d.feroxbuster-slow() {
   d-feroxbuster "$@" -L 2 -t 2
   CONTENT="$@ completed"
   notify-desktop "feroxbuster-slow - $CONTENT"
 }
 
-d-hetty() {
+d.hetty() {
   docker run --rm -v $HOME/.hetty:/root/.hetty -p 8080:8080 dstotijn/hetty
 }
 
-d-spiderfoot(){
+d.spiderfoot(){
   docker run --rm -p ${PORT_SPIDERFOOT}:5001 spiderfoot
   firefox http://127.0.0.1:${PORT_SPIDERFOOT} &; disown
 }
 
-d-arjun(){
+d.arjun(){
   if [[ "$#" -lt "1" ]]; then
     echo "d-arjun <URL>"
     return 1
@@ -1015,7 +1019,7 @@ d-arjun(){
   notify-desktop "arjun - $CONTENT"
 }
 
-d-sniper() {
+d.sniper() {
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
   WORK_DIR=$HOME/tool-output/sn1per/$TIMESTAMP
   LOOT_DIR="/usr/share/sniper/loot/workspace"
@@ -1025,17 +1029,17 @@ d-sniper() {
   notify-desktop "sniper - $CONTENT"
 }
 
-d-impacket() {
+d.impacket() {
   docker run --rm -it rflathers/impacket "$@"
 }
 
-d-smbservehere() {
+d.smbservehere() {
   local sharename
   [[ -z $1 ]] && sharename="SHARE" || sharename=$1
   docker run --rm -it -p 445:445 -v "$(pwd):/tmp/serve" rflathers/impacket smbserver.py -smb2support $sharename /tmp/serve
 }
 
-d-nginxconfig() {
+d.nginxconfig() {
   if [[ ! -f "./default.conf" ]]; then
     echo "ERROR: ./default.conf not found"
     return 1
@@ -1044,77 +1048,77 @@ d-nginxconfig() {
   docker run --rm -p 1080:1080 -v "$(pwd)/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx
 }
 
-d-nginxhere() {
+d.nginxhere() {
   screen -S nginxhere -adm docker run --rm -it -p 1080:80 -p 443:443 -v "$(pwd):/srv/data" rflathers/nginxserve
   firefox http://127.0.0.1 &; disown
 }
 
-d-webdavhere() {
+d.webdavhere() {
   docker run --rm -it -p 1080:80 -v "$(pwd):/srv/data/share" rflathers/webdav
 }
 
-d-metasploit() {
+d.metasploit() {
   mkdir -p $HOME/.msf4
   docker run --rm -it -v "${HOME}/.msf4:/home/msf/.msf4" metasploitframework/metasploit-framework ./msfconsole "$@"
 }
 
-d-metasploitports() {
+d.metasploitports() {
   mkdir -p $HOME/.msf4
   docker run --rm -it -v "${HOME}/.msf4:/home/msf/.msf4" -p 8080-8085:8080-8085 metasploitframework/metasploit-framework ./msfconsole "$@"
 }
 
-d-msfvenomhere() {
+d.msfvenomhere() {
   mkdir -p $HOME/.msf4
   docker run --rm -it -v "${HOME}/.msf4:/home/msf/.msf4" -v "$(pwd):/data" metasploitframework/metasploit-framework ./msfvenom "$@"
 }
 
-d-reqdump() {
+d.reqdump() {
   docker run --rm -it -p 1080:3000 rflathers/reqdump
 }
 
-d-postfiledumphere() {
+d.postfiledumphere() {
   docker run --rm -it -p 1080:3000 -v "$(pwd):/data" rflathers/postfiledump
 }
 
-d-kali() {
+d.kali() {
   docker run -it --rm booyaabes/kali-linux-full /bin/bash "$@"
 }
 
-d-kalihere() {
+d.kalihere() {
   dirname=${PWD##*/}
   docker run -it --rm -v "$(pwd):/${dirname}" -w /${dirname} booyaabes/kali-linux-full /bin/bash
 }
 
-d-dirb() {
+d.dirb() {
   docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full dirb "$@"
 }
 
-d-enum4linux() {
+d.enum4linux() {
   docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full enum4linux -a "$@"
 }
 
-d-nbtscan() {
+d.nbtscan() {
   docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full nbtscan -r "$@"
 }
 
-d-dnschef() {
+d.dnschef() {
   docker run -it --rm -w /data -v $(pwd):/data --net=host booyaabes/kali-linux-full dnschef "$@"
 }
 
-d-hping3() {
+d.hping3() {
   docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full hping3 "$@"
 }
 
-d-rpcclient() {
+d.rpcclient() {
   docker run -it --rm --net=host booyaabes/kali-linux-full rpcclient -U "" -N "$@" -c querydispinfo
   docker run -it --rm --net=host booyaabes/kali-linux-full rpcclient -U "" -N "$@" -c enumdomusers
 }
 
-d-responder() {
+d.responder() {
   docker run -it --rm --net=host booyaabes/kali-linux-full responder "$@"
 }
 
-d-smbclient() {
+d.smbclient() {
   if [[ "$#" -lt "1" ]]; then
     echo "d-smbclient <IP>"
     return 1
@@ -1135,7 +1139,7 @@ d-smbclient() {
   done
 }
 
-d-nikto() {
+d.nikto() {
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
   WORK_DIR=$HOME/tool-output/nikto/$TIMESTAMP
   LOOT_DIR="/data"
@@ -1146,7 +1150,7 @@ d-nikto() {
   notify-desktop "nikto - $CONTENT"
 }
 
-d-nmap() {
+d.nmap() {
   TIMESTAMP=`date +%Y%m%d_%H%M%S`
   WORK_DIR=$HOME/tool-output/nmap/$TIMESTAMP
   LOOT_DIR="/mnt"
@@ -1158,19 +1162,19 @@ d-nmap() {
   fi
 }
 
-d-nmap-smb() {
+d.nmap-smb() {
   docker run -it --rm -w /data -v $(pwd):/data booyaabes/kali-linux-full nmap --script "safe or smb-enum-*" -p 445 "$@"
 }
 
-d-rustscan() {
+d.rustscan() {
   docker run --rm cmnatic/rustscan:debian-buster rustscan $@
 }
 
-d-searchsploit() {
+d.searchsploit() {
   docker run --rm booyaabes/kali-linux-full searchsploit $@
 }
 
-d-wpscan() {
+d.wpscan() {
   if [[ "$#" -ne "2" ]]; then
     echo "d-wpscan <URL> <WPSCAN_API_TOKEN>"
     return 1
@@ -1179,11 +1183,11 @@ d-wpscan() {
   docker run --rm wpscanteam/wpscan --url $1 --api-token $2 --enumerate p,u --plugins-detection aggressive
 }
 
-d-whatweb() {
+d.whatweb() {
   docker run --rm guidelacour/whatweb ./whatweb $@
 }
 
-d-apkleaks() {
+d.apkleaks() {
   if [[ "$#" -ne "1" ]]; then
     echo "d-apkleaks <APK>"
     return 1
@@ -1193,12 +1197,12 @@ d-apkleaks() {
   docker run -it --rm -v $(pwd):/${dirname} apkleaks -f /${dirname}/$1
 }
 
-d-mobsf() {
+d.mobsf() {
   docker run --rm -d -p ${PORT_MOBSF}:8000 opensecurity/mobile-security-framework-mobsf
   firefox http://localhost:${PORT_MOBSF} &; disown
 }
 
-d-ffuf() {
+d.ffuf() {
   if [[ "$#" -ne "2" ]]; then
     echo "d-ffuf <wordlist> <url>"
     return 1
@@ -1217,7 +1221,7 @@ d-ffuf() {
 ###
 ### Educational docker images
 ###
-d-lab-start() {
+d.lab-start() {
   d-altoro
   d-dvwa
   d-vulnerablewordpress
@@ -1232,7 +1236,7 @@ d-lab-start() {
   d-security-ninjas
 }
 
-d-lab-kill() {
+d.lab-kill() {
    docker stop vulnerablewordpress \
          nowasp \
          juice-shop \
@@ -1247,66 +1251,66 @@ d-lab-kill() {
          security-ninjas
 }
 
-d-altoro() {
+d.altoro() {
   echo "screen -r altoro"
   screen -S altoro -adm docker run --rm --name altoro -p 127.10.0.1:1080:8080 eystsen/altoro
 }
 
-d-securityshepherd(){
+d.securityshepherd(){
   docker run -i -p 1080:80 -p 8443:443 ismisepaul/securityshepherd /bin/bash
 }
 
-d-dvwa() {
+d.dvwa() {
   echo "screen -r dvwa"
   screen -S dvwa -adm docker run --rm --name dvwa -p 127.10.0.2:1080:80 citizenstig/dvwa
 }
 
-d-vulnerablewordpress() {
+d.vulnerablewordpress() {
   echo "screen -r vulnerablewordpress"
   screen -S vulnerablewordpress -adm docker run --rm --name vulnerablewordpress -p 127.10.0.3:1080:80 -p 3306:3306 l505/vulnerablewordpress
 }
 
-d-vaas-cve-2014-6271() {
+d.vaas-cve-2014-6271() {
   echo "screen -r vaas-cve-2014-6271"
   screen -S vaas-cve-2014-6271 -adm docker run --rm --name vaas-cve-2014-6271 -p 127.10.0.4:1080:80 hmlio/vaas-cve-2014-6271
 }
 
-d-vaas-cve-2014-0160() {
+d.vaas-cve-2014-0160() {
   echo "screen -r vaas-cve-2014-0160"
   screen -S vaas-cve-2014-0160 -adm docker run --rm --name vaas-cve-2014-0160 -p 127.10.0.5:8443:443 hmlio/vaas-cve-2014-0160
 }
 
-d-webgoat() {
+d.webgoat() {
   echo "screen -r webgoat"
   screen -S webgoat -adm docker run --rm --name webgoat -p 127.10.0.6:1080:8080 --name webgoat -it danmx/docker-owasp-webgoat
 }
 
-d-nowasp() {
+d.nowasp() {
   echo "screen -r nowasp"
   screen -S nowasp -adm docker run --rm --name nowasp -p 127.10.0.7:1080:80 citizenstig/nowasp
 }
 
-d-juice-shop() {
+d.juice-shop() {
   echo "screen -r juice-shop"
   screen -S juice-shop -adm docker run --rm --name juice-shop -p 127.10.0.8:1080:3000 bkimminich/juice-shop
 }
 
-d-hackazon() {
+d.hackazon() {
   echo "screen -r hackazon"
   screen -S hackazon -adm docker run --rm --name hackazon -p 127.10.0.9:1080:80 mutzel/all-in-one-hackazon:postinstall supervisord -n
 }
 
-d-tiredful() {
+d.tiredful() {
   echo "screen -r tiredful"
   screen -S tiredful -adm docker run --rm --name tiredful -p 127.10.0.10:1080:8000 tuxotron/tiredful-api
 }
 
-d-xvwa() {
+d.xvwa() {
   echo "screen -r xvwa"
   screen -S xvwa -adm docker run --rm --name xvwa -p 127.10.0.11:1080:80 tuxotron/xvwa
 }
 
-d-security-ninjas() {
+d.security-ninjas() {
   echo "screen -r security-ninjas"
   screen -S security-ninjas -adm docker run --rm --name security-ninjas -p 127.10.0.12:1080:80 opendns/security-ninjas
 }
@@ -1349,1224 +1353,1224 @@ fi
 ### awesome-stacks
 ###
 ###
-ds-net-traefik() {
+ds.net-traefik() {
   docker network create --driver=overlay traefik-net
   docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/traefik.yml traefik
 }
 
 # appwrite
-ds-appwrite() {
+ds.appwrite() {
   ds-net-traefik
   DOMAIN=appwrite.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/appwrite.yml appwrite
   firefox https://appwrite.ds &; disown
   watch docker stack ps appwrite
 }
 
-ds-appwrite-kill() {
+ds.appwrite-kill() {
   docker stack rm appwrite
   sleep 6
   docker volume prune
 }
 
 # bibliogram
-ds-bibliogram() {
+ds.bibliogram() {
   ds-net-traefik
   DOMAIN=bibliogram.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/bibliogram.yml bibliogram
   firefox https://bibliogram.ds &; disown
   watch docker stack ps bibliogram
 }
 
-ds-bibliogram-kill() {
+ds.bibliogram-kill() {
   docker stack rm bibliogram
   sleep 6
   docker volume prune
 }
 
 # bookstack
-ds-bookstack() {
+ds.bookstack() {
   ds-net-traefik
   DOMAIN=bookstack.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/bookstack.yml bookstack
   firefox https://bookstack.ds &; disown
   watch docker stack ps bookstack
 }
 
-ds-bookstack-kill() {
+ds.bookstack-kill() {
   docker stack rm bookstack
   sleep 6
   docker volume prune
 }
 
 # botpress
-ds-botpress() {
+ds.botpress() {
   ds-net-traefik
   DOMAIN=botpress.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/botpress.yml botpress
   firefox https://botpress.ds &; disown
   watch docker stack ps botpress
 }
 
-ds-botpress-kill() {
+ds.botpress-kill() {
   docker stack rm botpress
   sleep 6
   docker volume prune
 }
 
 # calibre
-ds-calibre() {
+ds.calibre() {
   ds-net-traefik
   DOMAIN=calibre.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/calibre.yml calibre
   firefox https://calibre.ds &; disown
   watch docker stack ps calibre
 }
 
-ds-calibre-kill() {
+ds.calibre-kill() {
   docker stack rm calibre
   sleep 6
   docker volume prune
 }
 
 # chatwoot
-ds-chatwoot() {
+ds.chatwoot() {
   ds-net-traefik
   DOMAIN=chatwoot.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/chatwoot.yml chatwoot
   firefox https://chatwoot.ds &; disown
   watch docker stack ps chatwoot
 }
 
-ds-chatwoot-kill() {
+ds.chatwoot-kill() {
   docker stack rm chatwoot
   sleep 6
   docker volume prune
 }
 
 # commento
-ds-commento() {
+ds.commento() {
   ds-net-traefik
   DOMAIN=commento.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/commento.yml commento
   firefox https://commento.ds &; disown
   watch docker stack ps commento
 }
 
-ds-commento-kill() {
+ds.commento-kill() {
   docker stack rm commento
   sleep 6
   docker volume prune
 }
 
 # crater
-ds-crater() {
+ds.crater() {
   ds-net-traefik
   DOMAIN=crater.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/crater.yml crater
   firefox https://crater.ds &; disown
   watch docker stack ps crater
 }
 
-ds-crater-kill() {
+ds.crater-kill() {
   docker stack rm crater
   sleep 6
   docker volume prune
 }
 
 # cryptpad
-ds-cryptpad() {
+ds.cryptpad() {
   ds-net-traefik
   DOMAIN=cryptpad.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/cryptpad.yml cryptpad
   firefox https://cryptpad.ds &; disown
   watch docker stack ps cryptpad
 }
 
-ds-cryptpad-kill() {
+ds.cryptpad-kill() {
   docker stack rm cryptpad
   sleep 6
   docker volume prune
 }
 
 # directus
-ds-directus() {
+ds.directus() {
   ds-net-traefik
   DOMAIN=directus.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/directus.yml directus
   firefox https://directus.ds &; disown
   watch docker stack ps directus
 }
 
-ds-directus-kill() {
+ds.directus-kill() {
   docker stack rm directus
   sleep 6
   docker volume prune
 }
 
 # discourse
-ds-discourse() {
+ds.discourse() {
   ds-net-traefik
   DOMAIN=discourse.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/discourse.yml discourse
   firefox https://discourse.ds &; disown
   watch docker stack ps discourse
 }
 
-ds-discourse-kill() {
+ds.discourse-kill() {
   docker stack rm discourse
   sleep 6
   docker volume prune
 }
 
 # dolibarr
-ds-dolibarr() {
+ds.dolibarr() {
   ds-net-traefik
   DOMAIN=dolibarr.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/dolibarr.yml dolibarr
   firefox https://dolibarr.ds &; disown
   watch docker stack ps dolibarr
 }
 
-ds-dolibarr-kill() {
+ds.dolibarr-kill() {
   docker stack rm dolibarr
   sleep 6
   docker volume prune
 }
 
 # drawio
-ds-drawio() {
+ds.drawio() {
   ds-net-traefik
   DOMAIN=drawio.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/drawio.yml drawio
   firefox https://drawio.ds &; disown
   watch docker stack ps drawio
 }
 
-ds-drawio-kill() {
+ds.drawio-kill() {
   docker stack rm drawio
   sleep 6
   docker volume prune
 }
 
 # element
-ds-element() {
+ds.element() {
   ds-net-traefik
   DOMAIN=element.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/element.yml element
   firefox https://element.ds &; disown
   watch docker stack ps element
 }
 
-ds-element-kill() {
+ds.element-kill() {
   docker stack rm element
   sleep 6
   docker volume prune
 }
 
 # ethercalc
-ds-ethercalc() {
+ds.ethercalc() {
   ds-net-traefik
   DOMAIN=ethercalc.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/ethercalc.yml ethercalc
   firefox https://ethercalc.ds &; disown
   watch docker stack ps ethercalc
 }
 
-ds-ethercalc-kill() {
+ds.ethercalc-kill() {
   docker stack rm ethercalc
   sleep 6
   docker volume prune
 }
 
 # etherpad
-ds-etherpad() {
+ds.etherpad() {
   ds-net-traefik
   DOMAIN=etherpad.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/etherpad.yml etherpad
   firefox https://etherpad.ds &; disown
   watch docker stack ps etherpad
 }
 
-ds-etherpad-kill() {
+ds.etherpad-kill() {
   docker stack rm etherpad
   sleep 6
   docker volume prune
 }
 
 # ethibox
-ds-ethibox() {
+ds.ethibox() {
   ds-net-traefik
   DOMAIN=ethibox.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/ethibox.yml ethibox
   firefox https://ethibox.ds &; disown
   watch docker stack ps ethibox
 }
 
-ds-ethibox-kill() {
+ds.ethibox-kill() {
   docker stack rm ethibox
   sleep 6
   docker volume prune
 }
 
 # fathom
-ds-fathom() {
+ds.fathom() {
   ds-net-traefik
   DOMAIN=fathom.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/fathom.yml fathom
   firefox https://fathom.ds &; disown
   watch docker stack ps fathom
 }
 
-ds-fathom-kill() {
+ds.fathom-kill() {
   docker stack rm fathom
   sleep 6
   docker volume prune
 }
 
 # firefly
-ds-firefly() {
+ds.firefly() {
   ds-net-traefik
   DOMAIN=firefly.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/firefly.yml firefly
   firefox https://firefly.ds &; disown
   watch docker stack ps firefly
 }
 
-ds-firefly-kill() {
+ds.firefly-kill() {
   docker stack rm firefly
   sleep 6
   docker volume prune
 }
 
 # flarum
-ds-flarum() {
+ds.flarum() {
   ds-net-traefik
   DOMAIN=flarum.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/flarum.yml flarum
   firefox https://flarum.ds &; disown
   watch docker stack ps flarum
 }
 
-ds-flarum-kill() {
+ds.flarum-kill() {
   docker stack rm flarum
   sleep 6
   docker volume prune
 }
 
 # framadate
-ds-framadate() {
+ds.framadate() {
   ds-net-traefik
   DOMAIN=framadate.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/framadate.yml framadate
   firefox https://framadate.ds &; disown
   watch docker stack ps framadate
 }
 
-ds-framadate-kill() {
+ds.framadate-kill() {
   docker stack rm framadate
   sleep 6
   docker volume prune
 }
 
 # freshrss
-ds-freshrss() {
+ds.freshrss() {
   ds-net-traefik
   DOMAIN=freshrss.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/freshrss.yml freshrss
   firefox https://freshrss.ds &; disown
   watch docker stack ps freshrss
 }
 
-ds-freshrss-kill() {
+ds.freshrss-kill() {
   docker stack rm freshrss
   sleep 6
   docker volume prune
 }
 
 # ghost
-ds-ghost() {
+ds.ghost() {
   ds-net-traefik
   DOMAIN=ghost.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/ghost.yml ghost
   firefox https://ghost.ds &; disown
   watch docker stack ps ghost
 }
 
-ds-ghost-kill() {
+ds.ghost-kill() {
   docker stack rm ghost
   sleep 6
   docker volume prune
 }
 
 # gitlab
-ds-gitlab() {
+ds.gitlab() {
   ds-net-traefik
   DOMAIN=gitlab.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/gitlab.yml gitlab
   firefox https://gitlab.ds &; disown
   watch docker stack ps gitlab
 }
 
-ds-gitlab-kill() {
+ds.gitlab-kill() {
   docker stack rm gitlab
   sleep 6
   docker volume prune
 }
 
 # gogs
-ds-gogs() {
+ds.gogs() {
   ds-net-traefik
   DOMAIN=gogs.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/gogs.yml gogs
   firefox https://gogs.ds &; disown
   watch docker stack ps gogs
 }
 
-ds-gogs-kill() {
+ds.gogs-kill() {
   docker stack rm gogs
   sleep 6
   docker volume prune
 }
 
 # grafana
-ds-grafana() {
+ds.grafana() {
   ds-net-traefik
   DOMAIN=grafana.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/grafana.yml grafana
   firefox https://grafana.ds &; disown
   watch docker stack ps grafana
 }
 
-ds-grafana-kill() {
+ds.grafana-kill() {
   docker stack rm grafana
   sleep 6
   docker volume prune
 }
 
 # grav
-ds-grav() {
+ds.grav() {
   ds-net-traefik
   DOMAIN=grav.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/grav.yml grav
   firefox https://grav.ds &; disown
   watch docker stack ps grav
 }
 
-ds-grav-kill() {
+ds.grav-kill() {
   docker stack rm grav
   sleep 6
   docker volume prune
 }
 
 # habitica
-ds-habitica() {
+ds.habitica() {
   ds-net-traefik
   DOMAIN=habitica.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/habitica.yml habitica
   firefox https://habitica.ds &; disown
   watch docker stack ps habitica
 }
 
-ds-habitica-kill() {
+ds.habitica-kill() {
   docker stack rm habitica
   sleep 6
   docker volume prune
 }
 
 # hasura
-ds-hasura() {
+ds.hasura() {
   ds-net-traefik
   DOMAIN=hasura.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/hasura.yml hasura
   firefox https://hasura.ds &; disown
   watch docker stack ps hasura
 }
 
-ds-hasura-kill() {
+ds.hasura-kill() {
   docker stack rm hasura
   sleep 6
   docker volume prune
 }
 
 # hedgedoc
-ds-hedgedoc() {
+ds.hedgedoc() {
   ds-net-traefik
   DOMAIN=hedgedoc.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/hedgedoc.yml hedgedoc
   firefox https://hedgedoc.ds &; disown
   watch docker stack ps hedgedoc
 }
 
-ds-hedgedoc-kill() {
+ds.hedgedoc-kill() {
   docker stack rm hedgedoc
   sleep 6
   docker volume prune
 }
 
 # huginn
-ds-huginn() {
+ds.huginn() {
   ds-net-traefik
   DOMAIN=huginn.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/huginn.yml huginn
   firefox https://huginn.ds &; disown
   watch docker stack ps huginn
 }
 
-ds-huginn-kill() {
+ds.huginn-kill() {
   docker stack rm huginn
   sleep 6
   docker volume prune
 }
 
 # invoiceninja
-ds-invoiceninja() {
+ds.invoiceninja() {
   ds-net-traefik
   DOMAIN=invoiceninja.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/invoiceninja.yml invoiceninja
   firefox https://invoiceninja.ds &; disown
   watch docker stack ps invoiceninja
 }
 
-ds-invoiceninja-kill() {
+ds.invoiceninja-kill() {
   docker stack rm invoiceninja
   sleep 6
   docker volume prune
 }
 
 # jenkins
-ds-jenkins() {
+ds.jenkins() {
   ds-net-traefik
   DOMAIN=jenkins.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/jenkins.yml jenkins
   firefox https://jenkins.ds &; disown
   watch docker stack ps jenkins
 }
 
-ds-jenkins-kill() {
+ds.jenkins-kill() {
   docker stack rm jenkins
   sleep 6
   docker volume prune
 }
 
 # jitsi
-ds-jitsi() {
+ds.jitsi() {
   ds-net-traefik
   DOMAIN=jitsi.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/jitsi.yml jitsi
   firefox https://jitsi.ds &; disown
   watch docker stack ps jitsi
 }
 
-ds-jitsi-kill() {
+ds.jitsi-kill() {
   docker stack rm jitsi
   sleep 6
   docker volume prune
 }
 
 # kanboard
-ds-kanboard() {
+ds.kanboard() {
   ds-net-traefik
   DOMAIN=kanboard.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/kanboard.yml kanboard
   firefox https://kanboard.ds &; disown
   watch docker stack ps kanboard
 }
 
-ds-kanboard-kill() {
+ds.kanboard-kill() {
   docker stack rm kanboard
   sleep 6
   docker volume prune
 }
 
 # listmonk
-ds-listmonk() {
+ds.listmonk() {
   ds-net-traefik
   DOMAIN=listmonk.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/listmonk.yml listmonk
   firefox https://listmonk.ds &; disown
   watch docker stack ps listmonk
 }
 
-ds-listmonk-kill() {
+ds.listmonk-kill() {
   docker stack rm listmonk
   sleep 6
   docker volume prune
 }
 
 # magento
-ds-magento() {
+ds.magento() {
   ds-net-traefik
   DOMAIN=magento.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/magento.yml magento
   firefox https://magento.ds &; disown
   watch docker stack ps magento
 }
 
-ds-magento-kill() {
+ds.magento-kill() {
   docker stack rm magento
   sleep 6
   docker volume prune
 }
 
 # mailserver
-ds-mailserver() {
+ds.mailserver() {
   ds-net-traefik
   DOMAIN=mailserver.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mailserver.yml mailserver
   firefox https://mailserver.ds &; disown
   watch docker stack ps mailserver
 }
 
-ds-mailserver-kill() {
+ds.mailserver-kill() {
   docker stack rm mailserver
   sleep 6
   docker volume prune
 }
 
 # mailtrain
-ds-mailtrain() {
+ds.mailtrain() {
   ds-net-traefik
   DOMAIN=mailtrain.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mailtrain.yml mailtrain
   firefox https://mailtrain.ds &; disown
   watch docker stack ps mailtrain
 }
 
-ds-mailtrain-kill() {
+ds.mailtrain-kill() {
   docker stack rm mailtrain
   sleep 6
   docker volume prune
 }
 
 # mastodon
-ds-mastodon() {
+ds.mastodon() {
   ds-net-traefik
   DOMAIN=mastodon.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mastodon.yml mastodon
   firefox https://mastodon.ds &; disown
   watch docker stack ps mastodon
 }
 
-ds-mastodon-kill() {
+ds.mastodon-kill() {
   docker stack rm mastodon
   sleep 6
   docker volume prune
 }
 
 # matomo
-ds-matomo() {
+ds.matomo() {
   ds-net-traefik
   DOMAIN=matomo.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/matomo.yml matomo
   firefox https://matomo.ds &; disown
   watch docker stack ps matomo
 }
 
-ds-matomo-kill() {
+ds.matomo-kill() {
   docker stack rm matomo
   sleep 6
   docker volume prune
 }
 
 # mattermost
-ds-mattermost() {
+ds.mattermost() {
   ds-net-traefik
   DOMAIN=mattermost.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mattermost.yml mattermost
   firefox https://mattermost.ds &; disown
   watch docker stack ps mattermost
 }
 
-ds-mattermost-kill() {
+ds.mattermost-kill() {
   docker stack rm mattermost
   sleep 6
   docker volume prune
 }
 
 # matterwiki
-ds-matterwiki() {
+ds.matterwiki() {
   ds-net-traefik
   DOMAIN=matterwiki.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/matterwiki.yml matterwiki
   firefox https://matterwiki.ds &; disown
   watch docker stack ps matterwiki
 }
 
-ds-matterwiki-kill() {
+ds.matterwiki-kill() {
   docker stack rm matterwiki
   sleep 6
   docker volume prune
 }
 
 # mautic
-ds-mautic() {
+ds.mautic() {
   ds-net-traefik
   DOMAIN=mautic.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mautic.yml mautic
   firefox https://mautic.ds &; disown
   watch docker stack ps mautic
 }
 
-ds-mautic-kill() {
+ds.mautic-kill() {
   docker stack rm mautic
   sleep 6
   docker volume prune
 }
 
 # mediawiki
-ds-mediawiki() {
+ds.mediawiki() {
   ds-net-traefik
   DOMAIN=mediawiki.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mediawiki.yml mediawiki
   firefox https://mediawiki.ds &; disown
   watch docker stack ps mediawiki
 }
 
-ds-mediawiki-kill() {
+ds.mediawiki-kill() {
   docker stack rm mediawiki
   sleep 6
   docker volume prune
 }
 
 # metabase
-ds-metabase() {
+ds.metabase() {
   ds-net-traefik
   DOMAIN=metabase.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/metabase.yml metabase
   firefox https://metabase.ds &; disown
   watch docker stack ps metabase
 }
 
-ds-metabase-kill() {
+ds.metabase-kill() {
   docker stack rm metabase
   sleep 6
   docker volume prune
 }
 
 # minio
-ds-minio() {
+ds.minio() {
   ds-net-traefik
   DOMAIN=minio.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/minio.yml minio
   firefox https://minio.ds &; disown
   watch docker stack ps minio
 }
 
-ds-minio-kill() {
+ds.minio-kill() {
   docker stack rm minio
   sleep 6
   docker volume prune
 }
 
 # mobilizon
-ds-mobilizon() {
+ds.mobilizon() {
   ds-net-traefik
   DOMAIN=mobilizon.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/mobilizon.yml mobilizon
   firefox https://mobilizon.ds &; disown
   watch docker stack ps mobilizon
 }
 
-ds-mobilizon-kill() {
+ds.mobilizon-kill() {
   docker stack rm mobilizon
   sleep 6
   docker volume prune
 }
 
 # monitoring
-ds-monitoring() {
+ds.monitoring() {
   ds-net-traefik
   DOMAIN=monitoring.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/monitoring.yml monitoring
   firefox https://monitoring.ds &; disown
   watch docker stack ps monitoring
 }
 
-ds-monitoring-kill() {
+ds.monitoring-kill() {
   docker stack rm monitoring
   sleep 6
   docker volume prune
 }
 
 # n8n
-ds-n8n() {
+ds.n8n() {
   ds-net-traefik
   DOMAIN=n8n.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/n8n.yml n8n
   firefox https://n8n.ds &; disown
   watch docker stack ps n8n
 }
 
-ds-n8n-kill() {
+ds.n8n-kill() {
   docker stack rm n8n
   sleep 6
   docker volume prune
 }
 
 # nextcloud
-ds-nextcloud() {
+ds.nextcloud() {
   ds-net-traefik
   DOMAIN=nextcloud.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/nextcloud.yml nextcloud
   firefox https://nextcloud.ds &; disown
   watch docker stack ps nextcloud
 }
 
-ds-nextcloud-kill() {
+ds.nextcloud-kill() {
   docker stack rm nextcloud
   sleep 6
   docker volume prune
 }
 
 # nitter
-ds-nitter() {
+ds.nitter() {
   ds-net-traefik
   DOMAIN=nitter.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/nitter.yml nitter
   firefox https://nitter.ds &; disown
   watch docker stack ps nitter
 }
 
-ds-nitter-kill() {
+ds.nitter-kill() {
   docker stack rm nitter
   sleep 6
   docker volume prune
 }
 
 # nocodb
-ds-nocodb() {
+ds.nocodb() {
   ds-net-traefik
   DOMAIN=nocodb.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/nocodb.yml nocodb
   firefox https://nocodb.ds &; disown
   watch docker stack ps nocodb
 }
 
-ds-nocodb-kill() {
+ds.nocodb-kill() {
   docker stack rm nocodb
   sleep 6
   docker volume prune
 }
 
 # odoo
-ds-odoo() {
+ds.odoo() {
   ds-net-traefik
   DOMAIN=odoo.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/odoo.yml odoo
   firefox https://odoo.ds &; disown
   watch docker stack ps odoo
 }
 
-ds-odoo-kill() {
+ds.odoo-kill() {
   docker stack rm odoo
   sleep 6
   docker volume prune
 }
 
 # passbolt
-ds-passbolt() {
+ds.passbolt() {
   ds-net-traefik
   DOMAIN=passbolt.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/passbolt.yml passbolt
   firefox https://passbolt.ds &; disown
   watch docker stack ps passbolt
 }
 
-ds-passbolt-kill() {
+ds.passbolt-kill() {
   docker stack rm passbolt
   sleep 6
   docker volume prune
 }
 
 # peertube
-ds-peertube() {
+ds.peertube() {
   ds-net-traefik
   DOMAIN=peertube.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/peertube.yml peertube
   firefox https://peertube.ds &; disown
   watch docker stack ps peertube
 }
 
-ds-peertube-kill() {
+ds.peertube-kill() {
   docker stack rm peertube
   sleep 6
   docker volume prune
 }
 
 # phpbb
-ds-phpbb() {
+ds.phpbb() {
   ds-net-traefik
   DOMAIN=phpbb.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/phpbb.yml phpbb
   firefox https://phpbb.ds &; disown
   watch docker stack ps phpbb
 }
 
-ds-phpbb-kill() {
+ds.phpbb-kill() {
   docker stack rm phpbb
   sleep 6
   docker volume prune
 }
 
 # pinafore
-ds-pinafore() {
+ds.pinafore() {
   ds-net-traefik
   DOMAIN=pinafore.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/pinafore.yml pinafore
   firefox https://pinafore.ds &; disown
   watch docker stack ps pinafore
 }
 
-ds-pinafore-kill() {
+ds.pinafore-kill() {
   docker stack rm pinafore
   sleep 6
   docker volume prune
 }
 
 # pixelfed
-ds-pixelfed() {
+ds.pixelfed() {
   ds-net-traefik
   DOMAIN=pixelfed.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/pixelfed.yml pixelfed
   firefox https://pixelfed.ds &; disown
   watch docker stack ps pixelfed
 }
 
-ds-pixelfed-kill() {
+ds.pixelfed-kill() {
   docker stack rm pixelfed
   sleep 6
   docker volume prune
 }
 
 # plume
-ds-plume() {
+ds.plume() {
   ds-net-traefik
   DOMAIN=plume.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/plume.yml plume
   firefox https://plume.ds &; disown
   watch docker stack ps plume
 }
 
-ds-plume-kill() {
+ds.plume-kill() {
   docker stack rm plume
   sleep 6
   docker volume prune
 }
 
 # polr
-ds-polr() {
+ds.polr() {
   ds-net-traefik
   DOMAIN=polr.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/polr.yml polr
   firefox https://polr.ds &; disown
   watch docker stack ps polr
 }
 
-ds-polr-kill() {
+ds.polr-kill() {
   docker stack rm polr
   sleep 6
   docker volume prune
 }
 
 # portainer
-ds-portainer() {
+ds.portainer() {
   ds-net-traefik
   DOMAIN=portainer.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/portainer.yml portainer
   firefox https://portainer.ds &; disown
   watch docker stack ps portainer
 }
 
-ds-portainer-kill() {
+ds.portainer-kill() {
   docker stack rm portainer
   sleep 6
   docker volume prune
 }
 
 # posthog
-ds-posthog() {
+ds.posthog() {
   ds-net-traefik
   DOMAIN=posthog.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/posthog.yml posthog
   firefox https://posthog.ds &; disown
   watch docker stack ps posthog
 }
 
-ds-posthog-kill() {
+ds.posthog-kill() {
   docker stack rm posthog
   sleep 6
   docker volume prune
 }
 
 # prestashop
-ds-prestashop() {
+ds.prestashop() {
   ds-net-traefik
   DOMAIN=prestashop.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/prestashop.yml prestashop
   firefox https://prestashop.ds &; disown
   watch docker stack ps prestashop
 }
 
-ds-prestashop-kill() {
+ds.prestashop-kill() {
   docker stack rm prestashop
   sleep 6
   docker volume prune
 }
 
 # pydio
-ds-pydio() {
+ds.pydio() {
   ds-net-traefik
   DOMAIN=pydio.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/pydio.yml pydio
   firefox https://pydio.ds &; disown
   watch docker stack ps pydio
 }
 
-ds-pydio-kill() {
+ds.pydio-kill() {
   docker stack rm pydio
   sleep 6
   docker volume prune
 }
 
 # pytition
-ds-pytition() {
+ds.pytition() {
   ds-net-traefik
   DOMAIN=pytition.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/pytition.yml pytition
   firefox https://pytition.ds &; disown
   watch docker stack ps pytition
 }
 
-ds-pytition-kill() {
+ds.pytition-kill() {
   docker stack rm pytition
   sleep 6
   docker volume prune
 }
 
 # rainloop
-ds-rainloop() {
+ds.rainloop() {
   ds-net-traefik
   DOMAIN=rainloop.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/rainloop.yml rainloop
   firefox https://rainloop.ds &; disown
   watch docker stack ps rainloop
 }
 
-ds-rainloop-kill() {
+ds.rainloop-kill() {
   docker stack rm rainloop
   sleep 6
   docker volume prune
 }
 
 # redmine
-ds-redmine() {
+ds.redmine() {
   ds-net-traefik
   DOMAIN=redmine.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/redmine.yml redmine
   firefox https://redmine.ds &; disown
   watch docker stack ps redmine
 }
 
-ds-redmine-kill() {
+ds.redmine-kill() {
   docker stack rm redmine
   sleep 6
   docker volume prune
 }
 
 # registry
-ds-registry() {
+ds.registry() {
   ds-net-traefik
   DOMAIN=registry.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/registry.yml registry
   firefox https://registry.ds &; disown
   watch docker stack ps registry
 }
 
-ds-registry-kill() {
+ds.registry-kill() {
   docker stack rm registry
   sleep 6
   docker volume prune
 }
 
 # rocketchat
-ds-rocketchat() {
+ds.rocketchat() {
   ds-net-traefik
   DOMAIN=rocketchat.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/rocketchat.yml rocketchat
   firefox https://rocketchat.ds &; disown
   watch docker stack ps rocketchat
 }
 
-ds-rocketchat-kill() {
+ds.rocketchat-kill() {
   docker stack rm rocketchat
   sleep 6
   docker volume prune
 }
 
 # rsshub
-ds-rsshub() {
+ds.rsshub() {
   ds-net-traefik
   DOMAIN=rsshub.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/rsshub.yml rsshub
   firefox https://rsshub.ds &; disown
   watch docker stack ps rsshub
 }
 
-ds-rsshub-kill() {
+ds.rsshub-kill() {
   docker stack rm rsshub
   sleep 6
   docker volume prune
 }
 
 # scrumblr
-ds-scrumblr() {
+ds.scrumblr() {
   ds-net-traefik
   DOMAIN=scrumblr.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/scrumblr.yml scrumblr
   firefox https://scrumblr.ds &; disown
   watch docker stack ps scrumblr
 }
 
-ds-scrumblr-kill() {
+ds.scrumblr-kill() {
   docker stack rm scrumblr
   sleep 6
   docker volume prune
 }
 
 # searx
-ds-searx() {
+ds.searx() {
   ds-net-traefik
   DOMAIN=searx.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/searx.yml searx
   firefox https://searx.ds &; disown
   watch docker stack ps searx
 }
 
-ds-searx-kill() {
+ds.searx-kill() {
   docker stack rm searx
   sleep 6
   docker volume prune
 }
 
 # suitecrm
-ds-suitecrm() {
+ds.suitecrm() {
   ds-net-traefik
   DOMAIN=suitecrm.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/suitecrm.yml suitecrm
   firefox https://suitecrm.ds &; disown
   watch docker stack ps suitecrm
 }
 
-ds-suitecrm-kill() {
+ds.suitecrm-kill() {
   docker stack rm suitecrm
   sleep 6
   docker volume prune
 }
 
 # taiga
-ds-taiga() {
+ds.taiga() {
   ds-net-traefik
   DOMAIN=taiga.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/taiga.yml taiga
   firefox https://taiga.ds &; disown
   watch docker stack ps taiga
 }
 
-ds-taiga-kill() {
+ds.taiga-kill() {
   docker stack rm taiga
   sleep 6
   docker volume prune
 }
 
 # talk
-ds-talk() {
+ds.talk() {
   ds-net-traefik
   DOMAIN=talk.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/talk.yml talk
   firefox https://talk.ds &; disown
   watch docker stack ps talk
 }
 
-ds-talk-kill() {
+ds.talk-kill() {
   docker stack rm talk
   sleep 6
   docker volume prune
 }
 
 # traefik
-ds-traefik() {
+ds.traefik() {
   ds-net-traefik
   DOMAIN=traefik.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/traefik.yml traefik
   firefox https://traefik.ds &; disown
   watch docker stack ps traefik
 }
 
-ds-traefik-kill() {
+ds.traefik-kill() {
   docker stack rm traefik
   sleep 6
   docker volume prune
 }
 
 # umami
-ds-umami() {
+ds.umami() {
   ds-net-traefik
   DOMAIN=umami.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/umami.yml umami
   firefox https://umami.ds &; disown
   watch docker stack ps umami
 }
 
-ds-umami-kill() {
+ds.umami-kill() {
   docker stack rm umami
   sleep 6
   docker volume prune
 }
 
 # uptime-kuma
-ds-uptime-kuma() {
+ds.uptime-kuma() {
   ds-net-traefik
   DOMAIN=uptime-kuma.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/uptime-kuma.yml uptime-kuma
   firefox https://uptime-kuma.ds &; disown
   watch docker stack ps uptime-kuma
 }
 
-ds-uptime-kuma-kill() {
+ds.uptime-kuma-kill() {
   docker stack rm uptime-kuma
   sleep 6
   docker volume prune
 }
 
 # waiting
-ds-waiting() {
+ds.waiting() {
   ds-net-traefik
   DOMAIN=waiting.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/waiting.yml waiting
   firefox https://waiting.ds &; disown
   watch docker stack ps waiting
 }
 
-ds-waiting-kill() {
+ds.waiting-kill() {
   docker stack rm waiting
   sleep 6
   docker volume prune
 }
 
 # wallabag
-ds-wallabag() {
+ds.wallabag() {
   ds-net-traefik
   DOMAIN=wallabag.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/wallabag.yml wallabag
   firefox https://wallabag.ds &; disown
   watch docker stack ps wallabag
 }
 
-ds-wallabag-kill() {
+ds.wallabag-kill() {
   docker stack rm wallabag
   sleep 6
   docker volume prune
 }
 
 # wekan
-ds-wekan() {
+ds.wekan() {
   ds-net-traefik
   DOMAIN=wekan.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/wekan.yml wekan
   firefox https://wekan.ds &; disown
   watch docker stack ps wekan
 }
 
-ds-wekan-kill() {
+ds.wekan-kill() {
   docker stack rm wekan
   sleep 6
   docker volume prune
 }
 
 # whoogle-search
-ds-whoogle-search() {
+ds.whoogle-search() {
   ds-net-traefik
   DOMAIN=whoogle-search.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/whoogle-search.yml whoogle-search
   firefox https://whoogle-search.ds &; disown
   watch docker stack ps whoogle-search
 }
 
-ds-whoogle-search-kill() {
+ds.whoogle-search-kill() {
   docker stack rm whoogle-search
   sleep 6
   docker volume prune
 }
 
 # wikijs
-ds-wikijs() {
+ds.wikijs() {
   ds-net-traefik
   DOMAIN=wikijs.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/wikijs.yml wikijs
   firefox https://wikijs.ds &; disown
   watch docker stack ps wikijs
 }
 
-ds-wikijs-kill() {
+ds.wikijs-kill() {
   docker stack rm wikijs
   sleep 6
   docker volume prune
 }
 
 # wordpress
-ds-wordpress() {
+ds.wordpress() {
   ds-net-traefik
   DOMAIN=wordpress.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/wordpress.yml wordpress
   firefox https://wordpress.ds &; disown
   watch docker stack ps wordpress
 }
 
-ds-wordpress-kill() {
+ds.wordpress-kill() {
   docker stack rm wordpress
   sleep 6
   docker volume prune
 }
 
 # writefreely
-ds-writefreely() {
+ds.writefreely() {
   ds-net-traefik
   DOMAIN=writefreely.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/writefreely.yml writefreely
   firefox https://writefreely.ds &; disown
   watch docker stack ps writefreely
 }
 
-ds-writefreely-kill() {
+ds.writefreely-kill() {
   docker stack rm writefreely
   sleep 6
   docker volume prune
 }
 
 # zammad
-ds-zammad() {
+ds.zammad() {
   ds-net-traefik
   DOMAIN=zammad.ds docker stack deploy -c ${HOME}/git/misc/awesome-stacks/stacks/zammad.yml zammad
   firefox https://zammad.ds &; disown
   watch docker stack ps zammad
 }
 
-ds-zammad-kill() {
+ds.zammad-kill() {
   docker stack rm zammad
   sleep 6
   docker volume prune
