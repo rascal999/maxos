@@ -34,33 +34,65 @@ def welcome():
   print()
 
 def main():
-    parser = argparse.ArgumentParser(description="Parse masscan/nmap files for Logseq.")
+    parser = argparse.ArgumentParser(description="Parse masscan/nmap/asn files for Logseq.")
     parser.add_argument("--masscan", required=True,
                         help="Masscan JSON file to parse")
     parser.add_argument("--output", required=False, default="logseq.md",
                         help="logseq output file location (default: logseq.md)")
+    parser.add_argument("--asn", required=False, default=False,
+                        help="Directory with ASN JSON results")
 
     parsed = parser.parse_args()
 
     ips = parse_masscan(parsed.masscan)
-    output(ips, parsed.output)
+    output(parsed, ips)
 
-def output(data, output_file):
-  file_exists = exists(output_file)
-  if file_exists:
-    print("ERROR: " + output_file + " exists, bailing")
+def output_asn(parsed,ip):
+  asn_file = parsed.asn + "/asn_" + ip + ".json"
+
+  file_exists = exists(asn_file)
+  if file_exists != True:
+    print("ERROR: " + asn_file + " doesn't exist, bailing")
     sys.exit(1)
 
-  f = open(output_file, "a")
+  asn_fd = open(asn_file)
+  data = json.load(asn_fd)
+  output_str = \
+"""\t- ```
+\t\tReverse name: """ + data['results'][0]['reverse'] + """
+\t\tKnown as: """ + data['results'][0]['reputation']['known_as'] + """
+\t\tNet range: """ + data['results'][0]['routing']['route'] + """
+\t\tOrganisation: """ + data['results'][0]['org_name'] + """
+\t\tNet name: """ + data['results'][0]['net_name'] + """
+\t\tAS Name: """ + data['results'][0]['routing']['as_name'] + """
+\t\tASN: """ + data['results'][0]['routing']['as_number'] + """
+\t\tReputation: """ + data['results'][0]['reputation']['status'] + """
+\t  ```
+"""
+  return str(output_str)
+
+def output(parsed,data):
+  file_exists = exists(parsed.output)
+  if file_exists:
+    print("ERROR: " + parsed.output + " exists, bailing")
+    sys.exit(1)
+
+  f = open(parsed.output, "a")
 
   data_sorted = sorted(data.items(), key=lambda item: socket.inet_aton(item[0]))
   uuid_str = str(uuid.uuid4()).split('-')[0]
 
   for ip in data_sorted:
-    f.write("- # " + ip[0] + "\n")
-    f.write("\t- ## TCP" + "\n")
+    f.write("- ## " + ip[0] + "\n")
+
+    # Include ASN info
+    if parsed.asn != False:
+      f.write(output_asn(parsed,ip[0]))
+
+    f.write("\t- ### TCP" + "\n")
     for port in sorted(data[ip[0]]):
       f.write("\t\t- TODO [" + ip[0] + ":" + str(port) + "]([[" + uuid_str + " " + ip[0] + " TCP " + str(port) + "]])\n")
+      f.write("\t\t\t- XXX\n")
 
 def parse_masscan(file_masscan):
     # Opening JSON file

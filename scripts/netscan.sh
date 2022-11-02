@@ -22,6 +22,9 @@ arg_name="false"
 arg_router_ip="false"
 arg_targets="false"
 
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
 while getopts "i:n:r:s:t:" flag
 do
     case "${flag}" in
@@ -35,14 +38,21 @@ done
 
 # Make sure user selects required options
 if [[ "$arg_name" == "false" || "$arg_targets" == "false" ]]; then
-  echo "ERROR: Scan name and/or targets not provided"
+  printf "${RED}ERROR:${NC} Scan name and/or targets not provided\n"
   echo
   usage
 fi
 
 # Check target range/IP file is a file
 if [[ ! -f "$arg_targets" ]]; then
-  echo "ERROR: Not a valid target file"
+  printf "${RED}ERROR:${NC} Not a valid target file\n"
+  echo
+  usage
+fi
+
+no_ranges=`grep -E "[-/]" $arg_targets | wc -l`
+if [[ "$no_ranges" != "0" ]]; then
+  printf "${RED}ERROR:${NC} One IP per line\n"
   echo
   usage
 fi
@@ -53,7 +63,7 @@ if [[ "$arg_interface" == "false" ]]; then
   arg_auto_interface="true"
 
   if [[ "$arg_interface" == "" ]]; then
-    echo "ERROR: Unable to automatically select an interface to scan from"
+    printf "${RED}ERROR:${NC} Unable to automatically select an interface to scan from\n"
     exit 1
   fi
   echo "INFO: Selected $arg_interface network interface for scanning.."
@@ -107,6 +117,11 @@ sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oX ${RESULTS_DIR
 echo "### Masscan open TCP ports (top 100)" > ${RESULTS_DIR}/results_masscan_tcp_top_100.txt 
 echo >> ${RESULTS_DIR}/results_masscan_tcp_top_100.txt
 cat ${RESULTS_DIR}/masscan_tcp_top_100.grep | grep -E "^Timestamp: " | choose 3 6 | cut -d '/' -f 1 | sed 's/ /:/g' | sort -V >> ${RESULTS_DIR}/results_masscan_tcp_top_100.txt
+echo
+
+# ASN
+echo "### Gathering ASN info"
+xargs -a $arg_targets -P 3 -I % bash -c "/home/user/git/pentest-tools/asn/asn -j % > ${RESULTS_DIR}/asn_%.json"
 echo
 
 # masscan TCP all
