@@ -67,6 +67,19 @@ firefox $RESULTS_DIR
 
 echo
 
+# Tester info
+echo "### Tester source IP" > ${RESULTS_DIR}/tester_info.txt
+curl https://ifconfig.me >> ${RESULTS_DIR}/tester_info.txt
+echo >> ${RESULTS_DIR}/tester_info.txt
+
+echo "### Network scan start date" >> ${RESULTS_DIR}/tester_info.txt
+date >> ${RESULTS_DIR}/tester_info.txt
+echo >> ${RESULTS_DIR}/tester_info.txt
+
+echo "### Interface information" >> ${RESULTS_DIR}/tester_info.txt
+ip a >> ${RESULTS_DIR}/tester_info.txt
+echo >> ${RESULTS_DIR}/tester_info.txt
+
 # Ping sweep
 echo "### Ping sweep"
 sudo time nmap -e $arg_interface -iL $arg_targets -sn -n -T4 -oA ${RESULTS_DIR}/nmap_ping_scan
@@ -126,3 +139,7 @@ echo
 # nmap UDP common
 echo "### nmap UDP common"
 sudo time nmap -Pn -A -e $arg_interface -T4 -sU -iL $arg_targets -oA ${RESULTS_DIR}/nmap_udp_scan
+
+echo "### Network scan end date" >> ${RESULTS_DIR}/tester_info.txt
+date >> ${RESULTS_DIR}/tester_info.txt
+echo >> ${RESULTS_DIR}/tester_info.txt
