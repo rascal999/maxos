@@ -92,6 +92,8 @@ new() {
   echo "a.fo                        Open Firefox at CWD"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
+  echo "a.netscan                   Network scanning (nmap/masscan)"
+  echo "a.netscanparse              Format netscan results for Logseq"
   echo "aria2c                      wget alternative"
   echo "arsenal                     Generate commands for security and network tools"
   echo "broot                       File explorer"
