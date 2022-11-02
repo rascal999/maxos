@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from os.path import exists
+
 import argparse
 import collections
 import configparser
@@ -33,23 +35,32 @@ def welcome():
 
 def main():
     parser = argparse.ArgumentParser(description="Parse masscan/nmap files for Logseq.")
-    parser.add_argument("--masscan", required=False,
+    parser.add_argument("--masscan", required=True,
                         help="Masscan JSON file to parse")
+    parser.add_argument("--output", required=False, default="logseq.md",
+                        help="logseq output file location (default: logseq.md)")
 
     parsed = parser.parse_args()
 
     ips = parse_masscan(parsed.masscan)
-    output(ips)
+    output(ips, parsed.output)
 
-def output(data):
+def output(data, output_file):
+  file_exists = exists(output_file)
+  if file_exists:
+    print("ERROR: " + output_file + " exists, bailing")
+    sys.exit(1)
+
+  f = open(output_file, "a")
+
   data_sorted = sorted(data.items(), key=lambda item: socket.inet_aton(item[0]))
-  #print(data_sorted)
   uuid_str = str(uuid.uuid4()).split('-')[0]
+
   for ip in data_sorted:
-    print("- # " + ip[0])
-    print("\t- ## TCP")
+    f.write("- # " + ip[0] + "\n")
+    f.write("\t- ## TCP" + "\n")
     for port in sorted(data[ip[0]]):
-      print("\t\t- TODO [" + ip[0] + ":" + str(port) + "]([[" + uuid_str + " " + ip[0] + " TCP " + str(port) + "]])")
+      f.write("\t\t- TODO [" + ip[0] + ":" + str(port) + "]([[" + uuid_str + " " + ip[0] + " TCP " + str(port) + "]])\n")
 
 def parse_masscan(file_masscan):
     # Opening JSON file
