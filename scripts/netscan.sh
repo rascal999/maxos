@@ -59,7 +59,7 @@ if [[ "$no_ranges" != "0" ]]; then
 fi
 
 # Remove spaces in file
-sed -i 's/ //g' $arg_targets
+sed -i 's/[ \t]//g' $arg_targets
 
 # Select interface or bail on fail
 if [[ "$arg_interface" == "false" ]]; then
