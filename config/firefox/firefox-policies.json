@@ -9,8 +9,8 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
-      "jid1-AWt6ex5aPvWtTg@jetpack": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shodan_io/addon-2705262-latest.xpi",
+      "firefox-extension@shodan.io": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shodan-addon/addon-3788939-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "DontFuckWithPaste@raim.ist": {
