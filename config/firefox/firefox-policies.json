@@ -9,7 +9,7 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
-      "aea49ee9-c3aa-4841-9752-e84a28adff4b": {
+      "{aea49ee9-c3aa-4841-9752-e84a28adff4b}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shodan/addon-2705262-latest.xpi",
         "installation_mode": "normal_installed"
       },
