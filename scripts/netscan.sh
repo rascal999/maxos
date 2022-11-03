@@ -50,12 +50,16 @@ if [[ ! -f "$arg_targets" ]]; then
   usage
 fi
 
+# Check individual IPs per line
 no_ranges=`grep -E "[-/]" $arg_targets | wc -l`
 if [[ "$no_ranges" != "0" ]]; then
   printf "${RED}ERROR:${NC} One IP per line\n"
   echo
   usage
 fi
+
+# Remove spaces in file
+sed -i 's/ //g' $arg_targets
 
 # Select interface or bail on fail
 if [[ "$arg_interface" == "false" ]]; then
