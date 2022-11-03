@@ -52,22 +52,70 @@ def output_asn(parsed,ip):
 
   file_exists = exists(asn_file)
   if file_exists != True:
-    print("ERROR: " + asn_file + " doesn't exist, bailing")
-    sys.exit(1)
-
-  asn_fd = open(asn_file)
-  data = json.load(asn_fd)
-  output_str = \
+    print("WARNING: " + asn_file + " doesn't exist")
+    output_str = \
 """\t- ```
-\t\tReverse name: """ + data['results'][0]['reverse'] + """
-\t\tKnown as: """ + data['results'][0]['reputation']['known_as'] + """
-\t\tNet range: """ + data['results'][0]['routing']['route'] + """
-\t\tOrganisation: """ + data['results'][0]['org_name'] + """
-\t\tNet name: """ + data['results'][0]['net_name'] + """
-\t\tAS Name: """ + data['results'][0]['routing']['as_name'] + """
-\t\tASN: """ + data['results'][0]['routing']['as_number'] + """
-\t\tReputation: """ + data['results'][0]['reputation']['status'] + """
+ Could not fetch ANS info
 \t  ```
+"""
+  else:
+    print("INFO: Processing " + asn_file)
+    asn_fd = open(asn_file)
+    data = json.load(asn_fd)
+
+    asn_reverse_name = "N/A"
+    asn_known_as = "N/A"
+    asn_net_range = "N/A"
+    asn_org_name = "N/A"
+    asn_net_name = "N/A"
+    asn_name = "N/A"
+    asn = "N/A"
+    asn_reputation_status = "N/A"
+
+    try:
+      asn_reverse_name = data['results'][0]['reverse']
+    except:
+      pass
+    try:
+      asn_known_as = data['results'][0]['reputation']['known_as']
+    except:
+      pass
+    try:
+      asn_net_range = data['results'][0]['routing']['route']
+    except:
+      pass
+    try:
+      asn_org_name = data['results'][0]['org_name']
+    except:
+      pass
+    try:
+      asn_net_name = data['results'][0]['net_name']
+    except:
+      pass
+    try:
+      asn_name = data['results'][0]['routing']['as_name']
+    except:
+      pass
+    try:
+      asn = data['results'][0]['routing']['as_number']
+    except:
+      pass
+    try:
+      asn_reputation_status = data['results'][0]['reputation']['status']
+    except:
+      pass
+
+    output_str = \
+"""\t- ```
+ Reverse name: """ + asn_reverse_name + """
+ Known as: """ + asn_known_as + """
+ Net range: """ + asn_net_range + """
+ Organisation: """ + asn_org_name  + """
+ Net name: """ + asn_net_name + """
+ AS Name: """ + asn_name + """
+ ASN: """ + asn + """
+ Reputation: """ + asn_reputation_status + """
+```
 """
   return str(output_str)
 

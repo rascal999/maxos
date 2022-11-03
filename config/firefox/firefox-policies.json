@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "firefox-extension@shodan.io": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shodan/addon-2705262-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "DontFuckWithPaste@raim.ist": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/don-t-fuck-with-paste/addon-816029-latest.xpi",
         "installation_mode": "normal_installed"
