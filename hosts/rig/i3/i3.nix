@@ -23,12 +23,12 @@
           command = "exec ${pkgs.logseq}/bin/logseq";
         }
         {
-          command = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
+          command = "exec ${pkgs.teams}/bin/teams";
         }
       ];
 
       assigns."7" = [
-        { class = "^Chromium\\-browser$"; instance = "^chromium\\-browser$"; }
+        { class = "^Microsoft\\ Teams.*"; instance = "^microsoft\\ teams.*"; }
       ];
       assigns."2" = [
         { class = "^Logseq$"; instance = "^logseq$"; }

@@ -9,6 +9,7 @@ in {
     extraConfig = ''
       default_border pixel 1
       for_window [title=".*YouTube.*"] move to workspace "10";
+      for_window [title=".*Microsoft Teams.*"] move to workspace "7";
     '';
 
     config = {
@@ -26,6 +27,7 @@ in {
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
         "${mod}+Shift+p" = "restart";
+        "${mod}+Shift+t" = "exec ${pkgs.teams}/bin/teams";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
