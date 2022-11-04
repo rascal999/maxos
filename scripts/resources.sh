@@ -151,6 +151,7 @@ function pull_misc_things() {
   docker pull privatebin/nginx-fpm-alpine                           # PrivateBin docker image
   docker pull ghcr.io/requarks/wiki                                 # Wiki.js | A modern and powerful wiki app built on Node.js
   docker pull searxng/searxng                                       # Free internet metasearch engine
+  docker pull danielgatis/rembg                                     # Rembg is a tool to remove images background
 
   git_update https://github.com/nocodb/nocodb.git $HOME/git/misc/nocodb
   git_update https://github.com/ethibox/awesome-stacks.git $HOME/git/misc/awesome-stacks

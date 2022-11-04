@@ -2231,6 +2231,10 @@
                 "url": "https://images.google.com/"
               },
               {
+                "name": "rembg",
+                "url": "http://127.0.0.1:10130/docs"
+              },
+              {
                 "name": "Yandex Images",
                 "url": "https://yandex.com/images/"
               }

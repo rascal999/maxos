@@ -144,6 +144,14 @@
       image = "attack-navigator";
       ports = [ "127.0.0.1:10120:4200" ];
     };
+
+    rembg = {
+      cmd = [
+              "s"
+            ];
+      image = "danielgatis/rembg";
+      ports = [ "127.0.0.1:10130:5000" ];
+    };
   };
 
   systemd.services.docker-nginx.serviceConfig.TimeoutStopSec = lib.mkForce 15;
@@ -165,4 +173,5 @@
   systemd.services.docker-jsoncrack.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-gifcap.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-attack-navigator.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
