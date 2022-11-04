@@ -130,6 +130,20 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+  programs.dconf.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+    };
+  };
+  hardware.pulseaudio.extraConfig = "
+    load-module module-switch-on-connect
+  ";
+  fileSystems."/var/lib/bluetooth" = {
+    device = "/persist/var/lib/bluetooth";
+    options = [ "bind" "noauto" "x-systemd.automount" ];
+    noCheck = true;
+  };
 
   # Timesync
   #services.timesyncd.enable = true;
