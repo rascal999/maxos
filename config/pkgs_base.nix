@@ -352,6 +352,7 @@
     sx-go                                                                                                # Command-line network scanner
     tcpflow                                                                                              # TCP stream extractor
     tcpreplay                                                                                            # A suite of utilities for editing and replaying network traffic
+    teams                                                                                                # Microsoft Teams
     teler                                                                                                # Real-time HTTP Intrusion Detection
     testssl                                                                                              # CLI tool to check a server's TLS/SSL capabilities
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
