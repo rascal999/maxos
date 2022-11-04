@@ -10,8 +10,8 @@ if [[ `hostname` == "rig" ]]; then
 
     #sleep 4
 
-    i3-msg "workspace 10, move workspace to output DP-4"
-    i3-msg "workspace 7, move workspace to output HDMI-0"
+    i3-msg "workspace 10, move workspace to output HDMI-0"
+    i3-msg "workspace 7, move workspace to output DP-4"
     i3-msg "workspace 2, move workspace to output USB-C-0"
     i3-msg "workspace 1, move workspace to output USB-C-0"
 
