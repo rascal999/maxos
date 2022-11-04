@@ -4,9 +4,9 @@ if [[ `hostname` == "rig" ]]; then
     sleep 2
 
     # 0
-    /run/current-system/sw/bin/xrandr --output DP-4 --auto --right-of HDMI-0
+    /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --left-of DP-4
     # 2
-    /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --left-of HDMI-0
+    /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --right-of DP-4
 
     #sleep 4
 
