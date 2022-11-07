@@ -35,7 +35,7 @@ while getopts "adi:n:pr:s:t:" flag
 do
     case "${flag}" in
         a) arg_alert="true";;
-        d) arg_masscan_docker="false";;
+        d) arg_masscan_docker="true";;
         i) arg_interface="${OPTARG}";;
         n) arg_name="${OPTARG}";;
         p) arg_ping_scan_only="true";;
