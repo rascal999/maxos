@@ -130,10 +130,9 @@ fi
 # masscan TCP top 100
 echo "### Masscan TCP top 100"
 if [[ "$arg_masscan_docker" == "true" || "$arg_auto_interface" == "true" ]]; then
-  cp $arg_targets $RESULTS_DIR
-  arg_targets_file=`echo $arg_targets | choose --field-separator '/' -1`
+  cp $arg_targets $RESULTS_DIR/targets.txt
 
-  time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file --top-ports=100 --rate=5000 -oB /mnt/masscan_tcp_top_100.bin
+  time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/targets.txt --top-ports=100 --rate=5000 -oB /mnt/masscan_tcp_top_100.bin
   if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
     /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
@@ -159,20 +158,21 @@ echo
 
 # ASN
 echo "### Gathering ASN info"
-xargs -a $arg_targets -P 3 -I % bash -c "/home/user/git/pentest-tools/asn/asn -j % > ${RESULTS_DIR}/asn_%.json"
+cat $arg_targets | grep -vE '^(192\.168|10\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.)' > ${RESULTS_DIR}/public_ips.txt
+xargs -a ${RESULTS_DIR}/public_ips.txt -P 3 -I % bash -c "/home/user/git/pentest-tools/asn/asn -j % > ${RESULTS_DIR}/asn_%.json"
 echo
 
 # masscan TCP all
 echo "### Masscan TCP all"
 if [[ "$arg_masscan_docker" == "true" || "$arg_auto_interface" == "true" ]]; then
-  time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file -p - --rate=5000 -oB /mnt/masscan_tcp_all.bin
+  time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/targets.txt -p 0-65535 --rate=5000 -oB /mnt/masscan_tcp_all.bin
   if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
     /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
     exit 1
   fi
 else
-  sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
+  sudo time masscan -iL $arg_targets --interface $arg_interface -p 0-65535 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
   if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
     /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
