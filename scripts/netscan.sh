@@ -29,7 +29,7 @@ arg_targets="false"
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-while getopts "a:i:n:pr:s:t:" flag
+while getopts "ai:n:pr:s:t:" flag
 do
     case "${flag}" in
         a) arg_alert="true";;
