@@ -2,13 +2,14 @@
 
 usage() {
   echo "Net scan script"
-  echo "Usage: $0 -n <scan-name> -t <targets-file> [-i <interface>] [-p]" 1>&2;
+  echo "Usage: $0 -n <scan-name> -t <targets-file> [-d] [-i <interface>] [-p]" 1>&2;
   echo
-  echo "-a (alert)          Alert on scan completion"
-  echo "-n (Scan name)      Name of scan"
-  echo "-p (Ping scan)      Ping scan only"
-  echo "-t (Targets file)   Targets file"
-  echo "-i (Interface)      Interface to scan from"
+  echo "-a (alert)           Alert on scan completion"
+  echo "-d (Docker masscan)  Use masscan in docker image (if you're having interface trouble)"
+  echo "-n (Scan name)       Name of scan"
+  echo "-p (Ping scan)       Ping scan only"
+  echo "-t (Targets file)    Targets file"
+  echo "-i (Interface)       Interface to scan from"
   echo
   echo "Examples:"
   echo "# Basic usage"
@@ -21,6 +22,7 @@ arg_alert="false"
 arg_auto_interface="false"
 arg_interface="false"
 arg_mac="false"
+arg_masscan_docker="false"
 arg_name="false"
 arg_ping_scan_only="false"
 arg_router_ip="false"
@@ -29,10 +31,11 @@ arg_targets="false"
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-while getopts "ai:n:pr:s:t:" flag
+while getopts "adi:n:pr:s:t:" flag
 do
     case "${flag}" in
         a) arg_alert="true";;
+        d) arg_masscan_docker="false";;
         i) arg_interface="${OPTARG}";;
         n) arg_name="${OPTARG}";;
         p) arg_ping_scan_only="true";;
@@ -126,13 +129,23 @@ fi
 
 # masscan TCP top 100
 echo "### Masscan TCP top 100"
-if [[ "$arg_auto_interface" == "true" ]]; then
+if [[ "$arg_masscan_docker" == "true" || "$arg_auto_interface" == "true" ]]; then
   cp $arg_targets $RESULTS_DIR
   arg_targets_file=`echo $arg_targets | choose --field-separator '/' -1`
 
   time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file --top-ports=100 --rate=5000 -oB /mnt/masscan_tcp_top_100.bin
+  if [[ "" != "0" ]]; then
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+    printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    exit 1
+  fi
 else
   sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_top_100.bin
+  if [[ "" != "0" ]]; then
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+    printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    exit 1
+  fi
 fi
 
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_top_100.bin -oG ${RESULTS_DIR}/masscan_tcp_top_100.grep
@@ -151,10 +164,20 @@ echo
 
 # masscan TCP all
 echo "### Masscan TCP all"
-if [[ "$arg_auto_interface" == "true" ]]; then
+if [[ "$arg_masscan_docker" == "true" || "$arg_auto_interface" == "true" ]]; then
   time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file -p - --rate=5000 -oB /mnt/masscan_tcp_all.bin
+  if [[ "" != "0" ]]; then
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+    printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    exit 1
+  fi
 else
   sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
+  if [[ "" != "0" ]]; then
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+    printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    exit 1
+  fi
 fi
 
 sudo masscan --readscan ${RESULTS_DIR}/masscan_tcp_all.bin -oG ${RESULTS_DIR}/masscan_tcp_all.grep
