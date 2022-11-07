@@ -119,7 +119,7 @@ if [[ "$arg_ping_scan_only" == "true" ]]; then
   # Alert?
   if [[ "$arg_alert" == "true" ]]; then
     active_host_count=`cat ${RESULTS_DIR}/nmap_ping_scan.gnmap | grep "Status: Up" | choose 1 | wc -l`
-    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan finished ping sweep on $arg_interface interface, $active_host_count active hosts"
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan finished ping sweep on $arg_interface interface, $active_host_count active host(s)"
   fi
   exit 0
 fi
