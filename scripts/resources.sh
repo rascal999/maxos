@@ -904,4 +904,4 @@ if [ $arg_zims == 1 ]; then
 fi
 
 # Notify
-/home/user/git/maxos/scripts/telegram_notify.sh -a -m "Finished updating resources."
+/home/user/git/maxos/scripts/telegram_notify.sh -a -m "Finished updating resources"

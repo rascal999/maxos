@@ -4,6 +4,7 @@ usage() {
   echo "Net scan script"
   echo "Usage: $0 -n <scan-name> -t <targets-file> [-i <interface>] [-p]" 1>&2;
   echo
+  echo "-a (alert)          Alert on scan completion"
   echo "-n (Scan name)      Name of scan"
   echo "-p (Ping scan)      Ping scan only"
   echo "-t (Targets file)   Targets file"
@@ -16,6 +17,7 @@ usage() {
   exit 1;
 }
 
+arg_alert="false"
 arg_auto_interface="false"
 arg_interface="false"
 arg_mac="false"
@@ -27,9 +29,10 @@ arg_targets="false"
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-while getopts "i:n:pr:s:t:" flag
+while getopts "a:i:n:pr:s:t:" flag
 do
     case "${flag}" in
+        a) arg_alert="true";;
         i) arg_interface="${OPTARG}";;
         n) arg_name="${OPTARG}";;
         p) arg_ping_scan_only="true";;
@@ -113,6 +116,10 @@ echo
 # Bail if only ping sweeping
 if [[ "$arg_ping_scan_only" == "true" ]]; then
   echo "Finished ping sweep.."
+  # Alert?
+  if [[ "$arg_alert" == "true" ]]; then
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan finished ping sweep"
+  fi
   exit 0
 fi
 
@@ -175,5 +182,10 @@ sudo time nmap -Pn -A -e $arg_interface -T4 -sU -iL $arg_targets -oA ${RESULTS_D
 echo "### Network scan end date" >> ${RESULTS_DIR}/tester_info.txt
 date >> ${RESULTS_DIR}/tester_info.txt
 echo >> ${RESULTS_DIR}/tester_info.txt
+
+# Alert?
+if [[ "$arg_alert" == "true" ]]; then
+  /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan finished"
+fi
 
 exit 0

@@ -48,7 +48,7 @@ if [[ "$GIT_CURRENT_HASH" != "$GIT_PREV_HASH" ]]; then
   # Problem?
   if [[ "$RETURN_VALUE" == "0" ]]; then
     if [[ "$arg_notify" == "true" ]]; then
-      /home/user/git/maxos/scripts/telegram_notify.sh -m "Finished building VirtualBox VM."
+      /home/user/git/maxos/scripts/telegram_notify.sh -m "Finished building VirtualBox VM"
     fi
 
     echo $GIT_CURRENT_HASH > /tmp/vm_virtualbox_${arg_config}_hash
