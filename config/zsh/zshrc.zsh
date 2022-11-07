@@ -93,6 +93,7 @@ new() {
   echo "a.fo                        Open Firefox at CWD"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
+  echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
   echo "a.netscanparse              Format netscan results for Logseq"
   echo "aria2c                      wget alternative"
@@ -165,6 +166,10 @@ a.ytmp3() {
 
 a.netscan() {
   /home/user/git/maxos/scripts/netscan.sh $@
+}
+
+a.ips() {
+  /home/user/git/maxos/scripts/ips_from_file.py --input $@
 }
 
 a.netscanparse() {
