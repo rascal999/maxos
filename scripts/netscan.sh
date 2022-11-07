@@ -2,9 +2,10 @@
 
 usage() {
   echo "Net scan script"
-  echo "Usage: $0 -n <scan-name> -t <targets-file> [-i <interface>]" 1>&2;
+  echo "Usage: $0 -n <scan-name> -t <targets-file> [-i <interface>] [-p]" 1>&2;
   echo
   echo "-n (Scan name)      Name of scan"
+  echo "-p (Ping scan)      Ping scan only"
   echo "-t (Targets file)   Targets file"
   echo "-i (Interface)      Interface to scan from"
   echo
@@ -19,17 +20,19 @@ arg_auto_interface="false"
 arg_interface="false"
 arg_mac="false"
 arg_name="false"
+arg_ping_scan_only="false"
 arg_router_ip="false"
 arg_targets="false"
 
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-while getopts "i:n:r:s:t:" flag
+while getopts "i:n:pr:s:t:" flag
 do
     case "${flag}" in
         i) arg_interface="${OPTARG}";;
         n) arg_name="${OPTARG}";;
+        p) arg_ping_scan_only="true";;
         r) arg_router_ip="${OPTARG}";;
         s) arg_mac=${OPTARG};;
         t) arg_targets=${OPTARG};;
@@ -98,10 +101,16 @@ echo >> ${RESULTS_DIR}/tester_info.txt
 echo "### Ping sweep"
 sudo time nmap -e $arg_interface -iL $arg_targets -sn -n -T4 -oA ${RESULTS_DIR}/nmap_ping_scan
 
-echo "### These hosts responded to ping sweep (ICMP)" > ${RESULTS_DIR}/results_nmap_ping_scan.txt
+echo "### These hosts responded to ping sweep" > ${RESULTS_DIR}/results_nmap_ping_scan.txt
 echo >> ${RESULTS_DIR}/results_nmap_ping_scan.txt
 cat ${RESULTS_DIR}/nmap_ping_scan.gnmap | grep "Status: Up" | choose 1 >> ${RESULTS_DIR}/results_nmap_ping_scan.txt
 echo
+
+# Bail if only ping sweeping
+if [[ "$arg_ping_scan_only" == "true" ]]; then
+  echo "Finished ping sweep.."
+  exit 0
+fi
 
 # masscan TCP top 100
 echo "### Masscan TCP top 100"
@@ -162,3 +171,5 @@ sudo time nmap -Pn -A -e $arg_interface -T4 -sU -iL $arg_targets -oA ${RESULTS_D
 echo "### Network scan end date" >> ${RESULTS_DIR}/tester_info.txt
 date >> ${RESULTS_DIR}/tester_info.txt
 echo >> ${RESULTS_DIR}/tester_info.txt
+
+exit 0
