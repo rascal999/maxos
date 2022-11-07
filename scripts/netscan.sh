@@ -134,16 +134,16 @@ if [[ "$arg_masscan_docker" == "true" || "$arg_auto_interface" == "true" ]]; the
   arg_targets_file=`echo $arg_targets | choose --field-separator '/' -1`
 
   time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file --top-ports=100 --rate=5000 -oB /mnt/masscan_tcp_top_100.bin
-  if [[ "" != "0" ]]; then
-    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+  if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
     exit 1
   fi
 else
   sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_top_100.bin
-  if [[ "" != "0" ]]; then
-    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+  if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
     exit 1
   fi
 fi
@@ -166,16 +166,16 @@ echo
 echo "### Masscan TCP all"
 if [[ "$arg_masscan_docker" == "true" || "$arg_auto_interface" == "true" ]]; then
   time docker run --rm -v "${RESULTS_DIR}:/mnt" ilyaglow/masscan -iL /mnt/$arg_targets_file -p - --rate=5000 -oB /mnt/masscan_tcp_all.bin
-  if [[ "" != "0" ]]; then
-    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+  if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
     exit 1
   fi
 else
   sudo time masscan -iL $arg_targets --interface $arg_interface --top-ports=100 --rate=5000 -oB ${RESULTS_DIR}/masscan_tcp_all.bin
-  if [[ "" != "0" ]]; then
-    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
+  if [[ "$?" != "0" ]]; then
     printf "${RED}ERROR:${NC} Masscan error, bailing\n"
+    /home/user/git/maxos/scripts/telegram_notify.sh -m "$arg_name netscan failed to finish due to masscan error"
     exit 1
   fi
 fi
