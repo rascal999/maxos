@@ -80,7 +80,11 @@ fi
 NOW=`date "+%Y%m%d_%H%M%S"`
 RESULTS_DIR="/home/user/scans/${NOW}_${arg_name}"
 mkdir -p $RESULTS_DIR
-firefox $RESULTS_DIR
+
+# Launch Firefox if $DISPLAY set
+if [[ "$DISPLAY" != "" ]]; then
+  firefox $RESULTS_DIR
+fi
 
 echo
 
