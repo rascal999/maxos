@@ -35,6 +35,7 @@
     azure-cli                                                                                            # Next generation multi-platform command line experience for Azure
     badchars                                                                                             # HEX badchar generator for different programming languages
     bandwhich                                                                                            # A CLI utility for displaying current network utilization
+    bc                                                                                                   # GNU software calculator
     bettercap                                                                                            # A man in the middle tool
     bingrep                                                                                              # Greps through binaries from various OSs and architectures, and colors them
     bintools                                                                                             # Tools for manipulating binaries (linker, assembler, etc.) (wrapper script)
