@@ -103,6 +103,7 @@ new() {
   echo "croc                        Share files between machines"
   echo "d.bb                        OpenBB finance terminal"
   echo "d.dos                       MHDDoS"
+  echo "d.katana                    Web crawler"
   echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "d.phash                     psudohash"
   echo "gitleaks                    Discover secrets using Gitleaks"
@@ -213,6 +214,30 @@ d.nessus() {
   else
     echo "ERROR: Provide activation code"
   fi
+}
+
+d.katana() {
+  if [[ "$#" -lt "2" ]]; then
+    echo "ERROR: Must specify at least something like:"
+    echo "$0 -u https://target.com"
+    return 1
+  fi
+  NOW=`date "+%Y%m%d_%H%M%S"`
+  mkdir -p $HOME/scans/katana/$NOW
+
+  echo "Args: $@" > $HOME/scans/katana/$NOW/scan.log
+  echo -n "Started: " >> $HOME/scans/katana/$NOW/scan.log
+  date >> $HOME/scans/katana/$NOW/scan.log
+
+  echo -n "Source IP: " >> $HOME/scans/katana/$NOW/scan.log
+  curl https://ifconfig.me/ >> $HOME/scans/katana/$NOW/scan.log
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  docker run --rm redgo katana $@ >> $HOME/scans/katana/`date "+%Y%m%d_%H%M%S"`/scan.log
+
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
+  date >> $HOME/scans/katana/$NOW/scan.log
 }
 
 d.shell() {

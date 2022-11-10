@@ -84,7 +84,7 @@ if [[ "$arg_interface" == "false" ]]; then
 fi
 
 NOW=`date "+%Y%m%d_%H%M%S"`
-RESULTS_DIR="/home/user/scans/${NOW}_${arg_name}"
+RESULTS_DIR="/home/user/scans/netscan/${NOW}_${arg_name}"
 mkdir -p $RESULTS_DIR
 
 # Launch Firefox if $DISPLAY set

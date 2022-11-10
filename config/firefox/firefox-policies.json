@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{f18f0257-10ad-4ff7-b51e-6895edeccfc8}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/netflix-1080p-firefox/addon-2617870-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "firefox-extension@shodan.io": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shodan-addon/addon-3788939-latest.xpi",
         "installation_mode": "normal_installed"
