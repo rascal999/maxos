@@ -6,7 +6,7 @@ if [[ `hostname` == "rig" ]]; then
     # 0
     /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --left-of DP-4
     # 1
-    /run/current-system/sw/bin/xrandr --output DP-4 --auto
+    /run/current-system/sw/bin/xrandr --output DP-4 --auto --right-of HDMI-0
     # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --right-of DP-4
 
