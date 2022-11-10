@@ -233,7 +233,7 @@ d.katana() {
   curl https://ifconfig.me/ >> $HOME/scans/katana/$NOW/scan.log
   echo >> $HOME/scans/katana/$NOW/scan.log
   echo >> $HOME/scans/katana/$NOW/scan.log
-  docker run --rm redgo katana $@ >> $HOME/scans/katana/`date "+%Y%m%d_%H%M%S"`/scan.log
+  docker run --rm redgo katana $@ >> $HOME/scans/katana/$NOW/scan.log
 
   echo >> $HOME/scans/katana/$NOW/scan.log
   echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
