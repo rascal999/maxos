@@ -616,6 +616,9 @@ function pull_tool_repos() {
   git_update https://github.com/tg12/PoC_CVEs.git $HOME/git/exploits/PoC_CVEs
 
   ### Tools which need building
+  # OpenVAS
+  git clone https://github.com/greenbone/openvas-scanner.git
+
   # ATT&CK Navigator
   git_update https://github.com/mitre-attack/attack-navigator.git $HOME/git/pentest-tools/attack-navigator
   if [[ "$?" == "0" ]]; then

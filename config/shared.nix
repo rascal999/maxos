@@ -27,6 +27,11 @@
     };
   };
 
+  swapDevices = [{
+    device = "/home/user/swapfile";
+    size = (1024 * 8);
+  }];
+
   hardware.opengl.driSupport32Bit = true;
 
   # Set your time zone.
