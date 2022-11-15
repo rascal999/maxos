@@ -320,6 +320,12 @@ d.bb() {
 }
 
 d.filebrowserhere() {
+  # Security measure
+  if [[ "`pwd`" == "$HOME" ]]; then
+    echo "ERROR: Not running in $HOME .."
+    return 1
+  fi
+
   screen -S filebrowser -adm docker run --rm --name filebrowser -p 1080:80 -v $(pwd):/srv filebrowser/filebrowser
   firefox http://127.0.0.1:1080/ &; disown
 }
@@ -1119,6 +1125,12 @@ d.impacket() {
 }
 
 d.smbservehere() {
+  # Security measure
+  if [[ "`pwd`" == "$HOME" ]]; then
+    echo "ERROR: Not running in $HOME .."
+    return 1
+  fi
+
   local sharename
   [[ -z $1 ]] && sharename="SHARE" || sharename=$1
   docker run --rm -it -p 445:445 -v "$(pwd):/tmp/serve" rflathers/impacket smbserver.py -smb2support $sharename /tmp/serve
@@ -1134,11 +1146,23 @@ d.nginxconfig() {
 }
 
 d.nginxhere() {
+  # Security measure
+  if [[ "`pwd`" == "$HOME" ]]; then
+    echo "ERROR: Not running in $HOME .."
+    return 1
+  fi
+
   screen -S nginxhere -adm docker run --rm -it -p 1080:80 -p 443:443 -v "$(pwd):/srv/data" rflathers/nginxserve
   firefox http://127.0.0.1 &; disown
 }
 
 d.webdavhere() {
+  # Security measure
+  if [[ "`pwd`" == "$HOME" ]]; then
+    echo "ERROR: Not running in $HOME .."
+    return 1
+  fi
+
   docker run --rm -it -p 1080:80 -v "$(pwd):/srv/data/share" rflathers/webdav
 }
 
