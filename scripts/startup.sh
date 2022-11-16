@@ -1,3 +1,4 @@
+sleep 3
 # Clone maxos
 /run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/maxos || /run/current-system/sw/bin/git -C ${HOME}/git/maxos pull
 # Jupyter templates
