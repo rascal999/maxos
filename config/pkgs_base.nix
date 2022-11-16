@@ -396,7 +396,7 @@
     wprecon                                                                                              # WordPress vulnerability recognition tool
     wpscan                                                                                               # Black box WordPress vulnerability scanner
     wstunnel                                                                                             #
-    wuzz                                                                                                 # Interactive cli tool for HTTP inspection
+    #wuzz                                                                                                 # Interactive cli tool for HTTP inspection
     x11docker                                                                                            # Run graphical applications with Docker
     x11vnc                                                                                               # A VNC server connected to a real X11 screen
     x2goclient                                                                                           # Graphical NoMachine NX3 remote desktop client

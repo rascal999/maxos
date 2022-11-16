@@ -11,10 +11,10 @@
                 ];
     };
 
-    openvas = {
-      image = "greenbone/openvas";
-      ports = [ "127.0.0.1:8030:443" ];
-    };
+    #openvas = {
+    #  image = "greenbone/openvas";
+    #  ports = [ "127.0.0.1:8030:443" ];
+    #};
 
     cyberchef = {
       image = "mpepping/cyberchef";
