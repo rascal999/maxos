@@ -21,7 +21,7 @@ fi
 
 # Launch pi-hole
 PIHOLE_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=pihole | choose 0`
-if [[ "PIHOLE_CHECK" == "" ]]; then
+if [[ "$PIHOLE_CHECK" == "" ]]; then
   /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/pi-hole/docker-compose.yml up -d
 fi
 
