@@ -95,7 +95,7 @@
     ddosify                                                                                              # High-performance load testing tool, written in Golang
     ddrescue                                                                                             # GNU ddrescue, a data recovery tool
     ddrescueview                                                                                         # A tool to graphically examine ddrescue mapfiles
-    deepsea                                                                                              # Phishing tool for red teams and pentesters
+    #deepsea                                                                                              # Phishing tool for red teams and pentesters
     detect-secrets                                                                                       # An enterprise friendly way of detecting and preventing secrets in code
     dex2jar                                                                                              # Tools to work with android .dex and java .class files
     dhcpdump                                                                                             # A tool for visualization of DHCP packets as recorded and output by tcpdump to analyze DHCP server responses
