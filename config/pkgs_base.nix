@@ -230,6 +230,7 @@
     logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
     macchanger                                                                                           # A utility for viewing/manipulating the MAC address of network interfaces
+    mariadb                                                                                              # An enhanced, drop-in replacement for MySQL
     masscan                                                                                              # Fast scan of the Internet
     medusa                                                                                               # A speedy, parallel, and modular, login brute-forcer
     metabigor                                                                                            # Tool to perform OSINT tasks
