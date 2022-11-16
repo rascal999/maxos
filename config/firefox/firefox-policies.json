@@ -2239,6 +2239,10 @@
                 "url": "https://images.google.com/"
               },
               {
+                "name": "Pi-hole",
+                "url": "http://127.0.0.1:10140/admin"
+              },
+              {
                 "name": "rembg",
                 "url": "http://127.0.0.1:10130/docs"
               },

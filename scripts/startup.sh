@@ -1,6 +1,6 @@
-sleep 3
 # Clone maxos
 /run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/maxos || /run/current-system/sw/bin/git -C ${HOME}/git/maxos pull
+
 # Jupyter templates
 mkdir -p ${HOME}/jupyter/pentest/base
 rm ${HOME}/jupyter/pentest/base/*.ipynb
@@ -17,6 +17,12 @@ echo "Done"
 if [[ ! -f /etc/vpn-mullvad ]]; then
   echo "ERROR: Cannot place VPN profiles, could not decrypt?"
   exit 0
+fi
+
+# Launch pi-hole
+PIHOLE_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=pihole | choose 0`
+if [[ "PIHOLE_CHECK" == "" ]]; then
+  /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/pi-hole/docker-compose.yml up -d
 fi
 
 echo -n "Placing VPN profiles.."

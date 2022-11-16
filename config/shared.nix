@@ -27,6 +27,7 @@
     };
   };
 
+  # Swap
   swapDevices = [{
     device = "/home/user/swapfile";
     size = (1024 * 8);
@@ -92,6 +93,9 @@
       enable = true;
       enableSSHSupport = true;
   };
+
+  # Disable dnsmasq (for Pi-hole)
+  services.dnsmasq.enable = false;
 
   # Steam
   #programs.steam.enable = true;
@@ -239,12 +243,12 @@
     #vmware.host.enable = true;
 
     # QEMU
-    libvirtd = {
-      enable = true;
-      qemu.ovmf.enable = true;
-      qemu.swtpm.enable = true;
-      qemu.ovmf.packages = [ pkgs.OVMFFull ];
-    };
+    #libvirtd = {
+    #  enable = true;
+    #  qemu.ovmf.enable = true;
+    #  qemu.swtpm.enable = true;
+    #  qemu.ovmf.packages = [ pkgs.OVMFFull ];
+    #};
   };
 
   xdg.mime.defaultApplications = {
@@ -264,6 +268,9 @@
     nerdfonts
     meslo-lgs-nf
   ];
+
+  # Point to localhost for Pi-hole
+  networking.nameservers = [ "127.0.0.1" ]
 
   # hosts file
   networking.extraHosts =
