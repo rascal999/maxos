@@ -333,7 +333,7 @@
     sqlite                                                                                               # A self-contained, serverless, zero-configuration, transactional SQL database engine
     sqlmap                                                                                               # Automatic SQL injection and database takeover tool
     srm                                                                                                  # Delete files securely
-    ssb                                                                                                  # Tool to bruteforce SSH server
+    #ssb                                                                                                  # Tool to bruteforce SSH server
     ssdeep                                                                                               # A program for calculating fuzzy hashes
     ssh-audit                                                                                            # Tool for ssh server auditing
     sshchecker                                                                                           # Dedicated SSH brute-forcing tool
