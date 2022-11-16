@@ -187,7 +187,7 @@
     honeytrap                                                                                            # Advanced Honeypot framework
     honggfuzz                                                                                            #
     horst                                                                                                # Small and lightweight IEEE802.11 wireless LAN analyzer with a text interface
-    httpdump                                                                                             # Parse and display HTTP traffic from network device or pcap file
+    #httpdump                                                                                             # Parse and display HTTP traffic from network device or pcap file
     httptunnel                                                                                           # Creates a bidirectional virtual data connection tunnelled in HTTP requests
     httpx                                                                                                # Fast and multi-purpose HTTP toolkit
     hyper                                                                                                # A terminal built on web technologies
