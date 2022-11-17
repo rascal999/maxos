@@ -1850,6 +1850,10 @@
               {
                 "name": "MalAPI.io",
                 "url": "https://malapi.io/"
+              },
+              {
+                "name": "vulnerable-AD",
+                "url": "file:///home/user/git/pentest-education/vulnerable-AD/README.md"
               }
             ]
           }

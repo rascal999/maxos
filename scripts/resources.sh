@@ -551,6 +551,7 @@ function pull_educational_repos() {
   git_update https://github.com/TCM-Course-Resources/Practical-Ethical-Hacking-Resources.git $HOME/git/pentest-education/Practical-Ethical-Hacking-Resources
   git_update https://github.com/infosecn1nja/AD-Attack-Defense.git $HOME/git/pentest-education/AD-Attack-Defense
   git_update https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet.git $HOME/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet-IIT
+  git_update https://github.com/WazeHell/vulnerable-AD.git $HOME/git/pentest-education/vulnerable-AD
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
