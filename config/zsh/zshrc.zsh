@@ -90,6 +90,7 @@ a.notify()
 new() {
   echo "### New commands ###"
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
+  echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
   echo "a.fo                        Open Firefox at CWD"
   echo "a.localhostrun-gotty        Terminal command over web"
@@ -116,6 +117,16 @@ new() {
 
 test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
+}
+
+a.eb() {
+  if [[ "$#" -lt "1" ]]; then
+    echo "ERROR: Must specify bookmarks folder"
+    echo "$0 Recon"
+    return 1
+  fi
+
+  cat $HOME/git/maxos/config/firefox/firefox-policies.json | jq ".[].ManagedBookmarks[] | select(.name==\"$1\") | .children[].url" | sed 's/"//g' | grep -v "null"
 }
 
 a.r() {
