@@ -28,18 +28,18 @@ I have made a conscious effort to ensure that docker images and tools which run 
 
 This NixOS config comes with a few things to make my life easier while pentesting (some of these resources are available after running the [resources.sh](/scripts/resources.sh) script).
 
-* Over 507 software packages
-* 314 zsh aliases
+* Over 508 software packages
+* 319 zsh aliases
 * Over 450 security-focused bookmarks:
   * 63 podcasts
-  * 48 YouTube channels
+  * 49 YouTube channels
   * 47 online labs
   * 34 news resources
   * 28 search engines
   * 24 newsletters
-* 256 git repos
-* 169 docker images
-* 34 web applications
+* 278 git repos
+* 173 docker images
+* 35 web applications
 * 27 Firefox extensions
 * Text-only offline [Wikipedia](http://localhost:9060/wikipedia_en_all_nopic_2022-01/A/User:The_other_Kiwix_guy/Landing)
 * [Jupyter Notebooks](http://localhost:8000/tree?) for pentesting
