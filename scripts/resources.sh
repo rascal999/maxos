@@ -200,6 +200,10 @@ function pull_os_docker() {
 ### Vulnerable things
 ###
 function pull_vulnerable_things_docker() {
+  docker pull pygoat/pygoat                                # Intentionally vuln web app
+  docker pull psiinon/bodgeit                              # The BodgeIt Store
+  docker pull appsecco/dvna:sqlite                         # Damn Vulnerable NodeJS Application
+  docker pull dolevf/dvga                                  # Damn Vulnerable GraphQL Application
   docker pull citizenstig/dvwa                             # Damn Vulnerable Web Application (DVWA)
   docker pull l505/vulnerablewordpress                     # Vulnerable WordPress Installation
   docker pull hmlio/vaas-cve-2014-6271                     # Vulnerability as a service: Shellshock
@@ -525,6 +529,28 @@ function pull_educational_repos() {
   git_update https://github.com/dwisiswant0/awesome-oneliner-bugbounty.git $HOME/git/pentest-education/awesome-oneliner-bugbounty
   git_update https://github.com/Hack-with-Github/Free-Security-eBooks.git $HOME/git/pentest-education/Free-Security-eBooks
   git_update https://github.com/PaulSec/awesome-sec-talks.git $HOME/git/pentest-education/awesome-sec-talks
+  git_update https://github.com/ine-labs/AWSGoat.git $HOME/git/pentest-education/AWSGoat
+  git_update https://github.com/ine-labs/AzureGoat.git $HOME/git/pentest-education/AzureGoat
+  git_update https://github.com/snoopysecurity/dvws-node.git $HOME/git/pentest-education/dvws-node
+  git_update https://github.com/logicalhacking/DVHMA.git $HOME/git/pentest-education/DVHMA
+  git_update https://github.com/cider-security-research/cicd-goat.git $HOME/git/pentest-education/cicd-goat
+  git_update https://github.com/erev0s/VAmPI.git $HOME/git/pentest-education/VAmPI
+  git_update https://github.com/OWASP/DVSA.git $HOME/git/pentest-education/DVSA
+  git_update https://github.com/srini0x00/dvta.git $HOME/git/pentest-education/dvta
+  git_update https://github.com/appsecco/dvja.git $HOME/git/pentest-education/dvja
+  git_update https://github.com/appsecco/dvpwa.git $HOME/git/pentest-education/dvpwa
+  git_update https://github.com/rewanthtammana/Damn-Vulnerable-Bank.git $HOME/git/pentest-education/Damn-Vulnerable-Bank
+  git_update https://github.com/prateek147/DVIA-v2.git $HOME/git/pentest-education/DVIA-v2
+  git_update https://github.com/praetorian-inc/DVRF.git $HOME/git/pentest-education/DVRF
+  git_update https://github.com/we45/DVFaaS-Damn-Vulnerable-Functions-as-a-Service.git $HOME/git/pentest-education/DVFaaS
+  git_update https://github.com/m6a-UdS/dvca.git $HOME/git/pentest-education/dvca
+  git_update https://github.com/appsecco/dvcsharp-api.git $HOME/git/pentest-education/dvcsharp-api
+  git_update https://github.com/payatu/Tiredful-API.git $HOME/git/pentest-education/Tiredful-API
+  git_update https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application.git $HOME/git/pentest-education/Damn-Vulnerable-GraphQL-Application
+  git_update https://github.com/kurogai/100-redteam-projects.git $HOME/git/pentest-education/100-redteam-projects
+  git_update https://github.com/TCM-Course-Resources/Practical-Ethical-Hacking-Resources.git $HOME/git/pentest-education/Practical-Ethical-Hacking-Resources
+  git_update https://github.com/infosecn1nja/AD-Attack-Defense.git $HOME/git/pentest-education/AD-Attack-Defense
+  git_update https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet.git $HOME/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet-IIT
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening

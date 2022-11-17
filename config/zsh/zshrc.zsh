@@ -108,6 +108,7 @@ new() {
   echo "d.katana                    Web crawler"
   echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "d.phash                     psudohash"
+  echo "d.sshere                    SecretScanner for container scanning"
   echo "gitleaks                    Discover secrets using Gitleaks"
   echo "k6                          Load testing with scripting"
   echo "inql                        Security testing tool for GraphQL"
@@ -260,6 +261,16 @@ d.shellsh() {
   docker run --rm -it --entrypoint=/bin/sh "$@"
 }
 
+d.sshere(){
+  if [[ "$#" -ne "1" ]]; then
+    echo "d.sshere <container-image>"
+    return 1
+  fi
+
+  docker run -it --rm --name=deepfence-secretscanner -v $(pwd):/home/deepfence/output -v /var/run/docker.sock:/var/run/docker.sock deepfenceio/deepfence_secret_scanner:latest -image-name $1
+  screen -adm $HOME/git/maxos/scripts/telegram_notify.sh -a -q -m "Finished SecretScanner on $1"
+}
+
 d.shellhere() {
   dirname=${PWD##*/}
   docker run --rm -it --entrypoint=/bin/bash -v $(pwd):/${dirname} -w /${dirname} "$@"
@@ -267,7 +278,7 @@ d.shellhere() {
 
 d.shellhereport() {
   if [[ "$#" -ne "2" ]]; then
-    echo "d-shellhereport <image> <port>"
+    echo "d.shellhereport <image> <port>"
     return 1
   fi
   dirname=${PWD##*/}
@@ -369,7 +380,7 @@ d.rengine-kill() {
 
 a.alarm() {
   if [[ "$#" -ne "2" ]]; then
-    echo "a-alarm 10:00 \"Meeting\""
+    echo "a.alarm 10:00 \"Meeting\""
   else
     echo "/etc/profiles/per-user/user/bin/twmnc -c \"### $2 ###\"" | at $1
   fi
@@ -447,7 +458,7 @@ a.localhostrun-privatebin() {
 
 a.cloudmapper-gather() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-cloudmapper-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.cloudmapper-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -464,7 +475,7 @@ a.cloudmapper-gather() {
 
 a.cloudmapper-serve() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-cloudmapper-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.cloudmapper-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -480,7 +491,7 @@ a.cloudmapper-serve() {
 
 a.cloudmapper() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-cloudmapper <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.cloudmapper <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -502,7 +513,7 @@ a.cloudmapper() {
 
 a.scout-gather() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-scout-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.scout-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -515,7 +526,7 @@ a.scout-gather() {
 
 a.scout-serve() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-scout-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.scout-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -529,7 +540,7 @@ a.scout-serve() {
 
 a.scout() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-scout <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.scout <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -551,7 +562,7 @@ a.scout() {
 
 a.aws-security-viz(){
   if [[ "$#" -ne "3" ]]; then
-    echo "a-aws-security-viz <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.aws-security-viz <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -590,7 +601,7 @@ a.cartography(){
 
 a.prowler-gather() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-prowler-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.prowler-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -612,7 +623,7 @@ a.prowler-gather() {
 
 a.prowler-serve() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-prowler-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.prowler-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -626,7 +637,7 @@ a.prowler-serve() {
 
 a.prowler() {
   if [[ "$#" -ne "3" ]]; then
-    echo "a-prowler <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.prowler <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -648,7 +659,7 @@ a.prowler() {
 
 a.aws-public-ips() {
   if [[ "$#" -ne "4" ]]; then
-    echo "a-aws-public-ips <REGION> <CLIENT> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.aws-public-ips <REGION> <CLIENT> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -679,7 +690,7 @@ a.aws-public-ips() {
 
 a.cloudsploit() {
   if [[ "$#" -ne "4" ]]; then
-    echo "a-cloudsploit <COMPLIANCE_TYPE> <CLIENT> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+    echo "a.cloudsploit <COMPLIANCE_TYPE> <CLIENT> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
     return 1
   fi
 
@@ -885,7 +896,7 @@ d.vpn() {
 
 d.vpn-array() {
   if [[ "$#" -ne "1" ]]; then
-    echo "d-vpn-array <instance-count>"
+    echo "d.vpn-array <instance-count>"
     return 1
   fi
   rm -rf ${HOME}/vpn/tmp_*
@@ -932,7 +943,7 @@ d.tor() {
 
 d.tor-array() {
   if [[ "$#" -ne "1" ]]; then
-    echo "d-tor-array <instance-count>"
+    echo "d.tor-array <instance-count>"
     return 1
   fi
 
@@ -979,7 +990,7 @@ d.pcf() {
 
 d.testssl() {
   if [[ "$#" -ne "1" ]]; then
-    echo "d-testssl <url>"
+    echo "d.testssl <url>"
     return 1
   fi
 
@@ -996,7 +1007,7 @@ d.testssl() {
 
 d.tlsmate() {
   if [[ "$#" -ne "1" ]]; then
-    echo "d-tlsmate <url>"
+    echo "d.tlsmate <url>"
     return 1
   fi
 
@@ -1014,7 +1025,7 @@ d.eth-security-toolbox() {
 
 d.myth() {
   if [[ "$#" -ne "2" ]]; then
-    echo "d-myth <file> <solv>"
+    echo "d.myth <file> <solv>"
     return 1
   fi
 
@@ -1069,7 +1080,7 @@ d.eyewitness() {
 
 d.screenshot() {
   if [[ "$#" -lt "2" ]]; then
-    echo "d-screenshot <screenshot|full_screenshot|screenshot_series|full_screenshot_series> <URL> [resolution] [delay]"
+    echo "d.screenshot <screenshot|full_screenshot|screenshot_series|full_screenshot_series> <URL> [resolution] [delay]"
     return 1
   fi
 
@@ -1109,7 +1120,7 @@ d.spiderfoot(){
 
 d.arjun(){
   if [[ "$#" -lt "1" ]]; then
-    echo "d-arjun <URL>"
+    echo "d.arjun <URL>"
     return 1
   fi
 
@@ -1241,7 +1252,7 @@ d.responder() {
 
 d.smbclient() {
   if [[ "$#" -lt "1" ]]; then
-    echo "d-smbclient <IP>"
+    echo "d.smbclient <IP>"
     return 1
   fi
 
@@ -1297,7 +1308,7 @@ d.searchsploit() {
 
 d.wpscan() {
   if [[ "$#" -ne "2" ]]; then
-    echo "d-wpscan <URL> <WPSCAN_API_TOKEN>"
+    echo "d.wpscan <URL> <WPSCAN_API_TOKEN>"
     return 1
   fi
 
@@ -1310,7 +1321,7 @@ d.whatweb() {
 
 d.apkleaks() {
   if [[ "$#" -ne "1" ]]; then
-    echo "d-apkleaks <APK>"
+    echo "d.apkleaks <APK>"
     return 1
   fi
 
@@ -1325,7 +1336,7 @@ d.mobsf() {
 
 d.ffuf() {
   if [[ "$#" -ne "2" ]]; then
-    echo "d-ffuf <wordlist> <url>"
+    echo "d.ffuf <wordlist> <url>"
     return 1
   fi
 
@@ -1343,22 +1354,30 @@ d.ffuf() {
 ### Educational docker images
 ###
 d.lab-start() {
-  d-altoro
-  d-dvwa
-  d-vulnerablewordpress
-  d-vaas-cve-2014-6271
-  d-vaas-cve-2014-0160
-  d-webgoat
-  d-nowasp
-  d-juice-shop
-  d-hackazon
-  d-tiredful
-  d-xvwa
-  d-security-ninjas
+  d.pygoat
+  d.bodgeit
+  d.altoro
+  d.dvna
+  d.dvwa
+  d.dvga
+  d.vulnerablewordpress
+  d.vaas-cve-2014-6271
+  d.vaas-cve-2014-0160
+  d.webgoat
+  d.nowasp
+  d.juice-shop
+  d.hackazon
+  d.tiredful
+  d.xvwa
+  d.security-ninjas
 }
 
 d.lab-kill() {
    docker stop vulnerablewordpress \
+         pygoat \
+         bodgeit \
+         dvna \
+         dvga \
          nowasp \
          juice-shop \
          webgoat \
@@ -1379,6 +1398,26 @@ d.altoro() {
 
 d.securityshepherd(){
   docker run -i -p 1080:80 -p 8443:443 ismisepaul/securityshepherd /bin/bash
+}
+
+d.pygoat() {
+  echo "screen -r pygoat"
+  screen -S pygoat -adm docker run --rm --name pygoat -p 127.10.0.16:1080:8000 pygoat/pygoat
+}
+
+d.bodgeit() {
+  echo "screen -r bodgeit"
+  screen -S bodgeit -adm docker run --rm --name bodgeit -p 127.10.0.15:1080:8080 psiinon/bodgeit
+}
+
+d.dvna() {
+  echo "screen -r dvna"
+  screen -S dvna -adm docker run --rm --name dvna -p 127.10.0.13:1080:9090 appsecco/dvna:sqlite
+}
+
+d.dvga() {
+  echo "screen -r dvga"
+  screen -S dvga -adm docker run --rm --name dvga -p 127.10.0.14:1080:5013 -e WEB_HOST=0.0.0.0 dolevf/dvga
 }
 
 d.dvwa() {

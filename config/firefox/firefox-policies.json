@@ -245,6 +245,14 @@
             "url": "file:///home/user/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet/README.md"
           },
           {
+            "name": "Active-Directory-Exploitation-Cheat-Sheet (Integration IT)",
+            "url": "file:///home/user/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet-IIT/README.md"
+          },
+          {
+            "name": "AD-Attack-Defense",
+            "url": "file:///home/user/git/pentest-education/AD-Attack-Defense/README.md"
+          },
+          {
             "name": "awesome-pentest-cheat-sheets",
             "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/README.md"
           },
@@ -267,6 +275,14 @@
           {
             "name": "CheatSheetSeries",
             "url": "file:///home/user/git/pentest-education/CheatSheetSeries"
+          },
+          {
+            "name": "CISSP Cheat Sheet Series",
+            "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_cissp_cheat_sheet_series.pdf"
+          },
+          {
+            "name": "CISSP Study Guide",
+            "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_cissp_guide.pdf"
           },
           {
             "name": "DefaultCreds-cheat-sheet",
@@ -321,6 +337,10 @@
           {
             "name": "docker/labs",
             "url": "file:///home/user/git/pentest-education/docker-labs"
+          },
+          {
+            "name": "The Ultimate Cheat Sheet",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221117_ultimate_docker_cheat_sheet.pdf"
           }
         ]
       },
@@ -349,6 +369,10 @@
               {
                 "name": "Educational PDFs",
                 "url": "file:///home/user/pdfs/education/aws"
+              },
+              {
+                "name": "Hands on AWS Penetration Testing",
+                "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_aws_pentesting.pdf"
               },
               {
                 "name": "my-arsenal-of-aws-security-tools",
@@ -714,6 +738,91 @@
             ]
           },
           {
+            "name": "Damn Vulnerable X",
+            "children": [
+              {
+                "name": "AWSGoat",
+                "url": "file:///home/user/git/pentest-education/AWSGoat/README.md"
+              },
+              {
+                "name": "AzureGoat",
+                "url": "file:///home/user/git/pentest-education/AzureGoat/README.md"
+              },
+              {
+                "name": "cicd-goat",
+                "url": "file:///home/user/git/pentest-education/cicd-goat/README.md"
+              },
+              {
+                "name": "Damn-Vulnerable-Bank",
+                "url": "file:///home/user/git/pentest-education/Damn-Vulnerable-Bank/README.md"
+              },
+              {
+                "name": "Damn-Vulnerable-GraphQL-Application",
+                "url": "file:///home/user/git/pentest-education/Damn-Vulnerable-GraphQL-Application"
+              },
+              {
+                "name": "dvca",
+                "url": "file:///home/user/git/pentest-education/dvca/README.md"
+              },
+              {
+                "name": "dvcsharp-api",
+                "url": "file:///home/user/git/pentest-education/dvcsharp-api/README.md"
+              },
+              {
+                "name": "DVFaaS",
+                "url": "file:///home/user/git/pentest-education/DVFaaS/README.md"
+              },
+              {
+                "name": "DVHMA",
+                "url": "file:///home/user/git/pentest-education/DVHMA/README.md"
+              },
+              {
+                "name": "DVIA-v2",
+                "url": "file:///home/user/git/pentest-education/DVIA-v2/README.md"
+              },
+              {
+                "name": "dvja",
+                "url": "file:///home/user/git/pentest-education/dvja/README.md"
+              },
+              {
+                "name": "dvpwa",
+                "url": "file:///home/user/git/pentest-education/dvpwa/README.md"
+              },
+              {
+                "name": "DVRF",
+                "url": "file:///home/user/git/pentest-education/DVRF/README.md"
+              },
+              {
+                "name": "DVSA",
+                "url": "file:///home/user/git/pentest-education/DVSA/README.md"
+              },
+              {
+                "name": "dvta",
+                "url": "file:///home/user/git/pentest-education/dvta/README.md"
+              },
+              {
+                "name": "dvws-node",
+                "url": "file:///home/user/git/pentest-education/dvws-node/README.md"
+              },
+              {
+                "name": "google-ctf",
+                "url": "file:///home/user/git/pentest-education/google-ctf"
+              },
+              {
+                "name": "Tiredful-API",
+                "url": "file:///home/user/git/pentest-education/Tiredful-API/README.md"
+              },
+              {
+                "name": "trailofbits-ctf",
+                "url": "file:///home/user/git/pentest-education/trailofbits-ctf/"
+              },
+              {
+                "name": "VAmPI",
+                "url": "file:///home/user/git/pentest-education/VAmPI/README.md"
+              }
+            ]
+          },
+          {
             "name": "Online",
             "children": [
               {
@@ -912,6 +1021,14 @@
               {
                 "name": "Altoro Mutual",
                 "url": "http://172.10.0.1:1080/"
+              },
+              {
+                "name": "dvga",
+                "url": "http://127.10.0.14:1080/"
+              },
+              {
+                "name": "dvna",
+                "url": "http://127.10.0.13:1080/"
               },
               {
                 "name": "DVWA v1.9",
@@ -1449,6 +1566,10 @@
             ]
           },
           {
+            "name": "CyberSudo's OSINT Toolkit",
+            "url": "https://docs.google.com/spreadsheets/d/1EC0sKA_W9znzsxUt0wye9UYtyATXw5m8/edit#gid=1485711012"
+          },
+          {
             "name": "'Must Have' Free Resources for OSINT",
             "url": "https://www.sans.org/blog/-must-have-free-resources-for-open-source-intelligence-osint-/"
           },
@@ -1467,6 +1588,10 @@
           {
             "name": "osint.link",
             "url": "https://osint.link/"
+          },
+          {
+            "name": "OSINT Hub",
+            "url": "https://start.me/p/BnrMKd/01-ncso"
           },
           {
             "name": "The Ultimate OSINT collection",
@@ -1637,8 +1762,16 @@
                 "url": "file:///home/user/git/pentest-education/Infosec_Reference/README.md"
               },
               {
+                "name": "MindAPI",
+                "url": "file:///home/user/git/maxos/resources/20221117_mindapi.html"
+              },
+              {
                 "name": "Offensive Security Cheatsheet",
                 "url": "https://cheatsheet.haax.fr/"
+              },
+              {
+                "name": "Practical-Ethical-Hacking-Resources",
+                "url": "file:///home/user/git/pentest-education/Practical-Ethical-Hacking-Resources"
               },
               {
                 "name": "pentest-wiki",
@@ -1647,6 +1780,10 @@
               {
                 "name": "Pentest-Tools",
                 "url": "file:///home/user/git/pentest-education/Pentest-Tools/README.md"
+              },
+              {
+                "name": "Pentest Book",
+                "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_pentest_book.pdf"
               },
               {
                 "name": "PENTESTING-BIBLE",
@@ -1692,6 +1829,19 @@
               {
                 "name": "Web-Attack-Cheat-Sheet",
                 "url": "file:///home/user/git/pentest-education/Web-Attack-Cheat-Sheet/README.md"
+              }
+            ]
+          },
+          {
+            "name": "Windows",
+            "children": [
+              {
+                "name": "Building an Active Directory Lab",
+                "url": "https://blog.spookysec.net/ad-lab-1/"
+              },
+              {
+                "name": "MalAPI.io",
+                "url": "https://malapi.io/"
               }
             ]
           }
@@ -2161,6 +2311,14 @@
         "name": "Red Team",
         "children": [
           {
+            "name": "100-redteam-projects",
+            "url": "file:///home/user/git/pentest-education/100-redteam-projects/README.md"
+          },
+          {
+            "name": "168 Red Team repos",
+            "url": "file:///home/user/git/maxos/resources/20221117_redteam.html"
+          },
+          {
             "name": "Awesome-Red-Teaming",
             "url": "file:///home/user/git/pentest-education/Awesome-Red-Teaming/README.md"
           },
@@ -2569,6 +2727,10 @@
           {
             "name": "SANS Offensive Operations",
             "url": "https://www.youtube.com/c/SANSOffensiveOperations"
+          },
+          {
+            "name": "SecBites",
+            "url": "https://www.youtube.com/@AidanMarlin"
           },
           {
             "name": "Security Now",
