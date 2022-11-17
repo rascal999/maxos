@@ -538,7 +538,7 @@ function pull_educational_repos() {
   git_update https://github.com/OWASP/DVSA.git $HOME/git/pentest-education/DVSA
   git_update https://github.com/srini0x00/dvta.git $HOME/git/pentest-education/dvta
   git_update https://github.com/appsecco/dvja.git $HOME/git/pentest-education/dvja
-  git_update https://github.com/appsecco/dvpwa.git $HOME/git/pentest-education/dvpwa
+  git_update https://github.com/anxolerd/dvpwa.git $HOME/git/pentest-education/dvpwa
   git_update https://github.com/rewanthtammana/Damn-Vulnerable-Bank.git $HOME/git/pentest-education/Damn-Vulnerable-Bank
   git_update https://github.com/prateek147/DVIA-v2.git $HOME/git/pentest-education/DVIA-v2
   git_update https://github.com/praetorian-inc/DVRF.git $HOME/git/pentest-education/DVRF
