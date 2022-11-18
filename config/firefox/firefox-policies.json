@@ -261,6 +261,10 @@
             "url": "file:///home/user/git/pentest-education/Awesome-RedTeam-Cheatsheet/README.md"
           },
           {
+            "name": "Awesome-WAF",
+            "url": "file:///home/user/git/pentest-education/Awesome-WAF/README.md"
+          },
+          {
             "name": "bugbounty-cheatsheet",
             "url": "file:///home/user/git/pentest-education/bugbounty-cheatsheet/README.md"
           },
@@ -549,6 +553,35 @@
         ]
       },
       {
+        "name": "DevOps",
+        "children": [
+          {
+            "name": "arkime",
+            "url": "https://github.com/arkime/arkime"
+          },
+          {
+            "name": "devops-exercises",
+            "url": "file:///home/user/git/education/devops-exercises/README.md"
+          },
+          {
+            "name": "k8s guide",
+            "url": "file:///home/user/git/devops/k8s-guide/README.md"
+          },
+          {
+            "name": "maltrail",
+            "url": "https://github.com/stamparm/maltrail"
+          },
+          {
+            "name": "Netmaker",
+            "url": "file:///home/user/git/devops/netmaker/README.md"
+          },
+          {
+            "name": "Wazuh",
+            "url": "https://github.com/wazuh/wazuh"
+          }
+        ]
+      },
+      {
         "name": "Exploits",
         "children": [
           {
@@ -590,6 +623,10 @@
           {
             "name": "PoC_CVEs",
             "url": "file:///home/user/git/exploits/PoC_CVEs"
+          },
+          {
+            "name": "PoC-in-GitHub",
+            "url": "file:///home/user/git/exploits/PoC-in-GitHub"
           }
         ]
       },
@@ -1278,10 +1315,6 @@
             "url": "file:///home/user/git/misc/CrimeBoards/README.md"
           },
           {
-            "name": "devops-exercises",
-            "url": "file:///home/user/git/education/devops-exercises/README.md"
-          },
-          {
             "name": "flappy.html",
             "url": "https://gist.github.com/gullyn/95b2ab9e465317f1d4e4607cf6e94205"
           },
@@ -1852,6 +1885,10 @@
                 "url": "https://malapi.io/"
               },
               {
+                "name": "nishang",
+                "url": "file:///home/user/git/pentest-education/nishang/README.md"
+              },
+              {
                 "name": "vulnerable-AD",
                 "url": "file:///home/user/git/pentest-education/vulnerable-AD/README.md"
               }
@@ -2379,6 +2416,10 @@
           {
             "name": "AlienVault",
             "url": "https://otx.alienvault.com/"
+          },
+          {
+            "name": "awesome-threat-intelligence",
+            "url": "file:///home/user/git/pentest-education/awesome-threat-intelligence"
           },
           {
             "name": "PhishTank",

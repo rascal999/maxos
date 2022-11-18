@@ -108,6 +108,7 @@ new() {
   echo "d.katana                    Web crawler"
   echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "d.phash                     psudohash"
+  echo "d.rg                        redgo"
   echo "d.sshere                    SecretScanner for container scanning"
   echo "gitleaks                    Discover secrets using Gitleaks"
   echo "k6                          Load testing with scripting"
@@ -251,6 +252,16 @@ d.katana() {
   echo >> $HOME/scans/katana/$NOW/scan.log
   echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
   date >> $HOME/scans/katana/$NOW/scan.log
+}
+
+d.rg() {
+  if [[ "$#" -lt "1" ]]; then
+    echo "ERROR: Must specify at least something like:"
+    echo "$0 what <file>"
+    return 1
+  fi
+
+  docker run --rm -v `pwd`:/root redgo $@
 }
 
 d.shell() {

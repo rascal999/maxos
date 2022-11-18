@@ -7,6 +7,7 @@ usage() {
   echo
   echo "-a (Auth)             Docker authentication"
   echo "-b (Bug bounties)     Pull bug bounties (git)"
+  echo "-d (DevOps)           DevOps tools and resources"
   echo "-e (Educational)      Pull educational resources (git)"
   echo "-f (Force)            Force git pulls (bypass 'cache' check)"
   echo "-g (Tools)            Pull tools (git)"
@@ -21,10 +22,10 @@ usage() {
   echo
   echo "Examples:"
   echo "# Everything except heavy images and ZIMs"
-  echo "$0 -abefgmoptvw"
+  echo "$0 -abdefgmoptvw"
   echo
   echo "# Everything"
-  echo "$0 -abefghmoptvwz"
+  echo "$0 -abdefghmoptvwz"
   echo
   echo "# ISO / VM environment"
   echo "$0 -gptw"
@@ -33,6 +34,7 @@ usage() {
 
 arg_auth=0
 arg_bug_bounties=0
+arg_devops=0
 arg_educational=0
 arg_force=0
 arg_tools_git=0
@@ -45,11 +47,12 @@ arg_vulnerable=0
 arg_wordlists=0
 arg_zims=0
 
-while getopts abefghmoptvwz flag
+while getopts abdefghmoptvwz flag
 do
     case "${flag}" in
         a) arg_auth=1;;
         b) arg_bug_bounties=1;;
+        d) arg_devops=1;;
         e) arg_educational=1;;
         f) arg_force=1;;
         g) arg_tools_git=1;;
@@ -66,6 +69,7 @@ done
 
 arg_sum=$((${arg_bug_bounties} + \
            ${arg_educational} + \
+           ${arg_devops} + \
            ${arg_tools_git} + \
            ${arg_heavy} + \
            ${arg_misc} + \
@@ -86,6 +90,7 @@ echo "Selection"
 echo "---"
 echo "Docker auth: $arg_auth"
 echo "Bug bounties: $arg_bug_bounties"
+echo "DevOps: $arg_devops"
 echo "Educational repos: $arg_educational"
 echo "Force git pull: $arg_force"
 echo "Git pull: $arg_tools_git"
@@ -122,6 +127,14 @@ function pull_heavy_docker() {
   docker pull firefart/dockerctf                           # Docker image with some common ctf tools
   docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support
   docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
+}
+
+###
+### DevOps
+###
+function pull_devops_things() {
+  git_update https://github.com/gravitl/netmaker.git $HOME/git/devops/netmaker
+  git_update https://github.com/hobby-kube/guide.git $HOME/git/devops/k8s-guide
 }
 
 ###
@@ -384,7 +397,6 @@ function pull_pdfs() {
   git_update https://github.com/trimstray/technical-whitepapers.git $HOME/pdfs/education/technical-whitepapers
 }
 
-
 ###
 ### Bug bounties
 ###
@@ -552,6 +564,9 @@ function pull_educational_repos() {
   git_update https://github.com/infosecn1nja/AD-Attack-Defense.git $HOME/git/pentest-education/AD-Attack-Defense
   git_update https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet.git $HOME/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet-IIT
   git_update https://github.com/WazeHell/vulnerable-AD.git $HOME/git/pentest-education/vulnerable-AD
+  git_update https://github.com/samratashok/nishang.git $HOME/git/pentest-education/nishang
+  git_update https://github.com/hslatman/awesome-threat-intelligence.git $HOME/git/pentest-education/awesome-threat-intelligence
+  git_update https://github.com/0xInfection/Awesome-WAF.git $HOME/git/pentest-education/Awesome-WAF
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
@@ -641,6 +656,7 @@ function pull_tool_repos() {
   git_update https://github.com/tunz/js-vuln-db.git $HOME/git/exploits/js-vuln-db
   git_update https://github.com/jonaslejon/malicious-pdf.git $HOME/git/exploits/malicious-pdf
   git_update https://github.com/tg12/PoC_CVEs.git $HOME/git/exploits/PoC_CVEs
+  git_update https://github.com/nomi-sec/PoC-in-GitHub.git $HOME/git/exploits/PoC-in-GitHub
 
   ### Tools which need building
   # OpenVAS
@@ -886,6 +902,11 @@ fi
 # Educational repos
 if [ $arg_educational == 1 ]; then
   pull_educational_repos
+fi
+
+# Educational repos
+if [ $arg_devops == 1 ]; then
+  pull_devops_things
 fi
 
 # Git pull

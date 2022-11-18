@@ -264,6 +264,7 @@
     ntlmrecon                                                                                            # Information enumerator for NTLM authentication enabled web endpoints
     ntopng                                                                                               # High-speed web-based traffic analysis and flow collection tool
     nuclear                                                                                              # Streaming music player that finds free music for you
+    nuclei                                                                                               # Tool for configurable targeted scanning
     nwipe                                                                                                # Securely erase disks
     obs-studio                                                                                           # Free and open source software for video recording and live streaming
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
@@ -345,6 +346,7 @@
     steam                                                                                                # A digital distribution platform
     steampipe                                                                                            # select * from cloud;
     stegseek                                                                                             # Tool to crack steganography
+    step-ca                                                                                              # A private certificate authority
     stockfish                                                                                            # Strong open source chess engine
     subfinder                                                                                            # Subdomain discovery tool
     subjs                                                                                                # Fetcher for Javascript files
@@ -355,6 +357,7 @@
     tcpflow                                                                                              # TCP stream extractor
     tcpreplay                                                                                            # A suite of utilities for editing and replaying network traffic
     teams                                                                                                # Microsoft Teams
+    tfsec                                                                                                # Static analysis powered security scanner for terraform code
     teler                                                                                                # Real-time HTTP Intrusion Detection
     testssl                                                                                              # CLI tool to check a server's TLS/SSL capabilities
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
@@ -370,6 +373,7 @@
     ubertooth                                                                                            # Open source wireless development platform suitable for Bluetooth experimentation
     uddup                                                                                                # Tool for de-duplication URLs
     unar                                                                                                 # An archive unpacker program
+    urh                                                                                                  # Universal Radio Hacker: investigate wireless protocols like a boss
     urlhunter                                                                                            # Recon tool that allows searching shortened URLs
     valgrind                                                                                             # Debugging and profiling tool suite
     vegeta                                                                                               # Versatile HTTP load testing tool
