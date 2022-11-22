@@ -413,6 +413,10 @@ d.webtop() {
     lscr.io/linuxserver/webtop:$1
 }
 
+d.webtop-kill() {
+  docker stop `docker ps -a -q -f name=webtop | choose 0`
+}
+
 a.alarm() {
   if [[ "$#" -ne "2" ]]; then
     echo "a.alarm 10:00 \"Meeting\""
