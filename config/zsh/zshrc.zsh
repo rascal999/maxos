@@ -410,7 +410,6 @@ d.webtop() {
     -v /var/run/docker.sock:/var/run/docker.sock `#optional` \
     --device /dev/dri:/dev/dri `#optional` \
     --shm-size="2gb" `#optional` \
-    --restart unless-stopped \
     lscr.io/linuxserver/webtop:$1
 }
 
