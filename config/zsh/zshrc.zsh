@@ -42,6 +42,7 @@ PORT_GIFCAP=10110
 PORT_ATTACK_NAVIGATOR=10120
 PORT_REMBG=10130
 PORT_PIHOLE=10140
+PORT_WEBTOP=10150
 PORT_WIREGUARD=51820
 
 export MCFLY_KEY_SCHEME=vim
@@ -110,10 +111,9 @@ new() {
   echo "d.phash                     psudohash"
   echo "d.rg                        redgo"
   echo "d.sshere                    SecretScanner for container scanning"
-  echo "gitleaks                    Discover secrets using Gitleaks"
+  echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
   echo "k6                          Load testing with scripting"
   echo "inql                        Security testing tool for GraphQL"
-  echo "tldr                        TL;DR for command"
   echo "wuzz                        Interactive cli tool for HTTP inspection"
 }
 
@@ -387,6 +387,31 @@ d.rengine-kill() {
   sudo make down
   git reset --hard
   cd -
+}
+
+d.webtop() {
+  if [[ "$#" -ne "1" ]]; then
+    echo "d.webtop <version-tag>"
+    return 1
+  fi
+
+  docker run -d \
+    --rm \
+    --name=webtop-$1 \
+    --security-opt seccomp=unconfined `#optional` \
+    -e PUID=1000 \
+    -e PGID=1000 \
+    -e TZ=Europe/London \
+    -e SUBFOLDER=/ `#optional` \
+    -e KEYBOARD=en-us-qwerty `#optional` \
+    -e TITLE=Webtop `#optional` \
+    -p 127.0.0.1:10150:3000 \
+    -v /path/to/data:/config \
+    -v /var/run/docker.sock:/var/run/docker.sock `#optional` \
+    --device /dev/dri:/dev/dri `#optional` \
+    --shm-size="2gb" `#optional` \
+    --restart unless-stopped \
+    lscr.io/linuxserver/webtop:$1
 }
 
 a.alarm() {

@@ -1333,6 +1333,10 @@
           {
             "name": "90DaysOfDevops",
             "url": "file:///home/user/git/education/90DaysOfDevOps/README.md"
+          },
+          {
+            "name": "webtop",
+            "url": "http://127.0.0.1:10150"
           }
         ]
       },
