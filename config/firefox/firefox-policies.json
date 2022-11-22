@@ -2589,6 +2589,19 @@
             ]
           },
           {
+            "name": "Windows",
+            "children": [
+              {
+                "name": "Microsoft-Activation-Scripts",
+                "url": "https://github.com/massgravel/Microsoft-Activation-Scripts"
+              },
+              {
+                "name": "ninite",
+                "url": "https://www.browserling.com/"
+              }
+            ]
+          },
+          {
             "name": "ATT&CK Navigator",
             "url": "http://localhost:10120/"
           },

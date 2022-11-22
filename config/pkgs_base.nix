@@ -158,6 +158,8 @@
     gimp                                                                                                 # The GNU Image Manipulation Program
     gitleaks                                                                                             # Scan git repos (or files) for secrets
     glances                                                                                              # Cross-platform curses-based monitoring tool
+    glib                                                                                                 # C library of programming buildings blocks
+    glibc                                                                                                # The GNU C Library
     gnupg                                                                                                # PHP wrapper for GpgME library that provides access to GnuPG
     go365                                                                                                # Office 365 enumeration tool
     gobuster                                                                                             # Tool used to brute-force URIs, DNS subdomains, Virtual Host names on target web servers
@@ -226,6 +228,7 @@
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
     libgccjit                                                                                            # GNU Compiler Collection
+    libglibutil                                                                                          # Library of glib utilities
     libnotify                                                                                            # A library that sends desktop notifications to a notification daemon
     logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
@@ -409,6 +412,7 @@
     xidel                                                                                                # Command line tool to download and extract data from HTML/XML pages as well as JSON APIs
     xlockmore                                                                                            # Screen locker for the X Window System
     xorex                                                                                                # XOR Key Extractor
+    xorg.libXext                                                                                         #
     xorg.xbacklight                                                                                      #
     xorg.xeyes                                                                                           #
     xorg.xhost                                                                                           #
