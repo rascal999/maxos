@@ -422,6 +422,7 @@
     yara                                                                                                 # The pattern matching swiss knife for malware researchers
     yersinia                                                                                             # A framework for layer 2 attacks
     youtube-dl                                                                                           # Emacs youtube-dl download manager
+    yq                                                                                                   # Command-line YAML/XML/TOML processor
     zap                                                                                                  # Java application for web penetration testing
     zeek                                                                                                 # Network analysis framework much different from a typical IDS
     zkar                                                                                                 # Java serialization protocol analysis tool
