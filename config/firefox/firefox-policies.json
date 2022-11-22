@@ -2592,6 +2592,10 @@
             "name": "Windows",
             "children": [
               {
+                "name": "megathread/tools - Piracy",
+                "url": "https://www.reddit.com/r/Piracy/wiki/megathread/tools/"
+              },
+              {
                 "name": "Microsoft-Activation-Scripts",
                 "url": "https://github.com/massgravel/Microsoft-Activation-Scripts"
               },
