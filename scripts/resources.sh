@@ -188,6 +188,7 @@ function pull_misc_things() {
   git_update https://github.com/tensorflow/models.git $HOME/git/misc/tensorflow-models
   git_update https://github.com/docker/awesome-compose.git $HOME/git/misc/awesome-compose
   git_update https://github.com/Igglybuff/awesome-piracy.git $HOME/git/misc/awesome-piracy
+  git_update https://github.com/iptv-org/iptv.git $HOME/git/misc/iptv
 
   # jsoncrack
   git_update https://github.com/AykutSarac/jsoncrack.com.git $HOME/git/misc/jsoncrack.com
@@ -452,6 +453,12 @@ function pull_educational_repos() {
   git_update https://github.com/PrejudiceNeutrino/YouTube_Channels.git $HOME/git/education/YouTube_Channels
   git_update https://github.com/zero-to-mastery/resources.git $HOME/git/education/zero-to-mastery-resources
   git_update https://github.com/onceupon/Bash-Oneliner.git $HOME/git/education/Bash-Oneliner
+  git_update https://github.com/kuchin/awesome-cto.git $HOME/git/education/awesome-cto
+  git_update https://github.com/docker/labs.git $HOME/git/education/docker-labs
+  git_update https://github.com/eon01/DockerCheatSheet.git $HOME/git/education/DockerCheatSheet
+  git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/education/the-practical-linux-hardening-guide
+  git_update https://github.com/upgundecha/howtheysre.git $HOME/git/education/howtheysre
+  git_update https://github.com/mtdvio/every-programmer-should-know.git $HOME/git/education/every-programmer-should-know
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -478,7 +485,6 @@ function pull_educational_repos() {
   git_update https://github.com/qazbnm456/awesome-web-security.git $HOME/git/pentest-education/awesome-web-security
   git_update https://github.com/paralax/awesome-honeypots.git $HOME/git/pentest-education/awesome-honeypots
   git_update https://github.com/paragonie/awesome-appsec.git $HOME/git/pentest-education/awesome-appsec
-  git_update https://github.com/eon01/DockerCheatSheet.git $HOME/git/pentest-education/DockerCheatSheet
   git_update https://github.com/vaib25vicky/awesome-mobile-security.git $HOME/git/pentest-education/awesome-mobile-security
   git_update https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet.git $HOME/git/pentest-education/Java-Deserialization-Cheat-Sheet
   git_update https://github.com/ihebski/DefaultCreds-cheat-sheet.git $HOME/git/pentest-education/DefaultCreds-cheat-sheet
@@ -490,7 +496,6 @@ function pull_educational_repos() {
   git_update https://github.com/Muhammd/Awesome-Pentest.git $HOME/git/pentest-education/Awesome-Pentest
   git_update https://github.com/sbilly/awesome-security.git $HOME/git/pentest-education/awesome-security
   git_update https://github.com/trimstray/test-your-sysadmin-skills.git $HOME/git/pentest-education/test-your-sysadmin-skills
-  git_update https://github.com/docker/labs.git $HOME/git/pentest-education/docker-labs
   git_update https://github.com/imthenachoman/How-To-Secure-A-Linux-Server.git $HOME/git/pentest-education/How-To-Secure-A-Linux-Server
   git_update https://github.com/Hacker0x01/hacker101.git $HOME/git/pentest-education/hacker101
   git_update https://github.com/shieldfy/API-Security-Checklist.git $HOME/git/pentest-education/API-Security-Checklist
@@ -514,8 +519,6 @@ function pull_educational_repos() {
   git_update https://github.com/HarmJ0y/CheatSheets.git $HOME/git/pentest-education/HarmJ0y-CheatSheets
   git_update https://github.com/trailofbits/ctf.git $HOME/git/pentest-education/trailofbits-ctf
   git_update https://github.com/trailofbits/publications.git $HOME/git/pentest-education/trailofbits-publications
-  git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/pentest-education/the-practical-linux-hardening-guide
-  git_update https://github.com/upgundecha/howtheysre.git $HOME/git/pentest-education/howtheysre
   git_update https://github.com/RistBS/Awesome-RedTeam-Cheatsheet.git $HOME/git/pentest-education/Awesome-RedTeam-Cheatsheet
   git_update https://github.com/dsopas/assessment-mindset.git $HOME/git/pentest-education/assessment-mindset
   git_update https://github.com/rmusser01/Infosec_Reference.git $HOME/git/pentest-education/Infosec_Reference
@@ -641,6 +644,8 @@ function pull_tool_repos() {
   git_update https://github.com/AngelSecurityTeam/Tool-ExploitPack.git $HOME/git/pentest-tools/ExploitPack
   git_update https://github.com/in9uz/VLANPWN.git $HOME/git/pentest-tools/VLANPWN
   git_update https://github.com/nitefood/asn.git $HOME/git/pentest-tools/asn
+  git_update https://github.com/Z4nzu/hackingtool.git $HOME/git/pentest-tools/hackingtool
+  git_update https://github.com/t3l3machus/Villain.git $HOME/git/pentest-tools/Villain
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config

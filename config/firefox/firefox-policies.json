@@ -253,6 +253,10 @@
             "url": "file:///home/user/git/pentest-education/AD-Attack-Defense/README.md"
           },
           {
+            "name": "awesome-cto",
+            "url": "file:///home/user/git/education/awesome-cto/README.md"
+          },
+          {
             "name": "awesome-pentest-cheat-sheets",
             "url": "file:///home/user/git/pentest-education/awesome-pentest-cheat-sheets/README.md"
           },
@@ -294,7 +298,7 @@
           },
           {
             "name": "DockerCheatSheet",
-            "url": "file:///home/user/git/pentest-education/DockerCheatSheet/README.md"
+            "url": "file:///home/user/git/education/DockerCheatSheet/README.md"
           },
           {
             "name": "Java-Deserialization-Cheat-Sheet",
@@ -340,7 +344,7 @@
           },
           {
             "name": "docker/labs",
-            "url": "file:///home/user/git/pentest-education/docker-labs"
+            "url": "file:///home/user/git/education/docker-labs"
           },
           {
             "name": "The Ultimate Cheat Sheet",
@@ -478,8 +482,16 @@
             "url": "file:///home/user/git/misc/docker-elk/README.md"
           },
           {
+            "name": "every-programmer-should-know",
+            "url": "file:///home/user/git/education/every-programmer-should-know/README.md"
+          },
+          {
             "name": "howtheysre",
-            "url": "file:///home/user/git/pentest-education/howtheysre/README.md"
+            "url": "file:///home/user/git/education/howtheysre/README.md"
+          },
+          {
+            "name": "iptv",
+            "url": "file:///home/user/git/misc/iptv/README.md"
           },
           {
             "name": "Kiwix (wikis)",
@@ -1265,7 +1277,7 @@
           },
           {
             "name": "the-practical-linux-hardening-guide",
-            "url": "file:///home/user/git/pentest-education/the-practical-linux-hardening-guide/README.md"
+            "url": "file:///home/user/git/education/the-practical-linux-hardening-guide/README.md"
           }
         ]
       },
