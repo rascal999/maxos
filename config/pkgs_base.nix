@@ -312,6 +312,7 @@
     rustscan                                                                                             # Faster Nmap Scanning with Rust
     rxvt-unicode                                                                                         # A clone of the well-known terminal emulator rxvt
     safecopy                                                                                             # Data recovery tool for damaged hardware
+    samba                                                                                                # The standard Windows interoperability suite of programs for Linux and Unix
     scrcpy                                                                                               # Display and control Android devices over USB or TCP/IP
     scrot                                                                                                # A command-line screen capture utility
     safety-cli                                                                                           #
