@@ -418,7 +418,7 @@
     xorg.xhost                                                                                           #
     xorg.xmodmap                                                                                         #
     xortool                                                                                              # Tool to analyze multi-byte XOR cipher
-    xpdf                                                                                                 # Viewer for Portable Document Format (PDF) files
+    #xpdf                                                                                                 # Viewer for Portable Document Format (PDF) files
     xwayland                                                                                             #
     yara                                                                                                 # The pattern matching swiss knife for malware researchers
     yersinia                                                                                             # A framework for layer 2 attacks

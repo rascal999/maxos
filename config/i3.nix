@@ -8,8 +8,10 @@ in {
 
     extraConfig = ''
       default_border pixel 1
-      for_window [title=".*YouTube.*"] move to workspace "10";
-      for_window [title=".*Microsoft Teams.*"] move to workspace "7";
+      for_window [title=".*YouTube.*"] move to workspace "10"
+      for_window [title=".*Microsoft Teams.*"] move to workspace "7"
+      no_focus [class="org.remmina.Remmina"]
+      focus_on_window_activation none
     '';
 
     config = {
