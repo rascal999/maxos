@@ -570,6 +570,8 @@ function pull_educational_repos() {
   git_update https://github.com/samratashok/nishang.git $HOME/git/pentest-education/nishang
   git_update https://github.com/hslatman/awesome-threat-intelligence.git $HOME/git/pentest-education/awesome-threat-intelligence
   git_update https://github.com/0xInfection/Awesome-WAF.git $HOME/git/pentest-education/Awesome-WAF
+  git_update https://github.com/arch3rPro/PentestTools.git $HOME/git/pentest-education/PentestTools
+  git_update https://github.com/cugu/awesome-forensics.git $HOME/git/pentest-education/awesome-forensics
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
@@ -577,6 +579,7 @@ function pull_educational_repos() {
   git_update https://github.com/meirwah/awesome-incident-response.git $HOME/git/pentest-education/awesome-incident-response
   git_update https://github.com/TaptuIT/awesome-devsecops.git $HOME/git/pentest-education/awesome-devsecops
   git_update https://github.com/mandiant/red_team_tool_countermeasures.git $HOME/git/pentest-education/red_team_tool_countermeasures
+  git_update https://github.com/LetsDefend/SOC-Interview-Questions.git $HOME/git/pentest-education/SOC-Interview-Questions
 
   ### OSINT
   git_update https://github.com/jivoi/awesome-osint.git $HOME/git/pentest-education/awesome-osint

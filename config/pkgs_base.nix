@@ -360,6 +360,7 @@
     sx-go                                                                                                # Command-line network scanner
     tcpflow                                                                                              # TCP stream extractor
     tcpreplay                                                                                            # A suite of utilities for editing and replaying network traffic
+    tdesktop                                                                                             # Telegram Desktop messaging app
     teams                                                                                                # Microsoft Teams
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
     teler                                                                                                # Real-time HTTP Intrusion Detection

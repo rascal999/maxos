@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "bypasspaywalls@bypasspaywalls": {
+        "install_url": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/latest/download/bypass-paywalls-firefox.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{f18f0257-10ad-4ff7-b51e-6895edeccfc8}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/netflix-1080p-firefox/addon-2617870-latest.xpi",
         "installation_mode": "normal_installed"
@@ -241,6 +245,10 @@
         "name": "Cheatsheets",
         "children": [
           {
+            "name": "Acronym List",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_acronym_list.pdf"
+          },
+          {
             "name": "Active-Directory-Exploitation-Cheat-Sheet",
             "url": "file:///home/user/git/pentest-education/Active-Directory-Exploitation-Cheat-Sheet/README.md"
           },
@@ -286,11 +294,11 @@
           },
           {
             "name": "CISSP Cheat Sheet Series",
-            "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_cissp_cheat_sheet_series.pdf"
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221117_cissp_cheat_sheet_series.pdf"
           },
           {
             "name": "CISSP Study Guide",
-            "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_cissp_guide.pdf"
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221117_cissp_guide.pdf"
           },
           {
             "name": "DefaultCreds-cheat-sheet",
@@ -301,6 +309,10 @@
             "url": "file:///home/user/git/education/DockerCheatSheet/README.md"
           },
           {
+            "name": "Hacking Tools Cheatsheet",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_hacking_tools_cheat_sheet.pdf"
+          },
+          {
             "name": "Java-Deserialization-Cheat-Sheet",
             "url": "file:///home/user/git/pentest-education/Java-Deserialization-Cheat-Sheet/README.md"
           },
@@ -309,12 +321,32 @@
             "url": "file:///home/user/git/pentest-education/JustTryHarder/README.md"
           },
           {
+            "name": "Linux Tools",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_linux_tools.jpg"
+          },
+          {
+            "name": "Nmap + Nessus Cheat Sheet",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_nmap_nessus_cheat_sheet.pdf"
+          },
+          {
+            "name": "Pentest Toolkit",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_pentest_toolkit.jpg"
+          },
+          {
             "name": "Pentest-Cheat-Sheets",
             "url": "file:///home/user/git/pentest-education/Pentest-Cheat-Sheets/README.md"
           },
           {
+            "name": "RedTeam Toolkit",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_redteam_toolkit.jpg"
+          },
+          {
             "name": "SANS DFIR",
             "url": "file:///home/user/git/maxos/resources/pdfs/20221024_SANS_DFIR.pdf"
+          },
+          {
+            "name": "SANS Faculty Free Tools",
+            "url": "file:///home/user/git/maxos/resources/pdfs/20221207_pentest_tools.pdf"
           },
           {
             "name": "Windows and AD exploitation cheat sheet",
@@ -380,7 +412,7 @@
               },
               {
                 "name": "Hands on AWS Penetration Testing",
-                "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_aws_pentesting.pdf"
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20221117_aws_pentesting.pdf"
               },
               {
                 "name": "my-arsenal-of-aws-security-tools",
@@ -524,6 +556,10 @@
           {
             "name": "papers-we-love",
             "url": "file:///home/user/git/education/papers-we-love"
+          },
+          {
+            "name": "Projectbook",
+            "url": "https://projectbook.code.brettchalupa.com/_introduction.html"
           },
           {
             "name": "Reverse-Engineering",
@@ -763,6 +799,10 @@
           {
             "name": "Tech-Interview-Cheat-Sheet",
             "url": "file:///home/user/git/education/Tech-Interview-Cheat-Sheet/README.md"
+          },
+          {
+            "name": "Top 30 penetration tester (Pentester) interview questions and answers",
+            "url": "https://resources.infosecinstitute.com/topic/top-30-penetration-tester-pentester-interview-questions-and-answers-for-2019/"
           }
         ]
       },
@@ -1315,6 +1355,79 @@
             ]
           },
           {
+            "name": "Telegram",
+            "children": [
+              {
+                "name": "Android Security & Malware",
+                "url": "https://t.me/androidMalware"
+              },
+              {
+                "name": "Blue Team | SOC | DFIR | Cloud Security",
+                "url": "https://t.me/socanalyst"
+              },
+              {
+                "name": "ch4mr0sh",
+                "url": "https://t.me/ch4mr0sh"
+              },
+              {
+                "name": "Cyber Security & Privacy News",
+                "url": "https://t.me/cibsecurity"
+              },
+              {
+                "name": "CyberSecurityTechnologies",
+                "url": "https://t.me/CyberSecurityTechnologies"
+              },
+              {
+                "name": "Cyber Threat Intelligence",
+                "url": "https://t.me/ctinow"
+              },
+              {
+                "name": "Fuzzing Labs",
+                "url": "https://t.me/fuzzinglabs"
+              },
+              {
+                "name": "HackerOne",
+                "url": "https://t.me/HackerOne"
+              },
+              {
+                "name": "Incident Response",
+                "url": "https://t.me/IncidentResponse"
+              },
+              {
+                "name": "Malpedia Update Feed",
+                "url": "https://t.me/malpedia"
+              },
+              {
+                "name": "Malware News",
+                "url": "https://t.me/malwr"
+              },
+              {
+                "name": "Malware Research",
+                "url": "https://t.me/MalwareResearch"
+              },
+              {
+                "name": "Reverse Engineering Chat",
+                "url": "https://t.me/"
+              },
+              {
+                "name": "RME-DisCo",
+                "url": "https://t.me/reverseame"
+              },
+              {
+                "name": "Cyber Soc Investigation",
+                "url": "https://t.me/soc_hacks"
+              },
+              {
+                "name": "Threat Intelligence Sharing",
+                "url": "https://t.me/ThreatIntelligenceSharing"
+              },
+              {
+                "name": "vx-underground",
+                "url": "https://t.me/vxunderground"
+              }
+            ]
+          },
+          {
             "name": "alm.gg PDFs",
             "url": "file:///home/user/pdfs/education/misc"
           },
@@ -1743,6 +1856,10 @@
                 "url": "file:///home/user/git/pentest-education/awesome-executable-packing/README.md"
               },
               {
+                "name": "awesome-forensics",
+                "url": "file:///home/user/git/pentest-education/awesome-forensics/README.md"
+              },
+              {
                 "name": "awesome-fuzzing",
                 "url": "file:///home/user/git/pentest-education/awesome-fuzzing/README.md"
               },
@@ -1799,6 +1916,10 @@
                 "url": "file:///home/user/git/misc/frida-snippets/README.md"
               },
               {
+                "name": "h4cker",
+                "url": "file:///home/user/git/pentest-education/h4cker"
+              },
+              {
                 "name": "hacker101",
                 "url": "file:///home/user/git/pentest-education/hacker101/README.md"
               },
@@ -1809,10 +1930,6 @@
               {
                 "name": "Hack The Box",
                 "url": "https://www.hackthebox.com/"
-              },
-              {
-                "name": "h4cker",
-                "url": "file:///home/user/git/pentest-education/h4cker"
               },
               {
                 "name": "Infosec_Reference",
@@ -1840,11 +1957,19 @@
               },
               {
                 "name": "Pentest Book",
-                "url": "file:////home/user/git/maxos/resources/cheatsheets/20221117_pentest_book.pdf"
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20221117_pentest_book.pdf"
               },
               {
                 "name": "PENTESTING-BIBLE",
                 "url": "file:///home/user/git/pentest-education/PENTESTING-BIBLE"
+              },
+              {
+                "name": "PentestTools",
+                "url": "file:///home/user/git/pentest-education/PentestTools/README.md"
+              },
+              {
+                "name": "SecTools",
+                "url": "https://sectools.org/"
               },
               {
                 "name": "technical-whitepapers",
@@ -2679,8 +2804,16 @@
             "url": "https://www.youtube.com/c/BlackPerl"
           },
           {
+            "name": "Bug Bounty Reports Explained",
+            "url": "https://www.youtube.com/c/bugbountyreportsexplained"
+          },
+          {
             "name": "Bugcrowd",
             "url": "https://www.youtube.com/c/Bugcrowd"
+          },
+          {
+            "name": "codingo",
+            "url": "https://www.youtube.com/@codingo"
           },
           {
             "name": "Computerphile",
@@ -2689,6 +2822,10 @@
           {
             "name": "cybercdh",
             "url": "https://www.youtube.com/c/cybercdh"
+          },
+          {
+            "name": "Cybersecurity Meg",
+            "url": "https://www.youtube.com/@CybersecurityMeg/"
           },
           {
             "name": "Cyberspatial",
@@ -2719,12 +2856,24 @@
             "url": "https://www.youtube.com/watch?v=fNzpcB7ODxQ"
           },
           {
+            "name": "Farah Hawa",
+            "url": "https://www.youtube.com/@FarahHawa/"
+          },
+          {
             "name": "Hack eXPlorer",
             "url": "https://www.youtube.com/c/HackeXPlorer"
           },
           {
+            "name": "HackerOne",
+            "url": "https://www.youtube.com/@HackerOneTV"
+          },
+          {
             "name": "HackerSploit",
             "url": "https://www.youtube.com/c/HackerSploit"
+          },
+          {
+            "name": "Hacking Simplified",
+            "url": "https://www.youtube.com/@HackingSimplifiedAS"
           },
           {
             "name": "Hak5",
@@ -2743,6 +2892,10 @@
             "url": "https://www.youtube.com/c/InsiderPhD"
           },
           {
+            "name": "intigriti",
+            "url": "https://www.youtube.com/@intigriti"
+          },
+          {
             "name": "IppSec",
             "url": "https://www.youtube.com/c/ippsec"
           },
@@ -2759,6 +2912,10 @@
             "url": "https://www.youtube.com/c/JohnHammond010"
           },
           {
+            "name": "Josh Madakor",
+            "url": "https://www.youtube.com/@JoshMadakor"
+          },
+          {
             "name": "Linux for Ethical Hackers",
             "url": "https://www.youtube.com/watch?v=U1w4T03B30I"
           },
@@ -2771,12 +2928,20 @@
             "url": "https://www.youtube.com/c/Nahamsec"
           },
           {
+            "name": "Nessus Professional (playlist)",
+            "url": "https://www.youtube.com/playlist?list=PLOMx6Layn69hduI4YjVkDw-tN6H_kBZ6l"
+          },
+          {
             "name": "NetworkChuck",
             "url": "https://www.youtube.com/c/NetworkChuck"
           },
           {
             "name": "Network Pentesting - freeCodeCamp.org",
             "url": "https://www.youtube.com/watch?v=3Kq1MIfTWCE"
+          },
+          {
+            "name": "Nmap (playlist)",
+            "url": "https://www.youtube.com/playlist?list=PLBf0hzazHTGM8V_3OEKhvCM9Xah3qDdIx"
           },
           {
             "name": "Null Byte",
@@ -2811,6 +2976,18 @@
             "url": "https://www.youtube.com/c/professormesser"
           },
           {
+            "name": "PwnFunction",
+            "url": "https://www.youtube.com/@PwnFunction"
+          },
+          {
+            "name": "Rana Khalil",
+            "url": "https://www.youtube.com/@RanaKhalil101"
+          },
+          {
+            "name": "RogueSMG",
+            "url": "https://www.youtube.com/@RogueSMG"
+          },
+          {
             "name": "SANS Offensive Operations",
             "url": "https://www.youtube.com/c/SANSOffensiveOperations"
           },
@@ -2835,6 +3012,10 @@
             "url": "https://www.youtube.com/c/STOKfredrik"
           },
           {
+            "name": "Sun Knudsen",
+            "url": "https://www.youtube.com/@SunKnudsen"
+          },
+          {
             "name": "The Cyber Mentor",
             "url": "https://www.youtube.com/c/TheCyberMentor"
           },
@@ -2853,6 +3034,14 @@
           {
             "name": "The XSS Rat",
             "url": "https://www.youtube.com/c/TheXSSrat"
+          },
+          {
+            "name": "Vickie Li Dev",
+            "url": "https://www.youtube.com/@VickieLiDev"
+          },
+          {
+            "name": "We Hack Purple Academy, Community and Podcast!",
+            "url": "https://www.youtube.com/@SheHacksPurple"
           },
           {
             "name": "Z-winK University",

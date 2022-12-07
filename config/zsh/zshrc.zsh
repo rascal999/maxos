@@ -99,26 +99,73 @@ new() {
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
   echo "a.netscanparse              Format netscan results for Logseq"
+  echo "a.sqli                      Find SQLi issues against target"
+  echo "a.xss                       Find XSS issues against target"
   echo "aria2c                      wget alternative"
   echo "arsenal                     Generate commands for security and network tools"
-  echo "broot                       File explorer"
   echo "bwcalc                      Bandwidth transfer time estimator"
   echo "croc                        Share files between machines"
   echo "d.bb                        OpenBB finance terminal"
+  echo "d.cloudfox                  Cloud scanner"
   echo "d.dos                       MHDDoS"
+  echo "d.gf                        Wrapper around grep"
   echo "d.katana                    Web crawler"
   echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "d.phash                     psudohash"
   echo "d.rg                        redgo"
   echo "d.sshere                    SecretScanner for container scanning"
+  echo "d.wbu                       waybackurls"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
-  echo "k6                          Load testing with scripting"
   echo "inql                        Security testing tool for GraphQL"
   echo "wuzz                        Interactive cli tool for HTTP inspection"
 }
 
 test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
+}
+
+a.sqli() {
+  if [[ "$#" -lt "1" ]]; then
+    echo "ERROR: Specify target site"
+    echo "$0 http://testphp.vulnweb.com/"
+    return 1
+  fi
+
+  TMP_FILE=`uuidgen | choose -f '-' -1`
+
+  echo $1 |\
+  hakrawler > /tmp/sqli_${TMP_FILE} && \
+  cat /tmp/sqli_${TMP_FILE} |\
+  echo $1 | docker run -i --rm redgo waybackurls --no-subs |\
+  grep -o "http[^ ]*" > /tmp/sqli_filter_urls_${TMP_FILE}.txt && \
+  cat /tmp/sqli_filter_urls_${TMP_FILE}.txt |\
+  grep = > /tmp/sqli_parameter_urls_${TMP_FILE}.txt && \
+  cat /tmp/sqli_parameter_urls_${TMP_FILE}.txt | grep "$1" | sort | uniq |\
+  sqlmap -v 0 -m -
+
+  screen -adm $HOME/git/maxos/scripts/telegram_notify.sh -a -q -m "SQLi scan finished for $1"
+}
+
+a.xss() {
+  if [[ "$#" -lt "1" ]]; then
+    echo "ERROR: Specify target site"
+    echo "$0 http://testphp.vulnweb.com/"
+    return 1
+  fi
+
+  TMP_FILE=`uuidgen | choose -f '-' -1`
+
+  echo $1 |\
+  hakrawler > /tmp/xss_${TMP_FILE} && \
+  cat /tmp/xss_${TMP_FILE} && \
+  echo $1 | docker run -i --rm redgo waybackurls --no-subs |\
+  grep -o "http[^ ]*" > /tmp/xss_filter_urls_${TMP_FILE}.txt && \
+  cat /tmp/xss_filter_urls_${TMP_FILE}.txt |\
+  grep = > /tmp/xss_parameter_urls_${TMP_FILE}.txt && \
+  cat /tmp/xss_parameter_urls_${TMP_FILE}.txt | grep "$1" | sort | uniq |\
+  docker run -iv `pwd`:/mnt --rm redgo dalfox --no-spinner -S -b tigv2.xss.ht pipe
+
+  screen -adm $HOME/git/maxos/scripts/telegram_notify.sh -a -q -m "XSS scan finished for $1"
 }
 
 a.eb() {
@@ -214,6 +261,18 @@ a.vpn() {
 
 bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
+}
+
+d.cloudfox() {
+  docker run -i --rm redgo /root/cloudfox/cloudfox "$@"
+}
+
+d.wbu() {
+  docker run -i --rm redgo waybackurls $@
+}
+
+d.gf() {
+  docker run -i --rm redgo gf $@
 }
 
 d.nessus() {
