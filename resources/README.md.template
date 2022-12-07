@@ -32,11 +32,12 @@ This NixOS config comes with a few things to make my life easier while pentestin
 * ZSH_ALIASES zsh aliases
 * Over 450 security-focused bookmarks:
   * PODCASTS podcasts
-  * YOUTUBE YouTube channels
+  * YOUTUBE YouTube channels / playlists
   * LABS online labs
   * NEWS news resources
   * RECON search engines
   * NEWSLETTERS newsletters
+  * TELEGRAM Telegram channels
 * GIT_REPOS git repos
 * DOCKER_REPOS docker images
 * WEB_APPS web applications

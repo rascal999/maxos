@@ -50,3 +50,6 @@ sed -i "s/WEB_APPS/$WEB_APPS/g" README.md
 # Firefox extensions
 EXTENSIONS=`cat config/firefox/firefox-policies.json | jq '.[].ExtensionSettings[].install_url' | wc -l`
 sed -i "s/EXTENSIONS/$EXTENSIONS/g" README.md
+
+TELEGRAM=`cat config/firefox/firefox-policies.json | jq '.[].ManagedBookmarks[] | select(.name=="Misc") | .children[] | select(.name=="Telegram") | .children[].url' | wc -l`
+sed -i "s/TELEGRAM/$TELEGRAM/g" README.md
