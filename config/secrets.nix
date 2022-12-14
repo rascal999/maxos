@@ -69,17 +69,17 @@
       source = config.age.secrets.vpn-mullvad.path;
       mode = "0444";
     };
-    wireguard-pav =
+    wireguard_pav =
     {
       source = config.age.secrets.wireguard-pav.path;
       mode = "0444";
     };
-    wireguard-rig =
+    wireguard_rig =
     {
       source = config.age.secrets.wireguard-rig.path;
       mode = "0444";
     };
-    wireguard-rog =
+    wireguard_rog =
     {
       source = config.age.secrets.wireguard-rog.path;
       mode = "0444";
