@@ -91,6 +91,26 @@
         ];
       };
 
+      ### PAV
+      pav = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = configSettings ++ [
+          ./config/grub.nix
+          ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
+          ./config/secrets.nix
+          ./hosts/pav/configuration.nix
+          ./hosts/pav/hardware-configuration.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./config/i3-vars.nix
+              ./home.nix
+            ];
+          })
+        ];
+      };
+
       ### ROG
       rog = nixpkgs.lib.nixosSystem {
         inherit system;
