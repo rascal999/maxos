@@ -22,6 +22,15 @@
     vpn-mullvad = {
       file = ../secrets/vpn-mullvad.age;
     };
+    wireguard-pav = {
+      file = ../secrets/wireguard-pav.age;
+    };
+    wireguard-rig = {
+      file = ../secrets/wireguard-rig.age;
+    };
+    wireguard-rog = {
+      file = ../secrets/wireguard-rog.age;
+    };
   };
 
   environment.etc = {
@@ -58,6 +67,21 @@
     vpn-mullvad =
     {
       source = config.age.secrets.vpn-mullvad.path;
+      mode = "0444";
+    };
+    wireguard-pav =
+    {
+      source = config.age.secrets.wiregurad-pav.path;
+      mode = "0444";
+    };
+    wireguard-rig =
+    {
+      source = config.age.secrets.wiregurad-rig.path;
+      mode = "0444";
+    };
+    wireguard-rog =
+    {
+      source = config.age.secrets.wiregurad-rog.path;
       mode = "0444";
     };
   };

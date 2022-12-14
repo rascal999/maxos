@@ -17,4 +17,7 @@ in
   "secret.age".publicKeys = hosts;
   "vpn-mullvad.age".publicKeys = hosts;
   "wireguard-env.age".publicKeys = hosts;
+  "wireguard-pav.age".publicKeys = hosts;
+  "wireguard-rig.age".publicKeys = hosts;
+  "wireguard-rog.age".publicKeys = hosts;
 }
