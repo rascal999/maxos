@@ -71,17 +71,17 @@
     };
     wireguard-pav =
     {
-      source = config.age.secrets.wiregurad-pav.path;
+      source = config.age.secrets.wireguard-pav.path;
       mode = "0444";
     };
     wireguard-rig =
     {
-      source = config.age.secrets.wiregurad-rig.path;
+      source = config.age.secrets.wireguard-rig.path;
       mode = "0444";
     };
     wireguard-rog =
     {
-      source = config.age.secrets.wiregurad-rog.path;
+      source = config.age.secrets.wireguard-rog.path;
       mode = "0444";
     };
   };
