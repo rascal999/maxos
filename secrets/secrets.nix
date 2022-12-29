@@ -7,6 +7,7 @@ let
   hosts = [ host_blueboy host_galaxy host_rig host_rog ];
 in
 {
+  "api-huggingface.age".publicKeys = hosts;
   "api-instagram.age".publicKeys = hosts;
   "api-nist.age".publicKeys = hosts;
   "api-shodan.age".publicKeys = hosts;

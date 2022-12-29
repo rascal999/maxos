@@ -1,6 +1,9 @@
 { config, pkgs, lib, ... }: {
   # Secrets
   age.secrets = {
+    api-huggingface = {
+      file = ../secrets/api-huggingface.age;
+    };
     api-instagram = {
       file = ../secrets/api-instagram.age;
     };

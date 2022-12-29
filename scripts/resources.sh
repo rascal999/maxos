@@ -190,6 +190,15 @@ function pull_misc_things() {
   git_update https://github.com/Igglybuff/awesome-piracy.git $HOME/git/misc/awesome-piracy
   git_update https://github.com/iptv-org/iptv.git $HOME/git/misc/iptv
 
+  # InvokeAI
+  git_update https://github.com/invoke-ai/InvokeAI.git $HOME/git/misc/InvokeAI
+  if [[ "$?" == "0" ]]; then
+    docker-build/build.sh
+    export HUGGINGFACE_TOKEN=`cat /etc/api-hugginggface`
+    docker-build/run.sh
+    docker-build/run.sh
+  fi
+
   # jsoncrack
   git_update https://github.com/AykutSarac/jsoncrack.com.git $HOME/git/misc/jsoncrack.com
   if [[ "$?" == "0" ]]; then
