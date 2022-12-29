@@ -572,6 +572,7 @@ function pull_educational_repos() {
   git_update https://github.com/0xInfection/Awesome-WAF.git $HOME/git/pentest-education/Awesome-WAF
   git_update https://github.com/arch3rPro/PentestTools.git $HOME/git/pentest-education/PentestTools
   git_update https://github.com/cugu/awesome-forensics.git $HOME/git/pentest-education/awesome-forensics
+  git_update https://github.com/SunWeb3Sec/DeFiHackLabs.git $HOME/git/pentest-education/DeFiHackLabs.git
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening

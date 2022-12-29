@@ -168,6 +168,10 @@
                 "url": "file:///home/user/git/education/awesome-openzeppelin/README.md"
               },
               {
+                "name": "DeFiHackLabs",
+                "url": "file:///home/user/git/pentest-education/DeFiHackLabs/README.md"
+              },
+              {
                 "name": "full-blockchain-solidity-course",
                 "url": "file:///home/user/git/education/full-blockchain-solidity-course-py/README.md"
               },
