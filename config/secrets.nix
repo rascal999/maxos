@@ -37,6 +37,11 @@
   };
 
   environment.etc = {
+    api-huggingface =
+    {
+      source = config.age.secrets.api-huggingface.path;
+      mode = "0444";
+    };
     api-instagram =
     {
       source = config.age.secrets.api-instagram.path;
