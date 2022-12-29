@@ -55,11 +55,11 @@
       ports = [ "127.0.0.1:9080:8080" ];
     };
 
-    dashy = {
-      image = "lissy93/dashy";
-      ports = [ "127.0.0.1:9090:80" ];
-      volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
-    };
+    #dashy = {
+    #  image = "lissy93/dashy";
+    #  ports = [ "127.0.0.1:9090:80" ];
+    #  volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
+    #};
 
     grafana = {
       environment = {
