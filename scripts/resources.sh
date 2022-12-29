@@ -192,7 +192,7 @@ function pull_misc_things() {
 
   # InvokeAI
   git_update https://github.com/invoke-ai/InvokeAI.git $HOME/git/misc/InvokeAI
-  if [[ "$?" == "0" && -f "/etc/api-hugginggface" ]]; then
+  if [[ "$?" == "0" && -f "/etc/api-huggingface" ]]; then
     docker-build/build.sh
     export HUGGINGFACE_TOKEN=`cat /etc/api-hugginggface`
     docker-build/run.sh
