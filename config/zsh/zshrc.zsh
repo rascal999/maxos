@@ -1574,7 +1574,7 @@ d.security-ninjas() {
 }
 
 # extract
-function a-extract {
+a.extract {
  if [ -z "$1" ]; then
   # display usage if no parameters given
   echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"

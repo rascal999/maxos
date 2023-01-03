@@ -677,8 +677,22 @@ function pull_tool_repos() {
   git_update https://github.com/nomi-sec/PoC-in-GitHub.git $HOME/git/exploits/PoC-in-GitHub
 
   ### Tools which need building
+  # IntelOwl
+  git_update https://github.com/intelowlproject/IntelOwl $HOME/git/pentest-tools/IntelOwl
+  cd $HOME/git/pentest-tools/IntelOwl/docker
+  cp env_file_app_template env_file_app
+  cp env_file_postgres_template env_file_postgres
+  cp env_file_integrations_template env_file_integrations
+  cd ..
+  python -m venv .venv
+  source .venv/bin/activate
+  bash ./initialize.sh
+  python3 start.py prod up -d
+  echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@myproject.com', 'password')" | docker exec -i intelowl_uwsgi python3 manage.py shell
+  deactivate
+
   # OpenVAS
-  git clone https://github.com/greenbone/openvas-scanner.git
+  #git clone https://github.com/greenbone/openvas-scanner.git
 
   # ATT&CK Navigator
   git_update https://github.com/mitre-attack/attack-navigator.git $HOME/git/pentest-tools/attack-navigator
