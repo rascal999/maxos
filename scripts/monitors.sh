@@ -10,12 +10,15 @@ if [[ `hostname` == "rig" ]]; then
     # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --right-of DP-4
 
-    #sleep 4
+    sleep 4
 
     i3-msg "workspace yt, move workspace to output HDMI-0"
     i3-msg "workspace mst, move workspace to output DP-4"
     i3-msg "workspace 2:ls, move workspace to output USB-C-0"
     i3-msg "workspace 1, move workspace to output USB-C-0"
+    i3-msg "workspace 3:rdp, move workspace to output USB-C-0"
+    i3-msg "workspace 5:rep, move workspace to output USB-C-0"
+    i3-msg "workspace vm, move workspace to output USB-C-0"
 
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
