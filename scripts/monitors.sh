@@ -14,13 +14,13 @@ if [[ `hostname` == "rig" ]]; then
 
     i3-msg "workspace yt, move workspace to output HDMI-0"
     i3-msg "workspace mst, move workspace to output DP-4"
-    i3-msg "workspace 2, move workspace to output USB-C-0"
+    i3-msg "workspace 2:ls, move workspace to output USB-C-0"
     i3-msg "workspace 1, move workspace to output USB-C-0"
 
-    for WORKSPACE_FILE in "$@" ; do
-      WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
-      i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
-    done
+    #for WORKSPACE_FILE in "$@" ; do
+    #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
+    #  i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
+    #done
 fi
 
 if [[ `hostname` == "galaxy" ]]; then

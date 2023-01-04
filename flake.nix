@@ -64,6 +64,7 @@
               ./config/i3-vars.nix
               ./home.nix
               ./hosts/blade/home.nix
+              ./hosts/blade/i3/i3.nix
             ];
           })
         ];
