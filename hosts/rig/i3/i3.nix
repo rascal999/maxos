@@ -26,16 +26,6 @@
           command = "exec ${pkgs.teams}/bin/teams";
         }
       ];
-
-      assigns."7" = [
-        { class = "^Microsoft\\ Teams.*"; instance = "^microsoft\\ teams.*"; }
-      ];
-      assigns."2" = [
-        { class = "^Logseq$"; instance = "^logseq$"; }
-      ];
-      assigns."1" = [
-        { class = "^firefox$"; instance = "^Navigator$"; }
-      ];
     };
   };
 }

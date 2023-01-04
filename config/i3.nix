@@ -8,8 +8,18 @@ in {
 
     extraConfig = ''
       default_border pixel 1
-      for_window [title=".*YouTube.*"] move to workspace "10"
-      for_window [title=".*Microsoft Teams.*"] move to workspace "7"
+      for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
+      for_window [class=".*Gimp.*"] move to workspace "img"
+      for_window [class=".*KeePassXC.*"] move to workspace "pw"
+      for_window [class=".*Logseq.*"] move to workspace 2:ls
+      for_window [class=".*Remmina.*"] move to workspace 3:rdp
+      for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
+      for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
+      for_window [class=".*Wireshark.*"] move to workspace "fin"
+      for_window [instance=".*microsoft teams.*"] move to workspace "mst"
+      for_window [title=".*Online LaTeX Editor Overleaf Community Edition.*"] move to workspace "5:rep"
+      for_window [title=".*YouTube . Mozilla Firefox.*"] move to workspace "yt"
+      for_window [title=".*YouTube Music.*"] move to workspace "ytm"
       no_focus [class="org.remmina.Remmina"]
       focus_on_window_activation none
     '';
@@ -23,8 +33,8 @@ in {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
+        "${mod}+Return" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+Shift+l" = "exec sudo poweroff";
-        "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
@@ -33,9 +43,10 @@ in {
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
+        "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
+        "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
-        "${mod}+o" = "exec ${pkgs.obs-studio}/bin/obs";
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
@@ -43,6 +54,7 @@ in {
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
+        "${mod}+o" = "exec ${pkgs.obs-studio}/bin/obs";
         "${mod}+s" = "exec ${pkgs.scrot}/bin/scrot";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+u" = "fullscreen";
@@ -67,20 +79,20 @@ in {
         # Workspace
         "${mod}+0" = "workspace number 10";
         "${mod}+1" = "workspace number 1";
-        "${mod}+2" = "workspace number 2";
-        "${mod}+3" = "workspace number 3";
+        "${mod}+2" = "workspace 2:ls";
+        "${mod}+3" = "workspace 3:rdp";
         "${mod}+4" = "workspace number 4";
-        "${mod}+5" = "workspace number 5";
+        "${mod}+5" = "workspace 5:rep";
         "${mod}+6" = "workspace number 6";
         "${mod}+7" = "workspace number 7";
         "${mod}+8" = "workspace number 8";
         "${mod}+9" = "workspace number 9";
         "${mod}+Shift+0" = "move container to workspace number 10";
         "${mod}+Shift+1" = "move container to workspace number 1";
-        "${mod}+Shift+2" = "move container to workspace number 2";
-        "${mod}+Shift+3" = "move container to workspace number 3";
+        "${mod}+Shift+2" = "move container to workspace 2:ls";
+        "${mod}+Shift+3" = "move container to workspace 3:rdp";
         "${mod}+Shift+4" = "move container to workspace number 4";
-        "${mod}+Shift+5" = "move container to workspace number 5";
+        "${mod}+Shift+5" = "move container to workspace 5:rep";
         "${mod}+Shift+6" = "move container to workspace number 6";
         "${mod}+Shift+7" = "move container to workspace number 7";
         "${mod}+Shift+8" = "move container to workspace number 8";
@@ -91,7 +103,7 @@ in {
         hideEdgeBorders = "both";
       };
 
-      workspaceAutoBackAndForth = true;
+      #workspaceAutoBackAndForth = true;
 
       bars = [
         {
