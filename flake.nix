@@ -64,7 +64,6 @@
               ./config/i3-vars.nix
               ./home.nix
               ./hosts/blade/home.nix
-              ./hosts/blade/i3/i3.nix
             ];
           })
         ];
@@ -128,6 +127,7 @@
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
               ./config/i3-vars.nix
+              ./hosts/rog/i3/i3.nix
               ./home.nix
             ];
           })
