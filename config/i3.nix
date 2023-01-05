@@ -33,17 +33,17 @@ in {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
-        "${mod}+Return" = "exec i3-input -F 'workspace %s' -P 'goto: '";
+        "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
+        "${mod}+space" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+Shift+l" = "exec sudo poweroff";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
         "${mod}+Shift+p" = "restart";
+        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+Shift+t" = "exec ${pkgs.teams}/bin/teams";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
-        "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
-        "${mod}+space" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
