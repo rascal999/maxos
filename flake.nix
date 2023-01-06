@@ -56,6 +56,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/pkgs_ui.nix
           ./hosts/blade/configuration.nix
           ./hosts/blade/hardware-configuration.nix
 
@@ -77,6 +78,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/pkgs_ui.nix
           ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/rig/configuration.nix
@@ -96,8 +98,8 @@
         inherit system;
         modules = configSettings ++ [
           ./config/grub.nix
-          ./config/pkgs_additional.nix
-          ./config/pkgs_base.nix
+          ./config/pkgs_minimal.nix
+          ./config/pkgs_ui.nix
           ./config/secrets.nix
           ./hosts/pav/configuration.nix
           ./hosts/pav/hardware-configuration.nix
@@ -119,6 +121,7 @@
           ./config/grub.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/pkgs_ui.nix
           ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/rog/configuration.nix
@@ -205,6 +208,7 @@
           ./config/grub_xvm.nix
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/pkgs_ui.nix
           ./config/syncthing.nix
           ./hosts/xvm/configuration.nix
           ./hosts/xvm/hardware-configuration.nix
@@ -248,8 +252,8 @@
         inherit system;
         modules = configSettings ++ [
           ./config/grub.nix
-          ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
+          ./config/pkgs_ui.nix
           ./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/galaxy/configuration.nix

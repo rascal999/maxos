@@ -174,7 +174,6 @@
     grepcidr                                                                                             # Filter IPv4 and IPv6 addresses matching CIDR patterns
     grim                                                                                                 # Grab images from a Wayland compositor
     grype                                                                                                # Vulnerability scanner for container images and filesystems
-    gsettings-desktop-schemas                                                                            # Collection of GSettings schemas for settings shared by various components of a desktop
     gzrt                                                                                                 # The gzip Recovery Toolkit
     hachoir                                                                                              # Python library to view and edit a binary stream
     hakrawler                                                                                            # Web crawler for the discovery of endpoints and assets
@@ -193,8 +192,6 @@
     httptunnel                                                                                           # Creates a bidirectional virtual data connection tunnelled in HTTP requests
     httpx                                                                                                # Fast and multi-purpose HTTP toolkit
     hyper                                                                                                # A terminal built on web technologies
-    i3                                                                                                   # A tiling window manager
-    i3status-rust                                                                                        #
     ike-scan                                                                                             # Tool to discover, fingerprint and test IPsec VPN servers
     imagemagick                                                                                          #
     inkscape                                                                                             # Vector graphics editor
@@ -229,7 +226,6 @@
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
     libgccjit                                                                                            # GNU Compiler Collection
     libglibutil                                                                                          # Library of glib utilities
-    libnotify                                                                                            # A library that sends desktop notifications to a notification daemon
     logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
     macchanger                                                                                           # A utility for viewing/manipulating the MAC address of network interfaces
@@ -259,10 +255,8 @@
     netdiscover                                                                                          # A network address discovering tool, developed mainly for those wireless networks without dhcp server, it also works on hub/switched networks
     netsniff-ng                                                                                          # Swiss army knife for daily Linux network plumbing
     networkmanager                                                                                       # Network configuration and management tool
-    networkmanager_dmenu                                                                                 #
     ngrep                                                                                                # Network packet analyzer
     nmap-formatter                                                                                       # Tool that allows you to convert nmap output
-    notify-desktop                                                                                       # Little application that lets you send desktop notifications with one command
     nth                                                                                                  #
     ntlmrecon                                                                                            # Information enumerator for NTLM authentication enabled web endpoints
     ntopng                                                                                               # High-speed web-based traffic analysis and flow collection tool
@@ -302,7 +296,6 @@
     redfang                                                                                              # A small proof-of-concept application to find non discoverable bluetooth devices
     regexploit                                                                                           # Tool to find regular expressions which are vulnerable to ReDoS
     rehex                                                                                                # Reverse Engineers' Hex Editor
-    redshift                                                                                             # Screen color temperature manager
     remmina                                                                                              # Remote desktop client written in GTK
     rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset
     routersploit                                                                                         # Exploitation Framework for Embedded Devices
@@ -407,21 +400,12 @@
     wpscan                                                                                               # Black box WordPress vulnerability scanner
     wstunnel                                                                                             #
     #wuzz                                                                                                 # Interactive cli tool for HTTP inspection
-    x11docker                                                                                            # Run graphical applications with Docker
-    x11vnc                                                                                               # A VNC server connected to a real X11 screen
     x2goclient                                                                                           # Graphical NoMachine NX3 remote desktop client
     xcalib                                                                                               # A tiny monitor calibration loader for X and MS-Windows
     xidel                                                                                                # Command line tool to download and extract data from HTML/XML pages as well as JSON APIs
-    xlockmore                                                                                            # Screen locker for the X Window System
     xorex                                                                                                # XOR Key Extractor
-    xorg.libXext                                                                                         #
-    xorg.xbacklight                                                                                      #
-    xorg.xeyes                                                                                           #
-    xorg.xhost                                                                                           #
-    xorg.xmodmap                                                                                         #
     xortool                                                                                              # Tool to analyze multi-byte XOR cipher
     #xpdf                                                                                                 # Viewer for Portable Document Format (PDF) files
-    xwayland                                                                                             #
     yara                                                                                                 # The pattern matching swiss knife for malware researchers
     yersinia                                                                                             # A framework for layer 2 attacks
     youtube-dl                                                                                           # Emacs youtube-dl download manager
