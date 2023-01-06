@@ -379,7 +379,6 @@
     ventoy-bin                                                                                           # An open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files
     #vmware-workstation                                                                                   # Industry standard desktop hypervisor for x86-64 architecture
     virt-manager                                                                                         # Desktop user interface for managing virtual machines
-    vlc                                                                                                  # Cross-platform media player and streaming server
     volatility3                                                                                          # Volatile memory extraction frameworks
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
     vulnix                                                                                               # NixOS vulnerability scanner

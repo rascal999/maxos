@@ -140,6 +140,7 @@ in {
     usbutils                                                                                             # Tools for working with USB devices, such as lsusb
     utillinux                                                                                            #
     vim                                                                                                  #
+    vlc                                                                                                  # Cross-platform media player and streaming server
     w3m                                                                                                  # A text-mode web browser
     wget                                                                                                 # Tool for retrieving files using HTTP, HTTPS, and FTP
     whois                                                                                                # Intelligent WHOIS client from Debian
