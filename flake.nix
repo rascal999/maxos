@@ -100,7 +100,6 @@
           ./config/grub.nix
           ./config/pkgs_minimal.nix
           ./config/pkgs_ui.nix
-          ./config/secrets.nix
           ./hosts/pav/configuration.nix
           ./hosts/pav/hardware-configuration.nix
 
