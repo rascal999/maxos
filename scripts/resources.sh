@@ -401,10 +401,10 @@ function pull_educational_repos() {
   ### Pentest Education
   cd $HOME/git/maxos/repos/pentest-education && git_submodule_update
 
-  rm -rf $HOME/git/pentest-education/CheatSheetSeriesZip
-  mkdir $HOME/git/pentest-education/CheatSheetSeriesZip
-  wget https://cheatsheetseries.owasp.org/bundle.zip -O $HOME/git/pentest-education/CheatSheetSeriesZip/bundle.zip
-  unzip $HOME/git/pentest-education/CheatSheetSeriesZip/bundle.zip -d $HOME/git/pentest-education/CheatSheetSeriesZip
+  rm -rf $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
+  mkdir $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
+  wget https://cheatsheetseries.owasp.org/bundle.zip -O $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip/bundle.zip
+  unzip $HOME/git/pentest-education/CheatSheetSeriesZip/bundle.zip -d $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
 }
 
 ###
