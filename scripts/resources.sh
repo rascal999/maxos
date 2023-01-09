@@ -379,10 +379,10 @@ function pull_pdfs() {
   ### Misc
   wget -c https://alm.gg/drive-download-20221005T135825Z-001.zip \
     -O $HOME/pdfs/education/alm_gg_pdfs.zip
-  unzip -o $HOME/pdfs/education/alm_gg_pdfs.zip -d $HOME/pdfs/education/misc
+  unzip -o $HOME/pdfs/education/alm_gg_pdfs.zip -d $HOME/git/maxos/repos/education/pdfs/misc
   wget -c https://alm.gg/Yeahhub_ebooks.zip \
     -O $HOME/pdfs/education/Yeahhub_ebooks.zip
-  unzip -o $HOME/pdfs/education/Yeahhub_ebooks.zip -d $HOME/pdfs/education/yeahhub
+  unzip -o $HOME/pdfs/education/Yeahhub_ebooks.zip -d $HOME/git/maxos/repos/education/pdfs/yeahhub
 }
 
 ###
@@ -404,7 +404,7 @@ function pull_educational_repos() {
   rm -rf $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
   mkdir $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
   wget https://cheatsheetseries.owasp.org/bundle.zip -O $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip/bundle.zip
-  unzip $HOME/git/pentest-education/CheatSheetSeriesZip/bundle.zip -d $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
+  unzip $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip/bundle.zip -d $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
 }
 
 ###
@@ -414,7 +414,7 @@ function pull_tool_repos() {
   ### Pentest Frameworks
   cd $HOME/git/maxos/repos/pentest-frameworks && git_submodule_update
 
-  cd $HOME/git/pentest-frameworks/owasp-mstg
+  cd $HOME/git/maxos/repos/pentest-frameworks/owasp-mstg
   bash tools/docker/pandoc_makedocs.sh
 
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
@@ -427,7 +427,7 @@ function pull_tool_repos() {
 
   ### Tools which need building
   # IntelOwl
-  cd $HOME/git/pentest-tools/IntelOwl/docker
+  cd $HOME/git/maxos/repos/pentest-tools/IntelOwl/docker
   cp env_file_app_template env_file_app
   cp env_file_postgres_template env_file_postgres
   cp env_file_integrations_template env_file_integrations
