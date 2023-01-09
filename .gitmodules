@@ -1,3 +1,15 @@
-[submodule "repos/test"]
-	path = repos/test
-	url = https://github.com/rascal999/test
+[submodule "repos/devops/netmaker"]
+	path = repos/devops/netmaker
+	url = https://github.com/gravitl/netmaker
+[submodule "repos/devops/k8s-guide"]
+	path = repos/devops/k8s-guide
+	url = https://github.com/hobby-kube/guide
+[submodule "repos/misc/nocodb"]
+	path = repos/misc/nocodb
+	url = https://github.com/nocodb/nocodb
+[submodule "repos/misc/awesome-stacks"]
+	path = repos/misc/awesome-stacks
+	url = https://github.com/ethibox/awesome-stacks
+[submodule "repos/misc/warpd"]
+	path = repos/misc/warpd
+	url = https://github.com/rvaiya/warpd
