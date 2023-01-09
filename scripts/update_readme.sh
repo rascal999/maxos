@@ -9,7 +9,7 @@ ZSH_ALIASES=`cat config/zsh/zshrc.zsh | grep "() {" | wc -l`
 sed -i "s/ZSH_ALIASES/$ZSH_ALIASES/g" README.md
 
 # git repos (resources.sh)
-GIT_REPOS=`cat scripts/resources.sh | grep "git_update https" | wc -l`
+GIT_REPOS=`git submodule status | wc -l`
 sed -i "s/GIT_REPOS/$GIT_REPOS/g" README.md
 
 # docker repos (resources.sh)

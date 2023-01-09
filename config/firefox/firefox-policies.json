@@ -252,29 +252,31 @@
       {
         "name": "Cheatsheets",
         "children": [
-          "name": "ChatGPT",
-          "children": [
-            {
-              "name": "Awesome 50 ChatGPT Prompts",
-              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_50_prompts.pdf"
-            },
-            {
-              "name": "Awesome 87 ChatGPT Prompts",
-              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_prompts.pdf"
-            },
-            {
-              "name": "ChatGPT for CyberSecurity",
-              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_for_cybersecurity.pdf"
-            },
-            {
-              "name": "ChatGPT Tutorial",
-              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_tutorial.pdf"
-            },
-            {
-              "name": "Malware Analysis 101 - ChatGPT",
-              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_malware_analysis_101.pdf"
-            }
-          ],
+          {
+            "name": "ChatGPT",
+            "children": [
+              {
+               "name": "Awesome 50 ChatGPT Prompts",
+               "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_50_prompts.pdf"
+              },
+              {
+                "name": "Awesome 87 ChatGPT Prompts",
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_prompts.pdf"
+              },
+              {
+                "name": "ChatGPT for CyberSecurity",
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_for_cybersecurity.pdf"
+              },
+              {
+                "name": "ChatGPT Tutorial",
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_tutorial.pdf"
+              },
+              {
+                "name": "Malware Analysis 101 - ChatGPT",
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_malware_analysis_101.pdf"
+              }
+            ]
+          },
           {
             "name": "Acronym List",
             "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_acronym_list.pdf"
