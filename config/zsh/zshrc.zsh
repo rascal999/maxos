@@ -111,6 +111,7 @@ new() {
   echo "d.gf                        Wrapper around grep"
   echo "d.katana                    Web crawler"
   echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
+  echo "d.orbitaldump               OrbitalDump - SSH brute forcer"
   echo "d.phash                     psudohash"
   echo "d.rg                        redgo"
   echo "d.sshere                    SecretScanner for container scanning"
@@ -273,6 +274,10 @@ d.wbu() {
 
 d.gf() {
   docker run -i --rm redgo gf $@
+}
+
+d.orbitaldump() {
+  docker run -v `pwd`:/mnt -i --rm redgo orbitaldump $@
 }
 
 d.nessus() {

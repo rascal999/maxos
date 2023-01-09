@@ -412,6 +412,7 @@ function pull_pdfs() {
 ###
 function pull_bug_bounties() {
   git_update https://github.com/arkadiyt/bounty-targets-data.git $HOME/git/bug-bounty/bounty-targets-data
+  git_update https://github.com/bobby-lin/study-bug-bounty.git $HOME/git/bug-bounty/study-bug-bounty
 }
 
 ###
@@ -468,6 +469,7 @@ function pull_educational_repos() {
   git_update https://github.com/trimstray/the-practical-linux-hardening-guide.git $HOME/git/education/the-practical-linux-hardening-guide
   git_update https://github.com/upgundecha/howtheysre.git $HOME/git/education/howtheysre
   git_update https://github.com/mtdvio/every-programmer-should-know.git $HOME/git/education/every-programmer-should-know
+  git_update https://github.com/krol3/container-security-checklist.git $HOME/git/education/container-security-checklist
 
   ### Pentest Education
   git_update https://github.com/nowsecure/secure-mobile-development.git $HOME/git/pentest-education/secure-mobile-development
@@ -582,6 +584,12 @@ function pull_educational_repos() {
   git_update https://github.com/arch3rPro/PentestTools.git $HOME/git/pentest-education/PentestTools
   git_update https://github.com/cugu/awesome-forensics.git $HOME/git/pentest-education/awesome-forensics
   git_update https://github.com/SunWeb3Sec/DeFiHackLabs.git $HOME/git/pentest-education/DeFiHackLabs.git
+  git_update https://github.com/We5ter/Awesome-DevSecOps-Platforms.git $HOME/git/pentest-education/Awesome-DevSecOps-Platforms
+  git_update https://github.com/The-Viper-One/Pentest-Everything.git $HOME/git/pentest-education/Pentest-Everything
+  git_update https://github.com/V33RU/IoTSecurity101.git $HOME/git/pentest-education/IoTSecurity101
+  git_update https://github.com/brcyrr/PracticalCyberSecurityResources.git $HOME/git/pentest-education/PracticalCyberSecurityResources
+  git_update https://github.com/wwong99/pentest-notes.git $HOME/git/pentest-education/pentest-notes
+  git_update https://github.com/Anugrahsr/Awesome-web3-Security.git $HOME/git/pentest-education/Awesome-web3-Security
 
   ### Blue team
   git_update https://github.com/PaulSec/awesome-windows-domain-hardening.git $HOME/git/pentest-education/awesome-windows-domain-hardening
@@ -659,6 +667,9 @@ function pull_tool_repos() {
   git_update https://github.com/nitefood/asn.git $HOME/git/pentest-tools/asn
   git_update https://github.com/Z4nzu/hackingtool.git $HOME/git/pentest-tools/hackingtool
   git_update https://github.com/t3l3machus/Villain.git $HOME/git/pentest-tools/Villain
+  git_update https://github.com/nccgroup/web3-decoder.git $HOME/git/pentest-tools/web3-decoder
+  git_update https://github.com/MWR-CyberSec/PXEThief.git $HOME/git/pentest-tools/PXEThief
+  git_update https://github.com/BeetleChunks/SpoolSploit.git $HOME/git/pentest-tools/SpoolSploit
 
   ### Misc tools
   git_update https://github.com/rascal999/burp-config.git $HOME/git/misc/burp-config

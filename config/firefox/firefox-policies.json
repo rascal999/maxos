@@ -232,6 +232,10 @@
             "url": "file:///home/user/git/pentest-education/awesome-windows-domain-hardening/README.md"
           },
           {
+            "name": "Blue Team Cheat Sheets",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_blueteam_cheatsheet.pdf"
+          },
+          {
             "name": "how-to-secure-anything",
             "url": "file:///home/user/git/education/how-to-secure-anything"
           },
@@ -248,6 +252,29 @@
       {
         "name": "Cheatsheets",
         "children": [
+          "name": "ChatGPT",
+          "children": [
+            {
+              "name": "Awesome 50 ChatGPT Prompts",
+              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_50_prompts.pdf"
+            },
+            {
+              "name": "Awesome 87 ChatGPT Prompts",
+              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_prompts.pdf"
+            },
+            {
+              "name": "ChatGPT for CyberSecurity",
+              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_for_cybersecurity.pdf"
+            },
+            {
+              "name": "ChatGPT Tutorial",
+              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_tutorial.pdf"
+            },
+            {
+              "name": "Malware Analysis 101 - ChatGPT",
+              "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_malware_analysis_101.pdf"
+            }
+          ],
           {
             "name": "Acronym List",
             "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_acronym_list.pdf"
@@ -353,6 +380,10 @@
             "url": "file:///home/user/git/maxos/resources/pdfs/20221207_pentest_tools.pdf"
           },
           {
+            "name": "Web Application Pentesting Checklist",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_web_application_pentesting_checklist.pdf"
+          },
+          {
             "name": "Windows and AD exploitation cheat sheet",
             "url": "file:///home/user/git/maxos/resources/Windows%20and%20AD%20Exploitation%20Cheat%20Sheet%2020220920.html"
           },
@@ -377,6 +408,10 @@
           {
             "name": "awesome-docker",
             "url": "file:///home/user/git/education/awesome-docker/README.md"
+          },
+          {
+            "name": "container-security-checklist",
+            "url": "file:///home/user/git/education/container-security-checklist"
           },
           {
             "name": "docker/labs",
@@ -1346,6 +1381,10 @@
               {
                 "name": "Resources-for-Beginner-Bug-Bounty-Hunters",
                 "url": "file:///home/user/git/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters/README.md"
+              },
+              {
+                "name": "study-bug-bounty",
+                "url": "file:///home/user/git/bug-bounty/study-bug-bounty/README.md"
               }
             ]
           },
@@ -1780,12 +1819,86 @@
             "name": "API",
             "children": [
               {
+                "name": "API Pentesting Mindmap",
+                "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_api_pentesting_mindmap.pdf"
+              },
+              {
                 "name": "API-Security-Checklist",
                 "url": "file:///home/user/git/pentest-education/API-Security-Checklist/README.md"
               },
               {
                 "name": "awesome-api-security",
                 "url": "file:///home/user/git/pentest-education/awesome-api-security/README.md"
+              }
+            ]
+          },
+          {
+            "name": "Courses",
+            "children": [
+              {
+                "name": "AWS Skill Builder - AWS",
+                "url": "https://explore.skillbuilder.aws/learn/signin"
+              },
+              {
+                "name": "Cyber Security - Class Central",
+                "url": "https://www.classcentral.com/course/swayam-cyber-security-13978"
+              },
+              {
+                "name": "Cybersecurity Essentials - Cisco",
+                "url": "https://www.netacad.com/courses/cybersecurity/cybersecurity-essentials"
+              },
+              {
+                "name": "Developing Secure Software - The Linux Foundation",
+                "url": "https://training.linuxfoundation.org/training/developing-secure-software-lfd121/"
+              },
+              {
+                "name": "Ethical Hacking Essentials (EHE) - codered",
+                "url": "https://codered.eccouncil.org/course/ethical-hacking-essentials"
+              },
+              {
+                "name": "Fortinet Cybersecurity Training - Fortinet",
+                "url": "https://www.fortinet.com/training/cybersecurity-professionals"
+              },
+              {
+                "name": "Google Cloud Training and Certification",
+                "url": "https://cloud.google.com/training"
+              },
+              {
+                "name": "Introduction to Cybersecurity - Cisco",
+                "url": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity"
+              },
+              {
+                "name": "Microsoft Learn for Azure",
+                "url": "https://learn.microsoft.com/en-us/training/azure/"
+              },
+              {
+                "name": "Networking Essentials - Cisco",
+                "url": "https://www.netacad.com/courses/networking/networking-essentials"
+              },
+              {
+                "name": "Qualys Certification and Training Center - Qualys",
+                "url": "https://www.qualys.com/training/"
+              },
+              {
+                "name": "Responsible Red Teaming - The Taggart Institute",
+                "url": "https://taggartinstitute.org/p/responsible-red-teaming"
+              },
+              {
+                "name": "Stanford Seminar - Engineering Cyber Resiliency - Class Central",
+                "url": "https://www.classcentral.com/course/youtube-stanford-seminar-engineering-cyber-resiliency-a-pragmatic-approach-110018"
+              },
+              {
+                "name": "Web Security Academy - PortSwigger",
+                "url": "https://portswigger.net/web-security"
+              }
+            ]
+          },
+          {
+            "name": "IoT",
+            "children": [
+              {
+                "name": "IoTSecurity101",
+                "url": "file:///home/user/git/pentest-education/IoTSecurity101"
               }
             ]
           },
@@ -1846,6 +1959,10 @@
               {
                 "name": "awesome-cyber-security-university",
                 "url": "file:///home/user/git/pentest-education/awesome-cyber-security-university/README.md"
+              },
+              {
+                "name": "Awesome-DevSecOps-Platforms",
+                "url": "file:///home/user/git/pentest-education/Awesome-DevSecOps-Platforms/README.md"
               },
               {
                 "name": "awesome-embedded-and-iot-security",
@@ -1952,6 +2069,18 @@
                 "url": "file:///home/user/git/pentest-education/Practical-Ethical-Hacking-Resources"
               },
               {
+                "name": "PracticalCyberSecurityResources",
+                "url": "file:///home/user/git/pentest-education/PracticalCyberSecurityResources"
+              },
+              {
+                "name": "Pentest-Everything",
+                "url": "file:///home/user/git/pentest-education/Pentest-Everything"
+              },
+              {
+                "name": "pentest-notes",
+                "url": "file:///home/user/git/pentest-education/pentest-notes/README.md"
+              },
+              {
                 "name": "pentest-wiki",
                 "url": "file:///home/user/git/pentest-education/pentest-wiki"
               },
@@ -1990,6 +2119,15 @@
               {
                 "name": "yeahhub ebooks",
                 "url": "file:///home/user/pdfs/education/yeahhub"
+              }
+            ]
+          },
+          {
+            "name": "Web3",
+            "children": [
+              {
+                "name": "awesome-oneliner-bugbounty",
+                "url": "file:///home/user/git/pentest-education/Awesome-web3-Security/README.md"
               }
             ]
           },
@@ -2732,6 +2870,10 @@
                 "url": "https://www.browserling.com/"
               },
               {
+                "name": "phish.report",
+                "url": "https://phish.report/"
+              },
+              {
                 "name": "reNgine",
                 "url": "https://localhost:8020/"
               }
@@ -2761,6 +2903,10 @@
           {
             "name": "CyberChef",
             "url": "http://localhost:8040/"
+          },
+          {
+            "name": "Exploit Notes",
+            "url": "https://exploit-notes.hdks.org/"
           },
           {
             "name": "gifcap",
