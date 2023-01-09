@@ -907,3 +907,6 @@
 [submodule "repos/wordlists/Probable-Wordlists"]
 	path = repos/wordlists/Probable-Wordlists
 	url = https://github.com/berzerk0/Probable-Wordlists
+[submodule "repos/education/pdfs/technical-whitepapers"]
+	path = repos/education/pdfs/technical-whitepapers
+	url = https://github.com/trimstray/technical-whitepapers.git
