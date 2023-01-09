@@ -13,3 +13,897 @@
 [submodule "repos/misc/warpd"]
 	path = repos/misc/warpd
 	url = https://github.com/rvaiya/warpd
+[submodule "repos/misc/overleaf"]
+	path = repos/misc/overleaf
+	url = https://github.com/overleaf/overleaf
+[submodule "repos/misc/Piped-Docker"]
+	path = repos/misc/Piped-Docker
+	url = https://github.com/TeamPiped/Piped-Docker
+[submodule "repos/misc/docker-elk"]
+	path = repos/misc/docker-elk
+	url = https://github.com/deviantony/docker-elk
+[submodule "repos/misc/CrimeBoards"]
+	path = repos/misc/CrimeBoards
+	url = https://github.com/misterch0c/CrimeBoards
+[submodule "repos/misc/what_is_this_c2"]
+	path = repos/misc/what_is_this_c2
+	url = https://github.com/misterch0c/what_is_this_c2
+[submodule "repos/misc/jessfraz-dockerfiles"]
+	path = repos/misc/jessfraz-dockerfiles
+	url = https://github.com/jessfraz/dockerfiles
+[submodule "repos/misc/StevenBlack-hosts"]
+	path = repos/misc/StevenBlack-hosts
+	url = https://github.com/StevenBlack/hosts
+[submodule "repos/misc/nixpkgs"]
+	path = repos/misc/nixpkgs
+	url = https://github.com/NixOS/nixpkgs
+[submodule "repos/misc/stable-diffusion"]
+	path = repos/misc/stable-diffusion
+	url = https://github.com/CompVis/stable-diffusion
+[submodule "repos/misc/Apollo-11"]
+	path = repos/misc/Apollo-11
+	url = https://github.com/chrislgarry/Apollo-11
+[submodule "repos/misc/awful-ai"]
+	path = repos/misc/awful-ai
+	url = https://github.com/daviddao/awful-ai
+[submodule "repos/misc/comcast"]
+	path = repos/misc/comcast
+	url = https://github.com/tylertreat/comcast
+[submodule "repos/misc/whereami"]
+	path = repos/misc/whereami
+	url = https://github.com/kootenpv/whereami
+[submodule "repos/misc/interviews"]
+	path = repos/misc/interviews
+	url = https://github.com/kdn251/interviews
+[submodule "repos/misc/universal-android-debloater"]
+	path = repos/misc/universal-android-debloater
+	url = https://github.com/0x192/universal-android-debloater
+[submodule "repos/misc/tensorflow-models"]
+	path = repos/misc/tensorflow-models
+	url = https://github.com/tensorflow/models
+[submodule "repos/misc/awesome-compose"]
+	path = repos/misc/awesome-compose
+	url = https://github.com/docker/awesome-compose
+[submodule "repos/misc/awesome-piracy"]
+	path = repos/misc/awesome-piracy
+	url = https://github.com/Igglybuff/awesome-piracy
+[submodule "repos/misc/iptv"]
+	path = repos/misc/iptv
+	url = https://github.com/iptv-org/iptv
+[submodule "repos/misc/InvokeAI"]
+	path = repos/misc/InvokeAI
+	url = https://github.com/invoke-ai/InvokeAI
+[submodule "repos/misc/jsoncrack.com"]
+	path = repos/misc/jsoncrack.com
+	url = https://github.com/AykutSarac/jsoncrack.com
+[submodule "repos/bug-bounty/bounty-targets-data"]
+	path = repos/bug-bounty/bounty-targets-data
+	url = https://github.com/arkadiyt/bounty-targets-data
+[submodule "repos/bug-bounty/study-bug-bounty"]
+	path = repos/bug-bounty/study-bug-bounty
+	url = https://github.com/bobby-lin/study-bug-bounty
+[submodule "repos/education/og-aws"]
+	path = repos/education/og-aws
+	url = https://github.com/open-guides/og-aws
+[submodule "repos/education/awesome-openzeppelin"]
+	path = repos/education/awesome-openzeppelin
+	url = https://github.com/OpenZeppelin/awesome-openzeppelin
+[submodule "repos/education/full-blockchain-solidity-course-py"]
+	path = repos/education/full-blockchain-solidity-course-py
+	url = https://github.com/smartcontractkit/full-blockchain-solidity-course-py
+[submodule "repos/education/awesome-tunneling"]
+	path = repos/education/awesome-tunneling
+	url = https://github.com/anderspitman/awesome-tunneling
+[submodule "repos/education/smart-contract-best-practices"]
+	path = repos/education/smart-contract-best-practices
+	url = https://github.com/ConsenSys/smart-contract-best-practices
+[submodule "repos/education/papers-we-love"]
+	path = repos/education/papers-we-love
+	url = https://github.com/papers-we-love/papers-we-love
+[submodule "repos/education/public-apis"]
+	path = repos/education/public-apis
+	url = https://github.com/public-apis/public-apis
+[submodule "repos/education/awesome"]
+	path = repos/education/awesome
+	url = https://github.com/sindresorhus/awesome
+[submodule "repos/education/free-programming-books"]
+	path = repos/education/free-programming-books
+	url = https://github.com/EbookFoundation/free-programming-books
+[submodule "repos/education/coding-interview-university"]
+	path = repos/education/coding-interview-university
+	url = https://github.com/jwasham/coding-interview-university
+[submodule "repos/education/awesome-selfhosted"]
+	path = repos/education/awesome-selfhosted
+	url = https://github.com/awesome-selfhosted/awesome-selfhosted
+[submodule "repos/education/awesome-docker"]
+	path = repos/education/awesome-docker
+	url = https://github.com/veggiemonk/awesome-docker
+[submodule "repos/education/awesome-interview-questions"]
+	path = repos/education/awesome-interview-questions
+	url = https://github.com/DopplerHQ/awesome-interview-questions
+[submodule "repos/education/python-patterns"]
+	path = repos/education/python-patterns
+	url = https://github.com/faif/python-patterns
+[submodule "repos/education/devops-exercises"]
+	path = repos/education/devops-exercises
+	url = https://github.com/bregman-arie/devops-exercises
+[submodule "repos/education/90DaysOfDevOps"]
+	path = repos/education/90DaysOfDevOps
+	url = https://github.com/MichaelCade/90DaysOfDevOps
+[submodule "repos/education/how-to-secure-anything"]
+	path = repos/education/how-to-secure-anything
+	url = https://github.com/veeral-patel/how-to-secure-anything
+[submodule "repos/education/the-art-of-command-line"]
+	path = repos/education/the-art-of-command-line
+	url = https://github.com/jlevy/the-art-of-command-line
+[submodule "repos/education/linux-insides"]
+	path = repos/education/linux-insides
+	url = https://github.com/0xAX/linux-insides
+[submodule "repos/education/paper_collection"]
+	path = repos/education/paper_collection
+	url = https://github.com/0xricksanchez/paper_collection
+[submodule "repos/education/Mind-Expanding-Books"]
+	path = repos/education/Mind-Expanding-Books
+	url = https://github.com/hackerkid/Mind-Expanding-Books
+[submodule "repos/education/ML-For-Beginners"]
+	path = repos/education/ML-For-Beginners
+	url = https://github.com/microsoft/ML-For-Beginners
+[submodule "repos/education/awesome-cryptography"]
+	path = repos/education/awesome-cryptography
+	url = https://github.com/sobolevn/awesome-cryptography
+[submodule "repos/education/itpol"]
+	path = repos/education/itpol
+	url = https://github.com/lfit/itpol
+[submodule "repos/education/what-happens-when"]
+	path = repos/education/what-happens-when
+	url = https://github.com/alex/what-happens-when
+[submodule "repos/education/Best-websites-a-programmer-should-visit"]
+	path = repos/education/Best-websites-a-programmer-should-visit
+	url = https://github.com/sdmg15/Best-websites-a-programmer-should-visit
+[submodule "repos/education/Tech-Interview-Cheat-Sheet"]
+	path = repos/education/Tech-Interview-Cheat-Sheet
+	url = https://github.com/tsiege/Tech-Interview-Cheat-Sheet
+[submodule "repos/education/os-tutorial"]
+	path = repos/education/os-tutorial
+	url = https://github.com/cfenollosa/os-tutorial
+[submodule "repos/education/Clone-Wars"]
+	path = repos/education/Clone-Wars
+	url = https://github.com/GorvGoyl/Clone-Wars
+[submodule "repos/education/css-only-chat"]
+	path = repos/education/css-only-chat
+	url = https://github.com/kkuchta/css-only-chat
+[submodule "repos/education/karan-Projects"]
+	path = repos/education/karan-Projects
+	url = https://github.com/karan/Projects
+[submodule "repos/education/just-enough-series"]
+	path = repos/education/just-enough-series
+	url = https://github.com/abduvik/just-enough-series
+[submodule "repos/education/modern-unix"]
+	path = repos/education/modern-unix
+	url = https://github.com/ibraheemdev/modern-unix
+[submodule "repos/education/developer-roadmap"]
+	path = repos/education/developer-roadmap
+	url = https://github.com/kamranahmedse/developer-roadmap
+[submodule "repos/education/awesome-podcasts"]
+	path = repos/education/awesome-podcasts
+	url = https://github.com/rShetty/awesome-podcasts
+[submodule "repos/education/project-based-learning"]
+	path = repos/education/project-based-learning
+	url = https://github.com/practical-tutorials/project-based-learning
+[submodule "repos/education/cs-video-courses"]
+	path = repos/education/cs-video-courses
+	url = https://github.com/Developer-Y/cs-video-courses
+[submodule "repos/education/macOS-Security-and-Privacy-Guide"]
+	path = repos/education/macOS-Security-and-Privacy-Guide
+	url = https://github.com/drduh/macOS-Security-and-Privacy-Guide
+[submodule "repos/education/TheAlgorithmsPython"]
+	path = repos/education/TheAlgorithmsPython
+	url = https://github.com/TheAlgorithms/Python
+[submodule "repos/education/learn-anything-youtube"]
+	path = repos/education/learn-anything-youtube
+	url = https://github.com/learn-anything/youtube
+[submodule "repos/education/YouTube_Channels"]
+	path = repos/education/YouTube_Channels
+	url = https://github.com/PrejudiceNeutrino/YouTube_Channels
+[submodule "repos/education/zero-to-mastery-resources"]
+	path = repos/education/zero-to-mastery-resources
+	url = https://github.com/zero-to-mastery/resources
+[submodule "repos/education/Bash-Oneliner"]
+	path = repos/education/Bash-Oneliner
+	url = https://github.com/onceupon/Bash-Oneliner
+[submodule "repos/education/awesome-cto"]
+	path = repos/education/awesome-cto
+	url = https://github.com/kuchin/awesome-cto
+[submodule "repos/education/docker-labs"]
+	path = repos/education/docker-labs
+	url = https://github.com/docker/labs
+[submodule "repos/education/DockerCheatSheet"]
+	path = repos/education/DockerCheatSheet
+	url = https://github.com/eon01/DockerCheatSheet
+[submodule "repos/education/the-practical-linux-hardening-guide"]
+	path = repos/education/the-practical-linux-hardening-guide
+	url = https://github.com/trimstray/the-practical-linux-hardening-guide
+[submodule "repos/education/howtheysre"]
+	path = repos/education/howtheysre
+	url = https://github.com/upgundecha/howtheysre
+[submodule "repos/education/every-programmer-should-know"]
+	path = repos/education/every-programmer-should-know
+	url = https://github.com/mtdvio/every-programmer-should-know
+[submodule "repos/education/container-security-checklist"]
+	path = repos/education/container-security-checklist
+	url = https://github.com/krol3/container-security-checklist
+[submodule "repos/pentest-education/secure-mobile-development"]
+	path = repos/pentest-education/secure-mobile-development
+	url = https://github.com/nowsecure/secure-mobile-development
+[submodule "repos/pentest-education/pentest-wiki"]
+	path = repos/pentest-education/pentest-wiki
+	url = https://github.com/nixawk/pentest-wiki
+[submodule "repos/pentest-education/vulhub"]
+	path = repos/pentest-education/vulhub
+	url = https://github.com/vulhub/vulhub
+[submodule "repos/pentest-education/nixawk_labs"]
+	path = repos/pentest-education/nixawk_labs
+	url = https://github.com/nixawk/labs
+[submodule "repos/pentest-education/personal-security-checklist"]
+	path = repos/pentest-education/personal-security-checklist
+	url = https://github.com/Lissy93/personal-security-checklist
+[submodule "repos/pentest-education/HalbornPublicReports"]
+	path = repos/pentest-education/HalbornPublicReports
+	url = https://github.com/HalbornSecurity/PublicReports
+[submodule "repos/pentest-education/my-arsenal-of-aws-security-tools"]
+	path = repos/pentest-education/my-arsenal-of-aws-security-tools
+	url = https://github.com/toniblyx/my-arsenal-of-aws-security-tools
+[submodule "repos/pentest-education/awesome-aws-security"]
+	path = repos/pentest-education/awesome-aws-security
+	url = https://github.com/jassics/awesome-aws-security
+[submodule "repos/pentest-education/Reverse-Engineering"]
+	path = repos/pentest-education/Reverse-Engineering
+	url = https://github.com/mytechnotalent/Reverse-Engineering
+[submodule "repos/pentest-education/hacker-roadmap"]
+	path = repos/pentest-education/hacker-roadmap
+	url = https://github.com/sundowndev/hacker-roadmap
+[submodule "repos/pentest-education/h4cker"]
+	path = repos/pentest-education/h4cker
+	url = https://github.com/The-Art-of-Hacking/h4cker
+[submodule "repos/pentest-education/Awesome-Hacking-Resources"]
+	path = repos/pentest-education/Awesome-Hacking-Resources
+	url = https://github.com/vitalysim/Awesome-Hacking-Resources
+[submodule "repos/pentest-education/RedTeam-Tactics-and-Techniques"]
+	path = repos/pentest-education/RedTeam-Tactics-and-Techniques
+	url = https://github.com/mantvydasb/RedTeam-Tactics-and-Techniques
+[submodule "repos/pentest-education/top10webseclist"]
+	path = repos/pentest-education/top10webseclist
+	url = https://github.com/irsdl/top10webseclist
+[submodule "repos/pentest-education/awesome-hacking"]
+	path = repos/pentest-education/awesome-hacking
+	url = https://github.com/carpedm20/awesome-hacking
+[submodule "repos/pentest-education/android-security-awesome"]
+	path = repos/pentest-education/android-security-awesome
+	url = https://github.com/ashishb/android-security-awesome
+[submodule "repos/pentest-education/awesome-ctf"]
+	path = repos/pentest-education/awesome-ctf
+	url = https://github.com/apsdehal/awesome-ctf
+[submodule "repos/pentest-education/awesome-api-security"]
+	path = repos/pentest-education/awesome-api-security
+	url = https://github.com/arainho/awesome-api-security
+[submodule "repos/pentest-education/Pentest-Tools"]
+	path = repos/pentest-education/Pentest-Tools
+	url = https://github.com/S3cur3Th1sSh1t/Pentest-Tools
+[submodule "repos/pentest-education/awesome-pentest-cheat-sheets"]
+	path = repos/pentest-education/awesome-pentest-cheat-sheets
+	url = https://github.com/coreb1t/awesome-pentest-cheat-sheets
+[submodule "repos/pentest-education/Pentest-Cheat-Sheets"]
+	path = repos/pentest-education/Pentest-Cheat-Sheets
+	url = https://github.com/Kitsun3Sec/Pentest-Cheat-Sheets
+[submodule "repos/pentest-education/awesome-web-security"]
+	path = repos/pentest-education/awesome-web-security
+	url = https://github.com/qazbnm456/awesome-web-security
+[submodule "repos/pentest-education/awesome-honeypots"]
+	path = repos/pentest-education/awesome-honeypots
+	url = https://github.com/paralax/awesome-honeypots
+[submodule "repos/pentest-education/awesome-appsec"]
+	path = repos/pentest-education/awesome-appsec
+	url = https://github.com/paragonie/awesome-appsec
+[submodule "repos/pentest-education/awesome-mobile-security"]
+	path = repos/pentest-education/awesome-mobile-security
+	url = https://github.com/vaib25vicky/awesome-mobile-security
+[submodule "repos/pentest-education/Java-Deserialization-Cheat-Sheet"]
+	path = repos/pentest-education/Java-Deserialization-Cheat-Sheet
+	url = https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet
+[submodule "repos/pentest-education/DefaultCreds-cheat-sheet"]
+	path = repos/pentest-education/DefaultCreds-cheat-sheet
+	url = https://github.com/ihebski/DefaultCreds-cheat-sheet
+[submodule "repos/pentest-education/Active-Directory-Exploitation-Cheat-Sheet"]
+	path = repos/pentest-education/Active-Directory-Exploitation-Cheat-Sheet
+	url = https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+[submodule "repos/pentest-education/Cheatsheet-God"]
+	path = repos/pentest-education/Cheatsheet-God
+	url = https://github.com/OlivierLaflamme/Cheatsheet-God
+[submodule "repos/pentest-education/PENTESTING-BIBLE"]
+	path = repos/pentest-education/PENTESTING-BIBLE
+	url = https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLE
+[submodule "repos/pentest-education/JustTryHarder"]
+	path = repos/pentest-education/JustTryHarder
+	url = https://github.com/sinfulz/JustTryHarder
+[submodule "repos/pentest-education/exploitdb"]
+	path = repos/pentest-education/exploitdb
+	url = https://github.com/offensive-security/exploitdb
+[submodule "repos/pentest-education/Awesome-Pentest"]
+	path = repos/pentest-education/Awesome-Pentest
+	url = https://github.com/Muhammd/Awesome-Pentest
+[submodule "repos/pentest-education/awesome-security"]
+	path = repos/pentest-education/awesome-security
+	url = https://github.com/sbilly/awesome-security
+[submodule "repos/pentest-education/test-your-sysadmin-skills"]
+	path = repos/pentest-education/test-your-sysadmin-skills
+	url = https://github.com/trimstray/test-your-sysadmin-skills
+[submodule "repos/pentest-education/How-To-Secure-A-Linux-Server"]
+	path = repos/pentest-education/How-To-Secure-A-Linux-Server
+	url = https://github.com/imthenachoman/How-To-Secure-A-Linux-Server
+[submodule "repos/pentest-education/hacker101"]
+	path = repos/pentest-education/hacker101
+	url = https://github.com/Hacker0x01/hacker101
+[submodule "repos/pentest-education/API-Security-Checklist"]
+	path = repos/pentest-education/API-Security-Checklist
+	url = https://github.com/shieldfy/API-Security-Checklist
+[submodule "repos/pentest-education/google-ctf"]
+	path = repos/pentest-education/google-ctf
+	url = https://github.com/google/google-ctf
+[submodule "repos/pentest-education/kubernetes-goat"]
+	path = repos/pentest-education/kubernetes-goat
+	url = https://github.com/madhuakula/kubernetes-goat
+[submodule "repos/pentest-education/CheatSheetSeries"]
+	path = repos/pentest-education/CheatSheetSeries
+	url = https://github.com/OWASP/CheatSheetSeries
+[submodule "repos/pentest-education/PayloadsAllTheThings"]
+	path = repos/pentest-education/PayloadsAllTheThings
+	url = https://github.com/swisskyrepo/PayloadsAllTheThings
+[submodule "repos/pentest-education/awesome-pentest"]
+	path = repos/pentest-education/awesome-pentest
+	url = https://github.com/enaqx/awesome-pentest
+[submodule "repos/pentest-education/awesome-awesomeness"]
+	path = repos/pentest-education/awesome-awesomeness
+	url = https://github.com/bayandin/awesome-awesomeness
+[submodule "repos/pentest-education/the-book-of-secret-knowledge"]
+	path = repos/pentest-education/the-book-of-secret-knowledge
+	url = https://github.com/trimstray/the-book-of-secret-knowledge
+[submodule "repos/pentest-education/Awesome-Hacking"]
+	path = repos/pentest-education/Awesome-Hacking
+	url = https://github.com/Hack-with-Github/Awesome-Hacking
+[submodule "repos/pentest-education/public-pentesting-reports"]
+	path = repos/pentest-education/public-pentesting-reports
+	url = https://github.com/juliocesarfort/public-pentesting-reports
+[submodule "repos/pentest-education/awesome-list-of-public-pentesting-reports"]
+	path = repos/pentest-education/awesome-list-of-public-pentesting-reports
+	url = https://github.com/Sector443/awesome-list-of-public-pentesting-reports
+[submodule "repos/pentest-education/railsgoat"]
+	path = repos/pentest-education/railsgoat
+	url = https://github.com/OWASP/railsgoat
+[submodule "repos/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters"]
+	path = repos/pentest-education/Resources-for-Beginner-Bug-Bounty-Hunters
+	url = https://github.com/nahamsec/Resources-for-Beginner-Bug-Bounty-Hunters
+[submodule "repos/pentest-education/HarmJ0y-CheatSheets"]
+	path = repos/pentest-education/HarmJ0y-CheatSheets
+	url = https://github.com/HarmJ0y/CheatSheets
+[submodule "repos/pentest-education/trailofbits-ctf"]
+	path = repos/pentest-education/trailofbits-ctf
+	url = https://github.com/trailofbits/ctf
+[submodule "repos/pentest-education/trailofbits-publications"]
+	path = repos/pentest-education/trailofbits-publications
+	url = https://github.com/trailofbits/publications
+[submodule "repos/pentest-education/Awesome-RedTeam-Cheatsheet"]
+	path = repos/pentest-education/Awesome-RedTeam-Cheatsheet
+	url = https://github.com/RistBS/Awesome-RedTeam-Cheatsheet
+[submodule "repos/pentest-education/assessment-mindset"]
+	path = repos/pentest-education/assessment-mindset
+	url = https://github.com/dsopas/assessment-mindset
+[submodule "repos/pentest-education/Infosec_Reference"]
+	path = repos/pentest-education/Infosec_Reference
+	url = https://github.com/rmusser01/Infosec_Reference
+[submodule "repos/pentest-education/bugbounty-cheatsheet"]
+	path = repos/pentest-education/bugbounty-cheatsheet
+	url = https://github.com/EdOverflow/bugbounty-cheatsheet
+[submodule "repos/pentest-education/awesome-security-hardening"]
+	path = repos/pentest-education/awesome-security-hardening
+	url = https://github.com/decalage2/awesome-security-hardening
+[submodule "repos/pentest-education/Top10"]
+	path = repos/pentest-education/Top10
+	url = https://github.com/OWASP/Top10
+[submodule "repos/pentest-education/Open-Source-Security-Guide"]
+	path = repos/pentest-education/Open-Source-Security-Guide
+	url = https://github.com/mikeroyal/Open-Source-Security-Guide
+[submodule "repos/pentest-education/Web-Attack-Cheat-Sheet"]
+	path = repos/pentest-education/Web-Attack-Cheat-Sheet
+	url = https://github.com/riramar/Web-Attack-Cheat-Sheet
+[submodule "repos/pentest-education/awesome-cyber-security-university"]
+	path = repos/pentest-education/awesome-cyber-security-university
+	url = https://github.com/brootware/awesome-cyber-security-university
+[submodule "repos/pentest-education/awesome-malware-analysis"]
+	path = repos/pentest-education/awesome-malware-analysis
+	url = https://github.com/rshipp/awesome-malware-analysis
+[submodule "repos/pentest-education/awesome-hacking-locations"]
+	path = repos/pentest-education/awesome-hacking-locations
+	url = https://github.com/daviddias/awesome-hacking-locations
+[submodule "repos/pentest-education/awesome-lockpicking"]
+	path = repos/pentest-education/awesome-lockpicking
+	url = https://github.com/fabacab/awesome-lockpicking
+[submodule "repos/pentest-education/awesome-fuzzing"]
+	path = repos/pentest-education/awesome-fuzzing
+	url = https://github.com/cpuu/awesome-fuzzing
+[submodule "repos/pentest-education/awesome-embedded-and-iot-security"]
+	path = repos/pentest-education/awesome-embedded-and-iot-security
+	url = https://github.com/fkie-cad/awesome-embedded-and-iot-security
+[submodule "repos/pentest-education/awesome-executable-packing"]
+	path = repos/pentest-education/awesome-executable-packing
+	url = https://github.com/dhondta/awesome-executable-packing
+[submodule "repos/pentest-education/Security-Exercises"]
+	path = repos/pentest-education/Security-Exercises
+	url = https://github.com/muhammet-mucahit/Security-Exercises
+[submodule "repos/pentest-education/Red-Blueteam-party"]
+	path = repos/pentest-education/Red-Blueteam-party
+	url = https://github.com/A0RX/Red-Blueteam-party
+[submodule "repos/pentest-education/Awesome-Red-Teaming"]
+	path = repos/pentest-education/Awesome-Red-Teaming
+	url = https://github.com/0xMrNiko/Awesome-Red-Teaming
+[submodule "repos/pentest-education/RedTeam-Resources"]
+	path = repos/pentest-education/RedTeam-Resources
+	url = https://github.com/J0hnbX/RedTeam-Resources
+[submodule "repos/pentest-education/cyberowl"]
+	path = repos/pentest-education/cyberowl
+	url = https://github.com/karimhabush/cyberowl
+[submodule "repos/pentest-education/Awesome-Ethical-Hacking-Resources"]
+	path = repos/pentest-education/Awesome-Ethical-Hacking-Resources
+	url = https://github.com/husnainfareed/Awesome-Ethical-Hacking-Resources
+[submodule "repos/pentest-education/AWSome-Pentesting"]
+	path = repos/pentest-education/AWSome-Pentesting
+	url = https://github.com/pop3ret/AWSome-Pentesting
+[submodule "repos/pentest-education/awesome-oneliner-bugbounty"]
+	path = repos/pentest-education/awesome-oneliner-bugbounty
+	url = https://github.com/dwisiswant0/awesome-oneliner-bugbounty
+[submodule "repos/pentest-education/Free-Security-eBooks"]
+	path = repos/pentest-education/Free-Security-eBooks
+	url = https://github.com/Hack-with-Github/Free-Security-eBooks
+[submodule "repos/pentest-education/awesome-sec-talks"]
+	path = repos/pentest-education/awesome-sec-talks
+	url = https://github.com/PaulSec/awesome-sec-talks
+[submodule "repos/pentest-education/AWSGoat"]
+	path = repos/pentest-education/AWSGoat
+	url = https://github.com/ine-labs/AWSGoat
+[submodule "repos/pentest-education/AzureGoat"]
+	path = repos/pentest-education/AzureGoat
+	url = https://github.com/ine-labs/AzureGoat
+[submodule "repos/pentest-education/dvws-node"]
+	path = repos/pentest-education/dvws-node
+	url = https://github.com/snoopysecurity/dvws-node
+[submodule "repos/pentest-education/DVHMA"]
+	path = repos/pentest-education/DVHMA
+	url = https://github.com/logicalhacking/DVHMA
+[submodule "repos/pentest-education/cicd-goat"]
+	path = repos/pentest-education/cicd-goat
+	url = https://github.com/cider-security-research/cicd-goat
+[submodule "repos/pentest-education/VAmPI"]
+	path = repos/pentest-education/VAmPI
+	url = https://github.com/erev0s/VAmPI
+[submodule "repos/pentest-education/DVSA"]
+	path = repos/pentest-education/DVSA
+	url = https://github.com/OWASP/DVSA
+[submodule "repos/pentest-education/dvta"]
+	path = repos/pentest-education/dvta
+	url = https://github.com/srini0x00/dvta
+[submodule "repos/pentest-education/dvja"]
+	path = repos/pentest-education/dvja
+	url = https://github.com/appsecco/dvja
+[submodule "repos/pentest-education/dvpwa"]
+	path = repos/pentest-education/dvpwa
+	url = https://github.com/anxolerd/dvpwa
+[submodule "repos/pentest-education/Damn-Vulnerable-Bank"]
+	path = repos/pentest-education/Damn-Vulnerable-Bank
+	url = https://github.com/rewanthtammana/Damn-Vulnerable-Bank
+[submodule "repos/pentest-education/DVIA-v2"]
+	path = repos/pentest-education/DVIA-v2
+	url = https://github.com/prateek147/DVIA-v2
+[submodule "repos/pentest-education/DVRF"]
+	path = repos/pentest-education/DVRF
+	url = https://github.com/praetorian-inc/DVRF
+[submodule "repos/pentest-education/DVFaaS"]
+	path = repos/pentest-education/DVFaaS
+	url = https://github.com/we45/DVFaaS-Damn-Vulnerable-Functions-as-a-Service
+[submodule "repos/pentest-education/dvca"]
+	path = repos/pentest-education/dvca
+	url = https://github.com/m6a-UdS/dvca
+[submodule "repos/pentest-education/dvcsharp-api"]
+	path = repos/pentest-education/dvcsharp-api
+	url = https://github.com/appsecco/dvcsharp-api
+[submodule "repos/pentest-education/Tiredful-API"]
+	path = repos/pentest-education/Tiredful-API
+	url = https://github.com/payatu/Tiredful-API
+[submodule "repos/pentest-education/Damn-Vulnerable-GraphQL-Application"]
+	path = repos/pentest-education/Damn-Vulnerable-GraphQL-Application
+	url = https://github.com/dolevf/Damn-Vulnerable-GraphQL-Application
+[submodule "repos/pentest-education/100-redteam-projects"]
+	path = repos/pentest-education/100-redteam-projects
+	url = https://github.com/kurogai/100-redteam-projects
+[submodule "repos/pentest-education/Practical-Ethical-Hacking-Resources"]
+	path = repos/pentest-education/Practical-Ethical-Hacking-Resources
+	url = https://github.com/TCM-Course-Resources/Practical-Ethical-Hacking-Resources
+[submodule "repos/pentest-education/AD-Attack-Defense"]
+	path = repos/pentest-education/AD-Attack-Defense
+	url = https://github.com/infosecn1nja/AD-Attack-Defense
+[submodule "repos/pentest-education/Active-Directory-Exploitation-Cheat-Sheet-IIT"]
+	path = repos/pentest-education/Active-Directory-Exploitation-Cheat-Sheet-IIT
+	url = https://github.com/Integration-IT/Active-Directory-Exploitation-Cheat-Sheet
+[submodule "repos/pentest-education/vulnerable-AD"]
+	path = repos/pentest-education/vulnerable-AD
+	url = https://github.com/WazeHell/vulnerable-AD
+[submodule "repos/pentest-education/nishang"]
+	path = repos/pentest-education/nishang
+	url = https://github.com/samratashok/nishang
+[submodule "repos/pentest-education/awesome-threat-intelligence"]
+	path = repos/pentest-education/awesome-threat-intelligence
+	url = https://github.com/hslatman/awesome-threat-intelligence
+[submodule "repos/pentest-education/Awesome-WAF"]
+	path = repos/pentest-education/Awesome-WAF
+	url = https://github.com/0xInfection/Awesome-WAF
+[submodule "repos/pentest-education/PentestTools"]
+	path = repos/pentest-education/PentestTools
+	url = https://github.com/arch3rPro/PentestTools
+[submodule "repos/pentest-education/awesome-forensics"]
+	path = repos/pentest-education/awesome-forensics
+	url = https://github.com/cugu/awesome-forensics
+[submodule "repos/pentest-education/DeFiHackLabs"]
+	path = repos/pentest-education/DeFiHackLabs
+	url = https://github.com/SunWeb3Sec/DeFiHackLabs
+[submodule "repos/pentest-education/Awesome-DevSecOps-Platforms"]
+	path = repos/pentest-education/Awesome-DevSecOps-Platforms
+	url = https://github.com/We5ter/Awesome-DevSecOps-Platforms
+[submodule "repos/pentest-education/Pentest-Everything"]
+	path = repos/pentest-education/Pentest-Everything
+	url = https://github.com/The-Viper-One/Pentest-Everything
+[submodule "repos/pentest-education/IoTSecurity101"]
+	path = repos/pentest-education/IoTSecurity101
+	url = https://github.com/V33RU/IoTSecurity101
+[submodule "repos/pentest-education/PracticalCyberSecurityResources"]
+	path = repos/pentest-education/PracticalCyberSecurityResources
+	url = https://github.com/brcyrr/PracticalCyberSecurityResources
+[submodule "repos/pentest-education/pentest-notes"]
+	path = repos/pentest-education/pentest-notes
+	url = https://github.com/wwong99/pentest-notes
+[submodule "repos/pentest-education/Awesome-web3-Security"]
+	path = repos/pentest-education/Awesome-web3-Security
+	url = https://github.com/Anugrahsr/Awesome-web3-Security
+[submodule "repos/pentest-education/awesome-windows-domain-hardening"]
+	path = repos/pentest-education/awesome-windows-domain-hardening
+	url = https://github.com/PaulSec/awesome-windows-domain-hardening
+[submodule "repos/pentest-education/awesome-cybersecurity-blueteam"]
+	path = repos/pentest-education/awesome-cybersecurity-blueteam
+	url = https://github.com/fabacab/awesome-cybersecurity-blueteam
+[submodule "repos/pentest-education/awesome-incident-response"]
+	path = repos/pentest-education/awesome-incident-response
+	url = https://github.com/meirwah/awesome-incident-response
+[submodule "repos/pentest-education/awesome-devsecops"]
+	path = repos/pentest-education/awesome-devsecops
+	url = https://github.com/TaptuIT/awesome-devsecops
+[submodule "repos/pentest-education/red_team_tool_countermeasures"]
+	path = repos/pentest-education/red_team_tool_countermeasures
+	url = https://github.com/mandiant/red_team_tool_countermeasures
+[submodule "repos/pentest-education/SOC-Interview-Questions"]
+	path = repos/pentest-education/SOC-Interview-Questions
+	url = https://github.com/LetsDefend/SOC-Interview-Questions
+[submodule "repos/pentest-education/awesome-osint"]
+	path = repos/pentest-education/awesome-osint
+	url = https://github.com/jivoi/awesome-osint
+[submodule "repos/pentest-education/awesome-shodan-queries"]
+	path = repos/pentest-education/awesome-shodan-queries
+	url = https://github.com/jakejarvis/awesome-shodan-queries
+[submodule "repos/pentest-education/Dorks-collections-list"]
+	path = repos/pentest-education/Dorks-collections-list
+	url = https://github.com/cipher387/Dorks-collections-list
+[submodule "repos/pentest-education/github-dorks"]
+	path = repos/pentest-education/github-dorks
+	url = https://github.com/techgaun/github-dorks
+[submodule "repos/pentest-education/awesome-hacker-search-engines"]
+	path = repos/pentest-education/awesome-hacker-search-engines
+	url = https://github.com/edoardottt/awesome-hacker-search-engines
+[submodule "repos/pentest-frameworks/wstg"]
+	path = repos/pentest-frameworks/wstg
+	url = https://github.com/OWASP/wstg
+[submodule "repos/pentest-frameworks/owasp-mstg"]
+	path = repos/pentest-frameworks/owasp-mstg
+	url = https://github.com/OWASP/owasp-mstg
+[submodule "repos/pentest-tools/Corsy"]
+	path = repos/pentest-tools/Corsy
+	url = https://github.com/s0md3v/Corsy
+[submodule "repos/pentest-tools/tplmap"]
+	path = repos/pentest-tools/tplmap
+	url = https://github.com/epinna/tplmap
+[submodule "repos/pentest-tools/crawlab"]
+	path = repos/pentest-tools/crawlab
+	url = https://github.com/crawlab-team/crawlab
+[submodule "repos/pentest-tools/feroxbuster"]
+	path = repos/pentest-tools/feroxbuster
+	url = https://github.com/epi052/feroxbuster
+[submodule "repos/pentest-tools/Astra"]
+	path = repos/pentest-tools/Astra
+	url = https://github.com/flipkart-incubator/Astra
+[submodule "repos/pentest-tools/pwndoc"]
+	path = repos/pentest-tools/pwndoc
+	url = https://github.com/pwndoc/pwndoc
+[submodule "repos/pentest-tools/gwen001-pentest-tools"]
+	path = repos/pentest-tools/gwen001-pentest-tools
+	url = https://github.com/gwen001/pentest-tools
+[submodule "repos/pentest-tools/awesome-stacks"]
+	path = repos/pentest-tools/awesome-stacks
+	url = https://github.com/ethibox/awesome-stacks
+[submodule "repos/pentest-tools/portainer"]
+	path = repos/pentest-tools/portainer
+	url = https://github.com/portainer/portainer
+[submodule "repos/pentest-tools/Hack-Tools"]
+	path = repos/pentest-tools/Hack-Tools
+	url = https://github.com/LasCC/Hack-Tools
+[submodule "repos/pentest-tools/commix"]
+	path = repos/pentest-tools/commix
+	url = https://github.com/commixproject/commix
+[submodule "repos/pentest-tools/social-analyzer"]
+	path = repos/pentest-tools/social-analyzer
+	url = https://github.com/qeeqbox/social-analyzer
+[submodule "repos/pentest-tools/zaproxy"]
+	path = repos/pentest-tools/zaproxy
+	url = https://github.com/zaproxy/zaproxy
+[submodule "repos/pentest-tools/PEASS-ng"]
+	path = repos/pentest-tools/PEASS-ng
+	url = https://github.com/carlospolop/PEASS-ng
+[submodule "repos/pentest-tools/github-dorks"]
+	path = repos/pentest-tools/github-dorks
+	url = https://github.com/techgaun/github-dorks
+[submodule "repos/pentest-tools/parameth"]
+	path = repos/pentest-tools/parameth
+	url = https://github.com/maK-/parameth
+[submodule "repos/pentest-tools/x8"]
+	path = repos/pentest-tools/x8
+	url = https://github.com/Sh1Yo/x8
+[submodule "repos/pentest-tools/automated-pentest"]
+	path = repos/pentest-tools/automated-pentest
+	url = https://github.com/vishnudxb/automated-pentest
+[submodule "repos/pentest-tools/hacktricks"]
+	path = repos/pentest-tools/hacktricks
+	url = https://github.com/carlospolop/hacktricks
+[submodule "repos/pentest-tools/pcf"]
+	path = repos/pentest-tools/pcf
+	url = https://gitlab.com/invuls/pentest-projects/pcf
+[submodule "repos/pentest-tools/fridump"]
+	path = repos/pentest-tools/fridump
+	url = https://github.com/Nightbringer21/fridump
+[submodule "repos/pentest-tools/caddy"]
+	path = repos/pentest-tools/caddy
+	url = https://github.com/caddyserver/caddy
+[submodule "repos/pentest-tools/linux-exploit-suggester"]
+	path = repos/pentest-tools/linux-exploit-suggester
+	url = https://github.com/mzet-/linux-exploit-suggester
+[submodule "repos/misc/objection"]
+	path = repos/misc/objection
+	url = https://github.com/va1da5/docker-objection-for-android
+[submodule "repos/misc/frida-snippets"]
+	path = repos/misc/frida-snippets
+	url = https://github.com/iddoeldor/frida-snippets
+[submodule "repos/pentest-tools/RAUDI"]
+	path = repos/pentest-tools/RAUDI
+	url = https://github.com/cybersecsi/RAUDI
+[submodule "repos/pentest-tools/nikto"]
+	path = repos/pentest-tools/nikto
+	url = https://github.com/sullo/nikto
+[submodule "repos/pentest-tools/sherlock"]
+	path = repos/pentest-tools/sherlock
+	url = https://github.com/sherlock-project/sherlock
+[submodule "repos/pentest-tools/ivre"]
+	path = repos/pentest-tools/ivre
+	url = https://github.com/ivre/ivre
+[submodule "repos/pentest-tools/wapiti"]
+	path = repos/pentest-tools/wapiti
+	url = https://github.com/wapiti-scanner/wapiti
+[submodule "repos/pentest-tools/tsunami-security-scanner"]
+	path = repos/pentest-tools/tsunami-security-scanner
+	url = https://github.com/google/tsunami-security-scanner
+[submodule "repos/pentest-tools/pingcastle"]
+	path = repos/pentest-tools/pingcastle
+	url = https://github.com/vletoux/pingcastle
+[submodule "repos/pentest-tools/BloodHound"]
+	path = repos/pentest-tools/BloodHound
+	url = https://github.com/BloodHoundAD/BloodHound
+[submodule "repos/pentest-tools/pupy"]
+	path = repos/pentest-tools/pupy
+	url = https://github.com/n1nj4sec/pupy
+[submodule "repos/pentest-tools/oss-fuzz"]
+	path = repos/pentest-tools/oss-fuzz
+	url = https://github.com/google/oss-fuzz
+[submodule "repos/pentest-tools/GitTools"]
+	path = repos/pentest-tools/GitTools
+	url = https://github.com/internetwache/GitTools
+[submodule "repos/pentest-tools/WinPwn"]
+	path = repos/pentest-tools/WinPwn
+	url = https://github.com/S3cur3Th1sSh1t/WinPwn
+[submodule "repos/pentest-tools/traitor"]
+	path = repos/pentest-tools/traitor
+	url = https://github.com/liamg/traitor
+[submodule "repos/pentest-tools/twint"]
+	path = repos/pentest-tools/twint
+	url = https://github.com/twintproject/twint
+[submodule "repos/pentest-tools/ThreatMapper"]
+	path = repos/pentest-tools/ThreatMapper
+	url = https://github.com/deepfence/ThreatMapper
+[submodule "repos/pentest-tools/jwt-cracker"]
+	path = repos/pentest-tools/jwt-cracker
+	url = https://github.com/lmammino/jwt-cracker
+[submodule "repos/pentest-tools/mentalist"]
+	path = repos/pentest-tools/mentalist
+	url = https://github.com/sc0tfree/mentalist
+[submodule "repos/pentest-tools/ExploitPack"]
+	path = repos/pentest-tools/ExploitPack
+	url = https://github.com/AngelSecurityTeam/Tool-ExploitPack
+[submodule "repos/pentest-tools/VLANPWN"]
+	path = repos/pentest-tools/VLANPWN
+	url = https://github.com/in9uz/VLANPWN
+[submodule "repos/pentest-tools/asn"]
+	path = repos/pentest-tools/asn
+	url = https://github.com/nitefood/asn
+[submodule "repos/pentest-tools/hackingtool"]
+	path = repos/pentest-tools/hackingtool
+	url = https://github.com/Z4nzu/hackingtool
+[submodule "repos/pentest-tools/Villain"]
+	path = repos/pentest-tools/Villain
+	url = https://github.com/t3l3machus/Villain
+[submodule "repos/pentest-tools/web3-decoder"]
+	path = repos/pentest-tools/web3-decoder
+	url = https://github.com/nccgroup/web3-decoder
+[submodule "repos/pentest-tools/PXEThief"]
+	path = repos/pentest-tools/PXEThief
+	url = https://github.com/MWR-CyberSec/PXEThief
+[submodule "repos/pentest-tools/SpoolSploit"]
+	path = repos/pentest-tools/SpoolSploit
+	url = https://github.com/BeetleChunks/SpoolSploit
+[submodule "repos/misc/burp-config"]
+	path = repos/misc/burp-config
+	url = https://github.com/rascal999/burp-config
+[submodule "repos/pentest-tools/AutoPWN-Suite"]
+	path = repos/pentest-tools/AutoPWN-Suite
+	url = https://github.com/GamehunterKaan/AutoPWN-Suite
+[submodule "repos/misc/vimagick_dockerfiles"]
+	path = repos/misc/vimagick_dockerfiles
+	url = https://github.com/vimagick/dockerfiles
+[submodule "repos/pentest-tools/psudohash"]
+	path = repos/pentest-tools/psudohash
+	url = https://github.com/t3l3machus/psudohash
+[submodule "repos/exploits/CVE-2021-4034"]
+	path = repos/exploits/CVE-2021-4034
+	url = https://github.com/berdav/CVE-2021-4034
+[submodule "repos/exploits/cve"]
+	path = repos/exploits/cve
+	url = https://github.com/trickest/cve
+[submodule "repos/exploits/Penetration_Testing_POC"]
+	path = repos/exploits/Penetration_Testing_POC
+	url = https://github.com/Mr-xn/Penetration_Testing_POC
+[submodule "repos/exploits/awesome-cve-poc"]
+	path = repos/exploits/awesome-cve-poc
+	url = https://github.com/qazbnm456/awesome-cve-poc
+[submodule "repos/exploits/js-vuln-db"]
+	path = repos/exploits/js-vuln-db
+	url = https://github.com/tunz/js-vuln-db
+[submodule "repos/exploits/malicious-pdf"]
+	path = repos/exploits/malicious-pdf
+	url = https://github.com/jonaslejon/malicious-pdf
+[submodule "repos/exploits/PoC_CVEs"]
+	path = repos/exploits/PoC_CVEs
+	url = https://github.com/tg12/PoC_CVEs
+[submodule "repos/exploits/PoC-in-GitHub"]
+	path = repos/exploits/PoC-in-GitHub
+	url = https://github.com/nomi-sec/PoC-in-GitHub
+[submodule "repos/pentest-tools/IntelOwl"]
+	path = repos/pentest-tools/IntelOwl
+	url = https://github.com/intelowlproject/IntelOwl
+[submodule "repos/pentest-tools/attack-navigator"]
+	path = repos/pentest-tools/attack-navigator
+	url = https://github.com/mitre-attack/attack-navigator
+[submodule "repos/pentest-tools/Osintgram"]
+	path = repos/pentest-tools/Osintgram
+	url = https://github.com/Datalux/Osintgram
+[submodule "repos/pentest-tools/vulnx"]
+	path = repos/pentest-tools/vulnx
+	url = https://github.com/anouarbensaad/vulnx
+[submodule "repos/exploits/opencve-docker"]
+	path = repos/exploits/opencve-docker
+	url = https://github.com/opencve/opencve-docker
+[submodule "repos/pentest-tools/redgo"]
+	path = repos/pentest-tools/redgo
+	url = https://github.com/rascal999/redgo
+[submodule "repos/pentest-tools/twa"]
+	path = repos/pentest-tools/twa
+	url = https://github.com/trailofbits/twa
+[submodule "repos/pentest-tools/howmanypeoplearearound"]
+	path = repos/pentest-tools/howmanypeoplearearound
+	url = https://github.com/schollz/howmanypeoplearearound
+[submodule "repos/pentest-tools/shcheck"]
+	path = repos/pentest-tools/shcheck
+	url = https://github.com/santoru/shcheck
+[submodule "repos/pentest-tools/DrHeader"]
+	path = repos/pentest-tools/DrHeader
+	url = https://github.com/Santandersecurityresearch/DrHeader
+[submodule "repos/pentest-tools/Nettacker"]
+	path = repos/pentest-tools/Nettacker
+	url = https://github.com/OWASP/Nettacker
+[submodule "repos/pentest-tools/Raccoon"]
+	path = repos/pentest-tools/Raccoon
+	url = https://github.com/evyatarmeged/Raccoon
+[submodule "repos/pentest-tools/rengine"]
+	path = repos/pentest-tools/rengine
+	url = https://github.com/yogeshojha/rengine
+[submodule "repos/pentest-tools/Infoga"]
+	path = repos/pentest-tools/Infoga
+	url = https://github.com/m4ll0k/Infoga
+[submodule "repos/pentest-tools/apkleaks"]
+	path = repos/pentest-tools/apkleaks
+	url = https://github.com/dwisiswant0/apkleaks
+[submodule "repos/pentest-tools/angularjs-csti-scanner"]
+	path = repos/pentest-tools/angularjs-csti-scanner
+	url = https://github.com/tijme/angularjs-csti-scanner
+[submodule "repos/pentest-tools/Arjun"]
+	path = repos/pentest-tools/Arjun
+	url = https://github.com/s0md3v/Arjun
+[submodule "repos/pentest-tools/cloudsploit"]
+	path = repos/pentest-tools/cloudsploit
+	url = https://github.com/aquasecurity/cloudsploit
+[submodule "repos/pentest-tools/S3Scanner"]
+	path = repos/pentest-tools/S3Scanner
+	url = https://github.com/sa7mon/S3Scanner
+[submodule "repos/pentest-tools/aws-security-viz"]
+	path = repos/pentest-tools/aws-security-viz
+	url = https://github.com/anaynayak/aws-security-viz
+[submodule "repos/pentest-tools/cloudmapper"]
+	path = repos/pentest-tools/cloudmapper
+	url = https://github.com/duo-labs/cloudmapper
+[submodule "repos/pentest-tools/EyeWitness"]
+	path = repos/pentest-tools/EyeWitness
+	url = https://github.com/FortyNorthSecurity/EyeWitness
+[submodule "repos/pentest-tools/spiderfoot"]
+	path = repos/pentest-tools/spiderfoot
+	url = https://github.com/smicallef/spiderfoot
+[submodule "repos/pentest-tools/scanless"]
+	path = repos/pentest-tools/scanless
+	url = https://github.com/vesche/scanless
+[submodule "repos/pentest-tools/joomscan"]
+	path = repos/pentest-tools/joomscan
+	url = https://github.com/OWASP/joomscan
+[submodule "repos/pentest-tools/MHDDoS"]
+	path = repos/pentest-tools/MHDDoS
+	url = https://github.com/MatrixTM/MHDDoS
+[submodule "repos/pentest-tools/impacket"]
+	path = repos/pentest-tools/impacket
+	url = https://github.com/SecureAuthCorp/impacket
+[submodule "repos/pentest-tools/droopescan"]
+	path = repos/pentest-tools/droopescan
+	url = https://github.com/droope/droopescan
+[submodule "repos/pentest-tools/VulnX"]
+	path = repos/pentest-tools/VulnX
+	url = https://github.com/anouarbensaad/VulnX
+[submodule "repos/misc/v86"]
+	path = repos/misc/v86
+	url = https://github.com/copy/v86
+[submodule "repos/wordlists/bruteforce-lists"]
+	path = repos/wordlists/bruteforce-lists
+	url = https://github.com/random-robbie/bruteforce-lists
+[submodule "repos/wordlists/fuzzing"]
+	path = repos/wordlists/fuzzing
+	url = https://github.com/google/fuzzing
+[submodule "repos/wordlists/OneListForAll"]
+	path = repos/wordlists/OneListForAll
+	url = https://github.com/six2dez/OneListForAll
+[submodule "repos/wordlists/dirb"]
+	path = repos/wordlists/dirb
+	url = https://github.com/v0re/dirb
+[submodule "repos/wordlists/SecLists"]
+	path = repos/wordlists/SecLists
+	url = https://github.com/danielmiessler/SecLists
+[submodule "repos/wordlists/big-list-of-naughty-strings"]
+	path = repos/wordlists/big-list-of-naughty-strings
+	url = https://github.com/minimaxir/big-list-of-naughty-strings
+[submodule "repos/wordlists/Probable-Wordlists"]
+	path = repos/wordlists/Probable-Wordlists
+	url = https://github.com/berzerk0/Probable-Wordlists
