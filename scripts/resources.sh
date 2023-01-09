@@ -427,6 +427,7 @@ function pull_tool_repos() {
 
   ### Tools which need building
   # IntelOwl
+  git_update https://github.com/intelowlproject/IntelOwl.git $HOME/git/maxos/repos/pentest-tools/IntelOwl
   cd $HOME/git/maxos/repos/pentest-tools/IntelOwl/docker
   cp env_file_app_template env_file_app
   cp env_file_postgres_template env_file_postgres
