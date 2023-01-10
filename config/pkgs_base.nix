@@ -267,6 +267,7 @@
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner
     openfortivpn                                                                                         # Client for PPP+SSL VPN tunnel services
+    openshot-qt                                                                                          # Free, open-source video editor
     openttd                                                                                              # Transport Tycoon Deluxe
     oshka                                                                                                # Tool for extracting nested CI/CD supply chains and executing commands
     ostinato                                                                                             # A packet traffic generator and analyzer
@@ -364,10 +365,10 @@
     tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
     traitor                                                                                              # Automatic Linux privilege escalation
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI
-    truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes. It works on Linux and it is optimized for Nvidia Cuda technology
+    truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes
     trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
-    trufflehog                                                                                           # Searches through git repositories for high entropy strings and secrets, digging deep into commit history
-    tsung                                                                                                # A high-performance benchmark framework for various protocols including HTTP, XMPP, LDAP, etc
+    trufflehog                                                                                           # Searches through git repositories for high entropy strings and secrets
+    tsung                                                                                                # A high-performance benchmark framework for various protocols
     ubertooth                                                                                            # Open source wireless development platform suitable for Bluetooth experimentation
     uddup                                                                                                # Tool for de-duplication URLs
     unar                                                                                                 # An archive unpacker program

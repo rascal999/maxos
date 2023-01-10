@@ -93,7 +93,6 @@ new() {
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
   echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
-  echo "a.fo                        Open Firefox at CWD"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
   echo "a.ips                       Return all IPs in CIDR range in given file"
@@ -105,6 +104,7 @@ new() {
   echo "arsenal                     Generate commands for security and network tools"
   echo "bwcalc                      Bandwidth transfer time estimator"
   echo "croc                        Share files between machines"
+  echo "d.autorecon                 Parallel network scans (good for CTF)"
   echo "d.bb                        OpenBB finance terminal"
   echo "d.cloudfox                  Cloud scanner"
   echo "d.dos                       MHDDoS"
@@ -118,7 +118,6 @@ new() {
   echo "d.wbu                       waybackurls"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
   echo "inql                        Security testing tool for GraphQL"
-  echo "wuzz                        Interactive cli tool for HTTP inspection"
 }
 
 test-vpn() {
@@ -270,6 +269,20 @@ d.cloudfox() {
 
 d.wbu() {
   docker run -i --rm redgo waybackurls $@
+}
+
+d.autorecon() {
+  echo "AutoRecon"
+  echo "Prepend target file with target/"
+  echo
+  NOW=`date "+%Y%m%d_%H%M%S"`
+  docker run -v `pwd`/${NOW}_autorecon_results:/root/results -v `pwd`:/root/target -it --rm autorecon $@
+
+  # Change ownership
+  sudo chown user:users ${NOW}_autorecon_results -R
+
+  # Delete directory if empty
+  find ${NOW}_autorecon_results -type d -empty -delete
 }
 
 d.gf() {
