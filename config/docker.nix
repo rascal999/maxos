@@ -118,7 +118,7 @@
               "wikipedia_en_all_nopic_2022-01.zim"
             ];
       image = "kiwix/kiwix-serve";
-      ports = [ "127.0.0.1:9060:80" ];
+      ports = [ "127.0.0.1:9060:8080" ];
       volumes = [ "/home/user/.local/share/kiwix:/data" ];
     };
 
