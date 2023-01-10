@@ -684,24 +684,19 @@ if [ $arg_tools_git == 1 ]; then
   pull_tool_repos
 fi
 
-# Heavy images (docker)
-if [ $arg_heavy == 1 ]; then
-  pull_heavy_docker
-fi
-
 # Misc tools
 if [ $arg_misc == 1 ]; then
   pull_misc_things
 fi
 
-# OS (docker)
-if [ $arg_os == 1 ]; then
-  pull_os_docker
-fi
-
 # PDFs
 if [ $arg_pdf == 1 ]; then
   pull_pdfs
+fi
+
+# OS (docker)
+if [ $arg_os == 1 ]; then
+  pull_os_docker
 fi
 
 # Tools (docker)
@@ -712,6 +707,11 @@ fi
 # Vulnerable things (docker)
 if [ $arg_vulnerable == 1 ]; then
   pull_vulnerable_things_docker
+fi
+
+# Heavy images (docker)
+if [ $arg_heavy == 1 ]; then
+  pull_heavy_docker
 fi
 
 # Wordlists
