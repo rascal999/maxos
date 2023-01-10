@@ -427,13 +427,12 @@ function pull_tool_repos() {
 
   ### Tools which need building
   # AutoRecon
-  git_update https://github.com/rascal999/AutoRecon-docker $HOME/git/maxos/repos/pentest-tools/AutoRecon-docker
+  cd $HOME/git/maxos/repos/pentest-tools/AutoRecon-docker
   if [[ "$?" == "0" ]]; then
     docker build -t autorecon .
   fi
 
   # IntelOwl
-  git_update https://github.com/intelowlproject/IntelOwl.git $HOME/git/maxos/repos/pentest-tools/IntelOwl
   cd $HOME/git/maxos/repos/pentest-tools/IntelOwl/docker
   cp env_file_app_template env_file_app
   cp env_file_postgres_template env_file_postgres
@@ -450,26 +449,26 @@ function pull_tool_repos() {
   #git clone https://github.com/greenbone/openvas-scanner.git
 
   # ATT&CK Navigator
-  git_update https://github.com/mitre-attack/attack-navigator.git $HOME/git/maxos/repos/pentest-tools/attack-navigator
+  cd $HOME/git/maxos/repos/pentest-tools/attack-navigator
   if [[ "$?" == "0" ]]; then
     sed 's/node:16/node:14/g' Dockerfile
     docker build -t attack-navigator .
   fi
 
   # Osintgram
-  git_update https://github.com/Datalux/Osintgram.git $HOME/git/maxos/repos/pentest-tools/Osintgram
+  cd $HOME/git/maxos/repos/pentest-tools/Osintgram
   if [[ "$?" == "0" ]]; then
     docker build -t osintgram .
   fi
 
   # social-analyzer
-  git_update https://github.com/qeeqbox/social-analyzer.git $HOME/git/maxos/repos/pentest-tools/social-analyzer
+  cd $HOME/git/maxos/repos/pentest-tools/social-analyzer
   if [[ "$?" == "0" ]]; then
     docker build -t social-analyzer .
   fi
 
   # OpenCVE
-  git_update https://github.com/opencve/opencve-docker.git $HOME/git/maxos/repos/exploits/opencve-docker
+  cd $HOME/git/maxos/repos/exploits/opencve-docker
   if [[ "$?" == "0" ]]; then
     cp $HOME/git/maxos/config/opencve/opencve.cfg conf
     cp $HOME/git/maxos/config/opencve/docker-compose.yml .
@@ -482,74 +481,74 @@ function pull_tool_repos() {
   fi
 
   # redgo
-  git_update https://github.com/rascal999/redgo.git $HOME/git/maxos/repos/pentest-tools/redgo
+  cd $HOME/git/maxos/repos/pentest-tools/redgo
   if [[ "$?" == "0" ]]; then
     docker build . -t redgo
   fi
 
   # twa
-  git_update https://github.com/trailofbits/twa.git $HOME/git/maxos/repos/pentest-tools/twa
+  cd $HOME/git/maxos/repos/pentest-tools/twa
   if [[ "$?" == "0" ]]; then
     docker build . -t twa
   fi
 
   # howmanypeoplearearound
-  git_update https://github.com/schollz/howmanypeoplearearound.git $HOME/git/maxos/repos/pentest-tools/howmanypeoplearearound
+  cd $HOME/git/maxos/repos/pentest-tools/howmanypeoplearearound
   if [[ "$?" == "0" ]]; then
     docker build . -t howmanypeoplearearound
   fi
 
   # shcheck
-  git_update https://github.com/santoru/shcheck.git $HOME/git/maxos/repos/pentest-tools/shcheck
+  cd $HOME/git/maxos/repos/pentest-tools/shcheck
   if [[ "$?" == "0" ]]; then
     docker build . -t shcheck
   fi
 
   # DrHeader
-  git_update https://github.com/Santandersecurityresearch/DrHeader.git $HOME/git/maxos/repos/pentest-tools/DrHeader
+  cd $HOME/git/maxos/repos/pentest-tools/DrHeader
   if [[ "$?" == "0" ]]; then
     docker build . -t drheader
   fi
 
   # Nettacker
-  git_update https://github.com/OWASP/Nettacker.git $HOME/git/maxos/repos/pentest-tools/Nettacker
+  cd $HOME/git/maxos/repos/pentest-tools/Nettacker
   if [[ "$?" == "0" ]]; then
     docker build . -t nettacker
   fi
-XXX
+
   # Raccoon
-  git_update https://github.com/evyatarmeged/Raccoon.git $HOME/git/maxos/repos/pentest-tools/Raccoon
+  cd $HOME/git/maxos/repos/pentest-tools/Raccoon
   if [[ "$?" == "0" ]]; then
     docker build -t evyatarmeged/raccoon .
   fi
 
   # rengine
-  git_update https://github.com/yogeshojha/rengine.git $HOME/git/maxos/repos/pentest-tools/rengine
+  cd $HOME/git/maxos/repos/pentest-tools/rengine
   if [[ "$?" == "0" ]]; then
     make certs
     make build
   fi
 
   # Infoga
-  git_update https://github.com/m4ll0k/Infoga.git $HOME/git/maxos/repos/pentest-tools/Infoga
+  cd $HOME/git/maxos/repos/pentest-tools/Infoga
   if [[ "$?" == "0" ]]; then
     docker build . -t infoga
   fi
 
   # apkleaks
-  git_update https://github.com/dwisiswant0/apkleaks.git $HOME/git/maxos/repos/pentest-tools/apkleaks
+  cd $HOME/git/maxos/repos/pentest-tools/apkleaks
   if [[ "$?" == "0" ]]; then
     docker build . -t apkleaks
   fi
 
   # angularjs-csti-scanner
-  git_update https://github.com/tijme/angularjs-csti-scanner.git $HOME/git/maxos/repos/pentest-tools/angularjs-csti-scanner.git
+  cd $HOME/git/maxos/repos/pentest-tools/angularjs-csti-scanner.git
   if [[ "$?" == "0" ]]; then
     docker build . -t angularjs-csti-scanner
   fi
 
   # Arjun
-  git_update https://github.com/s0md3v/Arjun.git $HOME/git/maxos/repos/pentest-tools/Arjun
+  cd $HOME/git/maxos/repos/pentest-tools/Arjun
   if [[ "$?" == "0" ]]; then
     docker build . -t arjun
   fi
@@ -562,37 +561,37 @@ XXX
   pip install frida-tools
 
   # cloudsploit
-  git_update https://github.com/aquasecurity/cloudsploit.git $HOME/git/maxos/repos/pentest-tools/cloudsploit
+  cd $HOME/git/maxos/repos/pentest-tools/cloudsploit
   if [[ "$?" == "0" ]]; then
     docker build . -t cloudsploit:0.0.1
   fi
 
   # S3Scanner
-  git_update https://github.com/sa7mon/S3Scanner.git $HOME/git/maxos/repos/pentest-tools/S3Scanner
+  cd $HOME/git/maxos/repos/pentest-tools/S3Scanner
   if [[ "$?" == "0" ]]; then
     docker build . -t s3scanner:latest
   fi
 
   # aws-security-viz
-  git_update https://github.com/anaynayak/aws-security-viz.git $HOME/git/maxos/repos/pentest-tools/aws-security-viz
+  cd $HOME/git/maxos/repos/pentest-tools/aws-security-viz
   if [[ "$?" == "0" ]]; then
     docker build -t sec-viz .
   fi
 
   # CloudMapper
-  git_update https://github.com/duo-labs/cloudmapper.git $HOME/git/maxos/repos/pentest-tools/cloudmapper
+  cd $HOME/git/maxos/repos/pentest-tools/cloudmapper
   if [[ "$?" == "0" ]]; then
     docker build -t cloudmapper .
   fi
 
   # EyeWitness
-  git_update https://github.com/FortyNorthSecurity/EyeWitness.git $HOME/git/maxos/repos/pentest-tools/EyeWitness
+  cd $HOME/git/maxos/repos/pentest-tools/EyeWitness
   if [[ "$?" == "0" ]]; then
     docker build --build-arg user=$USER --tag eyewitness --file ./Python/Dockerfile .
   fi
 
   # spiderfoot
-  git_update https://github.com/smicallef/spiderfoot.git $HOME/git/maxos/repos/pentest-tools/spiderfoot
+  cd $HOME/git/maxos/repos/pentest-tools/spiderfoot
   if [[ "$?" == "0" ]]; then
     docker build . -t spiderfoot
   fi
@@ -604,43 +603,43 @@ XXX
   fi
 
   # scanless
-  git_update https://github.com/vesche/scanless.git $HOME/git/maxos/repos/pentest-tools/scanless
+  cd $HOME/git/maxos/repos/pentest-tools/scanless
   if [[ "$?" == "0" ]]; then
     docker build -t scanless .
   fi
 
   # joomscan
-  git_update https://github.com/OWASP/joomscan.git $HOME/git/maxos/repos/pentest-tools/joomscan
+  cd $HOME/git/maxos/repos/pentest-tools/joomscan
   if [[ "$?" == "0" ]]; then
     docker build -t rezasp/joomscan .
   fi
 
   # MHDDoS
-  git_update https://github.com/MatrixTM/MHDDoS.git $HOME/git/maxos/repos/pentest-tools/MHDDoS
+  cd $HOME/git/maxos/repos/pentest-tools/MHDDoS
   if [[ "$?" == "0" ]]; then
     docker build . -t mhddos
   fi
 
   # impacket
-  git_update https://github.com/SecureAuthCorp/impacket.git $HOME/git/maxos/repos/pentest-tools/impacket
+  cd $HOME/git/maxos/repos/pentest-tools/impacket
   if [[ "$?" == "0" ]]; then
     docker build -t "impacket:latest" .
   fi
 
   # droopescan
-  git_update https://github.com/droope/droopescan.git $HOME/git/maxos/repos/pentest-tools/droopescan
+  cd $HOME/git/maxos/repos/pentest-tools/droopescan
   if [[ "$?" == "0" ]]; then
     docker build -t droope/droopescan .
   fi
 
   # vulnx
-  git_update https://github.com/anouarbensaad/VulnX.git $HOME/git/maxos/repos/pentest-tools/VulnX
+  cd $HOME/git/maxos/repos/pentest-tools/VulnX
   if [[ "$?" == "0" ]]; then
     docker build -t vulnx ./docker/
   fi
 
   # v86
-  git_update https://github.com/copy/v86.git $HOME/git/maxos/repos/misc/v86
+  cd $HOME/git/maxos/repos/misc/v86
   if [[ "$?" == "0" ]]; then
     docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
   fi
