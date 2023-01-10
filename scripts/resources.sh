@@ -120,7 +120,7 @@ function git_update() {
 }
 
 function git_submodule_update() {
-  git submodule update --recursive --remote --merge --depth 1
+  git submodule update --recursive --remote --merge --depth 1 --jobs 10
 }
 
 ###
