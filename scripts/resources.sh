@@ -426,6 +426,12 @@ function pull_tool_repos() {
   cd $HOME/git/maxos/repos/exploits && git_submodule_update
 
   ### Tools which need building
+  # AutoRecon
+  git_update https://github.com/rascal999/AutoRecon-docker $HOME/git/maxos/repos/pentest-tools/AutoRecon-docker
+  if [[ "$?" == "0" ]]; then
+    docker build -t autorecon .
+  fi
+
   # IntelOwl
   git_update https://github.com/intelowlproject/IntelOwl.git $HOME/git/maxos/repos/pentest-tools/IntelOwl
   cd $HOME/git/maxos/repos/pentest-tools/IntelOwl/docker
