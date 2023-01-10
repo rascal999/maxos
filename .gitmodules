@@ -910,3 +910,6 @@
 [submodule "repos/education/pdfs/technical-whitepapers"]
 	path = repos/education/pdfs/technical-whitepapers
 	url = https://github.com/trimstray/technical-whitepapers.git
+[submodule "repos/pentest-tools/AutoRecon-docker"]
+	path = repos/pentest-tools/AutoRecon-docker
+	url = https://github.com/rascal999/AutoRecon-docker
