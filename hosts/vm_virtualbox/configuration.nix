@@ -31,6 +31,9 @@
     "${pkgs.docker}/bin/dockerd -g /home/user/maxos/docker -H fd://"
   ];
 
+  # Password for user
+  users.users.user.password = "password";
+
   # VM settings
   virtualbox = {
     baseImageSize = 64 * 1024;
