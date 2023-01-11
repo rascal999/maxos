@@ -95,6 +95,7 @@ new() {
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
+  echo "a.gsa                       git submodule add --force \$@"
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
   echo "a.netscanparse              Format netscan results for Logseq"
@@ -144,6 +145,10 @@ a.sqli() {
   sqlmap -v 0 -m -
 
   screen -adm $HOME/git/maxos/scripts/telegram_notify.sh -a -q -m "SQLi scan finished for $1"
+}
+
+a.gsa() {
+  git submodule add --force $@
 }
 
 a.xss() {
