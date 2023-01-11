@@ -59,6 +59,9 @@ in
     nvidiaBusId = "PCI:1:0:0";
   };
 
+  # Point to localhost for Pi-hole
+  networking.nameservers = [ "127.0.0.1" ];
+
   # Enable cron service
   services.cron = {
     enable = true;

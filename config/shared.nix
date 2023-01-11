@@ -270,9 +270,6 @@
     meslo-lgs-nf
   ];
 
-  # Point to localhost for Pi-hole
-  networking.nameservers = [ "127.0.0.1" ];
-
   # hosts file
   networking.extraHosts =
   ''
