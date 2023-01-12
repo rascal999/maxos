@@ -16,6 +16,10 @@ in
 
   environment.systemPackages = [ nvidia-offload ];
 
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+  services.openssh.permitRootLogin = "yes";
+
   # Authorised keys
   users.users.user = {
     openssh.authorizedKeys.keys = [

@@ -110,10 +110,6 @@
   # Laptop light
   programs.light.enable = true;
 
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  services.openssh.permitRootLogin = "yes";
-
   security.sudo.wheelNeedsPassword = false;
 
   # Flakes
