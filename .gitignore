@@ -2,4 +2,4 @@ result*
 *.swp
 *.ova
 etc-*/
-maxos_vm_virtualbox/*
+maxos_vm_virtualbox
