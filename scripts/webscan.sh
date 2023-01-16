@@ -15,14 +15,14 @@ NOW=`date "+%Y%m%d %H%M%S"`
 echo "[$NOW] Started EyeWitness.." >> progress.log
 
 # EyeWitness
-#d.eyewitness targets.txt
+d.eyewitness targets.txt
 
 while read target; do
   # Alive check on hosts
   echo "[$NOW] Started curl.." >> progress.log
   curl -k --connect-timeout 10 $target 2>&1 > /dev/null
   if [[ "$?" == "0" ]]; then
-    echo $target is up
+    echo $target >> target_alive.txt
   fi
 
   # Title banner grab
