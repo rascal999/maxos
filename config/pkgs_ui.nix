@@ -13,6 +13,7 @@
     redshift                                                                                             # Screen color temperature manager
     x11docker                                                                                            # Run graphical applications with Docker
     x11vnc                                                                                               # A VNC server connected to a real X11 screen
+    xclip                                                                                                # Tool to access the X clipboard from a console application
     xlockmore                                                                                            # Screen locker for the X Window System
     xorg.libXext                                                                                         #
     xorg.xbacklight                                                                                      #
