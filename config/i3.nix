@@ -42,6 +42,7 @@ in {
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
+        "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot_focused.sh";
         "${mod}+Shift+t" = "exec ${pkgs.teams}/bin/teams";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
@@ -59,7 +60,7 @@ in {
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.obs-studio}/bin/obs";
         "${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
-        "${mod}+s" = "exec ${pkgs.scrot}/bin/scrot";
+        "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot_select.sh";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+u" = "fullscreen";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
