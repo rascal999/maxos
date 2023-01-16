@@ -2882,6 +2882,7 @@ fi
 if [[ ! -z "${WEBSCAN}" ]]; then
   tmp_work
   cp /home/user/git/maxos/scripts/webscan.sh $TMP_DIRECTORY
+  vim targets.txt
 fi
 
 if [[ ! -z "${NOHISTFILE}" ]]; then
