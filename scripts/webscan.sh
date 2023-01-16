@@ -20,7 +20,7 @@ echo "[$NOW] Started EyeWitness.." >> progress.log
 while read target; do
   # Alive check on hosts
   echo "[$NOW] Started curl.." >> progress.log
-  curl -k -s --connect-timeout 10 $target
+  curl -k --connect-timeout 10 $target 2>&1 > /dev/null
   if [[ "$?" == "0" ]]; then
     echo $target is up
   fi
