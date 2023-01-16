@@ -15,8 +15,12 @@ firefox $PWD
 
 wlog() {
   NOW=`date "+%Y%m%d %H%M%S"`
-  echo "[$NOW] $1" >> progress.log
+  echo "[$NOW] $1" >> progress.txt
 }
+
+# Port scan
+wlog "Started netscan"
+screen -adm /home/user/git/maxos/scripts/netscan.sh -n port_scan -t targets.txt
 
 # EyeWitness
 wlog "Started EyeWitness"
@@ -24,15 +28,13 @@ docker run -d --rm -it -v $PWD:/tmp/EyeWitness eyewitness -f /tmp/EyeWitness/tar
 
 while read target; do
   # Alive check on hosts
-  wlog "Started curl.."
+  wlog "Started curl"
   curl -k --connect-timeout 10 $target 2>&1 > /dev/null
   if [[ "$?" == "0" ]]; then
-    echo $target >> target_alive.txt
+    echo $target >> targets_alive.txt
   fi
 
   # Title banner grab
-
-  # Port scan
 
   # Spider
 done<targets.txt
