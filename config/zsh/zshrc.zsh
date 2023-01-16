@@ -2879,6 +2879,11 @@ if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
 fi
 
+if [[ ! -z "${WEBSCAN}" ]]; then
+  tmp_work
+  cp /home/user/git/maxos/scripts/webscan.sh $TMP_DIRECTORY
+fi
+
 if [[ ! -z "${NOHISTFILE}" ]]; then
   tmp_work
   fc -p

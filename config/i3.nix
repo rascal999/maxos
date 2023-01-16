@@ -65,7 +65,7 @@ in {
         "${mod}+u" = "fullscreen";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         #"${mod}+w" = "exec sudo ${pkgs.wireshark}/bin/wireshark";
-        "${mod}+w" = "exec /home/user/git/maxos/scripts/webscan.sh";
+        "${mod}+w" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
 
         # Focus
