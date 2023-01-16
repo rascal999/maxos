@@ -19,6 +19,7 @@ wlog() {
 }
 
 # Port scan
+# TODO resolve IPs of targets to then scan (remove httpXXX)
 wlog "Started netscan"
 screen -adm /home/user/git/maxos/scripts/netscan.sh -n port_scan -t targets.txt
 
