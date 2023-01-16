@@ -18,8 +18,8 @@ in {
       for_window [class=".*Wireshark.*"] move to workspace "fin"
       for_window [instance=".*microsoft teams.*"] move to workspace "mst"
       for_window [title=".*Online LaTeX Editor Overleaf Community Edition.*"] move to workspace "rep"
-      for_window [title=".*YouTube . Mozilla Firefox.*"] move to workspace "yt"
-      for_window [title=".*YouTube Music.*"] move to workspace "ytm"
+      #for_window [title=".*YouTube . Mozilla Firefox.*"] move to workspace "yt"
+      #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
       no_focus [class="org.remmina.Remmina"]
       focus_on_window_activation none
     '';
