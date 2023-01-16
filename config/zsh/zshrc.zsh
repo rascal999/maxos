@@ -2859,13 +2859,25 @@ ds.zammad-kill() {
 
 eval "$(mcfly init zsh)"
 
-if [[ ! -z "${NOHISTFILE}" ]]; then
+tmp_work() {
   UUID=`uuidgen | choose -f '-' 0`
   TMP_DIRECTORY="$HOME/work/tmp/${UUID}"
 
   mkdir -p $TMP_DIRECTORY
   cd $TMP_DIRECTORY
   pwd
+}
+
+if [[ ! -z "${REMOTEWORK}" ]]; then
+  ssh user@alm.gg
+fi
+
+if [[ ! -z "${TMPWORK}" ]]; then
+  tmp_work
+fi
+
+if [[ ! -z "${NOHISTFILE}" ]]; then
+  tmp_work
   fc -p
 fi
 

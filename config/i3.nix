@@ -35,6 +35,7 @@ in {
 
         "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+space" = "exec i3-input -F 'workspace %s' -P 'goto: '";
+        "${mod}+Shift+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
         "${mod}+Shift+l" = "exec sudo poweroff";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "${mod}+Shift+c" = "kill";
@@ -50,13 +51,14 @@ in {
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
-        "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
+        "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.obs-studio}/bin/obs";
+        "${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
         "${mod}+s" = "exec ${pkgs.scrot}/bin/scrot";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+u" = "fullscreen";
