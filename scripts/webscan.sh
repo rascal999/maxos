@@ -11,16 +11,20 @@ curl https://ifconfig.me/ > tester_ip.txt
 date > tester_date_start.txt
 ip a > tester_interface_info.txt
 
-NOW=`date "+%Y%m%d %H%M%S"`
-echo "[$NOW] Started EyeWitness.." >> progress.log
+firefox $PWD
+
+wlog() {
+  NOW=`date "+%Y%m%d %H%M%S"`
+  echo "[$NOW] $1" >> progress.log
+}
+
 # EyeWitness
+wlog "Started EyeWitness"
 docker run -d --rm -it -v $PWD:/tmp/EyeWitness eyewitness -f /tmp/EyeWitness/targets.txt -d /tmp/EyeWitness/eyewitness_$TIMESTAMP
 
 while read target; do
   # Alive check on hosts
-  NOW=`date "+%Y%m%d %H%M%S"`
-  echo "[$NOW] Started curl.." >> progress.log
-
+  wlog "Started curl.."
   curl -k --connect-timeout 10 $target 2>&1 > /dev/null
   if [[ "$?" == "0" ]]; then
     echo $target >> target_alive.txt
