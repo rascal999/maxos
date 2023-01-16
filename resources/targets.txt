@@ -1,0 +1,2 @@
+# Delete these comments and specify targets for the web scan
+# Run the webscan.sh script in the current directory when ready
