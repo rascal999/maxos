@@ -2861,7 +2861,10 @@ eval "$(mcfly init zsh)"
 
 tmp_work() {
   UUID=`uuidgen | choose -f '-' 0`
-  TMP_DIRECTORY="$HOME/work/tmp/${UUID}"
+  DATE_YEAR=`date +%Y`
+  DATE_MONTH=`date +%m`
+  DATE_DAY=`date +%d`
+  TMP_DIRECTORY="$HOME/work/tmp/${DATE_YEAR}/${DATE_MONTH}/${DATE_DAY}/${UUID}"
 
   mkdir -p $TMP_DIRECTORY
   cd $TMP_DIRECTORY
