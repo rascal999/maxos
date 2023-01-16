@@ -2865,6 +2865,7 @@ if [[ ! -z "${NOHISTFILE}" ]]; then
 
   mkdir -p $TMP_DIRECTORY
   cd $TMP_DIRECTORY
+  pwd
   fc -p
 fi
 
