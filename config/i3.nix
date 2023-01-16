@@ -8,8 +8,8 @@ in {
 
     extraConfig = ''
       default_border pixel 1
-      for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
-      for_window [class=".*Gimp.*"] move to workspace "img"
+      #for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
+      #for_window [class=".*Gimp.*"] move to workspace "img"
       for_window [class=".*KeePassXC.*"] move to workspace "pw"
       for_window [class=".*Logseq.*"] move to workspace ls
       for_window [class=".*Remmina.*"] move to workspace rdp
