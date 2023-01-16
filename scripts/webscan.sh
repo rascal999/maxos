@@ -13,13 +13,14 @@ ip a > tester_interface_info.txt
 
 NOW=`date "+%Y%m%d %H%M%S"`
 echo "[$NOW] Started EyeWitness.." >> progress.log
-
 # EyeWitness
-d.eyewitness targets.txt
+docker run -d --rm -it -v $PWD:/tmp/EyeWitness eyewitness -f /tmp/EyeWitness/targets.txt -d /tmp/EyeWitness/eyewitness_$TIMESTAMP
 
 while read target; do
   # Alive check on hosts
+  NOW=`date "+%Y%m%d %H%M%S"`
   echo "[$NOW] Started curl.." >> progress.log
+
   curl -k --connect-timeout 10 $target 2>&1 > /dev/null
   if [[ "$?" == "0" ]]; then
     echo $target >> target_alive.txt
