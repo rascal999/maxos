@@ -48,7 +48,9 @@ in {
 
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
         "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
+        "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
+        "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
@@ -61,8 +63,6 @@ in {
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+w" = "exec sudo ${pkgs.wireshark}/bin/wireshark";
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
-
-        "${mod}+p" = "exec ${pkgs.dmenu}/bin/dmenu_run";
 
         # Focus
         "${mod}+Left" = "focus left";
