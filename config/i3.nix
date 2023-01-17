@@ -11,7 +11,7 @@ in {
       #for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
       #for_window [class=".*Gimp.*"] move to workspace "img"
       for_window [class=".*KeePassXC.*"] move to workspace "pw"
-      for_window [class=".*Logseq.*"] move to workspace ls
+      for_window [class=".*Logseq.*"] move to workspace "2:ls"
       for_window [class=".*Remmina.*"] move to workspace rdp
       for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
       for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
@@ -83,7 +83,7 @@ in {
         # Workspace
         "${mod}+0" = "workspace number 10";
         "${mod}+1" = "workspace number 1";
-        "${mod}+2" = "workspace ls";
+        "${mod}+2" = "workspace 2:ls";
         "${mod}+3" = "workspace number 3";
         "${mod}+4" = "workspace number 4";
         "${mod}+5" = "workspace number 5";
@@ -93,7 +93,7 @@ in {
         "${mod}+9" = "workspace number 9";
         "${mod}+Shift+0" = "move container to workspace number 10";
         "${mod}+Shift+1" = "move container to workspace number 1";
-        "${mod}+Shift+2" = "move container to workspace ls";
+        "${mod}+Shift+2" = "move container to workspace 2:ls";
         "${mod}+Shift+3" = "move container to workspace number 3";
         "${mod}+Shift+4" = "move container to workspace number 4";
         "${mod}+Shift+5" = "move container to workspace number 5";
