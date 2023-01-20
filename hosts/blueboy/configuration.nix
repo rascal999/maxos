@@ -56,7 +56,7 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      "0 20 * * *        root    ${pkgs.rsync}/bin/rsync -av --no-perms /var/lib/trilium admin@192.168.0.254:/volume1/k8s-syncthing-data/data/"
+      "0 20 * * *        root    ${pkgs.rsync}/bin/rsync -av --no-perms /var/lib/trilium admin@192.168.0.254:/volume1/syncthing-data/data/"
       "0 2 * * *         root    cd /home/user/git/maxos/ && /home/user/git/maxos/scripts/build_vm_virtualbox_pipeline.sh"
       "0 4 * * *         root    cd /home/user/git/maxos/ && /home/user/git/maxos/scripts/build_iso.sh"
     ];
