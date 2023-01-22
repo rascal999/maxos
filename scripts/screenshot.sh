@@ -15,7 +15,9 @@ else
   scrot -s "$HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png"
 fi
 
-firefox "$HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png"
-echo -n $HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png > /tmp/clip
-xclip -i /tmp/clip
-xclip -sel clip -t image/png "$HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png"
+if [[ "$?" == "0" ]]; then
+  firefox "$HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png"
+  echo -n $HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png > /tmp/clip
+  xclip -i /tmp/clip
+  xclip -sel clip -t image/png "$HOME/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/${D_YEAR}${D_MONTH}${D_DAY}_${D_HOUR}${D_MINUTE}${D_SECOND}.png"
+fi
