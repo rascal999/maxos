@@ -40,6 +40,7 @@ in {
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "${mod}+Shift+c" = "kill";
         "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
+        "${mod}+Shift+o" = "exec ${pkgs.obs-studio}/bin/obs";
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
@@ -58,7 +59,7 @@ in {
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
-        "${mod}+o" = "exec ${pkgs.obs-studio}/bin/obs";
+        "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
         "${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
