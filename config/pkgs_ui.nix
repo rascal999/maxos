@@ -11,6 +11,7 @@
     networkmanager_dmenu                                                                                 #
     notify-desktop                                                                                       # Little application that lets you send desktop notifications with one command
     redshift                                                                                             # Screen color temperature manager
+    tesseract                                                                                            # OCR engine
     x11docker                                                                                            # Run graphical applications with Docker
     x11vnc                                                                                               # A VNC server connected to a real X11 screen
     xclip                                                                                                # Tool to access the X clipboard from a console application

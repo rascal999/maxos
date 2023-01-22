@@ -42,6 +42,7 @@ in {
     dunst                                                                                                # Lightweight and customizable notification daemon
     ethtool                                                                                              # Utility for controlling network drivers and hardware
     evillimiter                                                                                          # Tool that monitors, analyzes and limits the bandwidth
+    exa                                                                                                  # Replacement for 'ls' written in Rust
     fd                                                                                                   # A simple, fast and user-friendly alternative to find
     feh                                                                                                  # A light-weight image viewer
     file                                                                                                 # A program that shows the type of files
