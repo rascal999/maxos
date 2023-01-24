@@ -54,10 +54,10 @@
         id = "3CETFIS-4P5BTDB-TQRFO54-H6ECZH4-OLHU2LB-DTQFTVA-ZFMPYJH-7FVSRA6";
         introducer = false;
       };
-      #"GM1920" = {
-      #  id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
-      #  introducer = false;
-      #};
+      "GM1920" = {
+        id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
+        introducer = false;
+      };
     };
 
     dataDir = "/home/user/syncthing";
