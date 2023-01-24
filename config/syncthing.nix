@@ -10,7 +10,7 @@
           "galaxy"
           "nas"
           "rig"
-          #"fold4"
+          "fold4"
           #"GM1920"
         ];
         path = "/home/user/Phone";
@@ -23,7 +23,7 @@
           "galaxy"
           "nas"
           "rig"
-          #"fold4"
+          "fold4"
           #"GM1920"
         ];
         path = "/home/user/Data";
@@ -34,6 +34,10 @@
       "blueboy" = {
         #autoAcceptFolders = true;
         id = "3YBMQYS-46IZSTQ-HLIP3O2-E22P3GJ-OS2PFCY-GTINZAF-PMH6HTN-2GDV4Q3";
+        introducer = false;
+      };
+      "fold4" = {
+        id = "PLY3QVN-3NQYXXB-PJO6KJ3-3MJ3H6B-QVQKRWI-CNX6PNS-VDADBY2-2J4VFA5";
         introducer = false;
       };
       "galaxy" = {
@@ -50,10 +54,6 @@
         id = "3CETFIS-4P5BTDB-TQRFO54-H6ECZH4-OLHU2LB-DTQFTVA-ZFMPYJH-7FVSRA6";
         introducer = false;
       };
-      #"fold4" = {
-      #  id = "PLY3QVN-3NQYXXB-PJO6KJ3-3MJ3H6B-QVQKRWI-CNX6PNS-VDADBY2-2J4VFA5";
-      #  introducer = false;
-      #};
       #"GM1920" = {
       #  id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
       #  introducer = false;
