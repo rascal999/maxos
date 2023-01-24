@@ -7,6 +7,7 @@
         id = "phone";
         devices = [
           "blueboy"
+          "galaxy"
           "nas"
           "rig"
           #"fold4"
@@ -19,6 +20,7 @@
         id = "data";
         devices = [
           "blueboy"
+          "galaxy"
           "nas"
           "rig"
           #"fold4"
@@ -34,6 +36,11 @@
         id = "3YBMQYS-46IZSTQ-HLIP3O2-E22P3GJ-OS2PFCY-GTINZAF-PMH6HTN-2GDV4Q3";
         introducer = false;
       };
+      "galaxy" = {
+        #autoAcceptFolders = true;
+        id = "DPWLINN-X2GRAYG-2IYFOXT-CRWLY3L-BMRDJGT-KE5ELWF-M76VOXR-XFREWQG";
+        introducer = false;
+      };
       "nas" = {
         id = "DCL3E6N-GIZIFEM-Z4ADAKR-IY2WT5M-G4ADVCI-LANSWO5-VIVH4H4-JDF6WAI";
         introducer = true;
@@ -43,11 +50,6 @@
         id = "3CETFIS-4P5BTDB-TQRFO54-H6ECZH4-OLHU2LB-DTQFTVA-ZFMPYJH-7FVSRA6";
         introducer = false;
       };
-      #"galaxy" = {
-      #  autoAcceptFolders = true;
-      #  id = "DPWLINN-X2GRAYG-2IYFOXT-CRWLY3L-BMRDJGT-KE5ELWF-M76VOXR-XFREWQG";
-      #  introducer = false;
-      #};
       #"fold4" = {
       #  id = "PLY3QVN-3NQYXXB-PJO6KJ3-3MJ3H6B-QVQKRWI-CNX6PNS-VDADBY2-2J4VFA5";
       #  introducer = false;
