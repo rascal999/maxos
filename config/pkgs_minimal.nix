@@ -88,7 +88,7 @@ in {
     netmask                                                                                              # An IP address formatting tool
     nfs-utils                                                                                            # Linux user-space NFS utilities
     ngrok                                                                                                # Allows you to expose a web server running on your local machine to the internet
-    nixops                                                                                               # NixOS cloud provisioning and deployment tool
+    #nixops                                                                                               # NixOS cloud provisioning and deployment tool
     nixos-generators                                                                                     # Collection of image builders
     nixos-shell                                                                                          # Spawns lightweight nixos vms in a shell
     nload                                                                                                # Monitors network traffic and bandwidth usage with ncurses graphs

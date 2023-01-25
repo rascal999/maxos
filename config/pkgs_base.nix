@@ -155,7 +155,7 @@
     gef                                                                                                  # A modern experience for GDB with advanced debugging features for exploit developers & reverse engineers
     genymotion                                                                                           # Fast and easy Android emulation
     ghost                                                                                                # Android post-exploitation framework
-    gimp                                                                                                 # The GNU Image Manipulation Program
+    #gimp                                                                                                 # The GNU Image Manipulation Program
     gitleaks                                                                                             # Scan git repos (or files) for secrets
     glances                                                                                              # Cross-platform curses-based monitoring tool
     glib                                                                                                 # C library of programming buildings blocks

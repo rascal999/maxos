@@ -191,7 +191,8 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "python2.7-pyjwt-1.7.1"
+     #"python2.7-pyjwt-1.7.1"
+     "python-2.7.18.6"
   ];
 
   # docker

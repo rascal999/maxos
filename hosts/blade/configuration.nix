@@ -24,7 +24,7 @@ in
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-  services.openssh.permitRootLogin = "yes";
+  services.openssh.settings.PermitRootLogin = "yes";
 
   # Authorised keys
   users.users.user = {
