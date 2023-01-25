@@ -40,7 +40,7 @@
     bingrep                                                                                              # Greps through binaries from various OSs and architectures, and colors them
     bintools                                                                                             # Tools for manipulating binaries (linker, assembler, etc.) (wrapper script)
     binwalk                                                                                              # A tool for searching a given binary image for embedded files
-    boofuzz                                                                                              # Network protocol fuzzing tool
+    #boofuzz                                                                                              # Network protocol fuzzing tool
     bore-cli                                                                                             # Rust tool to create TCP tunnels
     brakeman                                                                                             # Static analysis security scanner for Ruby on Rails
     brillo                                                                                               # Backlight and Keyboard LED control tool
@@ -345,7 +345,7 @@
     steam                                                                                                # A digital distribution platform
     steampipe                                                                                            # select * from cloud;
     stegseek                                                                                             # Tool to crack steganography
-    step-ca                                                                                              # A private certificate authority
+    #step-ca                                                                                              # A private certificate authority
     stockfish                                                                                            # Strong open source chess engine
     subfinder                                                                                            # Subdomain discovery tool
     subjs                                                                                                # Fetcher for Javascript files
