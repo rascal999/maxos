@@ -396,6 +396,10 @@
           {
             "name": "Windows Event Log Analysis and IR Response Guide",
             "url": "file:///home/user/git/maxos/resources/pdfs/20221024_Windows_Event_Log_Analysis_IR_Response.pdf"
+          },
+          {
+            "name": "XSS cheatsheet",
+            "url": "file:///home/user/git/maxos/resources/images/20230127_XSS_cheatsheet.png"
           }
         ]
       },
