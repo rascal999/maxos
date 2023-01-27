@@ -112,6 +112,7 @@ new() {
   echo "d.gf                        Wrapper around grep"
   echo "d.katana                    Web crawler"
   echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
+  echo "d.msprobe                   Find M$ things for password spraying and enum"
   echo "d.orbitaldump               OrbitalDump - SSH brute forcer"
   echo "d.phash                     psudohash"
   echo "d.rg                        redgo"
@@ -266,6 +267,10 @@ a.vpn() {
 
 bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
+}
+
+d.msprobe() {
+  docker run -it --rm redgo /root/.local/bin/msprobe $@
 }
 
 d.cloudfox() {
