@@ -48,28 +48,6 @@
     ];
   in {
     nixosConfigurations = {
-      ### BLADE
-      blade = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = configSettings ++ [
-          ./config/docker.nix
-          ./config/grub.nix
-          ./config/pkgs_additional.nix
-          ./config/pkgs_base.nix
-          ./config/pkgs_ui.nix
-          ./hosts/blade/configuration.nix
-          ./hosts/blade/hardware-configuration.nix
-
-          ({ pkgs, ... }: {
-            home-manager.users.user.imports = [
-              ./config/i3-vars.nix
-              ./home.nix
-              ./hosts/blade/home.nix
-            ];
-          })
-        ];
-      };
-
       ### RIG
       rig = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -188,29 +166,6 @@
         modules = configSettings ++ [
           ./config/docker.nix
           ./hosts/vm_vmware/configuration.nix
-
-          ({ pkgs, ... }: {
-            home-manager.users.user.imports = [
-              ./config/i3-vars.nix
-              ./home.nix
-            ];
-          })
-        ];
-      };
-
-      ### XVM
-      ### The VM is minimal, XVM will pull everything
-      xvm = lib.makeOverridable nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = configSettings ++ [
-          ./config/docker.nix
-          ./config/grub_xvm.nix
-          ./config/pkgs_additional.nix
-          ./config/pkgs_base.nix
-          ./config/pkgs_ui.nix
-          ./config/syncthing.nix
-          ./hosts/xvm/configuration.nix
-          ./hosts/xvm/hardware-configuration.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
