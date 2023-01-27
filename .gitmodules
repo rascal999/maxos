@@ -913,3 +913,6 @@
 [submodule "repos/pentest-tools/AutoRecon-docker"]
 	path = repos/pentest-tools/AutoRecon-docker
 	url = https://github.com/rascal999/AutoRecon-docker
+[submodule "repos/pentest-education/Awesome-Bugbounty-Writeups"]
+	path = repos/pentest-education/Awesome-Bugbounty-Writeups
+	url = https://github.com/devanshbatham/Awesome-Bugbounty-Writeups.git

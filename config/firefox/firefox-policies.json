@@ -242,10 +242,6 @@
           {
             "name": "Open-Source-Security-Guide",
             "url": "file:///home/user/git/maxos/repos/pentest-education/Open-Source-Security-Guide/README.md"
-          },
-          {
-            "name": "personal-security-checklist",
-            "url": "file:///home/user/git/maxos/repos/pentest-education/personal-security-checklist/README.md"
           }
         ]
       },
@@ -358,6 +354,10 @@
             "url": "file:///home/user/git/maxos/repos/pentest-education/JustTryHarder/README.md"
           },
           {
+            "name": "KQL Cheatsheet",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/pdfs/20230127_KQL_cheatsheet.pdf"
+          },
+          {
             "name": "Linux Tools",
             "url": "file:///home/user/git/maxos/resources/cheatsheets/20221207_linux_tools.jpg"
           },
@@ -384,10 +384,6 @@
           {
             "name": "SANS Faculty Free Tools",
             "url": "file:///home/user/git/maxos/resources/pdfs/20221207_pentest_tools.pdf"
-          },
-          {
-            "name": "Web Application Pentesting Checklist",
-            "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_web_application_pentesting_checklist.pdf"
           },
           {
             "name": "Windows and AD exploitation cheat sheet",
@@ -731,12 +727,28 @@
         "name": "Frameworks",
         "children": [
           {
+            "name": "API-Security-Checklist",
+            "url": "file:///home/user/git/maxos/repos/pentest-education/API-Security-Checklist/README.md"
+          },
+          {
+            "name": "OSSTMM3",
+            "url": "file:///home/user/git/maxos/resources/pdfs/OSSTMM.3.pdf"
+          },
+          {
             "name": "owasp-mstg",
             "url": "file:///home/user/git/maxos/repos/pentest-frameworks/owasp-mstg"
           },
           {
+            "name": "personal-security-checklist",
+            "url": "file:///home/user/git/maxos/repos/pentest-education/personal-security-checklist/README.md"
+          },
+          {
             "name": "Top10",
             "url": "file:///home/user/git/maxos/repos/pentest-education/Top10"
+          },
+          {
+            "name": "Web Application Pentesting Checklist",
+            "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_web_application_pentesting_checklist.pdf"
           },
           {
             "name": "wstg",
@@ -1831,10 +1843,6 @@
               {
                 "name": "API Pentesting Mindmap",
                 "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_api_pentesting_mindmap.pdf"
-              },
-              {
-                "name": "API-Security-Checklist",
-                "url": "file:///home/user/git/maxos/repos/pentest-education/API-Security-Checklist/README.md"
               },
               {
                 "name": "awesome-api-security",
