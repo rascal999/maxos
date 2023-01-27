@@ -135,6 +135,7 @@
         inherit system;
         modules = minimalConfigSettings ++ [
           ./hosts/vm_virtualbox_minimal/configuration.nix
+          ./config/pkgs_ui.nix
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
