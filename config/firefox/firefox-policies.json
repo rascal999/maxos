@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "@powerthesaurus.org": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/power-thesaurus/addon-697681-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "bypasspaywalls@bypasspaywalls": {
         "install_url": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/latest/download/bypass-paywalls-firefox.xpi",
         "installation_mode": "normal_installed"
