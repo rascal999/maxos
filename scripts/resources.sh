@@ -184,6 +184,18 @@ function pull_misc_things() {
   if [[ "$?" == "0" ]]; then
     docker build -t jsoncrack .
   fi
+
+  ### GraphGPT
+  cd $HOME/git/maxos/repos/misc/GraphGPT-docker
+  if [[ "$?" == "0" ]]; then
+    docker build -t graphgpt .
+  fi
+
+  ### v86
+  cd $HOME/git/maxos/repos/misc/v86
+  if [[ "$?" == "0" ]]; then
+    docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
+  fi
 }
 
 ###
@@ -636,18 +648,6 @@ function pull_tool_repos() {
   cd $HOME/git/maxos/repos/pentest-tools/VulnX
   if [[ "$?" == "0" ]]; then
     docker build -t vulnx ./docker/
-  fi
-
-  # v86
-  cd $HOME/git/maxos/repos/misc/v86
-  if [[ "$?" == "0" ]]; then
-    docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
-  fi
-
-  # GraphGPT
-  cd $HOME/git/maxos/repos/misc/GraphGPT-docker
-  if [[ "$?" == "0" ]]; then
-    docker build -t graphgpt .
   fi
 }
 
