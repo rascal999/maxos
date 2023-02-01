@@ -916,3 +916,6 @@
 [submodule "repos/pentest-education/Awesome-Bugbounty-Writeups"]
 	path = repos/pentest-education/Awesome-Bugbounty-Writeups
 	url = https://github.com/devanshbatham/Awesome-Bugbounty-Writeups.git
+[submodule "repos/misc/GraphGPT-docker"]
+	path = repos/misc/GraphGPT-docker
+	url = https://github.com/rascal999/GraphGPT-docker.git

@@ -643,6 +643,12 @@ function pull_tool_repos() {
   if [[ "$?" == "0" ]]; then
     docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.14 .
   fi
+
+  # GraphGPT
+  cd $HOME/git/maxos/repos/misc/GraphGPT-docker
+  if [[ "$?" == "0" ]]; then
+    docker build -t graphgpt .
+  fi
 }
 
 ###
