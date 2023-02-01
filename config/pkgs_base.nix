@@ -156,6 +156,7 @@
     genymotion                                                                                           # Fast and easy Android emulation
     ghost                                                                                                # Android post-exploitation framework
     #gimp                                                                                                 # The GNU Image Manipulation Program
+    git-crypt                                                                                            # Transparent file encryption in git
     gitleaks                                                                                             # Scan git repos (or files) for secrets
     glances                                                                                              # Cross-platform curses-based monitoring tool
     glib                                                                                                 # C library of programming buildings blocks
