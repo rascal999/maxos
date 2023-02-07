@@ -363,6 +363,8 @@ d.katana() {
   echo >> $HOME/scans/katana/$NOW/scan.log
   echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
   date >> $HOME/scans/katana/$NOW/scan.log
+
+  cat $HOME/scans/katana/$NOW/scan.log
 }
 
 d.rg() {
