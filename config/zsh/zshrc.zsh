@@ -167,15 +167,21 @@ a.cl() {
   UUID=`uuidgen`
   echo "Should be 404 content length"
   echo "curl -sI $1/XXXX${UUID} | grep -i Content-Length | choose 1"
+  echo
   curl -sI $1/XXX${UUID} | grep -i Content-Length | choose 1
+  echo
 
   UUID=`uuidgen`
   echo "curl -sI $1/XX${UUID} | grep -i Content-Length | choose 1"
+  echo
   curl -sI $1/XXX${UUID} | grep -i Content-Length | choose 1
+  echo
 
   echo "Should be 200 content length"
   echo "curl -sI $1 | grep -i Content-Length | choose 1"
+  echo
   curl -sI $1 | grep -i Content-Length | choose 1
+  echo
 }
 
 a.bust() {
