@@ -156,7 +156,7 @@ d.katana() {
 a.bust() {
   echo "Crawler/buster helper"
   echo
-  if [[ "$#" -lt "2" ]]; then
+  if [[ "$#" -ne "4" ]]; then
     echo "ERROR: Specify:"
     echo "- target site"
     echo "- extension(s)"
