@@ -96,6 +96,7 @@ new() {
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
+  echo "a.gob                       git submodule add --force \$@"
   echo "a.gsa                       git submodule add --force \$@"
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
@@ -105,7 +106,6 @@ new() {
   echo "aria2c                      wget alternative"
   echo "arsenal                     Generate commands for security and network tools"
   echo "bwcalc                      Bandwidth transfer time estimator"
-  echo "croc                        Share files between machines"
   echo "d.autorecon                 Parallel network scans (good for CTF)"
   echo "d.bb                        OpenBB finance terminal"
   echo "d.cloudfox                  Cloud scanner"
@@ -125,6 +125,29 @@ new() {
 
 test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
+}
+
+a.gob() {
+  echo "a.gobuster helper"
+  echo
+  if [[ "$#" -lt "2" ]]; then
+    echo "ERROR: Specify:"
+    echo "- target site"
+    echo "- extension(s)"
+    echo "- excluded HTTP codes"
+    echo "- excluded response lengths"
+    echo
+    echo "$0 http://testphp.vulnweb.com/ html,php 400,401,403,404 1620"
+    return 1
+  fi
+
+  # English words with elected extensions
+  gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4
+  # onelistforallshort
+  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error
+  echo "Running onelistforall_all.txt via screen.."
+  # onelistforall_all
+  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error
 }
 
 a.sqli() {

@@ -654,8 +654,14 @@ function pull_tool_repos() {
 ### Wordlists
 ###
 function pull_wordlists() {
+  # git update
   cd $HOME/git/maxos/repos/wordlists && git_submodule_update
-  wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O $HOME/git/wordlists/content_discovery_all.txt
+
+  # $HOME/wordlists
+  mkdir $HOME/wordlists
+  wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O $HOME/wordlists/content_discovery_all.txt
+  wget -c https://alm.gg/onelistforall_all.txt -O $HOME/wordlists/onelistforall_all.txt
+  wget -c https://raw.githubusercontent.com/dwyl/english-words/master/words.txt -O $HOME/wordlists/english_words.txt
 }
 
 ###
