@@ -145,10 +145,10 @@
       ports = [ "127.0.0.1:10120:4200" ];
     };
 
-    graphgpt = {
-      image = "graphgpt";
-      ports = [ "127.0.0.1:10160:3000" ];
-    };
+    #graphgpt = {
+    #  image = "graphgpt";
+    #  ports = [ "127.0.0.1:10160:3000" ];
+    #};
 
     rembg = {
       cmd = [

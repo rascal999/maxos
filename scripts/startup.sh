@@ -27,11 +27,11 @@ fi
 
 # GraphGPT
 # Build
-GRAPHGPT_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=graphgpt | choose 0`
-if [[ "$GRAPHGPT_CHECK" == "" ]]; then
-  cd /home/user/git/maxos/repos/misc/GraphGPT-docker
-  /run/current-system/sw/bin/docker build -t graphgpt .
-fi
+#GRAPHGPT_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=graphgpt | choose 0`
+#if [[ "$GRAPHGPT_CHECK" == "" ]]; then
+#  cd /home/user/git/maxos/repos/misc/GraphGPT-docker
+#  /run/current-system/sw/bin/docker build -t graphgpt .
+#fi
 
 # Run (if secret OpenAI key present)
 # TODO

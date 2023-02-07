@@ -185,10 +185,10 @@ function pull_misc_things() {
   fi
 
   ### GraphGPT
-  cd $HOME/git/maxos/repos/misc/GraphGPT-docker
-  if [[ "$?" == "0" ]]; then
-    docker build -t graphgpt .
-  fi
+  #cd $HOME/git/maxos/repos/misc/GraphGPT-docker
+  #if [[ "$?" == "0" ]]; then
+  #  docker build -t graphgpt .
+  #fi
 
   ### v86
   cd $HOME/git/maxos/repos/misc/v86
