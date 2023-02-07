@@ -96,7 +96,7 @@ new() {
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
-  echo "a.gob                       git submodule add --force \$@"
+  echo "a.gob                       gobuster with sensible wordlists"
   echo "a.gsa                       git submodule add --force \$@"
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
