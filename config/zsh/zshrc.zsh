@@ -92,11 +92,11 @@ a.notify()
 new() {
   echo "### New commands ###"
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
+  echo "a.bust                      Crawler and gobuster with sensible wordlists"
   echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
-  echo "a.gob                       gobuster with sensible wordlists"
   echo "a.gsa                       git submodule add --force \$@"
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
@@ -127,8 +127,34 @@ test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
 }
 
-a.gob() {
-  echo "a.gobuster helper"
+d.katana() {
+  if [[ "$#" -lt "2" ]]; then
+    echo "ERROR: Must specify at least something like:"
+    echo "$0 -u https://target.com"
+    return 1
+  fi
+  NOW=`date "+%Y%m%d_%H%M%S"`
+  mkdir -p $HOME/scans/katana/$NOW
+
+  echo "Args: $@" > $HOME/scans/katana/$NOW/scan.log
+  echo -n "Started: " >> $HOME/scans/katana/$NOW/scan.log
+  date >> $HOME/scans/katana/$NOW/scan.log
+
+  echo -n "Source IP: " >> $HOME/scans/katana/$NOW/scan.log
+  curl https://ifconfig.me/ >> $HOME/scans/katana/$NOW/scan.log
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  docker run --rm redgo katana $@ >> $HOME/scans/katana/$NOW/scan.log
+
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
+  date >> $HOME/scans/katana/$NOW/scan.log
+
+  cat $HOME/scans/katana/$NOW/scan.log
+}
+
+a.bust() {
+  echo "Crawler/buster helper"
   echo
   if [[ "$#" -lt "2" ]]; then
     echo "ERROR: Specify:"
@@ -140,6 +166,9 @@ a.gob() {
     echo "$0 http://testphp.vulnweb.com/ html,php 400,401,403,404 1620"
     return 1
   fi
+
+  # katana crawler
+  d.katana -u $1
 
   # English words with elected extensions
   gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4
@@ -339,32 +368,6 @@ d.nessus() {
   else
     echo "ERROR: Provide activation code"
   fi
-}
-
-d.katana() {
-  if [[ "$#" -lt "2" ]]; then
-    echo "ERROR: Must specify at least something like:"
-    echo "$0 -u https://target.com"
-    return 1
-  fi
-  NOW=`date "+%Y%m%d_%H%M%S"`
-  mkdir -p $HOME/scans/katana/$NOW
-
-  echo "Args: $@" > $HOME/scans/katana/$NOW/scan.log
-  echo -n "Started: " >> $HOME/scans/katana/$NOW/scan.log
-  date >> $HOME/scans/katana/$NOW/scan.log
-
-  echo -n "Source IP: " >> $HOME/scans/katana/$NOW/scan.log
-  curl https://ifconfig.me/ >> $HOME/scans/katana/$NOW/scan.log
-  echo >> $HOME/scans/katana/$NOW/scan.log
-  echo >> $HOME/scans/katana/$NOW/scan.log
-  docker run --rm redgo katana $@ >> $HOME/scans/katana/$NOW/scan.log
-
-  echo >> $HOME/scans/katana/$NOW/scan.log
-  echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
-  date >> $HOME/scans/katana/$NOW/scan.log
-
-  cat $HOME/scans/katana/$NOW/scan.log
 }
 
 d.rg() {
