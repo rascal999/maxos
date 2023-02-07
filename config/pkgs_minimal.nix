@@ -6,6 +6,7 @@ let
     beautifulsoup4
     distro
     docker
+    django
     flask
     pip
     pytest

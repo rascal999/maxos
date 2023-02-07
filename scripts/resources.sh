@@ -170,7 +170,6 @@ function pull_misc_things() {
   docker pull danielgatis/rembg                                     # Rembg is a tool to remove images background
 
   cd $HOME/git/maxos/repos/misc && git_submodule_update
-  cd $HOME/git/maxos/repos/tools && git_submodule_update
 
   ### InvokeAI
   if [[ "$?" == "0" && -f "/etc/api-huggingface" ]]; then
