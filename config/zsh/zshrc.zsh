@@ -93,6 +93,7 @@ new() {
   echo "### New commands ###"
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
   echo "a.bust                      Crawler and gobuster with sensible wordlists"
+  echo "a.cl                        Get content length of URL"
   echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
@@ -120,7 +121,6 @@ new() {
   echo "d.sshere                    SecretScanner for container scanning"
   echo "d.wbu                       waybackurls"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
-  echo "inql                        Security testing tool for GraphQL"
 }
 
 test-vpn() {
@@ -151,6 +151,31 @@ d.katana() {
   date >> $HOME/scans/katana/$NOW/scan.log
 
   cat $HOME/scans/katana/$NOW/scan.log
+}
+
+a.cl() {
+  echo "Get content length of URL"
+  echo
+  if [[ "$#" -ne "4" ]]; then
+    echo "ERROR: Specify:"
+    echo "- target site"
+    echo
+    echo "$0 http://testphp.vulnweb.com/"
+    return 1
+  fi
+
+  UUID=`uuidgen`
+  echo "Should be 404 content length"
+  echo "curl -sI $1/XXXX${UUID} | grep -i Content-Length | choose 1"
+  curl -sI $1/XXX${UUID} | grep -i Content-Length | choose 1
+
+  UUID=`uuidgen`
+  echo "curl -sI $1/XX${UUID} | grep -i Content-Length | choose 1"
+  curl -sI $1/XXX${UUID} | grep -i Content-Length | choose 1
+
+  echo "Should be 200 content length"
+  echo "curl -sI $1 | grep -i Content-Length | choose 1"
+  curl -sI $1 | grep -i Content-Length | choose 1
 }
 
 a.bust() {
