@@ -144,10 +144,10 @@ a.gob() {
   # English words with elected extensions
   gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4
   # onelistforallshort
-  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error
+  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error --exclude-length $4
   echo "Running onelistforall_all.txt via screen.."
   # onelistforall_all
-  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error
+  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4
 }
 
 a.sqli() {
