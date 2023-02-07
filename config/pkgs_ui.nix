@@ -8,6 +8,7 @@
     i3                                                                                                   # A tiling window manager
     i3status-rust                                                                                        #
     libnotify                                                                                            # A library that sends desktop notifications to a notification daemon
+    lxappearance                                                                                         # Lightweight program for configuring the theme and fonts of gtk applications
     networkmanager_dmenu                                                                                 #
     notify-desktop                                                                                       # Little application that lets you send desktop notifications with one command
     redshift                                                                                             # Screen color temperature manager
