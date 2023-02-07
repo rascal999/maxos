@@ -156,7 +156,7 @@ d.katana() {
 a.cl() {
   echo "Get content length of URL"
   echo
-  if [[ "$#" -ne "4" ]]; then
+  if [[ "$#" -ne "1" ]]; then
     echo "ERROR: Specify:"
     echo "- target site"
     echo
