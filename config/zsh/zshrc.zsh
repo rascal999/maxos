@@ -198,16 +198,36 @@ a.bust() {
     return 1
   fi
 
+  TARGET=`echo $1 | choose -f '//' 1`
+  NOW=`date "+%Y%m%d_%H%M%S"`
+  ASSESSMENT_NAME=${NOW}_${TARGET}
+
+  mkdir $HOME/scans/$ASSESSMENT_NAME
+  echo file://$HOME/scans/$ASSESSMENT_NAME
+  echo
+
+  # httpx
+  echo "### httpx"
+  echo $1 | httpx -silent -status-code -content-length -content-type -jarm -rt -title -tech-detect -ip -web-server -probe -websocket -cname -vhost -http2 -json -tls-grab -pipeline -cdn -hash sha256 | jq > $HOME/scans/$ASSESSMENT_NAME/httpx.txt
+  cat $HOME/scans/$ASSESSMENT_NAME/httpx.txt
+
   # katana crawler
-  d.katana -u $1
+  docker run --rm redgo katana -u $1 > $HOME/scans/$ASSESSMENT_NAME/katana.txt
+  echo "### katana output"
+  cat $HOME/scans/$ASSESSMENT_NAME/katana.txt
 
   # English words with elected extensions
-  gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4
+  echo "### gobuster (english)"
+  gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_english.txt
+
   # onelistforallshort
-  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error --exclude-length $4
+  echo "### gobuster (onelistforallshort)"
+  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforallshort.txt
+
   echo "Running onelistforall_all.txt via screen.."
   # onelistforall_all
-  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4
+  echo "### gobuster (onelistforall_all)"
+  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforall_all.txt
 }
 
 a.sqli() {
