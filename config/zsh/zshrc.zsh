@@ -227,7 +227,7 @@ a.bust() {
   echo "Running onelistforall_all.txt via screen.."
   # onelistforall_all
   echo "### gobuster (onelistforall_all)"
-  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforall_all.txt -k
+  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforall_all.txt -k
 }
 
 a.sqli() {
