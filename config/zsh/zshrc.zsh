@@ -218,16 +218,16 @@ a.bust() {
 
   # English words with elected extensions
   echo "### gobuster (english)"
-  gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_english.txt
+  gobuster dir --url $1 --wordlist /home/user/wordlists/english_words.txt -b $3 --no-error -x $2 --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_english.txt -k
 
   # onelistforallshort
   echo "### gobuster (onelistforallshort)"
-  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforallshort.txt
+  gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforallshort.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforallshort.txt -k
 
   echo "Running onelistforall_all.txt via screen.."
   # onelistforall_all
   echo "### gobuster (onelistforall_all)"
-  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforall_all.txt
+  screen -adm gobuster dir --url $1 --wordlist /home/user/git/maxos/repos/wordlists/OneListForAll/onelistforall_all.txt -b $3 --no-error --exclude-length $4 -o $HOME/scans/$ASSESSMENT_NAME/gobuster_onelistforall_all.txt -k
 }
 
 a.sqli() {
