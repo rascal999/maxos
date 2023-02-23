@@ -2944,16 +2944,23 @@ ds.zammad-kill() {
 
 eval "$(mcfly init zsh)"
 
-tmp_work() {
+ntd() {
   UUID=`uuidgen | choose -f '-' 0`
+  mkdir ${UUID}
+  cd ${UUID}
+  pwd
+}
+
+tmp_work() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
   DATE_DAY=`date +%d`
-  TMP_DIRECTORY="$HOME/work/tmp/${DATE_YEAR}/${DATE_MONTH}/${DATE_DAY}/${UUID}"
+  TMP_DIRECTORY="$HOME/work/tmp/${DATE_YEAR}/${DATE_MONTH}/${DATE_DAY}/"
 
   mkdir -p $TMP_DIRECTORY
   cd $TMP_DIRECTORY
   pwd
+  exa --long --all --header --icons --git
 }
 
 if [[ ! -z "${REMOTEWORK}" ]]; then
