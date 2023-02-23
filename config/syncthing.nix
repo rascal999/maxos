@@ -32,7 +32,6 @@
 
     devices = {
       "blueboy" = {
-        #autoAcceptFolders = true;
         id = "3YBMQYS-46IZSTQ-HLIP3O2-E22P3GJ-OS2PFCY-GTINZAF-PMH6HTN-2GDV4Q3";
         introducer = false;
       };
@@ -41,7 +40,6 @@
         introducer = false;
       };
       "galaxy" = {
-        #autoAcceptFolders = true;
         id = "DPWLINN-X2GRAYG-2IYFOXT-CRWLY3L-BMRDJGT-KE5ELWF-M76VOXR-XFREWQG";
         introducer = false;
       };
@@ -50,7 +48,6 @@
         introducer = true;
       };
       "rig" = {
-        #autoAcceptFolders = true;
         id = "3CETFIS-4P5BTDB-TQRFO54-H6ECZH4-OLHU2LB-DTQFTVA-ZFMPYJH-7FVSRA6";
         introducer = false;
       };
