@@ -2951,6 +2951,10 @@
             "url": "http://localhost:8000/"
           },
           {
+            "name": "Mermaid",
+            "url": "http://localhost:10180/"
+          },
+          {
             "name": "memos",
             "url": "http://localhost:10170/"
           },

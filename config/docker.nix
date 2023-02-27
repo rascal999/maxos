@@ -151,6 +151,11 @@
       volumes = [ "/home/user/Data/.memos/:/var/opt/memos" ];
     };
 
+    mermaid = {
+      image = "ghcr.io/mermaid-js/mermaid-live-editor";
+      ports = [ "127.0.0.1:10180:80" ];
+    };
+
     #graphgpt = {
     #  image = "graphgpt";
     #  ports = [ "127.0.0.1:10160:3000" ];
@@ -184,5 +189,7 @@
   systemd.services.docker-jsoncrack.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-gifcap.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-attack-navigator.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-memos.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-mermaid.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
