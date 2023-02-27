@@ -145,6 +145,12 @@
       ports = [ "127.0.0.1:10120:4200" ];
     };
 
+    memos = {
+      image = "neosmemo/memos";
+      ports = [ "127.0.0.1:10170:5230" ];
+      volumes = [ "/home/user/Data/.memos/:/var/opt/memos" ];
+    };
+
     #graphgpt = {
     #  image = "graphgpt";
     #  ports = [ "127.0.0.1:10160:3000" ];

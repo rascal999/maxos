@@ -2951,6 +2951,10 @@
             "url": "http://localhost:8000/"
           },
           {
+            "name": "memos",
+            "url": "http://localhost:10170/"
+          },
+          {
             "name": "OpenCVE",
             "url": "http://127.0.0.1:10030/cve"
           },
