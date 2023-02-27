@@ -93,6 +93,7 @@ new() {
   echo "### New commands ###"
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
   echo "a.bust                      Crawler and gobuster with sensible wordlists"
+  echo "d.carb                      Terminal web browser (carbonyl)"
   echo "a.cl                        Get content length of URL"
   echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
@@ -113,7 +114,6 @@ new() {
   echo "d.dos                       MHDDoS"
   echo "d.gf                        Wrapper around grep"
   echo "d.katana                    Web crawler"
-  echo "d.hmpaa                     Howmanypeoplearearound (wifi scan)"
   echo "d.msprobe                   Find M$ things for password spraying and enum"
   echo "d.orbitaldump               OrbitalDump - SSH brute forcer"
   echo "d.phash                     psudohash"
@@ -125,32 +125,6 @@ new() {
 
 test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
-}
-
-d.katana() {
-  if [[ "$#" -lt "2" ]]; then
-    echo "ERROR: Must specify at least something like:"
-    echo "$0 -u https://target.com"
-    return 1
-  fi
-  NOW=`date "+%Y%m%d_%H%M%S"`
-  mkdir -p $HOME/scans/katana/$NOW
-
-  echo "Args: $@" > $HOME/scans/katana/$NOW/scan.log
-  echo -n "Started: " >> $HOME/scans/katana/$NOW/scan.log
-  date >> $HOME/scans/katana/$NOW/scan.log
-
-  echo -n "Source IP: " >> $HOME/scans/katana/$NOW/scan.log
-  curl https://ifconfig.me/ >> $HOME/scans/katana/$NOW/scan.log
-  echo >> $HOME/scans/katana/$NOW/scan.log
-  echo >> $HOME/scans/katana/$NOW/scan.log
-  docker run --rm redgo katana $@ >> $HOME/scans/katana/$NOW/scan.log
-
-  echo >> $HOME/scans/katana/$NOW/scan.log
-  echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
-  date >> $HOME/scans/katana/$NOW/scan.log
-
-  cat $HOME/scans/katana/$NOW/scan.log
 }
 
 a.cl() {
@@ -371,6 +345,42 @@ a.vpn() {
 
 bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
+}
+
+d.carb() {
+  URL=https://reddit.com
+
+  if [[ "$#" -eq "1" ]]; then
+    URL=$1
+  fi
+
+  docker run --rm -ti fathyb/carbonyl $URL
+}
+
+d.katana() {
+  if [[ "$#" -lt "2" ]]; then
+    echo "ERROR: Must specify at least something like:"
+    echo "$0 -u https://target.com"
+    return 1
+  fi
+  NOW=`date "+%Y%m%d_%H%M%S"`
+  mkdir -p $HOME/scans/katana/$NOW
+
+  echo "Args: $@" > $HOME/scans/katana/$NOW/scan.log
+  echo -n "Started: " >> $HOME/scans/katana/$NOW/scan.log
+  date >> $HOME/scans/katana/$NOW/scan.log
+
+  echo -n "Source IP: " >> $HOME/scans/katana/$NOW/scan.log
+  curl https://ifconfig.me/ >> $HOME/scans/katana/$NOW/scan.log
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  docker run --rm redgo katana $@ >> $HOME/scans/katana/$NOW/scan.log
+
+  echo >> $HOME/scans/katana/$NOW/scan.log
+  echo -n "Finished: " >> $HOME/scans/katana/$NOW/scan.log
+  date >> $HOME/scans/katana/$NOW/scan.log
+
+  cat $HOME/scans/katana/$NOW/scan.log
 }
 
 d.msprobe() {
