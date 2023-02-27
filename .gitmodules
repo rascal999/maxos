@@ -919,3 +919,6 @@
 [submodule "repos/misc/GraphGPT-docker"]
 	path = repos/misc/GraphGPT-docker
 	url = https://github.com/rascal999/GraphGPT-docker.git
+[submodule "repos/pentest-education/PhoneSploit-Pro"]
+	path = repos/pentest-education/PhoneSploit-Pro
+	url = https://github.com/AzeemIdrisi/PhoneSploit-Pro.git
