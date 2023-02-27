@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "7esoorv3@alefvanoon.anonaddy.me": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/libredirect/addon-4067837-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "@powerthesaurus.org": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/power-thesaurus/addon-697681-latest.xpi",
         "installation_mode": "normal_installed"

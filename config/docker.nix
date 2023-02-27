@@ -156,6 +156,11 @@
       ports = [ "127.0.0.1:10180:80" ];
     };
 
+    libreddit = {
+      image = "libreddit/libreddit";
+      ports = [ "127.0.0.1:10190:8080" ];
+    };
+
     #graphgpt = {
     #  image = "graphgpt";
     #  ports = [ "127.0.0.1:10160:3000" ];
@@ -191,5 +196,6 @@
   systemd.services.docker-attack-navigator.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-memos.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-mermaid.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-libreddit.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
