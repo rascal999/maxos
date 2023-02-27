@@ -264,6 +264,10 @@
                 "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_awesome_chatgpt_prompts.pdf"
               },
               {
+                "name": "Awesome ChatGPT Prompts",
+                "url": "file:///home/user/git/maxos/repos/misc/awesome-chatgpt-prompts/README.md"
+              },
+              {
                 "name": "ChatGPT for CyberSecurity",
                 "url": "file:///home/user/git/maxos/resources/cheatsheets/20230109_chatgpt_for_cybersecurity.pdf"
               },
