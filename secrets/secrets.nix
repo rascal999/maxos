@@ -16,6 +16,7 @@ in
   "api-virustotal.age".publicKeys = hosts;
   "password-ddclient.age".publicKeys = hosts;
   "secret.age".publicKeys = hosts;
+  "token-github.age".publicKeys = hosts;
   "vpn-mullvad.age".publicKeys = hosts;
   "wireguard-env.age".publicKeys = hosts;
   "wireguard-pav.age".publicKeys = hosts;

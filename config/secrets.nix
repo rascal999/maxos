@@ -22,6 +22,9 @@
     api-virustotal = {
       file = ../secrets/api-virustotal.age;
     };
+    token-github = {
+      file = ../secrets/token-github.age;
+    };
     vpn-mullvad = {
       file = ../secrets/vpn-mullvad.age;
     };
@@ -70,6 +73,11 @@
     api-virustotal =
     {
       source = config.age.secrets.api-virustotal.path;
+      mode = "0444";
+    };
+    token-github =
+    {
+      source = config.age.secrets.token-github.path;
       mode = "0444";
     };
     vpn-mullvad =

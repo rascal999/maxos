@@ -356,16 +356,26 @@ d.tho() {
     echo "$0 microsoft"
     return 1
   fi
-  docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=$1
+
+  if [[ -f "/etc/token-github" ]]; then
+    docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=$1 --token=`cat /etc/token-github`
+  else
+    docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=$1
+  fi
 }
 
 d.thr() {
   if [[ "$#" -ne "1" ]]; then
-    echo "ERROR: Must specify org to scan:"
-    echo "$0 microsoft"
+    echo "ERROR: Must specify repo to scan:"
+    echo "$0 https://github.com/rascal999/maxos"
     return 1
   fi
-  docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo=$1
+
+  if [[ -f "/etc/token-github" ]]; then
+    docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo=$1 --token=`cat /etc/token-github`
+  else
+    docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo=$1
+  fi
 }
 
 d.carb() {
