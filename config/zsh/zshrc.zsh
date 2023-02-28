@@ -97,7 +97,6 @@ new() {
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
   echo "a.bust                      Crawler and gobuster with sensible wordlists"
   echo "d.carb                      Terminal web browser (carbonyl)"
-  echo "a.cl                        Get content length of URL"
   echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
@@ -108,7 +107,6 @@ new() {
   echo "a.netscanparse              Format netscan results for Logseq"
   echo "a.sqli                      Find SQLi issues against target"
   echo "a.xss                       Find XSS issues against target"
-  echo "aria2c                      wget alternative"
   echo "arsenal                     Generate commands for security and network tools"
   echo "bwcalc                      Bandwidth transfer time estimator"
   echo "d.autorecon                 Parallel network scans (good for CTF)"
@@ -122,6 +120,8 @@ new() {
   echo "d.phash                     psudohash"
   echo "d.rg                        redgo"
   echo "d.sshere                    SecretScanner for container scanning"
+  echo "d.tho                       Trufflehog against org"
+  echo "d.thr                       Trufflehog against repo"
   echo "d.wbu                       waybackurls"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
 }
@@ -348,6 +348,24 @@ a.vpn() {
 
 bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
+}
+
+d.tho() {
+  if [[ "$#" -ne "1" ]]; then
+    echo "ERROR: Must specify org to scan:"
+    echo "$0 microsoft"
+    return 1
+  fi
+  docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=$1
+}
+
+d.thr() {
+  if [[ "$#" -ne "1" ]]; then
+    echo "ERROR: Must specify org to scan:"
+    echo "$0 microsoft"
+    return 1
+  fi
+  docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo=$1
 }
 
 d.carb() {
