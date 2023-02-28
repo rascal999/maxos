@@ -356,7 +356,7 @@ d.tho() {
     echo "$0 microsoft"
     return 1
   fi
-  docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=$1
+  docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --org=$1
 }
 
 d.thr() {
@@ -365,7 +365,7 @@ d.thr() {
     echo "$0 microsoft"
     return 1
   fi
-  docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo=$1
+  docker run -t --rm -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --repo=$1
 }
 
 d.carb() {
