@@ -280,6 +280,7 @@
     pdfgrep                                                                                              # Commandline utility to search text in PDF files
     pdf-parser                                                                                           # Parse a PDF document
     pev                                                                                                  # A full-featured, open source, multiplatform command line toolkit to work with PE (Portable Executables) binaries
+    php                                                                                                  # An HTML-embedded scripting language
     phrasendrescher                                                                                      # A modular and multi processing pass phrase cracking tool
     pinentry                                                                                             # GnuPG’s interface to passphrase input
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
