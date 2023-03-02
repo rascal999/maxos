@@ -8,6 +8,7 @@ let
     docker
     django
     flask
+    openai
     pip
     pytest
     requests
