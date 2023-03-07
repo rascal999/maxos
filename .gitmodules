@@ -925,3 +925,6 @@
 [submodule "repos/misc/awesome-chatgpt-prompts"]
 	path = repos/misc/awesome-chatgpt-prompts
 	url = https://github.com/f/awesome-chatgpt-prompts.git
+[submodule "repos/pentest-tools/htshells"]
+	path = repos/pentest-tools/htshells
+	url = https://github.com/wireghoul/htshells.git

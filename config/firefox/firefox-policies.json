@@ -2177,6 +2177,10 @@
                 "url": "file:///home/user/git/maxos/repos/pentest-education/awesome-web-security/README.md"
               },
               {
+                "name": "htshells",
+                "url": "file:///home/user/git/maxos/repos/pentest-tools/htshells/README.md"
+              },
+              {
                 "name": "OSCP tips and tricks",
                 "url": "file:///home/user/git/maxos/resources/OSCP tips and tricks 20220908.html"
               },
