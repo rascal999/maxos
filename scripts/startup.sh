@@ -1,3 +1,17 @@
+# Wait a little
+sleep 3
+
+# Update Firefox screenshots and tmp directory bookmark to today
+rm /home/user/screenshots_today
+rm /home/user/tmp_today
+
+D_YEAR=`date "+%Y"`
+D_MONTH=`date "+%m"`
+D_DAY=`date "+%d"`
+
+ln -sf /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/screenshots_today
+ln -sf /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/tmp_today
+
 # Clone maxos
 /run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/maxos || /run/current-system/sw/bin/git -C ${HOME}/git/maxos pull
 

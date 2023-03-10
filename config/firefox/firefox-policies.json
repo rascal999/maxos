@@ -3257,6 +3257,16 @@
 
     "Bookmarks": [
       {
+        "Title": "Screenshots (today)",
+        "URL": "file:///home/user/screenshots_today",
+        "Placement": "toolbar"
+      },
+      {
+        "Title": "Tmp directory (today)",
+        "URL": "file:///home/user/tmp_today",
+        "Placement": "toolbar"
+      },
+      {
         "Title": "Buffer",
         "URL": "data:text/html;base64,PGh0bWwgY29udGVudGVkaXRhYmxlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPgo=",
         "Placement": "toolbar"
