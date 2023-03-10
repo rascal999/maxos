@@ -31,9 +31,16 @@
       ports = [ "127.0.0.1:8060:5001" ];
     };
 
-    filestash = {
+    # Today's screenshots
+    filestash_screenshots = {
       image = "machines/filestash";
-      ports = [ "127.0.0.1:9040:8334" ];
+      ports = [ "172.20.0.1:9040:8334" ];
+    };
+
+    # Today's tmp directory
+    filestash_tmp = {
+      image = "machines/filestash";
+      ports = [ "172.21.0.1:9040:8334" ];
     };
 
     houdini = {
@@ -180,7 +187,8 @@
   systemd.services.docker-cyberchef.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-mobsf.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-spiderfoot.serviceConfig.TimeoutStopSec = lib.mkForce 15;
-  systemd.services.docker-filestash.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-filestash_screenshots.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-filestash_tmp.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-houdini.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-searxng.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-dashy.serviceConfig.TimeoutStopSec = lib.mkForce 15;

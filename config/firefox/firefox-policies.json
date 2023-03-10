@@ -3258,12 +3258,12 @@
     "Bookmarks": [
       {
         "Title": "Screenshots (today)",
-        "URL": "file:///home/user/screenshots_today",
+        "URL": "http://172.20.0.1:9040/",
         "Placement": "toolbar"
       },
       {
         "Title": "Tmp directory (today)",
-        "URL": "file:///home/user/tmp_today",
+        "URL": "http://172.21.0.1:9040/",
         "Placement": "toolbar"
       },
       {
