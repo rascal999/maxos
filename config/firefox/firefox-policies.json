@@ -3257,13 +3257,23 @@
 
     "Bookmarks": [
       {
-        "Title": "Screenshots (today)",
+        "Title": "fstash screenshots",
         "URL": "http://172.20.0.1:9040/",
         "Placement": "toolbar"
       },
       {
-        "Title": "Tmp directory (today)",
+        "Title": "fs screenshots",
+        "URL": "file:///home/user/screenshots_today",
+        "Placement": "toolbar"
+      },
+      {
+        "Title": "fstash tmp",
         "URL": "http://172.21.0.1:9040/",
+        "Placement": "toolbar"
+      },
+      {
+        "Title": "fs tmp",
+        "URL": "file:///home/user/tmp_today",
         "Placement": "toolbar"
       },
       {
