@@ -367,6 +367,7 @@
     tor-browser-bundle-bin                                                                               # Tor Browser Bundle built by torproject.org
     tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
     traitor                                                                                              # Automatic Linux privilege escalation
+    trilium-desktop                                                                                      # Note taking application with focus on building large personal knowledge bases
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI
     truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes
     trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
