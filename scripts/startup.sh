@@ -9,6 +9,9 @@ D_YEAR=`date "+%Y"`
 D_MONTH=`date "+%m"`
 D_DAY=`date "+%d"`
 
+mkdir -p /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/
+mkdir -p /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/
+
 ln -sf /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/screenshots_today
 ln -sf /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/tmp_today
 
