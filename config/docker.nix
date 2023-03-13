@@ -35,12 +35,18 @@
     filestash_screenshots = {
       image = "machines/filestash";
       ports = [ "172.20.0.1:9040:8334" ];
+      volumes = [
+                  "filestash-screenshots:/app/data/state:rw"
+                ];
     };
 
     # Today's tmp directory
     filestash_tmp = {
       image = "machines/filestash";
       ports = [ "172.21.0.1:9040:8334" ];
+      volumes = [
+                  "filestash-tmp:/app/data/state:rw"
+                ];
     };
 
     houdini = {
