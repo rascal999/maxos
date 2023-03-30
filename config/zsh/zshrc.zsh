@@ -103,6 +103,7 @@ new() {
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
   echo "a.gsa                       git submodule add --force \$@"
+  echo "a.iam                       Enumerate perms for AWS keys (enumerate-iam)"
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
   echo "a.netscanparse              Format netscan results for Logseq"
@@ -114,7 +115,6 @@ new() {
   echo "d.bb                        OpenBB finance terminal"
   echo "d.cloudfox                  Cloud scanner"
   echo "d.dos                       MHDDoS"
-  echo "d.gf                        Wrapper around grep"
   echo "d.katana                    Web crawler"
   echo "d.msprobe                   Find M$ things for password spraying and enum"
   echo "d.orbitaldump               OrbitalDump - SSH brute forcer"
@@ -228,6 +228,16 @@ a.sqli() {
   sqlmap -v 0 -m -
 
   screen -adm $HOME/git/maxos/scripts/telegram_notify.sh -a -q -m "SQLi scan finished for $1"
+}
+
+a.iam() {
+  if [[ "$#" -lt "2" ]]; then
+    echo "ERROR: Specify AWS key and secret"
+    echo "$0 <aws-key> <aws-secret>"
+    return 1
+  fi
+
+  docker run --rm redgo python3 enumerate-iam/enumerate-iam.py --access-key $1 --secret-key $2
 }
 
 a.gsa() {
