@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "support@lastpass.com": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/lastpass-password-manager/addon-4083286-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{5167bfe9-226b-4af9-acf9-8b61f5aae627}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ghunt-companion/addon-4038923-latest.xpi",
         "installation_mode": "normal_installed"
