@@ -31,9 +31,6 @@
         {
           command = "exec ${pkgs.logseq}/bin/logseq";
         }
-        {
-          command = "exec ${pkgs.teams}/bin/teams";
-        }
       ];
     };
   };

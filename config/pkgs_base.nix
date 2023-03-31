@@ -358,7 +358,7 @@
     tcpflow                                                                                              # TCP stream extractor
     tcpreplay                                                                                            # A suite of utilities for editing and replaying network traffic
     tdesktop                                                                                             # Telegram Desktop messaging app
-    teams                                                                                                # Microsoft Teams
+    #teams                                                                                                # Microsoft Teams
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
     teler                                                                                                # Real-time HTTP Intrusion Detection
     testssl                                                                                              # CLI tool to check a server's TLS/SSL capabilities
