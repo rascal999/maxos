@@ -12,12 +12,10 @@ if [[ `hostname` == "rig" ]]; then
 
     sleep 4
 
-    i3-msg "workspace yt, move workspace to output DP-0"
-    i3-msg "workspace mst, move workspace to output HDMI-0"
+    i3-msg "workspace ytm, move workspace to output DP-0"
+    i3-msg "workspace vid, move workspace to output HDMI-0"
     i3-msg "workspace 2:ls, move workspace to output USB-C-0"
     i3-msg "workspace 1, move workspace to output USB-C-0"
-    i3-msg "workspace 3:rdp, move workspace to output USB-C-0"
-    i3-msg "workspace 5:rep, move workspace to output USB-C-0"
     i3-msg "workspace vm, move workspace to output USB-C-0"
 
     #for WORKSPACE_FILE in "$@" ; do

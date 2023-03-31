@@ -31,6 +31,9 @@
         {
           command = "exec ${pkgs.logseq}/bin/logseq";
         }
+        {
+          command = "exec ${pkgs.vlc}/bin/vlc http://192.168.0.193:8080/video";
+        }
       ];
     };
   };

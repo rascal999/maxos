@@ -9,15 +9,17 @@ in {
     extraConfig = ''
       default_border pixel 1
       #for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
+      for_window [class=".*firefox.*"] move to workspace 1
       #for_window [class=".*Gimp.*"] move to workspace "img"
       for_window [class=".*KeePassXC.*"] move to workspace "pw"
       for_window [class=".*Logseq.*"] move to workspace "2:ls"
       for_window [class=".*Remmina.*"] move to workspace rdp
       for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
       for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
+      for_window [class=".*vlc.*"] move to workspace "ytm"
+      for_window [title=".*WhatsApp*"] move to workspace "ytm"
       for_window [class=".*Wireshark.*"] move to workspace "fin"
-      #for_window [title=".*YouTube . Mozilla Firefox.*"] move to workspace "yt"
-      for_window [title=".*YouTube Music.*"] move to workspace "ytm"
+      #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
       no_focus [class="org.remmina.Remmina"]
       focus_on_window_activation none
     '';
