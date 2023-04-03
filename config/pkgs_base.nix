@@ -158,6 +158,7 @@
     #gimp                                                                                                 # The GNU Image Manipulation Program
     git-crypt                                                                                            # Transparent file encryption in git
     gitleaks                                                                                             # Scan git repos (or files) for secrets
+    glab                                                                                                 # An open-source GitLab command line tool
     glances                                                                                              # Cross-platform curses-based monitoring tool
     glib                                                                                                 # C library of programming buildings blocks
     glibc                                                                                                # The GNU C Library
@@ -315,6 +316,7 @@
     safety-cli                                                                                           #
     sddm                                                                                                 # QML based X11 display manager
     secretscanner                                                                                        # Tool to find secrets and passwords in container images and file systems
+    semgrep                                                                                              # Lightweight static analysis for many languages - cli
     siege                                                                                                # HTTP load tester
     signal-desktop                                                                                       # Private, simple, and secure messenger
     simg2img                                                                                             # Tool to convert Android sparse images to raw images
