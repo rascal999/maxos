@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  mod = "Mod1";
+  mod = "Mod3";
 in {
   xsession.windowManager.i3 = {
     enable = true;

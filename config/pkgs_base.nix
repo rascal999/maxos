@@ -409,6 +409,7 @@
     #wuzz                                                                                                 # Interactive cli tool for HTTP inspection
     x2goclient                                                                                           # Graphical NoMachine NX3 remote desktop client
     xcalib                                                                                               # A tiny monitor calibration loader for X and MS-Windows
+    xcape                                                                                                # Utility to configure modifier keys to act as other keys
     xidel                                                                                                # Command line tool to download and extract data from HTML/XML pages as well as JSON APIs
     xorex                                                                                                # XOR Key Extractor
     xortool                                                                                              # Tool to analyze multi-byte XOR cipher

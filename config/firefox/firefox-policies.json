@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "contact@example.com": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/smartreader/addon-3999045-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{3c078156-979c-498b-8990-85f7987dd929}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sidebery/addon-3994928-latest.xpi",
         "installation_mode": "normal_installed"
