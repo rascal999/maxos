@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{3c078156-979c-498b-8990-85f7987dd929}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sidebery/addon-3994928-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "{25e741fe-a00f-4568-9197-f5a591f1b56d}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/quickjira/addon-1667861-latest.xpi",
         "installation_mode": "normal_installed"
@@ -135,10 +139,6 @@
       },
       "vimium-c@gdh1995.cn": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/addon-14732745-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "sidebarTabs@asamuzak.jp": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sidebartabs/addon-4777581-latest.xpi",
         "installation_mode": "normal_installed"
       }
     },
