@@ -390,6 +390,7 @@
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
     vulnix                                                                                               # NixOS vulnerability scanner
     wad                                                                                                  # Tool for detecting technologies used by web applications
+    warpd                                                                                                # A modal keyboard driven interface for mouse manipulation
     wavemon                                                                                              # Ncurses-based monitoring application for wireless network devices
     waybar                                                                                               # Highly customizable Wayland bar for Sway and Wlroots based compositors
     wayvnc                                                                                               # A VNC server for wlroots based Wayland compositors
