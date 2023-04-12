@@ -25,10 +25,10 @@
     ".config/nginx/mime.types".source = ./resources/nginx/mime.types;
     ".mime.types".source = ./config/firefox/mime.types;
     ".privatebin/conf/conf.php".source = ./config/privatebin/conf.php;
-    ".profile".source = ./config/profile;
+    #".profile".source = ./config/profile;
     ".startup.sh".source = ./scripts/startup.sh;
     ".vimrc".source = ./config/vimrc.nix;
-    ".Xmodmap".source = ./config/Xmodmap;
+    #".Xmodmap".source = ./config/Xmodmap;
     #".config/twmn/twmn.conf".source = ./config/twmn.conf;
   };
 
