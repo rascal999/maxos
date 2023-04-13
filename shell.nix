@@ -1,13 +1,20 @@
-{ pkgs ? (import <nixpkgs> {}).pkgs }:
+{ pkgs ? import <nixpkgs> {} }:
 with pkgs;
-mkShell {
-  buildInputs = [
-    python3Packages.virtualenv # run virtualenv .
+mkShell rec {
+  name = "sd-env";
+  LD_LIBRARY_PATH = lib.makeLibraryPath [
+    gcc-unwrapped
+    zlib
+    libglvnd
+    glib
+    linuxPackages.nvidia_x11
   ];
-  shellHook = ''
-    # fixes libstdc++ issues and libgl.so issues
-    LD_LIBRARY_PATH=${stdenv.cc.cc.lib}/lib/:/run/opengl-driver/lib/
-    # fixes xcb issues :
-    QT_PLUGIN_PATH=${qt5.qtbase}/${qt5.qtbase.qtPluginPrefix}
-  '';
+  buildInputs = [
+    python310
+    python310Packages.pip
+    python3Packages.virtualenv # run virtualenv .
+    git
+  ];
+  # fixes xcb issues :
+  QT_PLUGIN_PATH=${qt5.qtbase}/${qt5.qtbase.qtPluginPrefix}
 }
