@@ -88,6 +88,7 @@
     croc                                                                                                 # Easily and securely send things from one computer to another
     crowbar                                                                                              # A brute forcing tool that can be used during penetration tests
     crunch                                                                                               # Wordlist generator
+    cudatoolkit                                                                                          # A compiler for NVIDIA GPUs, math libraries, and tools
     cups-brother-hl3140cw                                                                                #
     dalfox                                                                                               # Tool for analysing parameter and XSS scanning
     dbeaver                                                                                              # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
