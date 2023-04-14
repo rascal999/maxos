@@ -20,9 +20,6 @@
           command = "exec ${pkgs.firefox}/bin/firefox";
         }
         {
-          command = "exec ${pkgs.remmina}/bin/remmina";
-        }
-        {
           command = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         }
         {
