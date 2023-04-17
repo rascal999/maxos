@@ -11,39 +11,27 @@ click_temp = 1900
 
 [[block]]
 block = "external_ip"
-format = "{country_flag} {asn} '{org}' {ip}"
-with_network_manager = false
-error_interval = 300
+format = "$country_flag $asn '$org' $ip"
+with_network_manager = true
 interval = 300
 
 [[block]]
 block = "net"
 device = "enp.*"
+format = " $icon {$signal_strength $ssid $frequency|} $ip "
 [[block.click]]
 button = "left"
 cmd = "/run/current-system/sw/bin/urxvt -e nmtui"
 
-#[[block]]
-#block = "custom"
-#command = "uname -r | sed 's/-arch1.*//g'"
-#interval = 600
-
-#[[block]]
-#block = "docker"
-#interval = 10
-#format = "{running}/{total}"
-
 [[block]]
 block = "load"
+format = "$icon $1m.eng(w:4) $5m.eng(w:4) $15m.eng(w:4)"
 interval = 1
-format = "{1m} {5m} {15m}"
-
-#[[block]]
-#block = "cpu"
-#interval = 1
 
 [[block]]
 block = "memory"
+format = " $icon $mem_total_used_percents.eng(w:2) "
+format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
 
 [[block]]
 block = "disk_space"
@@ -54,29 +42,16 @@ interval = 20
 [[block]]
 block = "battery"
 interval = 10
-format = "{percentage} {time}"
-
-#[[block]]
-#block = "time"
-#interval = 30
-#format = "%m/%d %R"
-
-#[[block]]
-#block = "sound"
-#format = "{volume}"
-#headphones_indicator = true
-#[block.mappings]
-#"alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo" = "🔈"
-#"alsa_output.pci-0000_00_1b.0.analog-stereo" = "🎧"
-
-[[block]]
-block = "sound"
-[[block.click]]
-button = "left"
-cmd = "pavucontrol"
+format = "$percentage $time"
+missing_format = ""
 
 [[block]]
 block = "time"
-interval = 5
-format = " $timestamp.datetime(f:'%a %d/%m %R') "
+interval = 20 
+format = " $timestamp.datetime(f:'%d/%m %R') "
 
+[[block]]
+block = "sound"
+[block.mappings]
+"alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo" = "🔈"
+"alsa_output.pci-0000_00_1b.0.analog-stereo" = "🎧"

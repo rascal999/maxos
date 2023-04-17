@@ -109,7 +109,7 @@ in {
         hideEdgeBorders = "both";
       };
 
-      workspaceAutoBackAndForth = true;
+      #workspaceAutoBackAndForth = true;
 
       bars = [
         {
