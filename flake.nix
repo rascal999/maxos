@@ -36,7 +36,7 @@
     ];
 
     configSettings = [
-      agenix.nixosModule
+      agenix.nixosModules
       ./config/nur.nix
       ./config/pkgs_minimal.nix
       ./config/shared.nix
