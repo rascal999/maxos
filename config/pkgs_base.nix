@@ -5,7 +5,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     abootimg                                                                                             # Manipulate Android Boot Images
-    adreaper                                                                                             # Enumeration tool for Windows Active Directories
+    #adreaper                                                                                             # Enumeration tool for Windows Active Directories
     afflib                                                                                               # Advanced forensic format library
     afl                                                                                                  # Powerful fuzzer via genetic algorithms and instrumentation
     aflplusplus                                                                                          #
@@ -19,7 +19,7 @@
     anevicon                                                                                             # UDP-based load generator
     apkeep                                                                                               # A command-line tool for downloading APK files from various sources
     apkleaks                                                                                             # Scanning APK file for URIs, endpoints and secrets
-    apktool                                                                                              # A tool for reverse engineering Android apk files
+    #apktool                                                                                              # A tool for reverse engineering Android apk files
     appimage-run                                                                                         #
     aria                                                                                                 #
     arping                                                                                               # Broadcasts a who-has ARP packet on the network and prints answers
@@ -50,7 +50,7 @@
     burpsuite                                                                                            # An integrated platform for performing security testing of web applications
     cabextract                                                                                           # Free Software for extracting Microsoft cabinet files
     calibre                                                                                              # Comprehensive e-book software
-    cameradar                                                                                            # RTSP stream access tool
+    #cameradar                                                                                            # RTSP stream access tool
     cantoolz                                                                                             # Black-box CAN network analysis framework
     cardpeek                                                                                             # A tool to read the contents of ISO7816 smart cards
     cargo-audit                                                                                          # Audit Cargo.lock files for crates with security vulnerabilities
@@ -119,7 +119,7 @@
     driftnet                                                                                             # Watches network traffic, and picks out and displays JPEG and GIF images for display
     drill                                                                                                # HTTP load testing application inspired by Ansible syntax
     dsniff                                                                                               # collection of tools for network auditing and penetration testing
-    eclipses.eclipse-java                                                                                # Eclipse IDE for Java Developers
+    #eclipses.eclipse-java                                                                                # Eclipse IDE for Java Developers
     electrum                                                                                             # A lightweight Bitcoin wallet
     enum4linux                                                                                           # A tool for enumerating information from Windows and Samba systems
     enum4linux-ng                                                                                        # Windows/Samba enumeration tool
@@ -198,7 +198,7 @@
     ike-scan                                                                                             # Tool to discover, fingerprint and test IPsec VPN servers
     imagemagick                                                                                          #
     inkscape                                                                                             # Vector graphics editor
-    inql                                                                                                 # Security testing tool for GraphQL
+    #inql                                                                                                 # Security testing tool for GraphQL
     iodine                                                                                               # NetworkManager's iodine plugin
     ipscan                                                                                               # Fast and friendly network scanner
     iw                                                                                                   # Tool to use nl80211
@@ -325,7 +325,7 @@
     sipsak                                                                                               # SIP Swiss army knife
     sipvicious                                                                                           # Set of tools to audit SIP based VoIP systems
     sish                                                                                                 # HTTP(S)/WS(S)/TCP Tunnels to localhost
-    skjold                                                                                               # Tool to Python dependencies against security advisory databases
+    #skjold                                                                                               # Tool to Python dependencies against security advisory databases
     slack                                                                                                # Desktop client for Slack
     sleuthkit                                                                                            # A forensic/data recovery tool
     slowlorust                                                                                           # Lightweight slowloris (HTTP DoS) tool
@@ -343,7 +343,7 @@
     ssdeep                                                                                               # A program for calculating fuzzy hashes
     ssh-audit                                                                                            # Tool for ssh server auditing
     sshchecker                                                                                           # Dedicated SSH brute-forcing tool
-    ssh-mitm                                                                                             # Tool for SSH security audits
+    #ssh-mitm                                                                                             # Tool for SSH security audits
     sshping                                                                                              # Measure character-echo latency and bandwidth for an interactive ssh session
     ssldump                                                                                              # An SSLv3/TLS network protocol analyzer
     sslsplit                                                                                             # Transparent SSL/TLS interception

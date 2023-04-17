@@ -16,7 +16,7 @@ let
     selenium
     setuptools
     torch
-    wordcloud
+    #wordcloud
     xmltodict
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
