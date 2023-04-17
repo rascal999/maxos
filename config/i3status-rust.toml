@@ -1,5 +1,7 @@
+[theme]
 theme = "solarized-dark"
-icons = "awesome"
+[icons]
+icons = "awesome6"
 
 [[block]]
 block = "hueshift"
@@ -15,11 +17,11 @@ error_interval = 300
 interval = 300
 
 [[block]]
-block = "networkmanager"
-on_click = "/run/current-system/sw/bin/urxvt -e nmtui"
-interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker.*"]
-interface_name_include = []
-ap_format = "{ssid^5} {strength}"
+block = "net"
+device = "enp.*"
+[[block.click]]
+button = "left"
+cmd = "/run/current-system/sw/bin/urxvt -e nmtui"
 
 #[[block]]
 #block = "custom"
@@ -42,33 +44,39 @@ format = "{1m} {5m} {15m}"
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_total_used_percents}"
-format_swap = "{swap_used_percents}"
 
 [[block]]
 block = "disk_space"
 path = "/"
-alias = "/"
 info_type = "available"
-unit = "GB"
 interval = 20
 
 [[block]]
 block = "battery"
 interval = 10
 format = "{percentage} {time}"
-hide_missing = true
 
-[[block]]
-block = "time"
-interval = 30
-format = "%m/%d %R"
+#[[block]]
+#block = "time"
+#interval = 30
+#format = "%m/%d %R"
+
+#[[block]]
+#block = "sound"
+#format = "{volume}"
+#headphones_indicator = true
+#[block.mappings]
+#"alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo" = "🔈"
+#"alsa_output.pci-0000_00_1b.0.analog-stereo" = "🎧"
 
 [[block]]
 block = "sound"
-format = "{volume}"
-headphones_indicator = true
-[block.mappings]
-"alsa_output.usb-Harman_Multimedia_JBL_Pebbles_1.0.0-00.analog-stereo" = "🔈"
-"alsa_output.pci-0000_00_1b.0.analog-stereo" = "🎧"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %d/%m %R') "
+
