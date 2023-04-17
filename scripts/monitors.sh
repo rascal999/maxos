@@ -4,15 +4,15 @@ if [[ `hostname` == "rig" ]]; then
     sleep 3
 
     # 0
-    /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --left-of DP-0
+    /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --left-of DP-4
     # 1
-    /run/current-system/sw/bin/xrandr --output DP-0 --auto --right-of HDMI-0
+    /run/current-system/sw/bin/xrandr --output DP-4 --auto --right-of HDMI-0
     # 2
-    /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --right-of DP-0
+    /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --right-of DP-4
 
     sleep 4
 
-    i3-msg "workspace ytm, move workspace to output DP-0"
+    i3-msg "workspace ytm, move workspace to output DP-4"
     i3-msg "workspace vid, move workspace to output HDMI-0"
     i3-msg "workspace 2:ls, move workspace to output USB-C-0"
     i3-msg "workspace 1, move workspace to output USB-C-0"
