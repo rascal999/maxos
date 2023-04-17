@@ -17,6 +17,7 @@ in {
       for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
       for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
       for_window [class=".*vlc.*"] move to workspace "ytm"
+      for_window [class=".*Chromium.*"] move to workspace "chr"
       #for_window [title=".*WhatsApp*"] move to workspace "ytm"
       for_window [class=".*Wireshark.*"] move to workspace "fin"
       #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
