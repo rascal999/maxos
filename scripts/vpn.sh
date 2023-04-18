@@ -56,9 +56,9 @@ if [[ "$arg_start" == "1" ]]; then
   fi
 
   if [[ "$arg_location" == "empty" ]]; then
-    VPN_PROFILE=`find $HOME/vpn/ -type f -name "mullvad-*.conf" | sort -R | tail -1`
+    VPN_PROFILE=`find $HOME/vpn/ -type f -name "*.conf" | sort -R | tail -1`
   else
-    VPN_PROFILE=`find $HOME/vpn/ -type f -name "mullvad-*${arg_location}*.conf" | sort -R | tail -1`
+    VPN_PROFILE=`find $HOME/vpn/ -type f -name "${arg_location}*.conf" | sort -R | tail -1`
   fi
 
   sudo nmcli connection import type wireguard file $VPN_PROFILE
@@ -78,5 +78,5 @@ fi
 if [[ "$arg_list" == "1" ]]; then
   echo "Profiles by region:"
   echo
-  find $HOME/vpn/ -type f -name "mullvad-*.conf" | choose -f '-' 1 | choose -c 0:1 | sort | uniq -c | sort -h
+  find $HOME/vpn/ -type f -name "*.conf" | choose -f '/' 3 | choose -c 0:1 | sort | uniq -c | sort -h
 fi

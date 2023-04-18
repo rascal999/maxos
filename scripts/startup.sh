@@ -55,5 +55,5 @@ fi
 
 echo -n "Placing VPN profiles.."
 rm -rf ${HOME}/vpn || true
-/run/current-system/sw/bin/unzip /etc/vpn-mullvad -d ${HOME}/vpn || true
+/run/current-system/sw/bin/unzip -q /etc/vpn-mullvad -d ${HOME}/vpn || true
 echo "Done"
