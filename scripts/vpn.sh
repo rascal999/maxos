@@ -65,7 +65,7 @@ if [[ "$arg_start" == "1" ]]; then
 fi
 
 if [[ "$arg_kill" == "1" ]]; then
-  MULLVAD_PROFILE=`sudo nmcli connection show | grep mullvad | choose 0`
+  MULLVAD_PROFILE=`sudo nmcli connection show | grep -E "wg|wireguard" | choose 0`
 
   if [[ "$MULLVAD_PROFILE" != "" ]]; then
     sudo nmcli connection delete $MULLVAD_PROFILE
