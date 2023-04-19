@@ -13,7 +13,6 @@
   users.users.user = {
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@rig"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM4iIZbKKE6NyjbyNPqsbqVoyYY/dfDg/CGbq61sChVu user@rog"
     ];
   };
 

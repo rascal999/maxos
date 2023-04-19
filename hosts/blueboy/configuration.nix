@@ -21,11 +21,21 @@
   services.openssh.enable = true;
   services.openssh.settings.PermitRootLogin = "yes";
 
+  # SSH setup for LUKS
+  boot.initrd.network.enable = true;
+  boot.initrd.network.ssh = {
+    enable = true;
+    port = 22;
+    authorizedKeys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@rig"
+    ];
+    hostKeys = [ "/etc/secrets/initrd/ssh_host_rsa_key" "/etc/secrets/initrd/ssh_host_ed25519_key" ];
+  };
+
   # Authorised keys
   users.users.user = {
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@rig"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM4iIZbKKE6NyjbyNPqsbqVoyYY/dfDg/CGbq61sChVu user@rog"
     ];
   };
 
