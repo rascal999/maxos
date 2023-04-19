@@ -31,7 +31,7 @@
     authorizedKeys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@rig"
     ];
-    hostKeys = [ "/boot/ssh_host_key" "/boot/ssh_host_key" ];
+    hostKeys = [ "/etc/secrets/initrd/ssh_host_rsa_key" ];
   };
 
   # Authorised keys
