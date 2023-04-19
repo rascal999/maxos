@@ -22,6 +22,8 @@
   services.openssh.settings.PermitRootLogin = "yes";
 
   # SSH setup for LUKS
+  boot.initrd.availableKernelModules = [ "e1000e" ];
+
   boot.initrd.network.enable = true;
   boot.initrd.network.ssh = {
     enable = true;
