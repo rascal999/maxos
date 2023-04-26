@@ -2829,6 +2829,10 @@
                 "url": "http://localhost:9070/"
               },
               {
+                "name": "Magnets (torrent tool)",
+                "url": "https://madeby.lynx.pink/magnets/"
+              },
+              {
                 "name": "Trilium",
                 "url": "http://localhost:9020/"
               },

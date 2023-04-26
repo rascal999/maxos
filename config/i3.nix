@@ -45,7 +45,7 @@ in {
         "${mod}+Shift+p" = "restart";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
-        "${mod}+Shift+t" = "exec ${pkgs.teams}/bin/teams";
+        "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";

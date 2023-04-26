@@ -291,6 +291,7 @@
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
     pwntools                                                                                             # CTF framework and exploit development library
+    qbittorrent                                                                                          # Featureful free software BitTorrent client
     qpaeq                                                                                                # An equalizer interface for pulseaudio's equalizer sinks
     radamsa                                                                                              # A general purpose fuzzer
     radare2                                                                                              # unix-like reverse engineering framework and commandline tools
