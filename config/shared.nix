@@ -22,6 +22,7 @@
     ];
 
     initrd.availableKernelModules = lib.optional config.boot.initrd.network.enable "virtio-pci";
+
     initrd.network = {
       enable = true;
     };

@@ -48,7 +48,7 @@
         introducer = true;
       };
       "rig" = {
-        id = "3CETFIS-4P5BTDB-TQRFO54-H6ECZH4-OLHU2LB-DTQFTVA-ZFMPYJH-7FVSRA6";
+        id = "SNF65KI-OYAEUQI-ORP7UGO-DC5YB24-4OVTHXG-V3VHIXR-GJEVTCZ-LFEFHQD";
         introducer = false;
       };
       "GM1920" = {
