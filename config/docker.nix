@@ -74,21 +74,21 @@
     #  volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
     #};
 
-    #grafana = {
-    #  environment = {
-    #                  GF_DEFAULT_INSTANCE_NAME = "grafana.home";
-    #                  GF_INSTALL_PLUGINS = "grafana-strava-datasource";
-    #                  GF_STRAVA_DS_DATA_PATH = "/var/lib/grafana/strava";
-    #                };
-    #  image = "grafana/grafana-oss";
-    #  ports = [ "127.0.0.1:10060:3000" ];
-    #  volumes = [
-    #              "grafana-data:/var/lib/grafana"
-    #              "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
-    #              "/home/user/git/maxos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
-    #              "/home/user/git/maxos/resources/grafana/dashboards:/mnt/dashboards"
-    #            ];
-    #};
+    grafana = {
+      environment = {
+                      GF_DEFAULT_INSTANCE_NAME = "grafana.home";
+                      GF_INSTALL_PLUGINS = "grafana-strava-datasource";
+                      GF_STRAVA_DS_DATA_PATH = "/var/lib/grafana/strava";
+                    };
+      image = "grafana/grafana-oss";
+      ports = [ "127.0.0.1:10060:3000" ];
+      volumes = [
+                  "grafana-data:/var/lib/grafana"
+                  "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
+                  "/home/user/git/maxos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
+                  "/home/user/git/maxos/resources/grafana/dashboards:/mnt/dashboards"
+                ];
+    };
 
     gtfobins = {
       image = "djangobyjeffrey/gtfobins";
@@ -124,16 +124,16 @@
                 ];
     };
 
-    #kiwix = {
-    #  cmd = [
-    #          "cheatography.com_en_all_2021-09.zim"
-    #          "gutenberg_en_all_2022-05.zim"
-    #          "wikipedia_en_all_nopic_2022-01.zim"
-    #        ];
-    #  image = "kiwix/kiwix-serve";
-    #  ports = [ "127.0.0.1:9060:8080" ];
-    #  volumes = [ "/home/user/.local/share/kiwix:/data" ];
-    #};
+    kiwix = {
+      cmd = [
+              "cheatography.com_en_all_2021-09.zim"
+              "gutenberg_en_all_2022-05.zim"
+              "wikipedia_en_all_nopic_2022-01.zim"
+            ];
+      image = "kiwix/kiwix-serve";
+      ports = [ "127.0.0.1:9060:8080" ];
+      volumes = [ "/home/user/.local/share/kiwix:/data" ];
+    };
 
     privatebin = {
       image = "privatebin/nginx-fpm-alpine";
@@ -143,10 +143,10 @@
                 ];
     };
 
-    #jsoncrack = {
-    #  image = "jsoncrack";
-    #  ports = [ "127.0.0.1:10090:8080" ];
-    #};
+    jsoncrack = {
+      image = "jsoncrack";
+      ports = [ "127.0.0.1:10090:8080" ];
+    };
 
     gifcap = {
       image = "rascal999/gifcap";
