@@ -7,6 +7,9 @@
 
       startup = [
         {
+          command = "exec ${pkgs.copyq}/bin/copyq";
+        }
+        {
           command = "exec ${../../../scripts/monitors.sh}";
         }
         {

@@ -778,7 +778,7 @@ a.scout-gather() {
   docker run --rm -v "${1}-scout:/scoutsuite-report" \
     -e AWS_ACCESS_KEY_ID=$2 -e AWS_SECRET_ACCESS_KEY=$3 \
     -it rossja/ncc-scoutsuite /bin/bash -c \
-      "/root/scoutsuite/bin/scout aws --access-keys --access-key-id $2 \
+      "/usr/local/bin/scout aws --access-keys --access-key-id $2 \
       --secret-access-key $3"
 }
 
@@ -807,14 +807,14 @@ a.scout() {
       echo -n "${1}-scout docker volume exists, just serve? [Yn] "
       read yn
       case $yn in
-        [Yy]* ) a-scout-serve $@; break;;
-        [Nn]* ) a-scout-gather $@; a-scout-serve $@; break;;
-        * ) a-scout-serve $@; break;;
+        [Yy]* ) a.scout-serve $@; break;;
+        [Nn]* ) a.scout-gather $@; a.scout-serve $@; break;;
+        * ) a.scout-serve $@; break;;
       esac
     done
   else
-    a-scout-gather $@
-    a-scout-serve $@
+    a.scout-gather $@
+    a.scout-serve $@
   fi
 }
 

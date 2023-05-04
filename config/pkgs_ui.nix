@@ -5,6 +5,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     audacity                                                                                             # Sound editor with graphical UI
+    copyq                                                                                                # Clipboard Manager with Advanced Features
     gsettings-desktop-schemas                                                                            # Collection of GSettings schemas for settings shared by various components of a desktop
     i3                                                                                                   # A tiling window manager
     i3status-rust                                                                                        #
@@ -24,5 +25,6 @@
     xorg.xhost                                                                                           #
     xorg.xmodmap                                                                                         #
     xwayland                                                                                             #
+    yank                                                                                                 # Yank terminal output to clipboard
   ];
 }
