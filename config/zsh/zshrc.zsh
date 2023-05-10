@@ -112,7 +112,6 @@ new() {
   echo "arsenal                     Generate commands for security and network tools"
   echo "bwcalc                      Bandwidth transfer time estimator"
   echo "d.autorecon                 Parallel network scans (good for CTF)"
-  echo "d.bb                        OpenBB finance terminal"
   echo "d.cloudfox                  Cloud scanner"
   echo "d.dos                       MHDDoS"
   echo "d.katana                    Web crawler"
@@ -125,10 +124,15 @@ new() {
   echo "d.thr                       Trufflehog against repo"
   echo "d.wbu                       waybackurls"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
+  echo "now                         date +\"%Y%m%d_%H%M%S\""
 }
 
 test-vpn() {
   ${HOME}/git/maxos/scripts/wg_test.sh
+}
+
+now() {
+  date +"%Y%m%d_%H%M%S"
 }
 
 a.cl() {
