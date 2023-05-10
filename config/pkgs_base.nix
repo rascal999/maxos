@@ -377,6 +377,7 @@
     trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
     trufflehog                                                                                           # Searches through git repositories for high entropy strings and secrets
     tsung                                                                                                # A high-performance benchmark framework for various protocols
+    twingate                                                                                             # Twingate Client
     ubertooth                                                                                            # Open source wireless development platform suitable for Bluetooth experimentation
     uddup                                                                                                # Tool for de-duplication URLs
     unar                                                                                                 # An archive unpacker program
