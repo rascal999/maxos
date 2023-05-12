@@ -762,14 +762,14 @@ a.cloudmapper() {
       echo -n "${1}-cloudmapper-account-data docker volume exists, just serve? [Yn] "
       read yn
       case $yn in
-        [Yy]* ) a-cloudmapper-serve $@; break;;
-        [Nn]* ) a-cloudmapper-gather $@; a-cloudmapper-serve $@; break;;
-        * ) a-cloudmapper-serve $@; break;;
+        [Yy]* ) a.cloudmapper-serve $@; break;;
+        [Nn]* ) a.cloudmapper-gather $@; a.cloudmapper-serve $@; break;;
+        * ) a.cloudmapper-serve $@; break;;
       esac
     done
   else
-    a-cloudmapper-gather $@
-    a-cloudmapper-serve $@
+    a.cloudmapper-gather $@
+    a.cloudmapper-serve $@
   fi
 }
 
