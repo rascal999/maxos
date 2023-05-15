@@ -252,9 +252,14 @@
   };
 
   xdg.mime.defaultApplications = {
+    "application/pdf" = "firefox.desktop";
+    "text/html" = "firefox.desktop";
     "text/markdown" = "firefox.desktop";
     "text/x-markdown" = "firefox.desktop";
-    "application/pdf" = "firefox.desktop";
+    "x-scheme-handler/about" = "firefox.desktop";
+    "x-scheme-handler/http" = "firefox.desktop";
+    "x-scheme-handler/https" = "firefox.desktop";
+    "x-scheme-handler/unknown" = "firefox.desktop";
   };
 
   # vim default editor
