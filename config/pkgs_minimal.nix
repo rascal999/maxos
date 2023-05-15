@@ -8,6 +8,7 @@ let
     docker
     django
     flask
+    gitlab
     openai
     pip
     pytest

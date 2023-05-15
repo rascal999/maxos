@@ -97,6 +97,7 @@ new() {
   echo "### New commands ###"
   echo "a.alarm                     a.alarm 10:30 \"Meeting\""
   echo "a.bust                      Crawler and gobuster with sensible wordlists"
+  echo "a.cp                        Chromium proxy instance (HTTP 8080)"
   echo "d.carb                      Terminal web browser (carbonyl)"
   echo "a.eb                        Extract Firefox bookmarks"
   echo "a.ech                       Export command history"
@@ -122,7 +123,6 @@ new() {
   echo "d.sshere                    SecretScanner for container scanning"
   echo "d.tho                       Trufflehog against org"
   echo "d.thr                       Trufflehog against repo"
-  echo "d.wbu                       waybackurls"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
   echo "now                         date +\"%Y%m%d_%H%M%S\""
 }
@@ -164,6 +164,10 @@ a.cl() {
   echo
   curl -sI $1 | grep -i Content-Length | choose 1
   echo
+}
+
+a.cp() {
+  chromium --force-device-scale-factor=1.6 --proxy-server='127.0.0.1:8080' $@
 }
 
 a.bust() {
