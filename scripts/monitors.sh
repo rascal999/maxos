@@ -8,14 +8,18 @@ if [[ `hostname` == "rig" ]]; then
     # 1
     /run/current-system/sw/bin/xrandr --output DP-4 --auto --right-of HDMI-0
     # 2
-    /run/current-system/sw/bin/xrandr --output USB-C-0 --auto --right-of DP-4
+    /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-4
 
     sleep 4
 
     i3-msg "workspace ytm, move workspace to output DP-4"
+    sleep 1
     i3-msg "workspace vid, move workspace to output HDMI-0"
+    sleep 1
     i3-msg "workspace 2:ls, move workspace to output USB-C-0"
+    sleep 1
     i3-msg "workspace 1, move workspace to output USB-C-0"
+    sleep 1
     i3-msg "workspace vm, move workspace to output USB-C-0"
 
     #for WORKSPACE_FILE in "$@" ; do
