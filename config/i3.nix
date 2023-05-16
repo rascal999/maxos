@@ -51,7 +51,7 @@ in {
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
-        "${mod}+c" = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
+        "${mod}+c" = "exec /home/user/git/maxos/scripts/chromium.sh";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
