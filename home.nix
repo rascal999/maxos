@@ -23,7 +23,7 @@
   home.file = {
     ".config/dashy/conf.yml".source = ./config/dashy/conf.yml;
     ".config/nginx/mime.types".source = ./resources/nginx/mime.types;
-    ".config/dunst/dunstrc".source = ./config/dunst/dunstrc;
+    #".config/dunst/dunstrc".source = ./config/dunst/dunstrc;
     ".mime.types".source = ./config/firefox/mime.types;
     ".privatebin/conf/conf.php".source = ./config/privatebin/conf.php;
     #".profile".source = ./config/profile;
@@ -49,26 +49,9 @@
   # Stop screen timeout
   services.screen-locker.xss-lock.screensaverCycle = 0;
 
-  # twmn
-  services.twmn = {
+  # dunst
+  services.dunst = {
     enable = true;
-    duration = 5000;
-    soundCommand = "/run/current-system/sw/bin/mpv /home/user/git/maxos/resources/sounds/percussion-sound-614.mp3";
-    text.font.size = 30;
-
-    window = {
-      height = 40;
-      animation = {
-        bounce.enable = false;
-        easeIn = {
-          curve = 14;
-          duration = 700;
-        };
-        easeOut = {
-          curve = 13;
-          duration = 700;
-        };
-      };
-    };
+    configFile = "/home/user/maxos/config/dunst/dunstrc";
   };
 }
