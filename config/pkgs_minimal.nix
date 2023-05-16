@@ -137,7 +137,7 @@ in {
     tldr                                                                                                 # Simplified and community-driven man pages
     tmux                                                                                                 # Terminal multiplexer
     tor                                                                                                  # Anonymizing overlay network
-    twmn                                                                                                 # A notification system for tiling window managers
+    #twmn                                                                                                 # A notification system for tiling window managers
     udptunnel                                                                                            # Tunnels TCP over UDP packets
     unrar                                                                                                # Utility for RAR archives
     unzip                                                                                                # An extraction utility for archives compressed in .zip format
