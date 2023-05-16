@@ -116,6 +116,7 @@
     dockle                                                                                               # Container Image Linter for Security
     dontgo403                                                                                            # Tool to bypass 40X response codes
     doona                                                                                                # A fork of the Bruteforce Exploit Detector Tool (BED)
+    dotnet-sdk                                                                                           # .NET SDK 6.0.406
     driftnet                                                                                             # Watches network traffic, and picks out and displays JPEG and GIF images for display
     drill                                                                                                # HTTP load testing application inspired by Ansible syntax
     dsniff                                                                                               # collection of tools for network auditing and penetration testing
