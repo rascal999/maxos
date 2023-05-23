@@ -74,21 +74,21 @@
     #  volumes = [ "/home/user/.config/dashy/conf.yml:/app/public/conf.yml" ];
     #};
 
-    grafana = {
-      environment = {
-                      GF_DEFAULT_INSTANCE_NAME = "grafana.home";
-                      GF_INSTALL_PLUGINS = "grafana-strava-datasource";
-                      GF_STRAVA_DS_DATA_PATH = "/var/lib/grafana/strava";
-                    };
-      image = "grafana/grafana-oss";
-      ports = [ "127.0.0.1:10060:3000" ];
-      volumes = [
-                  "grafana-data:/var/lib/grafana"
-                  "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
-                  "/home/user/git/maxos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
-                  "/home/user/git/maxos/resources/grafana/dashboards:/mnt/dashboards"
-                ];
-    };
+    #grafana = {
+    #  environment = {
+    #                  GF_DEFAULT_INSTANCE_NAME = "grafana.home";
+    #                  GF_INSTALL_PLUGINS = "grafana-strava-datasource";
+    #                  GF_STRAVA_DS_DATA_PATH = "/var/lib/grafana/strava";
+    #                };
+    #  image = "grafana/grafana-oss";
+    #  ports = [ "127.0.0.1:10060:3000" ];
+    #  volumes = [
+    #              "grafana-data:/var/lib/grafana"
+    #              "/etc/api-strava:/etc/grafana/provisioning/datasources/strava.yaml"
+    #              "/home/user/git/maxos/resources/grafana/provisioning/dashboards/:/etc/grafana/provisioning/dashboards/"
+    #              "/home/user/git/maxos/resources/grafana/dashboards:/mnt/dashboards"
+    #            ];
+    #};
 
     gtfobins = {
       image = "djangobyjeffrey/gtfobins";
