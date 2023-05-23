@@ -778,8 +778,8 @@ a.cloudmapper() {
 }
 
 a.scout-gather() {
-  if [[ "$#" -ne "3" ]]; then
-    echo "a.scout-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+  if [[ "$#" -ne "4" ]]; then
+    echo "a.scout-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY> <SESSION_TOKEN>"
     return 1
   fi
 
@@ -787,12 +787,12 @@ a.scout-gather() {
     -e AWS_ACCESS_KEY_ID=$2 -e AWS_SECRET_ACCESS_KEY=$3 \
     -it rossja/ncc-scoutsuite /bin/bash -c \
       "/usr/local/bin/scout aws --access-keys --access-key-id $2 \
-      --secret-access-key $3"
+      --secret-access-key $3 --session-token $4"
 }
 
 a.scout-serve() {
-  if [[ "$#" -ne "3" ]]; then
-    echo "a.scout-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+  if [[ "$#" -ne "1" ]]; then
+    echo "a.scout-serve <DOCKER_VOLUME>"
     return 1
   fi
 
