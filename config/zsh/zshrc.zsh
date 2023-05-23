@@ -805,8 +805,8 @@ a.scout-serve() {
 }
 
 a.scout() {
-  if [[ "$#" -ne "3" ]]; then
-    echo "a.scout <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+  if [[ "$#" -ne "4" ]]; then
+    echo "a.scout <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY> <SESSION_TOKEN>"
     return 1
   fi
 
@@ -866,8 +866,8 @@ a.cartography(){
 }
 
 a.prowler-gather() {
-  if [[ "$#" -ne "3" ]]; then
-    echo "a.prowler-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+  if [[ "$#" -ne "4" ]]; then
+    echo "a.prowler-gather <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY> <SESSION_TOKEN>"
     return 1
   fi
 
@@ -883,13 +883,13 @@ a.prowler-gather() {
   fi
 
   docker run -it --rm --name prowler -v ${1}-prowler:/prowler/output \
-    --env AWS_ACCESS_KEY_ID="${2}" --env AWS_SECRET_ACCESS_KEY="${3}" \
-    toniblyx/prowler:latest -M csv,json,json-asff,html
+    --env AWS_ACCESS_KEY_ID="${2}" --env AWS_SECRET_ACCESS_KEY="${3}"  --env AWS_SESSION_TOKEN="${4}" \
+    toniblyx/prowler:latest -M csv json json-asff html
 }
 
 a.prowler-serve() {
-  if [[ "$#" -ne "3" ]]; then
-    echo "a.prowler-serve <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+  if [[ "$#" -ne "1" ]]; then
+    echo "a.prowler-serve <DOCKER_VOLUME>"
     return 1
   fi
 
@@ -902,8 +902,8 @@ a.prowler-serve() {
 }
 
 a.prowler() {
-  if [[ "$#" -ne "3" ]]; then
-    echo "a.prowler <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
+  if [[ "$#" -ne "4" ]]; then
+    echo "a.prowler <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY> <SESSION_TOKEN>"
     return 1
   fi
 
@@ -988,7 +988,7 @@ export AWS_SECRET_ACCESS_KEY=\"\"
 export AWS_SESSION_TOKEN=\"\"
 export AWS_REGION=\"\"
 export CLIENT=\"\"
-export DOCKER_VOLUME=\"prowler_$ENTROPY\"" > $CONFIG_FILE
+export DOCKER_VOLUME=\"awsscan_$ENTROPY\"" > $CONFIG_FILE
     vim $CONFIG_FILE
   fi
 
@@ -1016,7 +1016,7 @@ export DOCKER_VOLUME=\"prowler_$ENTROPY\"" > $CONFIG_FILE
   echo "###"
   echo "### Scout"
   echo "###"
-  echo a.scout $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
+  echo a.scout $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY $AWS_SESSION_TOKEN
   echo "###"
   echo "### CloudMapper"
   echo "###"
@@ -1024,7 +1024,7 @@ export DOCKER_VOLUME=\"prowler_$ENTROPY\"" > $CONFIG_FILE
   echo "###"
   echo "### Prowler"
   echo "###"
-  echo a.prowler $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
+  echo a.prowler $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY $AWS_SESSION_TOKEN
   echo "###"
   echo "### aws-public-ips"
   echo "###"
