@@ -3,29 +3,28 @@
 echo "Pentest resources script"
 
 usage() {
-  echo "Usage: $0 [-a] [-b] [-e] [-f] [-g] [-h] [-m] [-o] [-p] [-t] [-v] [-w] [-z]" 1>&2;
+  echo "Usage: $0 [-a] [-b] [-f] [-h] [-m] [-o] [-p] [-t] [-v] [-z]" 1>&2;
   echo
   echo "-a (Auth)             Docker authentication"
-  echo "-b (Bug bounties)     Pull bug bounties (git)"
-  echo "-d (DevOps)           DevOps tools and resources"
-  echo "-e (Educational)      Pull educational resources (git)"
+  echo "-b (Submodules)       Pull submodules (all git repos)"
+  #echo "-e (Educational)      Pull educational resources (git)"
   echo "-f (Force)            Force git pulls (bypass 'cache' check)"
-  echo "-g (Tools)            Pull tools (git)"
+  #echo "-g (Tools)            Pull tools (git)"
   echo "-h (Heavy)            Pull heavy images (Kali, dockerctf etc.)"
   echo "-m (Misc)             Misc things"
   echo "-o (OS)               Pull Operating Systems (docker)"
   echo "-p (PDFs)             Pull PDFs"
   echo "-t (Tools)            Pull tools (docker)"
   echo "-v (Vulnerable)       Vulnerable things (docker)"
-  echo "-w (Wordlists)        Pull wordlists (git)"
+  #echo "-w (Wordlists)        Pull wordlists (git)"
   echo "-z (ZIMs)             Pull ZIMs (kiwix)"
   echo
   echo "Examples:"
   echo "# Everything except heavy images and ZIMs"
-  echo "$0 -abdefgmoptvw"
+  echo "$0 -abfmoptv"
   echo
   echo "# Everything"
-  echo "$0 -abdefghmoptvwz"
+  echo "$0 -abfhmoptvz"
   echo
   echo "# ISO / VM environment"
   echo "$0 -gptw"
@@ -33,43 +32,39 @@ usage() {
 }
 
 arg_auth=0
-arg_bug_bounties=0
-arg_devops=0
-arg_educational=0
+#arg_educational=0
 arg_force=0
-arg_tools_git=0
+#arg_tools_git=0
 arg_heavy=0
 arg_misc=0
 arg_os=0
 arg_pdf=0
+arg_submodules=0
 arg_tools_docker=0
 arg_vulnerable=0
-arg_wordlists=0
+#arg_wordlists=0
 arg_zims=0
 
-while getopts abdefghmoptvwz flag
+while getopts abfhmoptvz flag
 do
     case "${flag}" in
         a) arg_auth=1;;
-        b) arg_bug_bounties=1;;
-        d) arg_devops=1;;
-        e) arg_educational=1;;
+        b) arg_submodules=1;;
+        #e) arg_educational=1;;
         f) arg_force=1;;
-        g) arg_tools_git=1;;
+        #g) arg_tools_git=1;;
         h) arg_heavy=1;;
         m) arg_misc=1;;
         o) arg_os=1;;
         p) arg_pdf=1;;
         t) arg_tools_docker=1;;
         v) arg_vulnerable=1;;
-        w) arg_wordlists=1;;
+        #w) arg_wordlists=1;;
         z) arg_zims=1;;
     esac
 done
 
-arg_sum=$((${arg_bug_bounties} + \
-           ${arg_educational} + \
-           ${arg_devops} + \
+arg_sum=$((${arg_submodules} + \
            ${arg_tools_git} + \
            ${arg_heavy} + \
            ${arg_misc} + \
@@ -77,7 +72,6 @@ arg_sum=$((${arg_bug_bounties} + \
            ${arg_pdf} + \
            ${arg_tools_docker} + \
            ${arg_vulnerable} + \
-           ${arg_wordlists} + \
            ${arg_zims}))
 
 # No options specified?
@@ -89,18 +83,17 @@ echo
 echo "Selection"
 echo "---"
 echo "Docker auth: $arg_auth"
-echo "Bug bounties: $arg_bug_bounties"
-echo "DevOps: $arg_devops"
-echo "Educational repos: $arg_educational"
+echo "Submodules: $arg_submodules"
+#echo "Educational repos: $arg_educational"
 echo "Force git pull: $arg_force"
-echo "Git pull: $arg_tools_git"
+#echo "Git pull: $arg_tools_git"
 echo "Heavy images (docker): $arg_heavy"
 echo "Misc things: $arg_misc"
 echo "OS (docker): $arg_os"
 echo "PDFs: $arg_pdf"
 echo "Tools (docker): $arg_tools_docker"
 echo "Vulnerabe things (docker): $arg_vulnerable"
-echo "Wordlists: $arg_wordlists"
+#echo "Wordlists: $arg_wordlists"
 echo "ZIMs: $arg_zims"
 echo
 
@@ -120,7 +113,14 @@ function git_update() {
 }
 
 function git_submodule_update() {
-  git submodule update --init --recursive --remote --merge --depth 1 --jobs 10 .
+  NEXT=`pwd | grep maxos-next | wc -l`
+
+  if [[ "$NEXT" -ne "0" ]]; then
+    echo "ERROR: Not pulling submodules in maxos-next"
+    return 1
+  else
+    git submodule foreach 'git stash; git pull --rebase; git rebase --skip; git pull'
+  fi
 }
 
 ###
@@ -131,13 +131,6 @@ function pull_heavy_docker() {
   docker pull firefart/dockerctf                           # Docker image with some common ctf tools
   docker pull tuetenk0pp/sharelatex-full                   # Overleaf image with all tlmgr packages and minted support
   docker pull six2dez/reconftw:main                        # Perform automated recon on a target domain
-}
-
-###
-### DevOps
-###
-function pull_devops_things() {
-  cd $HOME/git/maxos/repos/devops && git_submodule_update
 }
 
 ###
@@ -168,8 +161,6 @@ function pull_misc_things() {
   docker pull ghcr.io/requarks/wiki                                 # Wiki.js | A modern and powerful wiki app built on Node.js
   docker pull searxng/searxng                                       # Free internet metasearch engine
   docker pull danielgatis/rembg                                     # Rembg is a tool to remove images background
-
-  cd $HOME/git/maxos/repos/misc && git_submodule_update
 
   ### InvokeAI
   if [[ "$?" == "0" && -f "/etc/api-huggingface" ]]; then
@@ -397,21 +388,9 @@ function pull_pdfs() {
 }
 
 ###
-### Bug bounties
-###
-function pull_bug_bounties() {
-  cd $HOME/git/maxos/repos/bug-bounty && git_submodule_update
-}
-
-###
 ### Educational repos (GitHub)
 ###
 function pull_educational_repos() {
-  ### Education
-  cd $HOME/git/maxos/repos/education && git_submodule_update
-  ### Pentest Education
-  cd $HOME/git/maxos/repos/pentest-education && git_submodule_update
-
   rm -rf $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
   mkdir $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip
   wget https://cheatsheetseries.owasp.org/bundle.zip -O $HOME/git/maxos/repos/pentest-education/CheatSheetSeriesZip/bundle.zip
@@ -423,18 +402,10 @@ function pull_educational_repos() {
 ###
 function pull_tool_repos() {
   ### Pentest Frameworks
-  cd $HOME/git/maxos/repos/pentest-frameworks && git_submodule_update
-
   cd $HOME/git/maxos/repos/pentest-frameworks/owasp-mstg
   bash tools/docker/pandoc_makedocs.sh
 
   #git_update --depth 1 https://github.com/andresriancho/w3af.git $HOME/git/pentest-tools/w3af
-
-  ### Misc tools
-  cd $HOME/git/maxos/repos/pentest-tools && git_submodule_update
-
-  ### Exploits
-  cd $HOME/git/maxos/repos/exploits && git_submodule_update
 
   ### Tools which need building
   # AutoRecon
@@ -654,9 +625,6 @@ function pull_tool_repos() {
 ### Wordlists
 ###
 function pull_wordlists() {
-  # git update
-  cd $HOME/git/maxos/repos/wordlists && git_submodule_update
-
   # $HOME/wordlists
   mkdir $HOME/wordlists
   wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O $HOME/wordlists/content_discovery_all.txt
@@ -681,24 +649,9 @@ if [ $arg_auth == 1 ]; then
   docker login
 fi
 
-# Bug bounties
-if [ $arg_bug_bounties == 1 ]; then
-  pull_bug_bounties
-fi
-
-# Educational repos
-if [ $arg_educational == 1 ]; then
-  pull_educational_repos
-fi
-
-# Educational repos
-if [ $arg_devops == 1 ]; then
-  pull_devops_things
-fi
-
-# Git pull
-if [ $arg_tools_git == 1 ]; then
-  pull_tool_repos
+# Submodules
+if [ $arg_submodules == 1 ]; then
+  git_submodule_update
 fi
 
 # Misc tools
@@ -729,11 +682,6 @@ fi
 # Heavy images (docker)
 if [ $arg_heavy == 1 ]; then
   pull_heavy_docker
-fi
-
-# Wordlists
-if [ $arg_wordlists == 1 ]; then
-  pull_wordlists
 fi
 
 # ZIMs

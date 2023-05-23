@@ -912,14 +912,14 @@ a.prowler() {
       echo -n "${1}-prowler docker volume exists, just serve? [Yn] "
       read yn
       case $yn in
-        [Yy]* ) a-prowler-serve $@; break;;
-        [Nn]* ) a-prowler-gather $@; a-prowler-serve $@; break;;
-        * ) a-prowler-serve $@; break;;
+        [Yy]* ) a.prowler-serve $@; break;;
+        [Nn]* ) a.prowler-gather $@; a.prowler-serve $@; break;;
+        * ) a.prowler-serve $@; break;;
       esac
     done
   else
-    a-prowler-gather $@
-    a-prowler-serve $@
+    a.prowler-gather $@
+    a.prowler-serve $@
   fi
 }
 
@@ -978,41 +978,57 @@ a.cloudsploit() {
 ### Lazy boy
 ###
 awsscan() {
-  if [[ "$#" -ne "4" ]]; then
-    echo "awsscan <REGION> <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY>"
-    return 1
+  CONFIG_FILE="aws.secrets"
+
+  # If no aws.secrets, vim
+  if [[ ! -f $CONFIG_FILE ]]; then
+    ENTROPY=`uuidgen | choose -f '-' 0`
+    echo "export AWS_ACCESS_KEY_ID=\"\"
+export AWS_SECRET_ACCESS_KEY=\"\"
+export AWS_SESSION_TOKEN=\"\"
+export AWS_REGION=\"\"
+export CLIENT=\"\"
+export DOCKER_VOLUME=\"prowler_$ENTROPY\"" > $CONFIG_FILE
+    vim $CONFIG_FILE
   fi
+
+  source $CONFIG_FILE
+
+  #if [[ "$#" -ne "5" ]]; then
+  #  echo "awsscan <REGION> <DOCKER_VOLUME> <ACCESS_KEY_ID> <SECRET_ACCESS_KEY> <SESSION_TOKEN>"
+  #  return 1
+  #fi
 
   echo "Starting scans.."
   echo "###"
   echo "### Cartography"
   echo "###"
-  a-cartography
+  echo a.cartography
   echo "###"
   echo "### cloudsploit"
   echo "###"
-  a-cloudsploit cis $2 $3 $4
-  a-cloudsploit pci $2 $3 $4
+  echo a.cloudsploit cis $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
+  echo a.cloudsploit pci $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
   echo "###"
   echo "### aws-security-viz"
   echo "###"
-  a-aws-security-viz $2 $3 $4
+  echo a.aws-security-viz $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
   echo "###"
   echo "### Scout"
   echo "###"
-  a-scout $2 $3 $4
+  echo a.scout $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
   echo "###"
   echo "### CloudMapper"
   echo "###"
-  a-cloudmapper $2 $3 $4
+  echo a.cloudmapper $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
   echo "###"
   echo "### Prowler"
   echo "###"
-  a-prowler $2 $3 $4
+  echo a.prowler $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
   echo "###"
   echo "### aws-public-ips"
   echo "###"
-  a-aws-public-ips $1 $2 $3 $4
+  echo a.aws-public-ips $AWS_REGION $DOCKER_VOLUME $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY
 }
 
 awsscan-collate() {
