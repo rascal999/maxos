@@ -1000,10 +1000,10 @@ export DOCKER_VOLUME=\"awsscan_$ENTROPY\"" > $CONFIG_FILE
   #fi
 
   echo "Starting scans.."
-  echo "###"
-  echo "### Cartography"
-  echo "###"
-  echo a.cartography
+  #echo "###"
+  #echo "### Cartography"
+  #echo "###"
+  #echo a.cartography
   echo "###"
   echo "### cloudsploit"
   echo "###"

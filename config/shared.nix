@@ -237,9 +237,9 @@
   };
 
   # Virtualisation
-  environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
-  virtualisation = {
-    virtualbox.host.enable = true;
+  #environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
+  #virtualisation = {
+    #virtualbox.host.enable = true;
     #vmware.host.enable = true;
 
     # QEMU
@@ -249,7 +249,7 @@
     #  qemu.swtpm.enable = true;
     #  qemu.ovmf.packages = [ pkgs.OVMFFull ];
     #};
-  };
+  #};
 
   xdg.mime.defaultApplications = {
     "application/pdf" = "firefox.desktop";

@@ -36,6 +36,8 @@
       minSpeed = "1.5";
     };
 
+    libinput.enable = false;
+
     layout = "gb";
     xkbVariant = "dvorakukp";
   };
