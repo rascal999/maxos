@@ -43,7 +43,7 @@ if [[ "$PIHOLE_CHECK" == "" ]]; then
 fi
 
 # Launch plane
-echo -n "Starting plane.."
+echo "Starting plane.."
 
 cd /home/user/git/maxos/repos/misc/plane
 chmod +x setup.sh
@@ -56,7 +56,6 @@ set -a
 source .env
 set +a
 docker compose up -d
-echo "Done"
 
 # GraphGPT
 # Build
