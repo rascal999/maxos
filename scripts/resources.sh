@@ -119,7 +119,10 @@ function git_submodule_update() {
     echo "ERROR: Not pulling submodules in maxos-next"
     return 1
   else
-    git submodule foreach 'git stash; git pull --rebase; git rebase --skip; git pull'
+    git submodule init
+    git submodule update
+    git submodule foreach 'git fetch origin; git checkout origin/master'
+    #git submodule foreach 'git stash; git pull --rebase; git rebase --skip; git pull'
   fi
 }
 
