@@ -29,6 +29,9 @@
           command = "exec ${pkgs.chromium}/bin/chromium --force-device-scale-factor=1.6";
         }
         {
+          command = "exec ${pkgs.chromium}/bin/chromium --app=http://localhost";
+        }
+        {
           command = "exec ${pkgs.logseq}/bin/logseq";
         }
         {
