@@ -42,6 +42,9 @@ if [[ "$PIHOLE_CHECK" == "" ]]; then
   /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/pi-hole/docker-compose.yml up -d
 fi
 
+# Launch plane
+
+
 # GraphGPT
 # Build
 #GRAPHGPT_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=graphgpt | choose 0`

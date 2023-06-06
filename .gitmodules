@@ -928,3 +928,6 @@
 [submodule "repos/pentest-tools/htshells"]
 	path = repos/pentest-tools/htshells
 	url = https://github.com/wireghoul/htshells.git
+[submodule "repos/misc/plane"]
+	path = repos/misc/plane
+	url = https://github.com/makeplane/plane.git
