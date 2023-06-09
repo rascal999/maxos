@@ -18,6 +18,8 @@
     x11docker                                                                                            # Run graphical applications with Docker
     x11vnc                                                                                               # A VNC server connected to a real X11 screen
     xclip                                                                                                # Tool to access the X clipboard from a console application
+    xfce.thunar                                                                                          # Xfce file manager
+    xfce.tumbler                                                                                         # A D-Bus thumbnailer service
     xlockmore                                                                                            # Screen locker for the X Window System
     xorg.libXext                                                                                         #
     xorg.xbacklight                                                                                      #
