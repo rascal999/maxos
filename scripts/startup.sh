@@ -42,20 +42,24 @@ if [[ "$PIHOLE_CHECK" == "" ]]; then
   /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/pi-hole/docker-compose.yml up -d
 fi
 
+PLANE_RUNNING=`docker ps -a | grep plane-worker | wc -l`
+
 # Launch plane
-echo "Starting plane.."
+if [[ "$PLANE_RUNNING" -eq "0" ]]; then
+    echo "Starting plane.."
 
-cd /home/user/git/maxos/repos/misc/plane
-chmod +x setup.sh
+    cd /home/user/git/maxos/repos/misc/plane
+    chmod +x setup.sh
 
-# Bug fix
-sed -i 's|#!/bin/bash|#!/usr/bin/env bash|g' setup.sh
+    # Bug fix
+    sed -i 's|#!/bin/bash|#!/usr/bin/env bash|g' setup.sh
 
-./setup.sh http://localhost
-set -a
-source .env
-set +a
-docker compose up -d
+    ./setup.sh http://localhost
+    set -a
+    source .env
+    set +a
+    docker compose up -d
+fi
 
 # GraphGPT
 # Build
