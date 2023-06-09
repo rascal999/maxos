@@ -882,7 +882,7 @@ a.prowler-gather() {
     read
   fi
 
-  docker run -it --rm --name prowler -v ${1}-prowler:/home/prowler/output \
+  docker run -it --rm --name ${1}-prowler -v ${1}-prowler:/home/prowler/output \
     --env AWS_ACCESS_KEY_ID="${2}" --env AWS_SECRET_ACCESS_KEY="${3}"  --env AWS_SESSION_TOKEN="${4}" \
     toniblyx/prowler:latest -M csv json json-asff html
 }

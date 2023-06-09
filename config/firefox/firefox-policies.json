@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "firefox@tampermonkey.net": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/addon-683490-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "contact@example.com": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/smartreader/addon-3999045-latest.xpi",
         "installation_mode": "normal_installed"
