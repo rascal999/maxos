@@ -893,11 +893,11 @@ a.prowler-serve() {
     return 1
   fi
 
-  if docker run --rm -v "${1}-prowler:/var/lib/nginx/html/prowler" -d -p 8104:80 \
+  if docker run --rm -v "${1}:/var/lib/nginx/html/prowler" -d -p 8104:80 \
     dceoy/nginx-autoindex; then
-    dunst-handle "prowler report ready" "http://localhost:8104/prowler/?t=`date +%s`" &; disown
+    echo "Prowler report ready - http://localhost:8104/prowler/?t=`date +%s`"
   else
-    dunst-handle "Error launching prowler reports"
+    echo "Error launching prowler reports"
   fi
 }
 
