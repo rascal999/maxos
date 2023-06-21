@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{4F1FB113-D7D8-40AE-A5BA-9300EAEA0F51}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/toolkit-for-ynab/addon-679689-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "firefox@tampermonkey.net": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/addon-683490-latest.xpi",
         "installation_mode": "normal_installed"
