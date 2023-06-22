@@ -56,7 +56,7 @@ if [[ "$PLANE_RUNNING" -eq "0" ]]; then
 
     ./setup.sh http://localhost
     set -a
-    source .env
+    source /home/user/git/maxos/repos/misc/plane/.env
     set +a
     docker compose up -d
 fi
