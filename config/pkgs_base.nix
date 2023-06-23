@@ -17,6 +17,7 @@
     androguard                                                                                           # Tool and Python library to interact with Android Files
     android-tools                                                                                        # Android SDK platform tools
     anevicon                                                                                             # UDP-based load generator
+    ansible                                                                                              # Radically simple IT automation
     apkeep                                                                                               # A command-line tool for downloading APK files from various sources
     apkleaks                                                                                             # Scanning APK file for URIs, endpoints and secrets
     #apktool                                                                                              # A tool for reverse engineering Android apk files
