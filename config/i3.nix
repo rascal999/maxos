@@ -50,6 +50,7 @@ in {
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
+        "${mod}+a" = "exec ${pkgs.slack}/bin/slack";
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
         "${mod}+c" = "exec /home/user/git/maxos/scripts/chromium.sh";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
@@ -61,7 +62,7 @@ in {
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
-        "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost";
+        "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost --force-device-scale-factor=1.6";
         "${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
