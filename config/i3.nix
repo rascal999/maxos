@@ -16,6 +16,7 @@ in {
       for_window [class=".*Remmina.*"] move to workspace rdp
       for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
       for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
+      for_window [class=".*Slack.*"] move to workspace "ytm"
       for_window [class=".*vlc.*"] move to workspace "ytm"
       for_window [class=".*Chromium.*"] move to workspace "chr"
       #for_window [title=".*WhatsApp*"] move to workspace "ytm"
@@ -57,7 +58,7 @@ in {
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
-        "${mod}+k" = "exec ${pkgs.keepassxc}/bin/keepassxc";
+        "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";

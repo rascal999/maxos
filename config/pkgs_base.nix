@@ -246,6 +246,7 @@
     mkcert                                                                                               # A simple tool for making locally-trusted development certificates
     monero-gui                                                                                           # Private, secure, untraceable currency
     mongoaudit                                                                                           # MongoDB auditing and pentesting tool
+    mono                                                                                                 # Cross platform, open source .NET development framework
     monsoon                                                                                              # Fast HTTP enumerator
     mplayer                                                                                              # A movie player that supports many video formats
     mpv                                                                                                  # General-purpose media player, fork of MPlayer and mplayer2

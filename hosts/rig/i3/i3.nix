@@ -35,10 +35,13 @@
           command = "exec ${pkgs.logseq}/bin/logseq";
         }
         {
-          command = "exec ${pkgs.vlc}/bin/vlc http://192.168.0.193:8080/video";
+          command = "exec ${pkgs.slack}/bin/slack";
         }
+        #{
+        #  command = "exec ${pkgs.vlc}/bin/vlc http://192.168.0.193:8080/video";
+        #}
         {
-          command = "exec ${pkgs.vlc}/bin/vlc https://cdnuk001.broadcastcdn.net/KUK-BBCNEWSHD/index.m3u8";
+          command = "exec ${pkgs.vlc}/bin/vlc https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8";
         }
         {
           command = "exec ${pkgs.vlc}/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8";
