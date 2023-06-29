@@ -4,10 +4,12 @@ theme = "solarized-dark"
 icons = "awesome6"
 
 [[block]]
-block = "hueshift"
-hue_shifter = "gammastep"
-step = 100
-click_temp = 1900
+block = "net"
+device = "enp.*"
+format = "$speed_down.eng(prefix:M) ↓ $speed_up.eng(prefix:M) ↑ {$signal_strength $ssid $frequency|} $ip "
+[[block.click]]
+button = "left"
+cmd = "/run/current-system/sw/bin/urxvt -e nmtui"
 
 [[block]]
 block = "external_ip"
@@ -16,12 +18,10 @@ with_network_manager = true
 interval = 300
 
 [[block]]
-block = "net"
-device = "enp.*"
-format = " $icon {$signal_strength $ssid $frequency|} $ip "
-[[block.click]]
-button = "left"
-cmd = "/run/current-system/sw/bin/urxvt -e nmtui"
+block = "hueshift"
+hue_shifter = "gammastep"
+step = 100
+click_temp = 1900
 
 [[block]]
 block = "load"
@@ -30,8 +30,8 @@ interval = 1
 
 [[block]]
 block = "memory"
-format = " $icon $mem_total_used_percents.eng(w:2) "
-format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+format = " $icon $mem_total_used_percents.eng(w:2)"
+format_alt = " $icon_swap $swap_used_percents.eng(w:2)"
 
 [[block]]
 block = "disk_space"
@@ -47,8 +47,8 @@ missing_format = ""
 
 [[block]]
 block = "time"
-interval = 20 
-format = " $timestamp.datetime(f:'%m/%d %R') "
+interval = 20
+format = "$timestamp.datetime(f:'%m/%d %R')"
 
 [[block]]
 block = "sound"
