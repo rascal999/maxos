@@ -63,7 +63,7 @@ in {
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
-        "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
+        "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
         "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost --force-device-scale-factor=1.6";
@@ -99,7 +99,6 @@ in {
         "${mod}+7" = "workspace number 7";
         "${mod}+8" = "workspace number 8";
         "${mod}+9" = "workspace number 9";
-        "${mod}+m" = "workspace chr";
         "${mod}+Shift+0" = "move container to workspace number 10";
         "${mod}+Shift+1" = "move container to workspace number 1";
         "${mod}+Shift+2" = "move container to workspace 2:ls";
