@@ -31,7 +31,7 @@ if [[ `hostname` == "rig" ]]; then
     ### Apps
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/copyq
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40"
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/redshift -O 1900
     /run/current-system/sw/bin/sleep 0.2
@@ -39,21 +39,21 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/VirtualBox
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6
+    /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /etc/profiles/per-user/user/bin/chromium --app=http://localhost
+    /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --app=http://localhost"
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/logseq
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/slack
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/vlc https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/vlc https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/vlc https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8"
 
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
