@@ -99,6 +99,7 @@ in {
         "${mod}+7" = "workspace number 7";
         "${mod}+8" = "workspace number 8";
         "${mod}+9" = "workspace number 9";
+        "${mod}+m" = "workspace chr";
         "${mod}+Shift+0" = "move container to workspace number 10";
         "${mod}+Shift+1" = "move container to workspace number 1";
         "${mod}+Shift+2" = "move container to workspace 2:ls";
