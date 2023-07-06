@@ -63,7 +63,7 @@ in {
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
-        "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
+        "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
         "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost --force-device-scale-factor=1.6";
