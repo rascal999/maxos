@@ -40,11 +40,17 @@
         #{
         #  command = "exec ${pkgs.vlc}/bin/vlc http://192.168.0.193:8080/video";
         #}
-        {
+        { # DW
+          command = "exec ${pkgs.vlc}/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8";
+        }
+        { # Euronews
+          command = "exec ${pkgs.vlc}/bin/vlc https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8";
+        }
+        { # CNN
           command = "exec ${pkgs.vlc}/bin/vlc https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8";
         }
-        {
-          command = "exec ${pkgs.vlc}/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8";
+        { # CCTV
+          command = "exec ${pkgs.vlc}/bin/vlc https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8";
         }
       ];
     };
