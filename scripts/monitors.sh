@@ -10,7 +10,12 @@ if [[ `hostname` == "rig" ]]; then
     # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-4
 
-    /run/current-system/sw/bin/sleep 8 
+    /run/current-system/sw/bin/sleep 4
+
+    /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
+    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
+
+    /run/current-system/sw/bin/sleep 1
 
     /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
     /run/current-system/sw/bin/sleep 1
@@ -22,9 +27,6 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 1
     /etc/profiles/per-user/user/bin/i3-msg "workspace 1, move workspace to output USB-C-0"
     /run/current-system/sw/bin/sleep 1
-
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
-    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
 
     ### Apps
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/copyq
