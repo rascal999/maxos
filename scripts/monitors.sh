@@ -25,6 +25,22 @@ if [[ `hostname` == "rig" ]]; then
 
     /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
     /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
+
+    ### Apps
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/copyq
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/redshift -O 1900
+    /run/current-system/sw/bin/screen -adm /etc/profiles/per-user/user/bin/firefox
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/VirtualBox
+    /run/current-system/sw/bin/screen -adm /etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6
+    /run/current-system/sw/bin/screen -adm /etc/profiles/per-user/user/bin/chromium --app=http://localhost
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/logseq
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/slack
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/vlc https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/vlc https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8
+    /run/current-system/sw/bin/screen -adm /run/current-system/sw/bin/vlc https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8
+
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
     #  /etc/profiles/per-user/user/bin/i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
