@@ -23,7 +23,8 @@ if [[ `hostname` == "rig" ]]; then
     /etc/profiles/per-user/user/bin/i3-msg "workspace 1, move workspace to output USB-C-0"
     sleep 1
 
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vlc.json"
+    /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
+    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
     #  /etc/profiles/per-user/user/bin/i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
