@@ -10,7 +10,7 @@ if [[ `hostname` == "rig" ]]; then
     # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-4
 
-    /run/current-system/sw/bin/sleep 4
+    /run/current-system/sw/bin/sleep 8 
 
     /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
     /run/current-system/sw/bin/sleep 1
@@ -31,7 +31,7 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/redshift -O 1900
+    /run/current-system/sw/bin/redshift -O 1900
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /etc/profiles/per-user/user/bin/firefox
     /run/current-system/sw/bin/sleep 0.2
