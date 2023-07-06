@@ -17,7 +17,7 @@ in {
       for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
       for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
       for_window [class=".*Slack.*"] move to workspace "ytm"
-      for_window [class=".*vlc.*"] move to workspace "ytm"
+      for_window [class=".*vlc.*"] move to workspace "vid"
       for_window [class=".*Chromium.*"] move to workspace "chr"
       #for_window [title=".*WhatsApp*"] move to workspace "ytm"
       for_window [class=".*Wireshark.*"] move to workspace "fin"
@@ -55,6 +55,8 @@ in {
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
         "${mod}+c" = "exec /home/user/git/maxos/scripts/chromium.sh";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+        "${mod}+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splith";
+        "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
         "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";

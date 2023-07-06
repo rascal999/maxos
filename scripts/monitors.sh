@@ -18,9 +18,9 @@ if [[ `hostname` == "rig" ]]; then
     sleep 1
     i3-msg "workspace 2:ls, move workspace to output USB-C-0"
     sleep 1
-    i3-msg "workspace 1, move workspace to output USB-C-0"
-    sleep 1
     i3-msg "workspace vm, move workspace to output USB-C-0"
+    sleep 1
+    i3-msg "workspace 1, move workspace to output USB-C-0"
 
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
