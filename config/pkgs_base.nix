@@ -91,6 +91,7 @@
     crunch                                                                                               # Wordlist generator
     cudatoolkit                                                                                          # A compiler for NVIDIA GPUs, math libraries, and tools
     cups-brother-hl3140cw                                                                                #
+    daemon                                                                                               # Turns other processes into daemons
     dalfox                                                                                               # Tool for analysing parameter and XSS scanning
     dbeaver                                                                                              # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
     dcfldd                                                                                               # An enhanced version of GNU dd
