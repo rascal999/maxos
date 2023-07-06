@@ -13,13 +13,13 @@ in {
       #for_window [class=".*Gimp.*"] move to workspace "img"
       for_window [class=".*KeePassXC.*"] move to workspace "pw"
       for_window [class=".*Logseq.*"] move to workspace "2:ls"
-      for_window [title="".*Plane.*"] move to workspace 3
       for_window [class=".*Remmina.*"] move to workspace rdp
       for_window [class=".*VirtualBox Machine.*"] move to workspace "vm"
       for_window [class=".*VirtualBox Manager.*"] move to workspace "vm"
       for_window [class=".*Slack.*"] move to workspace "ytm"
       for_window [class=".*vlc.*"] move to workspace "vid"
       for_window [class=".*Chromium.*"] move to workspace "chr"
+      for_window [title="".*Plane.*"] move to workspace 3
       #for_window [title=".*WhatsApp*"] move to workspace "ytm"
       for_window [class=".*Wireshark.*"] move to workspace "fin"
       #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
