@@ -19,7 +19,7 @@ in {
       for_window [class=".*Slack.*"] move to workspace "ytm"
       for_window [class=".*vlc.*"] move to workspace "vid"
       for_window [class=".*Chromium.*"] move to workspace "chr"
-      for_window [title="".*Plane.*"] move to workspace 3
+      for_window [title=".*Plane.*"] move to workspace 3
       #for_window [title=".*WhatsApp*"] move to workspace "ytm"
       for_window [class=".*Wireshark.*"] move to workspace "fin"
       #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
