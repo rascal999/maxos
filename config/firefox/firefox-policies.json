@@ -3310,6 +3310,11 @@
         "Placement": "toolbar"
       },
       {
+        "Title": "Queue",
+        "URL": "data:text/html;base64,PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KICA8dGl0bGU+VGl0bGUgYW5kIERlc2NyaXB0aW9uPC90aXRsZT4KICA8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iVGhpcyBpcyBhIHBhZ2Ugd2l0aCBhIHRpdGxlIGFuZCBhIGRlc2NyaXB0aW9uLiI+CjwvaGVhZD4KPGJvZHk+CiAgPHA+CiAgICBUaXRsZTogPGlucHV0IHR5cGU9InRleHQiIGlkPSJ0aXRsZSI+CiAgPC9wPgogIDxwPgogICAgPGxhYmVsIGZvcj0iZGVzY3JpcHRpb24iPkRlc2NyaXB0aW9uOjwvbGFiZWw+CiAgICA8dGV4dGFyZWEgaWQ9ImRlc2NyaXB0aW9uIiByb3dzPSIyMCIgc3R5bGU9IndpZHRoOiAxMDAlOyI+PC90ZXh0YXJlYT4KICA8L3A+CiAgPHNjcmlwdD4KICAgIGNvbnN0IHRpdGxlSW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgidGl0bGUiKTsKICAgIGNvbnN0IGRlc2NyaXB0aW9uSW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiZGVzY3JpcHRpb24iKTsKCiAgICAvLyBVcGRhdGUgdGhlIHRpdGxlIG9mIHRoZSBwYWdlIHdoZW4gdGhlIHRpdGxlIGlucHV0IGNoYW5nZXMuCiAgICB0aXRsZUlucHV0LmFkZEV2ZW50TGlzdGVuZXIoImNoYW5nZSIsICgpID0+IHsKICAgICAgZG9jdW1lbnQudGl0bGUgPSB0aXRsZUlucHV0LnZhbHVlOwogICAgfSk7CgogICAgLy8gVXBkYXRlIHRoZSBkZXNjcmlwdGlvbiBvZiB0aGUgcGFnZSB3aGVuIHRoZSBkZXNjcmlwdGlvbiBpbnB1dCBjaGFuZ2VzLgogICAgZGVzY3JpcHRpb25JbnB1dC5hZGRFdmVudExpc3RlbmVyKCJjaGFuZ2UiLCAoKSA9PiB7CiAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoIm1ldGFbbmFtZT0nZGVzY3JpcHRpb24nXSIpLnNldEF0dHJpYnV0ZSgiY29udGVudCIsIGRlc2NyaXB0aW9uSW5wdXQudmFsdWUpOwogICAgfSk7CiAgPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPg==",
+        "Placement": "toolbar"
+      },
+      {
         "Title": "GitHub - rascal999/maxos",
         "Favicon": "https://github.com/fluidicon.png",
         "URL": "https://github.com/rascal999/maxos",
