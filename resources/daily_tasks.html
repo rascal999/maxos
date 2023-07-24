@@ -113,7 +113,7 @@
     <textarea name="task" id="task" placeholder="Task Details"></textarea>
     <input type="button" value="Submit" class="submit-on-enter" onClick="addTask()" />
     <input type="button" value="Clear Tasks" class="submit-on-enter" onClick="clearLocalStorage()" />
-    <input type="button" value="Download Comments" class="submit-on-enter" onClick="downloadComments()" />
+    <input type="button" value="Download Tasks" class="submit-on-enter" onClick="downloadTasks()" />
   </form>
   <br />
 
@@ -143,15 +143,15 @@
       return " [DONE]";
     };
 
-    // Function to download comments as a text file
-    const downloadComments = () => {
-      const filename = "comments.txt";
-      const commentText = tasks.map(task => {
+    // Function to download tasks as a text file
+    const downloadTasks = () => {
+      const filename = "tasks.txt";
+      const taskText = tasks.map(task => {
         const formattedTimestamp = getFormattedTimestamp(task.timestamp);
         const statusLabel = getStatusLabel(task);
         return `[${formattedTimestamp}] ${statusLabel} ${task.name}: ${task.task}`;
       }).join("\n");
-      const blob = new Blob([commentText], { type: "text/plain" });
+      const blob = new Blob([taskText], { type: "text/plain" });
 
       if (window.navigator.msSaveOrOpenBlob) {
         // For Internet Explorer
