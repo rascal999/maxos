@@ -3285,18 +3285,8 @@
 
     "Bookmarks": [
       {
-        "Title": "fstash screenshots",
-        "URL": "http://172.20.0.1:9040/",
-        "Placement": "toolbar"
-      },
-      {
         "Title": "fs screenshots",
         "URL": "file:///home/user/screenshots_today",
-        "Placement": "toolbar"
-      },
-      {
-        "Title": "fstash tmp",
-        "URL": "http://172.21.0.1:9040/",
         "Placement": "toolbar"
       },
       {
@@ -3307,6 +3297,11 @@
       {
         "Title": "Buffer",
         "URL": "data:text/html;base64,PGh0bWwgY29udGVudGVkaXRhYmxlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPgo=",
+        "Placement": "toolbar"
+      },
+      {
+        "Title": "Daily Tasks",
+        "URL": "file:///home/user/tmp_today",
         "Placement": "toolbar"
       },
       {

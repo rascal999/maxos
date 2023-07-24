@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daily Tasks</title>
+  <style>
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 20px;
+      max-width: 500px; /* Set a max-width for the form to control its width */
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%; /* Set the width to 100% to occupy the available space within the form */
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      box-sizing: border-box; /* Ensure padding and border are included in the width */
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical; /* Allow vertical resizing of the textarea */
+    }
+
+    input[type="button"] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px; /* Increase the horizontal padding for better button appearance */
+      border: none;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .bubble-container {
+      position: relative;
+      max-width: 800px;
+    }
+
+    .timestamp {
+      font-size: 8px;
+      position: absolute;
+      bottom: 4px;
+      right: 6px;
+    }
+
+    .submit-on-enter {
+      cursor: pointer;
+    }
+
+    /* Update the bubble style to have a default background color and add more styling */
+    .bubble {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-family: sans-serif;
+      cursor: pointer;
+    }
+
+    /* Add classes for different bubble colors */
+    .red {
+      background-color: #ffcccc;
+    }
+
+    .yellow {
+      background-color: #ffffcc;
+    }
+
+    .green {
+      background-color: #ccffcc;
+    }
+
+    /* Add styles for the delete button */
+    .delete-button {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background-color: pink; /* Red background for the "X" button */
+      color: #fff; /* White text color */
+      border: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%; /* Make it round to appear as an "X" */
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Tasks</h1>
+
+  <form id="add-task">
+    <input type="text" id="title" placeholder="New Tab Title" onChange="document.title = this.value;" />
+    <input type="text" id="name" name="name" placeholder="Task Name" value="Some Task" autofocus />
+    <textarea name="task" id="task" placeholder="Task Details"></textarea>
+    <input type="button" value="Submit" class="submit-on-enter" onClick="addTask()" />
+    <input type="button" value="Clear Tasks" class="submit-on-enter" onClick="clearLocalStorage()" />
+    <input type="button" value="Download Comments" class="submit-on-enter" onClick="downloadComments()" />
+  </form>
+  <br />
+
+  <div id="tasks">
+    <ul>
+    </ul>
+  </div>
+
+  <script>
+    let tasks = [];
+
+    const loadTasksFromLocalStorage = () => {
+      const storedTasks = localStorage.getItem('tasks');
+      if (storedTasks) {
+        tasks = JSON.parse(storedTasks);
+      }
+    };
+
+    const saveTasksToLocalStorage = () => {
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    };
+
+    // Function to get the appropriate status label for the bubble color
+    const getStatusLabel = (task) => {
+      if (task.color === "red") return    " [TODO]";
+      if (task.color === "yellow") return "[DOING]";
+      return " [DONE]";
+    };
+
+    // Function to download comments as a text file
+    const downloadComments = () => {
+      const filename = "comments.txt";
+      const commentText = tasks.map(task => {
+        const formattedTimestamp = getFormattedTimestamp(task.timestamp);
+        const statusLabel = getStatusLabel(task);
+        return `[${formattedTimestamp}] ${statusLabel} ${task.name}: ${task.task}`;
+      }).join("\n");
+      const blob = new Blob([commentText], { type: "text/plain" });
+
+      if (window.navigator.msSaveOrOpenBlob) {
+        // For Internet Explorer
+        window.navigator.msSaveBlob(blob, filename);
+      } else {
+        // For other browsers
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = filename;
+        link.click();
+      }
+    };
+
+    // Function to format the timestamp as "[2023/07/21 10:28:44]"
+    const getFormattedTimestamp = (timestamp) => {
+      const dateObj = new Date(timestamp);
+      const year = dateObj.getFullYear();
+      const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
+      const day = dateObj.getDate().toString().padStart(2, '0');
+      const hours = dateObj.getHours().toString().padStart(2, '0');
+      const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+      const seconds = dateObj.getSeconds().toString().padStart(2, '0');
+      return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+    };
+
+    const addTask = () => {
+      const name = document.querySelector("#add-task input[name='name']").value;
+      const taskElement = document.querySelector("#add-task textarea");
+      const task = taskElement.value;
+      const timestamp = new Date().toISOString(); // Convert the timestamp to a string
+      const newTask = {
+        name,
+        task,
+        timestamp,
+        color: "red",
+      };
+      if (task.trim() !== "") {
+        tasks.push(newTask);
+        event.preventDefault();
+        saveTasksToLocalStorage();
+        updateTasks();
+        taskElement.value = ""; // Clear the textarea after adding a task
+      }
+    };
+
+    // Function to delete a specific task and update local storage
+    const deleteTask = (index) => {
+      tasks.splice(index, 1);
+      saveTasksToLocalStorage();
+      updateTasks();
+    };
+
+    const updateTasks = () => {
+      const ul = document.querySelector("#tasks ul");
+      ul.innerHTML = "";
+      tasks.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      for (const [index, task] of tasks.entries()) {
+        const formattedTimestamp = getFormattedTimestamp(task.timestamp);
+
+        ul.innerHTML += `
+          <li class="bubble-container">
+            <div class="bubble ${getBubbleColorClass(task)}" data-index="${index}">
+              ${task.name}: ${task.task.replace(/(https?:\/\/[^\s]+)/g, (href) => `<a href="${href}">${href}</a>`)}
+              <strong class="timestamp">[${formattedTimestamp}]</strong>
+            </div>
+            <button onclick="deleteTask(${index})" class="delete-button">X</button>
+          </li>
+        `;
+      }
+    };
+
+    // Function to get the appropriate class for the bubble color
+    const getBubbleColorClass = (task) => {
+      if (task.color === "red") return "red";
+      if (task.color === "yellow") return "yellow";
+      return "green"; // Default to green if the color is not specified
+    };
+
+    // Function to cycle the background color of a task bubble and update local storage
+    const cycleBubbleColor = (index) => {
+      const colors = ["red", "yellow", "green"];
+      const currentColorIndex = colors.indexOf(tasks[index].color);
+      const nextColorIndex = (currentColorIndex + 1) % colors.length;
+      tasks[index].color = colors[nextColorIndex];
+      saveTasksToLocalStorage();
+      updateTasks();
+    };
+
+    loadTasksFromLocalStorage();
+    updateTasks();
+
+    // Select the text within the input element
+    document.addEventListener("DOMContentLoaded", () => {
+      const nameInput = document.querySelector("#name");
+      nameInput.setSelectionRange(0, nameInput.value.length);
+    });
+
+    // Event delegation for handling bubble click events
+    document.querySelector("#tasks ul").addEventListener("click", (event) => {
+      const bubbleDiv = event.target.closest(".bubble");
+      if (bubbleDiv) {
+        const index = bubbleDiv.dataset.index;
+        cycleBubbleColor(index);
+      }
+    });
+
+    document.querySelector("#add-task textarea").addEventListener("keydown", (event) => {
+      if (event.keyCode === 13 && event.shiftKey) {
+        const taskElement = document.querySelector("#add-task textarea");
+        const task = taskElement.value;
+        if (task.trim() === "") {
+          event.preventDefault(); // Prevent the newline behavior
+        } else {
+          addTask();
+        }
+      }
+    });
+
+    // Function to clear local storage and reload the tasks list
+    const clearLocalStorage = () => {
+      tasks = []; // Clear the tasks array
+      localStorage.removeItem('tasks'); // Remove the 'tasks' key from local storage
+      updateTasks(); // Reload the tasks list (will be empty after clearing)
+
+      // Set the focus on the task name input
+      const taskElement = document.querySelector("#add-task input[name='name']");
+      taskElement.focus();
+    };
+  </script>
+</body>
+</html>
