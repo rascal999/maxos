@@ -555,9 +555,9 @@ d.phash() {
 }
 
 d.sharelatex() {
-  sed -i "s#- 80:80#- 127.0.0.1:${PORT_SHARELATEX}:80#g" ${HOME}/git/misc/overleaf/docker-compose.yml
-  sed -i "s#image: sharelatex/sharelatex#image: tuetenk0pp/sharelatex-full#g" ${HOME}/git/misc/overleaf/docker-compose.yml
-  docker-compose -f ${HOME}/git/misc/overleaf/docker-compose.yml up -d
+  sed -i "s#- 80:80#- 127.0.0.1:${PORT_SHARELATEX}:80#g" ${HOME}/git/maxos/repos/misc/overleaf/docker-compose.yml
+  sed -i "s#image: sharelatex/sharelatex#image: tuetenk0pp/sharelatex-full#g" ${HOME}/git/maxos/repos/misc/overleaf/docker-compose.yml
+  docker-compose -f ${HOME}/git/maxos/repos/misc/overleaf/docker-compose.yml up -d
 }
 
 d.sharelatex-kill() {
