@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{1cb25516-2dd9-4ea3-86ad-6fd863ee2fa1}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/toolbar-control-for-youtube-mu/addon-1081777-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "Shortkeys@Shortkeys.com": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shortkeys/addon-770703-latest.xpi",
         "installation_mode": "normal_installed"
