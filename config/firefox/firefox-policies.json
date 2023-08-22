@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "checkerplusforgmail@jasonsavard.com": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/checker-plus-gmail/addon-748222-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "checkerplusforgooglecalendar@jasonsavard.com": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/checker-plus-for-calendar/addon-739662-latest.xpi",
         "installation_mode": "normal_installed"
