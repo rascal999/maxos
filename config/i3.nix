@@ -60,7 +60,7 @@ in {
         "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
-        "${mod}+i" = "exec ${pkgs.xcalib}/bin/xcalib -i -a";
+        "${mod}+i" = "exec /home/user/git/maxos/scripts/logseq_entry.sh";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
