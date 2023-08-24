@@ -52,7 +52,7 @@ in {
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
-        "${mod}+a" = "exec ${pkgs.slack}/bin/slack";
+        "${mod}+a" = "exec /home/user/git/maxos/scripts/logseq_entry.sh";
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
         "${mod}+c" = "exec /home/user/git/maxos/scripts/chromium.sh";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
@@ -60,7 +60,6 @@ in {
         "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
-        "${mod}+i" = "exec /home/user/git/maxos/scripts/logseq_entry.sh";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
