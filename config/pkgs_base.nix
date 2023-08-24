@@ -18,6 +18,7 @@
     android-tools                                                                                        # Android SDK platform tools
     anevicon                                                                                             # UDP-based load generator
     ansible                                                                                              # Radically simple IT automation
+    antimicrox                                                                                           # GUI for mapping keyboard and mouse controls to a gamepad
     apkeep                                                                                               # A command-line tool for downloading APK files from various sources
     apkleaks                                                                                             # Scanning APK file for URIs, endpoints and secrets
     #apktool                                                                                              # A tool for reverse engineering Android apk files
