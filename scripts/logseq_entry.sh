@@ -5,6 +5,9 @@ DELAY=400
 xdotool key Alt+2
 echo "Alt+2 keys"
 
+xdotool mousemove --screen 0 5500 100
+echo "Mouse move"
+
 WID=`xdotool search --onlyvisible --classname logseq`
 xdotool windowfocus --sync $WID
 
