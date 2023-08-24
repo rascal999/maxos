@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DELAY=400
+DELAY=350
 
 xdotool key Alt+2
 echo "Alt+2 keys"
@@ -32,7 +32,7 @@ echo "Pressed O"
 sleep 0.2
 
 TIME=`date +"%H:%M"`
-xdotool type --delay $DELAY "$TIME"
+xdotool type --delay 75 "$TIME"
 echo $TIME
 
 xdotool key --delay $DELAY Enter
