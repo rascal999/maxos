@@ -37,7 +37,7 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
         "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
-        "${mod}+space" = "exec i3-input -F 'workspace %s' -P 'goto: '";
+        "${mod}+space" = "exec /home/user/git/maxos/scripts/logseq_entry.sh";
         "${mod}+Shift+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
         "${mod}+Shift+l" = "exec sudo poweroff";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
@@ -52,7 +52,7 @@ in {
         "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
-        "${mod}+a" = "exec /home/user/git/maxos/scripts/logseq_entry.sh";
+        "${mod}+a" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
         "${mod}+c" = "exec /home/user/git/maxos/scripts/chromium.sh";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
