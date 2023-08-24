@@ -20,9 +20,11 @@ echo "Escape key"
 xdotool key --delay $DELAY "g"
 echo "Pressed g"
 
+sleep 0.2
 xdotool key --delay $DELAY "j"
 echo "Pressed j"
 
+sleep 0.2
 xdotool key --delay $DELAY Down
 echo "Down key"
 
@@ -33,7 +35,6 @@ xdotool key --delay $DELAY O
 echo "Pressed O"
 
 sleep 0.2
-
 TIME=`date +"%H:%M"`
 xdotool type --delay 100 "$TIME"
 echo $TIME
