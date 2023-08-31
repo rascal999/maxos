@@ -3297,7 +3297,7 @@
 
     "Bookmarks": [
       {
-        "Title": "fs screenshots",
+        "Title": "fs sshots",
         "URL": "file:///home/user/screenshots_today",
         "Placement": "toolbar"
       },
@@ -3309,11 +3309,6 @@
       {
         "Title": "Buffer",
         "URL": "data:text/html;base64,PGh0bWwgY29udGVudGVkaXRhYmxlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPgo=",
-        "Placement": "toolbar"
-      },
-      {
-        "Title": "Daily Tasks",
-        "URL": "file:///home/user/git/maxos/resources/daily_tasks.html",
         "Placement": "toolbar"
       },
       {
