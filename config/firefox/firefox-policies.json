@@ -2941,6 +2941,15 @@
             ]
           },
           {
+            "name": "Threat Modelling",
+            "children": [
+              {
+                "name": "Excalidraw",
+                "url": "http://localhost:10200/"
+              }
+            ]
+          },
+          {
             "name": "Web",
             "children": [
               {
