@@ -186,6 +186,11 @@
       image = "danielgatis/rembg";
       ports = [ "127.0.0.1:10130:5000" ];
     };
+
+    excalidraw = {
+      image = "excalidraw/excalidraw:latest";
+      ports = [ "127.0.0.1:10200:80" ];
+    };
   };
 
   systemd.services.docker-nginx.serviceConfig.TimeoutStopSec = lib.mkForce 15;
@@ -212,4 +217,5 @@
   systemd.services.docker-mermaid.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-libreddit.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-excalidraw.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
