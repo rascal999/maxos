@@ -9,6 +9,10 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
+      "{04953d10-f97e-4143-87ea-ff21472589b0}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/logseq-quick-capture/addon-2774116-latest.xpi",
+        "installation_mode": "normal_installed"
+      },
       "checkerplusforgmail@jasonsavard.com": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/checker-plus-gmail/addon-748222-latest.xpi",
         "installation_mode": "normal_installed"
