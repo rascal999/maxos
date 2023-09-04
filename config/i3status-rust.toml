@@ -48,7 +48,7 @@ missing_format = ""
 [[block]]
 block = "time"
 interval = 20
-format = "$timestamp.datetime(f:'%m/%d %R')"
+format = "$timestamp.datetime(f:'%U %m/%d %R')"
 
 [[block]]
 block = "sound"
