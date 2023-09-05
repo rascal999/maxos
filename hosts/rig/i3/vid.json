@@ -19,11 +19,11 @@
                "y": 0
             },
             "marks": [],
-            "name": "vlc",
+            "name": "mpv",
             "percent": 0.5,
             "swallows": [
                {
-                  "class": "^vlc$"
+                  "class": "^mpv$"
                }
             ],
             "type": "con"
@@ -39,11 +39,11 @@
                "y": 0
             },
             "marks": [],
-            "name": "vlc",
+            "name": "mpv",
             "percent": 0.5,
             "swallows": [
                {
-                  "class": "^vlc$"
+                  "class": "^mpv$"
                }
             ],
             "type": "con"
@@ -71,11 +71,11 @@
                "y": 0
             },
             "marks": [],
-            "name": "vlc",
+            "name": "mpv",
             "percent": 0.5,
             "swallows": [
                {
-                  "class": "^vlc$"
+                  "class": "^mpv$"
                }
             ],
             "type": "con"
@@ -91,11 +91,11 @@
                "y": 0
             },
             "marks": [],
-            "name": "vlc",
+            "name": "mpv",
             "percent": 0.5,
             "swallows": [
                {
-                  "class": "^vlc$"
+                  "class": "^mpv$"
                }
             ],
             "type": "con"

@@ -47,13 +47,13 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/slack
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8"
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8"
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/vlc https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8"
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8"
 
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
