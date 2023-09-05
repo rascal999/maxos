@@ -37,43 +37,42 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
 
         "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
-        "${mod}+space" = "exec /home/user/git/maxos/scripts/logseq_entry.sh";
-        "${mod}+Shift+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
-        "${mod}+Shift+l" = "exec sudo poweroff";
-        "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
-        "${mod}+Shift+c" = "kill";
-        "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
-        "${mod}+Shift+o" = "exec ${pkgs.obs-studio}/bin/obs";
-        "${mod}+Shift+p" = "restart";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
+        "${mod}+space" = "exec i3-input -F 'workspace %s' -P 'goto: '";
+        "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
-        "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
-        "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
-        "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
-        "${mod}+a" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+b" = "exec /home/user/git/maxos/scripts/burp.sh";
         "${mod}+c" = "exec /home/user/git/maxos/scripts/chromium.sh";
+        "${mod}+Shift+c" = "kill";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splith";
         "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
+        "${mod}+Shift+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
+        "${mod}+Shift+l" = "exec sudo poweroff";
         "${mod}+m" = "exec /home/user/git/maxos/scripts/toggle_touchpad.sh";
+        "${mod}+Shift+m" = "exec /home/user/git/maxos/scripts/monitors.sh";
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
+        "${mod}+Shift+o" = "exec ${pkgs.obs-studio}/bin/obs";
         "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost --force-device-scale-factor=1.6";
+        "${mod}+Shift+p" = "restart";
         "${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
+        "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+u" = "fullscreen";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
-        #"${mod}+w" = "exec sudo ${pkgs.wireshark}/bin/wireshark";
+        "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+w" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
+        "${mod}+Shift+w" = "exec ${pkgs.remmina}/bin/remmina";
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
+        "${mod}+Shift+x" = "exec /home/user/git/maxos/scripts/suspend.sh";
 
         # Focus
         "${mod}+Left" = "focus left";
