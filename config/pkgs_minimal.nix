@@ -153,6 +153,7 @@ in {
     woeusb                                                                                               # Create bootable USB disks from Windows ISO images
     xh                                                                                                   # Friendly and fast tool for sending HTTP requests
     xkb-switch-i3                                                                                        # Switch your X keyboard layouts from the command line(i3 edition)
+    xsensors                                                                                             # Hardware sensor information
     zip                                                                                                  # Compressor/archiver for creating and modifying zipfiles
     zlib                                                                                                 # Lossless data-compression library
     zsh                                                                                                  # The Z shell
