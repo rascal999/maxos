@@ -9,7 +9,6 @@ let
     django
     flask
     gitlab
-    open-interpreter
     openai
     pip
     pytest
