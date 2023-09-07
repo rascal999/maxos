@@ -77,6 +77,7 @@ in {
     kubernetes-helm                                                                                      #
     lazygit                                                                                              # Simple terminal UI for git commands
     libsecret                                                                                            # A library for storing and retrieving passwords and other secrets
+    lm_sensors                                                                                           # Tools for reading hardware sensors
     lshw                                                                                                 # Provide detailed information on the hardware configuration of the machine
     ltrace                                                                                               # Library call tracer
     mcfly                                                                                                # An upgraded ctrl-r for Bash whose history results make sense for what you're working on right now
