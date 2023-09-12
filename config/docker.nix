@@ -195,7 +195,7 @@
     ssu = {
       image = "rascal999/ssu:latest";
       volumes = [
-                  "/monitor:/home/user/Data/logseq"
+                  "/home/user/Data/logseq:/monitor"
                   "/home/user/git/slack_status_updater/.env:/.env"
                 ];
     };
