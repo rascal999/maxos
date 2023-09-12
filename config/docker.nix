@@ -191,6 +191,14 @@
       image = "excalidraw/excalidraw:latest";
       ports = [ "127.0.0.1:10200:80" ];
     };
+
+    ssu = {
+      image = "rascal999/ssu:latest";
+      volumes = [
+                  "/monitor:/home/user/Data/logseq"
+                  "/home/user/git/slack_status_updater/.env:/.env"
+                ];
+    };
   };
 
   systemd.services.docker-nginx.serviceConfig.TimeoutStopSec = lib.mkForce 15;
