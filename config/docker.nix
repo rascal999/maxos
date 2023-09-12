@@ -226,4 +226,5 @@
   systemd.services.docker-libreddit.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-excalidraw.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-ssu.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
