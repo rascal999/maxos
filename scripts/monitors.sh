@@ -37,8 +37,6 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /etc/profiles/per-user/user/bin/firefox
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon /run/current-system/sw/bin/VirtualBox
-    /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6"
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --app=http://localhost"
