@@ -10,6 +10,7 @@ let
     flask
     gitlab
     openai
+    pandas
     pip
     pytest
     requests
