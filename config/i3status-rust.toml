@@ -4,6 +4,10 @@ theme = "solarized-dark"
 icons = "awesome6"
 
 [[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:20) $play $next |}"
+
+[[block]]
 block = "net"
 device = "enp.*"
 format = "$speed_down.eng(prefix:M) ↓ $speed_up.eng(prefix:M) ↑ {$signal_strength $ssid $frequency|} $ip "
