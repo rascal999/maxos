@@ -13,6 +13,7 @@ let
     pandas
     pip
     pytest
+    python-gitlab
     requests
     scapy
     selenium
