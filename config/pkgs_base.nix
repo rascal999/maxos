@@ -106,6 +106,7 @@
     dhcpdump                                                                                             # A tool for visualization of DHCP packets as recorded and output by tcpdump to analyze DHCP server responses
     diff-pdf                                                                                             # Simple tool for visually comparing two PDF files
     dirb                                                                                                 # A web content scanner
+    discord                                                                                              # All-in-one cross-platform voice and text chat for gamers
     dislocker                                                                                            # Read BitLocker encrypted partitions in Linux
     dismap                                                                                               # Asset discovery and identification tools
     dive                                                                                                 # A tool for exploring each layer in a docker image
