@@ -5,20 +5,13 @@ icons = "awesome6"
 
 [[block]]
 block = "music"
-format = " $icon {$combo.str(max_w:40) $play $next |}"
-seek_step_secs = 10
-[[block.click]]
-button = "up"
-action = "volume_up"
-[[block.click]]
-button = "down"
-action = "volume_down"
+format = " $icon {$combo.str(max_w:40) |}"
 [[block.click]]
 button = "left"
 action = "play_pause"
 [[block.click]]
 button = "right"
-action = "seek_forward"
+action = "next"
 
 [[block]]
 block = "net"
