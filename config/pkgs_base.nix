@@ -138,6 +138,7 @@
     extrude                                                                                              # Tool to analyse binaries for missing security features
     extundelete                                                                                          # Utility that can recover deleted files from an ext3 or ext4 partition
     fcrackzip                                                                                            # zip password cracker, similar to fzc, zipcrack and others
+    ferdium                                                                                              # All your services in one place built by the community
     feroxbuster                                                                                          # Fast, simple, recursive content discovery tool
     ffmpeg                                                                                               # Bindings for the ffmpeg libraries
     ffuf                                                                                                 # Fast web fuzzer written in Go
