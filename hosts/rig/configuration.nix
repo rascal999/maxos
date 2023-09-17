@@ -49,13 +49,13 @@
   networking.nameservers = [ "8.8.8.8" ];
 
   # Enable cron service
-  services.cron = {
-    enable = true;
-    systemCronJobs = [
-      "25 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
-      "55 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
-      "0 16 * * *        root    /home/user/git/maxos/scripts/backup_plane.sh"
-      "5 16 * * *        root    /home/user/git/maxos/scripts/backup_data.sh"
-    ];
-  };
+  #services.cron = {
+  #  enable = true;
+  #  systemCronJobs = [
+  #    "25 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
+  #    "55 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
+  #    "0 16 * * *        root    /home/user/git/maxos/scripts/backup_plane.sh"
+  #    "5 16 * * *        root    /home/user/git/maxos/scripts/backup_data.sh"
+  #  ];
+  #};
 }
