@@ -64,6 +64,25 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 ###
+### sshm
+###
+sshm() {
+  TARGET_HOST=`echo $@ | choose -f '@' 1 | choose 0`
+  if [[ "$@" == *"@"* ]]; then
+    TARGET_USER=`echo $@ | choose -f '@' 0 | choose -1`
+  else
+    TARGET_USER="$USER"
+  fi
+
+  TARGET_DIR="/home/user/tmp_today/${TARGET_HOST}_mount"
+  mkdir -p $TARGET_DIR
+
+  sshfs ${TARGET_USER}@${TARGET_HOST}:/ $TARGET_DIR
+  ssh $@
+  umount $TARGET_DIR
+};
+
+###
 ### SSH alert
 ###
 if [[ -n "$SSH_CONNECTION" ]]; then
@@ -104,7 +123,6 @@ new() {
   echo "a.ech                       Export command history"
   echo "a.localhostrun-gotty        Terminal command over web"
   echo "a.localhostrun-privatebin   Privatebin over web"
-  echo "a.gsa                       git submodule add --force \$@"
   echo "a.iam                       Enumerate perms for AWS keys (enumerate-iam)"
   echo "a.ips                       Return all IPs in CIDR range in given file"
   echo "a.netscan                   Network scanning (nmap/masscan)"
@@ -126,6 +144,7 @@ new() {
   echo "d.thr                       Trufflehog against repo"
   echo "d.webtop                    Ubuntu, Alpine, Arch, and Fedora based Webtop images"
   echo "now                         date +\"%Y%m%d_%H%M%S\""
+  echo "sshm                        SSH and mount target / directory using sshfs"
 }
 
 test-vpn() {
