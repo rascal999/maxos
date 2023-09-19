@@ -3068,7 +3068,7 @@ preexec() {
 precmd() {
     set -A _elapsed $_elapsed $(( SECONDS-_start ))
     echo $_elapsed[-1]
-    if (( $_elapsed[-1] > 10 )); then
+    if (( $_elapsed[-1] > 10 )) && [[ "$(xdotool getwindowfocus)" -ne "$WINDOWID" ]]; then
         aplay /home/user/git/maxos/resources/sounds/mixkit-correct-answer-tone-2870.wav
     fi
 }
