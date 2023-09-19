@@ -77,10 +77,10 @@ sshm() {
   TARGET_DIR="/home/user/tmp_today/${TARGET_HOST}_mount"
   mkdir -p $TARGET_DIR
 
-  sshfs ${TARGET_USER}@${TARGET_HOST}:/ $TARGET_DIR
+  sshfs -o uid=`id -u user` -o gid=`id -g user` ${TARGET_USER}@${TARGET_HOST}:/ $TARGET_DIR
   ssh $@
   umount $TARGET_DIR
-};
+}
 
 ###
 ### SSH alert
