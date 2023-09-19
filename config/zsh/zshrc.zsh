@@ -3067,7 +3067,7 @@ preexec() {
 
 precmd() {
     set -A _elapsed $_elapsed $(( SECONDS-_start ))
-    if [[ "$_elapsed" -gt "10" ]]; then
+    if [[ (( $_elapsed > 10 )) ]]; then
         aplay /home/user/git/maxos/resources/sounds/mixkit-correct-answer-tone-2870.wav
     fi
 }
