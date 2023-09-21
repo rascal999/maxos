@@ -1478,7 +1478,7 @@ d.nginxhere() {
   fi
 
   screen -S nginxhere -adm docker run --rm -it -p 1080:80 -p 443:443 -v "$(pwd):/srv/data" rflathers/nginxserve
-  firefox http://127.0.0.1 &; disown
+  firefox http://127.0.0.1:1080 &; disown
 }
 
 d.webdavhere() {
