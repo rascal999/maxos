@@ -35,7 +35,7 @@ in {
       keybindings = lib.mkDefault {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
-        "Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
+        "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
         "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
