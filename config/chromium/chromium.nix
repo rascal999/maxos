@@ -7,6 +7,7 @@
       { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; } # Dark Reader
       { id = "ddihdomdfpicmiobogkoaideoklkhbah"; } # Dark Theme
       { id = "pnhdnpnnffpijjbnhnipkehhibchdeok"; } # EpubPress
+      { id = "ijfgglilaeakmoilplpcjcgjaoleopfi"; } # MultiLogin
       { id = "ecabifbgmdmgdllomnfinbmaellmclnh"; } # Reader View
       { id = "kbmfpngjjgdllneeigpgjifpgocmfgmb"; } # Reddit Enhancement Suite
       { id = "mooikfkahbdckldjjndioackbalphokd"; } # Selenium
