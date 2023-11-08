@@ -59,7 +59,7 @@ missing_format = ""
 block = "tea_timer"
 format = " $icon {$minutes:$seconds |}"
 done_cmd = "notify-send 'Timer Finished'"
-increment = 600
+increment = 300
 
 [[block]]
 block = "time"
