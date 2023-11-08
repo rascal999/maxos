@@ -56,6 +56,11 @@ format = "$percentage $time"
 missing_format = ""
 
 [[block]]
+block = "tea_timer"
+format = " $icon {$minutes:$seconds |}"
+done_cmd = "notify-send 'Timer Finished'"
+
+[[block]]
 block = "time"
 interval = 20
 format = "$timestamp.datetime(f:'%U %m/%d %R')"
