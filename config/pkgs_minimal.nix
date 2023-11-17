@@ -35,7 +35,6 @@ in {
     cht-sh                                                                                               #
     cifs-utils                                                                                           # Tools for managing Linux CIFS client filesystems
     coreutils                                                                                            # The GNU Core Utilities
-    dhcp                                                                                                 # Dynamic Host Configuration Protocol (DHCP) tools
     dhcpcd                                                                                               # A client for the Dynamic Host Configuration Protocol (DHCP)
     dig                                                                                                  #
     docker                                                                                               # An open source project to pack, ship and run any application as a lightweight container
