@@ -194,6 +194,7 @@
   nixpkgs.config.permittedInsecurePackages = [
      "electron-21.4.0"
      "python-2.7.18.6"
+     "python-2.7.18.7"
   ];
 
   # docker
