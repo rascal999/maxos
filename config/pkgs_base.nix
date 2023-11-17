@@ -347,7 +347,6 @@
     snmpcheck                                                                                            # SNMP enumerator
     sonar-scanner-cli                                                                                    # SonarQube Scanner used to start code analysis
     sox                                                                                                  # Sample Rate Converter for audio
-    spike                                                                                                # A RISC-V ISA Simulator
     sqlite                                                                                               # A self-contained, serverless, zero-configuration, transactional SQL database engine
     sqlmap                                                                                               # Automatic SQL injection and database takeover tool
     srm                                                                                                  # Delete files securely
