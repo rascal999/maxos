@@ -8,11 +8,31 @@
        "y": 0
     },
     "marks": [],
-    "name": "Ferdium",
-    "percent": 1.0,
+    "name": "WhatsApp",
+    "percent": 0.5,
     "swallows": [
        {
-          "class": "^Ferdium$"
+          "class": "^Chromium\\-browser$",
+          "title": "^WhatsApp\\ \\-\\ Chromium$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "x": 0, 
+       "y": 0
+    },
+    "marks": [],
+    "name": "Slack",
+    "percent": 0.5,
+    "swallows": [
+       {
+          "class": "^Slack$"
        }
     ],
     "type": "con"
