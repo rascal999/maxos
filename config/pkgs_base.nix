@@ -301,6 +301,7 @@
     pwntools                                                                                             # CTF framework and exploit development library
     qbittorrent                                                                                          # Featureful free software BitTorrent client
     qpaeq                                                                                                # An equalizer interface for pulseaudio's equalizer sinks
+    quickemu                                                                                             # Quickly create and run optimised Windows, macOS and Linux desktop virtual machines
     radamsa                                                                                              # A general purpose fuzzer
     radare2                                                                                              # unix-like reverse engineering framework and commandline tools
     rclone                                                                                               # Command line program to sync files and directories to and from major cloud storage
