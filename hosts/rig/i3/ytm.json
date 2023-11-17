@@ -13,7 +13,7 @@
     "swallows": [
        {
           "class": "^Chromium\\-browser$",
-          "title": "^WhatsApp\\ \\-\\ Chromium$"
+          "title": "^web\\.whatsapp\\.com$"
        }
     ],
     "type": "con"
