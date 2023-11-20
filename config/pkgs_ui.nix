@@ -13,7 +13,6 @@
     lxappearance                                                                                         # Lightweight program for configuring the theme and fonts of gtk applications
     networkmanager_dmenu                                                                                 #
     notify-desktop                                                                                       # Little application that lets you send desktop notifications with one command
-    postman
     redshift                                                                                             # Screen color temperature manager
     slack                                                                                                # Desktop client for Slack
     tesseract                                                                                            # OCR engine
