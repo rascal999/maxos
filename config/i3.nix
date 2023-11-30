@@ -39,7 +39,7 @@ in {
 
         "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
-        "${mod}+space" = "exec i3-input -F 'workspace %s' -P 'goto: '";
+        "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
