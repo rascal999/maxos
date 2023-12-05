@@ -188,9 +188,6 @@
   services.k3s.enable = false;
   #services.k3s.role = "server";
 
-  # Enable twingate
-  services.twingate.enable = true;
-
   # Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
 
