@@ -23,6 +23,7 @@
     xfce.thunar                                                                                          # Xfce file manager
     xfce.tumbler                                                                                         # A D-Bus thumbnailer service
     xlockmore                                                                                            # Screen locker for the X Window System
+    xorg.xinit                                                                                           #
     xorg.libXext                                                                                         #
     xorg.xbacklight                                                                                      #
     xorg.xeyes                                                                                           #
