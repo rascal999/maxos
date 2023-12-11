@@ -192,13 +192,13 @@
       ports = [ "127.0.0.1:10200:80" ];
     };
 
-    ssu = {
-      image = "rascal999/ssu:latest";
-      volumes = [
-                  "/home/user/Data/logseq:/monitor"
-                  "/home/user/git/slack_status_updater/.env:/.env"
-                ];
-    };
+    #ssu = {
+    #  image = "rascal999/ssu:latest";
+    #  volumes = [
+    #              "/home/user/Data/logseq:/monitor"
+    #              "/home/user/git/slack_status_updater/.env:/.env"
+    #            ];
+    #};
   };
 
   systemd.services.docker-nginx.serviceConfig.TimeoutStopSec = lib.mkForce 15;
