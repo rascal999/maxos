@@ -49,6 +49,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable twingate
+  services.twingate.enable = true;
+
   # No
   powerManagement.enable = false;
 
