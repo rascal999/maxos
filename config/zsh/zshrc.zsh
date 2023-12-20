@@ -50,6 +50,7 @@ PORT_MERMAID=10180
 PORT_LIBREDDIT=10190
 PORT_WIREGUARD=51820
 PORT_EXCALIDRAW=10200
+PORT_MINISERVE=10210
 
 export MCFLY_KEY_SCHEME=vim
 export MCFLY_RESULTS=40
@@ -1478,7 +1479,20 @@ d.nginxhere() {
   fi
 
   screen -S nginxhere -adm docker run --rm -it -p 1080:80 -p 443:443 -v "$(pwd):/srv/data" rflathers/nginxserve
+  sleep 2
   firefox http://127.0.0.1:1080 &; disown
+}
+
+d.miniservehere() {
+  # Security measure
+  if [[ "`pwd`" == "$HOME" ]]; then
+    echo "ERROR: Not running in $HOME .."
+    return 1
+  fi
+
+  screen -S miniservehere -adm docker run -v "$(pwd):/tmp" -p 10210:8080 --rm -it docker.io/svenstaro/miniserve -grz /tmp
+  sleep 2
+  firefox http://127.0.0.1:10210 &; disown
 }
 
 d.webdavhere() {
