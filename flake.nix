@@ -64,7 +64,7 @@
 
           ({ pkgs, ... }: {
             home-manager.users.user.imports = [
-              ./home.nix
+              ./hosts/rig/home.nix
               ./hosts/rig/i3/i3.nix
             ];
           })
