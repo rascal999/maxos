@@ -12,7 +12,7 @@ in
   "api-nist.age".publicKeys = hosts;
   "api-shodan.age".publicKeys = hosts;
   "api-strava.age".publicKeys = hosts;
-  "api-tapo-user.age".publicKeys = hosts;
+  "api-tapo-username.age".publicKeys = hosts;
   "api-tapo-password.age".publicKeys = hosts;
   "api-telegram.age".publicKeys = hosts;
   "api-virustotal.age".publicKeys = hosts;
