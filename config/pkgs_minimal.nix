@@ -34,10 +34,10 @@ let
           sha256 = "sha256-MaTICgsFu/w5B7p6czR23WCGa39+NJVPgwVEB45QV64=";
         };
         doCheck = false;
-        #propagatedBuildInputs = [
-        #  # Specify dependencies
-        #  pkgs.python3Packages.numpy
-        #];
+        propagatedBuildInputs = [
+          # Specify dependencies
+          pkgs.python3Packages.numpy
+        ];
       }
     )
   ];
