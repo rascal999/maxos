@@ -23,28 +23,6 @@ let
     xmltodict
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
-
-  my-pypi-packages = ps: with ps; [
-    (
-      buildPythonPackage rec {
-        pname = "tapo";
-        version = "0.1.3";
-        src = fetchPypi {
-          inherit pname version;
-          sha256 = "sha256-MaTICgsFu/w5B7p6czR23WCGa39+NJVPgwVEB45QV64=";
-        };
-        doCheck = false;
-        propagatedBuildInputs = [
-          # Specify dependencies
-          pkgs.python3Packages.format
-          pkgs.python3Packages.check
-          pkgs.python3Packages.clippy
-          pkgs.python3Packages.test
-        ];
-      }
-    )
-  ];
-  python-with-my-pypi-packages = python3.withPackages my-pypi-packages;
 in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -108,7 +86,6 @@ in {
     mosh                                                                                                 # Mobile shell (ssh replacement)
     mtr                                                                                                  # A network diagnostics tool
     python-with-my-packages
-    python-with-my-pypi-packages
     navi                                                                                                 # An interactive cheatsheet tool for the command-line and application launchers
     ncftp                                                                                                # Command line FTP (File Transfer Protocol) client
     netcat-gnu                                                                                           #
