@@ -18,6 +18,7 @@ let
     scapy
     selenium
     setuptools
+    tapo
     torch
     #wordcloud
     xmltodict
