@@ -103,6 +103,7 @@ in {
     mcrypt                                                                                               # Replacement for old UNIX crypt(1)
     mosh                                                                                                 # Mobile shell (ssh replacement)
     mtr                                                                                                  # A network diagnostics tool
+    my-pypi-packages                                                                                     #
     python-with-my-packages
     navi                                                                                                 # An interactive cheatsheet tool for the command-line and application launchers
     ncftp                                                                                                # Command line FTP (File Transfer Protocol) client
