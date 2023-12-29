@@ -50,6 +50,7 @@ in {
         "${mod}+Shift+c" = "kill";
         "${mod}+d" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splith";
+        "${mod}+f" = "exec /home/user/git/maxos/scripts/tapo_fan_toggle.sh";
         "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
