@@ -36,7 +36,10 @@ let
         doCheck = false;
         propagatedBuildInputs = [
           # Specify dependencies
-          pkgs.python3Packages.numpy
+          pkgs.python3Packages.format
+          pkgs.python3Packages.check
+          pkgs.python3Packages.clippy
+          pkgs.python3Packages.test
         ];
       }
     )
