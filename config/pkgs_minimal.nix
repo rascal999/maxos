@@ -23,11 +23,12 @@ let
     xmltodict
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
+
   my-pypi-packages = ps: with ps; [
     (
       buildPythonPackage rec {
-        pname = "deserialize";
-        version = "1.8.3";
+        pname = "tapo";
+        version = "0.1.3";
         src = fetchPypi {
           inherit pname version;
           sha256 = "sha256-0aozmQ4Eb5zL4rtNHSFjEynfObUkYlid1PgMDVmRkwY=";
@@ -131,7 +132,6 @@ in {
     pstree                                                                                               # Show the set of running processes as a tree
     pwgen                                                                                                # Password generator which creates passwords which can be easily memorized by a human
     python310                                                                                            #
-    python-with-my-packages                                                                              #
     qrcp                                                                                                 # Transfer files over wifi by scanning a QR code from your terminal
     qrencode                                                                                             # C library for encoding data in a QR Code symbol
     ranger                                                                                               # File manager with minimalistic curses interface
