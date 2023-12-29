@@ -31,7 +31,7 @@ let
         version = "0.1.3";
         src = fetchPypi {
           inherit pname version;
-          sha256 = "sha256-MaTICgsFu/w5B7p6czR23WCGa39+NJVPgwVEB45QV64="
+          sha256 = "sha256-MaTICgsFu/w5B7p6czR23WCGa39+NJVPgwVEB45QV64=";
         };
         doCheck = false;
         #propagatedBuildInputs = [
