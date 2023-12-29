@@ -16,6 +16,12 @@
     api-strava = {
       file = ../secrets/api-strava.age;
     };
+    api-tapo-username = {
+      file = ../secrets/api-tapo-username.age;
+    };
+    api-tapo-password = {
+      file = ../secrets/api-tapo-password.age;
+    };
     api-telegram = {
       file = ../secrets/api-telegram.age;
     };
@@ -63,6 +69,16 @@
     api-strava =
     {
       source = config.age.secrets.api-strava.path;
+      mode = "0444";
+    };
+    api-tapo-username =
+    {
+      source = config.age.secrets.api-tapo-username.path;
+      mode = "0444";
+    };
+    api-tapo-password =
+    {
+      source = config.age.secrets.api-tapo-password.path;
       mode = "0444";
     };
     api-telegram =
