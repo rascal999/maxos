@@ -23,6 +23,23 @@ let
     xmltodict
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
+  my-pypi-packages = ps: with ps; [
+    (
+      buildPythonPackage rec {
+        pname = "deserialize";
+        version = "1.8.3";
+        src = fetchPypi {
+          inherit pname version;
+          sha256 = "sha256-0aozmQ4Eb5zL4rtNHSFjEynfObUkYlid1PgMDVmRkwY=";
+        };
+        doCheck = false;
+        propagatedBuildInputs = [
+          # Specify dependencies
+          pkgs.python3Packages.numpy
+        ];
+      }
+    )
+  ];
 in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
