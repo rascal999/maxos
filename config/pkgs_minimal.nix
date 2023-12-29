@@ -41,6 +41,7 @@ let
       }
     )
   ];
+  python-with-my-pypi-packages = python3.withPackages my-pypi-packages;
 in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -103,8 +104,8 @@ in {
     mcrypt                                                                                               # Replacement for old UNIX crypt(1)
     mosh                                                                                                 # Mobile shell (ssh replacement)
     mtr                                                                                                  # A network diagnostics tool
-    my-pypi-packages                                                                                     #
     python-with-my-packages
+    python-with-my-pypi-packages
     navi                                                                                                 # An interactive cheatsheet tool for the command-line and application launchers
     ncftp                                                                                                # Command line FTP (File Transfer Protocol) client
     netcat-gnu                                                                                           #
