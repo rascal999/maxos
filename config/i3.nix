@@ -120,7 +120,7 @@ in {
 
       bars = [
         {
-          trayOutput = "HDMI-0";
+          trayOutput = "DP-4";
           fonts = [ "DejaVu Sans Mono" "FontAwesome 14" ];
           position = "bottom";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
