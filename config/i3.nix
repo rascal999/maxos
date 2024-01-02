@@ -7,6 +7,7 @@ in {
     enable = true;
 
     extraConfig = ''
+      tray_output HDMI-0
       default_border pixel 1
       #for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
       for_window [class=".*firefox.*"] move to workspace 1
@@ -120,7 +121,6 @@ in {
 
       bars = [
         {
-          tray_output "HDMI-0";
           fonts = [ "DejaVu Sans Mono" "FontAwesome 14" ];
           position = "bottom";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
