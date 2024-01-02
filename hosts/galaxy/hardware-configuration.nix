@@ -24,7 +24,7 @@
     };
 
   boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/b9057238-1bdc-4163-b894-f9fcd7d36268";
-  boot.initrd.luks.devices."home".device = "/dev/disk/by-uuid/5b755e43-ea09-4cbc-b4cf-18f0da0779c3";
+  boot.initrd.luks.devices."home".device = "/dev/disk/by-id/nvme-Samsung_SSD_990_PRO_2TB_2023031000014";
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/C64E-7617";
