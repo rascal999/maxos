@@ -7,6 +7,9 @@ in {
     enable = true;
 
     extraConfig = ''
+      bar {
+        tray_output HDMI-0
+      }
       default_border pixel 1
       #for_window [class=".*burp.StartBurp.*"] move to workspace "hax"
       for_window [class=".*firefox.*"] move to workspace 1
