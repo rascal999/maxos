@@ -25,6 +25,22 @@ in {
       #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
       no_focus [class="org.remmina.Remmina"]
       focus_on_window_activation none
+
+      bar {
+        tray_output HDMI-0
+        font pango:DejaVu Sans Mono, FontAwesome 14
+        position bottom
+        status_command i3status-rs /home/user/git/maxos/config/i3status-rust.toml
+        i3bar_command i3bar
+        colors {
+          statusline #dddddd
+          separator #666666
+          focused_workspace #0088CC #0088CC #ffffff
+          active_workspace #333333 #333333 #ffffff
+          inactive_workspace #333333 #333333 #888888
+          urgent_workspace #900000 #2f343a #ffffff
+        }
+      }
     '';
 
     config = {
@@ -117,39 +133,6 @@ in {
       };
 
       #workspaceAutoBackAndForth = true;
-
-      bars = [
-        {
-          tray_output = "HDMI-0";
-          fonts = [ "DejaVu Sans Mono" "FontAwesome 14" ];
-          position = "bottom";
-          statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
-          colors = {
-            "separator" = "#666666";
-            "statusline" = "#dddddd";
-            "focusedWorkspace" = {
-              "background" = "#0088CC";
-              "border" = "#0088CC";
-              "text" = "#ffffff";
-            };
-            "activeWorkspace" = {
-              "background" = "#333333";
-              "border" = "#333333";
-              "text" = "#ffffff";
-            };
-            "inactiveWorkspace" = {
-              "background" = "#333333";
-              "border" = "#333333";
-              "text" = "#888888";
-            };
-            "urgentWorkspace" = {
-              "background" = "#2f343a";
-              "border" = "#900000";
-              "text" = "#ffffff";
-            };
-          };
-        }
-      ];
     };
   };
 }
