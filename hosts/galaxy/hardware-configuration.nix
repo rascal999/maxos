@@ -19,7 +19,7 @@
     };
 
   fileSystems."/home" =
-    { device = "/dev/mapper/home":
+    { device = "/dev/mapper/home";
       fsType = "ext4";
     };
 
