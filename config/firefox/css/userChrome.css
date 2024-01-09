@@ -6,6 +6,27 @@ Author: dpcdpc11.gumroad.com
 ENJOY!
 */
 
+/* Multi-Row Bookmarks Toolbar */
+#PersonalToolbar {
+  /* Override max-height */
+  min-height: unset !important;
+  max-height: unset !important;
+}
+
+#PersonalToolbar #PlacesToolbarItems {
+  /* Override hiding */
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  display: inline-block !important;
+  padding-bottom: 1px;
+}
+
+#PersonalToolbar #PlacesToolbarItems .bookmark-item {
+  /* Reduce padding to fit rows closer together */
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+
 * {
   font-size: 12pt !important
 }
