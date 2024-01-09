@@ -16,8 +16,11 @@ See the above repository for updates as well as full license text. */
   --multirow-bmb-row-margin: 2px; /* Control how much spacing is between rows */
   max-height: none !important;
 }
+:root[BookmarksToolbarOverlapsBrowser] :where(#PersonalToolbar){
+  height: unset !important;
+}
 
-#PlacesToolbar > hbox{ 
+#PlacesToolbar > hbox:not(#PlacesToolbarDropIndicatorHolder){
   display: block;
   width: 100vw;
 }
@@ -26,9 +29,10 @@ See the above repository for updates as well as full license text. */
   display: flex;
   flex-wrap: wrap;
   /* --uc-bm-padding is defined in autohide_bookmarks_toolbar.css */
-  max-height: calc(var(--multirow-bmb-n-rows) * (5px + 1em + (2 * (var(--multirow-bmb-row-margin) + var(--uc-bm-padding,2px))))) !important;
+  max-height: calc(var(--multirow-bmb-n-rows) * (4px + 1em + (2 * (var(--multirow-bmb-row-margin) + var(--uc-bm-padding,var(--bookmark-block-padding)))))) !important;
   overflow-y:auto;
-  scrollbar-color: var(--lwt-accent-color) var(--toolbar-bgcolor) ;
+  scrollbar-color: var(--lwt-accent-color) var(--toolbar-bgcolor);
+  scrollbar-gutter: stable;
   scrollbar-width: thin;
 }
 
@@ -36,7 +40,10 @@ See the above repository for updates as well as full license text. */
 #PlacesChevron{ display: none }
 
 /* Add some spacing between rows */
-#PlacesToolbarItems > .bookmark-item{ margin: var(--multirow-bmb-row-margin) 3px !important;  }
+#PlacesToolbarItems > .bookmark-item{
+  margin: var(--multirow-bmb-row-margin) 3px !important;
+  visibility: visible !important; /* Just in case they would be hidden for some reason */
+}
 
 * {
   font-size: 12pt !important
