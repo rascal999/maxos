@@ -6,26 +6,37 @@ Author: dpcdpc11.gumroad.com
 ENJOY!
 */
 
-/* Multi-Row Bookmarks Toolbar */
-#PersonalToolbar {
-  /* Override max-height */
-  min-height: unset !important;
-  max-height: unset !important;
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/multi-row_bookmarks.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Makes bookmarks toolbar span multiple rows */
+
+#PersonalToolbar{
+  --multirow-bmb-n-rows: 3; /* Control how many rows are shown before scrolling */
+  --multirow-bmb-row-margin: 2px; /* Control how much spacing is between rows */
+  max-height: none !important;
 }
 
-#PersonalToolbar #PlacesToolbarItems {
-  /* Override hiding */
-  overflow-x: visible !important;
-  overflow-y: visible !important;
-  display: inline-block !important;
-  padding-bottom: 1px;
+#PlacesToolbar > hbox{ 
+  display: block;
+  width: 100vw;
 }
 
-#PersonalToolbar #PlacesToolbarItems .bookmark-item {
-  /* Reduce padding to fit rows closer together */
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
+#PlacesToolbarItems{
+  display: flex;
+  flex-wrap: wrap;
+  /* --uc-bm-padding is defined in autohide_bookmarks_toolbar.css */
+  max-height: calc(var(--multirow-bmb-n-rows) * (5px + 1em + (2 * (var(--multirow-bmb-row-margin) + var(--uc-bm-padding,2px))))) !important;
+  overflow-y:auto;
+  scrollbar-color: var(--lwt-accent-color) var(--toolbar-bgcolor) ;
+  scrollbar-width: thin;
 }
+
+/* Hide the all-bookmarks button */
+#PlacesChevron{ display: none }
+
+/* Add some spacing between rows */
+#PlacesToolbarItems > .bookmark-item{ margin: var(--multirow-bmb-row-margin) 3px !important;  }
 
 * {
   font-size: 12pt !important
