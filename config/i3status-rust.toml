@@ -64,7 +64,7 @@ increment = 300
 [[block]]
 block = "time"
 interval = 20
-format = "$timestamp.datetime(f:'%U %m/%d %R')"
+format = "$timestamp.datetime(f:'%V %m/%d %R')"
 
 [[block]]
 block = "sound"
