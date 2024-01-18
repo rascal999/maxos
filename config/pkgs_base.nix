@@ -275,6 +275,7 @@
     nuclear                                                                                              # Streaming music player that finds free music for you
     nuclei                                                                                               # Tool for configurable targeted scanning
     nwipe                                                                                                # Securely erase disks
+    nzbget        # A command line tool for downloading files from news servers
     obs-studio                                                                                           # Free and open source software for video recording and live streaming
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner
