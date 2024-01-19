@@ -60,7 +60,7 @@
     cariddi                                                                                              # Crawler for URLs and endpoints
     cassowary                                                                                            # Modern cross-platform HTTP load-testing tool written in Go
     certipy                                                                                              # Tool to enumerate and abuse misconfigurations in Active Directory Certificate Services
-    cfripper                                                                                             # Tool for analysing CloudFormation templates
+    #cfripper                                                                                             # Tool for analysing CloudFormation templates
     cgdb                                                                                                 # A curses interface to gdb
     chain-bench                                                                                          # An open-source tool for auditing your software supply chain stack for security compliance based on a new CIS Software Supply Chain benchmark
     changetower                                                                                          # Tools to watch for webppage changes
