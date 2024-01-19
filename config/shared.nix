@@ -196,7 +196,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-     "electron-21.4.0"
+     "electron-25.9.0"
      "python-2.7.18.6"
      "python-2.7.18.7"
   ];
