@@ -16,9 +16,9 @@ I didn't want to invest the time customising a machine, getting used to the cust
 
 My quest to divorce the data from the tin continues..
 
-# Where? !!!The link for OVA image link is broken and linking to your calendar!!!
+# Where? 
 
-The easiest way to get up and running is via the nightly OVA image available [here](https://alm.gg/maxos_kde.ova) (9.8GB). The VM comes with KDE rather than i3wm by default because I appreciate that you probably don't want to learn all of my [i3wm shortcuts](/config/i3.nix). You can of course build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customising the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix).
+Build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customising the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix). To make an ISO run [./build_iso.sh] from maxos-master/scripts. 
 
 # Security warning
 
