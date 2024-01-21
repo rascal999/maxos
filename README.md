@@ -10,15 +10,16 @@ Abraham Lincoln
 
 **TL;DR** - This VM / build will probably be useful for pentesting exams and people interested in security research.
 
-The goal of this [NixOS](https://nixos.org/) config is to bundle as many bookmarks / shell aliases / docker images / Firefox extensions / git repos / tools as possible to make my pentesting life easier. I didn't invest the time to customise my base installation before because these customisations were not easily or consistently portable.
+The goal of this [NixOS](https://nixos.org/) config is to bundle as many bookmarks / shell aliases / docker images / Firefox extensions / git repos / tools as possible to make my pentesting life easier. I didn't invest the time to customize my base installation before because these customizations were not easily or consistently portable.
 
-I didn't want to invest the time customising a machine, getting used to the customisations, and then having to tweak a new build to get to the same place. This all changed when I discovered [NixOS](https://nixos.org/). Now I can customise to my heart's content (almost, with the exception of Firefox extension settings) and deploy these customisations on any device.
+I didn't want to invest time customizing a machine, getting used to the customizations, and then having to tweak a new build to get to the same place. This all changed when I discovered [NixOS](https://nixos.org/). Now I can customize to my heart's content (almost, with the exception of Firefox extension settings) and deploy these customizations on any device.
 
 My quest to divorce the data from the tin continues..
 
 # Where? 
 
-Build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customising the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix). To make an ISO run [./build_iso.sh] from maxos-master/scripts. 
+Build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customizing the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix). The VM comes with KDE rather than i3wm by default because I appreciate that you don't want to learn all of my i3wm shortcuts.
+To make an ISO run [./build_iso.sh] from maxos-master/scripts. 
 
 # Security warning
 
@@ -87,7 +88,7 @@ Deploy an SMB share in the current working directory in one command.
 
 ### Tor array
 
-Deploy a Tor array (a arbitrary number of docker instances which all connect to the Tor network individually and expose incrementing ports) in one command.
+Deploy a Tor array (an arbitrary number of docker instances which all connect to the Tor network individually and expose incrementing ports) in one command.
 
 ![d-tor-array](/resources/gifcap/gifcap-d-tor-array.gif)
 
