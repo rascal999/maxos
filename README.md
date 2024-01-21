@@ -19,7 +19,7 @@ My quest to divorce the data from the tin continues..
 # Where? 
 
 Build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customizing the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix). The VM comes with KDE rather than i3wm by default because I appreciate that you don't want to learn all of my i3wm shortcuts.
-To make an ISO run [./build_iso.sh] from maxos-master/scripts. 
+To make an ISO run [./build_iso.sh](/scripts/build_iso.sh). 
 
 # Security warning
 
