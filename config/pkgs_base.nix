@@ -7,7 +7,7 @@
     abootimg                                                                                             # Manipulate Android Boot Images
     #adreaper                                                                                             # Enumeration tool for Windows Active Directories
     afflib                                                                                               # Advanced forensic format library
-    afl                                                                                                  # Powerful fuzzer via genetic algorithms and instrumentation
+    #afl                                                                                                  # Powerful fuzzer via genetic algorithms and instrumentation
     aflplusplus                                                                                          #
     aha                                                                                                  # ANSI HTML Adapter
     aiodnsbrute                                                                                          # DNS brute force utility
