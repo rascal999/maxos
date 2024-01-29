@@ -367,7 +367,7 @@
     subfinder                                                                                            # Subdomain discovery tool
     subjs                                                                                                # Fetcher for Javascript files
     subzerod                                                                                             # Python module to help with the enumeration of subdomains
-    swaggerhole                                                                                          # Tool to searching for secret on swaggerhub
+    #swaggerhole                                                                                          # Tool to searching for secret on swaggerhub
     swaks                                                                                                # A featureful, flexible, scriptable, transaction-oriented SMTP test tool
     sx-go                                                                                                # Command-line network scanner
     tcpflow                                                                                              # TCP stream extractor
