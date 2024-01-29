@@ -386,7 +386,7 @@
     trilium-desktop                                                                                      # Note taking application with focus on building large personal knowledge bases
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI
     truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes
-    trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
+    #trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
     trufflehog                                                                                           # Searches through git repositories for high entropy strings and secrets
     tsung                                                                                                # A high-performance benchmark framework for various protocols
     twingate                                                                                             # Twingate Client
