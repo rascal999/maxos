@@ -373,6 +373,7 @@
     tcpflow                                                                                              # TCP stream extractor
     tcpreplay                                                                                            # A suite of utilities for editing and replaying network traffic
     tdesktop                                                                                             # Telegram Desktop messaging app
+    termcolor                                                                                            # Header-only C++ library for printing colored messages
     #teams                                                                                                # Microsoft Teams
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
     teler                                                                                                # Real-time HTTP Intrusion Detection
