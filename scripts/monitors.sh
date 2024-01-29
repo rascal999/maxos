@@ -45,7 +45,7 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6 --new-window --app=https://web.whatsapp.com/"
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://d1mpprlbe8tn2j.cloudfront.net/v1/master/7b67fbda7ab859400a821e9aa0deda20ab7ca3d2/euronewsLive/87O7AhxRUdeeIVqf/ewnsabren_eng.m3u8"
+    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://www.bloomberg.com/media-manifest/streams/eu.m3u8"
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
     /run/current-system/sw/bin/sleep 0.2
