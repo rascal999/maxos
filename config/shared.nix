@@ -229,6 +229,8 @@
     ];
   };
 
+  systemd.services.NetworkManager-wait-online.enable = false;
+
   systemd.services.startupTasks = {
     wantedBy = [ "multi-user.target" ];
     #after = [ "network-online.target" ];
