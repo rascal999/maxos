@@ -231,7 +231,7 @@
 
   systemd.services.startupTasks = {
     wantedBy = [ "multi-user.target" ];
-    after = [ "network-online.target" ];
+    #after = [ "network-online.target" ];
     description = "Extra tasks";
     script = "/home/user/.startup.sh";
     serviceConfig = {
