@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Wait a little
 sleep 3
 
@@ -60,6 +62,10 @@ if [[ "$PLANE_RUNNING" -eq "0" ]]; then
     set +a
     docker compose up -d
 fi
+
+# Ollama
+cd /home/user/git/maxos/resources/docker/ollama
+docker-compose up -d
 
 # GraphGPT
 # Build
