@@ -234,6 +234,7 @@
     ldeep                                                                                                # In-depth LDAP enumeration utility
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
+    libgcc        # GNU Compiler Collection, version 12.3.0
     libgccjit                                                                                            # GNU Compiler Collection
     libglibutil                                                                                          # Library of glib utilities
     logseq                                                                                               # Organize and share your personal knowledge base
