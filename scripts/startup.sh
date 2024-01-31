@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Wait a little
 sleep 3
 
