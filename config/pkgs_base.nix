@@ -91,6 +91,7 @@
     croc                                                                                                 # Easily and securely send things from one computer to another
     crowbar                                                                                              # A brute forcing tool that can be used during penetration tests
     crunch                                                                                               # Wordlist generator
+    cudaPackages.cudatoolkit                                                                             # A compiler for NVIDIA GPUs, math libraries, and tools
     cudatoolkit                                                                                          # A compiler for NVIDIA GPUs, math libraries, and tools
     cups-brother-hl3140cw                                                                                #
     daemon                                                                                               # Turns other processes into daemons
