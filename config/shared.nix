@@ -229,6 +229,10 @@
     ];
   };
 
+  # virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
   systemd.services.NetworkManager-wait-online.enable = false;
 
   systemd.services.startupTasks = {
