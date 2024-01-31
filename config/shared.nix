@@ -232,6 +232,7 @@
   # virt-manager
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+  users.users.user.extraGroups = [ "libvirtd" ];
 
   systemd.services.NetworkManager-wait-online.enable = false;
 
