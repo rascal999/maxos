@@ -62,8 +62,8 @@ if [[ "$PLANE_RUNNING" -eq "0" ]]; then
 fi
 
 # Ollama
-cd /home/user/git/maxos/resources/docker/ollama
-docker-compose up -d
+#cd /home/user/git/maxos/resources/docker/ollama
+#docker-compose up -d
 
 # GraphGPT
 # Build
