@@ -43,7 +43,7 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/slack
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6 --new-window --app=https://web.whatsapp.com/"
+    /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6 --new-window --app=http://127.0.0.1:10220/"
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://www.bloomberg.com/media-manifest/streams/eu.m3u8"
     /run/current-system/sw/bin/sleep 0.2
