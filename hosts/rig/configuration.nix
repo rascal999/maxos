@@ -50,7 +50,7 @@
 
   systemd.services.ollama = {
     script = ''
-      docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
+      /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
     '';
     wantedBy = ["multi-user.target"];
     # If you use podman
