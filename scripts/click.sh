@@ -43,10 +43,10 @@ function click() {
     y_coord=290
     # Define label-to-coordinates mappings
     case "$3" in
-        "tab_ynab")
+        "ynab")
             x_coord=5150
             ;;
-        "tab_calendar")
+        "calendar")
             y_coord=340
             x_coord=5190
             ;;
