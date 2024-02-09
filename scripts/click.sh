@@ -26,6 +26,7 @@ function misc() {
 }
 
 function slack() {
+    /etc/profiles/per-user/user/bin/i3-msg "[class=\"^Slack$\"] focus"
     case "$3" in
         "slack_jeremy")
             /run/current-system/sw/bin/xdg-open "slack://channel?team=T02ER9ABV&id=U04GGBDUWH0"
