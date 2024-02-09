@@ -35,6 +35,9 @@ function slack() {
 }
 
 function click() {
+    X_MOUSE=`xdotool getmouselocation | choose 0 | choose -f ":" 1`
+    Y_MOUSE=`xdotool getmouselocation | choose 1 | choose -f ":" 1`
+
     # Move to correct workspace
     /etc/profiles/per-user/user/bin/i3-msg "workspace $2"
 
@@ -80,7 +83,10 @@ function click() {
     xdotool mousemove "$x_coord" "$y_coord"
 
     # Simulate a left mouse button click
-    #xdotool click 1
+    xdotool click 1
+
+    # Return to previous location
+    xdotool mousemove "$X_MOUSE" "$Y_MOUSE"
 }
 
 if [ "$1" == "click" ]; then
