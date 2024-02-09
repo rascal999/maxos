@@ -84,3 +84,4 @@ echo "Done"
 echo "Launching dunst.."
 /run/current-system/sw/bin/pkill dunst
 /run/current-system/sw/bin/dunst &
+/run/current-system/sw/bin/antimicrox --tray &
