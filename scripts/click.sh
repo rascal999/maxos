@@ -12,6 +12,19 @@ if [ "$#" -ne 3 ]; then
     exit 1
 fi
 
+function misc() {
+    case "$3" in
+        "refresh")
+            xdotool key F5
+        ;;
+        # Add more label mappings as needed
+        *)
+            echo "Invalid label."
+            exit 1
+            ;;
+    esac
+}
+
 function slack() {
     case "$3" in
         "slack_jeremy")
@@ -88,6 +101,10 @@ function click() {
     # Return to previous location
     xdotool mousemove "$X_MOUSE" "$Y_MOUSE"
 }
+
+if [ "$1" == "misc" ]; then
+    misc $@
+fi
 
 if [ "$1" == "click" ]; then
     click $@
