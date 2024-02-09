@@ -419,6 +419,7 @@
     wipe                                                                                                 # Secure file wiping utility
     wireshark-qt                                                                                         #
     witness                                                                                              # A pluggable framework for software supply chain security
+    wmctrl                                                                                               # CLI tool to interact with EWMH/NetWM compatible X Window Managers
     wol                                                                                                  # Implements Wake On LAN functionality in a small program
     wprecon                                                                                              # WordPress vulnerability recognition tool
     wpscan                                                                                               # Black box WordPress vulnerability scanner
