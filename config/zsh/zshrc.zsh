@@ -3093,6 +3093,7 @@ if [[ ! -z "${OLLAMA_MISTRAL}" ]]; then
   CONTAINER_ID=`docker ps --format "{{.ID}}" -f name="ollama$"`
   if [[ "$CONTAINER_ID" != "" ]]; then
     /run/current-system/sw/bin/docker exec -it $CONTAINER_ID /bin/bash -c 'ollama run mistral:7b'
+    cd
   else
     echo "ERROR: Could not find running ollama container"
   fi
