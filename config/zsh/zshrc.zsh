@@ -3089,6 +3089,10 @@ if [[ ! -z "${WEBSCAN}" ]]; then
   vim targets.txt
 fi
 
+if [[ ! -z "${OLLAMA_MISTRAL}" ]]; then
+  /run/current-system/sw/bin/docker exec -it $CONTAINER_ID /bin/bash -c 'ollama run mistral:7b'
+fi
+
 if [[ ! -z "${NOHISTFILE}" ]]; then
   tmp_work
   fc -p

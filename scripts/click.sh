@@ -14,6 +14,12 @@ fi
 
 function misc() {
     case "$3" in
+        "ollama-mistral")
+            CONTAINER_ID=`docker ps --format "{{.ID}}" -f name="ollama$"`
+            if [[ "$CONTAINER_ID" != "" ]]; then
+                /run/current-system/sw/bin/urxvt -bg black -fg white -e /etc/profiles/per-user/user/bin/tmux new-session -e OLLAMA_MISTRAL=1
+            fi
+        ;;
         "refresh")
             xdotool key F5
         ;;
