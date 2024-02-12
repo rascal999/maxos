@@ -3089,6 +3089,16 @@ if [[ ! -z "${WEBSCAN}" ]]; then
   vim targets.txt
 fi
 
+if [[ ! -z "${OLLAMA_LLAMA2}" ]]; then
+  CONTAINER_ID=`docker ps --format "{{.ID}}" -f name="ollama$"`
+  if [[ "$CONTAINER_ID" != "" ]]; then
+    /run/current-system/sw/bin/docker exec -it $CONTAINER_ID /bin/bash -c 'ollama run llama2:13b'
+    cd
+  else
+    echo "ERROR: Could not find running ollama container"
+  fi
+fi
+
 if [[ ! -z "${OLLAMA_MISTRAL}" ]]; then
   CONTAINER_ID=`docker ps --format "{{.ID}}" -f name="ollama$"`
   if [[ "$CONTAINER_ID" != "" ]]; then
