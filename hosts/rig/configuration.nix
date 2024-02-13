@@ -8,7 +8,7 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.openssh.settings.PermitRootLogin = "yes";
-  services.openssh.fowardX11 = true;
+  program.sssh.fowardX11 = true;
 
   # Authorised keys
   users.users.user = {
