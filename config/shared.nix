@@ -52,6 +52,9 @@
   # Enable twingate
   #services.twingate.enable = true;
 
+  # X11 forward in SSH
+  programs.ssh.fowardX11 = true;
+
   # No
   powerManagement.enable = false;
 
