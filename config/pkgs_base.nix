@@ -330,6 +330,7 @@
     scrot                                                                                                # A command-line screen capture utility
     safety-cli                                                                                           #
     sddm                                                                                                 # QML based X11 display manager
+    SDL2                                                                                                 # A cross-platform multimedia library
     secretscanner                                                                                        # Tool to find secrets and passwords in container images and file systems
     semgrep                                                                                              # Lightweight static analysis for many languages - cli
     siege                                                                                                # HTTP load tester
