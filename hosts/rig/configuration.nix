@@ -46,7 +46,7 @@
   networking.interfaces.enp39s0.wakeOnLan.enable = true;
 
   # Point to localhost for Pi-hole
-  networking.nameservers = [ "8.8.8.8" ];
+  networking.nameservers = [ "127.0.0.1" ];
 
   systemd.services.ollama = {
     script = ''
