@@ -3081,6 +3081,9 @@ jira_ticket() {
 
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
+  DATE_DAY=`date +%d`
+  DATE_HOUR=`date +%H`
+  DATE_MINUTE=`date +%M`
   TICKET_DIRECTORY="${HOME}/work/jobs/${DATE_YEAR}/${TICKET_ID}/"
 
   mkdir -p $TICKET_DIRECTORY
@@ -3101,6 +3104,8 @@ jira_ticket() {
     # Link in current directory
     ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md
   fi
+
+  echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_MD}\n$(cat ${LOGSEQ_DIRECTORY}/journal/${DATE_YEAR}_${DATE_MOTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journal/${DATE_YEAR}_${DATE_MOTH}_${DATE_DAY}.md)
 
   pwd
   exa --long --all --header --icons --git
