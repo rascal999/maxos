@@ -3062,6 +3062,28 @@ ntd() {
   pwd
 }
 
+jira_last_ticket() {
+  DATE_YEAR=`date +%Y`
+  DATE_MONTH=`date +%m`
+  DATE_DAY=`date +%d`
+
+  LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
+  TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
+
+  LAST_TICKET_ID=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -name "*.md" -printf "%T+ %p\n" | sort | tail -1 | choose 1 | choose -f '/' -1`
+  LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -name "*.md" -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
+
+  cd $LAST_TICKET_DIRECTORY
+
+  # Link in current directory
+  ln -s ${LOGSEQ_DIRECTORY}/pages/${LAST_TICKET_ID}.md ./${LAST_TICKET_ID}.md 2>/dev/null
+
+  echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${LAST_TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
+
+  pwd
+  exa --long --all --header --icons --git
+}
+
 jira_ticket() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
@@ -3142,6 +3164,10 @@ if [[ ! -z "${TMPWORK}" ]]; then
 fi
 
 if [[ ! -z "${JIRATICKET}" ]]; then
+  jira_ticket
+fi
+
+if [[ ! -z "${JIRALASTTICKET}" ]]; then
   jira_ticket
 fi
 
