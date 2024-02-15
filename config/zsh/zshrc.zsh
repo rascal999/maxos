@@ -3062,6 +3062,31 @@ ntd() {
   pwd
 }
 
+jira_ticket() {
+  echo -n "Jira ticket URL > "
+
+  # Read ticket ID
+  read TICKET_URL
+
+  TICKET_ID=`echo "$TICKET_URL" | choose -f '/' -1 | choose -f '\?|#' 0`
+
+  # Validate ticket ID
+  TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"`
+  if [[ "$TICKET_VALID" == "" ]]; then
+    echo "Error: Ticket ID not valid"
+    return 1
+  fi
+
+  DATE_YEAR=`date +%Y`
+  DATE_MONTH=`date +%m`
+  TICKET_DIRECTORY="$HOME/work/jobs/${DATE_YEAR}/${TICKET_ID}/"
+
+  mkdir -p $TICKET_DIRECTORY
+  cd $TICKET_DIRECTORY
+  pwd
+  exa --long --all --header --icons --git
+}
+
 tmp_work() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
@@ -3080,6 +3105,10 @@ fi
 
 if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
+fi
+
+if [[ ! -z "${JIRATICKET}" ]]; then
+  jira_ticket
 fi
 
 if [[ ! -z "${WEBSCAN}" ]]; then

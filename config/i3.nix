@@ -55,6 +55,7 @@ in {
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
         "${mod}+Shift+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
+        "${mod}+j" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e JIRATICKET=1";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+Shift+l" = "exec sudo poweroff";
