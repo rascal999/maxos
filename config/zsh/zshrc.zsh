@@ -3070,7 +3070,7 @@ jira_last_ticket() {
   LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
 
-  LAST_TICKET_ID=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -name "*.md" -printf "%T+ %p\n" | sort | tail -1 | choose 1 | choose -f '/' -1`
+  LAST_TICKET_ID=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -name "*.md" -printf "%T+ %p\n" | sort | tail -1 | choose 1 | choose -f '/' -1 | choose -f '.md' 0`
   LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -name "*.md" -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
 
   cd $LAST_TICKET_DIRECTORY
