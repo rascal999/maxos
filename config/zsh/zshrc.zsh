@@ -3063,7 +3063,7 @@ ntd() {
 }
 
 jira_ticket() {
-  LOGSEQ_DIRECTORY="${HOME}/Data/logseq/"
+  LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
 
   echo -n "Jira ticket URL > "
 
