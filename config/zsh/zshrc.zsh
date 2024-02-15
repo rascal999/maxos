@@ -3063,7 +3063,16 @@ ntd() {
 }
 
 jira_ticket() {
+  DATE_YEAR=`date +%Y`
+  DATE_MONTH=`date +%m`
+  DATE_DAY=`date +%d`
+
   LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
+  TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
+
+  echo "Recent tickets:"
+  find $TICKET_BASE_DIRECTORY -maxdepth 3 -mtime -7 -type l -name "*.md" -exec head -1 {} \; | choose -1
+  echo
 
   echo -n "Jira ticket URL > "
 
@@ -3079,9 +3088,6 @@ jira_ticket() {
     return 1
   fi
 
-  DATE_YEAR=`date +%Y`
-  DATE_MONTH=`date +%m`
-  DATE_DAY=`date +%d`
   DATE_HOUR=`date +%H`
   DATE_MINUTE=`date +%M`
   TICKET_DIRECTORY="${HOME}/work/jobs/${DATE_YEAR}/${TICKET_ID}/"
