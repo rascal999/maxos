@@ -3105,7 +3105,7 @@ jira_ticket() {
     ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md
   fi
 
-  echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_MD}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
+  echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
 
   pwd
   exa --long --all --header --icons --git
