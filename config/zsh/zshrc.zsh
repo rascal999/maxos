@@ -391,12 +391,6 @@ bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
 }
 
-d.ollama-code-review-cwd() {
-  mkdir mixtral_review
-
-  find . -type f -exec docker exec -it `docker ps --format "{{.ID}}" -f name="ollama$"` ollama run mixtral:latest $(cat /home/user/work/tmp/2024/02/15/prompt_code_review): "\'$(cat {})\'" \;
-}
-
 d.tho() {
   if [[ "$#" -ne "1" ]]; then
     echo "ERROR: Must specify org to scan:"
