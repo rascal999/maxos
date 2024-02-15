@@ -3063,6 +3063,8 @@ ntd() {
 }
 
 jira_ticket() {
+  LOGSEQ_DIRECTORY="${HOME}/Data/logseq/"
+
   echo -n "Jira ticket URL > "
 
   # Read ticket ID
@@ -3079,23 +3081,25 @@ jira_ticket() {
 
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
-  TICKET_DIRECTORY="$HOME/work/jobs/${DATE_YEAR}/${TICKET_ID}/"
+  TICKET_DIRECTORY="${HOME}/work/jobs/${DATE_YEAR}/${TICKET_ID}/"
 
   mkdir -p $TICKET_DIRECTORY
   cd $TICKET_DIRECTORY
 
-  if [[ ! -f "./tldr.txt" ]]; then
-    echo "Problem statement: " > ./tldr.txt
-    echo "" >> ./tldr.txt
-    echo "Acceptance criteria: " >> ./tldr.txt
-    echo "" >> ./tldr.txt
-    echo "Plan: " >> ./tldr.txt
-    echo "" >> ./tldr.txt
-    echo "Risks: " >> ./tldr.txt
-    echo "" >> ./tldr.txt
-    echo "Opportunities: " >> ./tldr.txt
-    echo "" >> ./tldr.txt
-    vim ./mission.txt
+  if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
+    echo "- **Problem statement**
+        - 
+- **Acceptance criteria**
+        - 
+- **Plan**
+        - 
+- **Risks**
+        - 
+- **Opportunities**
+        - " > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
+
+    # Link in current directory
+    ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md
   fi
 
   pwd
