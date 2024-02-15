@@ -349,6 +349,7 @@
     sngrep                                                                                               # A tool for displaying SIP calls message flows from terminal
     sniffglue                                                                                            # Secure multithreaded packet sniffer
     snmpcheck                                                                                            # SNMP enumerator
+    snyk                                                                                                 # Scans and monitors projects for security vulnerabilities
     sonar-scanner-cli                                                                                    # SonarQube Scanner used to start code analysis
     sox                                                                                                  # Sample Rate Converter for audio
     sqlite                                                                                               # A self-contained, serverless, zero-configuration, transactional SQL database engine
