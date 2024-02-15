@@ -3096,7 +3096,8 @@ jira_ticket() {
   cd $TICKET_DIRECTORY
 
   if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
-    echo "- **Problem statement**
+    echo "- **Ticket URL** ${TICKET_URL}
+- **Problem statement**
         - 
 - **Acceptance criteria**
         - 
