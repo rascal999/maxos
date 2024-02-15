@@ -3089,7 +3089,9 @@ jira_last_ticket() {
 
   pwd
   exa --long --all --header --icons --git
+  grep TODO ./${LAST_TICKET_ID}.md | choose -f '- ' -1
   grep DOING ./${LAST_TICKET_ID}.md | choose -f '- ' -1
+  grep DONE ./${LAST_TICKET_ID}.md | choose -f '- ' -1
 }
 
 jira_ticket() {
@@ -3154,7 +3156,9 @@ jira_ticket() {
 
   pwd
   exa --long --all --header --icons --git
+  grep TODO ./${TICKET_ID}.md | choose -f '- ' -1
   grep DOING ./${TICKET_ID}.md | choose -f '- ' -1
+  grep DONE ./${TICKET_ID}.md | choose -f '- ' -1
 }
 
 tmp_work() {
