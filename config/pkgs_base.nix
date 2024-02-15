@@ -81,6 +81,7 @@
     cliam                                                                                                # Cloud agnostic IAM permissions enumerator
     cloudbrute                                                                                           # Cloud enumeration tool
     cloudlist                                                                                            # Tool for listing assets from multiple cloud providers
+    codeql                                                                                               # Semantic code analysis engine
     conda                                                                                                # Conda is a package manager for Python
     connman                                                                                              #
     connman-gtk                                                                                          # GTK GUI for Connman
