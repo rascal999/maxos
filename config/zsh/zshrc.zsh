@@ -3065,9 +3065,9 @@ ntd() {
 jira_tasks() {
   echo "Tasks:"
 
-  grep -E "DONE" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+  grep -E "DONE" ./${1}.md | choose -f '- ' -1 > ./tasks_tmp.txt
   grep -E "DOING" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
-  grep -E "TODO" ./${1}.md | choose -f '- ' -1 > ./tasks_tmp.txt
+  grep -E "TODO" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
 
   sed -i 's/DONE/\\033[1;32mDONE\\033[0m/g' ./tasks_tmp.txt
   sed -i 's/DOING/\\033[1;33mDOING\\033[0m/g' ./tasks_tmp.txt
