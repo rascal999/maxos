@@ -3101,9 +3101,10 @@ jira_ticket() {
 - **Opportunities**
         - " > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
 
-    # Link in current directory
-    ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md
   fi
+
+  # Link in current directory
+  ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md
 
   echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
 
