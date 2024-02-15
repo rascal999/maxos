@@ -3108,7 +3108,7 @@ jira_ticket() {
 - **Opportunities**
         - 
 - **Resources**
-        - ${TICKET_URL}" > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
+        - " > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
 
   fi
 
