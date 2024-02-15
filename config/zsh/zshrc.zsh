@@ -3095,9 +3095,10 @@ jira_last_ticket() {
   GREEN='\033[1;32m'
   NC='\033[0m'
   echo "Tasks:"
-  grep TODO ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/TODO/${RED}TODO${NC}/g" > ./tasks_tmp.txt
-  grep DOING ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/DOING/${RED}DOING${NC}/g" >> ./tasks_tmp.txt
-  grep DONE ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/DONE/${RED}DONE${NC}/g" >> ./tasks_tmp.txt
+  grep -E "TODO|DOING|DONE" ./${LAST_TICKET_ID}.md | choose -f '- ' -1 > ./tasks_tmp.txt
+  sed -i "s/TODO/${RED}TODO${NC}/g" ./tasks_tmp.txt
+  sed -i "s/DOING/${YELLOW}DOING${NC}/g" ./tasks_tmp.txt
+  sed -i "s/DONE/${GREEN}DONE${NC}/g" ./tasks_tmp.txt
   cat tasks_tmp.txt
 }
 
