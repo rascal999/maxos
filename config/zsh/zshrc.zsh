@@ -391,6 +391,12 @@ bwcalc() {
   /home/user/git/maxos-next/scripts/bwcalc.py "$@"
 }
 
+d.ollama-code-review-cwd() {
+  mkdir mixtral_review
+
+  find . -type f -exec docker exec -it `docker ps --format "{{.ID}}" -f name="ollama$"` ollama run mixtral:latest $(cat /home/user/work/tmp/2024/02/15/prompt_code_review): "\'$(cat {})\'" \;
+}
+
 d.tho() {
   if [[ "$#" -ne "1" ]]; then
     echo "ERROR: Must specify org to scan:"
@@ -3106,7 +3112,7 @@ jira_ticket() {
   fi
 
   # Link in current directory
-  ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md
+  ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md 2>/dev/null
 
   echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
 
