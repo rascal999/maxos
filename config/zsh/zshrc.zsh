@@ -3091,11 +3091,14 @@ jira_last_ticket() {
   exa --long --all --header --icons --git
 
   RED='\033[0;31m'
+  YELLOW='\033[1;33m'
+  GREEN='\033[1;32m'
   NC='\033[0m'
   echo "Tasks:"
-  grep TODO ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/TODO/${RED}TODO${NC}/g"
-  grep DOING ./${LAST_TICKET_ID}.md | choose -f '- ' -1
-  grep DONE ./${LAST_TICKET_ID}.md | choose -f '- ' -1
+  grep TODO ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/TODO/${RED}TODO${NC}/g" > ./tasks_tmp.txt
+  grep DOING ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/DOING/${RED}DOING${NC}/g" >> ./tasks_tmp.txt
+  grep DONE ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/DONE/${RED}DONE${NC}/g" >> ./tasks_tmp.txt
+  cat tasks_tmp.txt
 }
 
 jira_ticket() {
