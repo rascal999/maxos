@@ -3083,6 +3083,21 @@ jira_ticket() {
 
   mkdir -p $TICKET_DIRECTORY
   cd $TICKET_DIRECTORY
+
+  if [[ ! -f "./tldr.txt" ]]; then
+    echo "Problem statement: " > ./tldr.txt
+    echo "" >> ./tldr.txt
+    echo "Acceptance criteria: " >> ./tldr.txt
+    echo "" >> ./tldr.txt
+    echo "Plan: " >> ./tldr.txt
+    echo "" >> ./tldr.txt
+    echo "Risks: " >> ./tldr.txt
+    echo "" >> ./tldr.txt
+    echo "Opportunities: " >> ./tldr.txt
+    echo "" >> ./tldr.txt
+    vim ./mission.txt
+  fi
+
   pwd
   exa --long --all --header --icons --git
 }
