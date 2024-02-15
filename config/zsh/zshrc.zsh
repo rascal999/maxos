@@ -3062,6 +3062,21 @@ ntd() {
   pwd
 }
 
+jira_tasks() {
+  echo "Tasks:"
+
+  grep -E "TODO" ./${1}.md | choose -f '- ' -1 > ./tasks_tmp.txt
+  grep -E "DOING" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+  grep -E "DONE" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+
+  sed -i 's/TODO/\\033[0;31mTODO\\033[0m/g' ./tasks_tmp.txt
+  sed -i 's/DOING/\\033[1;33mDOING\\033[0m/g' ./tasks_tmp.txt
+  sed -i 's/DONE/\\033[1;32mDONE\\033[0m/g' ./tasks_tmp.txt
+  TASKS_TMP=$(cat ./tasks_tmp.txt)
+  echo $TASKS_TMP
+  rm ./tasks_tmp.txt
+}
+
 jira_last_ticket() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
@@ -3090,16 +3105,7 @@ jira_last_ticket() {
   pwd
   exa --long --all --header --icons --git
 
-  RED='\033[0;31m'
-  YELLOW='\033[1;33m'
-  GREEN='\033[1;32m'
-  NC='\033[0m'
-  echo "Tasks:"
-  grep -E "TODO|DOING|DONE" ./${LAST_TICKET_ID}.md | choose -f '- ' -1 > ./tasks_tmp.txt
-  sed -i "s/TODO/${RED}TODO${NC}/g" ./tasks_tmp.txt
-  sed -i "s/DOING/${YELLOW}DOING${NC}/g" ./tasks_tmp.txt
-  sed -i "s/DONE/${GREEN}DONE${NC}/g" ./tasks_tmp.txt
-  cat tasks_tmp.txt
+  jira_tasks ${LAST_TICKET_ID}
 }
 
 jira_ticket() {
@@ -3164,9 +3170,7 @@ jira_ticket() {
 
   pwd
   exa --long --all --header --icons --git
-  grep TODO ./${TICKET_ID}.md | choose -f '- ' -1
-  grep DOING ./${TICKET_ID}.md | choose -f '- ' -1
-  grep DONE ./${TICKET_ID}.md | choose -f '- ' -1
+  jira_tasks ${TICKET_ID}
 }
 
 tmp_work() {
