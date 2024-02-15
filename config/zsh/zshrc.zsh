@@ -3089,7 +3089,11 @@ jira_last_ticket() {
 
   pwd
   exa --long --all --header --icons --git
-  grep TODO ./${LAST_TICKET_ID}.md | choose -f '- ' -1
+
+  RED='\033[0;31m'
+  NC='\033[0m'
+  echo "Tasks:"
+  grep TODO ./${LAST_TICKET_ID}.md | choose -f '- ' -1 | sed "s/TODO/${RED}TODO${NC}/g"
   grep DOING ./${LAST_TICKET_ID}.md | choose -f '- ' -1
   grep DONE ./${LAST_TICKET_ID}.md | choose -f '- ' -1
 }
