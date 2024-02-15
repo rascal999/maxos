@@ -3099,7 +3099,9 @@ jira_ticket() {
 - **Risks**
         - 
 - **Opportunities**
-        - " > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
+        - 
+- **Resources**
+        - ${TICKET_URL}" > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
 
   fi
 
