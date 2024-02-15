@@ -3168,7 +3168,7 @@ if [[ ! -z "${JIRATICKET}" ]]; then
 fi
 
 if [[ ! -z "${JIRALASTTICKET}" ]]; then
-  jira_ticket
+  jira_last_ticket
 fi
 
 if [[ ! -z "${WEBSCAN}" ]]; then
