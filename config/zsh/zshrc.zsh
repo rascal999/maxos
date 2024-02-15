@@ -3066,6 +3066,8 @@ jira_last_ticket() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
   DATE_DAY=`date +%d`
+  DATE_HOUR=`date +%H`
+  DATE_MINUTE=`date +%M`
 
   LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
