@@ -3076,6 +3076,9 @@ jt() {
       fi
   fi
 
+  grep "Ticket URL" ./${TICKET_ID}.md | choose -1
+  echo
+
   echo "Tasks:"
 
   grep -E "DONE" ./${TICKET_ID}.md | choose -f '- ' -1 > ./tasks_tmp.txt
