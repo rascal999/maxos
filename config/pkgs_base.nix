@@ -300,7 +300,7 @@
     pinentry                                                                                             # GnuPG’s interface to passphrase input
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
-    postman                                                                                              # API Development Environment
+    #postman                                                                                              # API Development Environment
     putty                                                                                                # A Free Telnet/SSH Client
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
