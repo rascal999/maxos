@@ -3112,7 +3112,7 @@ jira_last_ticket() {
   ln -s ${LOGSEQ_DIRECTORY}/pages/${LAST_TICKET_ID}.md ./${LAST_TICKET_ID}.md 2>/dev/null
 
   # Update ticket_current
-  ln -s ${HOME}/ticket_current $LAST_TICKET_DIRECTORY
+  ln -s $LAST_TICKET_DIRECTORY ${HOME}/ticket_current
 
   # Don't prepend ticket if it already is the first line in journal
   TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $LAST_TICKET_ID | wc -l`
