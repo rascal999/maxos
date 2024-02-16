@@ -3068,7 +3068,7 @@ jt() {
       TICKET_ID=$1
   else
       TICKET_ID=`pwd | choose -f '/' -1`
-      TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"
+      TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"`
 
       if [[ "$TICKET_VALID" == "" ]]; then
           echo "Error: Couldn't find valid ticket ID. Are you in ticket directory?"
