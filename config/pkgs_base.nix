@@ -167,6 +167,7 @@
     ghost                                                                                                # Android post-exploitation framework
     #gimp                                                                                                 # The GNU Image Manipulation Program
     git-crypt                                                                                            # Transparent file encryption in git
+    gitlab-runner                                                                                        # GitLab Runner the continuous integration executor of GitLab
     gitleaks                                                                                             # Scan git repos (or files) for secrets
     glab                                                                                                 # An open-source GitLab command line tool
     glances                                                                                              # Cross-platform curses-based monitoring tool
