@@ -3062,12 +3062,25 @@ ntd() {
   pwd
 }
 
-jira_tasks() {
+jt() {
+  # Allow call from terminal
+  if [[ "$#" == 1 ]]; then
+      TICKET_ID=$1
+  else
+      TICKET_ID=`pwd | choose -f '/' -1`
+      TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"
+
+      if [[ "$TICKET_VALID" == "" ]]; then
+          echo "Error: Couldn't find valid ticket ID. Are you in ticket directory?"
+          return 1
+      fi
+  fi
+
   echo "Tasks:"
 
-  grep -E "DONE" ./${1}.md | choose -f '- ' -1 > ./tasks_tmp.txt
-  grep -E "TODO" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
-  grep -E "DOING" ./${1}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+  grep -E "DONE" ./${TICKET_ID}.md | choose -f '- ' -1 > ./tasks_tmp.txt
+  grep -E "TODO" ./${TICKET_ID}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+  grep -E "DOING" ./${TICKET_ID}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
 
   sed -i 's/DONE/\\033[1;32mDONE\\033[0m/g' ./tasks_tmp.txt
   sed -i 's/TODO/\\033[0;31mTODO\\033[0m/g' ./tasks_tmp.txt
@@ -3105,7 +3118,7 @@ jira_last_ticket() {
   pwd
   exa --long --all --header --icons --git
 
-  jira_tasks ${LAST_TICKET_ID}
+  jt ${LAST_TICKET_ID}
 }
 
 jira_ticket() {
@@ -3170,7 +3183,7 @@ jira_ticket() {
 
   pwd
   exa --long --all --header --icons --git
-  jira_tasks ${TICKET_ID}
+  jt ${TICKET_ID}
 }
 
 tmp_work() {
