@@ -47,6 +47,7 @@
     bore-cli                                                                                             # Rust tool to create TCP tunnels
     brakeman                                                                                             # Static analysis security scanner for Ruby on Rails
     brillo                                                                                               # Backlight and Keyboard LED control tool
+    bruno                                                                                                # Open-source IDE For exploring and testing APIs
     bruteforce-luks                                                                                      # Cracks passwords of LUKS encrypted volumes
     brutespray                                                                                           # Tool to do brute-forcing from Nmap output
     bully                                                                                                # Retrieve WPA/WPA2 passphrase from a WPS enabled access point
@@ -300,7 +301,7 @@
     pinentry                                                                                             # GnuPG’s interface to passphrase input
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
-    postman                                                                                              # API Development Environment
+    #postman                                                                                              # API Development Environment
     putty                                                                                                # A Free Telnet/SSH Client
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
