@@ -51,6 +51,7 @@
 
   # Flatpak
   services.flatpak.enable = true;
+  xdg.portal.enable = true;
 
   # Enable twingate
   #services.twingate.enable = true;
