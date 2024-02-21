@@ -56,7 +56,7 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
     ];
-  }
+  };
 
   # Enable twingate
   #services.twingate.enable = true;
