@@ -53,7 +53,7 @@
   services.flatpak.enable = true;
   xdg.portal = {
     enable = true;
-    extraPortals = ["xdg-desktop-portal-gtk"];
+    extraPortals = [ xdg-desktop-portal-gtk ];
   }
 
   # Enable twingate
