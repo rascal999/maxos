@@ -49,6 +49,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Flatpak
+  services.flatpak.enable = true;
+
   # Enable twingate
   #services.twingate.enable = true;
 
