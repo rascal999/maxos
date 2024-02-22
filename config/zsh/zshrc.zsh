@@ -1473,7 +1473,7 @@ d.nginxconfig() {
 }
 
 d.pythonhere() {
-  docker run --rm -it -v "$(pwd):/mnt" python
+  docker run --rm -it -v "$(pwd):/mnt" python /bin/bash
 }
 
 d.nginxhere() {
