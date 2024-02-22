@@ -1472,6 +1472,10 @@ d.nginxconfig() {
   docker run --rm -p 1080:1080 -v "$(pwd)/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx
 }
 
+d.pythonhere() {
+  docker run --rm -it -v "$(pwd):/mnt" python
+}
+
 d.nginxhere() {
   # Security measure
   if [[ "`pwd`" == "$HOME" ]]; then
