@@ -17,7 +17,7 @@ if [[ `hostname` == "rig" ]]; then
 
     /run/current-system/sw/bin/sleep 1
 
-    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
+    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-0"
     /run/current-system/sw/bin/sleep 1
     /etc/profiles/per-user/user/bin/i3-msg "workspace vid, move workspace to output HDMI-0"
     /run/current-system/sw/bin/sleep 1
