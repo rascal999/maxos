@@ -1712,6 +1712,11 @@ d.lab-kill() {
          security-ninjas
 }
 
+d.pwsh() {
+  dirname=${PWD##*/}
+  docker run -it --rm -v $(pwd):/${dirname} -w /${dirname} mcr.microsoft.com/powershell
+}
+
 d.altoro() {
   echo "screen -r altoro"
   screen -S altoro -adm docker run --rm --name altoro -p 127.10.0.1:1080:8080 eystsen/altoro
