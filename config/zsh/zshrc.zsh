@@ -3113,7 +3113,7 @@ jira_last_ticket() {
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
 
   #LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -type f -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
-  LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
+  LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 ! -type d -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
   LAST_TICKET_ID=`echo -n ${LAST_TICKET_DIRECTORY} | choose -f '/' -1`
 
   cd $LAST_TICKET_DIRECTORY
