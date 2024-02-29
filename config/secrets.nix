@@ -28,6 +28,9 @@
     api-virustotal = {
       file = ../secrets/api-virustotal.age;
     };
+    jira = {
+      file = ../secrets/jira.age;
+    };
     token-github = {
       file = ../secrets/token-github.age;
     };
@@ -89,6 +92,11 @@
     api-virustotal =
     {
       source = config.age.secrets.api-virustotal.path;
+      mode = "0444";
+    };
+    jira =
+    {
+      source = config.age.secrets.jira.path;
       mode = "0444";
     };
     token-github =

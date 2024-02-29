@@ -3149,7 +3149,7 @@ jira_ticket() {
   find $TICKET_BASE_DIRECTORY -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -5 | choose 1 | xargs head -1 | grep "Ticket URL" | choose -1
   echo
 
-  echo -n "Jira ticket URL > "
+  echo -n "Jira ticket (ID or URL) > "
 
   # Read ticket ID
   read TICKET_URL
