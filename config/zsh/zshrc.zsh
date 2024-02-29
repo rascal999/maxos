@@ -3151,10 +3151,19 @@ jira_ticket() {
 
   echo -n "Jira ticket (ID or URL) > "
 
-  # Read ticket ID
-  read TICKET_URL
+  # Read ticket
+  read TICKET
 
-  TICKET_ID=`echo "$TICKET_URL" | choose -f '/' -1 | choose -f '\?|#' 0`
+  TICKET_IS_URL=`echo $TICKET | grep "http" | wc -l`
+
+  if [[ "$TICKET_IS_URL" == "1" ]]; then
+    TICKET_URL=$TICKET
+    TICKET_ID=`echo "$TICKET_URL" | choose -f '/' -1 | choose -f '\?|#' 0`
+  else
+    TICKET_BASE_URL=`cat /etc/jira`
+    TICKET_ID=$TICKET
+    TICKET_URL="${TICKET_BASE_URL}/browse/${TICKET_ID}"
+  fi
 
   # Validate ticket ID
   TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"`
