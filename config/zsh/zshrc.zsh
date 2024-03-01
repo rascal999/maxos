@@ -3125,7 +3125,7 @@ jira_last_ticket() {
   ln -sf $LAST_TICKET_DIRECTORY ${HOME}/ticket_current
 
   # Don't prepend ticket if it already is the first line in journal
-  TICKET_PREPENDED=`head -2 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $LAST_TICKET_ID | wc -l`
+  TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $LAST_TICKET_ID | wc -l`
 
   TICKET_TITLE=`head -1 ${LOGSEQ_DIRECTORY}/pages/${LAST_TICKET_ID}.md | choose -f "## " 0`
 
@@ -3214,7 +3214,7 @@ jira_ticket() {
   touch ./${TICKET_ID}.md
 
   # Don't prepend ticket if it already is the first line in journal
-  TICKET_PREPENDED=`head -2 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $TICKET_ID | wc -l`
+  TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $TICKET_ID | wc -l`
 
   TICKET_TITLE=`head -1 ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md | choose -f "## " 0`
 
