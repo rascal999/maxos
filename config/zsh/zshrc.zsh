@@ -3161,9 +3161,6 @@ jira_ticket() {
   # Read ticket
   read TICKET
 
-  echo -n "Title > "
-  read TICKET_TITLE
-
   TICKET_IS_URL=`echo $TICKET | grep "http" | wc -l`
 
   if [[ "$TICKET_IS_URL" == "1" ]]; then
@@ -3190,6 +3187,9 @@ jira_ticket() {
   cd $TICKET_DIRECTORY
 
   if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
+    echo -n "Title > "
+    read TICKET_TITLE
+
     echo "## $TICKET_TITLE
 - **Ticket URL** ${TICKET_URL}
 - **Contact**
