@@ -3155,6 +3155,7 @@ jira_ticket() {
     echo $TICKET_URL $TICKET_TITLE
   done
 
+  echo
   echo -n "Jira ticket (ID or URL) > "
 
   # Read ticket
