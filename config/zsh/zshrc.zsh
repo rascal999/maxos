@@ -3148,8 +3148,12 @@ jira_ticket() {
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
 
   echo "Recent tickets:"
-  find $TICKET_BASE_DIRECTORY -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -5 | choose 1 | xargs head -2 | grep "Ticket URL" | choose -1
-  echo
+  find $TICKET_BASE_DIRECTORY -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -5 | choose 1 | while read output
+  do
+    TICKET_TITLE=`head -1 $output | choose -f "## " 0`
+    TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
+    echo $TICKET_URL $TICKET_TITLE
+  done
 
   echo -n "Jira ticket (ID or URL) > "
 
