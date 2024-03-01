@@ -65,7 +65,7 @@ in {
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
         "${mod}+Shift+o" = "exec ${pkgs.obs-studio}/bin/obs";
-        "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost --force-device-scale-factor=1.6";
+        "${mod}+p" = "exec i3-input -F 'workspace next'";
         "${mod}+Shift+p" = "restart";
         "${mod}+r" = "exec /home/user/git/maxos/scripts/radio4.sh";
         #"${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
