@@ -3216,8 +3216,10 @@ jira_ticket() {
   # Don't prepend ticket if it already is the first line in journal
   TICKET_PREPENDED=`head -2 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $TICKET_ID | wc -l`
 
+  TICKET_TITLE=`head -1 ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md | choose -f "## " 0`
+
   if [[ "$TICKET_PREPENDED" != "1" ]]; then
-    echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
+    echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID} ${TICKET_TITLE}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
   fi
 
   pwd
