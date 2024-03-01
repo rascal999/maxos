@@ -3112,7 +3112,6 @@ jira_last_ticket() {
   LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
 
-  #LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 -type f -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
   LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 ! -type d -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
   LAST_TICKET_ID=`echo -n ${LAST_TICKET_DIRECTORY} | choose -f '/' -1`
 
@@ -3126,10 +3125,12 @@ jira_last_ticket() {
   ln -sf $LAST_TICKET_DIRECTORY ${HOME}/ticket_current
 
   # Don't prepend ticket if it already is the first line in journal
-  TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $LAST_TICKET_ID | wc -l`
+  TICKET_PREPENDED=`head -2 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $LAST_TICKET_ID | wc -l`
+
+  TICKET_TITLE=`head -1 ${LOGSEQ_DIRECTORY}/pages/${LAST_TICKET_ID}.md | choose -f "##" 1`
 
   if [[ "$TICKET_PREPENDED" != "1" ]]; then
-    echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${LAST_TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
+    echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${LAST_TICKET_ID} ${TICKET_TITLE}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
   fi
 
   pwd
@@ -3147,13 +3148,16 @@ jira_ticket() {
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
 
   echo "Recent tickets:"
-  find $TICKET_BASE_DIRECTORY -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -5 | choose 1 | xargs head -1 | grep "Ticket URL" | choose -1
+  find $TICKET_BASE_DIRECTORY -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -5 | choose 1 | xargs head -2 | grep "Ticket URL" | choose -1
   echo
 
   echo -n "Jira ticket (ID or URL) > "
 
   # Read ticket
   read TICKET
+
+  echo -n "Title > "
+  read TICKET_TITLE
 
   TICKET_IS_URL=`echo $TICKET | grep "http" | wc -l`
 
@@ -3181,7 +3185,8 @@ jira_ticket() {
   cd $TICKET_DIRECTORY
 
   if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
-    echo "- **Ticket URL** ${TICKET_URL}
+    echo "## $TICKET_TITLE
+- **Ticket URL** ${TICKET_URL}
 - **Contact**
         -
 - **Problem statement**
@@ -3204,7 +3209,7 @@ jira_ticket() {
   touch ./${TICKET_ID}.md
 
   # Don't prepend ticket if it already is the first line in journal
-  TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $TICKET_ID | wc -l`
+  TICKET_PREPENDED=`head -2 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $TICKET_ID | wc -l`
 
   if [[ "$TICKET_PREPENDED" != "1" ]]; then
     echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
