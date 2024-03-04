@@ -6,6 +6,7 @@ SLACK_PARKED=`i3-save-tree | grep class | grep Slack | wc -l`
 # IF in ytm
 if [[ "$SLACK_PARKED" = "1" ]]; then
   i3-msg "[class=\"Slack\"] move to workspace 1"
+  sleep 0.3
   i3-msg "[class=\"Slack\"] focus"
   i3-msg "[class=\"Slack\"] fullscreen"
 else
