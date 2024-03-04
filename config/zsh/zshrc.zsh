@@ -3193,20 +3193,20 @@ jira_ticket() {
 
     echo "## $TICKET_TITLE
 - **Ticket URL** ${TICKET_URL}
+- **Problem statement**
+        -
+- **Acceptance criteria**
+        -
+- **Plan**
+        -
+- **Opportunities**
+        -
+- **Risks**
+        -
 - **Contact(s)**
         -
-- **Problem statement**
-        - 
-- **Acceptance criteria**
-        - 
-- **Plan**
-        - 
-- **Risks**
-        - 
-- **Opportunities**
-        - 
 - **Resources**
-        - " > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
+        -" > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
 
   fi
 
