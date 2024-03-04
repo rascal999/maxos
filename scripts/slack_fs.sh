@@ -11,3 +11,5 @@ else
   i3-msg "[class=\"Slack\"] move to workspace ytm"
   i3-msg "[class=\"Slack\"] fullscreen"
 fi
+
+i3-msg "[workspace=\"1\"] focus"
