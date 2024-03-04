@@ -3152,7 +3152,8 @@ jira_ticket() {
   do
     TICKET_TITLE=`head -1 $output | choose -f "## " 0`
     TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
-    echo $TICKET_URL $TICKET_TITLE
+    TICKET_ID=`echo -n $TICKET_URL | choose -f '/' -1`
+    echo $TICKET_ID $TICKET_URL $TICKET_TITLE
   done
 
   echo
