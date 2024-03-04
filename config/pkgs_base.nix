@@ -122,6 +122,7 @@
     dnstwist                                                                                             # Domain name permutation engine for detecting homograph phishing attacks
     dnsx                                                                                                 # Fast and multi-purpose DNS toolkit
     dockle                                                                                               # Container Image Linter for Security
+    dockstarter                                                                                          # DockSTARTer helps you get started with running apps in Docker
     dontgo403                                                                                            # Tool to bypass 40X response codes
     doona                                                                                                # A fork of the Bruteforce Exploit Detector Tool (BED)
     dotnet-sdk                                                                                           # .NET SDK 6.0.406
