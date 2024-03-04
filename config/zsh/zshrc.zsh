@@ -3193,7 +3193,7 @@ jira_ticket() {
 
     echo "## $TICKET_TITLE
 - **Ticket URL** ${TICKET_URL}
-- **Contact**
+- **Contact(s)**
         -
 - **Problem statement**
         - 
