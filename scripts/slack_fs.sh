@@ -10,6 +10,5 @@ if [[ "$SLACK_PARKED" = "1" ]]; then
 else
   i3-msg "[class=\"Slack\"] move to workspace ytm"
   i3-msg "[class=\"Slack\"] fullscreen"
+  i3-msg "[workspace=\"1\"] focus"
 fi
-
-i3-msg "[workspace=\"1\"] focus"
