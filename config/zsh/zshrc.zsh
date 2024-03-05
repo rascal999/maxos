@@ -3156,6 +3156,14 @@ jira_ticket() {
     echo $TICKET_ID $TICKET_URL $TICKET_TITLE
   done
 
+  # trap ctrl-c and call ctrl_c()
+  trap ctrl_c INT
+
+  function ctrl_c() {
+    echo "Exiting.."
+    exit 1
+  }
+
   echo
   echo -n "Jira ticket (ID or URL) > "
 
