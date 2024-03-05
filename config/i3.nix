@@ -72,8 +72,8 @@ in {
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
-        "${mod}+space" = "fullscreen";
-        "${mod}+a" = "exec /home/user/git/maxos/scripts/slack_fs.sh";
+        "${mod}+u" = "fullscreen";
+        "${mod}+space" = "exec /home/user/git/maxos/scripts/slack_fs.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+w" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
