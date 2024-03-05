@@ -8,7 +8,6 @@ fi
 
 function slack() {
     /home/user/git/maxos/scripts/slack_tile.sh fullscreen
-    # T02ER9ABV U04GGBDUWH0
     /run/current-system/sw/bin/xdg-open "slack://channel?team=${1}&id=${2}"
 }
 
