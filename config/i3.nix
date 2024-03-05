@@ -73,7 +73,7 @@ in {
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+u" = "fullscreen";
-        "${mod}+Shift+Space" = "exec /home/user/git/maxos/scripts/slack_fs.sh";
+        "${mod}+Mod4" = "exec /home/user/git/maxos/scripts/slack_fs.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+w" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
