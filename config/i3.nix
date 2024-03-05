@@ -127,6 +127,7 @@ in {
         "Mod4+o" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U058BK3775F";
         "Mod4+t" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U03SC6Q1ZLG";
         "Mod4+d" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U068KQNQ341";
+        "Mod4+c" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV C04H5N44ZM5";
       };
 
       window = {
