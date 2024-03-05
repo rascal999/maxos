@@ -16,7 +16,7 @@ else
     i3-msg "[class=\"Slack\"] move to workspace ytm"
     sleep 0.2
     i3-msg "[class=\"Slack\"] fullscreen"
-    i3-msg "workspace back_and_forth"
+    #i3-msg "workspace back_and_forth"
   #else
   #  i3-msg "[class=\"Slack\"] focus"
   fi
