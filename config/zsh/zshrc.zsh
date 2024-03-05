@@ -3160,6 +3160,7 @@ jira_ticket() {
   trap ctrl_c INT
 
   function ctrl_c() {
+    echo
     echo "Exiting.."
     sleep 1
     exit 1
