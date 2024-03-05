@@ -3090,7 +3090,7 @@ jt() {
   head -1 ./${TICKET_ID}.md
   echo
   echo "Status:"
-  echo "$(awk '/Status/{flag=1; next} /Plan/{flag=0} flag' ./${TICKET_ID})" | sed 's/\t-/ -/g'
+  echo "$(awk '/Status/{flag=1; next} /Plan/{flag=0} flag' ./${TICKET_ID}.md)" | sed 's/\t-/ -/g'
   echo
 
   echo "Tasks:"
