@@ -83,6 +83,12 @@ in {
 
         # Slack
         "Mod4+j" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04GGBDUWH0";
+        "Mod4+p" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U06G9SFKAJ2";
+        "Mod4+m" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U05C566PDJ5";
+        "Mod4+n" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04TV0SREKC";
+        "Mod4+k" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U03S149LA81";
+        "Mod4+b" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U042RTF0MHS";
+        "Mod4+s" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV C050ZTPBV4H";
 
         # Focus
         "${mod}+Left" = "focus left";
