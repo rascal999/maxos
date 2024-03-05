@@ -91,6 +91,7 @@ in {
         "Mod4+s" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV C050ZTPBV4H";
         "Mod4+r" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04VC5P7XV1";
         "Mod4+o" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U058BK3775F";
+        "Mod4+t" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U03SC6Q1ZLG";
 
         # Focus
         "${mod}+Left" = "focus left";
