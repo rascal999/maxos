@@ -11,7 +11,7 @@ if [[ "$1" == "park" ]]; then
   i3-msg "[class=\"Slack\"] fullscreen"
 fi
 
-if [[ "$1" == "fullscreen" ]]; then
+if [[ "$1" == "fullscreen" && "${SLACK_PARKED}" == "1" ]]; then
   i3-msg "[class=\"Slack\"] move to workspace 1"
   sleep 0.2
   i3-msg "[class=\"Slack\"] focus"
