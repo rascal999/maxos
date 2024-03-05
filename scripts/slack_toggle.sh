@@ -1,18 +1,28 @@
 #!/usr/bin/env bash
 
-i3-msg "[workspace=\"ytm\"] focus"
-SLACK_PARKED=`i3-save-tree | grep class | grep Slack | wc -l`
-i3-msg "[workspace=\"1\"] focus"
+SLACK_FS=`i3-msg -t get_tree | jq -r '.nodes[].nodes[].nodes[].nodes[] | select(.window_properties.class == "Slack") | .fullscreen_mode'`
+
+SLACK_PARKED=`i3-save-tree --workspace ytm | grep class | grep Slack | wc -l`
 
 if [[ "${SLACK_PARKED}" == "1" ]]; then
   i3-msg "[class=\"Slack\"] move to workspace 1"
   sleep 0.2
   i3-msg "[class=\"Slack\"] focus"
-  i3-msg "[class=\"Slack\"] fullscreen"
+
+  # If not fs, set fs
+  if [ "$SLACK_FS" != "1" ]; then
+      i3-msg "[class=\"Slack\"] fullscreen"
+  fi
+
   xdotool mousemove --screen 0 5290 160
 else
   i3-msg "[class=\"Slack\"] move to workspace ytm"
   sleep 0.2
+
+  # If fs, unset fs
+  if [ "$SLACK_FS" == "1" ]; then
+      i3-msg "[class=\"Slack\"] fullscreen"
+  fi
+
   i3-msg "[workspace=\"1\"] focus"
-  #i3-msg "[class=\"Slack\"] fullscreen"
 fi
