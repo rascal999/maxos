@@ -81,6 +81,9 @@ in {
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
         "${mod}+Shift+x" = "exec /home/user/git/maxos/scripts/suspend.sh";
 
+        # Slack
+        "Mod4+j" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04GGBDUWH0";
+
         # Focus
         "${mod}+Left" = "focus left";
         "${mod}+Down" = "focus down";
