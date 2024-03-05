@@ -40,7 +40,7 @@ in {
         "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
-        "${mod}+space" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
+        "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
@@ -72,8 +72,8 @@ in {
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
-        "${mod}+u" = "fullscreen";
-        "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_fs.sh";
+        "${mod}+space" = "fullscreen";
+        "${mod}+a" = "exec /home/user/git/maxos/scripts/slack_fs.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+w" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
