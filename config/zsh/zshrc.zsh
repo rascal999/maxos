@@ -3161,6 +3161,7 @@ jira_ticket() {
 
   function ctrl_c() {
     echo "Exiting.."
+    sleep 1
     exit 1
   }
 
