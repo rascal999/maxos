@@ -6,7 +6,7 @@ SLACK_PARKED=`i3-save-tree --workspace ytm | grep class | grep Slack | wc -l`
 
 if [[ "${SLACK_PARKED}" == "1" ]]; then
   i3-msg "[class=\"Slack\"] move to workspace 1"
-  sleep 0.2
+  sleep 0.3
   i3-msg "[class=\"Slack\"] focus"
 
   # If not fs, set fs
@@ -17,7 +17,7 @@ if [[ "${SLACK_PARKED}" == "1" ]]; then
   xdotool mousemove --screen 0 5290 160
 else
   i3-msg "[class=\"Slack\"] move to workspace ytm"
-  sleep 0.2
+  sleep 0.3
 
   # If fs, unset fs
   if [ "$SLACK_FS" == "1" ]; then
