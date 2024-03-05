@@ -3136,7 +3136,9 @@ jira_last_ticket() {
   fi
 
   pwd
+  echo
   exa --long --all --header --icons --git
+  echo
 
   jt ${LAST_TICKET_ID}
 }
