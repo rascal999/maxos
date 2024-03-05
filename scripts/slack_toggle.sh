@@ -13,5 +13,6 @@ if [[ "${SLACK_PARKED}" == "1" ]]; then
 else
   i3-msg "[class=\"Slack\"] move to workspace ytm"
   sleep 0.2
+  i3-msg "[workspace=\"1\"] focus"
   #i3-msg "[class=\"Slack\"] fullscreen"
 fi
