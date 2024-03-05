@@ -3087,6 +3087,8 @@ jt() {
 
   grep "Ticket URL" ./${TICKET_ID}.md | choose -1
   echo
+  head -1 ./${TICKET_ID}.md
+  echo
 
   echo "Tasks:"
 
