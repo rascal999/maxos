@@ -3087,7 +3087,8 @@ jt() {
 
   grep "Ticket URL" ./${TICKET_ID}.md | choose -1
   echo
-  head -1 ./${TICKET_ID}.md
+  echo -n "Title: "
+  head -1 ./${TICKET_ID}.md | choose -f "## " -1
   echo
   echo "Status:"
   echo "$(awk '/Status/{flag=1; next} /Plan/{flag=0} flag' ./${TICKET_ID}.md)" | sed 's/\t-/ -/g'
