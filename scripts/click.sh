@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sleep 0.2
+
 # Check if xdotool is installed
 if ! command -v xdotool &> /dev/null; then
     echo "Error: xdotool is not installed. Please install it."
