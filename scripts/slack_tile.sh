@@ -11,10 +11,14 @@ if [[ "$1" == "park" ]]; then
   i3-msg "[class=\"Slack\"] fullscreen"
 fi
 
-if [[ "$1" == "fullscreen" && "${SLACK_PARKED}" == "1" ]]; then
+if [ "${SLACK_PARKED}" == "1" ]; then
   i3-msg "[class=\"Slack\"] move to workspace 1"
   sleep 0.2
   i3-msg "[class=\"Slack\"] focus"
-  i3-msg "[class=\"Slack\"] fullscreen"
   xdotool mousemove --screen 0 5290 160
+fi
+
+# Focus workspace 1 exits fullscreen for app
+if [ "$1" == "fullscreen" ]; then
+  i3-msg "[class=\"Slack\"] fullscreen"
 fi
