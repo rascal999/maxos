@@ -3248,6 +3248,14 @@ jira_ticket() {
   jt ${TICKET_ID}
 }
 
+cpd() {
+  LAST_DOWNLOAD=`exa ${HOME}/Downloads --sort=modified | tail -1`
+  tmp_work
+  cp -rf ${HOME}/Downloads/${LAST_DOWNLOAD} .
+  pwd
+  exa --long --all --header --icons --git
+}
+
 tmp_work() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
@@ -3256,8 +3264,6 @@ tmp_work() {
 
   mkdir -p $TMP_DIRECTORY
   cd $TMP_DIRECTORY
-  pwd
-  exa --long --all --header --icons --git
 }
 
 if [[ ! -z "${REMOTEWORK}" ]]; then
@@ -3266,6 +3272,8 @@ fi
 
 if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
+  pwd
+  exa --long --all --header --icons --git
 fi
 
 if [[ ! -z "${JIRATICKET}" ]]; then
@@ -3305,6 +3313,8 @@ fi
 
 if [[ ! -z "${NOHISTFILE}" ]]; then
   tmp_work
+  pwd
+  exa --long --all --header --icons --git
   fc -p
 fi
 
