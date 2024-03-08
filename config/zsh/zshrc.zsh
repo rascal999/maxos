@@ -3218,9 +3218,9 @@ jira_ticket() {
 - **Status**
         -
 - **Plan**
-        - Done
-        - Todo
-        - Doing
+        - **Done**
+        - **Todo**
+        - **Doing**
 - **Opportunities**
         -
 - **Risks**
