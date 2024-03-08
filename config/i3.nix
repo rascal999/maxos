@@ -37,8 +37,9 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
-        "${mod}+Return" = "exec /home/user/git/maxos/scripts/click.sh click 1 sprint_1";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
+        "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
+        "${mod}+Return" = "exec /home/user/git/maxos/scripts/click.sh click 1 sprint_1";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
