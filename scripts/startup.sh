@@ -61,6 +61,10 @@ if [[ "$PLANE_RUNNING" -eq "0" ]]; then
     docker compose up -d
 fi
 
+# Ollama
+#cd /home/user/git/maxos/resources/docker/ollama
+#docker-compose up -d
+
 # GraphGPT
 # Build
 #GRAPHGPT_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=graphgpt | choose 0`
@@ -80,3 +84,4 @@ echo "Done"
 echo "Launching dunst.."
 /run/current-system/sw/bin/pkill dunst
 /run/current-system/sw/bin/dunst &
+/run/current-system/sw/bin/antimicrox --tray &

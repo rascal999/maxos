@@ -51,6 +51,7 @@ PORT_LIBREDDIT=10190
 PORT_WIREGUARD=51820
 PORT_EXCALIDRAW=10200
 PORT_MINISERVE=10210
+PORT_OLLAMA=10220
 
 export MCFLY_KEY_SCHEME=vim
 export MCFLY_RESULTS=40
@@ -1471,6 +1472,10 @@ d.nginxconfig() {
   docker run --rm -p 1080:1080 -v "$(pwd)/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx
 }
 
+d.pythonhere() {
+  docker run --rm -it -v "$(pwd):/mnt" python /bin/bash
+}
+
 d.nginxhere() {
   # Security measure
   if [[ "`pwd`" == "$HOME" ]]; then
@@ -1705,6 +1710,11 @@ d.lab-kill() {
          tiredful \
          xvwa \
          security-ninjas
+}
+
+d.pwsh() {
+  dirname=${PWD##*/}
+  docker run -it --rm -v $(pwd):/${dirname} -w /${dirname} mcr.microsoft.com/powershell
 }
 
 d.altoro() {
@@ -3061,6 +3071,198 @@ ntd() {
   pwd
 }
 
+jt() {
+  # Allow call from terminal
+  if [[ "$#" == 1 ]]; then
+      TICKET_ID=$1
+  else
+      TICKET_ID=`pwd | choose -f '/' -1`
+      TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"`
+
+      if [[ "$TICKET_VALID" == "" ]]; then
+          echo "Error: Couldn't find valid ticket ID. Are you in ticket directory?"
+          return 1
+      fi
+  fi
+
+  grep "Ticket URL" ./${TICKET_ID}.md | choose -1
+  echo
+  echo -n "Title: "
+  head -1 ./${TICKET_ID}.md | choose -f "## " -1
+  echo
+  echo "Status:"
+  echo "$(awk '/Status/{flag=1; next} /Plan/{flag=0} flag' ./${TICKET_ID}.md)" | sed 's/\t-/ -/g'
+  echo
+
+  echo "Tasks:"
+
+  grep -E "DONE" ./${TICKET_ID}.md | choose -f '- ' -1 > ./tasks_tmp.txt
+  grep -E "TODO" ./${TICKET_ID}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+  grep -E "DOING" ./${TICKET_ID}.md | choose -f '- ' -1 >> ./tasks_tmp.txt
+
+  sed -i 's/DONE/\\033[1;32mDONE\\033[0m/g' ./tasks_tmp.txt
+  sed -i 's/TODO/\\033[0;31mTODO\\033[0m/g' ./tasks_tmp.txt
+  sed -i 's/DOING/\\033[1;33mDOING\\033[0m/g' ./tasks_tmp.txt
+  TASKS_TMP=$(cat ./tasks_tmp.txt)
+  echo $TASKS_TMP
+  rm ./tasks_tmp.txt
+}
+
+jira_last_ticket() {
+  DATE_YEAR=`date +%Y`
+  DATE_MONTH=`date +%m`
+  DATE_DAY=`date +%d`
+  DATE_HOUR=`date +%H`
+  DATE_MINUTE=`date +%M`
+
+  LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
+  TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
+
+  LAST_TICKET_DIRECTORY=`find -L ${TICKET_BASE_DIRECTORY} -maxdepth 3 ! -type d -printf "%T+ %p\n" | sort | tail -1 | choose 1 | sed 's:[^/]*$::'`
+  LAST_TICKET_ID=`echo -n ${LAST_TICKET_DIRECTORY} | choose -f '/' -1`
+
+  cd $LAST_TICKET_DIRECTORY
+
+  # Link in current directory
+  ln -s ${LOGSEQ_DIRECTORY}/pages/${LAST_TICKET_ID}.md ./${LAST_TICKET_ID}.md 2>/dev/null
+
+  # Update ticket_current
+  rm ${HOME}/ticket_current
+  ln -sf $LAST_TICKET_DIRECTORY ${HOME}/ticket_current
+
+  # Don't prepend ticket if it already is the first line in journal
+  TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $LAST_TICKET_ID | wc -l`
+
+  TICKET_TITLE=`head -1 ${LOGSEQ_DIRECTORY}/pages/${LAST_TICKET_ID}.md | choose -f "## " 0`
+
+  if [[ "$TICKET_PREPENDED" != "1" ]]; then
+    echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${LAST_TICKET_ID} ${TICKET_TITLE}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
+  fi
+
+  pwd
+  echo
+  exa --long --all --header --icons --git
+  echo
+
+  jt ${LAST_TICKET_ID}
+}
+
+jira_ticket() {
+  DATE_YEAR=`date +%Y`
+  DATE_MONTH=`date +%m`
+  DATE_DAY=`date +%d`
+
+  LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
+  TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
+
+  echo "Recent tickets:"
+  find $TICKET_BASE_DIRECTORY -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -20 | choose 1 | while read output
+  do
+    TICKET_TITLE=`head -1 $output | choose -f "## " 0`
+    TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
+    TICKET_ID=`echo -n $TICKET_URL | choose -f '/' -1`
+    echo $TICKET_ID $TICKET_URL $TICKET_TITLE
+  done
+
+  # trap ctrl-c and call ctrl_c()
+  trap ctrl_c INT
+
+  function ctrl_c() {
+    echo
+    echo "Exiting.."
+    sleep 1
+    exit 1
+  }
+
+  echo
+  echo -n "Jira ticket (ID or URL) > "
+
+  # Read ticket
+  read TICKET
+
+  TICKET_IS_URL=`echo $TICKET | grep "http" | wc -l`
+
+  if [[ "$TICKET_IS_URL" == "1" ]]; then
+    TICKET_URL=$TICKET
+    TICKET_ID=`echo "$TICKET_URL" | choose -f '/' -1 | choose -f '\?|#' 0`
+  else
+    TICKET_BASE_URL=`cat /etc/jira`
+    TICKET_ID=$TICKET
+    TICKET_URL="${TICKET_BASE_URL}/browse/${TICKET_ID}"
+  fi
+
+  # Validate ticket ID
+  TICKET_VALID=`echo $TICKET_ID | grep -E "^[a-zA-Z]{1,16}-[0-9]{1,}$"`
+  if [[ "$TICKET_VALID" == "" ]]; then
+    echo "Error: Ticket ID not valid"
+    return 1
+  fi
+
+  DATE_HOUR=`date +%H`
+  DATE_MINUTE=`date +%M`
+  TICKET_DIRECTORY="${HOME}/work/jobs/${DATE_YEAR}/${TICKET_ID}/"
+
+  mkdir -p $TICKET_DIRECTORY
+  cd $TICKET_DIRECTORY
+
+  if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
+    echo -n "Title > "
+    read TICKET_TITLE
+
+    echo "## $TICKET_TITLE
+- **Ticket URL** ${TICKET_URL}
+- **Problem statement**
+        -
+- **Acceptance criteria**
+        -
+- **Status**
+        -
+- **Plan**
+        - **Done**
+            -
+        - **Todo**
+            -
+        - **Doing**
+            -
+- **Notes**
+        -
+- **Opportunities**
+        -
+- **Risks**
+        -
+- **Contact(s)**
+        -
+- **Resources**
+        -" > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
+
+  fi
+
+  # Link in current directory
+  ln -s ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md ./${TICKET_ID}.md 2>/dev/null
+  touch ./${TICKET_ID}.md
+
+  # Don't prepend ticket if it already is the first line in journal
+  TICKET_PREPENDED=`head -1 ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md | grep $TICKET_ID | wc -l`
+
+  TICKET_TITLE=`head -1 ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md | choose -f "## " 0`
+
+  if [[ "$TICKET_PREPENDED" != "1" ]]; then
+    echo -e "- **${DATE_HOUR}:${DATE_MINUTE}** #${TICKET_ID} ${TICKET_TITLE}\n$(cat ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md)" > ${LOGSEQ_DIRECTORY}/journals/${DATE_YEAR}_${DATE_MONTH}_${DATE_DAY}.md
+  fi
+
+  pwd
+  exa --long --all --header --icons --git
+  jt ${TICKET_ID}
+}
+
+cpd() {
+  LAST_DOWNLOAD=`exa ${HOME}/Downloads --sort=modified | tail -1`
+  tmp_work
+  cp -rf ${HOME}/Downloads/${LAST_DOWNLOAD} .
+  pwd
+  exa --long --all --header --icons --git
+}
+
 tmp_work() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
@@ -3069,8 +3271,6 @@ tmp_work() {
 
   mkdir -p $TMP_DIRECTORY
   cd $TMP_DIRECTORY
-  pwd
-  exa --long --all --header --icons --git
 }
 
 if [[ ! -z "${REMOTEWORK}" ]]; then
@@ -3079,6 +3279,16 @@ fi
 
 if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
+  pwd
+  exa --long --all --header --icons --git
+fi
+
+if [[ ! -z "${JIRATICKET}" ]]; then
+  jira_ticket
+fi
+
+if [[ ! -z "${JIRALASTTICKET}" ]]; then
+  jira_last_ticket
 fi
 
 if [[ ! -z "${WEBSCAN}" ]]; then
@@ -3088,8 +3298,30 @@ if [[ ! -z "${WEBSCAN}" ]]; then
   vim targets.txt
 fi
 
+if [[ ! -z "${OLLAMA_LLAMA2}" ]]; then
+  CONTAINER_ID=`docker ps --format "{{.ID}}" -f name="ollama$"`
+  if [[ "$CONTAINER_ID" != "" ]]; then
+    /run/current-system/sw/bin/docker exec -it $CONTAINER_ID /bin/bash -c 'ollama run llama2:13b'
+    cd
+  else
+    echo "ERROR: Could not find running ollama container"
+  fi
+fi
+
+if [[ ! -z "${OLLAMA_MISTRAL}" ]]; then
+  CONTAINER_ID=`docker ps --format "{{.ID}}" -f name="ollama$"`
+  if [[ "$CONTAINER_ID" != "" ]]; then
+    /run/current-system/sw/bin/docker exec -it $CONTAINER_ID /bin/bash -c 'ollama run mistral:7b'
+    cd
+  else
+    echo "ERROR: Could not find running ollama container"
+  fi
+fi
+
 if [[ ! -z "${NOHISTFILE}" ]]; then
   tmp_work
+  pwd
+  exa --long --all --header --icons --git
   fc -p
 fi
 

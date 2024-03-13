@@ -37,10 +37,12 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
-        "${mod}+Return" = "exec ${pkgs.firefox}/bin/firefox";
+        "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
+        "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
+        "${mod}+Return" = "exec /home/user/git/maxos/scripts/click.sh click 1 sprint_1";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
-        "${mod}+space" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
+        "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
@@ -55,6 +57,8 @@ in {
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
         "${mod}+Shift+h" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
+        "${mod}+j" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e JIRALASTTICKET=1";
+        "${mod}+Shift+j" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e JIRATICKET=1";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+Shift+l" = "exec sudo poweroff";
@@ -63,7 +67,7 @@ in {
         "${mod}+n" = "exec ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu";
         "${mod}+o" = "exec ${pkgs.flameshot}/bin/flameshot gui --raw | ${pkgs.tesseract}/bin/tesseract stdin stdout | ${pkgs.xclip}/bin/xclip -in -selection clipboard";
         "${mod}+Shift+o" = "exec ${pkgs.obs-studio}/bin/obs";
-        "${mod}+p" = "exec ${pkgs.chromium}/bin/chromium-browser --app=http://localhost --force-device-scale-factor=1.6";
+        "${mod}+p" = "workspace back_and_forth";
         "${mod}+Shift+p" = "restart";
         "${mod}+r" = "exec /home/user/git/maxos/scripts/radio4.sh";
         #"${mod}+r" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
@@ -71,6 +75,7 @@ in {
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+u" = "fullscreen";
+        "${mod}+space" = "exec /home/user/git/maxos/scripts/slack_toggle.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+w" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
@@ -111,6 +116,20 @@ in {
         "${mod}+Shift+7" = "move container to workspace number 7";
         "${mod}+Shift+8" = "move container to workspace number 8";
         "${mod}+Shift+9" = "move container to workspace number 9";
+
+        # Slack
+        "Mod4+j" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04GGBDUWH0";
+        "Mod4+p" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U06G9SFKAJ2";
+        "Mod4+m" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U05C566PDJ5";
+        "Mod4+n" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04TV0SREKC";
+        "Mod4+k" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U03S149LA81";
+        "Mod4+b" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U042RTF0MHS";
+        "Mod4+s" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV C050ZTPBV4H";
+        "Mod4+r" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04VC5P7XV1";
+        "Mod4+o" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U058BK3775F";
+        "Mod4+t" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U03SC6Q1ZLG";
+        "Mod4+d" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U068KQNQ341";
+        "Mod4+c" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV C04H5N44ZM5";
       };
 
       window = {
@@ -121,7 +140,7 @@ in {
 
       bars = [
         {
-          trayOutput = "DP-4";
+          trayOutput = "DP-0";
           fonts = [ "DejaVu Sans Mono" "FontAwesome 14" ];
           position = "bottom";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";

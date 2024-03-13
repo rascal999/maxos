@@ -46,7 +46,18 @@
   networking.interfaces.enp39s0.wakeOnLan.enable = true;
 
   # Point to localhost for Pi-hole
-  networking.nameservers = [ "8.8.8.8" ];
+  networking.nameservers = [ "127.0.0.1" ];
+
+  systemd.services.ollama = {
+    script = ''
+      /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
+    '';
+    wantedBy = ["multi-user.target"];
+    # If you use podman
+    #after = ["podman.service" "podman.socket"];
+    # If you use docker
+    after = ["docker.service" "docker.socket"];
+  };
 
   # Enable cron service
   # /home/user/Data rsync for when syncthing fucks up
@@ -54,6 +65,7 @@
     enable = true;
     systemCronJobs = [
       "45 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/Data admin@192.168.0.254:/volume1/backup-data"
+      "50 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/work admin@192.168.0.254:/volume1/backup-data"
       #"25 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
       #"55 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
       #"0 16 * * *        root    /home/user/git/maxos/scripts/backup_plane.sh"

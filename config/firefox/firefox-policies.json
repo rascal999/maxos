@@ -3028,6 +3028,10 @@
             "url": "http://localhost:10170/"
           },
           {
+            "name": "Ollama",
+            "url": "http://127.0.0.1:10220/"
+          },
+          {
             "name": "OpenCVE",
             "url": "http://127.0.0.1:10030/cve"
           },

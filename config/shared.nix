@@ -49,8 +49,20 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Flatpak
+  services.flatpak.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
+
   # Enable twingate
   #services.twingate.enable = true;
+
+  # X11 forward in SSH
+  programs.ssh.forwardX11 = true;
 
   # No
   powerManagement.enable = false;
@@ -196,7 +208,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-     "electron-21.4.0"
+     "electron-25.9.0"
      "python-2.7.18.6"
      "python-2.7.18.7"
   ];
@@ -229,9 +241,15 @@
     ];
   };
 
+  # virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  systemd.services.NetworkManager-wait-online.enable = false;
+
   systemd.services.startupTasks = {
     wantedBy = [ "multi-user.target" ];
-    after = [ "network-online.target" ];
+    #after = [ "network-online.target" ];
     description = "Extra tasks";
     script = "/home/user/.startup.sh";
     serviceConfig = {

@@ -7,7 +7,7 @@
     abootimg                                                                                             # Manipulate Android Boot Images
     #adreaper                                                                                             # Enumeration tool for Windows Active Directories
     afflib                                                                                               # Advanced forensic format library
-    afl                                                                                                  # Powerful fuzzer via genetic algorithms and instrumentation
+    #afl                                                                                                  # Powerful fuzzer via genetic algorithms and instrumentation
     aflplusplus                                                                                          #
     aha                                                                                                  # ANSI HTML Adapter
     aiodnsbrute                                                                                          # DNS brute force utility
@@ -47,6 +47,7 @@
     bore-cli                                                                                             # Rust tool to create TCP tunnels
     brakeman                                                                                             # Static analysis security scanner for Ruby on Rails
     brillo                                                                                               # Backlight and Keyboard LED control tool
+    bruno                                                                                                # Open-source IDE For exploring and testing APIs
     bruteforce-luks                                                                                      # Cracks passwords of LUKS encrypted volumes
     brutespray                                                                                           # Tool to do brute-forcing from Nmap output
     bully                                                                                                # Retrieve WPA/WPA2 passphrase from a WPS enabled access point
@@ -60,7 +61,7 @@
     cariddi                                                                                              # Crawler for URLs and endpoints
     cassowary                                                                                            # Modern cross-platform HTTP load-testing tool written in Go
     certipy                                                                                              # Tool to enumerate and abuse misconfigurations in Active Directory Certificate Services
-    cfripper                                                                                             # Tool for analysing CloudFormation templates
+    #cfripper                                                                                             # Tool for analysing CloudFormation templates
     cgdb                                                                                                 # A curses interface to gdb
     chain-bench                                                                                          # An open-source tool for auditing your software supply chain stack for security compliance based on a new CIS Software Supply Chain benchmark
     changetower                                                                                          # Tools to watch for webppage changes
@@ -81,6 +82,7 @@
     cliam                                                                                                # Cloud agnostic IAM permissions enumerator
     cloudbrute                                                                                           # Cloud enumeration tool
     cloudlist                                                                                            # Tool for listing assets from multiple cloud providers
+    codeql                                                                                               # Semantic code analysis engine
     conda                                                                                                # Conda is a package manager for Python
     connman                                                                                              #
     connman-gtk                                                                                          # GTK GUI for Connman
@@ -91,6 +93,7 @@
     croc                                                                                                 # Easily and securely send things from one computer to another
     crowbar                                                                                              # A brute forcing tool that can be used during penetration tests
     crunch                                                                                               # Wordlist generator
+    cudaPackages.cudatoolkit                                                                             # A compiler for NVIDIA GPUs, math libraries, and tools
     cudatoolkit                                                                                          # A compiler for NVIDIA GPUs, math libraries, and tools
     cups-brother-hl3140cw                                                                                #
     daemon                                                                                               # Turns other processes into daemons
@@ -119,6 +122,7 @@
     dnstwist                                                                                             # Domain name permutation engine for detecting homograph phishing attacks
     dnsx                                                                                                 # Fast and multi-purpose DNS toolkit
     dockle                                                                                               # Container Image Linter for Security
+    dockstarter                                                                                          # DockSTARTer helps you get started with running apps in Docker
     dontgo403                                                                                            # Tool to bypass 40X response codes
     doona                                                                                                # A fork of the Bruteforce Exploit Detector Tool (BED)
     dotnet-sdk                                                                                           # .NET SDK 6.0.406
@@ -165,6 +169,7 @@
     ghost                                                                                                # Android post-exploitation framework
     #gimp                                                                                                 # The GNU Image Manipulation Program
     git-crypt                                                                                            # Transparent file encryption in git
+    gitlab-runner                                                                                        # GitLab Runner the continuous integration executor of GitLab
     gitleaks                                                                                             # Scan git repos (or files) for secrets
     glab                                                                                                 # An open-source GitLab command line tool
     glances                                                                                              # Cross-platform curses-based monitoring tool
@@ -234,6 +239,7 @@
     ldeep                                                                                                # In-depth LDAP enumeration utility
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
+    libgcc        # GNU Compiler Collection, version 12.3.0
     libgccjit                                                                                            # GNU Compiler Collection
     libglibutil                                                                                          # Library of glib utilities
     logseq                                                                                               # Organize and share your personal knowledge base
@@ -247,7 +253,7 @@
     mfoc                                                                                                 # Mifare Classic Offline Cracker
     mimeo                                                                                                # Open files by MIME-type or file name using regular expressions
     minikube                                                                                             # A tool that makes it easy to run Kubernetes locally
-    mitmproxy                                                                                            # Man-in-the-middle proxy
+    #mitmproxy                                                                                            # Man-in-the-middle proxy
     mkcert                                                                                               # A simple tool for making locally-trusted development certificates
     monero-gui                                                                                           # Private, secure, untraceable currency
     mongoaudit                                                                                           # MongoDB auditing and pentesting tool
@@ -275,6 +281,7 @@
     nuclear                                                                                              # Streaming music player that finds free music for you
     nuclei                                                                                               # Tool for configurable targeted scanning
     nwipe                                                                                                # Securely erase disks
+    nzbget        # A command line tool for downloading files from news servers
     obs-studio                                                                                           # Free and open source software for video recording and live streaming
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner
@@ -295,6 +302,8 @@
     pinentry                                                                                             # GnuPG’s interface to passphrase input
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
+    #postman                                                                                              # API Development Environment
+    powershell                                                                                           # Powerful cross-platform (Windows, Linux, and macOS) shell and scripting language based on .NET
     putty                                                                                                # A Free Telnet/SSH Client
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
@@ -327,6 +336,7 @@
     scrot                                                                                                # A command-line screen capture utility
     safety-cli                                                                                           #
     sddm                                                                                                 # QML based X11 display manager
+    SDL2                                                                                                 # A cross-platform multimedia library
     secretscanner                                                                                        # Tool to find secrets and passwords in container images and file systems
     semgrep                                                                                              # Lightweight static analysis for many languages - cli
     siege                                                                                                # HTTP load tester
@@ -345,6 +355,7 @@
     sngrep                                                                                               # A tool for displaying SIP calls message flows from terminal
     sniffglue                                                                                            # Secure multithreaded packet sniffer
     snmpcheck                                                                                            # SNMP enumerator
+    snyk                                                                                                 # Scans and monitors projects for security vulnerabilities
     sonar-scanner-cli                                                                                    # SonarQube Scanner used to start code analysis
     sox                                                                                                  # Sample Rate Converter for audio
     sqlite                                                                                               # A self-contained, serverless, zero-configuration, transactional SQL database engine
@@ -366,12 +377,13 @@
     subfinder                                                                                            # Subdomain discovery tool
     subjs                                                                                                # Fetcher for Javascript files
     subzerod                                                                                             # Python module to help with the enumeration of subdomains
-    swaggerhole                                                                                          # Tool to searching for secret on swaggerhub
+    #swaggerhole                                                                                          # Tool to searching for secret on swaggerhub
     swaks                                                                                                # A featureful, flexible, scriptable, transaction-oriented SMTP test tool
     sx-go                                                                                                # Command-line network scanner
     tcpflow                                                                                              # TCP stream extractor
     tcpreplay                                                                                            # A suite of utilities for editing and replaying network traffic
     tdesktop                                                                                             # Telegram Desktop messaging app
+    termcolor                                                                                            # Header-only C++ library for printing colored messages
     #teams                                                                                                # Microsoft Teams
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
     teler                                                                                                # Real-time HTTP Intrusion Detection
@@ -384,7 +396,7 @@
     trilium-desktop                                                                                      # Note taking application with focus on building large personal knowledge bases
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI
     truecrack                                                                                            # TrueCrack is a brute-force password cracker for TrueCrypt volumes
-    trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
+    #trueseeing                                                                                           # Non-decompiling Android vulnerability scanner
     trufflehog                                                                                           # Searches through git repositories for high entropy strings and secrets
     tsung                                                                                                # A high-performance benchmark framework for various protocols
     twingate                                                                                             # Twingate Client
@@ -415,6 +427,7 @@
     wipe                                                                                                 # Secure file wiping utility
     wireshark-qt                                                                                         #
     witness                                                                                              # A pluggable framework for software supply chain security
+    wmctrl                                                                                               # CLI tool to interact with EWMH/NetWM compatible X Window Managers
     wol                                                                                                  # Implements Wake On LAN functionality in a small program
     wprecon                                                                                              # WordPress vulnerability recognition tool
     wpscan                                                                                               # Black box WordPress vulnerability scanner
