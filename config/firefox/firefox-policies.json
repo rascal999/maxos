@@ -9,7 +9,7 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
-      "{73f6509a-074f-457f-bc32-e521bde682f7}":
+      "{73f6509a-074f-457f-bc32-e521bde682f7}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/transover-ff/addon-4231028-latest.xpi",
         "installation_mode": "normal_installed"
       },
