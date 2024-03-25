@@ -4,11 +4,11 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 3
 
     # 0
-    /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --left-of DP-0
+    /run/current-system/sw/bin/xrandr --output DP-0 --auto --left-of USB-C-0
     # 1
-    /run/current-system/sw/bin/xrandr --output DP-0 --auto --right-of HDMI-0
-    # 2
     /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-0
+    # 2
+    /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --right-of DP-0
 
     /run/current-system/sw/bin/sleep 4
 
