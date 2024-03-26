@@ -18,6 +18,7 @@ in
   "api-virustotal.age".publicKeys = hosts;
   "jira.age".publicKeys = hosts;
   "password-ddclient.age".publicKeys = hosts;
+  "rofi-shortcuts.age".publicKeys = hosts;
   "secret.age".publicKeys = hosts;
   "token-github.age".publicKeys = hosts;
   "vpn-mullvad.age".publicKeys = hosts;
