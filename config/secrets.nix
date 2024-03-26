@@ -102,10 +102,10 @@
       source = config.age.secrets.jira.path;
       mode = "0444";
     };
-    rofi-shortcuts.sh =
+    rofi-shortcuts =
     {
       source = config.age.secrets.rofi-shortcuts.path;
-      mode = "0444";
+      mode = "0555";
     };
     token-github =
     {
