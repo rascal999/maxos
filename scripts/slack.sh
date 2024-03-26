@@ -7,8 +7,8 @@ if [ "$#" -ne 2 ]; then
 fi
 
 function slack() {
-    /home/user/git/maxos/scripts/slack_tile.sh fullscreen
-    /run/current-system/sw/bin/xdg-open "slack://channel?team=${1}&id=${2}"
+    /home/user/git/maxos/scripts/slack_tile.sh fullscreen > /dev/null
+    /run/current-system/sw/bin/xdg-open "slack://channel?team=${1}&id=${2}" > /dev/null
 }
 
 slack $@
