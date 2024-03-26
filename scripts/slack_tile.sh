@@ -20,7 +20,7 @@ if [ "${SLACK_PARKED}" == "1" ]; then
   i3-msg "[class=\"Slack\"] move to workspace 1"
   sleep 0.3
   i3-msg "[class=\"Slack\"] focus"
-  xdotool mousemove --screen 0 5290 160
+  #xdotool mousemove --screen 0 5290 160
 fi
 
 # Focus workspace 1 exits fullscreen for app
