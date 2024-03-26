@@ -37,13 +37,12 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
-        "Mod4+u" = "exec ${pkgs.rofi}/bin/rofi -show maxos -modes 'maxos:/etc/rofi-shortcuts' -theme '/home/user/git/maxos-next/resources/rofi/Arc Dark'";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
         "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh HDMI-0 vid zzz";
 
-        "${mod}+Return" = "exec /home/user/git/maxos/scripts/click.sh click 1 sprint_1";
+        "${mod}+Return" = "exec ${pkgs.rofi}/bin/rofi -show maxos -modes 'maxos:/etc/rofi-shortcuts' -theme '/home/user/git/maxos-next/resources/rofi/Arc Dark'";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
