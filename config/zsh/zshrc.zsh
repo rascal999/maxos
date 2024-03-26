@@ -3256,7 +3256,7 @@ jira_ticket() {
 }
 
 cpd() {
-  LAST_DOWNLOAD=`ls -lhtr ${HOME}/Downloads | tail -1`
+  LAST_DOWNLOAD=`ls -tr ${HOME}/Downloads | tail -1`
   #tmp_work
   cp -rf "${HOME}/Downloads/${LAST_DOWNLOAD}" .
   pwd
