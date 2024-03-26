@@ -40,6 +40,8 @@ in {
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
+        "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh HDMI-0 vid zzz";
+
         "${mod}+Return" = "exec /home/user/git/maxos/scripts/click.sh click 1 sprint_1";
         "${mod}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
