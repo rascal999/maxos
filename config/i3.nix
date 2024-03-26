@@ -37,7 +37,7 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
-        "Mod4+u" = "exec ${pkgs.rofi}/bin/rofi";
+        "Mod4+u" = "exec ${pkgs.rofi}/bin/rofi -show maxos -modes "maxos:/etc/rofi-shortcuts" -theme '/home/user/git/maxos-next/resources/rofi/Arc Dark'";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
