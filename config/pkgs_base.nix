@@ -244,6 +244,7 @@
     libglibutil                                                                                          # Library of glib utilities
     logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
+    j4-dmenu-desktop                                                                                     # A wrapper for dmenu that recognize .desktop files
     macchanger                                                                                           # A utility for viewing/manipulating the MAC address of network interfaces
     mariadb                                                                                              # An enhanced, drop-in replacement for MySQL
     masscan                                                                                              # Fast scan of the Internet
