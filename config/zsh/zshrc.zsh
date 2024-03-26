@@ -3258,7 +3258,7 @@ jira_ticket() {
 cpd() {
   LAST_DOWNLOAD=`exa ${HOME}/Downloads --sort=modified | tail -1`
   #tmp_work
-  cp -rf ${HOME}/Downloads/${LAST_DOWNLOAD} .
+  cp -rf "${HOME}/Downloads/${LAST_DOWNLOAD}" .
   pwd
   exa --long --all --header --icons --git
 }
