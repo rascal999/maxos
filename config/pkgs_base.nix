@@ -325,6 +325,7 @@
     remmina                                                                                              # Remote desktop client written in GTK
     rizin                                                                                                # UNIX-like reverse engineering framework and command-line toolset
     rke                                                                                                  # An extremely simple, lightning fast Kubernetes distribution that runs entirely within containers
+    rofi                                                                                                 # Window switcher, run dialog and dmenu replacement
     routersploit                                                                                         # Exploitation Framework for Embedded Devices
     rshijack                                                                                             # TCP connection hijacker
     rtl-sdr                                                                                              # Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
