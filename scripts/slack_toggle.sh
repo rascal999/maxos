@@ -13,8 +13,6 @@ if [[ "${SLACK_PARKED}" == "1" ]]; then
   if [ "$SLACK_FS" != "1" ]; then
       i3-msg "[class=\"Slack\"] fullscreen"
   fi
-
-  xdotool mousemove --screen 0 5290 160
 else
   i3-msg "[class=\"Slack\"] move to workspace ytm"
   sleep 0.3
