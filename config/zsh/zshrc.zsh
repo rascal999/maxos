@@ -3332,8 +3332,8 @@ case "$DO_TASK" in
     fs-home-data)
         cd /home/user/Data
     ;;
-    cmd-docker-ps-l)
-        docker ps -l
+    cmd-docker-ps-a)
+        docker ps -a | fzf
     ;;
     *)
         pwd
