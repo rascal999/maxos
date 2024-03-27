@@ -3328,6 +3328,9 @@ case "$FS_LOCATION" in
     home-downloads)
         cd /home/user/Downloads
     ;;
+    home-data)
+        cd /home/user/Data
+    ;;
 esac
 
 pwd
