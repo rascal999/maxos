@@ -3325,12 +3325,18 @@ fi
 case "$DO_TASK" in
     fs-git-maxos)
         cd /home/user/git/maxos-next
+        pwd
+        exa --long --all --header --icons --git
     ;;
     fs-home-downloads)
         cd /home/user/Downloads
+        pwd
+        exa --long --all --header --icons --git
     ;;
     fs-home-data)
         cd /home/user/Data
+        pwd
+        exa --long --all --header --icons --git
     ;;
     cmd-docker-ps-a)
         docker ps -a | tail -n +2 | fzf
@@ -3347,10 +3353,6 @@ case "$DO_TASK" in
         sleep 1
         i3-msg "[title=\"Firefox\"] focus"
         exit 0
-    ;;
-    *)
-        pwd
-        exa --long --all --header --icons --git
     ;;
 esac
 
