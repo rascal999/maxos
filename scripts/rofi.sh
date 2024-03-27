@@ -11,8 +11,15 @@ QUERY="SELECT entry_name, command FROM rofi;"
 # Execute the SQLite query and store the results in a variable
 ENTRIES=$(sqlite3 "$DB_FILE" "$QUERY")
 
+ENTRIES_BOOKMARKS=$(cat /home/user/git/maxos/config/firefox/firefox-policies.json | jq -r '.policies.ManagedBookmarks.[] | .name + if .children then (.children[] | .policies.ManagedBookmarks.name + " # " + .name + " " + (.url // "NA")) end' | grep http | sed 's/^/📚 Bookmarks # /g' | sed 's/ http/ | xdg-open http/g')
+
+# Want bookmarks last
+ENTRIES_SORTED=$(echo "$ENTRIES" | sort)
+ENTRIES_BOOKMARKS_SORTED=$(echo "$ENTRIES_BOOKMARKS" | sort)
+ENTRIES=("${ENTRIES_SORTED}" "${ENTRIES_BOOKMARKS_SORTED}")
+
 # Use $ROFI_CMD to display the entries and select one
-SELECTED_ENTRY=$(echo "$ENTRIES" | sort | cut -d '|' -f 1 | $ROFI_CMD -i -dmenu -p "maxos >")
+SELECTED_ENTRY=$(echo "$ENTRIES" | cut -d '|' -f 1 | $ROFI_CMD -i -dmenu -p "maxos >")
 
 # Find the corresponding command for the selected entry
 SELECTED_COMMAND=$(echo "$ENTRIES" | grep "^$SELECTED_ENTRY|" | cut -d '|' -f 2)
