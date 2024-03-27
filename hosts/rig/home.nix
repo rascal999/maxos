@@ -45,6 +45,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.rofi.enable = true;
+  programs.rofi.plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ]
+  programs.rofi.theme = "/home/user/git/maxos/resources/rofi/theme";
+
   # Stop screen timeout
   services.screen-locker.xss-lock.screensaverCycle = 0;
 }
