@@ -394,6 +394,7 @@
     testssl                                                                                              # CLI tool to check a server's TLS/SSL capabilities
     tfsec                                                                                                # Static analysis powered security scanner for terraform code
     thc-hydra                                                                                            # A very fast network logon cracker which support many different services
+    ticker                                                                                               # Terminal stock ticker with live updates and position tracking
     tor-browser-bundle-bin                                                                               # Tor Browser Bundle built by torproject.org
     tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
     traitor                                                                                              # Automatic Linux privilege escalation
