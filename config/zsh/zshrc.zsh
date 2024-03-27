@@ -3343,7 +3343,7 @@ case "$DO_TASK" in
     ;;
     cmd-docker-inspect)
         DOCKER_IMAGE_ID=`docker ps -a | tail -n +2 | fzf | choose 1`
-        docker inspect $DOCKER_IMAGE_ID | choose 1) | jq
+        docker inspect $DOCKER_IMAGE_ID | choose 1 | jq
         echo $DOCKER_IMAGE_ID
     ;;
     cmd-docker-kill)
