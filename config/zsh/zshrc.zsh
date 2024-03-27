@@ -3342,7 +3342,7 @@ case "$DO_TASK" in
         docker kill $(docker ps -a | fzf | choose 1)
     ;;
     cmd-docker-navigate)
-        IP_PORT=`docker port "$(docker ps -a | fzf | choose 1)"`
+        IP_PORT=`docker port "$(docker ps -a | fzf | choose 0)" | choose -1`
         xdg-open http://${IP_PORT}
     ;;
     *)
