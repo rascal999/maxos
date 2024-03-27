@@ -3351,10 +3351,15 @@ case "$DO_TASK" in
     ;;
     cmd-docker-navigate)
         IP_PORT=`docker port "$(docker ps -a | tail -n +2 | fzf | choose 0)" | choose -1`
-        xdg-open http://${IP_PORT}
-        sleep 1
-        i3-msg "[title=\"Firefox\"] focus"
-        exit 0
+        if [[ $(echo "$IP_PORT" | wc -l) == 1 ]]; then
+            xdg-open http://${IP_PORT}
+            sleep 1
+            i3-msg "[title=\"Firefox\"] focus"
+            exit 0
+        else
+            echo "ERROR: Docker container has multiple exposed ports"
+            echo $IP_PORT
+        fi
     ;;
 esac
 
