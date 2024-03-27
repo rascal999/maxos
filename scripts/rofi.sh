@@ -46,6 +46,10 @@ case "$SELECTED_COMMAND" in
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Google search query")
         perform_search "https://www.google.com/search?q=" "$SEARCH_QUERY"
     ;;
+    google-image)
+        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Google search query")
+        perform_search "https://www.google.com/search?tbm=isch&q=" "$SEARCH_QUERY"
+    ;;
     gdrive)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Drive search")
         perform_search "https://drive.google.com/drive/u/0/search?q=" "$SEARCH_QUERY"
