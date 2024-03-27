@@ -3344,6 +3344,8 @@ case "$DO_TASK" in
     cmd-docker-navigate)
         IP_PORT=`docker port "$(docker ps -a | fzf | choose 0)" | choose -1`
         xdg-open http://${IP_PORT}
+        sleep 1
+        i3-msg "[title=\"Firefox\"] focus"
         exit 0
     ;;
     *)
