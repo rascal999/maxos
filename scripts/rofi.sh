@@ -12,7 +12,7 @@ QUERY="SELECT entry_name, command FROM rofi;"
 ENTRIES=$(sqlite3 "$DB_FILE" "$QUERY")
 
 # Use $ROFI_CMD to display the entries and select one
-SELECTED_ENTRY=$(echo "$ENTRIES" | sort | cut -d '|' -f 1 | $ROFI_CMD -i -dmenu -p "Select an entry")
+SELECTED_ENTRY=$(echo "$ENTRIES" | sort | cut -d '|' -f 1 | $ROFI_CMD -i -dmenu -p ">")
 
 # Find the corresponding command for the selected entry
 SELECTED_COMMAND=$(echo "$ENTRIES" | grep "^$SELECTED_ENTRY|" | cut -d '|' -f 2)
