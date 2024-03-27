@@ -192,6 +192,11 @@
       ports = [ "127.0.0.1:10200:80" ];
     };
 
+    web-check = {
+      image = "lissy93/web-check";
+      ports = [ "127.0.0.1:10230:3000" ];
+    };
+
     #ssu = {
     #  image = "rascal999/ssu:latest";
     #  volumes = [
@@ -226,5 +231,6 @@
   systemd.services.docker-libreddit.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-excalidraw.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-web-check.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-ssu.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
