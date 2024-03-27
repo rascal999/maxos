@@ -11,7 +11,7 @@ QUERY="SELECT entry_name, command FROM rofi;"
 # Execute the SQLite query and store the results in a variable
 ENTRIES=$(sqlite3 "$DB_FILE" "$QUERY")
 
-ENTRIES_BOOKMARKS=$(cat /home/user/git/maxos/config/firefox/firefox-policies.json | jq -r '.policies.ManagedBookmarks.[] | .name + if .children then (.children[] | .policies.ManagedBookmarks.name + " # " + .name + " " + (.url // "NA")) end' | grep http | sed 's/^/📚 Bookmarks # /g' | sed 's/ http/ | xdg-open http/g')
+ENTRIES_BOOKMARKS=$(cat /home/user/git/maxos/config/firefox/firefox-policies.json | jq -r '.policies.ManagedBookmarks.[] | .name + if .children then (.children[] | .policies.ManagedBookmarks.name + " # " + .name + " " + (.url // "NA")) end' | grep http | sed 's/^/📚 Bookmarks # Bks # /g' | sed 's/ http/ | xdg-open http/g')
 
 # Want bookmarks last
 ENTRIES_SORTED=$(echo "$ENTRIES" | sort)
