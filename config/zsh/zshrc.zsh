@@ -3321,11 +3321,17 @@ if [[ ! -z "${NOHISTFILE}" ]]; then
   fc -p
 fi
 
-if [[ ! -z "${GIT_MAXOS}" ]]; then
-  cd /home/user/git/maxos-next
-  pwd
-  exa --long --all --header --icons --git
-fi
+case "$FS_LOCATION" in
+    git-maxos)
+        cd /home/user/git/maxos-next
+    ;;
+    home-downloads)
+        cd /home/user/Downloads
+    ;;
+esac
+
+pwd
+exa --long --all --header --icons --git
 
 preexec() {
    (( $#_elapsed > 1000 )) && set -A _elapsed $_elapsed[-1000,-1]
