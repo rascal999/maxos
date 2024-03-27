@@ -3336,7 +3336,7 @@ case "$DO_TASK" in
         docker ps -a | fzf
     ;;
     cmd-docker-inspect)
-        docker inspect $(docker ps -a | fzf | choose 1)
+        docker inspect $(docker ps -a | fzf | choose 1) | jq
     ;;
     cmd-docker-kill)
         docker kill $(docker ps -a | fzf | choose 1)
