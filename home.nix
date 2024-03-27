@@ -48,7 +48,7 @@
   programs.home-manager.enable = true;
 
   programs.rofi.enable = true;
-  programs.rofi.plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ]
+  programs.rofi.plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ];
   programs.rofi.theme = "/home/user/git/maxos/resources/rofi/theme";
 
   # Stop screen timeout
