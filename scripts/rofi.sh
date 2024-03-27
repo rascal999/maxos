@@ -47,11 +47,11 @@ case "$SELECTED_COMMAND" in
         perform_search "https://www.google.com/search?q=" "$SEARCH_QUERY"
     ;;
     google-image)
-        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Google search query")
+        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Google image search query")
         perform_search "https://www.google.com/search?tbm=isch&q=" "$SEARCH_QUERY"
     ;;
     gdrive)
-        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Drive search")
+        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Google Drive search")
         perform_search "https://drive.google.com/drive/u/0/search?q=" "$SEARCH_QUERY"
     ;;
     jql)
@@ -59,7 +59,7 @@ case "$SELECTED_COMMAND" in
         perform_search "https://mangopay.atlassian.net/issues/?jql=" "$SEARCH_QUERY"
     ;;
     jira-ticket)
-        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Ticket ID")
+        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Jira ticket ID")
         perform_search "https://mangopay.atlassian.net/browse/" "$SEARCH_QUERY"
     ;;
     nix-pkg)
