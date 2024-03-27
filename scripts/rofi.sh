@@ -28,7 +28,7 @@ perform_search() {
     if [[ $search_query != "" ]]; then
         # Open the search URL in the default web browser
         xdg-open "$search_url"
-        sleep 2
+        sleep 1
         i3-msg "[title=\"$search_query\"] focus"
     fi
 }
