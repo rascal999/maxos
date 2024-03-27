@@ -74,6 +74,10 @@ case "$SELECTED_COMMAND" in
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Wiki search")
         perform_search "https://en.wikipedia.org/w/index.php?search=" "$SEARCH_QUERY"
     ;;
+    yahoo-finance)
+        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Quote")
+        perform_search "https://uk.finance.yahoo.com/quote/" "$SEARCH_QUERY"
+    ;;
     notion)
         xdg-open "https://notion.so/"
     ;;
