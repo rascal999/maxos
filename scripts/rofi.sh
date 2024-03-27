@@ -29,7 +29,7 @@ perform_search() {
         # Open the search URL in the default web browser
         xdg-open "$search_url"
         sleep 1
-        i3-msg "[title=\"$search_query\"] focus"
+        i3-msg "[title=\"$search_query.*Firefox\"] focus"
     fi
 }
 
