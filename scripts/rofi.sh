@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ROFI_CMD="rofi -theme /home/user/git/maxos/resources/rofi/ArcDark"
+ROFI_CMD="rofi -theme /home/user/git/maxos/resources/rofi/theme"
 
 # Path to your SQLite database file
 DB_FILE="/home/user/Data/resources/rofi.db"
