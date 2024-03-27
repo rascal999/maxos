@@ -3364,7 +3364,7 @@ case "$DO_TASK" in
         fi
     ;;
     cmd-ticker)
-        ticker --show-fundamentals --show-holdings --show-summary --show-tags -w "$2"
+        ticker --show-fundamentals --show-holdings --show-summary --show-tags -w AAPL,NET
     ;;
 esac
 
