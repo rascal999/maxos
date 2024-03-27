@@ -3333,16 +3333,16 @@ case "$DO_TASK" in
         cd /home/user/Data
     ;;
     cmd-docker-ps-a)
-        docker ps -a | fzf
+        docker ps -a | tail -n +2 | fzf
     ;;
     cmd-docker-inspect)
-        docker inspect $(docker ps -a | fzf | choose 1) | jq
+        docker inspect $(docker ps -a | tail -n +2 | fzf | choose 1) | jq
     ;;
     cmd-docker-kill)
-        docker kill $(docker ps -a | fzf | choose 1)
+        docker kill $(docker ps -a | tail -n +2 | fzf | choose 1)
     ;;
     cmd-docker-navigate)
-        IP_PORT=`docker port "$(docker ps -a | fzf | choose 0)" | choose -1`
+        IP_PORT=`docker port "$(docker ps -a | tail -n +2 | fzf | choose 0)" | choose -1`
         xdg-open http://${IP_PORT}
         sleep 1
         i3-msg "[title=\"Firefox\"] focus"
