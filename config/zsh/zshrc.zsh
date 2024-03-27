@@ -3357,7 +3357,9 @@ case "$DO_TASK" in
             i3-msg "[title=\"Firefox\"] focus"
             exit 0
         else
+            echo
             echo "ERROR: Docker container has multiple exposed ports"
+            echo
             echo $IP_PORT
         fi
     ;;
