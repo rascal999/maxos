@@ -31,9 +31,6 @@
     jira = {
       file = ../secrets/jira.age;
     };
-    rofi-shortcuts = {
-      file = ../secrets/rofi-shortcuts.age;
-    };
     token-github = {
       file = ../secrets/token-github.age;
     };
@@ -101,11 +98,6 @@
     {
       source = config.age.secrets.jira.path;
       mode = "0444";
-    };
-    rofi-shortcuts =
-    {
-      source = config.age.secrets.rofi-shortcuts.path;
-      mode = "0555";
     };
     token-github =
     {

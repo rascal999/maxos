@@ -43,7 +43,7 @@ in {
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
         "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh HDMI-0 vid zzz";
 
-        "${mod}+Return" = "exec ${pkgs.rofi}/bin/rofi -show maxos -modes 'maxos:/etc/rofi-shortcuts' -theme '/home/user/git/maxos/resources/rofi/Arc Dark'";
+        "${mod}+Return" = "exec /home/user/git/maxos/scripts/rofi.sh";
         "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi_google_search.sh";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
