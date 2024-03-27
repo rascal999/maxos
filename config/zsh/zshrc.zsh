@@ -3335,6 +3335,12 @@ case "$DO_TASK" in
     cmd-docker-ps-a)
         docker ps -a | fzf
     ;;
+    cmd-docker-inspect)
+        docker inspect $(docker ps -a | fzf | choose 1)
+    ;;
+    cmd-docker-kill)
+        docker kill $(docker ps -a | fzf | choose 1)
+    ;;
     *)
         pwd
         exa --long --all --header --icons --git
