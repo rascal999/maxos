@@ -91,5 +91,10 @@ case "$SELECTED_COMMAND" in
     ;;
     *)
         eval "$SELECTED_COMMAND"
+
+        # Focus Firefox if xdg-open command
+        if [[ $SELECTED_COMMAND =~ .*xdg-open.* ]]; then
+            i3-msg "[title=\".*Firefox\"] focus"
+        fi
     ;;
 esac
