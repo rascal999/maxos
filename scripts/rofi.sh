@@ -16,7 +16,8 @@ ENTRIES_BOOKMARKS=$(cat /home/user/git/maxos/config/firefox/firefox-policies.jso
 # Want bookmarks last
 ENTRIES_SORTED=$(echo "$ENTRIES" | sort)
 ENTRIES_BOOKMARKS_SORTED=$(echo "$ENTRIES_BOOKMARKS" | sort)
-ENTRIES="${ENTRIES_SORTED}\n${ENTRIES_BOOKMARKS_SORTED}"
+ENTRIES="${ENTRIES_SORTED}
+${ENTRIES_BOOKMARKS_SORTED}"
 
 # Use $ROFI_CMD to display the entries and select one
 SELECTED_ENTRY=$(echo "$ENTRIES" | cut -d '|' -f 1 | $ROFI_CMD -i -dmenu -p "maxos >")
