@@ -3335,10 +3335,11 @@ case "$DO_TASK" in
     cmd-docker-ps-l)
         docker ps -l
     ;;
+    *)
+        pwd
+        exa --long --all --header --icons --git
+    ;;
 esac
-
-pwd
-exa --long --all --header --icons --git
 
 preexec() {
    (( $#_elapsed > 1000 )) && set -A _elapsed $_elapsed[-1000,-1]
