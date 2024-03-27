@@ -3363,6 +3363,9 @@ case "$DO_TASK" in
             echo $IP_PORT
         fi
     ;;
+    cmd-ticker)
+        ticker --show-fundamentals --show-holdings --show-summary --show-tags -w "$2"
+    ;;
 esac
 
 preexec() {
