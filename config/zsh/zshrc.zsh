@@ -3365,6 +3365,7 @@ case "$DO_TASK" in
     ;;
     cmd-ticker)
         ticker --show-fundamentals --show-holdings --show-summary --show-tags -w AAPL,NET
+        exit 0
     ;;
 esac
 
