@@ -3322,15 +3322,18 @@ if [[ ! -z "${NOHISTFILE}" ]]; then
   fc -p
 fi
 
-case "$FS_LOCATION" in
-    git-maxos)
+case "$DO_TASK" in
+    fs-git-maxos)
         cd /home/user/git/maxos-next
     ;;
-    home-downloads)
+    fs-home-downloads)
         cd /home/user/Downloads
     ;;
-    home-data)
+    fs-home-data)
         cd /home/user/Data
+    ;;
+    cmd-docker-ps-l)
+        docker ps -l
     ;;
 esac
 
