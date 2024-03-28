@@ -6,6 +6,9 @@ PROFILE_DIR="$HOME/.mozilla/firefox/default/"
 # Locate the Firefox profile directory
 PROFILE_PATH=$(find "$PROFILE_DIR" -maxdepth 1 -type d -name '*.default*' -print -quit)
 
+# DB lock if FF open bypass
+cp "$PROFILE_DIR/places.sqlite" "$PROFILE_DIR/tmp.sqlite"
+
 # Firefox history database file
 HISTORY_DB="$PROFILE_DIR/tmp.sqlite"
 
