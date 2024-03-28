@@ -3294,7 +3294,7 @@ fi
 
 if [[ ! -z "${JIRA_NEW}" ]]; then
   echo -n "New Jira ticket title > "
-  read $JIRA_DESIRED_TITLE
+  read JIRA_DESIRED_TITLE
 
   JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE")
   JIRA_TICKET_TITLE=$(echo $JIRA_TICKET_INFO | head -1)
