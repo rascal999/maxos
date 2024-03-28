@@ -44,7 +44,7 @@ in {
         "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh HDMI-0 vid zzz";
 
         "${mod}+Return" = "exec /home/user/git/maxos/scripts/rofi.sh";
-        "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi_google_search.sh";
+        "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi-ff-history.sh";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
