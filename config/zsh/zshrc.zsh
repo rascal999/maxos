@@ -3260,6 +3260,11 @@ cpd() {
   exa --long --all --header --icons --git
 }
 
+cdf() {
+  cd "$1"
+  exa --long --all --header --icons --git | fzf
+}
+
 tmp_work() {
   DATE_YEAR=`date +%Y`
   DATE_MONTH=`date +%m`
