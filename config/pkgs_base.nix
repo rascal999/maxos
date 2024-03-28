@@ -210,6 +210,7 @@
     ike-scan                                                                                             # Tool to discover, fingerprint and test IPsec VPN servers
     imagemagick                                                                                          #
     inkscape                                                                                             # Vector graphics editor
+    inotify-tools                                                                                        #
     #inql                                                                                                 # Security testing tool for GraphQL
     iodine                                                                                               # NetworkManager's iodine plugin
     ipscan                                                                                               # Fast and friendly network scanner
