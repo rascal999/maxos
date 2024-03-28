@@ -3351,7 +3351,7 @@ case "$DO_TASK" in
         echo $DOCKER_IMAGE_ID
     ;;
     cmd-docker-kill)
-        docker kill $(docker ps -a | tail -n +2 | fzf | choose 1)
+        docker kill $(docker ps -a | tail -n +2 | fzf | choose 0)
     ;;
     cmd-docker-navigate)
         IP_PORT=`docker port "$(docker ps -a | tail -n +2 | fzf | choose 0)" | choose -1`
