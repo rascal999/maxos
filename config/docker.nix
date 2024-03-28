@@ -198,7 +198,7 @@
     };
 
     jira-sync = {
-      image = "jira-sync"
+      image = "jira-sync";
       volumes = [
                     "/home/user/git/jira_sync/config:/config"
                     "/home/user/Data/logseq/pages/:/watch"
@@ -240,5 +240,6 @@
   systemd.services.docker-rembg.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-excalidraw.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-web-check.serviceConfig.TimeoutStopSec = lib.mkForce 15;
+  systemd.services.docker-jira-sync.serviceConfig.TimeoutStopSec = lib.mkForce 15;
   systemd.services.docker-ssu.serviceConfig.TimeoutStopSec = lib.mkForce 15;
 }
