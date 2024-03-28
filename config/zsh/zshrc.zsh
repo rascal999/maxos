@@ -3167,7 +3167,7 @@ jira_ticket() {
       TICKET_LIST="${TICKET_LIST}\n${TICKET_ID} ${TICKET_URL} ${TICKET_TITLE}"
     done < <(find "$TICKET_BASE_DIRECTORY" -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | choose 1)
 
-    TICKET=`printf "%b" "$TICKET_LIST" | fzf --print-query --prompt "Specify new or existing ticket: " | choose -1`
+    TICKET=`printf "%b" "$TICKET_LIST" | fzf --prompt "Specify existing ticket: " | choose 0`
   else
     TICKET=$1
     TICKET_TITLE=$2
