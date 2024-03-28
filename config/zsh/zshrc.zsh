@@ -3156,6 +3156,7 @@ jira_ticket() {
   LOGSEQ_DIRECTORY="${HOME}/Data/logseq"
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
   TICKET_LIST=""
+  TICKET_TITLE=""
 
   # If ticket ID hasn't been specified to function
   if [[ $# != 2 ]]; then
@@ -3169,6 +3170,7 @@ jira_ticket() {
     TICKET=`printf "%b" "$TICKET_LIST" | fzf --print-query --prompt "Specify new or existing ticket: " | choose -1`
   else
     TICKET=$1
+    TICKET_TITLE=$2
   fi
 
   # trap ctrl-c and call ctrl_c()
@@ -3207,9 +3209,7 @@ jira_ticket() {
   cd $TICKET_DIRECTORY
 
   if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
-    if [[ $# != 2 ]]; then
-      TICKET_TITLE="$2"
-    else
+    if [[ "$TICKET_TITLE" == "" ]]; then
       echo -n "Title > "
       read TICKET_TITLE
     fi
@@ -3298,7 +3298,7 @@ if [[ ! -z "${JIRA_NEW}" ]]; then
 
   JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE")
   JIRA_TICKET_TITLE=$(echo $JIRA_TICKET_INFO | head -1)
-  JIRA_TICKET_ID=$(echo $JIRA_TICKET_INFO | tail -1)
+  JIRA_TICKET_ID=$(echo $JIRA_TICKET_INFO | tail -1 | sed 's/\r//g')
 
   jira_ticket $JIRA_TICKET_ID "$JIRA_TICKET_TITLE"
 fi
