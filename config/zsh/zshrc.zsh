@@ -3158,7 +3158,7 @@ jira_ticket() {
   TICKET_LIST=""
 
   # If ticket ID hasn't been specified to function
-  if [[ $# != 1 ]]; then
+  if [[ $# != 2 ]]; then
     while IFS= read -r output; do
       TICKET_TITLE=`head -1 $output | choose -f "## " 0`
       TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
@@ -3207,8 +3207,12 @@ jira_ticket() {
   cd $TICKET_DIRECTORY
 
   if [[ ! -f "${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md" ]]; then
-    echo -n "Title > "
-    read TICKET_TITLE
+    if [[ $# != 2 ]]; then
+      TICKET_TITLE="$2"
+    else
+      echo -n "Title > "
+      read TICKET_TITLE
+    fi
 
     echo "## $TICKET_TITLE
 - **Ticket URL** ${TICKET_URL}
