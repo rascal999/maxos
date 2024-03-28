@@ -417,6 +417,7 @@
     #vmware-workstation                                                                                   # Industry standard desktop hypervisor for x86-64 architecture
     virt-manager                                                                                         # Desktop user interface for managing virtual machines
     volatility3                                                                                          # Volatile memory extraction frameworks
+    vscode                                                                                               # Open source source code editor developed by Microsoft for Windows, Linux and macOS
     vue                                                                                                  # Visual Understanding Environment - mind mapping software
     vulnix                                                                                               # NixOS vulnerability scanner
     wad                                                                                                  # Tool for detecting technologies used by web applications
