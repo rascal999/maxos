@@ -37,7 +37,7 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
-        "Mod4+j" = "exec /home/user/git/jira_sync/jira_new.py --config /home/user/git/jira_sync/config/config.ini";
+        "Mod4+j" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux new-session -e JIRA_NEW=1";
         "Mod4+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";

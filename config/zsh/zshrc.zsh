@@ -3157,14 +3157,19 @@ jira_ticket() {
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
   TICKET_LIST=""
 
-  while IFS= read -r output; do
-    TICKET_TITLE=`head -1 $output | choose -f "## " 0`
-    TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
-    TICKET_ID=`echo -n $TICKET_URL | choose -f '/' -1`
-    TICKET_LIST="${TICKET_LIST}\n${TICKET_ID} ${TICKET_URL} ${TICKET_TITLE}"
-  done < <(find "$TICKET_BASE_DIRECTORY" -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | choose 1)
+  # If ticket ID hasn't been specified to function
+  if [[ $# != 1 ]]; then
+    while IFS= read -r output; do
+      TICKET_TITLE=`head -1 $output | choose -f "## " 0`
+      TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
+      TICKET_ID=`echo -n $TICKET_URL | choose -f '/' -1`
+      TICKET_LIST="${TICKET_LIST}\n${TICKET_ID} ${TICKET_URL} ${TICKET_TITLE}"
+    done < <(find "$TICKET_BASE_DIRECTORY" -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | choose 1)
 
-  TICKET=`printf "%b" "$TICKET_LIST" | fzf --print-query --prompt "Specify new or existing ticket: " | choose -1`
+    TICKET=`printf "%b" "$TICKET_LIST" | fzf --print-query --prompt "Specify new or existing ticket: " | choose -1`
+  else
+    TICKET=$1
+  fi
 
   # trap ctrl-c and call ctrl_c()
   trap ctrl_c INT
@@ -3230,7 +3235,6 @@ jira_ticket() {
         -
 - **Resources**
         -" > ${LOGSEQ_DIRECTORY}/pages/${TICKET_ID}.md
-
   fi
 
   # Link in current directory
@@ -3282,6 +3286,14 @@ if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
   pwd
   exa --long --all --header --icons --git
+fi
+
+if [[ ! -z "${JIRA_NEW}" ]]; then
+  JIRA_TICKET_INFO=`docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync | tail -2`
+  JIRA_TICKET_TITLE=$(echo $JIRA_TICKET_INFO | head -1)
+  JIRA_TICKET_ID=$(echo $JIRA_TICKET_INFO | tail -1)
+
+  jira_ticket $JIRA_TICKET_ID "$JIRA_TICKET_TITLE"
 fi
 
 if [[ ! -z "${JIRATICKET}" ]]; then
