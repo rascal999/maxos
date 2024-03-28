@@ -37,6 +37,7 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
+        "Mod4+j" = "exec /home/user/git/jira_sync/jira_new.py --config /home/user/git/jira_sync/config/config.ini";
         "Mod4+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
@@ -122,7 +123,7 @@ in {
         "${mod}+Shift+9" = "move container to workspace number 9";
 
         # Slack
-        "Mod4+j" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04GGBDUWH0";
+        #"Mod4+j" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04GGBDUWH0";
         "Mod4+p" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U06G9SFKAJ2";
         "Mod4+m" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U05C566PDJ5";
         "Mod4+n" = "exec /home/user/git/maxos/scripts/slack.sh T02ER9ABV U04TV0SREKC";
