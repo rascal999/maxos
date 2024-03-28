@@ -197,6 +197,14 @@
       ports = [ "127.0.0.1:10230:3000" ];
     };
 
+    jira-sync = {
+      image = "jira-sync"
+      volumes = [
+                    "/home/user/git/jira_sync/config:/config"
+                    "/home/user/Data/logseq/pages/:/watch"
+                ];
+    };
+
     #ssu = {
     #  image = "rascal999/ssu:latest";
     #  volumes = [
