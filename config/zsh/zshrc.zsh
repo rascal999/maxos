@@ -3157,13 +3157,12 @@ jira_ticket() {
   TICKET_BASE_DIRECTORY="${HOME}/work/jobs/"
   TICKET_LIST=""
 
-  echo "Recent tickets:"
   while IFS= read -r output; do
     TICKET_TITLE=`head -1 $output | choose -f "## " 0`
     TICKET_URL=`head -2 $output | grep "Ticket URL" | choose -1`
     TICKET_ID=`echo -n $TICKET_URL | choose -f '/' -1`
     TICKET_LIST="${TICKET_LIST}\n${TICKET_ID} ${TICKET_URL} ${TICKET_TITLE}"
-  done < <(find "$TICKET_BASE_DIRECTORY" -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | tail -20 | choose 1)
+  done < <(find "$TICKET_BASE_DIRECTORY" -maxdepth 3 -type l -name "*.md" -printf "%T+ %p\n" | sort | choose 1)
 
   TICKET=`printf "%b" "$TICKET_LIST" | fzf --prompt "Specify new or existing ticket: " | choose 1`
 
