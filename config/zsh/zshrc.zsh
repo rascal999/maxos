@@ -3296,20 +3296,14 @@ if [[ ! -z "${JIRA_NEW}" ]]; then
   echo -n "New Jira ticket title > "
   read JIRA_DESIRED_TITLE
 
-  echo -n "Private ticket? [N/y] > "
-  read PRIVATE_TICKET
-
-  # Convert the answer to lowercase for case-insensitive comparison
-  answer_lowercase=$(echo "$PRIVATE_TICKET" | tr '[:upper:]' '[:lower:]')
+  echo -n "Private ticket ID? (Blank if syncing) > "
+  read PRIVATE_TICKET_ID
 
   # Check if the answer is "yes" or "y"
-  if [ -z "$answer" ] || [ "$answer_lowercase" = "n" ]; then
+  if [ -z "$PRIVATE_TICKET_ID" ]; then
     JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE")
-  elif [ "$answer_lowercase" = "y" ]; then
-    JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE" --ticket-private)
   else
-    echo "Invalid input. Please enter 'y' or 'n'."
-    exit 1
+    JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE" --ticket-private "$PRIVATE_TICKET_ID")
   fi
 
   JIRA_TICKET_TITLE=$(echo $JIRA_TICKET_INFO | head -1)
