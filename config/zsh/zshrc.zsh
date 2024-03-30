@@ -3300,7 +3300,7 @@ if [[ ! -z "${JIRA_NEW}" ]]; then
   read PRIVATE_TICKET_ID
 
   # Check if the answer is "yes" or "y"
-  if [ -z "$PRIVATE_TICKET_ID" ]; then
+  if [ "$PRIVATE_TICKET_ID" == "" ]; then
     JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE")
   else
     JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE" --ticket-private "$PRIVATE_TICKET_ID")
