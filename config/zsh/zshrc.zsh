@@ -3306,7 +3306,7 @@ if [[ ! -z "${JIRA_NEW}" ]]; then
   if [ -z "$answer" ] || [ "$answer_lowercase" = "n" ]; then
     JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE")
   elif [ "$answer_lowercase" = "y" ]; then
-    JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE" --private-ticket)
+    JIRA_TICKET_INFO=$(docker run --rm -it --entrypoint /root/jira_new.py -v "/home/user/git/jira_sync/config:/config" jira-sync --ticket-title "$JIRA_DESIRED_TITLE" --ticket-private)
   else
     echo "Invalid input. Please enter 'y' or 'n'."
     exit 1
