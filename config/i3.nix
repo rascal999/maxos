@@ -80,6 +80,7 @@ in {
         "${mod}+t" = "exec ${pkgs.rxvt-unicode}/bin/urxvt -bg black -fg white -e ${pkgs.tmux}/bin/tmux";
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+u" = "fullscreen";
+        "${mod}+Shift+u" = "exec /home/user/git/maxos/scripts/uuid.sh";
         "${mod}+space" = "exec /home/user/git/maxos/scripts/slack_toggle.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
