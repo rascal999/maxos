@@ -12,7 +12,7 @@ generate_random_string() {
 # Generate a random string of 10 characters
 random_string=$(generate_random_string 6)
 
-sleep 0.5
+sleep 0.2
 
 # Use xdotool to type the random string
 xdotool type "$random_string"
