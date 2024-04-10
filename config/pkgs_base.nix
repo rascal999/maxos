@@ -286,6 +286,7 @@
     nzbget        # A command line tool for downloading files from news servers
     obs-studio                                                                                           # Free and open source software for video recording and live streaming
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
+    ollama                                                                                               # Get up and running with large language models locally
     onesixtyone                                                                                          # Fast SNMP Scanner
     open-interpreter                                                                                     # OpenAI's Code Interpreter in your terminal, running locally
     openfortivpn                                                                                         # Client for PPP+SSL VPN tunnel services
