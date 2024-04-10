@@ -287,6 +287,7 @@
     obs-studio                                                                                           # Free and open source software for video recording and live streaming
     obsidian                                                                                             # A powerful knowledge base that works on top of a local folder of plain text Markdown files
     onesixtyone                                                                                          # Fast SNMP Scanner
+    open-interpreter                                                                                     # OpenAI's Code Interpreter in your terminal, running locally
     openfortivpn                                                                                         # Client for PPP+SSL VPN tunnel services
     #openshot-qt                                                                                          # Free, open-source video editor
     openttd                                                                                              # Transport Tycoon Deluxe
