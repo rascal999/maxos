@@ -48,8 +48,19 @@
   # Point to localhost for Pi-hole
   networking.nameservers = [ "127.0.0.1" ];
 
+  systemd.services.ollama = {
+    script = ''
+      /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
+    '';
+    wantedBy = ["multi-user.target"];
+    # If you use podman
+    #after = ["podman.service" "podman.socket"];
+    # If you use docker
+    after = ["docker.service" "docker.socket"];
+  };
+
   # Ollama
-  services.ollama.enable = true;
+  #services.ollama.enable = true;
 
   # Enable cron service
   # /home/user/Data rsync for when syncthing fucks up
