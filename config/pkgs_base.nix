@@ -341,7 +341,7 @@
     samba                                                                                                # The standard Windows interoperability suite of programs for Linux and Unix
     scrcpy                                                                                               # Display and control Android devices over USB or TCP/IP
     scrot                                                                                                # A command-line screen capture utility
-    safety-cli                                                                                           #
+    #safety-cli                                                                                           #
     sddm                                                                                                 # QML based X11 display manager
     SDL2                                                                                                 # A cross-platform multimedia library
     secretscanner                                                                                        # Tool to find secrets and passwords in container images and file systems
