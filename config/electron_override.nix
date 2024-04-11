@@ -38,4 +38,4 @@ nixpkgs.config.packageOverrides = pkgs: {
           ln -s ${electron-unwrapped}/libexec $out/libexec
         '';
     });
-};
+}
