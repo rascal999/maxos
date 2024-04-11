@@ -55,7 +55,7 @@
     cabextract                                                                                           # Free Software for extracting Microsoft cabinet files
     calibre                                                                                              # Comprehensive e-book software
     #cameradar                                                                                            # RTSP stream access tool
-    cantoolz                                                                                             # Black-box CAN network analysis framework
+    #cantoolz                                                                                             # Black-box CAN network analysis framework
     cardpeek                                                                                             # A tool to read the contents of ISO7816 smart cards
     cargo-audit                                                                                          # Audit Cargo.lock files for crates with security vulnerabilities
     cariddi                                                                                              # Crawler for URLs and endpoints
