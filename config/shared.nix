@@ -67,9 +67,6 @@
   # No
   powerManagement.enable = false;
 
-  # Allow Broken pkgs
-  allowBroken = true;
-
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -209,12 +206,15 @@
   # Ignore lid on laptops
   services.logind.lidSwitch = "ignore";
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-     "electron-25.9.0"
-     "python-2.7.18.6"
-     "python-2.7.18.7"
-  ];
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowBroken = true;
+    permittedInsecurePackages = [
+      "electron-25.9.0"
+      "python-2.7.18.6"
+      "python-2.7.18.7"
+    ];
+  };
 
   # docker
   virtualisation.docker = {
