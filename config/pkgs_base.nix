@@ -440,7 +440,7 @@
     wol                                                                                                  # Implements Wake On LAN functionality in a small program
     wprecon                                                                                              # WordPress vulnerability recognition tool
     wpscan                                                                                               # Black box WordPress vulnerability scanner
-    wstunnel                                                                                             #
+    #wstunnel                                                                                             #
     #wuzz                                                                                                 # Interactive cli tool for HTTP inspection
     x2goclient                                                                                           # Graphical NoMachine NX3 remote desktop client
     xcalib                                                                                               # A tiny monitor calibration loader for X and MS-Windows
