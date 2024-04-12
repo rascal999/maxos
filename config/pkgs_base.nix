@@ -13,6 +13,7 @@
     aiodnsbrute                                                                                          # DNS brute force utility
     aircrack-ng                                                                                          # Wireless encryption cracking tools
     airgeddon                                                                                            # Multi-use TUI to audit wireless networks
+    alacritty                                                                                            # A cross-platform, GPU-accelerated terminal emulator
     amass                                                                                                # In-Depth DNS Enumeration and Network Mapping
     androguard                                                                                           # Tool and Python library to interact with Android Files
     android-tools                                                                                        # Android SDK platform tools
