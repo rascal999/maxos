@@ -37,7 +37,7 @@ in {
         "F3" = "exec /run/current-system/sw/bin/light -A 5";
         "--release Print" = "exec /home/user/git/maxos/scripts/screenshot.sh";
 
-        "Mod4+j" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e JIRA_NEW=1";
+        "Mod4+j" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRA_NEW=1";
         "Mod4+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
@@ -60,10 +60,10 @@ in {
         "${mod}+f" = "exec /home/user/git/maxos/scripts/tapo_fan_toggle.sh";
         "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
-        "${mod}+h" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
-        "${mod}+Shift+h" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
-        "${mod}+j" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e JIRALASTTICKET=1";
-        "${mod}+Shift+j" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e JIRATICKET=1";
+        "${mod}+h" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
+        "${mod}+Shift+h" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
+        "${mod}+j" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRALASTTICKET=1";
+        "${mod}+Shift+j" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRATICKET=1";
         "${mod}+k" = "exec /home/user/git/maxos/scripts/keepassxc.sh";
         "${mod}+l" = "exec ${pkgs.logseq}/bin/logseq";
         "${mod}+Shift+l" = "exec sudo poweroff";
@@ -75,16 +75,16 @@ in {
         "${mod}+p" = "workspace back_and_forth";
         "${mod}+Shift+p" = "restart";
         "${mod}+r" = "exec /home/user/git/maxos/scripts/radio4.sh";
-        #"${mod}+r" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
+        #"${mod}+r" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
-        "${mod}+t" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux";
+        "${mod}+t" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux";
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+u" = "fullscreen";
         "--release ${mod}+Shift+u" = "exec /home/user/git/maxos/scripts/uuid.sh";
         "${mod}+space" = "exec /home/user/git/maxos/scripts/slack_toggle.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
-        "${mod}+w" = "exec ${pkgs.alacritty}/bin/alacritty --command ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
+        "${mod}+w" = "exec ${pkgs.alacritty}/bin/alacritty --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
         "${mod}+Shift+w" = "exec /home/user/git/maxos/scripts/remmina.sh";
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
         "${mod}+Shift+x" = "exec /home/user/git/maxos/scripts/suspend.sh";
