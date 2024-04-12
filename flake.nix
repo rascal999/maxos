@@ -38,7 +38,7 @@
     configSettings = [
       agenix.nixosModules.default
       ./config/nur.nix
-      ./config/electron_override.nix
+      #./config/electron_override.nix
       ./config/pkgs_minimal.nix
       ./config/shared.nix
 
