@@ -40,7 +40,7 @@
         introducer = false;
       };
       "galaxy" = {
-        id = "DPWLINN-X2GRAYG-2IYFOXT-CRWLY3L-BMRDJGT-KE5ELWF-M76VOXR-XFREWQG";
+        id = "SJF4JGR-DGCWKNR-UKMZOKZ-C6QRU3G-6TOU2CW-X2DSNPG-2HCOZ6K-PTQBUQO";
         introducer = false;
       };
       "nas" = {
