@@ -21,7 +21,7 @@
   };
 
   home.file = {
-    ".config/alacritty/alacritty.toml".source = ./config/alacritty/alacritty.toml;
+    ".config/alacritty/alacritty.toml".source = ../../config/alacritty/alacritty.toml;
     ".config/dashy/conf.yml".source = ../../config/dashy/conf.yml;
     ".config/nginx/mime.types".source = ../../resources/nginx/mime.types;
     ".config/dunst/dunstrc".source = ./dunst/dunstrc;
