@@ -17,22 +17,6 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/logseq-quick-capture/addon-2774116-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "checkerplusforgmail@jasonsavard.com": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/checker-plus-gmail/addon-748222-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "checkerplusforgooglecalendar@jasonsavard.com": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/checker-plus-for-calendar/addon-739662-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{1cb25516-2dd9-4ea3-86ad-6fd863ee2fa1}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/toolbar-control-for-youtube-mu/addon-1081777-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "Shortkeys@Shortkeys.com": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shortkeys/addon-770703-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "{4F1FB113-D7D8-40AE-A5BA-9300EAEA0F51}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/toolkit-for-ynab/addon-679689-latest.xpi",
         "installation_mode": "normal_installed"
@@ -53,20 +37,12 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/quickjira/addon-1667861-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "support@lastpass.com": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/lastpass-password-manager/addon-4083286-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "{5167bfe9-226b-4af9-acf9-8b61f5aae627}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ghunt-companion/addon-4038923-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "7esoorv3@alefvanoon.anonaddy.me": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/libredirect/addon-4067837-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "@powerthesaurus.org": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/power-thesaurus/addon-697681-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "bypasspaywalls@bypasspaywalls": {
@@ -81,16 +57,8 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/shodan-addon/addon-3788939-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "DontFuckWithPaste@raim.ist": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/don-t-fuck-with-paste/addon-816029-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "@retire.js": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/retire-js/addon-808743-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "jid1-KKzOGWgsW3Ao4Q@jetpack": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/i-dont-care-about-cookies/addon-481438-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "{1c5e4c6f-5530-49a3-b216-31ce7d744db0}": {
@@ -99,10 +67,6 @@
       },
       "{a6fd85ed-e919-4a43-a5af-8da18bda539f}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/selenium-ide/addon-13759230-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{af37054b-3ace-46a2-ac59-709e4412bec6}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/add-custom-search-engine/addon-989796-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "jid1-xUfzOsOFlzSOXg@jetpack": {
@@ -139,10 +103,6 @@
       },
       "addon@darkreader.org": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/addon-13299734-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/file/3840048/traduzir_paginas_web-9.4.2-an+fx.xpi",
         "installation_mode": "normal_installed"
       },
       "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
