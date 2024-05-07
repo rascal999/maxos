@@ -2,7 +2,6 @@
 
 {
   xresources.properties = {
-    "Xcursor.size" = "64";
     "urxvt.scrollBar" = "false";
     "urxvt.font" = "xft:MesloLGS Nerd Font Mono:pixelsize=22";
     "urxvt.perl-ext-common" = "default,matcher";

@@ -52,6 +52,9 @@
   programs.rofi.plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ];
   programs.rofi.theme = "/home/user/git/maxos/resources/rofi/theme";
 
+  # Mouse
+  gtk.cursorTheme.size = 32;
+
   # Stop screen timeout
   services.screen-locker.xss-lock.screensaverCycle = 0;
 }
