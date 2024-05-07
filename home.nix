@@ -53,7 +53,13 @@
   programs.rofi.theme = "/home/user/git/maxos/resources/rofi/theme";
 
   # Mouse
-  gtk.cursorTheme.size = 32;
+  home.pointerCursor = {
+    x11.enable = true;
+    name = "DMZ-White";
+    package = pkgs.vanilla-dmz;
+    size = 64;
+    gtk.enable = true;
+  };
 
   # Stop screen timeout
   services.screen-locker.xss-lock.screensaverCycle = 0;
