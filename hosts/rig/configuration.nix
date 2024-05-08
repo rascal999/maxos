@@ -60,7 +60,7 @@
   #};
 
   # Ollama
-  #services.ollama.enable = true;
+  services.ollama.enable = true;
 
   # Enable cron service
   # /home/user/Data rsync for when syncthing fucks up
