@@ -61,7 +61,7 @@
 
   # Ollama
   services.ollama.enable = true;
-  services.ollama.listenAddress = "0.0.0.0:11434";
+  #services.ollama.listenAddress = "0.0.0.0:11434";
 
   # Enable cron service
   # /home/user/Data rsync for when syncthing fucks up
