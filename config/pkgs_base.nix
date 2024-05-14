@@ -162,6 +162,7 @@
     fwanalyzer                                                                                           # Tool to analyze filesystem images
     fzf                                                                                                  # A command-line fuzzy finder written in Go
     galer                                                                                                # Tool to fetch URLs from HTML attributes
+    gcalcli                                                                                              # Access your Google Calendar(s) from a command line
     gammastep                                                                                            #
     gau                                                                                                  # Tool to fetch known URLs
     gdb                                                                                                  # The GNU Project debugger
