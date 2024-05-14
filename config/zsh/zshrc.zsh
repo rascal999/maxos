@@ -3283,6 +3283,10 @@ tmp_work() {
   cd $TMP_DIRECTORY
 }
 
+new_calendar_event() {
+  /home/user/git/maxos/scripts/new_calendar_event.sh
+}
+
 if [[ ! -z "${REMOTEWORK}" ]]; then
   ssh user@alm.gg
 fi
@@ -3291,6 +3295,10 @@ if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
   pwd
   exa --long --all --header --icons --git
+fi
+
+if [[ ! -z "${NEW_CALENDAR_EVENT}" ]]; then
+  new_calendar_event
 fi
 
 if [[ ! -z "${JIRA_NEW}" ]]; then
