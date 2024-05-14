@@ -417,6 +417,7 @@
     urh                                                                                                  # Universal Radio Hacker: investigate wireless protocols like a boss
     urlhunter                                                                                            # Recon tool that allows searching shortened URLs
     valgrind                                                                                             # Debugging and profiling tool suite
+    vdirsyncer                                                                                           # Synchronize calendars and contacts
     vegeta                                                                                               # Versatile HTTP load testing tool
     velero                                                                                               #
     ventoy-bin                                                                                           # An open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files
