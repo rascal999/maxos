@@ -60,13 +60,15 @@
   #};
 
   # Ollama
-  #services.ollama.enable = true;
+  services.ollama.enable = true;
+  #services.ollama.listenAddress = "0.0.0.0:11434";
 
   # Enable cron service
   # /home/user/Data rsync for when syncthing fucks up
   services.cron = {
     enable = true;
     systemCronJobs = [
+      "*/5 * * * *       user    /run/current-system/sw/bin/vdirsyncer sync"
       "45 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/Data admin@192.168.0.254:/volume1/backup-data"
       "50 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/work admin@192.168.0.254:/volume1/backup-data"
       #"25 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"

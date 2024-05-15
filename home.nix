@@ -52,6 +52,15 @@
   programs.rofi.plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ];
   programs.rofi.theme = "/home/user/git/maxos/resources/rofi/theme";
 
+  # Mouse
+  home.pointerCursor = {
+    x11.enable = true;
+    name = "DMZ-White";
+    package = pkgs.vanilla-dmz;
+    size = 64;
+    gtk.enable = true;
+  };
+
   # Stop screen timeout
   services.screen-locker.xss-lock.screensaverCycle = 0;
 }

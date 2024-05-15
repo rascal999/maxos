@@ -53,6 +53,7 @@ PORT_EXCALIDRAW=10200
 PORT_MINISERVE=10210
 PORT_OLLAMA=10220
 PORT_WEB_CHECK=10230
+PORT_PLANKA=10240
 
 export MCFLY_KEY_SCHEME=vim
 export MCFLY_RESULTS=40
@@ -3282,6 +3283,10 @@ tmp_work() {
   cd $TMP_DIRECTORY
 }
 
+new_calendar_event() {
+  /home/user/git/maxos/scripts/new_calendar_event.sh
+}
+
 if [[ ! -z "${REMOTEWORK}" ]]; then
   ssh user@alm.gg
 fi
@@ -3290,6 +3295,10 @@ if [[ ! -z "${TMPWORK}" ]]; then
   tmp_work
   pwd
   exa --long --all --header --icons --git
+fi
+
+if [[ ! -z "${NEW_CALENDAR_EVENT}" ]]; then
+  new_calendar_event
 fi
 
 if [[ ! -z "${JIRA_NEW}" ]]; then
