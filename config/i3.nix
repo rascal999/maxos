@@ -30,7 +30,11 @@ in {
     config = {
       modifier = mod;
 
-      fonts = ["DejaVu Sans Mono, FontAwesome 6"];
+      fonts = {
+        names = ["DejaVu Sans Mono, FontAwesome 6"];
+        style = "Bold Semi-Condensed";
+        size = 11.0;
+      };
 
       keybindings = lib.mkDefault {
         "F2" = "exec /run/current-system/sw/bin/light -U 5";
