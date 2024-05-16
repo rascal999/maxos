@@ -20,6 +20,19 @@ My quest to divorce the data from the tin continues..
 
 The easiest way to get up and running is via the nightly OVA image available [here](https://alm.gg/maxos_kde.ova) (9.8GB). The VM comes with KDE rather than i3wm by default because I appreciate that you probably don't want to learn all of my [i3wm shortcuts](/config/i3.nix). You can of course build your own VM using the [build_vm_virtualbox.sh script](/scripts/build_vm_virtualbox.sh) and by customising the [VirtualBox VM "host" file](/hosts/vm_virtualbox/configuration.nix).
 
+# What else?
+
+Here is a list of things I'd like to do for this project:
+
+* Docker image
+* Working VM image
+* Refresh README (up to date examples)
+* Refactor code
+* Review resources.sh
+* Set up build pipeline
+* Review / replace init.sh script
+* Review scripts
+
 # Security warning
 
 I have made a conscious effort to ensure that docker images and tools which run on this build are only accessible on your machine, but I don't have a build pipeline which checks this, nor do I scan this repo for security issues. You have been warned.
