@@ -32,7 +32,7 @@ in {
 
       fonts = {
         names = ["DejaVu Sans Mono, FontAwesome 6"];
-        style = "Bold Semi-Condensed";
+        style = "Semi-Condensed";
         size = 11.0;
       };
 
@@ -153,7 +153,7 @@ in {
           trayOutput = "DP-4";
           fonts = {
             names = ["DejaVu Sans Mono, FontAwesome 14"];
-            style = "Bold Semi-Condensed";
+            style = "Semi-Condensed";
             size = 16.0;
           };
 
