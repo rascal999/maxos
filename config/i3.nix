@@ -154,7 +154,7 @@ in {
           fonts = {
             names = ["DejaVu Sans Mono, FontAwesome 14"];
             style = "Bold Semi-Condensed";
-            size = 14.0;
+            size = 16.0;
           };
 
           position = "bottom";
