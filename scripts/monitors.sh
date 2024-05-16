@@ -4,9 +4,9 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 3
 
     # 0
-    /run/current-system/sw/bin/xrandr --output DP-0 --auto --left-of USB-C-0
+    /run/current-system/sw/bin/xrandr --output DP-4 --auto --left-of USB-C-0
     # 1
-    /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-0
+    /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-4
     # 2
     /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --right-of USB-C-0
 
@@ -17,7 +17,7 @@ if [[ `hostname` == "rig" ]]; then
 
     /run/current-system/sw/bin/sleep 1
 
-    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-0"
+    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
     /run/current-system/sw/bin/sleep 1
     /etc/profiles/per-user/user/bin/i3-msg "workspace vid, move workspace to output HDMI-0"
     /run/current-system/sw/bin/sleep 1
