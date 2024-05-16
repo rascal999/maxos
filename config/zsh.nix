@@ -6,7 +6,7 @@
     };
 
     enable = true;
-    autosuggestions.enable = false;
+    autosuggestion.enable = false;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
 
