@@ -8,28 +8,22 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "aesni_intel" "cryptd" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/C4BD-5017";
+    { device = "/dev/disk/by-label/NIXBOOT";
       fsType = "vfat";
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/596538c6-8327-4863-ba80-378134046800";
-  boot.initrd.luks.devices."home".device = "/dev/disk/by-uuid/754e3e99-f70c-40a3-968f-fb13d021aca0";
-
   fileSystems."/" =
-    { device = "/dev/mapper/root";
+    { device = "/dev/disk/by-uuid/5303c633-0b7c-4329-bdd1-9cb2372c82fa";
       fsType = "ext4";
     };
 
-  fileSystems."/home" =
-    { device = "/dev/mapper/home";
-      fsType = "ext4";
-    };
+  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/0c01e360-b7aa-4d3a-9b86-495f9188f43f";
 
   swapDevices = [ ];
 
