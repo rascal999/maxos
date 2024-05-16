@@ -58,7 +58,7 @@
           ./config/pkgs_additional.nix
           ./config/pkgs_base.nix
           ./config/pkgs_ui.nix
-          ./config/secrets.nix
+          #./config/secrets.nix
           ./config/syncthing.nix
           ./hosts/rig/configuration.nix
           ./hosts/rig/hardware-configuration.nix
