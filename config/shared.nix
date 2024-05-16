@@ -52,7 +52,7 @@
   # Flatpak
   services.flatpak.enable = true;
 
-  xdg.portal.config = {
+  xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
