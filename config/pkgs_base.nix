@@ -82,6 +82,7 @@
     clair                                                                                                # Vulnerability Static Analysis for Containers
     clamav                                                                                               # Antivirus engine designed for detecting Trojans, viruses, malware and other malicious threats
     cliam                                                                                                # Cloud agnostic IAM permissions enumerator
+    clockify                                                                                             # Free time tracker and timesheet app that lets you track work hours across projects
     cloudbrute                                                                                           # Cloud enumeration tool
     cloudlist                                                                                            # Tool for listing assets from multiple cloud providers
     codeql                                                                                               # Semantic code analysis engine
