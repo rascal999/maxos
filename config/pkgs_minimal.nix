@@ -130,7 +130,7 @@ in {
     sshfs                                                                                                #
     sslh                                                                                                 # Applicative Protocol Multiplexer (e.g. share SSH and HTTPS on the same port)
     stunnel                                                                                              # Universal tls/ssl wrapper
-    terraform                                                                                            #
+    #terraform                                                                                            #
     testdisk                                                                                             # Data recovery utilities
     texlive.combined.scheme-full                                                                         #
     thefuck                                                                                              # Magnificent app which corrects your previous console command

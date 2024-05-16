@@ -261,21 +261,6 @@
     };
   };
 
-  # Virtualisation
-  environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
-  virtualisation = {
-    virtualbox.host.enable = true;
-    #vmware.host.enable = true;
-
-    # QEMU
-    #libvirtd = {
-    #  enable = true;
-    #  qemu.ovmf.enable = true;
-    #  qemu.swtpm.enable = true;
-    #  qemu.ovmf.packages = [ pkgs.OVMFFull ];
-    #};
-  };
-
   xdg.mime.defaultApplications = {
     "application/pdf" = "firefox.desktop";
     "text/html" = "firefox.desktop";
