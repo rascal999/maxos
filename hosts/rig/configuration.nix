@@ -21,13 +21,13 @@
 
   services.displayManager = {
     defaultSession = "none+i3";
-    lightdm.enable = true;
     autoLogin.enable = true;
     autoLogin.user = "user";
   };
 
   services.xserver = {
     enable = true;
+    displayManager.lightdm.enable = true;
     windowManager.i3.enable = true;
 
     # Touchpad
