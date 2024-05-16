@@ -26,12 +26,14 @@ Here is a list of things I'd like to do for this project:
 
 * Docker image
 * Working VM image
-* Refresh README (up to date examples)
+* Set up build pipeline
 * Refactor code
 * Review resources.sh
-* Set up build pipeline
 * Review / replace init.sh script
 * Review scripts
+* Review repos/
+* Review docker images
+* Refresh README (up to date examples)
 
 # Security warning
 
