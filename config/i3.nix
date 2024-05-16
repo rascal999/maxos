@@ -151,7 +151,12 @@ in {
       bars = [
         {
           trayOutput = "DP-4";
-          fonts = [ "DejaVu Sans Mono" "FontAwesome 14" ];
+          fonts = {
+            names = ["DejaVu Sans Mono, FontAwesome 14"];
+            style = "Bold Semi-Condensed";
+            size = 11.0;
+          };
+
           position = "bottom";
           statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs ${./i3status-rust.toml}";
           colors = {
