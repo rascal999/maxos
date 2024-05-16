@@ -279,7 +279,7 @@
   #services.opensnitch.enable = false;
 
   # fonts
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     nerdfonts
     meslo-lgs-nf
   ];

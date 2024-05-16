@@ -16,17 +16,19 @@
     ];
   };
 
-  # X11 / i3
+  # X11 / i3 / Login
+  services.libinput.enable = false;
+
+  services.displayManager = {
+    defaultSession = "none+i3";
+    lightdm.enable = true;
+    autoLogin.enable = true;
+    autoLogin.user = "user";
+  };
+
   services.xserver = {
     enable = true;
     windowManager.i3.enable = true;
-
-    displayManager = {
-      defaultSession = "none+i3";
-      lightdm.enable = true;
-      autoLogin.enable = true;
-      autoLogin.user = "user";
-    };
 
     # Touchpad
     synaptics = {
@@ -36,10 +38,8 @@
       minSpeed = "1.5";
     };
 
-    libinput.enable = false;
-
-    layout = "gb";
-    xkbVariant = "dvorakukp";
+    xkb.layout = "gb";
+    xkb.variant = "dvorakukp";
   };
 
   # WOL

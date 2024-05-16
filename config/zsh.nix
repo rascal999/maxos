@@ -6,9 +6,9 @@
     };
 
     enable = true;
-    enableAutosuggestions = false;
+    autosuggestions.enable = false;
     enableCompletion = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
 
     history = {
       size = 100000;
