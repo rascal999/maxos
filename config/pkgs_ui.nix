@@ -16,6 +16,7 @@
     notify-desktop                                                                                       # Little application that lets you send desktop notifications with one command
     redshift                                                                                             # Screen color temperature manager
     slack                                                                                                # Desktop client for Slack
+    synergy                                                                                              # Share one mouse and keyboard between multiple computers
     tesseract                                                                                            # OCR engine
     x11docker                                                                                            # Run graphical applications with Docker
     x11vnc                                                                                               # A VNC server connected to a real X11 screen
