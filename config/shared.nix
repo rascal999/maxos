@@ -192,6 +192,7 @@
     8888
     9020
     22000
+    24800
   ];
   networking.firewall.allowedUDPPorts = [
     53
