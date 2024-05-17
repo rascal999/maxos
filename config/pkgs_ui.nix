@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     audacity                                                                                             # Sound editor with graphical UI
     anydesk                                                                                              # Desktop sharing application, providing remote support and online meetings
+    barrier                                                                                              # Open-source KVM software
     copyq                                                                                                # Clipboard Manager with Advanced Features
     gsettings-desktop-schemas                                                                            # Collection of GSettings schemas for settings shared by various components of a desktop
     i3                                                                                                   # A tiling window manager
