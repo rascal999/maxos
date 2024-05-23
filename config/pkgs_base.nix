@@ -273,6 +273,7 @@
     nasty                                                                                                # Recover the passphrase of your PGP or GPG-key
     navi                                                                                                 # An interactive cheatsheet tool for the command-line and application launchers TODO
     nbtscanner                                                                                           # NetBIOS scanner written in Rust
+    nchat                                                                                                # Terminal-based chat client with support for Telegram and WhatsApp
     ncrack                                                                                               # Network authentication tool
     neocomp                                                                                              # A fork of Compton, a compositor for X11
     net-snmp                                                                                             # Clients and server for the SNMP network monitoring protocol
