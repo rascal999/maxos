@@ -312,7 +312,7 @@
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
     popsicle                                                                                             # Multiple USB File Flasher
-    #postman                                                                                              # API Development Environment
+    postman                                                                                              # API Development Environment
     powershell                                                                                           # Powerful cross-platform (Windows, Linux, and macOS) shell and scripting language based on .NET
     putty                                                                                                # A Free Telnet/SSH Client
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
