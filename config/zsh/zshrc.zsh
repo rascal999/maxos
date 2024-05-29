@@ -3224,12 +3224,7 @@ jira_ticket() {
 - **Status**
         -
 - **Plan**
-        - **Done**
-            -
-        - **Todo**
-            -
-        - **Doing**
-            -
+        -
 - **Notes**
         -
 - **Opportunities**
