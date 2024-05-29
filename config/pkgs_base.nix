@@ -242,6 +242,7 @@
     kube-score                                                                                           # Kubernetes object analysis with recommendations for improved reliability and security
     kustomize                                                                                            # Customization of kubernetes YAML configurations
     ldeep                                                                                                # In-depth LDAP enumeration utility
+    lens                                                                                                 # The Kubernetes IDE
     lftp                                                                                                 # A file transfer program supporting a number of network protocols
     libfreefare                                                                                          # The libfreefare project aims to provide a convenient API for MIFARE card manipulations
     libgcc        # GNU Compiler Collection, version 12.3.0
