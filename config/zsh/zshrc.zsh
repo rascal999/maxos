@@ -3221,9 +3221,9 @@ jira_ticket() {
         -
 - **Acceptance criteria**
         -
-- **Status**
-        -
 - **Outcome**
+        -
+- **Status**
         -
 - **Plan**
         -
