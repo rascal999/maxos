@@ -3223,9 +3223,13 @@ jira_ticket() {
         -
 - **Status**
         -
+- **Outcome**
+        -
 - **Plan**
         -
 - **Notes**
+        -
+- **Questions**
         -
 - **Opportunities**
         -
