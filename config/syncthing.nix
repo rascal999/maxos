@@ -29,6 +29,10 @@
           id = "UAULTZS-JD7M5HI-E2BDK34-KOVLIGV-JZO357W-I2GGN25-IKOFLB7-B5SGRQD";
           introducer = false;
         };
+        "A35" = {
+          id = "QPHCTOZ-J4MWXDR-E27PP2W-4PGWJW6-K2KK4GG-BCH3CI4-QTBS45I-53XD3AF";
+          introducer = false;
+        };
       };
 
       folders = {
@@ -53,6 +57,7 @@
             "nas"
             "rig"
             "fold4"
+            "A35"
             #"GM1920"
           ];
           path = "/home/user/Data";
