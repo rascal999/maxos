@@ -9,14 +9,6 @@
       "StartPage": "previous-session"
     },
     "ExtensionSettings": {
-      "{73f6509a-074f-457f-bc32-e521bde682f7}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/transover-ff/addon-4231028-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{04953d10-f97e-4143-87ea-ff21472589b0}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/logseq-quick-capture/addon-2774116-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "{4F1FB113-D7D8-40AE-A5BA-9300EAEA0F51}": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/toolkit-for-ynab/addon-679689-latest.xpi",
         "installation_mode": "normal_installed"
@@ -33,24 +25,8 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sidebery/addon-3994928-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "{25e741fe-a00f-4568-9197-f5a591f1b56d}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/quickjira/addon-1667861-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{5167bfe9-226b-4af9-acf9-8b61f5aae627}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ghunt-companion/addon-4038923-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "7esoorv3@alefvanoon.anonaddy.me": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/libredirect/addon-4067837-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "bypasspaywalls@bypasspaywalls": {
         "install_url": "https://github.com/iamadamdev/bypass-paywalls-chrome/releases/latest/download/bypass-paywalls-firefox.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{f18f0257-10ad-4ff7-b51e-6895edeccfc8}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/netflix-1080p-firefox/addon-2617870-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "firefox-extension@shodan.io": {
@@ -59,10 +35,6 @@
       },
       "@retire.js": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/retire-js/addon-808743-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{1c5e4c6f-5530-49a3-b216-31ce7d744db0}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/markdownload/addon-2641778-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "{a6fd85ed-e919-4a43-a5af-8da18bda539f}": {
@@ -81,10 +53,6 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/addon-2590937-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "{f1423c11-a4e2-4709-a0f8-6d6a68c83d08}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/hacktools/addon-2649669-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "ademking@betterviewer": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/betterviewer/addon-2740191-latest.xpi",
         "installation_mode": "normal_installed"
@@ -97,16 +65,8 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/url-to-qrcode/addon-11218076-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "{943b8007-a895-44af-a672-4f4ea548c95f}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/markdown-viewer-webext/addon-13724583-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
       "addon@darkreader.org": {
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/darkreader/addon-13299734-latest.xpi",
-        "installation_mode": "normal_installed"
-      },
-      "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/addon-12533945-latest.xpi",
         "installation_mode": "normal_installed"
       },
       "{d133e097-46d9-4ecc-9903-fa6a722a6e0e}": {
@@ -133,10 +93,6 @@
         "install_url": "https://addons.mozilla.org/firefox/downloads/latest/user-agent-string-switcher/addon-13129494-latest.xpi",
         "installation_mode": "normal_installed"
       },
-      "vimium-c@gdh1995.cn": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/addon-14732745-latest.xpi",
-        "installation_mode": "normal_installed"
-      }
     },
     "ManagedBookmarks": [
       {
