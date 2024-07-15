@@ -44,7 +44,7 @@ in {
         "Mod4+j" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRA_NEW=1";
         "Mod4+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox -P \"Burp\"";
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
-        "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_relaunch.sh";
+        "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_toggle.sh";
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
         "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh HDMI-0 vid zzz";
 
@@ -53,6 +53,7 @@ in {
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec ${pkgs.bluez}/bin/bluetoothctl connect AC:80:0A:48:04:62";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
+        "${mod}+space" = "exec /home/user/git/maxos/scripts/rofi-google-search.sh";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
@@ -85,7 +86,6 @@ in {
         "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
         "${mod}+u" = "fullscreen";
         "--release ${mod}+Shift+u" = "exec /home/user/git/maxos/scripts/uuid.sh";
-        "${mod}+space" = "exec /home/user/git/maxos/scripts/slack_toggle.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
         "${mod}+w" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
