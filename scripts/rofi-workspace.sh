@@ -30,63 +30,67 @@ case "$SELECTED_COMMAND" in
         i3-msg "workspace # APM"
         firefox -P "MP APM"
     ;;
-    activity)
+    banking_extensions)
         i3-msg "workspace # Banking Extensions"
         firefox -P "MP Banking Extensions"
     ;;
-    activity)
+    cards_connectors)
         i3-msg "workspace # Cards Connectors"
         firefox -P "MP Cards Connectors"
     ;;
-    activity)
+    checkout)
         i3-msg "workspace # Checkout"
         firefox -P "MP Checkout"
     ;;
-    activity)
+    core_tech)
         i3-msg "workspace # Core Tech"
         firefox -P "MP Core Tech"
     ;;
-    activity)
+    experience)
         i3-msg "workspace # Experience"
         firefox -P "MP Experience"
     ;;
-    activity)
+    identity)
         i3-msg "workspace # Identity"
         firefox -P "MP Identity"
     ;;
-    activity)
+    monolith)
+        i3-msg "workspace # Monolith"
+        firefox -P "MP Monolith"
+    ;;
+    nth_api)
         i3-msg "workspace # NTH > API"
         firefox -P "MP NTH API"
     ;;
-    activity)
+    nth_panel)
         i3-msg "workspace # NTH > Panel"
         firefox -P "MP NTH Panel"
     ;;
-    activity)
+    nth_profiler)
         i3-msg "workspace # NTH > Profiler"
         firefox -P "MP NTH Profiler"
     ;;
-    activity)
+    payments_platform)
         i3-msg "workspace # Payments Platform"
         firefox -P "MP Payment Platform"
     ;;
-    activity)
-        i3-msg "workspace # Payout Connector"
-        firefox -P "MP Payout Connector"
+    payout_connectors)
+        i3-msg "workspace # Payout Connectors"
+        firefox -P "MP Payout Connectors"
     ;;
-    activity)
+    payout_recipient)
         i3-msg "workspace # Payout Recipient"
         firefox -P "MP Payout Recipient"
     ;;
-    activity)
+    salesforce)
         i3-msg "workspace # Salesforce"
         firefox -P "MP Salesforce"
     ;;
-    activity)
+    smart_wallet)
         i3-msg "workspace # Smart Wallet"
         firefox -P "MP Smart Wallet"
     ;;
-    activity)
+    sre_team)
         i3-msg "workspace # SRE Team"
         firefox -P "MP SRE Team"
     ;;

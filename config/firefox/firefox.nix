@@ -292,9 +292,9 @@
         userContent = import ./css/userContent.css;
       };
 
-      mp_payout_connector = {
+      mp_payout_connectors = {
         id = 18;
-        name = "MP Payout Connector";
+        name = "MP Payout Connectors";
         isDefault = false;
         settings = defaultSettings;
 
