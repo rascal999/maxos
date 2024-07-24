@@ -161,6 +161,16 @@
         userChrome = import ./css/userChrome.css;
         userContent = import ./css/userContent.css;
       };
+
+      mp_activity = {
+        id = 4;
+        name = "MP Activity";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
     };
   };
 }
