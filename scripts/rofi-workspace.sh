@@ -102,8 +102,7 @@ WORKSPACE_CREATED=`i3-save-tree --workspace "${WORKSPACE_NAME}" | grep firefox |
 
 if [[ $WORKSPACE_CREATED == 0 ]]; then
     # FUCK ME https://github.com/i3/i3/issues/4846
-    i3-msg "workspace $WORKSPACE_NAME"
-    firefox -P "$WORKSPACE_PROFILE" &
+    i3-msg "workspace $WORKSPACE_NAME; exec --no-startup-id firefox -P \"$WORKSPACE_PROFILE\""
 
     # Get the i3 tree
     #i3_tree=$(i3-msg -t get_tree)
