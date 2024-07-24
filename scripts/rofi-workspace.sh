@@ -23,8 +23,8 @@ SELECTED_COMMAND=$(echo "$ENTRIES" | grep "^$SELECTED_ENTRY|" | cut -d '|' -f 2)
 
 case "$SELECTED_COMMAND" in
     activity)
-        i3-msg "workspace # Activity"
-        firefox -P "MP Activity"
+        WORKSPACE_NAME="# Activity"
+        WORKSPACE_PROFILE="MP Activity"
     ;;
     apm)
         WORKSPACE_NAME="# APM"
@@ -39,60 +39,60 @@ case "$SELECTED_COMMAND" in
         WORKSPACE_PROFILE="MP Cards Connectors"
     ;;
     checkout)
-        i3-msg "workspace # Checkout"
-        firefox -P "MP Checkout"
+        WORKSPACE_NAME="# Checkout"
+        WORKSPACE_PROFILE="MP Checkout"
     ;;
     core_tech)
-        i3-msg "workspace # Core Tech"
-        firefox -P "MP Core Tech"
+        WORKSPACE_NAME="# Core Tech"
+        WORKSPACE_PROFILE="MP Core Tech"
     ;;
     experience)
-        i3-msg "workspace # Experience"
-        firefox -P "MP Experience"
+        WORKSPACE_NAME="# Experience"
+        WORKSPACE_PROFILE="MP Experience"
     ;;
     identity)
-        i3-msg "workspace # Identity"
-        firefox -P "MP Identity"
+        WORKSPACE_NAME="# Identity"
+        WORKSPACE_PROFILE="MP Identity"
     ;;
     monolith)
-        i3-msg "workspace # Monolith"
-        firefox -P "MP Monolith"
+        WORKSPACE_NAME="# Monolith"
+        WORKSPACE_PROFILE="MP Monolith"
     ;;
     nth_api)
-        i3-msg "workspace # NTH > API"
-        firefox -P "MP NTH API"
+        WORKSPACE_NAME="# NTH > API"
+        WORKSPACE_PROFILE="MP NTH API"
     ;;
     nth_panel)
-        i3-msg "workspace # NTH > Panel"
-        firefox -P "MP NTH Panel"
+        WORKSPACE_NAME="# NTH > Panel"
+        WORKSPACE_PROFILE="MP NTH Panel"
     ;;
     nth_profiler)
-        i3-msg "workspace # NTH > Profiler"
-        firefox -P "MP NTH Profiler"
+        WORKSPACE_NAME="# NTH > Profiler"
+        WORKSPACE_PROFILE="MP NTH Profiler"
     ;;
     payments_platform)
-        i3-msg "workspace # Payments Platform"
-        firefox -P "MP Payment Platform"
+        WORKSPACE_NAME="# Payments Platform"
+        WORKSPACE_PROFILE="MP Payments Platform"
     ;;
     payout_connectors)
-        i3-msg "workspace # Payout Connectors"
-        firefox -P "MP Payout Connectors"
+        WORKSPACE_NAME="# Payout Connectors"
+        WORKSPACE_PROFILE="MP Payout Connectors"
     ;;
     payout_recipient)
-        i3-msg "workspace # Payout Recipient"
-        firefox -P "MP Payout Recipient"
+        WORKSPACE_NAME="# Payout Recipient"
+        WORKSPACE_PROFILE="MP Payout Recipient"
     ;;
     salesforce)
-        i3-msg "workspace # Salesforce"
-        firefox -P "MP Salesforce"
+        WORKSPACE_NAME="# Salesforce"
+        WORKSPACE_PROFILE="MP Salesforce"
     ;;
     smart_wallet)
-        i3-msg "workspace # Smart Wallet"
-        firefox -P "MP Smart Wallet"
+        WORKSPACE_NAME="# Smart Wallet"
+        WORKSPACE_PROFILE="MP Smart Wallet"
     ;;
     sre_team)
-        i3-msg "workspace # SRE Team"
-        firefox -P "MP SRE Team"
+        WORKSPACE_NAME="# SRE Team"
+        WORKSPACE_PROFILE="MP SRE Team"
     ;;
 esac
 
