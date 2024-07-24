@@ -88,7 +88,7 @@ in {
         "--release ${mod}+Shift+u" = "exec /home/user/git/maxos/scripts/uuid.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
         "${mod}+Shift+v" = "exec ${pkgs.virtualbox}/bin/VirtualBox";
-        "${mod}+w" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e WEBSCAN=1";
+        "${mod}+w" = "exec /home/user/git/maxos/scripts/rofi-workspace.sh";
         "${mod}+Shift+w" = "exec /home/user/git/maxos/scripts/remmina.sh";
         "${mod}+x" = "exec ${pkgs.xlockmore}/bin/xlock -mode clock";
         "${mod}+Shift+x" = "exec /home/user/git/maxos/scripts/suspend.sh";
