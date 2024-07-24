@@ -28,6 +28,7 @@ case "$SELECTED_COMMAND" in
     ;;
     apm)
         i3-msg "workspace # APM"
+        sleep 0.3
         firefox -P "MP APM"
     ;;
     banking_extensions)
