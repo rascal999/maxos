@@ -27,11 +27,15 @@ case "$SELECTED_COMMAND" in
         firefox -P "MP Activity"
     ;;
     apm)
-        WORKSPACE_CREATED=`i3-save-tree --workspace 1 | grep firefox | wc -l`
+        WORKSPACE_PROFILE="MP APM"
+        WORKSPACE_NAME="# APM"
+
+        WORKSPACE_CREATED=`i3-save-tree --workspace '$WORKSPACE_NAME' | grep firefox | wc -l`
+
         if [[ $WORKSPACE_CREATED == 0 ]]; then
-            i3-msg 'workspace # APM; exec /etc/profiles/per-user/user/bin/firefox -P "MP APM"'
+            i3-msg 'workspace $WORKSPACE_NAME; exec /etc/profiles/per-user/user/bin/firefox -P "$WORKSPACE_PROFILE"'
         else
-            i3-msg 'workspace # APM'
+            i3-msg 'workspace $WORKSPACE_PROFILE'
         fi
     ;;
     banking_extensions)
