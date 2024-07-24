@@ -99,8 +99,7 @@ esac
 WORKSPACE_CREATED=`i3-save-tree --workspace "${WORKSPACE_NAME}" | grep firefox | wc -l`
 
 if [[ $WORKSPACE_CREATED == 0 ]]; then
-    i3-msg "workspace $WORKSPACE_NAME; append_layout /home/user/git/maxos/scripts/resources/ff.json"
-    firefox -P "$WORKSPACE_PROFILE"
+    i3-msg "workspace $WORKSPACE_NAME; append_layout /home/user/git/maxos/scripts/resources/ff.json; exec firefox -P \"$WORKSPACE_PROFILE\""
 else
     i3-msg "workspace $WORKSPACE_NAME"
 fi
