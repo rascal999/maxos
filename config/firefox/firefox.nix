@@ -305,7 +305,7 @@
 
       mp_payout_recipient = {
         id = 18;
-        name = "MP Payout Connector";
+        name = "MP Payout Recipient";
         isDefault = false;
         settings = defaultSettings;
 
