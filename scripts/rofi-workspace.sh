@@ -23,7 +23,7 @@ SELECTED_COMMAND=$(echo "$ENTRIES" | grep "^$SELECTED_ENTRY|" | cut -d '|' -f 2)
 
 case "$SELECTED_COMMAND" in
     activity)
-        WORKSPACE_NAME="# Activity"
+        WORKSPACE_NAME="Activity"
         WORKSPACE_PROFILE="MP Activity"
     ;;
     apm)
