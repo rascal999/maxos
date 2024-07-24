@@ -171,6 +171,176 @@
         userChrome = import ./css/userChrome.css;
         userContent = import ./css/userContent.css;
       };
+
+      mp_apm = {
+        id = 5;
+        name = "MP APM";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_banking_extensions = {
+        id = 6;
+        name = "MP Banking Extensions";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_cards_connectors = {
+        id = 7;
+        name = "MP Cards Connectors";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_checkout = {
+        id = 9;
+        name = "MP Checkout";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_core_tech = {
+        id = 10;
+        name = "MP Core Tech";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_experience = {
+        id = 11;
+        name = "MP Experience";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_identity = {
+        id = 12;
+        name = "MP Identity";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_monolith = {
+        id = 13;
+        name = "MP Identity";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_nth_api = {
+        id = 14;
+        name = "MP NTH API";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_nth_panel = {
+        id = 15;
+        name = "MP NTH Panel";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_nth_profiler = {
+        id = 16;
+        name = "MP NTH Profiler";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_payments_platform = {
+        id = 17;
+        name = "MP Payments Paltform";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_payout_connector = {
+        id = 18;
+        name = "MP Payout Connector";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_payout_recipient = {
+        id = 19;
+        name = "MP Payout Connector";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_salesforce = {
+        id = 20;
+        name = "MP Salesforce";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_smart_wallet = {
+        id = 21;
+        name = "MP Smart Wallet";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
+
+      mp_sre_team = {
+        id = 22;
+        name = "MP SRE Team";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
     };
   };
 }

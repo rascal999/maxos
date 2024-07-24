@@ -83,13 +83,6 @@ case "$SELECTED_COMMAND" in
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Wiki search")
         perform_search "https://en.wikipedia.org/w/index.php?search=" "$SEARCH_QUERY"
     ;;
-    workspace)
-        local profile=$1
-        local workspace=$2
-
-        i3-msg "workspace $workspace"
-        firefox -P "$profile"
-    ;;
     yahoo-finance)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Quote")
         perform_search "https://uk.finance.yahoo.com/quote/" "$SEARCH_QUERY"
