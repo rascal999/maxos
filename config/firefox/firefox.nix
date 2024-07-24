@@ -244,7 +244,7 @@
 
       mp_monolith = {
         id = 12;
-        name = "MP Identity";
+        name = "MP Monolith";
         isDefault = false;
         settings = defaultSettings;
 
