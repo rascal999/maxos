@@ -101,5 +101,5 @@ WORKSPACE_CREATED=`i3-save-tree --workspace "${WORKSPACE_NAME}" | grep firefox |
 if [[ $WORKSPACE_CREATED == 0 ]]; then
     i3-msg "workspace $WORKSPACE_NAME; exec /etc/profiles/per-user/user/bin/firefox -P \"$WORKSPACE_PROFILE\""
 else
-    i3-msg 'workspace $WORKSPACE_PROFILE'
+    i3-msg "workspace $WORKSPACE_NAME"
 fi
