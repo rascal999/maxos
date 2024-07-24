@@ -285,7 +285,7 @@
 
       mp_payments_platform = {
         id = 16;
-        name = "MP Payments Paltform";
+        name = "MP Payments Platform";
         isDefault = false;
         settings = defaultSettings;
 

@@ -103,43 +103,6 @@ WORKSPACE_CREATED=`i3-save-tree --workspace "${WORKSPACE_NAME}" | grep firefox |
 if [[ $WORKSPACE_CREATED == 0 ]]; then
     # FUCK ME https://github.com/i3/i3/issues/4846
     i3-msg "workspace $WORKSPACE_NAME; exec --no-startup-id firefox -P \"$WORKSPACE_PROFILE\""
-
-    # Get the i3 tree
-    #i3_tree=$(i3-msg -t get_tree)
-
-    # Extract all Firefox windows with their workspaces and window IDs
-    #firefox_windows=$(echo "$i3_tree" | jq -r '
-    #  [recurse(.nodes[]?, .floating_nodes[]?)
-    #    | select(.window_properties.class? == "firefox" or .window_properties.class? == "Navigator")
-    #    | {id: .window, workspace: .name}]
-    #')
-
-    # Check if there are any Firefox windows
-    #if [ -z "$firefox_windows" ] || [ "$firefox_windows" == "[]" ]; then
-    #    echo "No Firefox windows found."
-    #    exit 1
-    #fi
-
-    #WINDOW_ID=`echo "$firefox_windows" | jq -r '.[] | "\(.id)"' | sort -n | tail -1`
-
-    # Get the i3 tree
-    #i3_tree=$(i3-msg -t get_tree)
-
-    # Debug: Output the raw JSON data to a file for inspection (optional)
-    # echo "$i3_tree" > /tmp/i3_tree_raw.json
-
-    # Find the workspace that contains the specified window ID
-    #workspace=$(echo "$i3_tree" | jq -r --arg window_id "$WINDOW_ID" '
-    #  .nodes[]?
-    #  | recurse(.nodes[]?)
-    #  | select(.nodes[]? | .window == ($window_id | tonumber))
-    #  | .name
-    #')
-
-    #i3-msg -t get_tree | jq -r --arg workspace "$workspace" \
-    #    '.nodes[].nodes[] | recurse(.nodes[]) | select(.name==$workspace) | .nodes[] | recurse(.nodes[]) | select(.window_properties.class=="firefox") | .window' | \
-    #    xargs -I{} i3-msg "[id={}] move to workspace $WORKSPACE_NAME"
-    #i3-msg "workspace $WORKSPACE_NAME"
 else
     i3-msg "workspace $WORKSPACE_NAME"
 fi
