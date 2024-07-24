@@ -5,6 +5,7 @@
 
     profiles =
       let defaultSettings = {
+        "widget.workspace-management" = false;
         "accessibility.force_disabled" = 1;
         "app.normandy.api_url" = "";
         "app.normandy.enabled" = false;
