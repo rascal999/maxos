@@ -203,7 +203,7 @@
       };
 
       mp_checkout = {
-        id = 9;
+        id = 8;
         name = "MP Checkout";
         isDefault = false;
         settings = defaultSettings;
@@ -213,7 +213,7 @@
       };
 
       mp_core_tech = {
-        id = 10;
+        id = 9;
         name = "MP Core Tech";
         isDefault = false;
         settings = defaultSettings;
@@ -223,7 +223,7 @@
       };
 
       mp_experience = {
-        id = 11;
+        id = 10;
         name = "MP Experience";
         isDefault = false;
         settings = defaultSettings;
@@ -233,7 +233,7 @@
       };
 
       mp_identity = {
-        id = 12;
+        id = 11;
         name = "MP Identity";
         isDefault = false;
         settings = defaultSettings;
@@ -243,7 +243,7 @@
       };
 
       mp_monolith = {
-        id = 13;
+        id = 12;
         name = "MP Identity";
         isDefault = false;
         settings = defaultSettings;
@@ -253,7 +253,7 @@
       };
 
       mp_nth_api = {
-        id = 14;
+        id = 13;
         name = "MP NTH API";
         isDefault = false;
         settings = defaultSettings;
@@ -263,7 +263,7 @@
       };
 
       mp_nth_panel = {
-        id = 15;
+        id = 14;
         name = "MP NTH Panel";
         isDefault = false;
         settings = defaultSettings;
@@ -273,7 +273,7 @@
       };
 
       mp_nth_profiler = {
-        id = 16;
+        id = 15;
         name = "MP NTH Profiler";
         isDefault = false;
         settings = defaultSettings;
@@ -283,7 +283,7 @@
       };
 
       mp_payments_platform = {
-        id = 17;
+        id = 16;
         name = "MP Payments Paltform";
         isDefault = false;
         settings = defaultSettings;
@@ -293,7 +293,7 @@
       };
 
       mp_payout_connectors = {
-        id = 18;
+        id = 17;
         name = "MP Payout Connectors";
         isDefault = false;
         settings = defaultSettings;
@@ -303,7 +303,7 @@
       };
 
       mp_payout_recipient = {
-        id = 19;
+        id = 18;
         name = "MP Payout Connector";
         isDefault = false;
         settings = defaultSettings;
@@ -313,7 +313,7 @@
       };
 
       mp_salesforce = {
-        id = 20;
+        id = 19;
         name = "MP Salesforce";
         isDefault = false;
         settings = defaultSettings;
@@ -323,7 +323,7 @@
       };
 
       mp_smart_wallet = {
-        id = 21;
+        id = 20;
         name = "MP Smart Wallet";
         isDefault = false;
         settings = defaultSettings;
@@ -333,7 +333,7 @@
       };
 
       mp_sre_team = {
-        id = 22;
+        id = 21;
         name = "MP SRE Team";
         isDefault = false;
         settings = defaultSettings;
