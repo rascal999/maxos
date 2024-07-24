@@ -96,6 +96,8 @@ case "$SELECTED_COMMAND" in
     ;;
 esac
 
+echo "Workspace name:    $WORKSPACE_NAME"
+echo "Workspace profile: $WORKSPACE_PROFILE"
 WORKSPACE_CREATED=`i3-save-tree --workspace "${WORKSPACE_NAME}" | grep firefox | wc -l`
 
 if [[ $WORKSPACE_CREATED == 0 ]]; then
