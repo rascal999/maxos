@@ -343,9 +343,9 @@
         userContent = import ./css/userContent.css;
       };
 
-      mp_qap_platform = {
+      mp_qa_platform = {
         id = 22;
-        name = "MP QAP Platform";
+        name = "MP QA Platform";
         isDefault = false;
         settings = defaultSettings;
 

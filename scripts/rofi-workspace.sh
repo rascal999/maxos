@@ -82,9 +82,9 @@ case "$SELECTED_COMMAND" in
         WORKSPACE_NAME="# Payout Recipient"
         WORKSPACE_PROFILE="MP Payout Recipient"
     ;;
-    qap_platform)
-        WORKSPACE_NAME="# QAP Platform"
-        WORKSPACE_PROFILE="MP QAP Platform"
+    qa_platform)
+        WORKSPACE_NAME="# QA Platform"
+        WORKSPACE_PROFILE="MP QA Platform"
     ;;
     salesforce)
         WORKSPACE_NAME="# Salesforce"
