@@ -342,6 +342,16 @@
         userChrome = import ./css/userChrome.css;
         userContent = import ./css/userContent.css;
       };
+
+      mp_qap_platform = {
+        id = 22;
+        name = "MP QAP Platform";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
     };
   };
 }
