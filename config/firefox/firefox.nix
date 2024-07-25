@@ -352,6 +352,16 @@
         userChrome = import ./css/userChrome.css;
         userContent = import ./css/userContent.css;
       };
+
+      mp_payout_core = {
+        id = 23;
+        name = "MP Payout Core";
+        isDefault = false;
+        settings = defaultSettings;
+
+        userChrome = import ./css/userChrome.css;
+        userContent = import ./css/userContent.css;
+      };
     };
   };
 }

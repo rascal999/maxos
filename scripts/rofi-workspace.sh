@@ -78,6 +78,10 @@ case "$SELECTED_COMMAND" in
         WORKSPACE_NAME="# Payout Connectors"
         WORKSPACE_PROFILE="MP Payout Connectors"
     ;;
+    payout_core)
+        WORKSPACE_NAME="# Payout Core"
+        WORKSPACE_PROFILE="MP Payout Core"
+    ;;
     payout_recipient)
         WORKSPACE_NAME="# Payout Recipient"
         WORKSPACE_PROFILE="MP Payout Recipient"
