@@ -30,11 +30,11 @@ in {
       #for_window [title=".*YouTube Music.*"] move to workspace "ytm"
       no_focus [class="org.remmina.Remmina"]
       focus_on_window_activation none
-      workspaceautobackandforth yes
     '';
 
     config = {
       modifier = mod;
+      workspaceAutoBackAndForth = yes;
 
       fonts = {
         names = ["DejaVu Sans Mono, FontAwesome 6"];
