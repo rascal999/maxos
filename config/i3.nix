@@ -34,7 +34,7 @@ in {
 
     config = {
       modifier = mod;
-      workspaceAutoBackAndForth = yes;
+      workspaceAutoBackAndForth = true;
 
       fonts = {
         names = ["DejaVu Sans Mono, FontAwesome 6"];
