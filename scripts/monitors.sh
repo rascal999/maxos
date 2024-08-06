@@ -15,19 +15,6 @@ if [[ `hostname` == "rig" ]]; then
     /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
     /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
 
-    /run/current-system/sw/bin/sleep 1
-
-    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vid, move workspace to output HDMI-0"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace 2:ls, move workspace to output USB-C-0"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vm, move workspace to output USB-C-0"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace 1, move workspace to output USB-C-0"
-    /run/current-system/sw/bin/sleep 1
-
     ### Apps
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/copyq
     /run/current-system/sw/bin/sleep 0.2
@@ -57,6 +44,19 @@ if [[ `hostname` == "rig" ]]; then
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
     #  /etc/profiles/per-user/user/bin/i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     #done
+
+    /run/current-system/sw/bin/sleep 1
+
+    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
+    /run/current-system/sw/bin/sleep 1
+    /etc/profiles/per-user/user/bin/i3-msg "workspace vid, move workspace to output HDMI-0"
+    /run/current-system/sw/bin/sleep 1
+    /etc/profiles/per-user/user/bin/i3-msg "workspace 2:ls, move workspace to output USB-C-0"
+    /run/current-system/sw/bin/sleep 1
+    /etc/profiles/per-user/user/bin/i3-msg "workspace vm, move workspace to output USB-C-0"
+    /run/current-system/sw/bin/sleep 1
+    /etc/profiles/per-user/user/bin/i3-msg "workspace 1, move workspace to output USB-C-0"
+    /run/current-system/sw/bin/sleep 1
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
