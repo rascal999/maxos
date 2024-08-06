@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+# Function to move a workspace to a different output
+move_workspace() {
+  local workspace_name=$1
+  local output_name=$2
+
+  # Switch to a temporary workspace
+  i3-msg "workspace tmp"
+
+  # Move the target workspace to the desired output
+  i3-msg "workspace $workspace_name, move workspace to output $output_name"
+}
+
 if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 3
 
@@ -47,16 +59,11 @@ if [[ `hostname` == "rig" ]]; then
 
     /run/current-system/sw/bin/sleep 1
 
-    /etc/profiles/per-user/user/bin/i3-msg "workspace ytm, move workspace to output DP-4"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vid, move workspace to output HDMI-0"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace 2:ls, move workspace to output USB-C-0"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vm, move workspace to output USB-C-0"
-    /run/current-system/sw/bin/sleep 1
-    /etc/profiles/per-user/user/bin/i3-msg "workspace 1, move workspace to output USB-C-0"
-    /run/current-system/sw/bin/sleep 1
+    move_workspace "ytm" "DP-4"
+    move_workspace "vid" "HDMI-0"
+    move_workspace "2:ls" "USB-C-0"
+    move_workspace "vm" "USB-C-0"
+    move_workspace "1" "USB-C-0"
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
