@@ -72,6 +72,7 @@ in {
         "${mod}+Shift+e" = "exec /home/user/git/maxos/scripts/i3-split.sh splitv";
         "${mod}+g" = "exec ${pkgs.gimp}/bin/gimp";
         "${mod}+h" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e TMPWORK=1";
+        "${mod}+i" = "exec /home/user/git/maxos/scripts/logseq_insert_meetings.sh";
         "${mod}+Shift+h" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e NOHISTFILE=1";
         "${mod}+j" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRALASTTICKET=1";
         "${mod}+Shift+j" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRATICKET=1";
