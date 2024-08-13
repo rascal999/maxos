@@ -9,8 +9,16 @@ JOURNAL_LOCATION="/home/user/Data/logseq/journals/${DATE_JOURNAL}.md"
 # Make temp copy of journal entry
 cp ${JOURNAL_LOCATION} ${JOURNAL_LOCATION}_tmp
 
+if [[ ! -d "/home/user/git/maxos/scripts/.venv-logseq-meetings" ]]; then
+    python -m venv /home/user/git/maxos/scripts/.venv-logseq-meetings
+    source /home/user/git/maxos/scripts/.venv-logseq-meetings/bin/activate
+    pip install -r /home/user/git/maxos/scripts/logseq-meetings-requirements.txt
+else
+    source /home/user/git/maxos/scripts/.venv-logseq-meetings/bin/activate
+fi
+
 # Get meetings (run script)
-MEETINGS=`python logseq_calendar_today.py`
+MEETINGS=`python /home/user/git/maxos/scripts/logseq_calendar_today.py`
 
 # Place script output in today's journal
 awk -v insert="$MEETINGS" '

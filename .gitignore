@@ -4,3 +4,4 @@ result*
 *.ova
 etc-*/
 maxos_vm_virtualbox
+.venv*/
