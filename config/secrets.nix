@@ -28,6 +28,9 @@
     api-virustotal = {
       file = ../secrets/api-virustotal.age;
     };
+    credentials-google = {
+      file = ../secrets/credentials-google.age;
+    };
     jira = {
       file = ../secrets/jira.age;
     };
@@ -92,6 +95,11 @@
     api-virustotal =
     {
       source = config.age.secrets.api-virustotal.path;
+      mode = "0444";
+    };
+    credentials-google =
+    {
+      source = config.age.secrets.credentials-google.path;
       mode = "0444";
     };
     jira =
