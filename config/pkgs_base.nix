@@ -421,6 +421,7 @@
     urh                                                                                                  # Universal Radio Hacker: investigate wireless protocols like a boss
     urlhunter                                                                                            # Recon tool that allows searching shortened URLs
     valgrind                                                                                             # Debugging and profiling tool suite
+    vault                                                                                                # A tool for managing secrets 
     vdirsyncer                                                                                           # Synchronize calendars and contacts
     vegeta                                                                                               # Versatile HTTP load testing tool
     velero                                                                                               #
