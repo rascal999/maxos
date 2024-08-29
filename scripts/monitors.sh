@@ -18,13 +18,13 @@ if [[ `hostname` == "rig" ]]; then
     # 0
     /run/current-system/sw/bin/xrandr --output DP-4 --auto --left-of USB-C-0
     # 1
-    /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --auto --right-of DP-4
+    /run/current-system/sw/bin/xrandr --output HDMI-0 --primary --auto --right-of DP-4
     # 2
-    /run/current-system/sw/bin/xrandr --output HDMI-0 --auto --right-of USB-C-0
+    #/run/current-system/sw/bin/xrandr --output HDMI-0 --auto --right-of USB-C-0
 
     /run/current-system/sw/bin/sleep 4
 
-    /etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
+    #/etc/profiles/per-user/user/bin/i3-msg "workspace vid; append_layout /home/user/git/maxos/hosts/rig/i3/vid.json"
     /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
 
     ### Apps
@@ -42,15 +42,15 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/slack
     /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6 --new-window --app=http://127.0.0.1:10220/"
-    /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://www.bloomberg.com/media-manifest/streams/eu.m3u8"
-    /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
-    /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8"
-    /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8"
+    #/run/current-system/sw/bin/daemon -X "/etc/profiles/per-user/user/bin/chromium --force-device-scale-factor=1.6 --new-window --app=http://127.0.0.1:10220/"
+    #/run/current-system/sw/bin/sleep 0.2
+    #/run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://www.bloomberg.com/media-manifest/streams/eu.m3u8"
+    #/run/current-system/sw/bin/sleep 0.2
+    #/run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
+    #/run/current-system/sw/bin/sleep 0.2
+    #/run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://cd-live-stream.news.cctvplus.com/live/smil:CHANNEL2.smil/playlist.m3u8"
+    #/run/current-system/sw/bin/sleep 0.2
+    #/run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/mpv https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8"
 
     #for WORKSPACE_FILE in "$@" ; do
     #  WORKSPACE_NUM=`echo $WORKSPACE_FILE | gawk -F '-' '{ print $NF }' | grep -Eo "[0-9]{1,3}"`
@@ -60,10 +60,10 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 1
 
     move_workspace "ytm" "DP-4"
-    move_workspace "vid" "HDMI-0"
-    move_workspace "2:ls" "USB-C-0"
-    move_workspace "vm" "USB-C-0"
-    move_workspace "1" "USB-C-0"
+    #move_workspace "vid" "HDMI-0"
+    move_workspace "2:ls" "HDMI-0"
+    move_workspace "vm" "HDMI-0"
+    move_workspace "1" "HDMI-0"
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
