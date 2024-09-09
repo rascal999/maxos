@@ -6,6 +6,7 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.efiSupport = true;
   boot.loader.grub.efiInstallAsRemovable = true;
+  boot.loader.grub.timeout = 120;
   boot.loader.grub.useOSProber = true;
 
   # Define on which hard drive you want to install Grub.
