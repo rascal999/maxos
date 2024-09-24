@@ -124,6 +124,17 @@
                 ];
     };
 
+    logseq-jira-sync = {
+      cmd = [
+              "/pages/Work\ Todo.md"
+            ];
+      image = "logseq-jira-sync";
+      volumes = [
+              "/home/user/Data/logseq/pages:/pages"
+              "/home/user/git/logseq-jira-sync:/root"
+            ];
+    };
+
     kiwix = {
       cmd = [
               "cheatography.com_en_all_2021-09.zim"
