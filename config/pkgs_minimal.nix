@@ -9,10 +9,12 @@ let
     django
     flask
     gitlab
+    jira
     openai
     pandas
     pip
     pytest
+    python-dotenv
     python-gitlab
     requests
     scapy
