@@ -126,7 +126,7 @@
 
     logseq-jira-sync = {
       cmd = [
-              "/pages/Work\ Todo.md"
+              "/pages/Work_Todo.md"
             ];
       image = "logseq-jira-sync";
       volumes = [
