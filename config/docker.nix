@@ -124,16 +124,16 @@
                 ];
     };
 
-    logseq-jira-sync = {
-      cmd = [
-              "/pages/Work_Todo.md"
-            ];
-      image = "logseq-jira-sync";
-      volumes = [
-              "/home/user/Data/logseq/pages:/pages"
-              "/home/user/git/logseq-jira-sync:/root"
-            ];
-    };
+    #logseq-jira-sync = {
+    #  cmd = [
+    #          "/pages/Work_Todo.md"
+    #        ];
+    #  image = "logseq-jira-sync";
+    #  volumes = [
+    #          "/home/user/Data/logseq/pages:/pages"
+    #          "/home/user/git/logseq-jira-sync:/root"
+    #        ];
+    #};
 
     kiwix = {
       cmd = [
