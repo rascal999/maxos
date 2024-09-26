@@ -3300,6 +3300,13 @@ if [[ ! -z "${NEW_CALENDAR_EVENT}" ]]; then
   new_calendar_event
 fi
 
+if [[ ! -z "${JIRA_CLI}" ]]; then
+  cd /home/user/git/jira-cli
+  source .venv/bin/activate
+
+  ./jira_cli.py
+fi
+
 if [[ ! -z "${JIRA_NEW}" ]]; then
   echo -n "New Jira ticket title > "
   read JIRA_DESIRED_TITLE
