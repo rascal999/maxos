@@ -3304,7 +3304,8 @@ if [[ ! -z "${JIRA_CLI}" ]]; then
   cd /home/user/git/jira-cli
   source .venv/bin/activate
 
-  ./jira_cli.py
+  ./main.py
+  exit 0
 fi
 
 if [[ ! -z "${JIRA_NEW}" ]]; then
