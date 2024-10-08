@@ -3305,7 +3305,6 @@ if [[ ! -z "${JIRA_CLI}" ]]; then
   source .venv/bin/activate
 
   ./main.py
-  exit 0
 fi
 
 if [[ ! -z "${JIRA_NEW}" ]]; then
