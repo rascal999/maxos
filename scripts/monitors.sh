@@ -18,9 +18,9 @@ if [[ `hostname` == "rig" ]]; then
     # 0
     /run/current-system/sw/bin/xrandr --output DP-4 --auto --left-of USB-C-0
     # 1
-    /run/current-system/sw/bin/xrandr --output HDMI-0 --primary --auto --right-of DP-4
+    /run/current-system/sw/bin/xrandr --output DP-2 --primary --auto --right-of DP-4
     # 2
-    #/run/current-system/sw/bin/xrandr --output HDMI-0 --auto --right-of USB-C-0
+    #/run/current-system/sw/bin/xrandr --output DP-2 --auto --right-of USB-C-0
 
     /run/current-system/sw/bin/sleep 4
 
@@ -60,10 +60,10 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 1
 
     move_workspace "ytm" "DP-4"
-    #move_workspace "vid" "HDMI-0"
-    move_workspace "2:ls" "HDMI-0"
-    move_workspace "vm" "HDMI-0"
-    move_workspace "1" "HDMI-0"
+    #move_workspace "vid" "DP-2"
+    move_workspace "2:ls" "DP-2"
+    move_workspace "vm" "DP-2"
+    move_workspace "1" "DP-2"
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
