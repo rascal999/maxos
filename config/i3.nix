@@ -52,7 +52,7 @@ in {
         "Mod4+Return" = "exec ${pkgs.firefox}/bin/firefox";
         "Mod4+space" = "exec /home/user/git/maxos/scripts/slack_toggle.sh";
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
-        "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh HDMI-0 vid zzz";
+        "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh USB-C-0 vid zzz";
 
         "${mod}+Return" = "exec /home/user/git/maxos/scripts/rofi.sh";
         "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi-ff-history.sh";
