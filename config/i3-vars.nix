@@ -7,7 +7,7 @@
 
       startup = [
         {
-          command = "exec ${pkgs.redshift}/bin/redshift -O 1900";
+          command = "exec ${pkgs.redshift}/bin/redshift -O 2000";
           notification = false;
         }
         {
