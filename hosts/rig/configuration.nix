@@ -43,7 +43,7 @@
   };
 
   # WOL
-  networking.interfaces.enp39s0.wakeOnLan.enable = true;
+  networking.interfaces.eno1.wakeOnLan.enable = true;
 
   # Point to localhost for Pi-hole
   networking.nameservers = [ "127.0.0.1" ];
