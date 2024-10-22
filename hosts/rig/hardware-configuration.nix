@@ -8,15 +8,10 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "ahci" "thunderbolt" "xhci_pci" "usbhid" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
-    };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/5303c633-0b7c-4329-bdd1-9cb2372c82fa";
@@ -25,6 +20,118 @@
 
   boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/0c01e360-b7aa-4d3a-9b86-495f9188f43f";
 
+  fileSystems."/var/lib/bluetooth" =
+    { device = "systemd-1";
+      fsType = "autofs";
+    };
+
+  fileSystems."/var/lib/bluetooth" =
+    { device = "/persist/var/lib/bluetooth";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/07F8-7AAD";
+      fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
+    };
+
+  fileSystems."/var/lib/docker/overlay2/010ea676d7a189a3c2055496e3658c5c7c986565d00519607cdae55e2fc702f9/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/35d692f95a79326166e66df734f11ef94b7ea52971a2a1c8a26fd57e7b5a5058/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/60075495bccd0059ec6acc7592ad58cab077d3ab71d3a574d6b187282283685e/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/86e0bc8ae991c52df3a50ecd9b9d94f8ccbd12f2a8d48b2c6601c12e4a116506/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/40a3814efe6fc6bcaae09499571dc5cf542361b009dcc37cbebf65241452314c/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/1a1c3a60ecddb0cfb5f4bff60eee9a23fbc527f9bacacc25016739e477c28f4a/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/448a8cd37ca117b2dfc864575e6294aa55e0691dfebe2f04900709dd5f3a50a5/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/8fb6e4f15c24725c055fa89dc9526108e5dc3448c44232b91747bdc842da34d3/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/5d2a841aace68666aa284700ffe63d4bacba49dbce187ba608c8341c8a7cf93a/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/2b735b92dfe5b5ce49f2a26d53ad09f6e335e1926fe59505a5a62a12195b5f0b/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/442d7e9a791e522ba10e98e44feba8ac7adfdd05dab3091ef8efd6b263e57ed6/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/37425dd4424e229473d7870c0fa9e99698f59eeea2e85d69c52457ba0446d3ec/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/82b98710c414969014d96d54765bf5b1be282c195a39eb84e5a763b11cb1d6a1/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/2d8274ea6f661a6a1fe5c01bca9d5e8961592d21299ce476d84b9b893d70a7a7/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/0d35b8a3a1f56974a78b7f02902f5bcd89e88734d013a04a8259676cf3185c40/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/747a16a81a49aad590492afcc8918252b0b9ceeb0f56206e967db83d49d1ff4c/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/d66df7e9860e97d33c1975d92cb2b200cb3101d29849d593234bef7985227d13/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/ba8cbe18b4d2b6d7bbcb779d707dc9fee467b501cfaaa9303570a69b357a078a/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
+  fileSystems."/var/lib/docker/overlay2/619ee1533b2ecbff261db311efcca98d285a246d03611d523e585f4c78cf040d/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
+
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -32,8 +139,31 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp39s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.br-4cdaa2b21677.useDHCP = lib.mkDefault true;
+  # networking.interfaces.br-6f85fe33535e.useDHCP = lib.mkDefault true;
+  # networking.interfaces.br-d7c4a6a7c79a.useDHCP = lib.mkDefault true;
+  # networking.interfaces.docker0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth02d0bb8.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth0521405.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth560233f.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth5646f0f.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth5a536db.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth5fdcff0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth737bc7c.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth864de3d.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth8e4e067.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth90eb5de.useDHCP = lib.mkDefault true;
+  # networking.interfaces.veth9280487.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vetha2b9c7b.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vetha5798df.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethae096bc.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethc3bd056.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethc626df1.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethc9a540b.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethcb13f96.useDHCP = lib.mkDefault true;
+  # networking.interfaces.vethe84d059.useDHCP = lib.mkDefault true;
 
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

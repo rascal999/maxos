@@ -16,9 +16,9 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 3
 
     # 0
-    /run/current-system/sw/bin/xrandr --output DP-4 --left-of USB-C-0 --mode 2560x1440 --rate 144
+    /run/current-system/sw/bin/xrandr --output DP-4 --left-of DP-2 --mode 2560x1440 --rate 144
     # 1
-    /run/current-system/sw/bin/xrandr --output USB-C-0 --primary --right-of DP-4 --mode 3440x1440 --rate 144
+    /run/current-system/sw/bin/xrandr --output DP-2 --primary --right-of DP-4 --mode 3440x1440 --rate 144
 
     /run/current-system/sw/bin/sleep 4
 
