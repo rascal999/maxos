@@ -58,10 +58,10 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/sleep 1
 
     move_workspace "ytm" "DP-4"
-    #move_workspace "vid" "USB-C-0"
-    move_workspace "2:ls" "USB-C-0"
-    move_workspace "vm" "USB-C-0"
-    move_workspace "1" "USB-C-0"
+    #move_workspace "vid" "DP-2"
+    move_workspace "2:ls" "DP-2"
+    move_workspace "vm" "DP-2"
+    move_workspace "1" "DP-2"
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
