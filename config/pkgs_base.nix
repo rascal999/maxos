@@ -37,7 +37,7 @@
     autokey                                                                                              # Desktop automation utility for Linux and X11
     autossh                                                                                              # Automatically restart SSH sessions and tunnels
     awscli                                                                                               # Unified tool to manage your AWS services
-    azure-cli                                                                                            # Next generation multi-platform command line experience for Azure
+    #azure-cli                                                                                            # Next generation multi-platform command line experience for Azure
     badchars                                                                                             # HEX badchar generator for different programming languages
     bandwhich                                                                                            # A CLI utility for displaying current network utilization
     bc                                                                                                   # GNU software calculator
@@ -50,7 +50,7 @@
     brakeman                                                                                             # Static analysis security scanner for Ruby on Rails
     brillo                                                                                               # Backlight and Keyboard LED control tool
     bruno                                                                                                # Open-source IDE For exploring and testing APIs
-    bruteforce-luks                                                                                      # Cracks passwords of LUKS encrypted volumes
+    #bruteforce-luks                                                                                      # Cracks passwords of LUKS encrypted volumes
     brutespray                                                                                           # Tool to do brute-forcing from Nmap output
     bully                                                                                                # Retrieve WPA/WPA2 passphrase from a WPS enabled access point
     burpsuite                                                                                            # An integrated platform for performing security testing of web applications
@@ -94,14 +94,14 @@
     cowpatty                                                                                             # Offline dictionary attack against WPA/WPA2 networks
     credential-detector                                                                                  # Tool to detect potentially hard-coded credentials
     croc                                                                                                 # Easily and securely send things from one computer to another
-    crowbar                                                                                              # A brute forcing tool that can be used during penetration tests
+    #crowbar                                                                                              # A brute forcing tool that can be used during penetration tests
     crunch                                                                                               # Wordlist generator
     cudaPackages.cudatoolkit                                                                             # A compiler for NVIDIA GPUs, math libraries, and tools
     cudatoolkit                                                                                          # A compiler for NVIDIA GPUs, math libraries, and tools
     cups-brother-hl3140cw                                                                                #
     daemon                                                                                               # Turns other processes into daemons
     dalfox                                                                                               # Tool for analysing parameter and XSS scanning
-    dbeaver                                                                                              # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
+    dbeaver-bin                                                                                          # Universal SQL Client for developers, DBA and analysts. Supports MySQL, PostgreSQL, MariaDB, SQLite, and more
     dcfldd                                                                                               # An enhanced version of GNU dd
     ddosify                                                                                              # High-performance load testing tool, written in Golang
     ddrescue                                                                                             # GNU ddrescue, a data recovery tool
@@ -338,7 +338,7 @@
     #rofi                                                                                                 # Window switcher, run dialog and dmenu replacement
     #rofi-calc                                                                                            # Do live calculations in rofi!
     #rofi-emoji                                                                                           # An emoji selector plugin for Rofi
-    routersploit                                                                                         # Exploitation Framework for Embedded Devices
+    #routersploit                                                                                         # Exploitation Framework for Embedded Devices
     rshijack                                                                                             # TCP connection hijacker
     rtl-sdr                                                                                              # Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
     rustcat                                                                                              # Port listener and reverse shell
@@ -406,7 +406,7 @@
     thc-hydra                                                                                            # A very fast network logon cracker which support many different services
     ticker                                                                                               # Terminal stock ticker with live updates and position tracking
     tor-browser-bundle-bin                                                                               # Tor Browser Bundle built by torproject.org
-    tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
+    #tracee                                                                                               # Linux Runtime Security and Forensics using eBPF
     traitor                                                                                              # Automatic Linux privilege escalation
     trilium-desktop                                                                                      # Note taking application with focus on building large personal knowledge bases
     trivy                                                                                                # A simple and comprehensive vulnerability scanner for containers, suitable for CI
@@ -421,7 +421,7 @@
     urh                                                                                                  # Universal Radio Hacker: investigate wireless protocols like a boss
     urlhunter                                                                                            # Recon tool that allows searching shortened URLs
     valgrind                                                                                             # Debugging and profiling tool suite
-    vault                                                                                                # A tool for managing secrets 
+    #vault                                                                                                # A tool for managing secrets 
     vdirsyncer                                                                                           # Synchronize calendars and contacts
     vegeta                                                                                               # Versatile HTTP load testing tool
     velero                                                                                               #
@@ -461,7 +461,7 @@
     #xpdf                                                                                                 # Viewer for Portable Document Format (PDF) files
     yara                                                                                                 # The pattern matching swiss knife for malware researchers
     yersinia                                                                                             # A framework for layer 2 attacks
-    youtube-dl                                                                                           # Emacs youtube-dl download manager
+    yt-dlp                                                                                               # Command-line tool to download videos from YouTube.com and other sites (youtube-dl fork)
     youtube-music                                                                                        # Electron wrapper around YouTube Music
     yq                                                                                                   # Command-line YAML/XML/TOML processor
     zap                                                                                                  # Java application for web penetration testing

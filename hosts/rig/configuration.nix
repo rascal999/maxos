@@ -3,7 +3,8 @@
 {
   networking.hostName = "rig";
   services.xserver.videoDrivers = [ "nvidia" ];
-  virtualisation.docker.enableNvidia = true;
+  hardware.nvidia.open = true;
+  hardware.nvidia-container-toolkit.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

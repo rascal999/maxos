@@ -34,7 +34,7 @@
     size = (1024 * 8);
   }];
 
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics.enable32Bit = true;
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -69,8 +69,8 @@
   powerManagement.enable = false;
 
   # Enable sound.
-  sound.enable = true;
-  hardware.pulseaudio.enable = true;
+  #sound.enable = true;
+  #hardware.pulseaudio.enable = true;
 
   hardware.enableAllFirmware = true;
 
@@ -212,7 +212,7 @@
     allowUnfree = true;
     allowBroken = true;
     permittedInsecurePackages = [
-      "electron-25.9.0"
+      "electron-27.3.11"
       "python-2.7.18.6"
       "python-2.7.18.7"
     ];
@@ -275,6 +275,7 @@
   };
 
   # vim default editor
+  programs.vim.enable = true;
   programs.vim.defaultEditor = true;
 
   # opensnitch
