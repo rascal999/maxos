@@ -288,6 +288,8 @@
     ntopng                                                                                               # High-speed web-based traffic analysis and flow collection tool
     nuclear                                                                                              # Streaming music player that finds free music for you
     nuclei                                                                                               # Tool for configurable targeted scanning
+    #nvidia-docker                                                                                        # NVIDIA container runtime for Docker
+    #nvidia-container-toolkit                                                                             # NVIDIA Container Toolkit
     nwipe                                                                                                # Securely erase disks
     nzbget        # A command line tool for downloading files from news servers
     obs-studio                                                                                           # Free and open source software for video recording and live streaming

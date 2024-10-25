@@ -14,6 +14,7 @@ mkShell rec {
   buildInputs = [
     python310
     python310Packages.pip
+    python312Packages.vllm
     python3Packages.virtualenv # run virtualenv .
     git
   ];
