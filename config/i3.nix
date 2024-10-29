@@ -157,7 +157,7 @@ in {
 
       bars = [
         {
-          trayOutput = "DP-4";
+          trayOutput = "DP-2";
           fonts = {
             names = ["DejaVu Sans Mono, FontAwesome 14"];
             style = "Semi-Condensed";
