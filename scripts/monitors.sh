@@ -26,6 +26,7 @@ if [[ `hostname` == "rig" ]]; then
     /etc/profiles/per-user/user/bin/i3-msg "workspace ytm; append_layout /home/user/git/maxos/hosts/rig/i3/ytm.json"
 
     ### Apps
+    /run/current-system/sw/bin/daemon /home/user/git/maxos/resources/greenclip daemon
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/copyq
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40"
