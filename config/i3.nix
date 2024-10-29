@@ -55,6 +55,7 @@ in {
         "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh USB-C-0 vid zzz";
 
         "${mod}+Return" = "exec /home/user/git/maxos/scripts/rofi.sh";
+        "${mod}+Shift" = "exec ${pkgs.copyq}/bin/copyq menu";
         "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi-ff-history.sh";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec /home/user/git/maxos/scripts/earbuds.sh";
