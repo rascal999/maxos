@@ -445,6 +445,7 @@
     wifite2                                                                                              # Rewrite of the popular wireless network auditor, wifite
     win-virtio                                                                                           # Windows VirtIO Drivers
     wipe                                                                                                 # Secure file wiping utility
+    wireproxy                                                                                            # Wireguard client that exposes itself as a socks5 proxy
     wireshark-qt                                                                                         #
     witness                                                                                              # A pluggable framework for software supply chain security
     wmctrl                                                                                               # CLI tool to interact with EWMH/NetWM compatible X Window Managers
