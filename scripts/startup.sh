@@ -85,3 +85,6 @@ echo "Launching dunst.."
 /run/current-system/sw/bin/pkill dunst
 /run/current-system/sw/bin/dunst &
 /run/current-system/sw/bin/antimicrox --tray &
+
+# wireproxy
+/run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/wireproxy -c /home/user/Data/nixos/wireproxy.conf"
