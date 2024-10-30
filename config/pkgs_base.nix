@@ -15,6 +15,7 @@
     airgeddon                                                                                            # Multi-use TUI to audit wireless networks
     alacritty                                                                                            # A cross-platform, GPU-accelerated terminal emulator
     alacritty-theme                                                                                      # Collection of Alacritty color schemes
+    alsa-utils                                                                                           # ALSA, the Advanced Linux Sound Architecture utils
     amass                                                                                                # In-Depth DNS Enumeration and Network Mapping
     androguard                                                                                           # Tool and Python library to interact with Android Files
     android-tools                                                                                        # Android SDK platform tools
