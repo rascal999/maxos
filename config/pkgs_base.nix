@@ -215,6 +215,7 @@
     imagemagick                                                                                          #
     inkscape                                                                                             # Vector graphics editor
     inotify-tools                                                                                        #
+    input-leap                                                                                           # Open-source KVM software
     #inql                                                                                                 # Security testing tool for GraphQL
     iodine                                                                                               # NetworkManager's iodine plugin
     ipscan                                                                                               # Fast and friendly network scanner
