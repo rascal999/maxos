@@ -19,6 +19,8 @@ if [[ `hostname` == "rig" ]]; then
     /run/current-system/sw/bin/xrandr --output DP-4 --left-of DP-2 --mode 2560x1440 --rate 144
     # 1
     /run/current-system/sw/bin/xrandr --output DP-2 --primary --right-of DP-4 --mode 3440x1440 --rate 144
+    # 2
+    /run/current-system/sw/bin/xrandr --output HDMI-0 --primary --right-of DP-2 --mode 2560x1440 --rate 60
 
     /run/current-system/sw/bin/sleep 4
 
@@ -58,11 +60,10 @@ if [[ `hostname` == "rig" ]]; then
 
     /run/current-system/sw/bin/sleep 1
 
-    move_workspace "ytm" "DP-4"
-    #move_workspace "vid" "DP-2"
+    move_workspace "1" "DP-2"
     move_workspace "2:ls" "DP-2"
     move_workspace "vm" "DP-2"
-    move_workspace "1" "DP-2"
+    move_workspace "ytm" "HDMI-0"
 fi
 
 if [[ `hostname` == "galaxy" ]]; then
