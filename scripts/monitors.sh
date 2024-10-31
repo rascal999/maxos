@@ -20,7 +20,7 @@ if [[ `hostname` == "rig" ]]; then
     # 1
     /run/current-system/sw/bin/xrandr --output DP-2 --primary --right-of DP-4 --mode 3440x1440 --rate 144
     # 2
-    /run/current-system/sw/bin/xrandr --output HDMI-0 --primary --right-of DP-2 --mode 2560x1440 --rate 60
+    /run/current-system/sw/bin/xrandr --output HDMI-0 --right-of DP-2 --mode 2560x1440 --rate 60
 
     /run/current-system/sw/bin/sleep 4
 
@@ -30,9 +30,7 @@ if [[ `hostname` == "rig" ]]; then
     ### Apps
     /run/current-system/sw/bin/daemon /home/user/git/maxos/resources/greenclip daemon
     /run/current-system/sw/bin/daemon /run/current-system/sw/bin/copyq
-    /run/current-system/sw/bin/sleep 0.2
-    /run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40"
-    /run/current-system/sw/bin/sleep 0.2
+    #/run/current-system/sw/bin/daemon -X "/run/current-system/sw/bin/nvidia-settings -a GPUFanControlState=1 -a GPUTargetFanSpeed=40"
     /run/current-system/sw/bin/redshift -O 1900
     /run/current-system/sw/bin/sleep 0.2
     /run/current-system/sw/bin/daemon /etc/profiles/per-user/user/bin/firefox
@@ -58,7 +56,7 @@ if [[ `hostname` == "rig" ]]; then
     #  /etc/profiles/per-user/user/bin/i3-msg "workspace $WORKSPACE_NUM; append_layout $WORKSPACE_FILE"
     #done
 
-    /run/current-system/sw/bin/sleep 1
+    /run/current-system/sw/bin/sleep 2
 
     move_workspace "1" "DP-2"
     move_workspace "2:ls" "DP-2"
