@@ -85,6 +85,3 @@ echo "Launching dunst.."
 /run/current-system/sw/bin/pkill dunst
 /run/current-system/sw/bin/dunst &
 /run/current-system/sw/bin/antimicrox --tray &
-
-# input-leap
-/run/current-system/sw/bin/input-leaps -c /home/user/Data/nixos/input-leap.conf --disable-client-cert-checking

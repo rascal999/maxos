@@ -79,6 +79,25 @@
     };
   };
 
+  systemd.services.input-leaps = {
+    enable = true;
+    description = "input-leaps";
+
+    # Set the command to start your application
+    serviceConfig.ExecStart = "${pkgs.input-leap}/bin/input-leaps -c /home/user/Data/nixos/input-leap.conf --disable-client-cert-checking";
+
+    # Dependencies to ensure the service starts only when network is up
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+
+    # Optionally, set restart policies if needed
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+  };
+
   #systemd.services.ollama = {
   #  script = ''
   #    /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
