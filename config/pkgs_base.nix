@@ -4,6 +4,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (pkgs.writeShellScriptBin "qemu-system-x86_64-uefi" ''
+      qemu-system-x86_64 \
+        -bios ${pkgs.OVMF.fd}/FV/OVMF.fd \
+        "$@"
+    '')
     abootimg                                                                                             # Manipulate Android Boot Images
     #adreaper                                                                                             # Enumeration tool for Windows Active Directories
     afflib                                                                                               # Advanced forensic format library
