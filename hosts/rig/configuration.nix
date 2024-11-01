@@ -11,6 +11,7 @@
 
   # VirtualBox
   virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   hardware.nvidia-container-toolkit.enable = true;
   hardware.nvidia = {
