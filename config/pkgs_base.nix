@@ -306,6 +306,7 @@
     ostinato                                                                                             # A packet traffic generator and analyzer
     p0f                                                                                                  # Passive network reconnaissance and fingerprinting tool
     pandoc                                                                                               #
+    parted                                                                                               # Create, destroy, resize, check, and copy partitions
     pass                                                                                                 # Stores, retrieves, generates, and synchronizes passwords securely
     pavucontrol                                                                                          # PulseAudio Volume Control
     pdfgrep                                                                                              # Commandline utility to search text in PDF files
