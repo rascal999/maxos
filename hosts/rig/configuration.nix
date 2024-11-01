@@ -60,6 +60,25 @@
   # Point to localhost for Pi-hole
   networking.nameservers = [ "127.0.0.1" ];
 
+  systemd.services.wireproxy = {
+    enable = true;
+    description = "wireproxy";
+
+    # Set the command to start your application
+    serviceConfig.ExecStart = "${pkgs.wireproxy}/bin/wireproxy -c /home/user/Data/nixos/wireproxy.conf";
+
+    # Dependencies to ensure the service starts only when network is up
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+
+    # Optionally, set restart policies if needed
+    serviceConfig = {
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+  };
+
   #systemd.services.ollama = {
   #  script = ''
   #    /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
