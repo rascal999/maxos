@@ -129,6 +129,7 @@
     dockstarter                                                                                          # DockSTARTer helps you get started with running apps in Docker
     dontgo403                                                                                            # Tool to bypass 40X response codes
     doona                                                                                                # A fork of the Bruteforce Exploit Detector Tool (BED)
+    dosfstools                                                                                           # Utilities for creating and checking FAT and VFAT file systems
     dotnet-sdk                                                                                           # .NET SDK 6.0.406
     driftnet                                                                                             # Watches network traffic, and picks out and displays JPEG and GIF images for display
     drill                                                                                                # HTTP load testing application inspired by Ansible syntax
