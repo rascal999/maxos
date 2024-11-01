@@ -9,6 +9,9 @@
     enableNvidia = true;
   };
 
+  # VirtualBox
+  virtualisation.virtualbox.host.enable = true;
+
   hardware.nvidia-container-toolkit.enable = true;
   hardware.nvidia = {
     modesetting.enable = true;
