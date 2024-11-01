@@ -306,6 +306,7 @@
     openttd                                                                                              # Transport Tycoon Deluxe
     oshka                                                                                                # Tool for extracting nested CI/CD supply chains and executing commands
     ostinato                                                                                             # A packet traffic generator and analyzer
+    OVMF                                                                                                 # Sample UEFI firmware for QEMU and KVM
     p0f                                                                                                  # Passive network reconnaissance and fingerprinting tool
     pandoc                                                                                               #
     parted                                                                                               # Create, destroy, resize, check, and copy partitions
