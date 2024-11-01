@@ -15,7 +15,6 @@
 
       unbind C-b
       unbind [
-      unbind ]
 
       set -g prefix C-Space
       set -g mode-keys vi'';
