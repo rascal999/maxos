@@ -251,6 +251,7 @@
     libgcc        # GNU Compiler Collection, version 12.3.0
     libgccjit                                                                                            # GNU Compiler Collection
     libglibutil                                                                                          # Library of glib utilities
+    libisoburn                                                                                           # Enables creation and expansion of ISO-9660 filesystems on CD/DVD/BD
     logseq                                                                                               # Organize and share your personal knowledge base
     lynis                                                                                                # Security auditing tool for Linux, macOS, and UNIX-based systems
     j4-dmenu-desktop                                                                                     # A wrapper for dmenu that recognize .desktop files
