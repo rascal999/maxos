@@ -98,7 +98,7 @@
     };
 
     # Dependencies to ensure the service starts only when network is up
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["graphical-session.target"];
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
   };
