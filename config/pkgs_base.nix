@@ -479,6 +479,7 @@
     youtube-music                                                                                        # Electron wrapper around YouTube Music
     yq                                                                                                   # Command-line YAML/XML/TOML processor
     zap                                                                                                  # Java application for web penetration testing
+    zed-editor                                                                                           # High-performance, multiplayer code editor from the creators of Atom and Tree-sitter
     zeek                                                                                                 # Network analysis framework much different from a typical IDS
     zkar                                                                                                 # Java serialization protocol analysis tool
     zmap                                                                                                 # Fast single packet network scanner designed for Internet-wide network surveys
