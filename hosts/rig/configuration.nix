@@ -89,6 +89,7 @@
 
     # Set the command to start your application
     serviceConfig.ExecStart = "${pkgs.input-leap}/bin/input-leaps -c /home/user/Data/nixos/input-leap.conf --disable-client-cert-checking";
+    serviceConfig.Environment = "DISPLAY=:0";
 
     # Dependencies to ensure the service starts only when network is up
     wantedBy = [ "multi-user.target" ];
