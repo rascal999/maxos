@@ -7,6 +7,8 @@ fi
 
 #[[ -s "$HOME/.grc.zsh" ]] && source $HOME/.grc.zsh
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # Variables
 PORT_JUPYTER=8000
 PORT_IVRE=8010
