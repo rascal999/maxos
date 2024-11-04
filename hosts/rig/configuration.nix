@@ -101,12 +101,6 @@
     wantedBy = [ "multi-user.target" ];
     after = [ "network-online.target" ];
     wants = [ "network-online.target" ];
-
-    # Optionally, set restart policies if needed
-    serviceConfig = {
-      Restart = "on-failure";
-      RestartSec = 5;
-    };
   };
 
   #systemd.services.ollama = {
