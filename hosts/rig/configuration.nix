@@ -88,7 +88,7 @@
     description = "input-leaps";
 
     serviceConfig = {
-      ExecStart = "${pkgs.input-leap}/bin/input-leaps -c /home/user/Data/nixos/input-leap.conf --disable-client-cert-checking -d DEBUG2 -f";
+      ExecStart = "${pkgs.input-leap}/bin/input-leaps -c /home/user/Data/nixos/input-leap.conf --disable-client-cert-checking";
       Environment = [
         "DISPLAY=:0"
         "XAUTHORITY=/home/user/.Xauthority"
