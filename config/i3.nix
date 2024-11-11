@@ -59,7 +59,7 @@ in {
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec /home/user/git/maxos/scripts/earbuds.sh";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
-        "${mod}+space" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e JIRA_CLI=1";
+        "${mod}+space" = "exec /home/user/git/maxos/scripts/ai_helper.sh";
         "--release ${mod}+Shift+s" = "exec /home/user/git/maxos/scripts/screenshot.sh focused";
         "${mod}+Tab" = "exec i3-input -F 'move container to workspace %s' -P 'move: '";
 
