@@ -54,8 +54,8 @@ in {
         "Mod4+v" = "exec /home/user/git/maxos/scripts/clipboard.sh";
         "Mod4+x" = "exec /home/user/git/maxos/scripts/toggle_workspace.sh USB-C-0 vid zzz";
 
-        "${mod}+Return" = "exec /home/user/git/maxos/scripts/rofi-greenclip.sh";
-        "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi.sh";
+        "${mod}+Return" = "exec /home/user/git/maxos/scripts/rofi.sh";
+        "${mod}+Shift+Return" = "exec /home/user/git/maxos/scripts/rofi-greenclip.sh";
         "${mod}+grave" = "exec i3-input -F 'workspace %s' -P 'goto: '";
         "${mod}+a" = "exec /home/user/git/maxos/scripts/earbuds.sh";
         "${mod}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox -P \"YouTube\"";
