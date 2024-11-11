@@ -45,19 +45,19 @@ perform_search() {
 case "$SELECTED_COMMAND" in
     ai-ollama-pentest-issue)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Pentest issue")
-        perform_search "http://localhost:3000/?q=" "$SEARCH_QUERY"
+        /home/user/git/github/ai-helper/query_ollama.py --template pentest --query "$SEARCH_QUERY"
     ;;
     ai-ollama-explain-tech)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Explain tech")
-        perform_search "http://localhost:3000/?q=" "$SEARCH_QUERY"
+        /home/user/git/github/ai-helper/query_ollama.py --template explain_tech --query "$SEARCH_QUERY"
     ;;
     ai-ollama-summarise)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Summarise")
-        perform_search "http://localhost:3000/?q=" "$SEARCH_QUERY"
+        /home/user/git/github/ai-helper/query_ollama.py --template summarize --query "$SEARCH_QUERY"
     ;;
     ai-ollama-translate)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Translate")
-        perform_search "http://localhost:3000/?q=" "$SEARCH_QUERY"
+        /home/user/git/github/ai-helper/query_ollama.py --template translate --query "$SEARCH_QUERY"
     ;;
     amazon)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Amazon search")
