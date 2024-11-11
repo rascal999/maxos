@@ -47,7 +47,7 @@ case "$SELECTED_COMMAND" in
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Simple query")
         /home/user/git/github/ai-helper/query_ollama.py --template basic --query "$SEARCH_QUERY"
     ;;
-    ai-ollama-simple-query)
+    ai-ollama-pentest-title)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Pentest title")
         /home/user/git/github/ai-helper/query_ollama.py --template pentest_title --query "$SEARCH_QUERY"
     ;;
