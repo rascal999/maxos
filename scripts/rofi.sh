@@ -43,6 +43,10 @@ perform_search() {
 }
 
 case "$SELECTED_COMMAND" in
+    ai-ollama-simple-query)
+        SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Simple query")
+        /home/user/git/github/ai-helper/query_ollama.py --template basic --query "$SEARCH_QUERY"
+    ;;
     ai-ollama-pentest-issue)
         SEARCH_QUERY=$($ROFI_CMD -dmenu -p "Pentest issue")
         /home/user/git/github/ai-helper/query_ollama.py --template pentest --query "$SEARCH_QUERY"
