@@ -188,6 +188,7 @@
     gnupg                                                                                                # PHP wrapper for GpgME library that provides access to GnuPG
     go365                                                                                                # Office 365 enumeration tool
     gobuster                                                                                             # Tool used to brute-force URIs, DNS subdomains, Virtual Host names on target web servers
+    godot_4                                                                                              # Free and Open Source 2D and 3D game engine
     gokart                                                                                               # Static analysis tool for securing Go code
     gomapenum                                                                                            # Tools for user enumeration and password bruteforce
     goreplay                                                                                             # Open-source tool for capturing and replaying live HTTP traffic
