@@ -271,7 +271,7 @@
     mfoc                                                                                                 # Mifare Classic Offline Cracker
     mimeo                                                                                                # Open files by MIME-type or file name using regular expressions
     minikube                                                                                             # A tool that makes it easy to run Kubernetes locally
-    #mitmproxy                                                                                            # Man-in-the-middle proxy
+    mitmproxy                                                                                            # Man-in-the-middle proxy
     mkcert                                                                                               # A simple tool for making locally-trusted development certificates
     monero-gui                                                                                           # Private, secure, untraceable currency
     mongoaudit                                                                                           # MongoDB auditing and pentesting tool
