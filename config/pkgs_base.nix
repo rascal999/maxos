@@ -162,6 +162,7 @@
     firecracker                                                                                          # Secure, fast, minimal micro-container virtualization
     firectl                                                                                              # A command-line tool to run Firecracker microVMs
     firefox                                                                                              #
+    flac                                                                                                 # Library and tools for encoding and decoding the FLAC lossless audio file format
     flameshot                                                                                            # Powerful yet simple to use screenshot software
     flashrom                                                                                             # Utility for reading, writing, erasing and verifying flash ROM chips
     foremost                                                                                             # Recover files based on their contents
