@@ -7,6 +7,16 @@
   #================================================
 
   networking.hostName = "mac";
+
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+  services.openssh.settings.PermitRootLogin = "yes";
+
+
+  #================================================
+  #==================VIRTULIZATION===================
+  #================================================
+
   services.xserver.videoDrivers = [ "nvidia" ];
 
   # docker
@@ -18,17 +28,13 @@
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
-  hardware.nvidia-container-toolkit.enable = true;
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
-  };
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  services.openssh.settings.PermitRootLogin = "yes";
+  #hardware.nvidia-container-toolkit.enable = true;
+  #hardware.nvidia = {
+  #  modesetting.enable = true;
+  #  open = false;
+  #  nvidiaSettings = true;
+  #  package = config.boot.kernelPackages.nvidiaPackages.latest;
+  #};
 
 
   #================================================
@@ -38,25 +44,32 @@
 # Authorised keys
   users.users.user = {
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@rig"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@mac"
     ];
   };
 
-  # X11 / i3 / Login
-  services.libinput.enable = false;
 
-  services.displayManager = {
-    defaultSession = "none+i3";
-    autoLogin.enable = true;
-    autoLogin.user = "user";
-  };
+  #================================================
+  #==================DESKTOP-ENV===================
+  #================================================
 
-  services.xserver = {
+  # Enable the GNOME Desktop Environment.
+
+ # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
+
+  # X11 / i3 / Enable the GNOME Desktop Environment.
+  services = {
+    libinput.enable = false;
+   
+    xserver = {
     enable = true;
-    displayManager.lightdm.enable = true;
-    windowManager.i3.enable = true;
-
-    # Touchpad
+    #windowManager.i3.enable = true;
+    desktopManager.gnome.enable = true;
+    videoDrivers = [ "amdgpu" ]; #"radeon" "amdgpu" "nouveau" "nvidia" "modesetting"
+    
+  # Touchpads
     synaptics = {
       enable = true;
       vertTwoFingerScroll = true;
@@ -64,9 +77,28 @@
       minSpeed = "1.5";
     };
 
-    xkb.layout = "gb";
-    xkb.variant = "dvorakukp";
+    xkb = {
+       layout = "us";
+       variant = "";
+      }; 
+
+    };
+
+    displayManager = {
+      enable = true;
+      #sessionPackages = [ pkgs.sway ];
+      defaultSession = "gnome-xorg";
+      #gdm.wayland = false; 
+      autoLogin.enable = true;
+      autoLogin.user = "user";
+    };
+
   };
+
+
+  #================================================
+  #==================SERVICES===================
+  #================================================
 
   # WOL
   networking.interfaces.eno1.wakeOnLan.enable = true;
@@ -130,16 +162,16 @@
 
   # Enable cron service
   # /home/user/Data rsync for when syncthing fucks up
-  services.cron = {
-    enable = true;
-    systemCronJobs = [
-      "*/5 * * * *       user    /run/current-system/sw/bin/vdirsyncer sync"
-      "45 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/Data admin@192.168.0.254:/volume1/backup-data"
-      "50 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/work admin@192.168.0.254:/volume1/backup-data"
+  #services.cron = {
+  #  enable = true;
+  #  systemCronJobs = [
+  #    "*/5 * * * *       user    /run/current-system/sw/bin/vdirsyncer sync"
+  #    "45 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/Data admin@192.168.0.254:/volume1/backup-data"
+  #    "50 16 * * *       user    /run/current-system/sw/bin/rsync -av --progress /home/user/work admin@192.168.0.254:/volume1/backup-data"
       #"25 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
       #"55 * * * *        user    /etc/profiles/per-user/user/bin/twmnc -c '### Take a break ###'"
       #"0 16 * * *        root    /home/user/git/maxos/scripts/backup_plane.sh"
       #"5 16 * * *        root    /home/user/git/maxos/scripts/backup_data.sh"
-    ];
-  };
+   # ];
+  #};
 }
