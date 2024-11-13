@@ -1,7 +1,12 @@
 { config, pkgs, lib, ... }:
 
 {
-  networking.hostName = "rig";
+
+  #================================================
+  #==================NETWORKING===================
+  #================================================
+
+  networking.hostName = "mac";
   services.xserver.videoDrivers = [ "nvidia" ];
 
   # docker
@@ -25,7 +30,12 @@
   services.openssh.enable = true;
   services.openssh.settings.PermitRootLogin = "yes";
 
-  # Authorised keys
+
+  #================================================
+  #==================USER===================
+  #================================================  
+
+# Authorised keys
   users.users.user = {
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@rig"
