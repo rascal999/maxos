@@ -328,6 +328,7 @@
     #pip-audit                                                                                            # Tool for scanning Python environments for known vulnerabilities
     pixiewps                                                                                             # An offline WPS bruteforce utility
     popsicle                                                                                             # Multiple USB File Flasher
+    portaudio                                                                                            # Portable cross-platform Audio API
     postman                                                                                              # API Development Environment
     powershell                                                                                           # Powerful cross-platform (Windows, Linux, and macOS) shell and scripting language based on .NET
     putty                                                                                                # A Free Telnet/SSH Client
