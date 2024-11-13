@@ -3305,7 +3305,7 @@ if [[ ! -z "${NEW_CALENDAR_EVENT}" ]]; then
 fi
 
 if [[ ! -z "${JIRA_CLI}" ]]; then
-  cd /home/user/git/jira-cli
+  cd /home/user/git/github/jira-cli
   source .venv/bin/activate
 
   ./main.py
