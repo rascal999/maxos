@@ -1,0 +1,39 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "WhatsApp",
+    "percent": 0.5,
+    "swallows": [
+       {
+          "class": "^Chromium\\-browser$",
+          "title": "^Ollama$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "x": 0, 
+       "y": 0
+    },
+    "marks": [],
+    "name": "Slack",
+    "percent": 0.5,
+    "swallows": [
+       {
+          "class": "^Slack$"
+       }
+    ],
+    "type": "con"
+}

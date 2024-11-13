@@ -1,0 +1,105 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 700,
+               "width": 1044,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "mpv",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^mpv$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 700,
+               "width": 1044,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "mpv",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^mpv$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 700,
+               "width": 1044,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "mpv",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^mpv$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 700,
+               "width": 1044,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "mpv",
+            "percent": 0.5,
+            "swallows": [
+               {
+                  "class": "^mpv$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
