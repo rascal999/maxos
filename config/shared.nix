@@ -71,6 +71,22 @@
   # Enable sound.
   #sound.enable = true;
   #hardware.pulseaudio.enable = true;
+  # Enable sound with pipewire.
+  #sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  #security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
+  };
 
   hardware.enableAllFirmware = true;
 
@@ -87,6 +103,14 @@
       "vboxusers"
       "video"
       "wheel"
+      "flatpak"
+      "disk"
+      "qemu"
+      "sshd"
+      "networkmanager"
+      "audio"
+      "root"
+      "render"
     ];
     shell = pkgs.zsh;
     hashedPassword = "!";
@@ -115,7 +139,15 @@
   services.dnsmasq.enable = false;
 
   # Steam
-  #programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    gamescopeSession.enable = true;
+  };
+
+  programs.gamemode.enable = true;
 
   # List services that you want to enable:
   # Enable zsh
@@ -174,7 +206,7 @@
   # Firewall
   networking.firewall.enable = true;
   networking.firewall.allowedTCPPorts = [
-    22
+     22
     80
     443
     1337
@@ -193,12 +225,14 @@
     9020
     22000
     24800
+    25565
   ];
   networking.firewall.allowedUDPPorts = [
     53
     69
     21027
     22000
+    25565
   ];
 
   # k3s
@@ -211,10 +245,16 @@
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
+    #nvidia.acceptLicense = true;
     permittedInsecurePackages = [
       "electron-27.3.11"
       "python-2.7.18.6"
       "python-2.7.18.7"
+    ];
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+     "steam"
+     "steam-original"
+     "steam-run"
     ];
   };
 
@@ -285,6 +325,7 @@
   fonts.packages = with pkgs; [
     nerdfonts
     meslo-lgs-nf
+    terminus-nerdfont
   ];
 
   # hosts file
