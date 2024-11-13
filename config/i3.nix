@@ -90,7 +90,7 @@ in {
         #"${mod}+r" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux new-session -e REMOTEWORK=1";
         "--release ${mod}+s" = "exec /home/user/git/maxos/scripts/screenshot.sh";
         "${mod}+t" = "exec ${pkgs.alacritty}/bin/alacritty -o font.size=16 --config-file /home/user/.config/alacritty/alacritty.toml --command ${pkgs.tmux}/bin/tmux";
-        "${mod}+Shift+t" = "exec ${pkgs.qbittorrent}/bin/qbittorrent";
+        "${mod}+Shift+t" = "exec /home/user/git/maxos/scripts/keyboard_emulate_datetime.sh";
         "${mod}+u" = "fullscreen";
         "--release ${mod}+Shift+u" = "exec /home/user/git/maxos/scripts/uuid.sh";
         "${mod}+v" = "exec QT_SCALE_FACTOR=2.5 ${pkgs.vlc}/bin/vlc";
