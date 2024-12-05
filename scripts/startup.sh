@@ -2,27 +2,27 @@
 sleep 3
 
 # Update Firefox screenshots and tmp directory bookmark to today
-rm /home/user/screenshots_today
-rm /home/user/tmp_today
+#rm /home/user/screenshots_today
+#rm /home/user/tmp_today
 
-D_YEAR=`date "+%Y"`
-D_MONTH=`date "+%m"`
-D_DAY=`date "+%d"`
+#D_YEAR=`date "+%Y"`
+#D_MONTH=`date "+%m"`
+#D_DAY=`date "+%d"`
 
-mkdir -p /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/
-mkdir -p /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/
+#mkdir -p /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/
+#mkdir -p /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/
 
-ln -sf /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/screenshots_today
-ln -sf /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/tmp_today
+#ln -sf /home/user/screenshots/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/screenshots_today
+#ln -sf /home/user/work/tmp/${D_YEAR}/${D_MONTH}/${D_DAY}/ /home/user/tmp_today
 
 # Clone maxos
-/run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/maxos || /run/current-system/sw/bin/git -C ${HOME}/git/maxos pull
+#/run/current-system/sw/bin/git clone https://github.com/rascal999/maxos ${HOME}/git/maxos || /run/current-system/sw/bin/git -C ${HOME}/git/maxos pull
 
 # Jupyter templates
 mkdir -p ${HOME}/jupyter/pentest/base
 rm ${HOME}/jupyter/pentest/base/*.ipynb
 rm -rf ${HOME}/jupyter/pentest/base/tools
-cp ${HOME}/git/maxos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
+cp ${HOME}/nixos/resources/jupyter/pentest/*.ipynb ${HOME}/jupyter/pentest/base
 
 # Grafana Strava directory
 echo -n "Setting up Grafana directory.."
@@ -39,7 +39,7 @@ fi
 # Launch pi-hole
 PIHOLE_CHECK=`/run/current-system/sw/bin/docker ps -a -q -f name=pihole | /run/current-system/sw/bin/choose 0`
 if [[ "$PIHOLE_CHECK" == "" ]]; then
-  /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/pi-hole/docker-compose.yml up -d
+  /run/current-system/sw/bin/docker-compose -f /home/user/nixos/resources/docker/pi-hole/docker-compose.yml up -d
 fi
 
 PLANE_RUNNING=`docker ps -a | grep plane-worker | wc -l`
@@ -48,7 +48,7 @@ PLANE_RUNNING=`docker ps -a | grep plane-worker | wc -l`
 if [[ "$PLANE_RUNNING" -eq "0" ]]; then
     echo "Starting plane.."
 
-    cd /home/user/git/maxos/repos/misc/plane
+    cd /home/user/nixos/repos/misc/plane
     chmod +x setup.sh
 
     # Bug fix
@@ -56,7 +56,7 @@ if [[ "$PLANE_RUNNING" -eq "0" ]]; then
 
     ./setup.sh http://localhost
     set -a
-    source /home/user/git/maxos/repos/misc/plane/.env
+    source /home/user/nixos/repos/misc/plane/.env
     set +a
     docker compose up -d
 fi
@@ -76,10 +76,10 @@ fi
 # Run (if secret OpenAI key present)
 # TODO
 
-echo -n "Placing VPN profiles.."
-rm -rf ${HOME}/vpn || true
-/run/current-system/sw/bin/unzip -q /etc/vpn-mullvad -d ${HOME}/vpn || true
-echo "Done"
+#echo -n "Placing VPN profiles.."
+#rm -rf ${HOME}/vpn || true
+#/run/current-system/sw/bin/unzip -q /etc/vpn-mullvad -d ${HOME}/vpn || true
+#echo "Done"
 
 echo "Launching dunst.."
 /run/current-system/sw/bin/pkill dunst

@@ -18,19 +18,21 @@
   home.sessionVariables = {
     ZSH_COLORIZE_STYLE = "vim";
     EDITOR = "vim";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
 
   home.file = {
-    ".config/alacritty/alacritty.toml".source = ../../config/alacritty/alacritty.toml;
-    ".config/dashy/conf.yml".source = ../../config/dashy/conf.yml;
-    ".config/nginx/mime.types".source = ../../resources/nginx/mime.types;
-    ".config/dunst/dunstrc".source = ./dunst/dunstrc;
-    ".config/mpv/mpv.conf".source = ../../config/mpv/mpv.conf;
-    ".mime.types".source = ../../config/firefox/mime.types;
-    ".privatebin/conf/conf.php".source = ../../config/privatebin/conf.php;
-    #".profile".source = ./config/profile;
-    ".startup.sh".source = ../../scripts/startup.sh;
-    ".vimrc".source = ../../config/vimrc.nix;
+    "config/alacritty/alacritty.toml".source = ../../config/alacritty/alacritty.toml;
+    "config/dashy/conf.yml".source = ../../config/dashy/conf.yml;
+    "config/nginx/mime.types".source = ../../resources/nginx/mime.types;
+    "config/dunst/dunstrc".source = ../../config/dunst/dunstrc;
+    "config/mpv/mpv.conf".source = ../../config/mpv/mpv.conf;
+    "mime.types".source = ../../config/firefox/mime.types;
+    "privatebin/conf/conf.php".source = ../../config/privatebin/conf.php;
+    "profile".source = ../../config/profile;
+    "startup.sh".source = ../../scripts/startup.sh;
+    "vimrc.nix".source = ../../config/vimrc.nix;
+    ".Xmodmap".source = ../../config/Xmodmap;
   };
 
   # This value determines the Home Manager release that your
@@ -48,7 +50,7 @@
 
   programs.rofi.enable = true;
   programs.rofi.plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ];
-  programs.rofi.theme = "/home/user/git/maxos/resources/rofi/theme";
+  programs.rofi.theme = "/home/user/nixos/resources/rofi/theme";
 
   # Stop screen timeout
   services.screen-locker.xss-lock.screensaverCycle = 0;

@@ -4,7 +4,7 @@ sleep 1
 
 # Text to type
 CURRENT_DT=`date +"%Y-%m-%d %H:%M:%S%z"`
-text="$CURRENT_DT"
+text="[$CURRENT_DT]"
 
 # Delay between keystrokes (in seconds)
 delay=0.01

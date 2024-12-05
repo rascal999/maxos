@@ -16,7 +16,7 @@ let
     pytest
     python-dotenv
     python-gitlab
-    #requests
+    requests
     scapy
     selenium
     setuptools

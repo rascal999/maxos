@@ -17,12 +17,16 @@
   #==================VIRTULIZATION===================
   #================================================
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
   # docker
-  virtualisation.docker = {
-    enableNvidia = true;
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
   };
+
+  users.extraGroups.docker.members = [ "user" ];
+
+  # podman
+  #virtualisation.podman.enable = true;
 
   # VirtualBox
   virtualisation.virtualbox.host.enable = true;
@@ -37,6 +41,7 @@
   #};
 
 
+
   #================================================
   #==================USER===================
   #================================================  
@@ -44,7 +49,7 @@
 # Authorised keys
   users.users.user = {
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBEHhsgw+RqLwv8HjBuC5hNpfc+KTBUypsK8yw1Ay4XP user@mac"
+      "ssh-dss $6$nmS2y4fmvuj8tfQY$uz2Ndekr9wfOXCJXgVLsLKYMs1Ub0OYlWxKxojgv6PpZaPt1puu034glTCFokjoqfc0QBTMpXDpKS4ok390YU. user@mac"
     ];
   };
 
@@ -65,9 +70,9 @@
    
     xserver = {
     enable = true;
-    #windowManager.i3.enable = true;
+    windowManager.i3.enable = true;
     desktopManager.gnome.enable = true;
-    videoDrivers = [ "amdgpu" ]; #"radeon" "amdgpu" "nouveau" "nvidia" "modesetting"
+    videoDrivers = [  ]; #"radeon" "amdgpu" "nouveau" "nvidia" "modesetting"
     
   # Touchpads
     synaptics = {
@@ -101,17 +106,17 @@
   #================================================
 
   # WOL
-  #networking.interfaces.eno1.wakeOnLan.enable = true;
+  networking.interfaces.eno1.wakeOnLan.enable = true;
 
   # Point to localhost for Pi-hole
-  networking.nameservers = [ "127.0.0.1" ];
+  #networking.nameservers = [ "127.0.0.1" ];
 
   systemd.services.wireproxy = {
     enable = false;
     description = "wireproxy";
 
     # Set the command to start your application
-    serviceConfig.ExecStart = "${pkgs.wireproxy}/bin/wireproxy -c /home/user/Data/nixos/wireproxy.conf";
+    #serviceConfig.ExecStart = "${pkgs.wireproxy}/bin/wireproxy -c /home/user/Data/nixos/wireproxy.conf";
 
     # Dependencies to ensure the service starts only when network is up
     wantedBy = [ "multi-user.target" ];
@@ -147,7 +152,7 @@
 
   #systemd.services.ollama = {
   #  script = ''
-  #    /run/current-system/sw/bin/docker-compose -f /home/user/git/maxos/resources/docker/ollama/docker-compose.yml up -d
+  #    /run/current-system/sw/bin/docker-compose -f /home/user/nixos/resources/docker/ollama/docker-compose.yml up -d
   #  '';
   #  wantedBy = ["multi-user.target"];
   #  # If you use podman

@@ -28,11 +28,11 @@
     ".config/mpv/mpv.conf".source = ./config/mpv/mpv.conf;
     ".mime.types".source = ./config/firefox/mime.types;
     ".privatebin/conf/conf.php".source = ./config/privatebin/conf.php;
-    #".profile".source = ./config/profile;
+    ".profile".source = ./config/profile;
     ".startup.sh".source = ./scripts/startup.sh;
     ".vimrc".source = ./config/vimrc.nix;
-    #".Xmodmap".source = ./config/Xmodmap;
-    #".config/twmn/twmn.conf".source = ./config/twmn.conf;
+    ".Xmodmap".source = ./config/Xmodmap;
+    ".config/twmn/twmn.conf".source = ./config/twmn.conf;
   };
 
   # This value determines the Home Manager release that your

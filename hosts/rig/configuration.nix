@@ -65,7 +65,7 @@
   networking.nameservers = [ "127.0.0.1" ];
 
   systemd.services.wireproxy = {
-    enable = true;
+    enable = false;
     description = "wireproxy";
 
     # Set the command to start your application

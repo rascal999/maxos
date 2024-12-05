@@ -8,17 +8,27 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "ahci" "thunderbolt" "xhci_pci" "usbhid" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ]; #"nvme" "ahci" "thunderbolt" "xhci_pci" "usbhid"
+  boot.initrd.kernelModules = [ ]; # "amdgpu"
   boot.kernelModules = [ "kvm-intel" ]; #"kvm-amd"
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/ecb57bd8-b225-468c-b450-a7231a5e7774";
+  fileSystems."/etc" =
+    { device = "/dev/disk/by-uuid/492973ee-5b95-424f-980f-30aea5569245";
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/0c01e360-b7aa-4d3a-9b86-495f9188f43f";
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/88e0c4ac-0f6c-43f8-bbdb-b6e438d36d9b";
+      fsType = "ext4";
+    };
+
+  fileSystems."/var" =
+    { device = "/dev/disk/by-uuid/1712bfb4-4e6e-a890-dc21ce5e5c38";
+      fsType = "ext4";
+    };
+
+  #boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/ecb57bd8-b225-468c-b450-a7231a5e7774";
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/47D8-B3D4";
@@ -58,5 +68,6 @@
   # networking.interfaces.vethe84d059.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

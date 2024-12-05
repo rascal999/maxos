@@ -71,10 +71,8 @@
 
   # Enable sound.
   #sound.enable = true;
-  #hardware.pulseaudio.enable = true;
-  # Enable sound with pipewire.
-  #sound.enable = true;
   hardware.pulseaudio.enable = false;
+  # Enable sound with pipewire.
   #security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -114,7 +112,8 @@
       "render"
     ];
     shell = pkgs.zsh;
-    hashedPassword = "!";
+    #hashedPassword = "$6$nmS2y4fmvuj8tfQY$uz2Ndekr9wfOXCJXgVLsLKYMs1Ub0OYlWxKxojgv6PpZaPt1puu034glTCFokjoqfc0QBTMpXDpKS4ok390YU.";
+    openssh.authorizedKeys.keys = [ "ssh-dss $6$nmS2y4fmvuj8tfQY$uz2Ndekr9wfOXCJXgVLsLKYMs1Ub0OYlWxKxojgv6PpZaPt1puu034glTCFokjoqfc0QBTMpXDpKS4ok390YU. user@mac" ];
   };
 
   # For at command
@@ -151,6 +150,13 @@
   programs.gamemode.enable = true;
 
   # List services that you want to enable:
+
+  programs.git.config = {
+    http.version = "HTTP/1.1";
+    http.postBuffer = "524288000";
+    core.compression = "0";
+  };
+ 
   # Enable zsh
   programs.zsh.enable = true;
 
@@ -163,7 +169,7 @@
   security.sudo.wheelNeedsPassword = false;
 
   # Flakes
-  #nix.package = pkgs.nixUnstable;
+  #nix.package = pkgs.nixVersion.latest;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
@@ -192,9 +198,9 @@
       Enable = "Source,Sink,Media,Socket";
     };
   };
-  hardware.pulseaudio.extraConfig = "
-    load-module module-switch-on-connect
-  ";
+  #hardware.pulseaudio.extraConfig = "
+  #  load-module module-switch-on-connect
+  #";
   fileSystems."/var/lib/bluetooth" = {
     device = "/persist/var/lib/bluetooth";
     options = [ "bind" "noauto" "x-systemd.automount" ];
@@ -251,6 +257,9 @@
       "electron-27.3.11"
       "python-2.7.18.6"
       "python-2.7.18.7"
+      "python-2.7.18.8"
+      "xpdf-4.04"
+      "python3.12-youtube-dl-2021.12.17"
     ];
     allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
      "steam"
@@ -260,11 +269,11 @@
   };
 
   # docker
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
-    liveRestore = false;
-  };
+  #virtualisation.docker = {
+  #  enable = true;
+  #  enableOnBoot = true;
+  #  liveRestore = false;
+  #};
 
   # Jupyter
   services.jupyter = {
@@ -288,21 +297,37 @@
   };
 
   # virt-manager
-  virtualisation.libvirtd.enable = true;
+  #virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
   systemd.services.NetworkManager-wait-online.enable = false;
 
   systemd.services.startupTasks = {
     wantedBy = [ "multi-user.target" ];
-    #after = [ "network-online.target" ];
+    after = [ "network-online.target" ];
     description = "Extra tasks";
-    script = "/home/user/.startup.sh";
+    script = "/home/user/nixos/scripts/startup.sh";
     serviceConfig = {
       Type = "oneshot";
       User = "user";
     };
   };
+
+    # Virtualisation
+  environment.sessionVariables.LIBVIRT_DEFAULT_URI = [ "qemu:///system" ];
+  virtualisation = {
+    virtualbox.host.enable = true;
+    #vmware.host.enable = true;
+
+    # QEMU
+    libvirtd = {
+      enable = true;
+      qemu.ovmf.enable = true;
+      qemu.swtpm.enable = true;
+      qemu.ovmf.packages = [ pkgs.OVMFFull ];
+    };
+  };
+
 
   xdg.mime.defaultApplications = {
     "application/pdf" = "firefox.desktop";

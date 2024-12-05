@@ -1,4 +1,9 @@
 {
+
+  #================================================
+  #==================FLAKE-REPOS===================
+  #================================================    
+
   description = "NixOS configuration";
 
   inputs = {
@@ -15,6 +20,11 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+      #nix-gaming = {
+  #     url = "github:fufexan/nix-gaming";
+  #     inputs.nixpkgs.follows = "nixpkgs";
+  #  };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, agenix, ... }:
@@ -22,6 +32,11 @@
     system = "x86_64-linux";
 
     lib = nixpkgs.lib;
+
+
+  #================================================
+  #==============FLAKE-CLASS-CONFIG================
+  #================================================    
 
     minimalConfigSettings = [
       #agenix.nixosModule
@@ -47,6 +62,14 @@
         home-manager.useUserPackages = true;
       }
     ];
+
+
+  #================================================
+  #===========INDIVIDUAL-FLAKE-CONFIG==============
+  #================================================  
+
+
+
   in {
     nixosConfigurations = {
       ### RIG
@@ -70,8 +93,31 @@
             ];
           })
         ];
-      };
+      };  
 
+      ### MAC
+      mac = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = configSettings ++ [
+          ./config/docker.nix
+          ./config/grub.nix
+          ./config/pkgs_additional.nix
+          ./config/pkgs_base.nix
+          ./config/pkgs_ui.nix
+          #./config/secrets.nix
+          #./config/syncthing.nix
+          ./hosts/mac/configuration.nix
+          ./hosts/mac/hardware-configuration.nix
+
+          ({ pkgs, ... }: {
+            home-manager.users.user.imports = [
+              ./hosts/mac/home.nix
+          ##    ./hosts/mac/i3/i3.nix
+            ];
+          })
+        ];
+      };
+      
       ### PAV
       pav = nixpkgs.lib.nixosSystem {
         inherit system;

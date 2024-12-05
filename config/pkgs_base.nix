@@ -91,7 +91,7 @@
     clockify                                                                                             # Free time tracker and timesheet app that lets you track work hours across projects
     cloudbrute                                                                                           # Cloud enumeration tool
     cloudlist                                                                                            # Tool for listing assets from multiple cloud providers
-    codeql                                                                                               # Semantic code analysis engine
+    #codeql                                                                                               # Semantic code analysis engine
     conda                                                                                                # Conda is a package manager for Python
     connman                                                                                              #
     connman-gtk                                                                                          # GTK GUI for Connman
@@ -215,6 +215,7 @@
     honeytrap                                                                                            # Advanced Honeypot framework
     honggfuzz                                                                                            #
     horst                                                                                                # Small and lightweight IEEE802.11 wireless LAN analyzer with a text interface
+  
     #httpdump                                                                                             # Parse and display HTTP traffic from network device or pcap file
     httptunnel                                                                                           # Creates a bidirectional virtual data connection tunnelled in HTTP requests
     httpx                                                                                                # Fast and multi-purpose HTTP toolkit
@@ -271,6 +272,7 @@
     mfcuk                                                                                                # MiFare Classic Universal toolKit
     mfoc                                                                                                 # Mifare Classic Offline Cracker
     mimeo                                                                                                # Open files by MIME-type or file name using regular expressions
+    minecraft
     minikube                                                                                             # A tool that makes it easy to run Kubernetes locally
     mitmproxy                                                                                            # Man-in-the-middle proxy
     mkcert                                                                                               # A simple tool for making locally-trusted development certificates

@@ -1,3 +1,115 @@
+# How?
+Folow these instructions to install this OS on a baremetal install. (VM and other install methods just use rascal999/maxos repo and instructions).
+
+The main steps to the install:
+
+1. Install NixOS on system. Bootable USB preferred.
+2. Pull/Download the nixos configuration file.
+3. Download resource files and submodules
+4. Change configure files to reflect your hardware and memory configurations.
+5. Use nixos-rebuild to switch to system to the flake of your choice.
+
+Create a NixOS USB bootable install.
+Follow steps on USB for new install. 
+(I have had problems with warnings and erros during install of no BSD while doing custom install options. We will have the option of adding/changing files, disks, and partions later.)
+
+If you are not familiar or want to get up and running asap set [User-name] to "user" and [Password] to "#1pass" during your USB install.
+
+If you set [User-name] and [Password] to different values during the USB or inital install. 
+The system login will be set to these values until you switch to the final flake configuration. 
+
+If you know how to set user names and passwords in flakes. Then make sure to update them in the shared.nix file.
+
+After the "final" flake switch the login values will be set to [User-name] = user and [Password] = #1pass.
+
+Or you can learn about the hashed password setup below. [User-name] will also need to be changed within the nixos/shared.nix file (If the [User-name] is not "user").
+To change the [User-name] and [Password] 
+
+https://nlewo.github.io/nixos-manual-sphinx/configuration/user-mgmt.xml.html
+
+https://discourse.nixos.org/t/mkpasswd-m-sha-512-password/23785
+
+Install the system on the largest drive. (We can always move later using the hardware-configuration.nix settings)
+
+
+
+Now we have a fresh install complete with missing tools. Let's install those tools.
+When the install is complete run:
+```
+sudo nix-env --install git docker wget vscodium firefox
+```
+We will need to fully implament these tools within our current nixos build.
+Add the below settings to configuration.nix [Location etc/nixos]:
+```
+#docker
+virtualization.docker.rootless = {
+  enable = true;
+  setSocketVariable = true;
+};
+
+users.extraGroups.docker.members = [ "(user-name)" ]
+```
+In the configuration.nix file add "docker" to the setting "extraGroups = [ "networkmanager" "wheel" ];
+```
+extraGroups = [ "networkmanager" "wheel" "docker" ];
+```
+
+Time to update our current nixos build to include rootless docker.
+Run
+```
+sudo nixos-rebuild switch
+sudo dockerd (may need restart)
+```
+
+
+We need to download some large and old files from git. Let's do some prep.
+```
+git config --global http.version HTTP/1.1
+git config --globalcore.compression 0
+git config --global http.post Buffer 524288000
+```
+Set your sign-in creds for git and docker using the console.
+
+After your sign-in information is set. Let's start getting our nixos system files.
+Run:
+```
+git clone https://github.com/MasterofNull/nixos.git
+```
+
+We also need to copy some scripts into another file location and make them executable. To help download and setup some of our tools.
+```
+cp nixos/scripts/resources.sh nixos/resources/resources.sh
+cp nixos/scripts/20230109_submodules.sh nixos/repos/20230109_submodules.sh
+chmod +x nixos/resources/resources.sh
+chmod +x nixos/repos/20230109_submodules.sh
+./nixos/resources/resources.sh -abf
+./nixos/repos/20230109_submodules.sh
+```
+
+While those are downloading and before we switch into our new configuration we need a few more files and setup.
+Copy the filesystem and device settings from etc/nixos/hardware-configuration.nix to nixos/hosts/(host-of-choice)/hardware-configuration.nix
+
+Make sure your CPU and GPU settings are set correctly for your specific hardware. 
+Settings for CPU and GPU are set in these files: 
+
+nixos/config/shared.nix nixos/hosts/(host-of-choice)/configuration.nix and hardware-configuration.nix
+
+You can compare the above settings/files with the auto-generated config from the inital install.
+
+Which can be found at: etc/nixos/configuration.nix and etc/nixos/hardware-configuration.nix
+
+If all that has worked out well.
+Run:
+
+```
+cd nixos/
+sudo nixos-rebuild --flake .#(host-name) --impure switch
+```
+
+I will be adding some CPU and GPU specific flakes soon. For most laptops and PC's we are dealing with Intel or AMD CPU's with AMD or NVIDIA GPU 
+
+Hopefully I will get around to some ARM builds soon. 
+
 > Give me six hours to chop down a tree and I will spend the first four sharpening the ax.
 
 Abraham Lincoln
