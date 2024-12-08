@@ -100,6 +100,7 @@ Which can be found at: etc/nixos/configuration.nix and etc/nixos/hardware-config
 
 If all that has worked out well.
 Run:
+Note: Replace HOST-NAME with falke names set within the flakes.nix. (Examples: mac, rog, iso, rig)
 
 ```
 cd nixos/
