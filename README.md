@@ -103,7 +103,7 @@ Run:
 
 ```
 cd nixos/
-sudo nixos-rebuild --flake .#(host-name) --impure switch
+sudo nixos-rebuild --flake .#HOST-NAME --impure switch
 ```
 
 I will be adding some CPU and GPU specific flakes soon. For most laptops and PC's we are dealing with Intel or AMD CPU's with AMD or NVIDIA GPU 
