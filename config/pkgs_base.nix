@@ -456,6 +456,7 @@
     wayvnc                                                                                               # A VNC server for wlroots based Wayland compositors
     wbox                                                                                                 # A simple HTTP benchmarking tool
     welle-io                                                                                             # A DAB/DAB+ Software Radio
+    wfuzz                                                                                                # Web content fuzzer to facilitate web applications assessments
     whispers                                                                                             # Tool to identify hardcoded secrets in static structured text
     wifite2                                                                                              # Rewrite of the popular wireless network auditor, wifite
     win-virtio                                                                                           # Windows VirtIO Drivers
