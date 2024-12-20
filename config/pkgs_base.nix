@@ -332,6 +332,7 @@
     portaudio                                                                                            # Portable cross-platform Audio API
     postman                                                                                              # API Development Environment
     powershell                                                                                           # Powerful cross-platform (Windows, Linux, and macOS) shell and scripting language based on .NET
+    proxychains                                                                                          # Proxifier for SOCKS proxies
     putty                                                                                                # A Free Telnet/SSH Client
     pwnat                                                                                                # ICMP NAT to NAT client-server communication
     pwndbg                                                                                               # Exploit Development and Reverse Engineering with GDB Made Easy
