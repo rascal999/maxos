@@ -12,21 +12,29 @@ Simple and secure backup system that creates encrypted archives of directories a
 - Timestamped backups
 - Automatic cleanup of old Google Drive backups (keeps last 10)
 
+## Requirements
+
+NixOS configuration must provide:
+
+1. /etc/backup-info:
+   - Contains backup configuration settings
+   - See backup-info.example for template
+   - Permissions should be 644 (root write, all read)
+
+2. /etc/credentials-backup:
+   - Contains the encryption passphrase
+   - Permissions should be 600 (root read/write only)
+
 ## Setup
 
-1. Run the setup script:
+1. Configure NixOS:
+   - Use backup-info.example as a template for /etc/backup-info
+   - Set up /etc/credentials-backup with encryption passphrase
+
+2. Run the setup script to verify configuration:
    ```bash
    ./setup.sh
    ```
-   This will:
-   - Create /etc/backup-info from example
-   - Set up encryption passphrase
-   - Check for required tools
-
-2. Edit /etc/backup-info to configure:
-   - Source directory to backup
-   - SSH server details
-   - Google Drive folder name
 
 3. For Google Drive backups:
    - Install rclone
@@ -46,16 +54,29 @@ For Google Drive backup:
 
 ## Recovery
 
-To recover files from a backup:
+To recover files from a backup, you'll need:
+1. The backup file (ends in .tar.gz.gpg)
+2. The encryption passphrase from /etc/credentials-backup
 
-1. Copy the backup file (ends in .tar.gz.gpg)
-2. Decrypt the backup:
+Recovery steps:
+1. Copy the backup file to your recovery location
+2. Create a file containing your backup passphrase:
    ```bash
-   gpg --decrypt backup_TIMESTAMP.tar.gz.gpg > backup_TIMESTAMP.tar.gz
+   sudo cp /etc/credentials-backup /tmp/backup-key
+   sudo chmod 600 /tmp/backup-key
    ```
-3. Extract the archive:
+3. Decrypt the backup:
+   ```bash
+   gpg --decrypt --batch --yes --passphrase-file /tmp/backup-key \
+       backup_TIMESTAMP.tar.gz.gpg > backup_TIMESTAMP.tar.gz
+   ```
+4. Extract the archive:
    ```bash
    tar xzf backup_TIMESTAMP.tar.gz
    ```
+5. Clean up:
+   ```bash
+   rm /tmp/backup-key
+   ```
 
-Keep your encryption passphrase safe - it's required to decrypt backups!
+IMPORTANT: Both configuration files (/etc/backup-info and /etc/credentials-backup) are managed by NixOS configuration. Make sure to keep your NixOS configuration backed up securely as it's required to decrypt backups!

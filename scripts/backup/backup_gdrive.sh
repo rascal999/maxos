@@ -10,6 +10,12 @@ if [ ! -f /etc/backup-info ]; then
     exit 1
 fi
 
+if [ ! -f /etc/credentials-backup ]; then
+    echo "Error: /etc/credentials-backup not found"
+    echo "Please run setup.sh to configure backup encryption"
+    exit 1
+fi
+
 source /etc/backup-info
 TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -37,7 +43,7 @@ tar -czf "${TEMP_DIR}/backup_${TIMESTAMP}.tar.gz" "$(basename "${SOURCE_PATH}")"
 
 # Encrypt the archive
 echo "Encrypting archive..."
-gpg --symmetric --batch --yes --passphrase-file "${SCRIPT_DIR}/passphrase" \
+gpg --symmetric --batch --yes --passphrase-file /etc/credentials-backup \
     --cipher-algo AES256 \
     --output "${TEMP_DIR}/backup_${TIMESTAMP}.tar.gz.gpg" \
     "${TEMP_DIR}/backup_${TIMESTAMP}.tar.gz"

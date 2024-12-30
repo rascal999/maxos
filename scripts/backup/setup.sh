@@ -3,20 +3,17 @@
 # Exit on error
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Copy example config if /etc/backup-info doesn't exist
+# Check for required files
 if [ ! -f /etc/backup-info ]; then
-    echo "Creating /etc/backup-info from example..."
-    if [ -w /etc ]; then
-        cp "${SCRIPT_DIR}/backup-info.example" /etc/backup-info
-    else
-        echo "Need sudo to copy backup-info to /etc"
-        sudo cp "${SCRIPT_DIR}/backup-info.example" /etc/backup-info
-        sudo chown root:root /etc/backup-info
-        sudo chmod 644 /etc/backup-info
-    fi
-    echo "Please edit /etc/backup-info to configure your backup settings"
+    echo "Error: /etc/backup-info not found"
+    echo "This file should be managed by NixOS configuration"
+    exit 1
+fi
+
+if [ ! -f /etc/credentials-backup ]; then
+    echo "Error: /etc/credentials-backup not found"
+    echo "This file should be managed by NixOS configuration"
+    exit 1
 fi
 
 # Load configuration
@@ -37,26 +34,6 @@ else
         echo "Note: Google Drive remote not configured in rclone"
         echo "To enable Google Drive backups, run 'rclone config' and set up 'gdrive' remote"
     fi
-fi
-
-# Create passphrase file with secure permissions
-if [ ! -f "${SCRIPT_DIR}/passphrase" ]; then
-    echo "Setting up backup encryption..."
-    read -s -p "Enter passphrase for backup encryption: " passphrase
-    echo
-    read -s -p "Confirm passphrase: " passphrase2
-    echo
-    
-    if [ "$passphrase" != "$passphrase2" ]; then
-        echo "Error: Passphrases do not match"
-        exit 1
-    fi
-    
-    echo "$passphrase" > "${SCRIPT_DIR}/passphrase"
-    chmod 600 "${SCRIPT_DIR}/passphrase"
-    echo "Backup encryption configured successfully"
-else
-    echo "Backup encryption already configured"
 fi
 
 echo "Backup system setup complete"

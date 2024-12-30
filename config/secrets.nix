@@ -28,6 +28,9 @@
     api-virustotal = {
       file = ../secrets/api-virustotal.age;
     };
+    backup-info = {
+      file = ../secrets/backup-info.age;
+    };
     credentials-backup = {
       file = ../secrets/credentials-backup.age;
     };
