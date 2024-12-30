@@ -29,7 +29,7 @@
       file = ../secrets/api-virustotal.age;
     };
     credentials-backup = {
-      file = ../secrets/credentials-google.age;
+      file = ../secrets/credentials-backup.age;
     };
     credentials-google = {
       file = ../secrets/credentials-google.age;
