@@ -1,0 +1,10 @@
+# Directory to backup
+SOURCE_PATH="/home/user/Data"
+
+# SSH backup settings
+REMOTE_USER="admin"
+REMOTE_HOST="192.168.0.254"
+REMOTE_PATH="/volume1/syncthing-data/data"
+
+# Google Drive backup settings
+GDRIVE_FOLDER="backups"  # Folder in Google Drive to store backups

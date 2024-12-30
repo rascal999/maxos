@@ -28,6 +28,9 @@
     api-virustotal = {
       file = ../secrets/api-virustotal.age;
     };
+    credentials-backup = {
+      file = ../secrets/credentials-google.age;
+    };
     credentials-google = {
       file = ../secrets/credentials-google.age;
     };
@@ -95,6 +98,11 @@
     api-virustotal =
     {
       source = config.age.secrets.api-virustotal.path;
+      mode = "0444";
+    };
+    credentials-backup =
+    {
+      source = config.age.secrets.credentials-backup.path;
       mode = "0444";
     };
     credentials-google =
