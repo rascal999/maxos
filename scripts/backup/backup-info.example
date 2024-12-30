@@ -13,5 +13,5 @@ REMOTE_HOST=""
 REMOTE_PATH=""
 
 # Google Drive backup settings
-# Example: GDRIVE_FOLDER="backups"
-GDRIVE_FOLDER=""
+# GDRIVE_FOLDER="backups"  # Folder in Google Drive to store backups (must be "backups")
+GDRIVE_FOLDER="backups"
