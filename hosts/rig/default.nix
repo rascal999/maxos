@@ -165,6 +165,9 @@
 
   # Enable sshpass for scripted SSH password auth
   maxos.tools.sshpass.enable = true;
+
+  # Enable dislocker for BitLocker volumes (dual-boot Windows)
+  maxos.tools.dislocker.enable = true;
   
   # Enable TeamViewer for remote access
   maxos.tools.teamviewer.enable = true;

@@ -207,6 +207,9 @@
 
     # Enable sshpass for scripted SSH password auth
     sshpass.enable = true;
+
+    # Enable dislocker for BitLocker volumes (dual-boot Windows)
+    dislocker.enable = true;
     
     # Enable Firecracker microVM virtualization
     firecracker = {

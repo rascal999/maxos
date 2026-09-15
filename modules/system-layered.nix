@@ -108,6 +108,7 @@
     ./04-applications/system/tools/security/crypto/git-crypt.nix
     ./04-applications/system/tools/security/crypto/keepassxc.nix
     ./04-applications/system/tools/security/crypto/openssl.nix
+    ./04-applications/system/tools/security/crypto/dislocker.nix
     ./04-applications/system/tools/security/scanners/gitleaks.nix
     ./04-applications/system/tools/security/scanners/grype.nix
     ./04-applications/system/tools/security/scanners/semgrep.nix
