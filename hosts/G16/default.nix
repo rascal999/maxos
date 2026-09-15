@@ -243,6 +243,9 @@
     # Disable ollama on G16
     ollama.enable = lib.mkForce false;
     open-webui.enable = lib.mkForce false;
+
+    # Disable Grafana docker container and its boot service on G16
+    grafana.enable = lib.mkForce false;
     
     # Disable llama-cpp on G16
     llama-cpp.enable = lib.mkForce false;
