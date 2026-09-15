@@ -186,6 +186,9 @@
     karate.enable = true;
     argocd.enable = lib.mkForce false;
     terraform.enable = lib.mkForce false;
+
+    # Enable Packer for machine image builds
+    packer.enable = true;
     
     # Enable iSCSI storage support
     open-iscsi.enable = true;
@@ -201,6 +204,9 @@
     
     # Enable AutoSSH for persistent SSH tunnels
     autossh.enable = true;
+
+    # Enable sshpass for scripted SSH password auth
+    sshpass.enable = true;
     
     # Enable Firecracker microVM virtualization
     firecracker = {

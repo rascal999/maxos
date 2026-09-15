@@ -83,6 +83,7 @@
     ./04-applications/system/tools/infrastructure/cloud/flyctl.nix
     ./04-applications/system/tools/infrastructure/cloud/google-cloud-sdk.nix
     ./04-applications/system/tools/infrastructure/cloud/terraform.nix
+    ./04-applications/system/tools/infrastructure/cloud/packer.nix
     ./04-applications/system/tools/infrastructure/monitoring/blocky.nix
     ./04-applications/system/tools/infrastructure/monitoring/grafana.nix
     ./04-applications/system/tools/infrastructure/networking/mosh.nix
